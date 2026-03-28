@@ -30,7 +30,7 @@ Environment variable: `PORTKEY_API_KEY`
 ## Key Files
 
 - `src/libs/Portkey/openapi.yaml` -- Downloaded from `github.com/Portkey-AI/openapi`
-- `src/libs/Portkey/generate.sh` -- Downloads spec, fixes auth (apiKey -> http/bearer), fixes enum conflicts, runs autosdk
+- `src/libs/Portkey/generate.sh` -- Downloads spec, fixes enum conflicts, runs autosdk with `--security-scheme`
 - `src/libs/Portkey/Generated/` -- **Never edit** -- auto-generated code (4054 files)
 - `src/libs/Portkey/Extensions/PortkeyClient.PrepareRequest.cs` -- Auth header conversion (Bearer -> x-portkey-api-key)
 - `src/libs/Portkey/Extensions/PortkeyClient.WithHeaders.cs` -- Convenience methods for optional Portkey headers
@@ -38,10 +38,12 @@ Environment variable: `PORTKEY_API_KEY`
 
 ## Spec Fixes (in generate.sh)
 
-1. **Auth conversion**: `Portkey-Key` apiKey scheme -> `http/bearer` for AutoSDK constructor generation; other custom header schemes removed
-2. **Enum case collision**: `open-ai` renamed to `open-ai-legacy` to avoid C# CS3005 (`OpenAi` vs `Openai`)
-3. **Required member fix**: `variables` removed from `required` list in prompt request schemas to avoid CS9035 in convenience overloads
-4. **Per-operation security removed**: Top-level `security` is sufficient; per-operation blocks referenced deleted schemes
+**CLI flags:**
+- `--security-scheme Http:Header:Bearer` — Overrides spec's `Portkey-Key` apiKey auth with standard HTTP bearer
+
+**Pre-generation (Python):**
+1. **Enum case collision**: `open-ai` renamed to `open-ai-legacy` to avoid C# CS3005 (`OpenAi` vs `Openai`)
+2. **Required member fix**: `variables` removed from `required` list in prompt request schemas to avoid CS9035 in convenience overloads
 
 ## Endpoints (225 operations across 139 paths)
 
