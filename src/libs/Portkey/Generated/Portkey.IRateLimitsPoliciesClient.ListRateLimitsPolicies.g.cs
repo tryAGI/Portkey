@@ -1,0 +1,30 @@
+#nullable enable
+
+namespace Portkey
+{
+    public partial interface IRateLimitsPoliciesClient
+    {
+        /// <summary>
+        /// List Rate Limits Policies<br/>
+        /// List all rate limits policies with optional filtering.
+        /// </summary>
+        /// <param name="workspaceId"></param>
+        /// <param name="status">
+        /// Default Value: active
+        /// </param>
+        /// <param name="type"></param>
+        /// <param name="unit"></param>
+        /// <param name="pageSize"></param>
+        /// <param name="currentPage"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Portkey.RateLimitsPolicyListResponse> ListRateLimitsPoliciesAsync(
+            string? workspaceId = default,
+            global::Portkey.ListRateLimitsPoliciesStatus? status = default,
+            global::Portkey.ListRateLimitsPoliciesType? type = default,
+            global::Portkey.ListRateLimitsPoliciesUnit? unit = default,
+            int? pageSize = default,
+            int? currentPage = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}

@@ -1,0 +1,58 @@
+
+#nullable enable
+
+namespace Portkey
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class ChatCompletionMessageContentPartThinking
+    {
+        /// <summary>
+        /// The type of the content part.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.ChatCompletionMessageContentPartThinkingTypeJsonConverter))]
+        public global::Portkey.ChatCompletionMessageContentPartThinkingType Type { get; set; }
+
+        /// <summary>
+        /// The thinking content.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("thinking")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Thinking { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ChatCompletionMessageContentPartThinking" /> class.
+        /// </summary>
+        /// <param name="type">
+        /// The type of the content part.
+        /// </param>
+        /// <param name="thinking">
+        /// The thinking content.
+        /// </param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public ChatCompletionMessageContentPartThinking(
+            string thinking,
+            global::Portkey.ChatCompletionMessageContentPartThinkingType type)
+        {
+            this.Thinking = thinking ?? throw new global::System.ArgumentNullException(nameof(thinking));
+            this.Type = type;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ChatCompletionMessageContentPartThinking" /> class.
+        /// </summary>
+        public ChatCompletionMessageContentPartThinking()
+        {
+        }
+    }
+}

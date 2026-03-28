@@ -1,0 +1,56 @@
+
+#nullable enable
+
+namespace Portkey
+{
+    /// <summary>
+    /// Occurs when a new [thread](https://platform.openai.com/docs/api-reference/threads/object) is created.
+    /// </summary>
+    public sealed partial class ThreadStreamEventVariant1
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("event")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.ThreadStreamEventVariant1EventJsonConverter))]
+        public global::Portkey.ThreadStreamEventVariant1Event Event { get; set; }
+
+        /// <summary>
+        /// Represents a thread that contains [messages](https://platform.openai.com/docs/api-reference/messages).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("data")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Portkey.ThreadObject Data { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ThreadStreamEventVariant1" /> class.
+        /// </summary>
+        /// <param name="event"></param>
+        /// <param name="data">
+        /// Represents a thread that contains [messages](https://platform.openai.com/docs/api-reference/messages).
+        /// </param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public ThreadStreamEventVariant1(
+            global::Portkey.ThreadObject data,
+            global::Portkey.ThreadStreamEventVariant1Event @event)
+        {
+            this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
+            this.Event = @event;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ThreadStreamEventVariant1" /> class.
+        /// </summary>
+        public ThreadStreamEventVariant1()
+        {
+        }
+    }
+}

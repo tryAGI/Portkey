@@ -1,0 +1,17 @@
+#nullable enable
+
+namespace Portkey
+{
+    public partial interface IPromptsClient
+    {
+        /// <summary>
+        /// Get a prompt by ID or slug
+        /// </summary>
+        /// <param name="promptId"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Portkey.Prompt2> GetPromptAsync(
+            string promptId,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}

@@ -1,0 +1,54 @@
+
+#nullable enable
+
+namespace Portkey
+{
+    /// <summary>
+    /// Occurs when an [error](https://platform.openai.com/docs/guides/error-codes/api-errors) occurs. This can happen due to an internal server error or a timeout.
+    /// </summary>
+    public sealed partial class ErrorEvent
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("event")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.ErrorEventEventJsonConverter))]
+        public global::Portkey.ErrorEventEvent Event { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("data")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Portkey.Error Data { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ErrorEvent" /> class.
+        /// </summary>
+        /// <param name="event"></param>
+        /// <param name="data"></param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public ErrorEvent(
+            global::Portkey.Error data,
+            global::Portkey.ErrorEventEvent @event)
+        {
+            this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
+            this.Event = @event;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ErrorEvent" /> class.
+        /// </summary>
+        public ErrorEvent()
+        {
+        }
+    }
+}

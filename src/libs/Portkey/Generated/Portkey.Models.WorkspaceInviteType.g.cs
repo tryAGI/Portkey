@@ -1,0 +1,57 @@
+
+#nullable enable
+
+namespace Portkey
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public enum WorkspaceInviteType
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        Add,
+        /// <summary>
+        /// 
+        /// </summary>
+        Remove,
+        /// <summary>
+        /// 
+        /// </summary>
+        Update,
+    }
+
+    /// <summary>
+    /// Enum extensions to do fast conversions without the reflection.
+    /// </summary>
+    public static class WorkspaceInviteTypeExtensions
+    {
+        /// <summary>
+        /// Converts an enum to a string.
+        /// </summary>
+        public static string ToValueString(this WorkspaceInviteType value)
+        {
+            return value switch
+            {
+                WorkspaceInviteType.Add => "add",
+                WorkspaceInviteType.Remove => "remove",
+                WorkspaceInviteType.Update => "update",
+                _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
+            };
+        }
+        /// <summary>
+        /// Converts an string to a enum.
+        /// </summary>
+        public static WorkspaceInviteType? ToEnum(string value)
+        {
+            return value switch
+            {
+                "add" => WorkspaceInviteType.Add,
+                "remove" => WorkspaceInviteType.Remove,
+                "update" => WorkspaceInviteType.Update,
+                _ => null,
+            };
+        }
+    }
+}

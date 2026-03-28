@@ -1,0 +1,63 @@
+
+#nullable enable
+
+namespace Portkey
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class AzureManagedAuthConfig
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("azure_auth_mode")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.AzureManagedAuthConfigAzureAuthModeJsonConverter))]
+        public global::Portkey.AzureManagedAuthConfigAzureAuthMode AzureAuthMode { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("azure_managed_client_id")]
+        public string? AzureManagedClientId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("azure_vault_url")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string AzureVaultUrl { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AzureManagedAuthConfig" /> class.
+        /// </summary>
+        /// <param name="azureAuthMode"></param>
+        /// <param name="azureManagedClientId"></param>
+        /// <param name="azureVaultUrl"></param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public AzureManagedAuthConfig(
+            string azureVaultUrl,
+            global::Portkey.AzureManagedAuthConfigAzureAuthMode azureAuthMode,
+            string? azureManagedClientId)
+        {
+            this.AzureVaultUrl = azureVaultUrl ?? throw new global::System.ArgumentNullException(nameof(azureVaultUrl));
+            this.AzureAuthMode = azureAuthMode;
+            this.AzureManagedClientId = azureManagedClientId;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AzureManagedAuthConfig" /> class.
+        /// </summary>
+        public AzureManagedAuthConfig()
+        {
+        }
+    }
+}

@@ -1,0 +1,18 @@
+#nullable enable
+
+namespace Portkey
+{
+    public partial interface ILabelsClient
+    {
+        /// <summary>
+        /// Delete a label<br/>
+        /// Deletes a label
+        /// </summary>
+        /// <param name="labelId"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        global::System.Threading.Tasks.Task<string> DeleteLabelAsync(
+            global::System.Guid labelId,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}

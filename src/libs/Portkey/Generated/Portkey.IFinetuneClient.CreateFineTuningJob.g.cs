@@ -1,0 +1,27 @@
+#nullable enable
+
+namespace Portkey
+{
+    public partial interface IFinetuneClient
+    {
+        /// <summary>
+        /// Create a Finetune Job<br/>
+        /// Finetune a provider model
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Portkey.FineTuningJob> CreateFineTuningJobAsync(
+
+            global::Portkey.AnyOf<global::Portkey.OpenAIFinetuneJob, global::Portkey.BedrockFinetuneJob, global::Portkey.PortkeyFinetuneJob> request,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create a Finetune Job<br/>
+        /// Finetune a provider model
+        /// </summary>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        global::System.Threading.Tasks.Task<global::Portkey.FineTuningJob> CreateFineTuningJobAsync(
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}
