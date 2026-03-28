@@ -7,31 +7,14 @@ dotnet tool install --global autosdk.cli --prerelease 2>/dev/null || true
 rm -rf Generated
 curl --fail --silent --show-error -L -o openapi.yaml https://raw.githubusercontent.com/Portkey-AI/openapi/master/openapi.yaml
 
-# Fix auth, enum conflicts, and required member issues in the spec.
+# Fix enum conflicts and required member issues in the spec.
 python3 -c "
 import yaml
 
 with open('openapi.yaml', 'r') as f:
     spec = yaml.safe_load(f)
 
-# Replace Portkey-Key with http/bearer
-spec['components']['securitySchemes'] = {
-    'Portkey-Key': {
-        'type': 'http',
-        'scheme': 'bearer'
-    }
-}
-
-# Set top-level security
-spec['security'] = [{'Portkey-Key': []}]
-
-# Remove per-operation security blocks
-for path_key, path_item in spec.get('paths', {}).items():
-    for method in ['get', 'post', 'put', 'delete', 'patch', 'options', 'head']:
-        if method in path_item and 'security' in path_item[method]:
-            del path_item[method]['security']
-
-# Fix enum case collision: rename 'open-ai' to 'open-ai-legacy' in all enums
+# Fix 1: Enum case collision — rename 'open-ai' to 'open-ai-legacy' in all enums
 # to avoid C# CS3005 (OpenAi vs Openai case-insensitive collision)
 def fix_enums(obj):
     if isinstance(obj, dict):
@@ -45,7 +28,7 @@ def fix_enums(obj):
 
 fix_enums(spec)
 
-# Fix CS9035: remove 'variables' from required list in prompt request schemas
+# Fix 2: CS9035 — remove 'variables' from required list in prompt request schemas
 # so AutoSDK doesn't generate 'required' keyword on the property
 def remove_variables_required(obj):
     if isinstance(obj, dict):
@@ -66,9 +49,12 @@ with open('openapi.yaml', 'w') as f:
     yaml.dump(spec, f, default_flow_style=False, allow_unicode=True, sort_keys=False, width=200)
 "
 
+# Auth: --security-scheme overrides the spec's Portkey-Key apiKey auth with HTTP bearer.
+# PortkeyClient.PrepareRequest.cs rewrites Bearer → x-portkey-api-key header.
 autosdk generate openapi.yaml \
   --namespace Portkey \
   --clientClassName PortkeyClient \
   --targetFramework net10.0 \
   --output Generated \
-  --exclude-deprecated-operations
+  --exclude-deprecated-operations \
+  --security-scheme Http:Header:Bearer
