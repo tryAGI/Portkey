@@ -34,7 +34,7 @@ namespace Portkey
         /// length of 512 characters, booleans, or numbers.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("attributes")]
-        public object? Attributes { get; set; }
+        public global::Portkey.VectorStoreFileAttributes? Attributes { get; set; }
 
         /// <summary>
         /// The relevance score of the file - a value between 0 and 1.
@@ -77,7 +77,7 @@ namespace Portkey
             string? fileId,
             string? text,
             string? filename,
-            object? attributes,
+            global::Portkey.VectorStoreFileAttributes? attributes,
             float? score)
         {
             this.FileId = fileId;

@@ -36,7 +36,7 @@ namespace Portkey
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("schema")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required object Schema { get; set; }
+        public required global::Portkey.ResponseFormatJsonSchemaSchema Schema { get; set; }
 
         /// <summary>
         /// Whether to enable strict schema adherence when generating the output.<br/>
@@ -85,7 +85,7 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public TextResponseFormatJsonSchema(
-            object schema,
+            global::Portkey.ResponseFormatJsonSchemaSchema schema,
             global::Portkey.TextResponseFormatJsonSchemaType type,
             string? description,
             string? name,

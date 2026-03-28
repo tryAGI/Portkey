@@ -37,7 +37,7 @@ namespace Portkey
         /// length of 512 characters, booleans, or numbers.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("attributes")]
-        public object? Attributes { get; set; }
+        public global::Portkey.VectorStoreFileAttributes? Attributes { get; set; }
 
         /// <summary>
         /// Content chunks from the file.
@@ -82,7 +82,7 @@ namespace Portkey
             string filename,
             double score,
             global::System.Collections.Generic.IList<global::Portkey.VectorStoreSearchResultContentObject> content,
-            object? attributes)
+            global::Portkey.VectorStoreFileAttributes? attributes)
         {
             this.FileId = fileId ?? throw new global::System.ArgumentNullException(nameof(fileId));
             this.Filename = filename ?? throw new global::System.ArgumentNullException(nameof(filename));
