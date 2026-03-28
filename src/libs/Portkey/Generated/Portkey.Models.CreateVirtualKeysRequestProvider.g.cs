@@ -83,7 +83,7 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
-        OpenAiLegacy,
+        OpenAi2,
         /// <summary>
         /// 
         /// </summary>
@@ -164,7 +164,7 @@ namespace Portkey
                 CreateVirtualKeysRequestProvider.Moonshot => "moonshot",
                 CreateVirtualKeysRequestProvider.Nomic => "nomic",
                 CreateVirtualKeysRequestProvider.NovitaAi => "novita-ai",
-                CreateVirtualKeysRequestProvider.OpenAiLegacy => "open-ai-legacy",
+                CreateVirtualKeysRequestProvider.OpenAi2 => "open-ai",
                 CreateVirtualKeysRequestProvider.Openai => "openai",
                 CreateVirtualKeysRequestProvider.Openrouter => "openrouter",
                 CreateVirtualKeysRequestProvider.Palm => "palm",
@@ -205,7 +205,7 @@ namespace Portkey
                 "moonshot" => CreateVirtualKeysRequestProvider.Moonshot,
                 "nomic" => CreateVirtualKeysRequestProvider.Nomic,
                 "novita-ai" => CreateVirtualKeysRequestProvider.NovitaAi,
-                "open-ai-legacy" => CreateVirtualKeysRequestProvider.OpenAiLegacy,
+                "open-ai" => CreateVirtualKeysRequestProvider.OpenAi2,
                 "openai" => CreateVirtualKeysRequestProvider.Openai,
                 "openrouter" => CreateVirtualKeysRequestProvider.Openrouter,
                 "palm" => CreateVirtualKeysRequestProvider.Palm,
