@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# OpenAPI spec: https://raw.githubusercontent.com/Portkey-AI/openapi/master/openapi.yaml
+
 dotnet tool install --global autosdk.cli --prerelease 2>/dev/null || true
 rm -rf Generated
 curl --fail --silent --show-error -L -o openapi.yaml https://raw.githubusercontent.com/Portkey-AI/openapi/master/openapi.yaml
