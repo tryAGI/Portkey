@@ -93,15 +93,6 @@ namespace Portkey
         /// <param name="slug">
         /// URL-friendly slug
         /// </param>
-        /// <param name="organisationId">
-        /// Organisation UUID
-        /// </param>
-        /// <param name="workspaceId">
-        /// Workspace UUID (null for organisation-level guardrails)
-        /// </param>
-        /// <param name="status">
-        /// Current status of the guardrail
-        /// </param>
         /// <param name="createdAt">
         /// Creation timestamp
         /// </param>
@@ -110,6 +101,15 @@ namespace Portkey
         /// </param>
         /// <param name="ownerId">
         /// UUID of the user who created the guardrail
+        /// </param>
+        /// <param name="organisationId">
+        /// Organisation UUID
+        /// </param>
+        /// <param name="workspaceId">
+        /// Workspace UUID (null for organisation-level guardrails)
+        /// </param>
+        /// <param name="status">
+        /// Current status of the guardrail
         /// </param>
         /// <param name="updatedBy">
         /// UUID of the user who last updated the guardrail
@@ -132,12 +132,12 @@ namespace Portkey
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Slug = slug ?? throw new global::System.ArgumentNullException(nameof(slug));
-            this.CreatedAt = createdAt;
-            this.LastUpdatedAt = lastUpdatedAt;
-            this.OwnerId = ownerId;
             this.OrganisationId = organisationId;
             this.WorkspaceId = workspaceId;
             this.Status = status;
+            this.CreatedAt = createdAt;
+            this.LastUpdatedAt = lastUpdatedAt;
+            this.OwnerId = ownerId;
             this.UpdatedBy = updatedBy;
         }
 

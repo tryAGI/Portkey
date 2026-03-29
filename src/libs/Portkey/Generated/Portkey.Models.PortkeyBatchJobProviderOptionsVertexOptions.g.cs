@@ -36,14 +36,14 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="PortkeyBatchJobProviderOptionsVertexOptions" /> class.
         /// </summary>
+        /// <param name="model">
+        /// Model to start batch job with
+        /// </param>
         /// <param name="jobName">
         /// Job name for the batch job
         /// </param>
         /// <param name="outputDataConfig">
         /// Batch job's output storage location, will be constructed based on `input_file_id` if not provided
-        /// </param>
-        /// <param name="model">
-        /// Model to start batch job with
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -53,9 +53,9 @@ namespace Portkey
             string? jobName,
             string? outputDataConfig)
         {
-            this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.JobName = jobName;
             this.OutputDataConfig = outputDataConfig;
+            this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
         }
 
         /// <summary>

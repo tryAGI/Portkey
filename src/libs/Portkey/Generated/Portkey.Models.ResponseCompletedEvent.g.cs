@@ -32,10 +32,10 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseCompletedEvent" /> class.
         /// </summary>
+        /// <param name="response"></param>
         /// <param name="type">
         /// The type of the event. Always `response.completed`.
         /// </param>
-        /// <param name="response"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -43,8 +43,8 @@ namespace Portkey
             global::Portkey.Response response,
             global::Portkey.ResponseCompletedEventType type)
         {
-            this.Response = response;
             this.Type = type;
+            this.Response = response;
         }
 
         /// <summary>

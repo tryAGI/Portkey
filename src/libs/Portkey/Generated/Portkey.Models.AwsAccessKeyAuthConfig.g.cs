@@ -45,10 +45,10 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="AwsAccessKeyAuthConfig" /> class.
         /// </summary>
-        /// <param name="awsAuthType"></param>
         /// <param name="awsAccessKeyId"></param>
         /// <param name="awsSecretAccessKey"></param>
         /// <param name="awsRegion"></param>
+        /// <param name="awsAuthType"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -58,10 +58,10 @@ namespace Portkey
             string awsRegion,
             global::Portkey.AwsAccessKeyAuthConfigAwsAuthType awsAuthType)
         {
+            this.AwsAuthType = awsAuthType;
             this.AwsAccessKeyId = awsAccessKeyId ?? throw new global::System.ArgumentNullException(nameof(awsAccessKeyId));
             this.AwsSecretAccessKey = awsSecretAccessKey ?? throw new global::System.ArgumentNullException(nameof(awsSecretAccessKey));
             this.AwsRegion = awsRegion ?? throw new global::System.ArgumentNullException(nameof(awsRegion));
-            this.AwsAuthType = awsAuthType;
         }
 
         /// <summary>

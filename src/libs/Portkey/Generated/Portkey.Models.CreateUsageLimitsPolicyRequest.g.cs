@@ -79,10 +79,6 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateUsageLimitsPolicyRequest" /> class.
         /// </summary>
-        /// <param name="name">
-        /// Policy name<br/>
-        /// Example: Monthly Cost Limit
-        /// </param>
         /// <param name="conditions">
         /// Array of conditions that define which requests the policy applies to
         /// </param>
@@ -94,6 +90,10 @@ namespace Portkey
         /// </param>
         /// <param name="creditLimit">
         /// Maximum usage allowed
+        /// </param>
+        /// <param name="name">
+        /// Policy name<br/>
+        /// Example: Monthly Cost Limit
         /// </param>
         /// <param name="alertThreshold">
         /// Threshold at which to send alerts. Must be less than credit_limit.
@@ -121,11 +121,11 @@ namespace Portkey
             string? workspaceId,
             global::System.Guid? organisationId)
         {
+            this.Name = name;
             this.Conditions = conditions ?? throw new global::System.ArgumentNullException(nameof(conditions));
             this.GroupBy = groupBy ?? throw new global::System.ArgumentNullException(nameof(groupBy));
             this.Type = type;
             this.CreditLimit = creditLimit;
-            this.Name = name;
             this.AlertThreshold = alertThreshold;
             this.PeriodicReset = periodicReset;
             this.WorkspaceId = workspaceId;

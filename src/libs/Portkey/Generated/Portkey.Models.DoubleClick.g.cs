@@ -41,16 +41,16 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="DoubleClick" /> class.
         /// </summary>
-        /// <param name="type">
-        /// Specifies the event type. For a double click action, this property is <br/>
-        /// always set to `double_click`.<br/>
-        /// Default Value: double_click
-        /// </param>
         /// <param name="x">
         /// The x-coordinate where the double click occurred.
         /// </param>
         /// <param name="y">
         /// The y-coordinate where the double click occurred.
+        /// </param>
+        /// <param name="type">
+        /// Specifies the event type. For a double click action, this property is <br/>
+        /// always set to `double_click`.<br/>
+        /// Default Value: double_click
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -60,9 +60,9 @@ namespace Portkey
             int y,
             global::Portkey.DoubleClickType type = global::Portkey.DoubleClickType.DoubleClick)
         {
+            this.Type = type;
             this.X = x;
             this.Y = y;
-            this.Type = type;
         }
 
         /// <summary>

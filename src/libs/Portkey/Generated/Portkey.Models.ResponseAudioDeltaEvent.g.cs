@@ -31,11 +31,11 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseAudioDeltaEvent" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of the event. Always `response.audio.delta`.
-        /// </param>
         /// <param name="delta">
         /// A chunk of Base64 encoded response audio bytes.
+        /// </param>
+        /// <param name="type">
+        /// The type of the event. Always `response.audio.delta`.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -44,8 +44,8 @@ namespace Portkey
             string delta,
             global::Portkey.ResponseAudioDeltaEventType type)
         {
-            this.Delta = delta ?? throw new global::System.ArgumentNullException(nameof(delta));
             this.Type = type;
+            this.Delta = delta ?? throw new global::System.ArgumentNullException(nameof(delta));
         }
 
         /// <summary>

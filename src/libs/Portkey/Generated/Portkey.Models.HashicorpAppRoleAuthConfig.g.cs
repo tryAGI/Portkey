@@ -51,10 +51,10 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="HashicorpAppRoleAuthConfig" /> class.
         /// </summary>
-        /// <param name="vaultAuthType"></param>
         /// <param name="vaultAddr"></param>
         /// <param name="vaultRoleId"></param>
         /// <param name="vaultSecretId"></param>
+        /// <param name="vaultAuthType"></param>
         /// <param name="vaultNamespace"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -66,10 +66,10 @@ namespace Portkey
             global::Portkey.HashicorpAppRoleAuthConfigVaultAuthType vaultAuthType,
             string? vaultNamespace)
         {
+            this.VaultAuthType = vaultAuthType;
             this.VaultAddr = vaultAddr ?? throw new global::System.ArgumentNullException(nameof(vaultAddr));
             this.VaultRoleId = vaultRoleId ?? throw new global::System.ArgumentNullException(nameof(vaultRoleId));
             this.VaultSecretId = vaultSecretId ?? throw new global::System.ArgumentNullException(nameof(vaultSecretId));
-            this.VaultAuthType = vaultAuthType;
             this.VaultNamespace = vaultNamespace;
         }
 

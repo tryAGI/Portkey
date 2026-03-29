@@ -11,15 +11,15 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
-        V1ChatCompletions,
+        Dividev1DividechatDividecompletions,
         /// <summary>
         /// 
         /// </summary>
-        V1Completions,
+        Dividev1Dividecompletions,
         /// <summary>
         /// 
         /// </summary>
-        V1Embeddings,
+        Dividev1Divideembeddings,
     }
 
     /// <summary>
@@ -34,9 +34,9 @@ namespace Portkey
         {
             return value switch
             {
-                OpenAIBatchJobEndpoint.V1ChatCompletions => "/v1/chat/completions",
-                OpenAIBatchJobEndpoint.V1Completions => "/v1/completions",
-                OpenAIBatchJobEndpoint.V1Embeddings => "/v1/embeddings",
+                OpenAIBatchJobEndpoint.Dividev1DividechatDividecompletions => "/v1/chat/completions",
+                OpenAIBatchJobEndpoint.Dividev1Dividecompletions => "/v1/completions",
+                OpenAIBatchJobEndpoint.Dividev1Divideembeddings => "/v1/embeddings",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -47,9 +47,9 @@ namespace Portkey
         {
             return value switch
             {
-                "/v1/chat/completions" => OpenAIBatchJobEndpoint.V1ChatCompletions,
-                "/v1/completions" => OpenAIBatchJobEndpoint.V1Completions,
-                "/v1/embeddings" => OpenAIBatchJobEndpoint.V1Embeddings,
+                "/v1/chat/completions" => OpenAIBatchJobEndpoint.Dividev1DividechatDividecompletions,
+                "/v1/completions" => OpenAIBatchJobEndpoint.Dividev1Dividecompletions,
+                "/v1/embeddings" => OpenAIBatchJobEndpoint.Dividev1Divideembeddings,
                 _ => null,
             };
         }

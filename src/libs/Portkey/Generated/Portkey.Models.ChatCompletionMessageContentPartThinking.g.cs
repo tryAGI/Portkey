@@ -31,11 +31,11 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatCompletionMessageContentPartThinking" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of the content part.
-        /// </param>
         /// <param name="thinking">
         /// The thinking content.
+        /// </param>
+        /// <param name="type">
+        /// The type of the content part.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -44,8 +44,8 @@ namespace Portkey
             string thinking,
             global::Portkey.ChatCompletionMessageContentPartThinkingType type)
         {
-            this.Thinking = thinking ?? throw new global::System.ArgumentNullException(nameof(thinking));
             this.Type = type;
+            this.Thinking = thinking ?? throw new global::System.ArgumentNullException(nameof(thinking));
         }
 
         /// <summary>

@@ -44,9 +44,9 @@ namespace Portkey
         /// Initializes a new instance of the <see cref="CustomLogRequest" /> class.
         /// </summary>
         /// <param name="url"></param>
+        /// <param name="body"></param>
         /// <param name="method"></param>
         /// <param name="headers"></param>
-        /// <param name="body"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -57,9 +57,9 @@ namespace Portkey
             global::System.Collections.Generic.Dictionary<string, string>? headers)
         {
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
-            this.Body = body ?? throw new global::System.ArgumentNullException(nameof(body));
             this.Method = method;
             this.Headers = headers;
+            this.Body = body ?? throw new global::System.ArgumentNullException(nameof(body));
         }
 
         /// <summary>

@@ -56,17 +56,17 @@ namespace Portkey
         /// Name of the guardrail<br/>
         /// Example: Content Safety Check
         /// </param>
-        /// <param name="workspaceId">
-        /// Workspace UUID (required if organisation_id not provided and not using API key)
-        /// </param>
-        /// <param name="organisationId">
-        /// Organisation UUID (required if workspace_id not provided and not using API key)
-        /// </param>
         /// <param name="checks">
         /// Array of guardrail checks to apply
         /// </param>
         /// <param name="actions">
         /// Actions to take when guardrail checks fail or pass
+        /// </param>
+        /// <param name="workspaceId">
+        /// Workspace UUID (required if organisation_id not provided and not using API key)
+        /// </param>
+        /// <param name="organisationId">
+        /// Organisation UUID (required if workspace_id not provided and not using API key)
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -79,10 +79,10 @@ namespace Portkey
             global::System.Guid? organisationId)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Checks = checks ?? throw new global::System.ArgumentNullException(nameof(checks));
-            this.Actions = actions ?? throw new global::System.ArgumentNullException(nameof(actions));
             this.WorkspaceId = workspaceId;
             this.OrganisationId = organisationId;
+            this.Checks = checks ?? throw new global::System.ArgumentNullException(nameof(checks));
+            this.Actions = actions ?? throw new global::System.ArgumentNullException(nameof(actions));
         }
 
         /// <summary>

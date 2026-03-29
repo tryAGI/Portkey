@@ -114,26 +114,8 @@ namespace Portkey
         /// <param name="id">
         /// Policy UUID
         /// </param>
-        /// <param name="name">
-        /// Policy name
-        /// </param>
-        /// <param name="conditions">
-        /// Array of conditions
-        /// </param>
-        /// <param name="groupBy">
-        /// Array of group by fields
-        /// </param>
         /// <param name="type">
         /// Policy type
-        /// </param>
-        /// <param name="creditLimit">
-        /// Maximum usage allowed
-        /// </param>
-        /// <param name="alertThreshold">
-        /// Alert threshold
-        /// </param>
-        /// <param name="periodicReset">
-        /// Reset period
         /// </param>
         /// <param name="status">
         /// Policy status
@@ -149,6 +131,24 @@ namespace Portkey
         /// </param>
         /// <param name="lastUpdatedAt">
         /// Last update timestamp
+        /// </param>
+        /// <param name="name">
+        /// Policy name
+        /// </param>
+        /// <param name="conditions">
+        /// Array of conditions
+        /// </param>
+        /// <param name="groupBy">
+        /// Array of group by fields
+        /// </param>
+        /// <param name="creditLimit">
+        /// Maximum usage allowed
+        /// </param>
+        /// <param name="alertThreshold">
+        /// Alert threshold
+        /// </param>
+        /// <param name="periodicReset">
+        /// Reset period
         /// </param>
         /// <param name="valueKeyUsageMap">
         /// Map of value keys to usage information (only included when include_usage=true)
@@ -173,18 +173,18 @@ namespace Portkey
             global::System.Collections.Generic.Dictionary<string, global::Portkey.ValueKeyUsage>? valueKeyUsageMap)
         {
             this.Id = id;
+            this.Name = name;
+            this.Conditions = conditions;
+            this.GroupBy = groupBy;
             this.Type = type;
+            this.CreditLimit = creditLimit;
+            this.AlertThreshold = alertThreshold;
+            this.PeriodicReset = periodicReset;
             this.Status = status;
             this.WorkspaceId = workspaceId;
             this.OrganisationId = organisationId;
             this.CreatedAt = createdAt;
             this.LastUpdatedAt = lastUpdatedAt;
-            this.Name = name;
-            this.Conditions = conditions;
-            this.GroupBy = groupBy;
-            this.CreditLimit = creditLimit;
-            this.AlertThreshold = alertThreshold;
-            this.PeriodicReset = periodicReset;
             this.ValueKeyUsageMap = valueKeyUsageMap;
         }
 

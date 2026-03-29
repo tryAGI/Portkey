@@ -31,10 +31,10 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="ThreadStreamEventVariant1" /> class.
         /// </summary>
-        /// <param name="event"></param>
         /// <param name="data">
         /// Represents a thread that contains [messages](https://platform.openai.com/docs/api-reference/messages).
         /// </param>
+        /// <param name="event"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -42,8 +42,8 @@ namespace Portkey
             global::Portkey.ThreadObject data,
             global::Portkey.ThreadStreamEventVariant1Event @event)
         {
-            this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
             this.Event = @event;
+            this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
         }
 
         /// <summary>

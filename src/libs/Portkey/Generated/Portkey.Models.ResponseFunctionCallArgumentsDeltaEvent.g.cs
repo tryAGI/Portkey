@@ -45,9 +45,6 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseFunctionCallArgumentsDeltaEvent" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of the event. Always `response.function_call_arguments.delta`.
-        /// </param>
         /// <param name="itemId">
         /// The ID of the output item that the function-call arguments delta is added to.
         /// </param>
@@ -56,6 +53,9 @@ namespace Portkey
         /// </param>
         /// <param name="delta">
         /// The function-call arguments delta that is added.
+        /// </param>
+        /// <param name="type">
+        /// The type of the event. Always `response.function_call_arguments.delta`.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -66,10 +66,10 @@ namespace Portkey
             string delta,
             global::Portkey.ResponseFunctionCallArgumentsDeltaEventType type)
         {
+            this.Type = type;
             this.ItemId = itemId ?? throw new global::System.ArgumentNullException(nameof(itemId));
             this.OutputIndex = outputIndex;
             this.Delta = delta ?? throw new global::System.ArgumentNullException(nameof(delta));
-            this.Type = type;
         }
 
         /// <summary>

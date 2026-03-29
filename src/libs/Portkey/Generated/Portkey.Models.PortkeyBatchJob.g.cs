@@ -55,14 +55,14 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="PortkeyBatchJob" /> class.
         /// </summary>
+        /// <param name="model">
+        /// Model to start batch job with
+        /// </param>
         /// <param name="jobName">
         /// Job name for the batch job
         /// </param>
         /// <param name="outputDataConfig">
         /// Batch job's output storage location, will be constructed based on `input_file_id` if not provided
-        /// </param>
-        /// <param name="model">
-        /// Model to start batch job with
         /// </param>
         /// <param name="roleArn">
         /// Role ARN for the bedrock batch job
@@ -84,9 +84,9 @@ namespace Portkey
             global::Portkey.PortkeyBatchOptions? portkeyOptions,
             global::Portkey.AnyOf<global::Portkey.PortkeyBatchJobProviderOptionsBedrockOptions, global::Portkey.PortkeyBatchJobProviderOptionsVertexOptions>? providerOptions)
         {
-            this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.JobName = jobName;
             this.OutputDataConfig = outputDataConfig;
+            this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.RoleArn = roleArn;
             this.PortkeyOptions = portkeyOptions;
             this.ProviderOptions = providerOptions;

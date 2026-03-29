@@ -97,13 +97,13 @@ namespace Portkey
         /// Human-readable name for the integration<br/>
         /// Example: Production OpenAI
         /// </param>
-        /// <param name="slug">
-        /// URL-friendly identifier (auto-generated if not provided)<br/>
-        /// Example: production-openai
-        /// </param>
         /// <param name="aiProviderId">
         /// ID of the base AI provider<br/>
         /// Example: openai
+        /// </param>
+        /// <param name="slug">
+        /// URL-friendly identifier (auto-generated if not provided)<br/>
+        /// Example: production-openai
         /// </param>
         /// <param name="key">
         /// API key for the provider (if required)<br/>
@@ -146,8 +146,8 @@ namespace Portkey
             global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? secretMappings)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.AiProviderId = aiProviderId ?? throw new global::System.ArgumentNullException(nameof(aiProviderId));
             this.Slug = slug;
+            this.AiProviderId = aiProviderId ?? throw new global::System.ArgumentNullException(nameof(aiProviderId));
             this.Key = key;
             this.Description = description;
             this.WorkspaceId = workspaceId;

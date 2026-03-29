@@ -38,14 +38,14 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseCodeInterpreterCallInProgressEvent" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of the event. Always `response.code_interpreter_call.in_progress`.
-        /// </param>
         /// <param name="outputIndex">
         /// The index of the output item that the code interpreter call is in progress.
         /// </param>
         /// <param name="codeInterpreterCall">
         /// A tool call to run code.
+        /// </param>
+        /// <param name="type">
+        /// The type of the event. Always `response.code_interpreter_call.in_progress`.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -55,9 +55,9 @@ namespace Portkey
             global::Portkey.CodeInterpreterToolCall codeInterpreterCall,
             global::Portkey.ResponseCodeInterpreterCallInProgressEventType type)
         {
+            this.Type = type;
             this.OutputIndex = outputIndex;
             this.CodeInterpreterCall = codeInterpreterCall ?? throw new global::System.ArgumentNullException(nameof(codeInterpreterCall));
-            this.Type = type;
         }
 
         /// <summary>

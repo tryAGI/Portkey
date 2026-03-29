@@ -41,11 +41,6 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="Drag" /> class.
         /// </summary>
-        /// <param name="type">
-        /// Specifies the event type. For a drag action, this property is <br/>
-        /// always set to `drag`.<br/>
-        /// Default Value: drag
-        /// </param>
         /// <param name="path">
         /// An array of coordinates representing the path of the drag action. Coordinates will appear as an array<br/>
         /// of objects, eg<br/>
@@ -56,6 +51,11 @@ namespace Portkey
         /// ]<br/>
         /// ```
         /// </param>
+        /// <param name="type">
+        /// Specifies the event type. For a drag action, this property is <br/>
+        /// always set to `drag`.<br/>
+        /// Default Value: drag
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -63,8 +63,8 @@ namespace Portkey
             global::System.Collections.Generic.IList<global::Portkey.Coordinate> path,
             global::Portkey.DragType type = global::Portkey.DragType.Drag)
         {
-            this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
             this.Type = type;
+            this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
         }
 
         /// <summary>

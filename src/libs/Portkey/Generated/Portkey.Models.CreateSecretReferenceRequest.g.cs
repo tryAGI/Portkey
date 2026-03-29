@@ -90,17 +90,17 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateSecretReferenceRequest" /> class.
         /// </summary>
+        /// <param name="name"></param>
+        /// <param name="managerType"></param>
+        /// <param name="authConfig"></param>
+        /// <param name="secretPath"></param>
         /// <param name="organisationId">
         /// Required if not using API key auth
         /// </param>
-        /// <param name="name"></param>
         /// <param name="slug">
         /// Auto-generated from name if omitted
         /// </param>
         /// <param name="description"></param>
-        /// <param name="managerType"></param>
-        /// <param name="authConfig"></param>
-        /// <param name="secretPath"></param>
         /// <param name="secretKey"></param>
         /// <param name="allowAllWorkspaces">
         /// Cannot be true when allowed_workspaces is provided<br/>
@@ -126,13 +126,13 @@ namespace Portkey
             global::System.Collections.Generic.IList<string>? allowedWorkspaces,
             global::System.Collections.Generic.Dictionary<string, string>? tags)
         {
+            this.OrganisationId = organisationId;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.Slug = slug;
+            this.Description = description;
             this.ManagerType = managerType;
             this.AuthConfig = authConfig;
             this.SecretPath = secretPath ?? throw new global::System.ArgumentNullException(nameof(secretPath));
-            this.OrganisationId = organisationId;
-            this.Slug = slug;
-            this.Description = description;
             this.SecretKey = secretKey;
             this.AllowAllWorkspaces = allowAllWorkspaces;
             this.AllowedWorkspaces = allowedWorkspaces;

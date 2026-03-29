@@ -37,9 +37,9 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateLogsExportsRequest" /> class.
         /// </summary>
-        /// <param name="workspaceId"></param>
         /// <param name="filters"></param>
         /// <param name="requestedData"></param>
+        /// <param name="workspaceId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -48,9 +48,9 @@ namespace Portkey
             global::System.Collections.Generic.IList<global::Portkey.LogExportsRequestedDataItem> requestedData,
             string? workspaceId)
         {
+            this.WorkspaceId = workspaceId;
             this.Filters = filters ?? throw new global::System.ArgumentNullException(nameof(filters));
             this.RequestedData = requestedData ?? throw new global::System.ArgumentNullException(nameof(requestedData));
-            this.WorkspaceId = workspaceId;
         }
 
         /// <summary>

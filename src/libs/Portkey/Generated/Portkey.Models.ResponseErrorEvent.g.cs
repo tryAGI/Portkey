@@ -43,14 +43,14 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseErrorEvent" /> class.
         /// </summary>
+        /// <param name="message">
+        /// The error message.
+        /// </param>
         /// <param name="type">
         /// The type of the event. Always `error`.
         /// </param>
         /// <param name="code">
         /// The error code.
-        /// </param>
-        /// <param name="message">
-        /// The error message.
         /// </param>
         /// <param name="param">
         /// The error parameter.
@@ -64,9 +64,9 @@ namespace Portkey
             string? code,
             string? param)
         {
-            this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
             this.Type = type;
             this.Code = code;
+            this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
             this.Param = param;
         }
 

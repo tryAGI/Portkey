@@ -31,11 +31,11 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageRequestContentTextObject" /> class.
         /// </summary>
-        /// <param name="type">
-        /// Always `text`.
-        /// </param>
         /// <param name="text">
         /// Text content to be sent to the model
+        /// </param>
+        /// <param name="type">
+        /// Always `text`.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -44,8 +44,8 @@ namespace Portkey
             string text,
             global::Portkey.MessageRequestContentTextObjectType type)
         {
-            this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
             this.Type = type;
+            this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
         }
 
         /// <summary>

@@ -48,6 +48,11 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="InputImage" /> class.
         /// </summary>
+        /// <param name="detail">
+        /// The detail level of the image to be sent to the model. One of `high`,<br/>
+        /// `low`, or `auto`. Defaults to `auto`.<br/>
+        /// Default Value: auto
+        /// </param>
         /// <param name="type">
         /// The type of the input item. Always `input_image`.
         /// </param>
@@ -58,11 +63,6 @@ namespace Portkey
         /// <param name="fileId">
         /// The ID of the file to be sent to the model.
         /// </param>
-        /// <param name="detail">
-        /// The detail level of the image to be sent to the model. One of `high`,<br/>
-        /// `low`, or `auto`. Defaults to `auto`.<br/>
-        /// Default Value: auto
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -72,10 +72,10 @@ namespace Portkey
             string? imageUrl,
             string? fileId)
         {
-            this.Detail = detail;
             this.Type = type;
             this.ImageUrl = imageUrl;
             this.FileId = fileId;
+            this.Detail = detail;
         }
 
         /// <summary>

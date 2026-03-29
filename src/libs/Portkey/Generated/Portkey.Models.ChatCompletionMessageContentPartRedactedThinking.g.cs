@@ -31,11 +31,11 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatCompletionMessageContentPartRedactedThinking" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of the content part.
-        /// </param>
         /// <param name="data">
         /// The redacted thinking content.
+        /// </param>
+        /// <param name="type">
+        /// The type of the content part.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -44,8 +44,8 @@ namespace Portkey
             string data,
             global::Portkey.ChatCompletionMessageContentPartRedactedThinkingType type)
         {
-            this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
             this.Type = type;
+            this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
         }
 
         /// <summary>

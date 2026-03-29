@@ -44,9 +44,9 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="HashicorpKubernetesAuthConfig" /> class.
         /// </summary>
-        /// <param name="vaultAuthType"></param>
         /// <param name="vaultAddr"></param>
         /// <param name="vaultRole"></param>
+        /// <param name="vaultAuthType"></param>
         /// <param name="vaultNamespace"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -57,9 +57,9 @@ namespace Portkey
             global::Portkey.HashicorpKubernetesAuthConfigVaultAuthType vaultAuthType,
             string? vaultNamespace)
         {
+            this.VaultAuthType = vaultAuthType;
             this.VaultAddr = vaultAddr ?? throw new global::System.ArgumentNullException(nameof(vaultAddr));
             this.VaultRole = vaultRole ?? throw new global::System.ArgumentNullException(nameof(vaultRole));
-            this.VaultAuthType = vaultAuthType;
             this.VaultNamespace = vaultNamespace;
         }
 

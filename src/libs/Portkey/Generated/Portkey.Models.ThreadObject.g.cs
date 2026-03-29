@@ -54,11 +54,11 @@ namespace Portkey
         /// <param name="id">
         /// The identifier, which can be referenced in API endpoints.
         /// </param>
-        /// <param name="object">
-        /// The object type, which is always `thread`.
-        /// </param>
         /// <param name="createdAt">
         /// The Unix timestamp (in seconds) for when the thread was created.
+        /// </param>
+        /// <param name="object">
+        /// The object type, which is always `thread`.
         /// </param>
         /// <param name="toolResources">
         /// A set of resources that are made available to the assistant's tools in this thread. The resources are specific to the type of tool. For example, the `code_interpreter` tool requires a list of file IDs, while the `file_search` tool requires a list of vector store IDs.
@@ -77,8 +77,8 @@ namespace Portkey
             object? metadata)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.CreatedAt = createdAt;
             this.Object = @object;
+            this.CreatedAt = createdAt;
             this.ToolResources = toolResources;
             this.Metadata = metadata;
         }

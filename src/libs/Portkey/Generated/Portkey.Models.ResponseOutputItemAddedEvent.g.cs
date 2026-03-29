@@ -39,13 +39,13 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseOutputItemAddedEvent" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of the event. Always `response.output_item.added`.
-        /// </param>
         /// <param name="outputIndex">
         /// The index of the output item that was added.
         /// </param>
         /// <param name="item"></param>
+        /// <param name="type">
+        /// The type of the event. Always `response.output_item.added`.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -54,9 +54,9 @@ namespace Portkey
             global::Portkey.OutputItem item,
             global::Portkey.ResponseOutputItemAddedEventType type)
         {
+            this.Type = type;
             this.OutputIndex = outputIndex;
             this.Item = item;
-            this.Type = type;
         }
 
         /// <summary>

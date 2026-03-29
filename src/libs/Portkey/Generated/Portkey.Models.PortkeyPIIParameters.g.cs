@@ -38,12 +38,12 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="PortkeyPIIParameters" /> class.
         /// </summary>
+        /// <param name="categories">
+        /// Types of PII that should NOT be allowed
+        /// </param>
         /// <param name="redact">
         /// Whether to redact detected PII<br/>
         /// Default Value: false
-        /// </param>
-        /// <param name="categories">
-        /// Types of PII that should NOT be allowed
         /// </param>
         /// <param name="timeout">
         /// Timeout in milliseconds<br/>
@@ -57,8 +57,8 @@ namespace Portkey
             bool? redact,
             double? timeout)
         {
-            this.Categories = categories ?? throw new global::System.ArgumentNullException(nameof(categories));
             this.Redact = redact;
+            this.Categories = categories ?? throw new global::System.ArgumentNullException(nameof(categories));
             this.Timeout = timeout;
         }
 

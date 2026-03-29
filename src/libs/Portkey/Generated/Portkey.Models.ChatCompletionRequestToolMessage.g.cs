@@ -38,14 +38,14 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatCompletionRequestToolMessage" /> class.
         /// </summary>
-        /// <param name="role">
-        /// The role of the messages author, in this case `tool`.
-        /// </param>
         /// <param name="content">
         /// The contents of the tool message.
         /// </param>
         /// <param name="toolCallId">
         /// Tool call that this message is responding to.
+        /// </param>
+        /// <param name="role">
+        /// The role of the messages author, in this case `tool`.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -55,9 +55,9 @@ namespace Portkey
             string toolCallId,
             global::Portkey.ChatCompletionRequestToolMessageRole role)
         {
+            this.Role = role;
             this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
             this.ToolCallId = toolCallId ?? throw new global::System.ArgumentNullException(nameof(toolCallId));
-            this.Role = role;
         }
 
         /// <summary>
