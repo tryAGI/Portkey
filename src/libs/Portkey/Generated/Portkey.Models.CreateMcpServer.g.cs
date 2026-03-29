@@ -49,16 +49,16 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateMcpServer" /> class.
         /// </summary>
-        /// <param name="workspaceId">
-        /// Workspace ID or slug (optional; required when using org admin API key)
-        /// </param>
         /// <param name="name">
         /// Display name of the MCP server
         /// </param>
-        /// <param name="description"></param>
         /// <param name="mcpIntegrationId">
         /// MCP Integration ID (UUID) or slug
         /// </param>
+        /// <param name="workspaceId">
+        /// Workspace ID or slug (optional; required when using org admin API key)
+        /// </param>
+        /// <param name="description"></param>
         /// <param name="slug">
         /// Optional slug; must be unique within organisation
         /// </param>
@@ -72,10 +72,10 @@ namespace Portkey
             string? description,
             string? slug)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.McpIntegrationId = mcpIntegrationId ?? throw new global::System.ArgumentNullException(nameof(mcpIntegrationId));
             this.WorkspaceId = workspaceId;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Description = description;
+            this.McpIntegrationId = mcpIntegrationId ?? throw new global::System.ArgumentNullException(nameof(mcpIntegrationId));
             this.Slug = slug;
         }
 

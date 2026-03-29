@@ -104,15 +104,6 @@ namespace Portkey
         /// <param name="id">
         /// Policy UUID
         /// </param>
-        /// <param name="name">
-        /// Policy name
-        /// </param>
-        /// <param name="conditions">
-        /// Array of conditions
-        /// </param>
-        /// <param name="groupBy">
-        /// Array of group by fields
-        /// </param>
         /// <param name="type">
         /// Policy type
         /// </param>
@@ -137,6 +128,15 @@ namespace Portkey
         /// <param name="lastUpdatedAt">
         /// Last update timestamp
         /// </param>
+        /// <param name="name">
+        /// Policy name
+        /// </param>
+        /// <param name="conditions">
+        /// Array of conditions
+        /// </param>
+        /// <param name="groupBy">
+        /// Array of group by fields
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -155,6 +155,9 @@ namespace Portkey
             global::System.Collections.Generic.IList<global::Portkey.GroupBy>? groupBy)
         {
             this.Id = id;
+            this.Name = name;
+            this.Conditions = conditions;
+            this.GroupBy = groupBy;
             this.Type = type;
             this.Unit = unit;
             this.Value = value;
@@ -163,9 +166,6 @@ namespace Portkey
             this.OrganisationId = organisationId;
             this.CreatedAt = createdAt;
             this.LastUpdatedAt = lastUpdatedAt;
-            this.Name = name;
-            this.Conditions = conditions;
-            this.GroupBy = groupBy;
         }
 
         /// <summary>

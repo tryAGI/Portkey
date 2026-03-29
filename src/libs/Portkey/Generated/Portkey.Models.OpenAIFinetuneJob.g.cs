@@ -57,14 +57,14 @@ namespace Portkey
         /// <param name="trainingFile">
         /// The training file to use for the finetune job
         /// </param>
-        /// <param name="validationFile">
-        /// The validation file to use for the finetune job
-        /// </param>
         /// <param name="suffix">
         /// The suffix to append to the fine-tuned model name
         /// </param>
         /// <param name="method">
         /// Hyperparameters for the finetune job
+        /// </param>
+        /// <param name="validationFile">
+        /// The validation file to use for the finetune job
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -78,9 +78,9 @@ namespace Portkey
         {
             this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.TrainingFile = trainingFile ?? throw new global::System.ArgumentNullException(nameof(trainingFile));
+            this.ValidationFile = validationFile;
             this.Suffix = suffix ?? throw new global::System.ArgumentNullException(nameof(suffix));
             this.Method = method ?? throw new global::System.ArgumentNullException(nameof(method));
-            this.ValidationFile = validationFile;
         }
 
         /// <summary>

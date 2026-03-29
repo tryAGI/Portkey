@@ -42,9 +42,9 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomLogResponse" /> class.
         /// </summary>
+        /// <param name="body"></param>
         /// <param name="status"></param>
         /// <param name="headers"></param>
-        /// <param name="body"></param>
         /// <param name="responseTime"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -55,9 +55,9 @@ namespace Portkey
             global::System.Collections.Generic.Dictionary<string, string>? headers,
             int? responseTime)
         {
-            this.Body = body ?? throw new global::System.ArgumentNullException(nameof(body));
             this.Status = status;
             this.Headers = headers;
+            this.Body = body ?? throw new global::System.ArgumentNullException(nameof(body));
             this.ResponseTime = responseTime;
         }
 

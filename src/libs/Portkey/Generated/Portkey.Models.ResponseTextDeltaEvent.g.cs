@@ -52,9 +52,6 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseTextDeltaEvent" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of the event. Always `response.output_text.delta`.
-        /// </param>
         /// <param name="itemId">
         /// The ID of the output item that the text delta was added to.
         /// </param>
@@ -67,6 +64,9 @@ namespace Portkey
         /// <param name="delta">
         /// The text delta that was added.
         /// </param>
+        /// <param name="type">
+        /// The type of the event. Always `response.output_text.delta`.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -77,11 +77,11 @@ namespace Portkey
             string delta,
             global::Portkey.ResponseTextDeltaEventType type)
         {
+            this.Type = type;
             this.ItemId = itemId ?? throw new global::System.ArgumentNullException(nameof(itemId));
             this.OutputIndex = outputIndex;
             this.ContentIndex = contentIndex;
             this.Delta = delta ?? throw new global::System.ArgumentNullException(nameof(delta));
-            this.Type = type;
         }
 
         /// <summary>

@@ -56,9 +56,6 @@ namespace Portkey
         /// <param name="id">
         /// The unique ID of the code interpreter tool call.
         /// </param>
-        /// <param name="type">
-        /// The type of the code interpreter tool call. Always `code_interpreter_call`.
-        /// </param>
         /// <param name="code">
         /// The code to run.
         /// </param>
@@ -67,6 +64,9 @@ namespace Portkey
         /// </param>
         /// <param name="results">
         /// The results of the code interpreter tool call.
+        /// </param>
+        /// <param name="type">
+        /// The type of the code interpreter tool call. Always `code_interpreter_call`.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -79,10 +79,10 @@ namespace Portkey
             global::Portkey.CodeInterpreterToolCallType type)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.Type = type;
             this.Code = code ?? throw new global::System.ArgumentNullException(nameof(code));
             this.Status = status;
             this.Results = results ?? throw new global::System.ArgumentNullException(nameof(results));
-            this.Type = type;
         }
 
         /// <summary>

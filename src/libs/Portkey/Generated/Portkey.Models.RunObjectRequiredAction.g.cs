@@ -31,11 +31,11 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="RunObjectRequiredAction" /> class.
         /// </summary>
-        /// <param name="type">
-        /// For now, this is always `submit_tool_outputs`.
-        /// </param>
         /// <param name="submitToolOutputs">
         /// Details on the tool outputs needed for this run to continue.
+        /// </param>
+        /// <param name="type">
+        /// For now, this is always `submit_tool_outputs`.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -44,8 +44,8 @@ namespace Portkey
             global::Portkey.RunObjectRequiredActionSubmitToolOutputs submitToolOutputs,
             global::Portkey.RunObjectRequiredActionType type)
         {
-            this.SubmitToolOutputs = submitToolOutputs ?? throw new global::System.ArgumentNullException(nameof(submitToolOutputs));
             this.Type = type;
+            this.SubmitToolOutputs = submitToolOutputs ?? throw new global::System.ArgumentNullException(nameof(submitToolOutputs));
         }
 
         /// <summary>

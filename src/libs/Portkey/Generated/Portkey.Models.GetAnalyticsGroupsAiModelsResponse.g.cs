@@ -38,11 +38,11 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="GetAnalyticsGroupsAiModelsResponse" /> class.
         /// </summary>
-        /// <param name="object"></param>
         /// <param name="total">
         /// Total records present across all pages
         /// </param>
         /// <param name="data"></param>
+        /// <param name="object"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -51,9 +51,9 @@ namespace Portkey
             global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGroupsAiModelsResponseDataItem> data,
             global::Portkey.GetAnalyticsGroupsAiModelsResponseObject @object)
         {
+            this.Object = @object;
             this.Total = total;
             this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
-            this.Object = @object;
         }
 
         /// <summary>

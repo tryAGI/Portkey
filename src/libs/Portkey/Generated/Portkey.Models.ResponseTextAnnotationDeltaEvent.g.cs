@@ -60,9 +60,6 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseTextAnnotationDeltaEvent" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of the event. Always `response.output_text.annotation.added`.
-        /// </param>
         /// <param name="itemId">
         /// The ID of the output item that the text annotation was added to.
         /// </param>
@@ -76,6 +73,9 @@ namespace Portkey
         /// The index of the annotation that was added.
         /// </param>
         /// <param name="annotation"></param>
+        /// <param name="type">
+        /// The type of the event. Always `response.output_text.annotation.added`.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -87,12 +87,12 @@ namespace Portkey
             global::Portkey.Annotation annotation,
             global::Portkey.ResponseTextAnnotationDeltaEventType type)
         {
+            this.Type = type;
             this.ItemId = itemId ?? throw new global::System.ArgumentNullException(nameof(itemId));
             this.OutputIndex = outputIndex;
             this.ContentIndex = contentIndex;
             this.AnnotationIndex = annotationIndex;
             this.Annotation = annotation;
-            this.Type = type;
         }
 
         /// <summary>

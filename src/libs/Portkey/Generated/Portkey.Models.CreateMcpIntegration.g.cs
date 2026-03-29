@@ -77,6 +77,14 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateMcpIntegration" /> class.
         /// </summary>
+        /// <param name="name">
+        /// Display name of the MCP integration
+        /// </param>
+        /// <param name="url">
+        /// MCP server URL
+        /// </param>
+        /// <param name="authType"></param>
+        /// <param name="transport"></param>
         /// <param name="organisationId">
         /// Organisation ID (optional; required when using org admin API key without workspace_id)
         /// </param>
@@ -86,18 +94,10 @@ namespace Portkey
         /// <param name="slug">
         /// Optional slug; must be unique within organisation
         /// </param>
-        /// <param name="name">
-        /// Display name of the MCP integration
-        /// </param>
         /// <param name="description"></param>
         /// <param name="configurations">
         /// Auth/config key-value pairs (e.g. headers, client credentials)
         /// </param>
-        /// <param name="url">
-        /// MCP server URL
-        /// </param>
-        /// <param name="authType"></param>
-        /// <param name="transport"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -112,15 +112,15 @@ namespace Portkey
             string? description,
             global::Portkey.CreateMcpIntegrationConfigurations? configurations)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
-            this.AuthType = authType;
-            this.Transport = transport;
             this.OrganisationId = organisationId;
             this.WorkspaceId = workspaceId;
             this.Slug = slug;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Description = description;
             this.Configurations = configurations;
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.AuthType = authType;
+            this.Transport = transport;
         }
 
         /// <summary>

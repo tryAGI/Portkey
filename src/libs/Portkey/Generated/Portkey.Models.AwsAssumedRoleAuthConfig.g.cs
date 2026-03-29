@@ -44,10 +44,10 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="AwsAssumedRoleAuthConfig" /> class.
         /// </summary>
-        /// <param name="awsAuthType"></param>
         /// <param name="awsRoleArn"></param>
-        /// <param name="awsExternalId"></param>
         /// <param name="awsRegion"></param>
+        /// <param name="awsAuthType"></param>
+        /// <param name="awsExternalId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -57,10 +57,10 @@ namespace Portkey
             global::Portkey.AwsAssumedRoleAuthConfigAwsAuthType awsAuthType,
             string? awsExternalId)
         {
-            this.AwsRoleArn = awsRoleArn ?? throw new global::System.ArgumentNullException(nameof(awsRoleArn));
-            this.AwsRegion = awsRegion ?? throw new global::System.ArgumentNullException(nameof(awsRegion));
             this.AwsAuthType = awsAuthType;
+            this.AwsRoleArn = awsRoleArn ?? throw new global::System.ArgumentNullException(nameof(awsRoleArn));
             this.AwsExternalId = awsExternalId;
+            this.AwsRegion = awsRegion ?? throw new global::System.ArgumentNullException(nameof(awsRegion));
         }
 
         /// <summary>

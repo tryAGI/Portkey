@@ -55,11 +55,6 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="Scroll" /> class.
         /// </summary>
-        /// <param name="type">
-        /// Specifies the event type. For a scroll action, this property is <br/>
-        /// always set to `scroll`.<br/>
-        /// Default Value: scroll
-        /// </param>
         /// <param name="x">
         /// The x-coordinate where the scroll occurred.
         /// </param>
@@ -72,6 +67,11 @@ namespace Portkey
         /// <param name="scrollY">
         /// The vertical scroll distance.
         /// </param>
+        /// <param name="type">
+        /// Specifies the event type. For a scroll action, this property is <br/>
+        /// always set to `scroll`.<br/>
+        /// Default Value: scroll
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -82,11 +82,11 @@ namespace Portkey
             int scrollY,
             global::Portkey.ScrollType type = global::Portkey.ScrollType.Scroll)
         {
+            this.Type = type;
             this.X = x;
             this.Y = y;
             this.ScrollX = scrollX;
             this.ScrollY = scrollY;
-            this.Type = type;
         }
 
         /// <summary>

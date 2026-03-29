@@ -52,11 +52,11 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="AzureEntraAuthConfig" /> class.
         /// </summary>
-        /// <param name="azureAuthMode"></param>
         /// <param name="azureEntraTenantId"></param>
         /// <param name="azureEntraClientId"></param>
         /// <param name="azureEntraClientSecret"></param>
         /// <param name="azureVaultUrl"></param>
+        /// <param name="azureAuthMode"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -67,11 +67,11 @@ namespace Portkey
             string azureVaultUrl,
             global::Portkey.AzureEntraAuthConfigAzureAuthMode azureAuthMode)
         {
+            this.AzureAuthMode = azureAuthMode;
             this.AzureEntraTenantId = azureEntraTenantId ?? throw new global::System.ArgumentNullException(nameof(azureEntraTenantId));
             this.AzureEntraClientId = azureEntraClientId ?? throw new global::System.ArgumentNullException(nameof(azureEntraClientId));
             this.AzureEntraClientSecret = azureEntraClientSecret ?? throw new global::System.ArgumentNullException(nameof(azureEntraClientSecret));
             this.AzureVaultUrl = azureVaultUrl ?? throw new global::System.ArgumentNullException(nameof(azureVaultUrl));
-            this.AzureAuthMode = azureAuthMode;
         }
 
         /// <summary>

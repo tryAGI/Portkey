@@ -64,14 +64,6 @@ namespace Portkey
         /// HTTP response status code<br/>
         /// Example: 200
         /// </param>
-        /// <param name="headers">
-        /// Response headers (only present when debug logging is enabled or request failed)<br/>
-        /// Example: {"Content-Type":"application/json"}
-        /// </param>
-        /// <param name="body">
-        /// Response body (only present when debug logging is enabled or request failed). May be redacted for certain embedding models.<br/>
-        /// Example: {"id":"chatcmpl-123","object":"chat.completion","created":1677652288}
-        /// </param>
         /// <param name="responseTime">
         /// Response time in milliseconds<br/>
         /// Example: 1234
@@ -79,6 +71,14 @@ namespace Portkey
         /// <param name="lastUsedOptionJsonPath">
         /// JSON path to the last used option in the config<br/>
         /// Example: $.config.options[0]
+        /// </param>
+        /// <param name="headers">
+        /// Response headers (only present when debug logging is enabled or request failed)<br/>
+        /// Example: {"Content-Type":"application/json"}
+        /// </param>
+        /// <param name="body">
+        /// Response body (only present when debug logging is enabled or request failed). May be redacted for certain embedding models.<br/>
+        /// Example: {"id":"chatcmpl-123","object":"chat.completion","created":1677652288}
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -91,10 +91,10 @@ namespace Portkey
             object? body)
         {
             this.Status = status;
-            this.ResponseTime = responseTime;
-            this.LastUsedOptionJsonPath = lastUsedOptionJsonPath ?? throw new global::System.ArgumentNullException(nameof(lastUsedOptionJsonPath));
             this.Headers = headers;
             this.Body = body;
+            this.ResponseTime = responseTime;
+            this.LastUsedOptionJsonPath = lastUsedOptionJsonPath ?? throw new global::System.ArgumentNullException(nameof(lastUsedOptionJsonPath));
         }
 
         /// <summary>

@@ -67,16 +67,16 @@ namespace Portkey
         /// HTTP method<br/>
         /// Example: POST
         /// </param>
+        /// <param name="portkeyHeaders">
+        /// Portkey-specific headers<br/>
+        /// Example: {"x-portkey-trace-id":"trace-123","x-portkey-span-id":"span-456","x-portkey-metadata":"{\u0022key\u0022:\u0022value\u0022}"}
+        /// </param>
         /// <param name="headers">
         /// Request headers (only present when debug logging is enabled)<br/>
         /// Example: {"Content-Type":"application/json","Authorization":"Bearer hashed_value"}
         /// </param>
         /// <param name="body">
         /// Request body (only present when debug logging is enabled)
-        /// </param>
-        /// <param name="portkeyHeaders">
-        /// Portkey-specific headers<br/>
-        /// Example: {"x-portkey-trace-id":"trace-123","x-portkey-span-id":"span-456","x-portkey-metadata":"{\u0022key\u0022:\u0022value\u0022}"}
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -90,9 +90,9 @@ namespace Portkey
         {
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.Method = method;
-            this.PortkeyHeaders = portkeyHeaders ?? throw new global::System.ArgumentNullException(nameof(portkeyHeaders));
             this.Headers = headers;
             this.Body = body;
+            this.PortkeyHeaders = portkeyHeaders ?? throw new global::System.ArgumentNullException(nameof(portkeyHeaders));
         }
 
         /// <summary>

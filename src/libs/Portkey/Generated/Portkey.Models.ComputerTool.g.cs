@@ -47,9 +47,6 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="ComputerTool" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of the computer use tool. Always `computer_use_preview`.
-        /// </param>
         /// <param name="displayWidth">
         /// The width of the computer display.
         /// </param>
@@ -58,6 +55,9 @@ namespace Portkey
         /// </param>
         /// <param name="environment">
         /// The type of computer environment to control.
+        /// </param>
+        /// <param name="type">
+        /// The type of the computer use tool. Always `computer_use_preview`.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -68,10 +68,10 @@ namespace Portkey
             global::Portkey.ComputerToolEnvironment environment,
             global::Portkey.ComputerToolType type)
         {
+            this.Type = type;
             this.DisplayWidth = displayWidth;
             this.DisplayHeight = displayHeight;
             this.Environment = environment;
-            this.Type = type;
         }
 
         /// <summary>

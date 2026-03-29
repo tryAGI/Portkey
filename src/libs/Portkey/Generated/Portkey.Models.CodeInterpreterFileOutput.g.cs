@@ -31,10 +31,10 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="CodeInterpreterFileOutput" /> class.
         /// </summary>
+        /// <param name="files"></param>
         /// <param name="type">
         /// The type of the code interpreter file output. Always `files`.
         /// </param>
-        /// <param name="files"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -42,8 +42,8 @@ namespace Portkey
             global::System.Collections.Generic.IList<global::Portkey.CodeInterpreterFileOutputFile> files,
             global::Portkey.CodeInterpreterFileOutputType type)
         {
-            this.Files = files ?? throw new global::System.ArgumentNullException(nameof(files));
             this.Type = type;
+            this.Files = files ?? throw new global::System.ArgumentNullException(nameof(files));
         }
 
         /// <summary>

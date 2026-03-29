@@ -52,9 +52,6 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseRefusalDoneEvent" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of the event. Always `response.refusal.done`.
-        /// </param>
         /// <param name="itemId">
         /// The ID of the output item that the refusal text is finalized.
         /// </param>
@@ -67,6 +64,9 @@ namespace Portkey
         /// <param name="refusal">
         /// The refusal text that is finalized.
         /// </param>
+        /// <param name="type">
+        /// The type of the event. Always `response.refusal.done`.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -77,11 +77,11 @@ namespace Portkey
             string refusal,
             global::Portkey.ResponseRefusalDoneEventType type)
         {
+            this.Type = type;
             this.ItemId = itemId ?? throw new global::System.ArgumentNullException(nameof(itemId));
             this.OutputIndex = outputIndex;
             this.ContentIndex = contentIndex;
             this.Refusal = refusal ?? throw new global::System.ArgumentNullException(nameof(refusal));
-            this.Type = type;
         }
 
         /// <summary>

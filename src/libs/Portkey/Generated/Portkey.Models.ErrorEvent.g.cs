@@ -31,8 +31,8 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="ErrorEvent" /> class.
         /// </summary>
-        /// <param name="event"></param>
         /// <param name="data"></param>
+        /// <param name="event"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -40,8 +40,8 @@ namespace Portkey
             global::Portkey.Error data,
             global::Portkey.ErrorEventEvent @event)
         {
-            this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
             this.Event = @event;
+            this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
         }
 
         /// <summary>

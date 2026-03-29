@@ -38,14 +38,14 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseWebSearchCallCompletedEvent" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of the event. Always `response.web_search_call.completed`.
-        /// </param>
         /// <param name="outputIndex">
         /// The index of the output item that the web search call is associated with.
         /// </param>
         /// <param name="itemId">
         /// Unique ID for the output item associated with the web search call.
+        /// </param>
+        /// <param name="type">
+        /// The type of the event. Always `response.web_search_call.completed`.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -55,9 +55,9 @@ namespace Portkey
             string itemId,
             global::Portkey.ResponseWebSearchCallCompletedEventType type)
         {
+            this.Type = type;
             this.OutputIndex = outputIndex;
             this.ItemId = itemId ?? throw new global::System.ArgumentNullException(nameof(itemId));
-            this.Type = type;
         }
 
         /// <summary>

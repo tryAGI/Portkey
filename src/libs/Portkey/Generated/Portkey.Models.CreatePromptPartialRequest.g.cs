@@ -43,12 +43,12 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="CreatePromptPartialRequest" /> class.
         /// </summary>
-        /// <param name="workspaceId">
-        /// Required for Admin keys
-        /// </param>
         /// <param name="name"></param>
         /// <param name="string">
         /// Prompt partial template in string format
+        /// </param>
+        /// <param name="workspaceId">
+        /// Required for Admin keys
         /// </param>
         /// <param name="versionDescription"></param>
 #if NET7_0_OR_GREATER
@@ -60,9 +60,9 @@ namespace Portkey
             string? workspaceId,
             string? versionDescription)
         {
+            this.WorkspaceId = workspaceId;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.String = @string ?? throw new global::System.ArgumentNullException(nameof(@string));
-            this.WorkspaceId = workspaceId;
             this.VersionDescription = versionDescription;
         }
 

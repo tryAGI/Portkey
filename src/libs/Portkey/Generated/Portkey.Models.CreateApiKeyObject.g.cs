@@ -89,6 +89,9 @@ namespace Portkey
         /// <param name="name">
         /// Example: Development API Key
         /// </param>
+        /// <param name="scopes">
+        /// Example: [completions.write]
+        /// </param>
         /// <param name="description">
         /// Example: API key for development environment
         /// </param>
@@ -102,9 +105,6 @@ namespace Portkey
         /// <param name="rateLimits"></param>
         /// <param name="usageLimits">
         /// Example: {"credit_limit":10,"periodic_reset":"monthly","alert_threshold":8}
-        /// </param>
-        /// <param name="scopes">
-        /// Example: [completions.write]
         /// </param>
         /// <param name="defaults"></param>
         /// <param name="alertEmails"></param>
@@ -125,12 +125,12 @@ namespace Portkey
             global::System.DateTime? expiresAt)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Scopes = scopes ?? throw new global::System.ArgumentNullException(nameof(scopes));
             this.Description = description;
             this.WorkspaceId = workspaceId;
             this.UserId = userId;
             this.RateLimits = rateLimits;
             this.UsageLimits = usageLimits;
+            this.Scopes = scopes ?? throw new global::System.ArgumentNullException(nameof(scopes));
             this.Defaults = defaults;
             this.AlertEmails = alertEmails;
             this.ExpiresAt = expiresAt;

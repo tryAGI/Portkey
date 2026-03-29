@@ -53,21 +53,21 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="FunctionTool" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of the function tool. Always `function`.
-        /// </param>
         /// <param name="name">
         /// The name of the function to call.
-        /// </param>
-        /// <param name="description">
-        /// A description of the function. Used by the model to determine whether<br/>
-        /// or not to call the function.
         /// </param>
         /// <param name="parameters">
         /// A JSON schema object describing the parameters of the function.
         /// </param>
         /// <param name="strict">
         /// Whether to enforce strict parameter validation. Default `true`.
+        /// </param>
+        /// <param name="type">
+        /// The type of the function tool. Always `function`.
+        /// </param>
+        /// <param name="description">
+        /// A description of the function. Used by the model to determine whether<br/>
+        /// or not to call the function.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -79,11 +79,11 @@ namespace Portkey
             global::Portkey.FunctionToolType type,
             string? description)
         {
+            this.Type = type;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.Description = description;
             this.Parameters = parameters ?? throw new global::System.ArgumentNullException(nameof(parameters));
             this.Strict = strict;
-            this.Type = type;
-            this.Description = description;
         }
 
         /// <summary>

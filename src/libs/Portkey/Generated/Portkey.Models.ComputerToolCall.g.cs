@@ -65,10 +65,6 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="ComputerToolCall" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of the computer call. Always `computer_call`.<br/>
-        /// Default Value: computer_call
-        /// </param>
         /// <param name="id">
         /// The unique ID of the computer call.
         /// </param>
@@ -83,6 +79,10 @@ namespace Portkey
         /// The status of the item. One of `in_progress`, `completed`, or<br/>
         /// `incomplete`. Populated when items are returned via API.
         /// </param>
+        /// <param name="type">
+        /// The type of the computer call. Always `computer_call`.<br/>
+        /// Default Value: computer_call
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -94,12 +94,12 @@ namespace Portkey
             global::Portkey.ComputerToolCallStatus status,
             global::Portkey.ComputerToolCallType type = global::Portkey.ComputerToolCallType.ComputerCall)
         {
+            this.Type = type;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.CallId = callId ?? throw new global::System.ArgumentNullException(nameof(callId));
             this.Action = action;
             this.PendingSafetyChecks = pendingSafetyChecks ?? throw new global::System.ArgumentNullException(nameof(pendingSafetyChecks));
             this.Status = status;
-            this.Type = type;
         }
 
         /// <summary>

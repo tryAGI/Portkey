@@ -44,9 +44,9 @@ namespace Portkey
         /// Initializes a new instance of the <see cref="CreateVirtualKeysRequestDeploymentConfigItem" /> class.
         /// </summary>
         /// <param name="apiVersion"></param>
+        /// <param name="deploymentName"></param>
         /// <param name="alias"></param>
         /// <param name="isDefault"></param>
-        /// <param name="deploymentName"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -57,9 +57,9 @@ namespace Portkey
             bool? isDefault)
         {
             this.ApiVersion = apiVersion ?? throw new global::System.ArgumentNullException(nameof(apiVersion));
-            this.DeploymentName = deploymentName ?? throw new global::System.ArgumentNullException(nameof(deploymentName));
             this.Alias = alias;
             this.IsDefault = isDefault;
+            this.DeploymentName = deploymentName ?? throw new global::System.ArgumentNullException(nameof(deploymentName));
         }
 
         /// <summary>

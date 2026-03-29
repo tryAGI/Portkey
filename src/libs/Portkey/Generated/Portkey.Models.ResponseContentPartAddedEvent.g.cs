@@ -53,9 +53,6 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseContentPartAddedEvent" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of the event. Always `response.content_part.added`.
-        /// </param>
         /// <param name="itemId">
         /// The ID of the output item that the content part was added to.
         /// </param>
@@ -66,6 +63,9 @@ namespace Portkey
         /// The index of the content part that was added.
         /// </param>
         /// <param name="part"></param>
+        /// <param name="type">
+        /// The type of the event. Always `response.content_part.added`.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -76,11 +76,11 @@ namespace Portkey
             global::Portkey.OutputContent part,
             global::Portkey.ResponseContentPartAddedEventType type)
         {
+            this.Type = type;
             this.ItemId = itemId ?? throw new global::System.ArgumentNullException(nameof(itemId));
             this.OutputIndex = outputIndex;
             this.ContentIndex = contentIndex;
             this.Part = part;
-            this.Type = type;
         }
 
         /// <summary>

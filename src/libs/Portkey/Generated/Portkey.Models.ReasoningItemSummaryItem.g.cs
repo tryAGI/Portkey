@@ -32,12 +32,12 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="ReasoningItemSummaryItem" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of the object. Always `summary_text`.
-        /// </param>
         /// <param name="text">
         /// A short summary of the reasoning used by the model when generating<br/>
         /// the response.
+        /// </param>
+        /// <param name="type">
+        /// The type of the object. Always `summary_text`.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -46,8 +46,8 @@ namespace Portkey
             string text,
             global::Portkey.ReasoningItemSummaryItemType type)
         {
-            this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
             this.Type = type;
+            this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
         }
 
         /// <summary>

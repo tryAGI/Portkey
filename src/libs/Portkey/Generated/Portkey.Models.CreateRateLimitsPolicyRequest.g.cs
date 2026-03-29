@@ -77,10 +77,6 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateRateLimitsPolicyRequest" /> class.
         /// </summary>
-        /// <param name="name">
-        /// Policy name<br/>
-        /// Example: 100 Requests per Minute
-        /// </param>
         /// <param name="conditions">
         /// Array of conditions that define which requests the policy applies to
         /// </param>
@@ -98,6 +94,10 @@ namespace Portkey
         /// </param>
         /// <param name="value">
         /// Rate limit value
+        /// </param>
+        /// <param name="name">
+        /// Policy name<br/>
+        /// Example: 100 Requests per Minute
         /// </param>
         /// <param name="workspaceId">
         /// Workspace ID or slug. Required if not using API key authentication.
@@ -118,12 +118,12 @@ namespace Portkey
             string? workspaceId,
             global::System.Guid? organisationId)
         {
+            this.Name = name;
             this.Conditions = conditions ?? throw new global::System.ArgumentNullException(nameof(conditions));
             this.GroupBy = groupBy ?? throw new global::System.ArgumentNullException(nameof(groupBy));
             this.Type = type;
             this.Unit = unit;
             this.Value = value;
-            this.Name = name;
             this.WorkspaceId = workspaceId;
             this.OrganisationId = organisationId;
         }

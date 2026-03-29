@@ -40,15 +40,15 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="InputAudio" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of the input item. Always `input_audio`.
-        /// </param>
         /// <param name="data">
         /// Base64-encoded audio data.
         /// </param>
         /// <param name="format">
         /// The format of the audio data. Currently supported formats are `mp3` and<br/>
         /// `wav`.
+        /// </param>
+        /// <param name="type">
+        /// The type of the input item. Always `input_audio`.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -58,9 +58,9 @@ namespace Portkey
             global::Portkey.InputAudioFormat format,
             global::Portkey.InputAudioType type)
         {
+            this.Type = type;
             this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
             this.Format = format;
-            this.Type = type;
         }
 
         /// <summary>

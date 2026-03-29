@@ -79,12 +79,12 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="LogObject" /> class.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="response"></param>
         /// <param name="id">
         /// Unique identifier for the log entry<br/>
         /// Example: 550e8400-e29b-41d4-a716-446655440000
         /// </param>
-        /// <param name="request"></param>
-        /// <param name="response"></param>
         /// <param name="organisationId">
         /// Organization identifier<br/>
         /// Example: org-123
@@ -113,9 +113,9 @@ namespace Portkey
             global::Portkey.RequestResponseObject? originalResponse,
             global::Portkey.RequestResponseObject? transformedRequest)
         {
+            this.Id = id;
             this.Request = request ?? throw new global::System.ArgumentNullException(nameof(request));
             this.Response = response ?? throw new global::System.ArgumentNullException(nameof(response));
-            this.Id = id;
             this.OrganisationId = organisationId;
             this.CreatedAt = createdAt;
             this.Metrics = metrics;

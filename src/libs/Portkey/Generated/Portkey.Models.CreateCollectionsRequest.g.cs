@@ -36,11 +36,11 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCollectionsRequest" /> class.
         /// </summary>
-        /// <param name="workspaceId">
-        /// ID or slug of the workspace
-        /// </param>
         /// <param name="name">
         /// Name of the collection
+        /// </param>
+        /// <param name="workspaceId">
+        /// ID or slug of the workspace
         /// </param>
         /// <param name="parentCollectionId">
         /// ID or slug of the parent collection (optional)
@@ -53,8 +53,8 @@ namespace Portkey
             string? workspaceId,
             string? parentCollectionId)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.WorkspaceId = workspaceId;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.ParentCollectionId = parentCollectionId;
         }
 

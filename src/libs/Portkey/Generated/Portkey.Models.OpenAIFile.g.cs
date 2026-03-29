@@ -90,14 +90,14 @@ namespace Portkey
         /// <param name="filename">
         /// The name of the file.
         /// </param>
-        /// <param name="object">
-        /// The object type, which is always `file`.
-        /// </param>
         /// <param name="purpose">
         /// The intended purpose of the file. Supported values are `assistants`, `assistants_output`, `batch`, `batch_output`, `fine-tune`, `fine-tune-results` and `vision`.
         /// </param>
         /// <param name="status">
         /// Deprecated. The current status of the file, which can be either `uploaded`, `processed`, or `error`.
+        /// </param>
+        /// <param name="object">
+        /// The object type, which is always `file`.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -115,9 +115,9 @@ namespace Portkey
             this.Bytes = bytes;
             this.CreatedAt = createdAt;
             this.Filename = filename ?? throw new global::System.ArgumentNullException(nameof(filename));
+            this.Object = @object;
             this.Purpose = purpose;
             this.Status = status;
-            this.Object = @object;
         }
 
         /// <summary>

@@ -58,14 +58,14 @@ namespace Portkey
         /// <param name="title">
         /// The title of the web resource.
         /// </param>
-        /// <param name="type">
-        /// The type of the URL citation. Always `url_citation`.
-        /// </param>
         /// <param name="startIndex">
         /// The index of the first character of the URL citation in the message.
         /// </param>
         /// <param name="endIndex">
         /// The index of the last character of the URL citation in the message.
+        /// </param>
+        /// <param name="type">
+        /// The type of the URL citation. Always `url_citation`.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -79,9 +79,9 @@ namespace Portkey
         {
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
+            this.Type = type;
             this.StartIndex = startIndex;
             this.EndIndex = endIndex;
-            this.Type = type;
         }
 
         /// <summary>

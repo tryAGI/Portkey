@@ -31,11 +31,11 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="Refusal" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of the refusal. Always `refusal`.
-        /// </param>
         /// <param name="refusal1">
         /// The refusal explanationfrom the model.
+        /// </param>
+        /// <param name="type">
+        /// The type of the refusal. Always `refusal`.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -44,8 +44,8 @@ namespace Portkey
             string refusal1,
             global::Portkey.RefusalType type)
         {
-            this.Refusal1 = refusal1 ?? throw new global::System.ArgumentNullException(nameof(refusal1));
             this.Type = type;
+            this.Refusal1 = refusal1 ?? throw new global::System.ArgumentNullException(nameof(refusal1));
         }
 
         /// <summary>

@@ -52,11 +52,11 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="FileSearchTool" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of the file search tool. Always `file_search`.
-        /// </param>
         /// <param name="vectorStoreIds">
         /// The IDs of the vector stores to search.
+        /// </param>
+        /// <param name="type">
+        /// The type of the file search tool. Always `file_search`.
         /// </param>
         /// <param name="maxNumResults">
         /// The maximum number of results to return. This number should be between 1 <br/>
@@ -78,8 +78,8 @@ namespace Portkey
             global::Portkey.OneOf<global::Portkey.ComparisonFilter, global::Portkey.CompoundFilter>? filters,
             global::Portkey.FileSearchToolRankingOptions? rankingOptions)
         {
-            this.VectorStoreIds = vectorStoreIds ?? throw new global::System.ArgumentNullException(nameof(vectorStoreIds));
             this.Type = type;
+            this.VectorStoreIds = vectorStoreIds ?? throw new global::System.ArgumentNullException(nameof(vectorStoreIds));
             this.MaxNumResults = maxNumResults;
             this.Filters = filters;
             this.RankingOptions = rankingOptions;

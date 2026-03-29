@@ -52,15 +52,15 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageContentTextAnnotationsFileCitationObject" /> class.
         /// </summary>
-        /// <param name="type">
-        /// Always `file_citation`.
-        /// </param>
         /// <param name="text">
         /// The text in the message content that needs to be replaced.
         /// </param>
         /// <param name="fileCitation"></param>
         /// <param name="startIndex"></param>
         /// <param name="endIndex"></param>
+        /// <param name="type">
+        /// Always `file_citation`.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -71,11 +71,11 @@ namespace Portkey
             int endIndex,
             global::Portkey.MessageContentTextAnnotationsFileCitationObjectType type)
         {
+            this.Type = type;
             this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
             this.FileCitation = fileCitation ?? throw new global::System.ArgumentNullException(nameof(fileCitation));
             this.StartIndex = startIndex;
             this.EndIndex = endIndex;
-            this.Type = type;
         }
 
         /// <summary>

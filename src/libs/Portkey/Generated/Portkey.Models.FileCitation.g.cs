@@ -38,14 +38,14 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="FileCitation" /> class.
         /// </summary>
-        /// <param name="type">
-        /// The type of the file citation. Always `file_citation`.
-        /// </param>
         /// <param name="index">
         /// The index of the file in the list of files.
         /// </param>
         /// <param name="fileId">
         /// The ID of the file.
+        /// </param>
+        /// <param name="type">
+        /// The type of the file citation. Always `file_citation`.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -55,9 +55,9 @@ namespace Portkey
             string fileId,
             global::Portkey.FileCitationType type)
         {
+            this.Type = type;
             this.Index = index;
             this.FileId = fileId ?? throw new global::System.ArgumentNullException(nameof(fileId));
-            this.Type = type;
         }
 
         /// <summary>

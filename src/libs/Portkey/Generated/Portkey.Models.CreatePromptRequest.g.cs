@@ -98,6 +98,9 @@ namespace Portkey
         /// <param name="parameters">
         /// Parameters for the prompt
         /// </param>
+        /// <param name="virtualKey">
+        /// The virtual key to use for the prompt
+        /// </param>
         /// <param name="functions">
         /// Functions for the prompt
         /// </param>
@@ -109,9 +112,6 @@ namespace Portkey
         /// </param>
         /// <param name="model">
         /// The model to use for the prompt
-        /// </param>
-        /// <param name="virtualKey">
-        /// The virtual key to use for the prompt
         /// </param>
         /// <param name="versionDescription">
         /// The description of the prompt version
@@ -139,11 +139,11 @@ namespace Portkey
             this.CollectionId = collectionId ?? throw new global::System.ArgumentNullException(nameof(collectionId));
             this.String = @string ?? throw new global::System.ArgumentNullException(nameof(@string));
             this.Parameters = parameters ?? throw new global::System.ArgumentNullException(nameof(parameters));
-            this.VirtualKey = virtualKey ?? throw new global::System.ArgumentNullException(nameof(virtualKey));
             this.Functions = functions;
             this.Tools = tools;
             this.ToolChoice = toolChoice;
             this.Model = model;
+            this.VirtualKey = virtualKey ?? throw new global::System.ArgumentNullException(nameof(virtualKey));
             this.VersionDescription = versionDescription;
             this.TemplateMetadata = templateMetadata;
         }

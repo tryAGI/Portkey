@@ -31,8 +31,8 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="AzureDefaultAuthConfig" /> class.
         /// </summary>
-        /// <param name="azureAuthMode"></param>
         /// <param name="azureVaultUrl"></param>
+        /// <param name="azureAuthMode"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -40,8 +40,8 @@ namespace Portkey
             string azureVaultUrl,
             global::Portkey.AzureDefaultAuthConfigAzureAuthMode azureAuthMode)
         {
-            this.AzureVaultUrl = azureVaultUrl ?? throw new global::System.ArgumentNullException(nameof(azureVaultUrl));
             this.AzureAuthMode = azureAuthMode;
+            this.AzureVaultUrl = azureVaultUrl ?? throw new global::System.ArgumentNullException(nameof(azureVaultUrl));
         }
 
         /// <summary>

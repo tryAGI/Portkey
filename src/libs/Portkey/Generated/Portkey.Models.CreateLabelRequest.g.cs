@@ -48,14 +48,14 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateLabelRequest" /> class.
         /// </summary>
+        /// <param name="name">
+        /// Name of the label
+        /// </param>
         /// <param name="organisationId">
         /// ID of the organisation
         /// </param>
         /// <param name="workspaceId">
         /// ID or slug of the workspace
-        /// </param>
-        /// <param name="name">
-        /// Name of the label
         /// </param>
         /// <param name="description">
         /// Description of the label
@@ -73,9 +73,9 @@ namespace Portkey
             string? description,
             string? colorCode)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.OrganisationId = organisationId;
             this.WorkspaceId = workspaceId;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Description = description;
             this.ColorCode = colorCode;
         }

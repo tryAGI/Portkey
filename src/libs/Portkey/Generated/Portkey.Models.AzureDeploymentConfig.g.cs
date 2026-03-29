@@ -51,21 +51,21 @@ namespace Portkey
         /// <summary>
         /// Initializes a new instance of the <see cref="AzureDeploymentConfig" /> class.
         /// </summary>
-        /// <param name="alias">
-        /// Alias for the deployment
-        /// </param>
         /// <param name="azureApiVersion">
         /// Azure API version
         /// </param>
         /// <param name="azureDeploymentName">
         /// Azure deployment name
         /// </param>
+        /// <param name="azureModelSlug">
+        /// Azure model slug
+        /// </param>
+        /// <param name="alias">
+        /// Alias for the deployment
+        /// </param>
         /// <param name="isDefault">
         /// Whether this is the default deployment<br/>
         /// Default Value: false
-        /// </param>
-        /// <param name="azureModelSlug">
-        /// Azure model slug
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -77,11 +77,11 @@ namespace Portkey
             string? alias,
             bool? isDefault)
         {
+            this.Alias = alias;
             this.AzureApiVersion = azureApiVersion ?? throw new global::System.ArgumentNullException(nameof(azureApiVersion));
             this.AzureDeploymentName = azureDeploymentName ?? throw new global::System.ArgumentNullException(nameof(azureDeploymentName));
-            this.AzureModelSlug = azureModelSlug ?? throw new global::System.ArgumentNullException(nameof(azureModelSlug));
-            this.Alias = alias;
             this.IsDefault = isDefault;
+            this.AzureModelSlug = azureModelSlug ?? throw new global::System.ArgumentNullException(nameof(azureModelSlug));
         }
 
         /// <summary>
