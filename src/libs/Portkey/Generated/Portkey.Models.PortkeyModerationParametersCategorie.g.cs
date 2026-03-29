@@ -15,7 +15,7 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
-        HarassmentDividethreatening,
+        HarassmentThreatening,
         /// <summary>
         /// 
         /// </summary>
@@ -23,7 +23,7 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
-        HateDividethreatening,
+        HateThreatening,
         /// <summary>
         /// 
         /// </summary>
@@ -31,11 +31,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
-        SelfHarmDivideinstructions,
+        SelfHarmInstructions,
         /// <summary>
         /// 
         /// </summary>
-        SelfHarmDivideintent,
+        SelfHarmIntent,
         /// <summary>
         /// 
         /// </summary>
@@ -43,7 +43,7 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
-        SexualDivideminors,
+        SexualMinors,
         /// <summary>
         /// 
         /// </summary>
@@ -51,7 +51,7 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
-        ViolenceDividegraphic,
+        ViolenceGraphic,
     }
 
     /// <summary>
@@ -67,16 +67,16 @@ namespace Portkey
             return value switch
             {
                 PortkeyModerationParametersCategorie.Harassment => "harassment",
-                PortkeyModerationParametersCategorie.HarassmentDividethreatening => "harassment/threatening",
+                PortkeyModerationParametersCategorie.HarassmentThreatening => "harassment/threatening",
                 PortkeyModerationParametersCategorie.Hate => "hate",
-                PortkeyModerationParametersCategorie.HateDividethreatening => "hate/threatening",
+                PortkeyModerationParametersCategorie.HateThreatening => "hate/threatening",
                 PortkeyModerationParametersCategorie.SelfHarm => "self-harm",
-                PortkeyModerationParametersCategorie.SelfHarmDivideinstructions => "self-harm/instructions",
-                PortkeyModerationParametersCategorie.SelfHarmDivideintent => "self-harm/intent",
+                PortkeyModerationParametersCategorie.SelfHarmInstructions => "self-harm/instructions",
+                PortkeyModerationParametersCategorie.SelfHarmIntent => "self-harm/intent",
                 PortkeyModerationParametersCategorie.Sexual => "sexual",
-                PortkeyModerationParametersCategorie.SexualDivideminors => "sexual/minors",
+                PortkeyModerationParametersCategorie.SexualMinors => "sexual/minors",
                 PortkeyModerationParametersCategorie.Violence => "violence",
-                PortkeyModerationParametersCategorie.ViolenceDividegraphic => "violence/graphic",
+                PortkeyModerationParametersCategorie.ViolenceGraphic => "violence/graphic",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -88,16 +88,16 @@ namespace Portkey
             return value switch
             {
                 "harassment" => PortkeyModerationParametersCategorie.Harassment,
-                "harassment/threatening" => PortkeyModerationParametersCategorie.HarassmentDividethreatening,
+                "harassment/threatening" => PortkeyModerationParametersCategorie.HarassmentThreatening,
                 "hate" => PortkeyModerationParametersCategorie.Hate,
-                "hate/threatening" => PortkeyModerationParametersCategorie.HateDividethreatening,
+                "hate/threatening" => PortkeyModerationParametersCategorie.HateThreatening,
                 "self-harm" => PortkeyModerationParametersCategorie.SelfHarm,
-                "self-harm/instructions" => PortkeyModerationParametersCategorie.SelfHarmDivideinstructions,
-                "self-harm/intent" => PortkeyModerationParametersCategorie.SelfHarmDivideintent,
+                "self-harm/instructions" => PortkeyModerationParametersCategorie.SelfHarmInstructions,
+                "self-harm/intent" => PortkeyModerationParametersCategorie.SelfHarmIntent,
                 "sexual" => PortkeyModerationParametersCategorie.Sexual,
-                "sexual/minors" => PortkeyModerationParametersCategorie.SexualDivideminors,
+                "sexual/minors" => PortkeyModerationParametersCategorie.SexualMinors,
                 "violence" => PortkeyModerationParametersCategorie.Violence,
-                "violence/graphic" => PortkeyModerationParametersCategorie.ViolenceDividegraphic,
+                "violence/graphic" => PortkeyModerationParametersCategorie.ViolenceGraphic,
                 _ => null,
             };
         }
