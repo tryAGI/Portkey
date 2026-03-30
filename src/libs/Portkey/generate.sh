@@ -35,12 +35,11 @@ with open('openapi.yaml', 'w') as f:
     yaml.dump(spec, f, default_flow_style=False, allow_unicode=True, sort_keys=False, width=200)
 "
 
-# Auth: --security-scheme overrides the spec's Portkey-Key apiKey auth with HTTP bearer.
-# PortkeyClient.PrepareRequest.cs rewrites Bearer → x-portkey-api-key header.
+# Auth: x-portkey-api-key header.
 autosdk generate openapi.yaml \
   --namespace Portkey \
   --clientClassName PortkeyClient \
   --targetFramework net10.0 \
   --output Generated \
   --exclude-deprecated-operations \
-  --security-scheme Http:Header:Bearer
+  --security-scheme ApiKey:Header:x-portkey-api-key
