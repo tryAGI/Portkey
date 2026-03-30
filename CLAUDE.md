@@ -13,7 +13,7 @@ dotnet test src/tests/IntegrationTests/
 
 ## Auth
 
-API key auth via `x-portkey-api-key` header. The SDK generates standard `Authorization: Bearer` auth; a `PrepareRequest` hook converts it to the native Portkey header:
+API key auth via `x-portkey-api-key` header (native via `--security-scheme`):
 
 ```csharp
 var client = new PortkeyClient(apiKey: "your-portkey-api-key");
@@ -32,14 +32,13 @@ Environment variable: `PORTKEY_API_KEY`
 - `src/libs/Portkey/openapi.yaml` -- Downloaded from `github.com/Portkey-AI/openapi`
 - `src/libs/Portkey/generate.sh` -- Downloads spec, fixes required member issue, runs autosdk with `--security-scheme`
 - `src/libs/Portkey/Generated/` -- **Never edit** -- auto-generated code (4054 files)
-- `src/libs/Portkey/Extensions/PortkeyClient.PrepareRequest.cs` -- Auth header conversion (Bearer -> x-portkey-api-key)
 - `src/libs/Portkey/Extensions/PortkeyClient.WithHeaders.cs` -- Convenience methods for optional Portkey headers
 - `src/tests/IntegrationTests/` -- Integration tests
 
 ## Spec Fixes (in generate.sh)
 
 **CLI flags:**
-- `--security-scheme Http:Header:Bearer` — Overrides spec's `Portkey-Key` apiKey auth with standard HTTP bearer
+- `--security-scheme ApiKey:Header:x-portkey-api-key -- Native API key auth via x-portkey-api-key header
 
 **Pre-generation (Python):**
 1. **Required member fix**: `variables` removed from `required` list in prompt request schemas to avoid CS9035 in convenience overloads
