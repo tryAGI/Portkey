@@ -384,55 +384,55 @@ namespace Portkey.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AwsAccessKeyAuthConfig), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AwsAccessKeyAuthConfig?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AwsAccessKeyAuthConfig).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AccessKey, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AccessKey!, typeInfo);
             }
             else if (value.IsAssumedRole)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AwsAssumedRoleAuthConfig), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AwsAssumedRoleAuthConfig?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AwsAssumedRoleAuthConfig).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AssumedRole, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AssumedRole!, typeInfo);
             }
             else if (value.IsServiceRole)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AwsServiceRoleAuthConfig), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AwsServiceRoleAuthConfig?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AwsServiceRoleAuthConfig).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ServiceRole, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ServiceRole!, typeInfo);
             }
             else if (value.IsAzureEntra)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AzureEntraAuthConfig), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AzureEntraAuthConfig?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AzureEntraAuthConfig).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AzureEntra, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AzureEntra!, typeInfo);
             }
             else if (value.IsAzureManaged)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AzureManagedAuthConfig), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AzureManagedAuthConfig?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AzureManagedAuthConfig).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AzureManaged, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AzureManaged!, typeInfo);
             }
             else if (value.IsAzureDefault)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AzureDefaultAuthConfig), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AzureDefaultAuthConfig?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AzureDefaultAuthConfig).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AzureDefault, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AzureDefault!, typeInfo);
             }
             else if (value.IsHashicorpToken)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.HashicorpTokenAuthConfig), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.HashicorpTokenAuthConfig?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.HashicorpTokenAuthConfig).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.HashicorpToken, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.HashicorpToken!, typeInfo);
             }
             else if (value.IsHashicorpAppRole)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.HashicorpAppRoleAuthConfig), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.HashicorpAppRoleAuthConfig?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.HashicorpAppRoleAuthConfig).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.HashicorpAppRole, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.HashicorpAppRole!, typeInfo);
             }
             else if (value.IsHashicorpKubernetes)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.HashicorpKubernetesAuthConfig), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.HashicorpKubernetesAuthConfig?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.HashicorpKubernetesAuthConfig).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.HashicorpKubernetes, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.HashicorpKubernetes!, typeInfo);
             }
         }
     }

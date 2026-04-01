@@ -272,37 +272,37 @@ namespace Portkey.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestSystemMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestSystemMessage?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestSystemMessage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.SystemMessage, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.SystemMessage!, typeInfo);
             }
             else if (value.IsDeveloperMessage)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestDeveloperMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestDeveloperMessage?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestDeveloperMessage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.DeveloperMessage, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.DeveloperMessage!, typeInfo);
             }
             else if (value.IsUserMessage)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestUserMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestUserMessage?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestUserMessage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UserMessage, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UserMessage!, typeInfo);
             }
             else if (value.IsAssistantMessage)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestAssistantMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestAssistantMessage?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestAssistantMessage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AssistantMessage, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AssistantMessage!, typeInfo);
             }
             else if (value.IsToolMessage)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestToolMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestToolMessage?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestToolMessage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolMessage, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolMessage!, typeInfo);
             }
             else if (value.IsFunctionMessage)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestFunctionMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestFunctionMessage?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestFunctionMessage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.FunctionMessage, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.FunctionMessage!, typeInfo);
             }
         }
     }

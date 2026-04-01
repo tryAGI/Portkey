@@ -185,6 +185,7 @@ namespace Portkey
         public async global::System.Threading.Tasks.Task<global::Portkey.Batch> CreateBatchAsync(
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Portkey.AnyOf<global::Portkey.OpenAIBatchJob, global::Portkey.BedrockBatchJob, global::Portkey.VertexBatchJob, global::Portkey.PortkeyBatchJob>
             {
             };

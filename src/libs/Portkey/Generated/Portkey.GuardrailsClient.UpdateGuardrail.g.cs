@@ -285,6 +285,7 @@ namespace Portkey
             global::Portkey.GuardrailActions? actions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Portkey.UpdateGuardrailRequest
             {
                 Name = name,

@@ -172,6 +172,7 @@ namespace Portkey
         public async global::System.Threading.Tasks.Task CreateLogsAsync(
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Portkey.OneOf<global::Portkey.CustomLog, global::System.Collections.Generic.IList<global::Portkey.CustomLog>>
             {
             };

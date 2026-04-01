@@ -100,7 +100,7 @@ namespace Portkey.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ModelIdsResponsesEnum), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ModelIdsResponsesEnum> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ModelIdsResponsesEnum).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value1, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value1!.Value, typeInfo);
             }
         }
     }

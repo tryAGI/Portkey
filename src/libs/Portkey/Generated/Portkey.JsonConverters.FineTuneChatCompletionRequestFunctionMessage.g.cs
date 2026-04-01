@@ -123,13 +123,13 @@ namespace Portkey.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(object), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<object?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(object).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.FunctionMessage1, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.FunctionMessage1!, typeInfo);
             }
             else if (value.IsFunctionMessage2)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestFunctionMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestFunctionMessage?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestFunctionMessage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.FunctionMessage2, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.FunctionMessage2!, typeInfo);
             }
         }
     }

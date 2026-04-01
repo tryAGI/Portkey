@@ -157,6 +157,7 @@ namespace Portkey
         public async global::System.Collections.Generic.IAsyncEnumerable<global::Portkey.ResponseStreamEvent> CreateResponseAsStreamAsync(
             [global::System.Runtime.CompilerServices.EnumeratorCancellation] global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Portkey.CreateResponse
             {
             };

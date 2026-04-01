@@ -163,19 +163,19 @@ namespace Portkey.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.InputText), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.InputText?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.InputText).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.TextInput, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.TextInput!, typeInfo);
             }
             else if (value.IsImageInput)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.InputImage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.InputImage?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.InputImage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ImageInput, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ImageInput!, typeInfo);
             }
             else if (value.IsFileInput)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.InputFile), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.InputFile?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.InputFile).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.FileInput, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.FileInput!, typeInfo);
             }
         }
     }

@@ -160,19 +160,19 @@ namespace Portkey.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ResponseFormatText), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ResponseFormatText?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ResponseFormatText).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Text, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Text!, typeInfo);
             }
             else if (value.IsJsonSchema)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.TextResponseFormatJsonSchema), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.TextResponseFormatJsonSchema?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.TextResponseFormatJsonSchema).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.JsonSchema, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.JsonSchema!, typeInfo);
             }
             else if (value.IsJsonObject)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ResponseFormatJsonObject), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ResponseFormatJsonObject?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ResponseFormatJsonObject).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.JsonObject, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.JsonObject!, typeInfo);
             }
         }
     }
