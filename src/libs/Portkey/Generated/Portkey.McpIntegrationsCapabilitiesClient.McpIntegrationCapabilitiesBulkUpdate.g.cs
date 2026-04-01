@@ -197,6 +197,7 @@ namespace Portkey
             global::System.Collections.Generic.IList<global::Portkey.BulkUpdateMcpIntegrationCapabilitiesCapabilitie> capabilities,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Portkey.BulkUpdateMcpIntegrationCapabilities
             {
                 Capabilities = capabilities,

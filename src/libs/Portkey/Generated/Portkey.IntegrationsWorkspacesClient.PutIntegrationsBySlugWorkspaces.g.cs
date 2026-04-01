@@ -212,6 +212,7 @@ namespace Portkey
             string? defaultProviderSlug = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Portkey.BulkUpdateWorkspacesRequest
             {
                 Workspaces = workspaces,

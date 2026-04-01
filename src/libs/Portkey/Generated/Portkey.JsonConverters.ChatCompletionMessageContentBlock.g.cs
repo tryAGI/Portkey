@@ -159,19 +159,19 @@ namespace Portkey.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestMessageContentPartText), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestMessageContentPartText?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestMessageContentPartText).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.TextContentPart, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.TextContentPart!, typeInfo);
             }
             else if (value.IsThinkingContentPart)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionMessageContentPartThinking), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionMessageContentPartThinking?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionMessageContentPartThinking).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ThinkingContentPart, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ThinkingContentPart!, typeInfo);
             }
             else if (value.IsRedactedThinkingContentPart)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionMessageContentPartRedactedThinking), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionMessageContentPartRedactedThinking?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionMessageContentPartRedactedThinking).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.RedactedThinkingContentPart, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.RedactedThinkingContentPart!, typeInfo);
             }
         }
     }

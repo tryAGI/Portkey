@@ -124,13 +124,13 @@ namespace Portkey.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestMessageContentPartText), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestMessageContentPartText?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestMessageContentPartText).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.TextContentPart, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.TextContentPart!, typeInfo);
             }
             else if (value.IsImageContentPart)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestMessageContentPartImage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestMessageContentPartImage?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestMessageContentPartImage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ImageContentPart, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ImageContentPart!, typeInfo);
             }
         }
     }

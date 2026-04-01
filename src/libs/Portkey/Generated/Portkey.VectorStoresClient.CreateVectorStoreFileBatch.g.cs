@@ -207,6 +207,7 @@ namespace Portkey
             global::Portkey.ChunkingStrategyRequestParam? chunkingStrategy = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Portkey.CreateVectorStoreFileBatchRequest
             {
                 FileIds = fileIds,

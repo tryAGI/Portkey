@@ -199,6 +199,7 @@ namespace Portkey
             object? metadata = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Portkey.CreateThreadRequest
             {
                 Messages = messages,

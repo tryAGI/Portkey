@@ -201,6 +201,7 @@ namespace Portkey
             string? status = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Portkey.UpdateConfigRequest
             {
                 Name = name,

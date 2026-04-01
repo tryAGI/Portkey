@@ -146,13 +146,13 @@ namespace Portkey.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.InputContent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.InputContent> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.InputContent).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.InputContent, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.InputContent!.Value, typeInfo);
             }
             else if (value.IsOutputContent)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.OutputContent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.OutputContent> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.OutputContent).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.OutputContent, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.OutputContent!.Value, typeInfo);
             }
         }
     }

@@ -360,6 +360,7 @@ namespace Portkey
             double version,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Portkey.UpdatePromptDefaultRequest
             {
                 Version = version,

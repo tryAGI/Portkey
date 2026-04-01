@@ -362,6 +362,7 @@ namespace Portkey
             string name,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Portkey.PutCollectionsRequest
             {
                 Name = name,
