@@ -193,7 +193,6 @@ namespace Portkey
             string? workspaceId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Portkey.CreateLogsExportsRequest
             {
                 WorkspaceId = workspaceId,
