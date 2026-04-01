@@ -193,7 +193,6 @@ namespace Portkey
             global::System.Collections.Generic.IList<global::Portkey.CreateAdminWorkspacesUsersRequestUser>? users = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Portkey.CreateAdminWorkspacesUsersRequest
             {
                 Users = users,

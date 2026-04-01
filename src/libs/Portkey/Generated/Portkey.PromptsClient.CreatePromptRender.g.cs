@@ -205,7 +205,6 @@ namespace Portkey
             global::Portkey.OneOf<global::Portkey.CreateChatCompletionRequest, global::Portkey.CreateCompletionRequest>? hyperparameters = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Portkey.CreatePromptRenderRequest2
             {
                 Variables = variables,

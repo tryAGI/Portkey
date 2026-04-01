@@ -264,7 +264,6 @@ namespace Portkey
             string? user = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Portkey.CreateImageVariationRequest
             {
                 Image = image,

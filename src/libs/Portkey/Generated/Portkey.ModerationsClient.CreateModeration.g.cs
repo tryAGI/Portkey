@@ -198,7 +198,6 @@ namespace Portkey
             global::Portkey.AnyOf<string, global::Portkey.CreateModerationRequestModel?>? model = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Portkey.CreateModerationRequest
             {
                 Input = input,

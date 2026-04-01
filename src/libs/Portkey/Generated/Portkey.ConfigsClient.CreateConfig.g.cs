@@ -197,7 +197,6 @@ namespace Portkey
             global::System.Guid? workspaceId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Portkey.CreateConfigRequest
             {
                 Name = name,

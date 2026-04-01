@@ -245,7 +245,6 @@ namespace Portkey
             global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? secretMappings = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Portkey.PutVirtualKeysRequest
             {
                 Name = name,

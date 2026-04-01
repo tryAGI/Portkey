@@ -197,7 +197,6 @@ namespace Portkey
             global::Portkey.CreateInviteWorkspaceApiKeyDetails? workspaceApiKeyDetails = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Portkey.CreateInvite
             {
                 Email = email,
