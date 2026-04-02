@@ -34,18 +34,18 @@ namespace Portkey
         /// Content item used to generate a response.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Portkey.Item? Value2 { get; init; }
+        public global::Portkey.Item? Item { get; init; }
 #else
-        public global::Portkey.Item? Value2 { get; }
+        public global::Portkey.Item? Item { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Item))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsItem => Item != null;
 
         /// <summary>
         /// An internal identifier for an item to reference.
@@ -89,14 +89,14 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Portkey.Item?(InputItem @this) => @this.Value2;
+        public static implicit operator global::Portkey.Item?(InputItem @this) => @this.Item;
 
         /// <summary>
         /// 
         /// </summary>
         public InputItem(global::Portkey.Item? value)
         {
-            Value2 = value;
+            Item = value;
         }
 
         /// <summary>
@@ -122,12 +122,12 @@ namespace Portkey
         /// </summary>
         public InputItem(
             global::Portkey.EasyInputMessage? message,
-            global::Portkey.Item? value2,
+            global::Portkey.Item? item,
             global::Portkey.ItemReference? itemReference
             )
         {
             Message = message;
-            Value2 = value2;
+            Item = item;
             ItemReference = itemReference;
         }
 
@@ -136,7 +136,7 @@ namespace Portkey
         /// </summary>
         public object? Object =>
             ItemReference as object ??
-            Value2 as object ??
+            Item as object ??
             Message as object 
             ;
 
@@ -145,7 +145,7 @@ namespace Portkey
         /// </summary>
         public override string? ToString() =>
             Message?.ToString() ??
-            Value2?.ToString() ??
+            Item?.ToString() ??
             ItemReference?.ToString() 
             ;
 
@@ -154,7 +154,7 @@ namespace Portkey
         /// </summary>
         public bool Validate()
         {
-            return IsMessage && !IsValue2 && !IsItemReference || !IsMessage && IsValue2 && !IsItemReference || !IsMessage && !IsValue2 && IsItemReference;
+            return IsMessage && !IsItem && !IsItemReference || !IsMessage && IsItem && !IsItemReference || !IsMessage && !IsItem && IsItemReference;
         }
 
         /// <summary>
@@ -162,7 +162,7 @@ namespace Portkey
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.EasyInputMessage?, TResult>? message = null,
-            global::System.Func<global::Portkey.Item?, TResult>? value2 = null,
+            global::System.Func<global::Portkey.Item?, TResult>? item = null,
             global::System.Func<global::Portkey.ItemReference?, TResult>? itemReference = null,
             bool validate = true)
         {
@@ -175,9 +175,9 @@ namespace Portkey
             {
                 return message(Message!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsItem && item != null)
             {
-                return value2(Value2!);
+                return item(Item!);
             }
             else if (IsItemReference && itemReference != null)
             {
@@ -192,7 +192,7 @@ namespace Portkey
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.EasyInputMessage?>? message = null,
-            global::System.Action<global::Portkey.Item?>? value2 = null,
+            global::System.Action<global::Portkey.Item?>? item = null,
             global::System.Action<global::Portkey.ItemReference?>? itemReference = null,
             bool validate = true)
         {
@@ -205,9 +205,9 @@ namespace Portkey
             {
                 message?.Invoke(Message!);
             }
-            else if (IsValue2)
+            else if (IsItem)
             {
-                value2?.Invoke(Value2!);
+                item?.Invoke(Item!);
             }
             else if (IsItemReference)
             {
@@ -224,7 +224,7 @@ namespace Portkey
             {
                 Message,
                 typeof(global::Portkey.EasyInputMessage),
-                Value2,
+                Item,
                 typeof(global::Portkey.Item),
                 ItemReference,
                 typeof(global::Portkey.ItemReference),
@@ -245,7 +245,7 @@ namespace Portkey
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.EasyInputMessage?>.Default.Equals(Message, other.Message) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.Item?>.Default.Equals(Value2, other.Value2) &&
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.Item?>.Default.Equals(Item, other.Item) &&
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.ItemReference?>.Default.Equals(ItemReference, other.ItemReference) 
                 ;
         }

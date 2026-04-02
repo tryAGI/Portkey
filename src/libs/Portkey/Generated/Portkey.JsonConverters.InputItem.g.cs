@@ -41,7 +41,7 @@ namespace Portkey.JsonConverters
             if (__score2 > __bestScore) { __bestScore = __score2; __bestIndex = 2; }
 
             global::Portkey.EasyInputMessage? message = default;
-            global::Portkey.Item? value2 = default;
+            global::Portkey.Item? item = default;
             global::Portkey.ItemReference? itemReference = default;
             if (__bestIndex >= 0)
             {
@@ -66,7 +66,7 @@ namespace Portkey.JsonConverters
                     {
                         var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.Item), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.Item> ??
                                        throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.Item).Name}");
-                        value2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        item = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -92,7 +92,7 @@ namespace Portkey.JsonConverters
                 }
             }
 
-            if (message == null && value2 == null && itemReference == null)
+            if (message == null && item == null && itemReference == null)
             {
                 try
                 {
@@ -111,7 +111,7 @@ namespace Portkey.JsonConverters
                 {
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.Item), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.Item> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.Item).Name}");
-                    value2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    item = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -137,7 +137,7 @@ namespace Portkey.JsonConverters
             var __value = new global::Portkey.InputItem(
                 message,
 
-                value2,
+                item,
 
                 itemReference
                 );
@@ -160,11 +160,11 @@ namespace Portkey.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.EasyInputMessage).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.Message!, typeInfo);
             }
-            else if (value.IsValue2)
+            else if (value.IsItem)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.Item), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.Item> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.Item).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value2!.Value, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Item!.Value, typeInfo);
             }
             else if (value.IsItemReference)
             {

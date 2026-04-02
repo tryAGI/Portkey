@@ -13,35 +13,35 @@ namespace Portkey
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Portkey.UsageLimitsPolicy? Value1 { get; init; }
+        public global::Portkey.UsageLimitsPolicy? UsageLimitsPolicy { get; init; }
 #else
-        public global::Portkey.UsageLimitsPolicy? Value1 { get; }
+        public global::Portkey.UsageLimitsPolicy? UsageLimitsPolicy { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UsageLimitsPolicy))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsUsageLimitsPolicy => UsageLimitsPolicy != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Portkey.UsageLimitsPolicyResponseVariant2? Value2 { get; init; }
+        public global::Portkey.UsageLimitsPolicyResponseVariant2? UsageLimitsPolicyResponseVariant2 { get; init; }
 #else
-        public global::Portkey.UsageLimitsPolicyResponseVariant2? Value2 { get; }
+        public global::Portkey.UsageLimitsPolicyResponseVariant2? UsageLimitsPolicyResponseVariant2 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UsageLimitsPolicyResponseVariant2))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsUsageLimitsPolicyResponseVariant2 => UsageLimitsPolicyResponseVariant2 != null;
         /// <summary>
         /// 
         /// </summary>
@@ -50,14 +50,14 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Portkey.UsageLimitsPolicy?(UsageLimitsPolicyResponse @this) => @this.Value1;
+        public static implicit operator global::Portkey.UsageLimitsPolicy?(UsageLimitsPolicyResponse @this) => @this.UsageLimitsPolicy;
 
         /// <summary>
         /// 
         /// </summary>
         public UsageLimitsPolicyResponse(global::Portkey.UsageLimitsPolicy? value)
         {
-            Value1 = value;
+            UsageLimitsPolicy = value;
         }
 
         /// <summary>
@@ -68,42 +68,42 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Portkey.UsageLimitsPolicyResponseVariant2?(UsageLimitsPolicyResponse @this) => @this.Value2;
+        public static implicit operator global::Portkey.UsageLimitsPolicyResponseVariant2?(UsageLimitsPolicyResponse @this) => @this.UsageLimitsPolicyResponseVariant2;
 
         /// <summary>
         /// 
         /// </summary>
         public UsageLimitsPolicyResponse(global::Portkey.UsageLimitsPolicyResponseVariant2? value)
         {
-            Value2 = value;
+            UsageLimitsPolicyResponseVariant2 = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public UsageLimitsPolicyResponse(
-            global::Portkey.UsageLimitsPolicy? value1,
-            global::Portkey.UsageLimitsPolicyResponseVariant2? value2
+            global::Portkey.UsageLimitsPolicy? usageLimitsPolicy,
+            global::Portkey.UsageLimitsPolicyResponseVariant2? usageLimitsPolicyResponseVariant2
             )
         {
-            Value1 = value1;
-            Value2 = value2;
+            UsageLimitsPolicy = usageLimitsPolicy;
+            UsageLimitsPolicyResponseVariant2 = usageLimitsPolicyResponseVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value2 as object ??
-            Value1 as object 
+            UsageLimitsPolicyResponseVariant2 as object ??
+            UsageLimitsPolicy as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() ??
-            Value2?.ToString() 
+            UsageLimitsPolicy?.ToString() ??
+            UsageLimitsPolicyResponseVariant2?.ToString() 
             ;
 
         /// <summary>
@@ -111,15 +111,15 @@ namespace Portkey
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && IsValue2;
+            return IsUsageLimitsPolicy && IsUsageLimitsPolicyResponseVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.UsageLimitsPolicy?, TResult>? value1 = null,
-            global::System.Func<global::Portkey.UsageLimitsPolicyResponseVariant2?, TResult>? value2 = null,
+            global::System.Func<global::Portkey.UsageLimitsPolicy?, TResult>? usageLimitsPolicy = null,
+            global::System.Func<global::Portkey.UsageLimitsPolicyResponseVariant2?, TResult>? usageLimitsPolicyResponseVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -127,13 +127,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsUsageLimitsPolicy && usageLimitsPolicy != null)
             {
-                return value1(Value1!);
+                return usageLimitsPolicy(UsageLimitsPolicy!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsUsageLimitsPolicyResponseVariant2 && usageLimitsPolicyResponseVariant2 != null)
             {
-                return value2(Value2!);
+                return usageLimitsPolicyResponseVariant2(UsageLimitsPolicyResponseVariant2!);
             }
 
             return default(TResult);
@@ -143,8 +143,8 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.UsageLimitsPolicy?>? value1 = null,
-            global::System.Action<global::Portkey.UsageLimitsPolicyResponseVariant2?>? value2 = null,
+            global::System.Action<global::Portkey.UsageLimitsPolicy?>? usageLimitsPolicy = null,
+            global::System.Action<global::Portkey.UsageLimitsPolicyResponseVariant2?>? usageLimitsPolicyResponseVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -152,13 +152,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsUsageLimitsPolicy)
             {
-                value1?.Invoke(Value1!);
+                usageLimitsPolicy?.Invoke(UsageLimitsPolicy!);
             }
-            else if (IsValue2)
+            else if (IsUsageLimitsPolicyResponseVariant2)
             {
-                value2?.Invoke(Value2!);
+                usageLimitsPolicyResponseVariant2?.Invoke(UsageLimitsPolicyResponseVariant2!);
             }
         }
 
@@ -169,9 +169,9 @@ namespace Portkey
         {
             var fields = new object?[]
             {
-                Value1,
+                UsageLimitsPolicy,
                 typeof(global::Portkey.UsageLimitsPolicy),
-                Value2,
+                UsageLimitsPolicyResponseVariant2,
                 typeof(global::Portkey.UsageLimitsPolicyResponseVariant2),
             };
             const int offset = unchecked((int)2166136261);
@@ -189,8 +189,8 @@ namespace Portkey
         public bool Equals(UsageLimitsPolicyResponse other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.UsageLimitsPolicy?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.UsageLimitsPolicyResponseVariant2?>.Default.Equals(Value2, other.Value2) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.UsageLimitsPolicy?>.Default.Equals(UsageLimitsPolicy, other.UsageLimitsPolicy) &&
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.UsageLimitsPolicyResponseVariant2?>.Default.Equals(UsageLimitsPolicyResponseVariant2, other.UsageLimitsPolicyResponseVariant2) 
                 ;
         }
 

@@ -43,8 +43,8 @@ namespace Portkey.JsonConverters
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
             if (__score1 > __bestScore) { __bestScore = __score1; __bestIndex = 1; }
 
-            global::Portkey.Collection? value1 = default;
-            global::Portkey.CollectionWithChildCollectionsVariant2? value2 = default;
+            global::Portkey.Collection? collection = default;
+            global::Portkey.CollectionWithChildCollectionsVariant2? collectionWithChildCollectionsVariant2 = default;
             if (__bestIndex >= 0)
             {
                 if (__bestIndex == 0)
@@ -53,7 +53,7 @@ namespace Portkey.JsonConverters
                     {
                         var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.Collection), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.Collection> ??
                                        throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.Collection).Name}");
-                        value1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        collection = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -68,7 +68,7 @@ namespace Portkey.JsonConverters
                     {
                         var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.CollectionWithChildCollectionsVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.CollectionWithChildCollectionsVariant2> ??
                                        throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.CollectionWithChildCollectionsVariant2).Name}");
-                        value2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        collectionWithChildCollectionsVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -79,13 +79,13 @@ namespace Portkey.JsonConverters
                 }
             }
 
-            if (value1 == null && value2 == null)
+            if (collection == null && collectionWithChildCollectionsVariant2 == null)
             {
                 try
                 {
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.Collection), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.Collection> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.Collection).Name}");
-                    value1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    collection = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -98,7 +98,7 @@ namespace Portkey.JsonConverters
                 {
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.CollectionWithChildCollectionsVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.CollectionWithChildCollectionsVariant2> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.CollectionWithChildCollectionsVariant2).Name}");
-                    value2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    collectionWithChildCollectionsVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -109,9 +109,9 @@ namespace Portkey.JsonConverters
             }
 
             var __value = new global::Portkey.CollectionWithChildCollections(
-                value1,
+                collection,
 
-                value2
+                collectionWithChildCollectionsVariant2
                 );
 
             return __value;
@@ -126,17 +126,17 @@ namespace Portkey.JsonConverters
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
             var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
-            if (value.IsValue1)
+            if (value.IsCollection)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.Collection), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.Collection?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.Collection).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value1!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Collection!, typeInfo);
             }
-            else if (value.IsValue2)
+            else if (value.IsCollectionWithChildCollectionsVariant2)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.CollectionWithChildCollectionsVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.CollectionWithChildCollectionsVariant2?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.CollectionWithChildCollectionsVariant2).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value2!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.CollectionWithChildCollectionsVariant2!, typeInfo);
             }
         }
     }

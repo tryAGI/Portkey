@@ -48,8 +48,8 @@ namespace Portkey.JsonConverters
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
             if (__score1 > __bestScore) { __bestScore = __score1; __bestIndex = 1; }
 
-            global::Portkey.BedrockConfiguration? value1 = default;
-            global::Portkey.SageMakerConfigurationVariant2? value2 = default;
+            global::Portkey.BedrockConfiguration? bedrock = default;
+            global::Portkey.SageMakerConfigurationVariant2? sageMakerConfigurationVariant2 = default;
             if (__bestIndex >= 0)
             {
                 if (__bestIndex == 0)
@@ -58,7 +58,7 @@ namespace Portkey.JsonConverters
                     {
                         var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.BedrockConfiguration), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.BedrockConfiguration> ??
                                        throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.BedrockConfiguration).Name}");
-                        value1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        bedrock = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -73,7 +73,7 @@ namespace Portkey.JsonConverters
                     {
                         var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.SageMakerConfigurationVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.SageMakerConfigurationVariant2> ??
                                        throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.SageMakerConfigurationVariant2).Name}");
-                        value2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        sageMakerConfigurationVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -84,13 +84,13 @@ namespace Portkey.JsonConverters
                 }
             }
 
-            if (value1 == null && value2 == null)
+            if (bedrock == null && sageMakerConfigurationVariant2 == null)
             {
                 try
                 {
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.BedrockConfiguration), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.BedrockConfiguration> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.BedrockConfiguration).Name}");
-                    value1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    bedrock = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -103,7 +103,7 @@ namespace Portkey.JsonConverters
                 {
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.SageMakerConfigurationVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.SageMakerConfigurationVariant2> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.SageMakerConfigurationVariant2).Name}");
-                    value2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    sageMakerConfigurationVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -114,9 +114,9 @@ namespace Portkey.JsonConverters
             }
 
             var __value = new global::Portkey.SageMakerConfiguration(
-                value1,
+                bedrock,
 
-                value2
+                sageMakerConfigurationVariant2
                 );
 
             return __value;
@@ -131,17 +131,17 @@ namespace Portkey.JsonConverters
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
             var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
-            if (value.IsValue1)
+            if (value.IsBedrock)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.BedrockConfiguration), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.BedrockConfiguration?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.BedrockConfiguration).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value1!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Bedrock!, typeInfo);
             }
-            else if (value.IsValue2)
+            else if (value.IsSageMakerConfigurationVariant2)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.SageMakerConfigurationVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.SageMakerConfigurationVariant2?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.SageMakerConfigurationVariant2).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value2!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.SageMakerConfigurationVariant2!, typeInfo);
             }
         }
     }
