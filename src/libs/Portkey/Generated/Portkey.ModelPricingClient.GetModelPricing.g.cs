@@ -119,13 +119,13 @@ namespace Portkey
                     if (ReadResponseAsString)
                     {
                         __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_404 = global::Portkey.GetModelPricingResponse.FromJson(__content_404, JsonSerializerContext);
+                        __value_404 = global::Portkey.GetModelPricingResponse.FromJson(__content_404, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_404 = global::Portkey.GetModelPricingResponse.FromJson(__content_404, JsonSerializerContext);
+                        __value_404 = global::Portkey.GetModelPricingResponse.FromJson(__content_404, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -169,7 +169,7 @@ namespace Portkey
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::Portkey.ModelPricingConfig.FromJson(__content, JsonSerializerContext) ??
+                        global::Portkey.ModelPricingConfig.FromJson(__content, JsonSerializerOptions) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -200,7 +200,7 @@ namespace Portkey
                     ).ConfigureAwait(false);
 
                     return
-                        await global::Portkey.ModelPricingConfig.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::Portkey.ModelPricingConfig.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

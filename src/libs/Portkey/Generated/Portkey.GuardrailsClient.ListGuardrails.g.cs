@@ -124,13 +124,13 @@ namespace Portkey
                     if (ReadResponseAsString)
                     {
                         __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_400 = global::Portkey.ErrorResponse.FromJson(__content_400, JsonSerializerContext);
+                        __value_400 = global::Portkey.ErrorResponse.FromJson(__content_400, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_400 = global::Portkey.ErrorResponse.FromJson(__content_400, JsonSerializerContext);
+                        __value_400 = global::Portkey.ErrorResponse.FromJson(__content_400, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -162,13 +162,13 @@ namespace Portkey
                     if (ReadResponseAsString)
                     {
                         __content_403 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_403 = global::Portkey.ErrorResponse.FromJson(__content_403, JsonSerializerContext);
+                        __value_403 = global::Portkey.ErrorResponse.FromJson(__content_403, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_403 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_403 = global::Portkey.ErrorResponse.FromJson(__content_403, JsonSerializerContext);
+                        __value_403 = global::Portkey.ErrorResponse.FromJson(__content_403, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -212,7 +212,7 @@ namespace Portkey
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::Portkey.ListGuardrailsResponse.FromJson(__content, JsonSerializerContext) ??
+                        global::Portkey.ListGuardrailsResponse.FromJson(__content, JsonSerializerOptions) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -243,7 +243,7 @@ namespace Portkey
                     ).ConfigureAwait(false);
 
                     return
-                        await global::Portkey.ListGuardrailsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::Portkey.ListGuardrailsResponse.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

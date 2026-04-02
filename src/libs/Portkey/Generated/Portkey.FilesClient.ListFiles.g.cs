@@ -110,7 +110,7 @@ namespace Portkey
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::Portkey.ListFilesResponse.FromJson(__content, JsonSerializerContext) ??
+                        global::Portkey.ListFilesResponse.FromJson(__content, JsonSerializerOptions) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -141,7 +141,7 @@ namespace Portkey
                     ).ConfigureAwait(false);
 
                     return
-                        await global::Portkey.ListFilesResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::Portkey.ListFilesResponse.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)

@@ -92,13 +92,13 @@ namespace Portkey
                     if (ReadResponseAsString)
                     {
                         __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_404 = global::Portkey.Error.FromJson(__content_404, JsonSerializerContext);
+                        __value_404 = global::Portkey.Error.FromJson(__content_404, JsonSerializerOptions);
                     }
                     else
                     {
                         __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_404 = global::Portkey.Error.FromJson(__content_404, JsonSerializerContext);
+                        __value_404 = global::Portkey.Error.FromJson(__content_404, JsonSerializerOptions);
                     }
                 }
                 catch (global::System.Exception __ex)

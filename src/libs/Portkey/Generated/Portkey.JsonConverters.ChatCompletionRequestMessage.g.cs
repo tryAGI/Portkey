@@ -12,8 +12,7 @@ namespace Portkey.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -73,9 +72,7 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestSystemMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestSystemMessage> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestSystemMessage).Name}");
-                        systemMessage = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        systemMessage = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.ChatCompletionRequestSystemMessage>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -88,9 +85,7 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestDeveloperMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestDeveloperMessage> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestDeveloperMessage).Name}");
-                        developerMessage = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        developerMessage = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.ChatCompletionRequestDeveloperMessage>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -103,9 +98,7 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestUserMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestUserMessage> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestUserMessage).Name}");
-                        userMessage = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        userMessage = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.ChatCompletionRequestUserMessage>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -118,9 +111,7 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestAssistantMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestAssistantMessage> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestAssistantMessage).Name}");
-                        assistantMessage = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        assistantMessage = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.ChatCompletionRequestAssistantMessage>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -133,9 +124,7 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestToolMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestToolMessage> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestToolMessage).Name}");
-                        toolMessage = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        toolMessage = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.ChatCompletionRequestToolMessage>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -148,9 +137,7 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestFunctionMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestFunctionMessage> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestFunctionMessage).Name}");
-                        functionMessage = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        functionMessage = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.ChatCompletionRequestFunctionMessage>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -165,9 +152,7 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestSystemMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestSystemMessage> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestSystemMessage).Name}");
-                    systemMessage = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    systemMessage = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.ChatCompletionRequestSystemMessage>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -178,9 +163,7 @@ namespace Portkey.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestDeveloperMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestDeveloperMessage> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestDeveloperMessage).Name}");
-                    developerMessage = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    developerMessage = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.ChatCompletionRequestDeveloperMessage>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -191,9 +174,7 @@ namespace Portkey.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestUserMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestUserMessage> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestUserMessage).Name}");
-                    userMessage = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    userMessage = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.ChatCompletionRequestUserMessage>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -204,9 +185,7 @@ namespace Portkey.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestAssistantMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestAssistantMessage> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestAssistantMessage).Name}");
-                    assistantMessage = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    assistantMessage = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.ChatCompletionRequestAssistantMessage>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -217,9 +196,7 @@ namespace Portkey.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestToolMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestToolMessage> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestToolMessage).Name}");
-                    toolMessage = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    toolMessage = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.ChatCompletionRequestToolMessage>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -230,9 +207,7 @@ namespace Portkey.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestFunctionMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestFunctionMessage> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestFunctionMessage).Name}");
-                    functionMessage = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    functionMessage = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.ChatCompletionRequestFunctionMessage>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -265,44 +240,31 @@ namespace Portkey.JsonConverters
             global::Portkey.ChatCompletionRequestMessage value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             if (value.IsSystemMessage)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestSystemMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestSystemMessage?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestSystemMessage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.SystemMessage!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.SystemMessage, typeof(global::Portkey.ChatCompletionRequestSystemMessage), options);
             }
             else if (value.IsDeveloperMessage)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestDeveloperMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestDeveloperMessage?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestDeveloperMessage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.DeveloperMessage!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.DeveloperMessage, typeof(global::Portkey.ChatCompletionRequestDeveloperMessage), options);
             }
             else if (value.IsUserMessage)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestUserMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestUserMessage?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestUserMessage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UserMessage!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UserMessage, typeof(global::Portkey.ChatCompletionRequestUserMessage), options);
             }
             else if (value.IsAssistantMessage)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestAssistantMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestAssistantMessage?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestAssistantMessage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AssistantMessage!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AssistantMessage, typeof(global::Portkey.ChatCompletionRequestAssistantMessage), options);
             }
             else if (value.IsToolMessage)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestToolMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestToolMessage?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestToolMessage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolMessage!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolMessage, typeof(global::Portkey.ChatCompletionRequestToolMessage), options);
             }
             else if (value.IsFunctionMessage)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestFunctionMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestFunctionMessage?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestFunctionMessage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.FunctionMessage!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.FunctionMessage, typeof(global::Portkey.ChatCompletionRequestFunctionMessage), options);
             }
         }
     }

@@ -12,8 +12,7 @@ namespace Portkey.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -54,9 +53,7 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.InputText), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.InputText> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.InputText).Name}");
-                        textInput = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        textInput = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.InputText>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -69,9 +66,7 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.InputImage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.InputImage> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.InputImage).Name}");
-                        imageInput = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        imageInput = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.InputImage>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -84,9 +79,7 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.InputFile), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.InputFile> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.InputFile).Name}");
-                        fileInput = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        fileInput = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.InputFile>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -101,9 +94,7 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.InputText), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.InputText> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.InputText).Name}");
-                    textInput = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    textInput = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.InputText>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -114,9 +105,7 @@ namespace Portkey.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.InputImage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.InputImage> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.InputImage).Name}");
-                    imageInput = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    imageInput = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.InputImage>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -127,9 +116,7 @@ namespace Portkey.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.InputFile), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.InputFile> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.InputFile).Name}");
-                    fileInput = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    fileInput = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.InputFile>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -156,26 +143,19 @@ namespace Portkey.JsonConverters
             global::Portkey.InputContent value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             if (value.IsTextInput)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.InputText), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.InputText?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.InputText).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.TextInput!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.TextInput, typeof(global::Portkey.InputText), options);
             }
             else if (value.IsImageInput)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.InputImage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.InputImage?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.InputImage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ImageInput!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ImageInput, typeof(global::Portkey.InputImage), options);
             }
             else if (value.IsFileInput)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.InputFile), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.InputFile?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.InputFile).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.FileInput!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.FileInput, typeof(global::Portkey.InputFile), options);
             }
         }
     }
