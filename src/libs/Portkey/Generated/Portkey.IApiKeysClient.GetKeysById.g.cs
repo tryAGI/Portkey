@@ -13,5 +13,14 @@ namespace Portkey
         global::System.Threading.Tasks.Task<global::Portkey.ApiKeyObject> GetKeysByIdAsync(
             global::System.Guid id,
             global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Get API Keys
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.ApiKeyObject>> GetKeysByIdAsResponseAsync(
+            global::System.Guid id,
+            global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

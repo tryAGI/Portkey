@@ -17,6 +17,16 @@ namespace Portkey
         /// <summary>
         /// Create Speech
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<byte[]>> CreateSpeechAsResponseAsync(
+
+            global::Portkey.CreateSpeechRequest request,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create Speech
+        /// </summary>
         /// <param name="model">
         /// One of the available [TTS models](https://platform.openai.com/docs/models/tts): `tts-1` or `tts-1-hd`
         /// </param>

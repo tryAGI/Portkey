@@ -31,6 +31,23 @@ namespace Portkey
             string workspaceId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await GetAdminWorkspacesByWorkspaceIdAsResponseAsync(
+                workspaceId: workspaceId,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Get workspace
+        /// </summary>
+        /// <param name="workspaceId"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.WorkspaceWithUsers>> GetAdminWorkspacesByWorkspaceIdAsResponseAsync(
+            string workspaceId,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareGetAdminWorkspacesByWorkspaceIdArguments(
@@ -106,9 +123,12 @@ namespace Portkey
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return
-                        global::Portkey.WorkspaceWithUsers.FromJson(__content, JsonSerializerOptions) ??
+                    var __value = global::Portkey.WorkspaceWithUsers.FromJson(__content, JsonSerializerOptions) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.WorkspaceWithUsers>(
+                        statusCode: __response.StatusCode,
+                        headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -137,9 +157,12 @@ namespace Portkey
 #endif
                     ).ConfigureAwait(false);
 
-                    return
-                        await global::Portkey.WorkspaceWithUsers.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
+                    var __value = await global::Portkey.WorkspaceWithUsers.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.WorkspaceWithUsers>(
+                        statusCode: __response.StatusCode,
+                        headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {

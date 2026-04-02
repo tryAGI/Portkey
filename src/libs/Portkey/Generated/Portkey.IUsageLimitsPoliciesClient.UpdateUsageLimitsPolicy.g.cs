@@ -22,6 +22,19 @@ namespace Portkey
         /// Update an existing usage limits policy.
         /// </summary>
         /// <param name="policyUsageLimitsId"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<string>> UpdateUsageLimitsPolicyAsResponseAsync(
+            global::System.Guid policyUsageLimitsId,
+
+            global::Portkey.UpdateUsageLimitsPolicyRequest request,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Update Usage Limits Policy<br/>
+        /// Update an existing usage limits policy.
+        /// </summary>
+        /// <param name="policyUsageLimitsId"></param>
         /// <param name="name">
         /// Policy name
         /// </param>

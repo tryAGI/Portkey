@@ -32,6 +32,24 @@ namespace Portkey
             global::System.Guid labelId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await DeleteLabelAsResponseAsync(
+                labelId: labelId,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Delete a label<br/>
+        /// Deletes a label
+        /// </summary>
+        /// <param name="labelId"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<string>> DeleteLabelAsResponseAsync(
+            global::System.Guid labelId,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareDeleteLabelArguments(
@@ -277,7 +295,10 @@ namespace Portkey
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return __content;
+                    return new global::Portkey.AutoSDKHttpResponse<string>(
+                        statusCode: __response.StatusCode,
+                        headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __content);
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -306,7 +327,10 @@ namespace Portkey
 #endif
                     ).ConfigureAwait(false);
 
-                    return __content;
+                    return new global::Portkey.AutoSDKHttpResponse<string>(
+                        statusCode: __response.StatusCode,
+                        headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __content);
                 }
                 catch (global::System.Exception __ex)
                 {

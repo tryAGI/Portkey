@@ -22,6 +22,19 @@ namespace Portkey
         /// Updates an existing API key. The API key type (user vs service) and associated user_id cannot be changed after creation.
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<string>> PutKeysByIdAsResponseAsync(
+            global::System.Guid id,
+
+            global::Portkey.UpdateApiKeyObject request,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Update API Keys<br/>
+        /// Updates an existing API key. The API key type (user vs service) and associated user_id cannot be changed after creation.
+        /// </summary>
+        /// <param name="id"></param>
         /// <param name="name">
         /// Example: Development API Key
         /// </param>

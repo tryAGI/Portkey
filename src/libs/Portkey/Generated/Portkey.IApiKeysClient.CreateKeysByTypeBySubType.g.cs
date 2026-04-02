@@ -25,6 +25,21 @@ namespace Portkey
         /// </summary>
         /// <param name="type"></param>
         /// <param name="subType"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.CreateKeysResponse>> CreateKeysByTypeBySubTypeAsResponseAsync(
+            global::Portkey.CreateKeysType type,
+            global::Portkey.CreateKeysSubType subType,
+
+            global::Portkey.CreateApiKeyObject request,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create API Keys<br/>
+        /// Creates a new API key.
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="subType"></param>
         /// <param name="name">
         /// Example: Development API Key
         /// </param>

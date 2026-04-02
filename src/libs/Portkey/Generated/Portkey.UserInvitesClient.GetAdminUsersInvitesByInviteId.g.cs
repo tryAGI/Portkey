@@ -31,6 +31,23 @@ namespace Portkey
             string inviteId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await GetAdminUsersInvitesByInviteIdAsResponseAsync(
+                inviteId: inviteId,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Get Invite
+        /// </summary>
+        /// <param name="inviteId"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.Invite>> GetAdminUsersInvitesByInviteIdAsResponseAsync(
+            string inviteId,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareGetAdminUsersInvitesByInviteIdArguments(
@@ -106,9 +123,12 @@ namespace Portkey
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return
-                        global::Portkey.Invite.FromJson(__content, JsonSerializerOptions) ??
+                    var __value = global::Portkey.Invite.FromJson(__content, JsonSerializerOptions) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.Invite>(
+                        statusCode: __response.StatusCode,
+                        headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -137,9 +157,12 @@ namespace Portkey
 #endif
                     ).ConfigureAwait(false);
 
-                    return
-                        await global::Portkey.Invite.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
+                    var __value = await global::Portkey.Invite.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.Invite>(
+                        statusCode: __response.StatusCode,
+                        headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {
