@@ -12,8 +12,7 @@ namespace Portkey.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -42,9 +41,7 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AssistantsApiResponseFormatOptionEnum), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AssistantsApiResponseFormatOptionEnum> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AssistantsApiResponseFormatOptionEnum).Name}");
-                        @enum = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        @enum = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.AssistantsApiResponseFormatOptionEnum>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -57,9 +54,7 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AssistantsApiResponseFormat), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AssistantsApiResponseFormat> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AssistantsApiResponseFormat).Name}");
-                        assistantsApiResponseFormat = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        assistantsApiResponseFormat = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.AssistantsApiResponseFormat>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -74,9 +69,7 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AssistantsApiResponseFormatOptionEnum), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AssistantsApiResponseFormatOptionEnum> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AssistantsApiResponseFormatOptionEnum).Name}");
-                    @enum = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    @enum = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.AssistantsApiResponseFormatOptionEnum>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -87,9 +80,7 @@ namespace Portkey.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AssistantsApiResponseFormat), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AssistantsApiResponseFormat> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AssistantsApiResponseFormat).Name}");
-                    assistantsApiResponseFormat = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    assistantsApiResponseFormat = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.AssistantsApiResponseFormat>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -114,20 +105,15 @@ namespace Portkey.JsonConverters
             global::Portkey.AssistantsApiResponseFormatOption value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             if (value.IsEnum)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AssistantsApiResponseFormatOptionEnum), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AssistantsApiResponseFormatOptionEnum> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AssistantsApiResponseFormatOptionEnum).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Enum!.Value, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Enum, typeof(global::Portkey.AssistantsApiResponseFormatOptionEnum), options);
             }
             else if (value.IsAssistantsApiResponseFormat)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AssistantsApiResponseFormat), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AssistantsApiResponseFormat?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AssistantsApiResponseFormat).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AssistantsApiResponseFormat!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AssistantsApiResponseFormat, typeof(global::Portkey.AssistantsApiResponseFormat), options);
             }
         }
     }

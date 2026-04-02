@@ -12,8 +12,7 @@ namespace Portkey.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -54,9 +53,7 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.RateLimitsPolicy), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.RateLimitsPolicy> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.RateLimitsPolicy).Name}");
-                        rateLimitsPolicy = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        rateLimitsPolicy = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.RateLimitsPolicy>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -69,9 +66,7 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.RateLimitsPolicyResponseVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.RateLimitsPolicyResponseVariant2> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.RateLimitsPolicyResponseVariant2).Name}");
-                        rateLimitsPolicyResponseVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        rateLimitsPolicyResponseVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.RateLimitsPolicyResponseVariant2>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -86,9 +81,7 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.RateLimitsPolicy), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.RateLimitsPolicy> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.RateLimitsPolicy).Name}");
-                    rateLimitsPolicy = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    rateLimitsPolicy = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.RateLimitsPolicy>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -99,9 +92,7 @@ namespace Portkey.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.RateLimitsPolicyResponseVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.RateLimitsPolicyResponseVariant2> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.RateLimitsPolicyResponseVariant2).Name}");
-                    rateLimitsPolicyResponseVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    rateLimitsPolicyResponseVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.RateLimitsPolicyResponseVariant2>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -126,20 +117,15 @@ namespace Portkey.JsonConverters
             global::Portkey.RateLimitsPolicyResponse value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             if (value.IsRateLimitsPolicy)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.RateLimitsPolicy), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.RateLimitsPolicy?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.RateLimitsPolicy).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.RateLimitsPolicy!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.RateLimitsPolicy, typeof(global::Portkey.RateLimitsPolicy), options);
             }
             else if (value.IsRateLimitsPolicyResponseVariant2)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.RateLimitsPolicyResponseVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.RateLimitsPolicyResponseVariant2?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.RateLimitsPolicyResponseVariant2).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.RateLimitsPolicyResponseVariant2!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.RateLimitsPolicyResponseVariant2, typeof(global::Portkey.RateLimitsPolicyResponseVariant2), options);
             }
         }
     }
