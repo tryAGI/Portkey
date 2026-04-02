@@ -13,5 +13,14 @@ namespace Portkey
         global::System.Threading.Tasks.Task<global::Portkey.User> GetAdminUsersByUserIdAsync(
             string userId,
             global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Get user
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.User>> GetAdminUsersByUserIdAsResponseAsync(
+            string userId,
+            global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

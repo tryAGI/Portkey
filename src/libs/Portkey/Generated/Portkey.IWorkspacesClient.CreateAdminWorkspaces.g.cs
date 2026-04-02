@@ -17,6 +17,16 @@ namespace Portkey
         /// <summary>
         /// Create Workspace
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.Workspace>> CreateAdminWorkspacesAsResponseAsync(
+
+            global::Portkey.CreateAdminWorkspacesRequest request,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create Workspace
+        /// </summary>
         /// <param name="name"></param>
         /// <param name="description"></param>
         /// <param name="defaults"></param>

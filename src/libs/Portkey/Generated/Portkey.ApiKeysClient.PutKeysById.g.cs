@@ -37,6 +37,29 @@ namespace Portkey
             global::Portkey.UpdateApiKeyObject request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await PutKeysByIdAsResponseAsync(
+                id: id,
+
+                request: request,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Update API Keys<br/>
+        /// Updates an existing API key. The API key type (user vs service) and associated user_id cannot be changed after creation.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<string>> PutKeysByIdAsResponseAsync(
+            global::System.Guid id,
+
+            global::Portkey.UpdateApiKeyObject request,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
@@ -122,7 +145,10 @@ namespace Portkey
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return __content;
+                    return new global::Portkey.AutoSDKHttpResponse<string>(
+                        statusCode: __response.StatusCode,
+                        headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __content);
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -151,7 +177,10 @@ namespace Portkey
 #endif
                     ).ConfigureAwait(false);
 
-                    return __content;
+                    return new global::Portkey.AutoSDKHttpResponse<string>(
+                        statusCode: __response.StatusCode,
+                        headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __content);
                 }
                 catch (global::System.Exception __ex)
                 {

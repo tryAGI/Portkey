@@ -32,6 +32,24 @@ namespace Portkey
             global::System.Guid policyUsageLimitsId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await DeleteUsageLimitsPolicyAsResponseAsync(
+                policyUsageLimitsId: policyUsageLimitsId,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Delete Usage Limits Policy<br/>
+        /// Archive (soft delete) a usage limits policy.
+        /// </summary>
+        /// <param name="policyUsageLimitsId"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<string>> DeleteUsageLimitsPolicyAsResponseAsync(
+            global::System.Guid policyUsageLimitsId,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareDeleteUsageLimitsPolicyArguments(
@@ -272,7 +290,10 @@ namespace Portkey
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return __content;
+                    return new global::Portkey.AutoSDKHttpResponse<string>(
+                        statusCode: __response.StatusCode,
+                        headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __content);
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -301,7 +322,10 @@ namespace Portkey
 #endif
                     ).ConfigureAwait(false);
 
-                    return __content;
+                    return new global::Portkey.AutoSDKHttpResponse<string>(
+                        statusCode: __response.StatusCode,
+                        headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __content);
                 }
                 catch (global::System.Exception __ex)
                 {
