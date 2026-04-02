@@ -13,18 +13,18 @@ namespace Portkey
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Portkey.ModelIdsResponsesEnum? Value1 { get; init; }
+        public global::Portkey.ModelIdsResponsesEnum? Enum { get; init; }
 #else
-        public global::Portkey.ModelIdsResponsesEnum? Value1 { get; }
+        public global::Portkey.ModelIdsResponsesEnum? Enum { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Enum))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsEnum => Enum != null;
         /// <summary>
         /// 
         /// </summary>
@@ -33,28 +33,28 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Portkey.ModelIdsResponsesEnum?(ModelIdsResponses @this) => @this.Value1;
+        public static implicit operator global::Portkey.ModelIdsResponsesEnum?(ModelIdsResponses @this) => @this.Enum;
 
         /// <summary>
         /// 
         /// </summary>
         public ModelIdsResponses(global::Portkey.ModelIdsResponsesEnum? value)
         {
-            Value1 = value;
+            Enum = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value1 as object 
+            Enum as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToValueString() 
+            Enum?.ToValueString() 
             ;
 
         /// <summary>
@@ -62,14 +62,14 @@ namespace Portkey
         /// </summary>
         public bool Validate()
         {
-            return IsValue1;
+            return IsEnum;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.ModelIdsResponsesEnum?, TResult>? value1 = null,
+            global::System.Func<global::Portkey.ModelIdsResponsesEnum?, TResult>? @enum = null,
             bool validate = true)
         {
             if (validate)
@@ -77,9 +77,9 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsEnum && @enum != null)
             {
-                return value1(Value1!);
+                return @enum(Enum!);
             }
 
             return default(TResult);
@@ -89,7 +89,7 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.ModelIdsResponsesEnum?>? value1 = null,
+            global::System.Action<global::Portkey.ModelIdsResponsesEnum?>? @enum = null,
             bool validate = true)
         {
             if (validate)
@@ -97,9 +97,9 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsEnum)
             {
-                value1?.Invoke(Value1!);
+                @enum?.Invoke(Enum!);
             }
         }
 
@@ -110,7 +110,7 @@ namespace Portkey
         {
             var fields = new object?[]
             {
-                Value1,
+                Enum,
                 typeof(global::Portkey.ModelIdsResponsesEnum),
             };
             const int offset = unchecked((int)2166136261);
@@ -128,7 +128,7 @@ namespace Portkey
         public bool Equals(ModelIdsResponses other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.ModelIdsResponsesEnum?>.Default.Equals(Value1, other.Value1) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.ModelIdsResponsesEnum?>.Default.Equals(Enum, other.Enum) 
                 ;
         }
 

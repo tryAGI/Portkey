@@ -13,18 +13,18 @@ namespace Portkey
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Portkey.ModelResponseProperties? Value1 { get; init; }
+        public global::Portkey.ModelResponseProperties? ModelResponseProperties { get; init; }
 #else
-        public global::Portkey.ModelResponseProperties? Value1 { get; }
+        public global::Portkey.ModelResponseProperties? ModelResponseProperties { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ModelResponseProperties))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsModelResponseProperties => ModelResponseProperties != null;
         /// <summary>
         /// 
         /// </summary>
@@ -33,28 +33,28 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Portkey.ModelResponseProperties?(CreateModelResponseProperties @this) => @this.Value1;
+        public static implicit operator global::Portkey.ModelResponseProperties?(CreateModelResponseProperties @this) => @this.ModelResponseProperties;
 
         /// <summary>
         /// 
         /// </summary>
         public CreateModelResponseProperties(global::Portkey.ModelResponseProperties? value)
         {
-            Value1 = value;
+            ModelResponseProperties = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value1 as object 
+            ModelResponseProperties as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() 
+            ModelResponseProperties?.ToString() 
             ;
 
         /// <summary>
@@ -62,14 +62,14 @@ namespace Portkey
         /// </summary>
         public bool Validate()
         {
-            return IsValue1;
+            return IsModelResponseProperties;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.ModelResponseProperties?, TResult>? value1 = null,
+            global::System.Func<global::Portkey.ModelResponseProperties?, TResult>? modelResponseProperties = null,
             bool validate = true)
         {
             if (validate)
@@ -77,9 +77,9 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsModelResponseProperties && modelResponseProperties != null)
             {
-                return value1(Value1!);
+                return modelResponseProperties(ModelResponseProperties!);
             }
 
             return default(TResult);
@@ -89,7 +89,7 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.ModelResponseProperties?>? value1 = null,
+            global::System.Action<global::Portkey.ModelResponseProperties?>? modelResponseProperties = null,
             bool validate = true)
         {
             if (validate)
@@ -97,9 +97,9 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsModelResponseProperties)
             {
-                value1?.Invoke(Value1!);
+                modelResponseProperties?.Invoke(ModelResponseProperties!);
             }
         }
 
@@ -110,7 +110,7 @@ namespace Portkey
         {
             var fields = new object?[]
             {
-                Value1,
+                ModelResponseProperties,
                 typeof(global::Portkey.ModelResponseProperties),
             };
             const int offset = unchecked((int)2166136261);
@@ -128,7 +128,7 @@ namespace Portkey
         public bool Equals(CreateModelResponseProperties other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.ModelResponseProperties?>.Default.Equals(Value1, other.Value1) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.ModelResponseProperties?>.Default.Equals(ModelResponseProperties, other.ModelResponseProperties) 
                 ;
         }
 

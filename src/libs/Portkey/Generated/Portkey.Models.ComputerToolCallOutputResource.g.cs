@@ -30,18 +30,18 @@ namespace Portkey
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Portkey.ComputerToolCallOutputResourceVariant2? Value2 { get; init; }
+        public global::Portkey.ComputerToolCallOutputResourceVariant2? ComputerToolCallOutputResourceVariant2 { get; init; }
 #else
-        public global::Portkey.ComputerToolCallOutputResourceVariant2? Value2 { get; }
+        public global::Portkey.ComputerToolCallOutputResourceVariant2? ComputerToolCallOutputResourceVariant2 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ComputerToolCallOutputResourceVariant2))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsComputerToolCallOutputResourceVariant2 => ComputerToolCallOutputResourceVariant2 != null;
         /// <summary>
         /// 
         /// </summary>
@@ -68,14 +68,14 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Portkey.ComputerToolCallOutputResourceVariant2?(ComputerToolCallOutputResource @this) => @this.Value2;
+        public static implicit operator global::Portkey.ComputerToolCallOutputResourceVariant2?(ComputerToolCallOutputResource @this) => @this.ComputerToolCallOutputResourceVariant2;
 
         /// <summary>
         /// 
         /// </summary>
         public ComputerToolCallOutputResource(global::Portkey.ComputerToolCallOutputResourceVariant2? value)
         {
-            Value2 = value;
+            ComputerToolCallOutputResourceVariant2 = value;
         }
 
         /// <summary>
@@ -83,18 +83,18 @@ namespace Portkey
         /// </summary>
         public ComputerToolCallOutputResource(
             global::Portkey.ComputerToolCallOutput? computerToolCallOutput,
-            global::Portkey.ComputerToolCallOutputResourceVariant2? value2
+            global::Portkey.ComputerToolCallOutputResourceVariant2? computerToolCallOutputResourceVariant2
             )
         {
             ComputerToolCallOutput = computerToolCallOutput;
-            Value2 = value2;
+            ComputerToolCallOutputResourceVariant2 = computerToolCallOutputResourceVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value2 as object ??
+            ComputerToolCallOutputResourceVariant2 as object ??
             ComputerToolCallOutput as object 
             ;
 
@@ -103,7 +103,7 @@ namespace Portkey
         /// </summary>
         public override string? ToString() =>
             ComputerToolCallOutput?.ToString() ??
-            Value2?.ToString() 
+            ComputerToolCallOutputResourceVariant2?.ToString() 
             ;
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace Portkey
         /// </summary>
         public bool Validate()
         {
-            return IsComputerToolCallOutput && IsValue2;
+            return IsComputerToolCallOutput && IsComputerToolCallOutputResourceVariant2;
         }
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace Portkey
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.ComputerToolCallOutput?, TResult>? computerToolCallOutput = null,
-            global::System.Func<global::Portkey.ComputerToolCallOutputResourceVariant2?, TResult>? value2 = null,
+            global::System.Func<global::Portkey.ComputerToolCallOutputResourceVariant2?, TResult>? computerToolCallOutputResourceVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -131,9 +131,9 @@ namespace Portkey
             {
                 return computerToolCallOutput(ComputerToolCallOutput!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsComputerToolCallOutputResourceVariant2 && computerToolCallOutputResourceVariant2 != null)
             {
-                return value2(Value2!);
+                return computerToolCallOutputResourceVariant2(ComputerToolCallOutputResourceVariant2!);
             }
 
             return default(TResult);
@@ -144,7 +144,7 @@ namespace Portkey
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.ComputerToolCallOutput?>? computerToolCallOutput = null,
-            global::System.Action<global::Portkey.ComputerToolCallOutputResourceVariant2?>? value2 = null,
+            global::System.Action<global::Portkey.ComputerToolCallOutputResourceVariant2?>? computerToolCallOutputResourceVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -156,9 +156,9 @@ namespace Portkey
             {
                 computerToolCallOutput?.Invoke(ComputerToolCallOutput!);
             }
-            else if (IsValue2)
+            else if (IsComputerToolCallOutputResourceVariant2)
             {
-                value2?.Invoke(Value2!);
+                computerToolCallOutputResourceVariant2?.Invoke(ComputerToolCallOutputResourceVariant2!);
             }
         }
 
@@ -171,7 +171,7 @@ namespace Portkey
             {
                 ComputerToolCallOutput,
                 typeof(global::Portkey.ComputerToolCallOutput),
-                Value2,
+                ComputerToolCallOutputResourceVariant2,
                 typeof(global::Portkey.ComputerToolCallOutputResourceVariant2),
             };
             const int offset = unchecked((int)2166136261);
@@ -190,7 +190,7 @@ namespace Portkey
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.ComputerToolCallOutput?>.Default.Equals(ComputerToolCallOutput, other.ComputerToolCallOutput) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.ComputerToolCallOutputResourceVariant2?>.Default.Equals(Value2, other.Value2) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.ComputerToolCallOutputResourceVariant2?>.Default.Equals(ComputerToolCallOutputResourceVariant2, other.ComputerToolCallOutputResourceVariant2) 
                 ;
         }
 
