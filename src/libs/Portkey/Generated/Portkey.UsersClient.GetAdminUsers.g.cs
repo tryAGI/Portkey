@@ -7,7 +7,6 @@ namespace Portkey
     {
         partial void PrepareGetAdminUsersArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string? xPortkeyApiKey,
             ref int? pageSize,
             ref int? currentPage,
             ref global::Portkey.GetAdminUsersRole? role,
@@ -15,7 +14,6 @@ namespace Portkey
         partial void PrepareGetAdminUsersRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string? xPortkeyApiKey,
             int? pageSize,
             int? currentPage,
             global::Portkey.GetAdminUsersRole? role,
@@ -32,7 +30,6 @@ namespace Portkey
         /// <summary>
         /// Get users
         /// </summary>
-        /// <param name="xPortkeyApiKey"></param>
         /// <param name="pageSize"></param>
         /// <param name="currentPage"></param>
         /// <param name="role"></param>
@@ -40,7 +37,6 @@ namespace Portkey
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Portkey.UserList> GetAdminUsersAsync(
-            string? xPortkeyApiKey = default,
             int? pageSize = default,
             int? currentPage = default,
             global::Portkey.GetAdminUsersRole? role = default,
@@ -51,7 +47,6 @@ namespace Portkey
                 client: HttpClient);
             PrepareGetAdminUsersArguments(
                 httpClient: HttpClient,
-                xPortkeyApiKey: ref xPortkeyApiKey,
                 pageSize: ref pageSize,
                 currentPage: ref currentPage,
                 role: ref role,
@@ -91,19 +86,12 @@ namespace Portkey
                 }
             }
 
-            if (xPortkeyApiKey != default)
-            {
-                __httpRequest.Headers.TryAddWithoutValidation("x-portkey-api-key", xPortkeyApiKey.ToString());
-            }
-
-
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
             PrepareGetAdminUsersRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
-                xPortkeyApiKey: xPortkeyApiKey,
                 pageSize: pageSize,
                 currentPage: currentPage,
                 role: role,
