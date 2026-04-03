@@ -154,7 +154,6 @@ namespace Portkey
                 try
                 {
                     __response.EnsureSuccessStatusCode();
-
                     var __content = await __response.Content.ReadAsByteArrayAsync(
 #if NET5_0_OR_GREATER
                         cancellationToken
