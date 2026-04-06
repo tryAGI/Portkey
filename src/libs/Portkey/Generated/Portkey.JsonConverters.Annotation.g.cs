@@ -12,7 +12,8 @@ namespace Portkey.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -54,7 +55,9 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        fileCitation = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.FileCitation>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.FileCitation), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.FileCitation> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.FileCitation).Name}");
+                        fileCitation = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -67,7 +70,9 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        urlCitation = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.UrlCitation>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.UrlCitation), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.UrlCitation> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.UrlCitation).Name}");
+                        urlCitation = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -80,7 +85,9 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        filePath = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.FilePath>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.FilePath), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.FilePath> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.FilePath).Name}");
+                        filePath = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -95,7 +102,9 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
-                    fileCitation = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.FileCitation>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.FileCitation), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.FileCitation> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.FileCitation).Name}");
+                    fileCitation = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -106,7 +115,9 @@ namespace Portkey.JsonConverters
 
                 try
                 {
-                    urlCitation = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.UrlCitation>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.UrlCitation), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.UrlCitation> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.UrlCitation).Name}");
+                    urlCitation = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -117,7 +128,9 @@ namespace Portkey.JsonConverters
 
                 try
                 {
-                    filePath = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.FilePath>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.FilePath), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.FilePath> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.FilePath).Name}");
+                    filePath = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -144,19 +157,26 @@ namespace Portkey.JsonConverters
             global::Portkey.Annotation value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             if (value.IsFileCitation)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.FileCitation, typeof(global::Portkey.FileCitation), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.FileCitation), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.FileCitation?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.FileCitation).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.FileCitation!, typeInfo);
             }
             else if (value.IsUrlCitation)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UrlCitation, typeof(global::Portkey.UrlCitation), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.UrlCitation), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.UrlCitation?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.UrlCitation).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UrlCitation!, typeInfo);
             }
             else if (value.IsFilePath)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.FilePath, typeof(global::Portkey.FilePath), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.FilePath), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.FilePath?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.FilePath).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.FilePath!, typeInfo);
             }
         }
     }

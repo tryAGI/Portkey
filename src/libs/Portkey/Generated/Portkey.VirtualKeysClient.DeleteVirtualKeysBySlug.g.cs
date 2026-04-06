@@ -95,13 +95,13 @@ namespace Portkey
                     if (ReadResponseAsString)
                     {
                         __content_401 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_401 = global::Portkey.DeleteVirtualKeysResponse2.FromJson(__content_401, JsonSerializerOptions);
+                        __value_401 = global::Portkey.DeleteVirtualKeysResponse2.FromJson(__content_401, JsonSerializerContext);
                     }
                     else
                     {
                         __content_401 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_401 = global::Portkey.DeleteVirtualKeysResponse2.FromJson(__content_401, JsonSerializerOptions);
+                        __value_401 = global::Portkey.DeleteVirtualKeysResponse2.FromJson(__content_401, JsonSerializerContext);
                     }
                 }
                 catch (global::System.Exception __ex)

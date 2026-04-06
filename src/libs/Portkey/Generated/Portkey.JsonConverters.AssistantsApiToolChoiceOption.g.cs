@@ -12,7 +12,8 @@ namespace Portkey.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -42,7 +43,9 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        @enum = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.AssistantsApiToolChoiceOptionEnum>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AssistantsApiToolChoiceOptionEnum), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AssistantsApiToolChoiceOptionEnum> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AssistantsApiToolChoiceOptionEnum).Name}");
+                        @enum = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -55,7 +58,9 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        named = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.AssistantsNamedToolChoice>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AssistantsNamedToolChoice), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AssistantsNamedToolChoice> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AssistantsNamedToolChoice).Name}");
+                        named = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -70,7 +75,9 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
-                    @enum = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.AssistantsApiToolChoiceOptionEnum>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AssistantsApiToolChoiceOptionEnum), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AssistantsApiToolChoiceOptionEnum> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AssistantsApiToolChoiceOptionEnum).Name}");
+                    @enum = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -81,7 +88,9 @@ namespace Portkey.JsonConverters
 
                 try
                 {
-                    named = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.AssistantsNamedToolChoice>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AssistantsNamedToolChoice), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AssistantsNamedToolChoice> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AssistantsNamedToolChoice).Name}");
+                    named = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -106,15 +115,20 @@ namespace Portkey.JsonConverters
             global::Portkey.AssistantsApiToolChoiceOption value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             if (value.IsEnum)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Enum, typeof(global::Portkey.AssistantsApiToolChoiceOptionEnum), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AssistantsApiToolChoiceOptionEnum), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AssistantsApiToolChoiceOptionEnum> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AssistantsApiToolChoiceOptionEnum).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Enum!.Value, typeInfo);
             }
             else if (value.IsNamed)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Named, typeof(global::Portkey.AssistantsNamedToolChoice), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AssistantsNamedToolChoice), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AssistantsNamedToolChoice?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AssistantsNamedToolChoice).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Named!, typeInfo);
             }
         }
     }

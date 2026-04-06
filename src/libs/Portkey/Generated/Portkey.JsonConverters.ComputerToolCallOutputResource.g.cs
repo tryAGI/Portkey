@@ -12,7 +12,8 @@ namespace Portkey.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -47,7 +48,9 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        computerToolCallOutput = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.ComputerToolCallOutput>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ComputerToolCallOutput), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ComputerToolCallOutput> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ComputerToolCallOutput).Name}");
+                        computerToolCallOutput = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -60,7 +63,9 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        computerToolCallOutputResourceVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.ComputerToolCallOutputResourceVariant2>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ComputerToolCallOutputResourceVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ComputerToolCallOutputResourceVariant2> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ComputerToolCallOutputResourceVariant2).Name}");
+                        computerToolCallOutputResourceVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -75,7 +80,9 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
-                    computerToolCallOutput = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.ComputerToolCallOutput>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ComputerToolCallOutput), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ComputerToolCallOutput> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ComputerToolCallOutput).Name}");
+                    computerToolCallOutput = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -86,7 +93,9 @@ namespace Portkey.JsonConverters
 
                 try
                 {
-                    computerToolCallOutputResourceVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.ComputerToolCallOutputResourceVariant2>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ComputerToolCallOutputResourceVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ComputerToolCallOutputResourceVariant2> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ComputerToolCallOutputResourceVariant2).Name}");
+                    computerToolCallOutputResourceVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -111,15 +120,20 @@ namespace Portkey.JsonConverters
             global::Portkey.ComputerToolCallOutputResource value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             if (value.IsComputerToolCallOutput)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ComputerToolCallOutput, typeof(global::Portkey.ComputerToolCallOutput), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ComputerToolCallOutput), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ComputerToolCallOutput?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ComputerToolCallOutput).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ComputerToolCallOutput!, typeInfo);
             }
             else if (value.IsComputerToolCallOutputResourceVariant2)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ComputerToolCallOutputResourceVariant2, typeof(global::Portkey.ComputerToolCallOutputResourceVariant2), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ComputerToolCallOutputResourceVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ComputerToolCallOutputResourceVariant2?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ComputerToolCallOutputResourceVariant2).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ComputerToolCallOutputResourceVariant2!, typeInfo);
             }
         }
     }

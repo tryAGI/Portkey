@@ -12,7 +12,8 @@ namespace Portkey.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -52,7 +53,9 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        summary = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.GuardrailSummary>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.GuardrailSummary), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.GuardrailSummary> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.GuardrailSummary).Name}");
+                        summary = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -65,7 +68,9 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        guardrailDetailsVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.GuardrailDetailsVariant2>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.GuardrailDetailsVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.GuardrailDetailsVariant2> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.GuardrailDetailsVariant2).Name}");
+                        guardrailDetailsVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -80,7 +85,9 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
-                    summary = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.GuardrailSummary>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.GuardrailSummary), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.GuardrailSummary> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.GuardrailSummary).Name}");
+                    summary = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -91,7 +98,9 @@ namespace Portkey.JsonConverters
 
                 try
                 {
-                    guardrailDetailsVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.GuardrailDetailsVariant2>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.GuardrailDetailsVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.GuardrailDetailsVariant2> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.GuardrailDetailsVariant2).Name}");
+                    guardrailDetailsVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -116,15 +125,20 @@ namespace Portkey.JsonConverters
             global::Portkey.GuardrailDetails value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             if (value.IsSummary)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Summary, typeof(global::Portkey.GuardrailSummary), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.GuardrailSummary), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.GuardrailSummary?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.GuardrailSummary).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Summary!, typeInfo);
             }
             else if (value.IsGuardrailDetailsVariant2)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.GuardrailDetailsVariant2, typeof(global::Portkey.GuardrailDetailsVariant2), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.GuardrailDetailsVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.GuardrailDetailsVariant2?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.GuardrailDetailsVariant2).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.GuardrailDetailsVariant2!, typeInfo);
             }
         }
     }

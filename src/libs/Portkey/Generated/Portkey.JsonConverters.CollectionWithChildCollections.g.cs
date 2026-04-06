@@ -12,7 +12,8 @@ namespace Portkey.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -50,7 +51,9 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        collection = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.Collection>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.Collection), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.Collection> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.Collection).Name}");
+                        collection = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -63,7 +66,9 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        collectionWithChildCollectionsVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.CollectionWithChildCollectionsVariant2>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.CollectionWithChildCollectionsVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.CollectionWithChildCollectionsVariant2> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.CollectionWithChildCollectionsVariant2).Name}");
+                        collectionWithChildCollectionsVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -78,7 +83,9 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
-                    collection = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.Collection>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.Collection), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.Collection> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.Collection).Name}");
+                    collection = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -89,7 +96,9 @@ namespace Portkey.JsonConverters
 
                 try
                 {
-                    collectionWithChildCollectionsVariant2 = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.CollectionWithChildCollectionsVariant2>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.CollectionWithChildCollectionsVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.CollectionWithChildCollectionsVariant2> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.CollectionWithChildCollectionsVariant2).Name}");
+                    collectionWithChildCollectionsVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -114,15 +123,20 @@ namespace Portkey.JsonConverters
             global::Portkey.CollectionWithChildCollections value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             if (value.IsCollection)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Collection, typeof(global::Portkey.Collection), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.Collection), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.Collection?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.Collection).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Collection!, typeInfo);
             }
             else if (value.IsCollectionWithChildCollectionsVariant2)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.CollectionWithChildCollectionsVariant2, typeof(global::Portkey.CollectionWithChildCollectionsVariant2), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.CollectionWithChildCollectionsVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.CollectionWithChildCollectionsVariant2?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.CollectionWithChildCollectionsVariant2).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.CollectionWithChildCollectionsVariant2!, typeInfo);
             }
         }
     }
