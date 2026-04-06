@@ -241,6 +241,11 @@ namespace Portkey
         public RealtimeClient Realtime { get; }
 
         /// <summary>
+        /// Rerank a list of documents based on their relevance to a query. Supported providers include Cohere, Voyage, Jina, Pinecone, Bedrock, and Azure AI.
+        /// </summary>
+        public RerankClient Rerank { get; }
+
+        /// <summary>
         /// 
         /// </summary>
         public ResponsesClient Responses { get; }

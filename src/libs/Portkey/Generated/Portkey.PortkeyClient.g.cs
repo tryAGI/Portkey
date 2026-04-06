@@ -209,6 +209,8 @@ namespace Portkey
                     new global::Portkey.JsonConverters.CreateEmbeddingRequestEncodingFormatNullableJsonConverter(),
                     new global::Portkey.JsonConverters.CreateEmbeddingResponseObjectJsonConverter(),
                     new global::Portkey.JsonConverters.CreateEmbeddingResponseObjectNullableJsonConverter(),
+                    new global::Portkey.JsonConverters.CreateRerankResponseObjectJsonConverter(),
+                    new global::Portkey.JsonConverters.CreateRerankResponseObjectNullableJsonConverter(),
                     new global::Portkey.JsonConverters.CreateTranscriptionRequestModelJsonConverter(),
                     new global::Portkey.JsonConverters.CreateTranscriptionRequestModelNullableJsonConverter(),
                     new global::Portkey.JsonConverters.CreateTranscriptionRequestResponseFormatJsonConverter(),
@@ -1052,6 +1054,7 @@ namespace Portkey
                     new global::Portkey.JsonConverters.CreateModelResponsePropertiesJsonConverter(),
                     new global::Portkey.JsonConverters.CreateResponseJsonConverter(),
                     new global::Portkey.JsonConverters.VertexFinetuneJobJsonConverter(),
+                    new global::Portkey.JsonConverters.RerankDocumentJsonConverter(),
                     new global::Portkey.JsonConverters.CodeInterpreterToolOutputJsonConverter(),
                     new global::Portkey.JsonConverters.ComputerActionJsonConverter(),
                     new global::Portkey.JsonConverters.ComputerToolCallOutputResourceJsonConverter(),
@@ -1515,6 +1518,15 @@ namespace Portkey
         /// WebSocket proxy for provider Realtime APIs
         /// </summary>
         public RealtimeClient Realtime => new RealtimeClient(HttpClient, authorizations: Authorizations)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerOptions = JsonSerializerOptions,
+        };
+
+        /// <summary>
+        /// Rerank a list of documents based on their relevance to a query. Supported providers include Cohere, Voyage, Jina, Pinecone, Bedrock, and Azure AI.
+        /// </summary>
+        public RerankClient Rerank => new RerankClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerOptions = JsonSerializerOptions,
