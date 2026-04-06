@@ -146,7 +146,7 @@ namespace Portkey
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    var __value = global::Portkey.ApiKeyObjectList.FromJson(__content, JsonSerializerOptions) ??
+                    var __value = global::Portkey.ApiKeyObjectList.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                     return new global::Portkey.AutoSDKHttpResponse<global::Portkey.ApiKeyObjectList>(
                         statusCode: __response.StatusCode,
@@ -179,7 +179,7 @@ namespace Portkey
 #endif
                     ).ConfigureAwait(false);
 
-                    var __value = await global::Portkey.ApiKeyObjectList.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
+                    var __value = await global::Portkey.ApiKeyObjectList.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                     return new global::Portkey.AutoSDKHttpResponse<global::Portkey.ApiKeyObjectList>(
                         statusCode: __response.StatusCode,

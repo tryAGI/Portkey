@@ -12,7 +12,8 @@ namespace Portkey.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -48,7 +49,9 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        message = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.EasyInputMessage>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.EasyInputMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.EasyInputMessage> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.EasyInputMessage).Name}");
+                        message = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -61,7 +64,9 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        item = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.Item>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.Item), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.Item> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.Item).Name}");
+                        item = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -74,7 +79,9 @@ namespace Portkey.JsonConverters
                 {
                     try
                     {
-                        itemReference = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.ItemReference>(__rawJson, options);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ItemReference), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ItemReference> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ItemReference).Name}");
+                        itemReference = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -89,7 +96,9 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
-                    message = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.EasyInputMessage>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.EasyInputMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.EasyInputMessage> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.EasyInputMessage).Name}");
+                    message = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -100,7 +109,9 @@ namespace Portkey.JsonConverters
 
                 try
                 {
-                    item = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.Item>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.Item), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.Item> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.Item).Name}");
+                    item = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -111,7 +122,9 @@ namespace Portkey.JsonConverters
 
                 try
                 {
-                    itemReference = global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.ItemReference>(__rawJson, options);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ItemReference), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ItemReference> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ItemReference).Name}");
+                    itemReference = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -138,19 +151,26 @@ namespace Portkey.JsonConverters
             global::Portkey.InputItem value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
             if (value.IsMessage)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Message, typeof(global::Portkey.EasyInputMessage), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.EasyInputMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.EasyInputMessage?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.EasyInputMessage).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Message!, typeInfo);
             }
             else if (value.IsItem)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Item, typeof(global::Portkey.Item), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.Item), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.Item> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.Item).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Item!.Value, typeInfo);
             }
             else if (value.IsItemReference)
             {
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ItemReference, typeof(global::Portkey.ItemReference), options);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ItemReference), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ItemReference?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ItemReference).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ItemReference!, typeInfo);
             }
         }
     }

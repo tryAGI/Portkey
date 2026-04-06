@@ -104,7 +104,7 @@ namespace Portkey
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
-            var __httpRequestContentBody = request.ToJson(JsonSerializerOptions);
+            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -154,7 +154,7 @@ namespace Portkey
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    var __value = global::Portkey.CreateKeysResponse.FromJson(__content, JsonSerializerOptions) ??
+                    var __value = global::Portkey.CreateKeysResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                     return new global::Portkey.AutoSDKHttpResponse<global::Portkey.CreateKeysResponse>(
                         statusCode: __response.StatusCode,
@@ -187,7 +187,7 @@ namespace Portkey
 #endif
                     ).ConfigureAwait(false);
 
-                    var __value = await global::Portkey.CreateKeysResponse.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
+                    var __value = await global::Portkey.CreateKeysResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                     return new global::Portkey.AutoSDKHttpResponse<global::Portkey.CreateKeysResponse>(
                         statusCode: __response.StatusCode,
