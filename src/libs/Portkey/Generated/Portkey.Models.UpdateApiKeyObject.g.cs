@@ -36,6 +36,14 @@ namespace Portkey
         public global::Portkey.UsageLimits? UsageLimits { get; set; }
 
         /// <summary>
+        /// Whether to reset current usage. If the current status is exhausted, this will change it back to active.<br/>
+        /// Example: true
+        /// </summary>
+        /// <example>true</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reset_usage")]
+        public bool? ResetUsage { get; set; }
+
+        /// <summary>
         /// Example: [completions.write]
         /// </summary>
         /// <example>[completions.write]</example>
@@ -73,6 +81,10 @@ namespace Portkey
         /// <param name="usageLimits">
         /// Example: {"credit_limit":10,"periodic_reset":"monthly","alert_threshold":8}
         /// </param>
+        /// <param name="resetUsage">
+        /// Whether to reset current usage. If the current status is exhausted, this will change it back to active.<br/>
+        /// Example: true
+        /// </param>
         /// <param name="scopes">
         /// Example: [completions.write]
         /// </param>
@@ -86,6 +98,7 @@ namespace Portkey
             string? description,
             global::System.Collections.Generic.IList<global::Portkey.UpdateApiKeyObjectRateLimit>? rateLimits,
             global::Portkey.UsageLimits? usageLimits,
+            bool? resetUsage,
             global::System.Collections.Generic.IList<string>? scopes,
             global::Portkey.UpdateApiKeyObjectDefaults? defaults,
             global::System.Collections.Generic.IList<string>? alertEmails)
@@ -94,6 +107,7 @@ namespace Portkey
             this.Description = description;
             this.RateLimits = rateLimits;
             this.UsageLimits = usageLimits;
+            this.ResetUsage = resetUsage;
             this.Scopes = scopes;
             this.Defaults = defaults;
             this.AlertEmails = alertEmails;
