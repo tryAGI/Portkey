@@ -3357,6 +3357,8 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.UpdateApiKeyObjectRateLimit>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateApiKeyObjectRateLimit))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateApiKeyObjectDefaults))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RotateApiKeyRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RotateApiKeyResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PromptRenderResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.CreateChatCompletionRequest, global::Portkey.CreateCompletionRequest>), TypeInfoPropertyName = "OneOfCreateChatCompletionRequestCreateCompletionRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateGuardrailRequest))]

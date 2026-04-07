@@ -45,6 +45,10 @@ namespace Portkey
         /// <param name="usageLimits">
         /// Example: {"credit_limit":10,"periodic_reset":"monthly","alert_threshold":8}
         /// </param>
+        /// <param name="resetUsage">
+        /// Whether to reset current usage. If the current status is exhausted, this will change it back to active.<br/>
+        /// Example: true
+        /// </param>
         /// <param name="scopes">
         /// Example: [completions.write]
         /// </param>
@@ -58,6 +62,7 @@ namespace Portkey
             string? description = default,
             global::System.Collections.Generic.IList<global::Portkey.UpdateApiKeyObjectRateLimit>? rateLimits = default,
             global::Portkey.UsageLimits? usageLimits = default,
+            bool? resetUsage = default,
             global::System.Collections.Generic.IList<string>? scopes = default,
             global::Portkey.UpdateApiKeyObjectDefaults? defaults = default,
             global::System.Collections.Generic.IList<string>? alertEmails = default,

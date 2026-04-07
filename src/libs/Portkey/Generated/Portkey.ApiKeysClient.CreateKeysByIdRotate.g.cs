@@ -5,39 +5,40 @@ namespace Portkey
 {
     public partial class ApiKeysClient
     {
-        partial void PreparePutKeysByIdArguments(
+        partial void PrepareCreateKeysByIdRotateArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::System.Guid id,
-            global::Portkey.UpdateApiKeyObject request);
-        partial void PreparePutKeysByIdRequest(
+            global::Portkey.RotateApiKeyRequest request);
+        partial void PrepareCreateKeysByIdRotateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             global::System.Guid id,
-            global::Portkey.UpdateApiKeyObject request);
-        partial void ProcessPutKeysByIdResponse(
+            global::Portkey.RotateApiKeyRequest request);
+        partial void ProcessCreateKeysByIdRotateResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessPutKeysByIdResponseContent(
+        partial void ProcessCreateKeysByIdRotateResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Update API Keys<br/>
-        /// Updates an existing API key. The API key type (user vs service) and associated user_id cannot be changed after creation.
+        /// Rotate API Key<br/>
+        /// Rotates an existing API key and returns a newly generated key value.<br/>
+        /// The previous key remains valid during the transition period and expires at `key_transition_expires_at`.
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<string> PutKeysByIdAsync(
+        public async global::System.Threading.Tasks.Task<global::Portkey.RotateApiKeyResponse> CreateKeysByIdRotateAsync(
             global::System.Guid id,
 
-            global::Portkey.UpdateApiKeyObject request,
+            global::Portkey.RotateApiKeyRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await PutKeysByIdAsResponseAsync(
+            var __response = await CreateKeysByIdRotateAsResponseAsync(
                 id: id,
 
                 request: request,
@@ -47,34 +48,35 @@ namespace Portkey
             return __response.Body;
         }
         /// <summary>
-        /// Update API Keys<br/>
-        /// Updates an existing API key. The API key type (user vs service) and associated user_id cannot be changed after creation.
+        /// Rotate API Key<br/>
+        /// Rotates an existing API key and returns a newly generated key value.<br/>
+        /// The previous key remains valid during the transition period and expires at `key_transition_expires_at`.
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<string>> PutKeysByIdAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.RotateApiKeyResponse>> CreateKeysByIdRotateAsResponseAsync(
             global::System.Guid id,
 
-            global::Portkey.UpdateApiKeyObject request,
+            global::Portkey.RotateApiKeyRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
                 client: HttpClient);
-            PreparePutKeysByIdArguments(
+            PrepareCreateKeysByIdRotateArguments(
                 httpClient: HttpClient,
                 id: ref id,
                 request: request);
 
             var __pathBuilder = new global::Portkey.PathBuilder(
-                path: $"/api-keys/{id}",
+                path: $"/api-keys/{id}/rotate",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: global::System.Net.Http.HttpMethod.Put,
+                method: global::System.Net.Http.HttpMethod.Post,
                 requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
             __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -106,7 +108,7 @@ namespace Portkey
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PreparePutKeysByIdRequest(
+            PrepareCreateKeysByIdRotateRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 id: id,
@@ -120,7 +122,7 @@ namespace Portkey
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessPutKeysByIdResponse(
+            ProcessCreateKeysByIdRotateResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
 
@@ -136,7 +138,7 @@ namespace Portkey
                     client: HttpClient,
                     response: __response,
                     content: ref __content);
-                ProcessPutKeysByIdResponseContent(
+                ProcessCreateKeysByIdRotateResponseContent(
                     httpClient: HttpClient,
                     httpResponseMessage: __response,
                     content: ref __content);
@@ -145,10 +147,12 @@ namespace Portkey
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return new global::Portkey.AutoSDKHttpResponse<string>(
+                    var __value = global::Portkey.RotateApiKeyResponse.FromJson(__content, JsonSerializerContext) ??
+                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.RotateApiKeyResponse>(
                         statusCode: __response.StatusCode,
                         headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
-                        body: __content);
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -170,16 +174,18 @@ namespace Portkey
                 try
                 {
                     __response.EnsureSuccessStatusCode();
-                    var __content = await __response.Content.ReadAsStringAsync(
+                    using var __content = await __response.Content.ReadAsStreamAsync(
 #if NET5_0_OR_GREATER
                         cancellationToken
 #endif
                     ).ConfigureAwait(false);
 
-                    return new global::Portkey.AutoSDKHttpResponse<string>(
+                    var __value = await global::Portkey.RotateApiKeyResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        throw new global::System.InvalidOperationException("Response deserialization failed.");
+                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.RotateApiKeyResponse>(
                         statusCode: __response.StatusCode,
                         headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
-                        body: __content);
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -211,56 +217,28 @@ namespace Portkey
             }
         }
         /// <summary>
-        /// Update API Keys<br/>
-        /// Updates an existing API key. The API key type (user vs service) and associated user_id cannot be changed after creation.
+        /// Rotate API Key<br/>
+        /// Rotates an existing API key and returns a newly generated key value.<br/>
+        /// The previous key remains valid during the transition period and expires at `key_transition_expires_at`.
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="name">
-        /// Example: Development API Key
+        /// <param name="keyTransitionPeriodMs">
+        /// Optional transition period in milliseconds during which the previous key remains valid.<br/>
+        /// Example: 3600000
         /// </param>
-        /// <param name="description">
-        /// Example: API key for development environment
-        /// </param>
-        /// <param name="rateLimits"></param>
-        /// <param name="usageLimits">
-        /// Example: {"credit_limit":10,"periodic_reset":"monthly","alert_threshold":8}
-        /// </param>
-        /// <param name="resetUsage">
-        /// Whether to reset current usage. If the current status is exhausted, this will change it back to active.<br/>
-        /// Example: true
-        /// </param>
-        /// <param name="scopes">
-        /// Example: [completions.write]
-        /// </param>
-        /// <param name="defaults"></param>
-        /// <param name="alertEmails"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<string> PutKeysByIdAsync(
+        public async global::System.Threading.Tasks.Task<global::Portkey.RotateApiKeyResponse> CreateKeysByIdRotateAsync(
             global::System.Guid id,
-            string? name = default,
-            string? description = default,
-            global::System.Collections.Generic.IList<global::Portkey.UpdateApiKeyObjectRateLimit>? rateLimits = default,
-            global::Portkey.UsageLimits? usageLimits = default,
-            bool? resetUsage = default,
-            global::System.Collections.Generic.IList<string>? scopes = default,
-            global::Portkey.UpdateApiKeyObjectDefaults? defaults = default,
-            global::System.Collections.Generic.IList<string>? alertEmails = default,
+            int? keyTransitionPeriodMs = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Portkey.UpdateApiKeyObject
+            var __request = new global::Portkey.RotateApiKeyRequest
             {
-                Name = name,
-                Description = description,
-                RateLimits = rateLimits,
-                UsageLimits = usageLimits,
-                ResetUsage = resetUsage,
-                Scopes = scopes,
-                Defaults = defaults,
-                AlertEmails = alertEmails,
+                KeyTransitionPeriodMs = keyTransitionPeriodMs,
             };
 
-            return await PutKeysByIdAsync(
+            return await CreateKeysByIdRotateAsync(
                 id: id,
                 request: __request,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
