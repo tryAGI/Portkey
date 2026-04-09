@@ -5,6 +5,25 @@ namespace Portkey
 {
     public partial class PromptsClient
     {
+
+
+        private static readonly global::Portkey.EndPointSecurityRequirement s_UpdatePromptVersionSecurityRequirement0 =
+            new global::Portkey.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Portkey.EndPointAuthorizationRequirement[]
+                {                    new global::Portkey.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "x-portkey-api-key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::Portkey.EndPointSecurityRequirement[] s_UpdatePromptVersionSecurityRequirements =
+            new global::Portkey.EndPointSecurityRequirement[]
+            {                s_UpdatePromptVersionSecurityRequirement0,
+            };
         partial void PrepareUpdatePromptVersionArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string promptId,
@@ -52,9 +71,15 @@ namespace Portkey
                 versionId: ref versionId,
                 request: request);
 
+
+            var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_UpdatePromptVersionSecurityRequirements,
+                operationName: "UpdatePromptVersionAsync");
+
             var __pathBuilder = new global::Portkey.PathBuilder(
                 path: $"/prompts/{promptId}/versions/{versionId}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Put,
@@ -64,7 +89,7 @@ namespace Portkey
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

@@ -5,6 +5,25 @@ namespace Portkey
 {
     public partial class RateLimitsPoliciesClient
     {
+
+
+        private static readonly global::Portkey.EndPointSecurityRequirement s_GetRateLimitsPolicySecurityRequirement0 =
+            new global::Portkey.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Portkey.EndPointAuthorizationRequirement[]
+                {                    new global::Portkey.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "x-portkey-api-key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::Portkey.EndPointSecurityRequirement[] s_GetRateLimitsPolicySecurityRequirements =
+            new global::Portkey.EndPointSecurityRequirement[]
+            {                s_GetRateLimitsPolicySecurityRequirement0,
+            };
         partial void PrepareGetRateLimitsPolicyArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::System.Guid rateLimitsPolicyId,
@@ -45,12 +64,18 @@ namespace Portkey
                 rateLimitsPolicyId: ref rateLimitsPolicyId,
                 status: ref status);
 
+
+            var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetRateLimitsPolicySecurityRequirements,
+                operationName: "GetRateLimitsPolicyAsync");
+
             var __pathBuilder = new global::Portkey.PathBuilder(
                 path: $"/policies/rate-limits/{rateLimitsPolicyId}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("status", status?.ToValueString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -60,7 +85,7 @@ namespace Portkey
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

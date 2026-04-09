@@ -5,6 +5,25 @@ namespace Portkey
 {
     public partial class FilesClient
     {
+
+
+        private static readonly global::Portkey.EndPointSecurityRequirement s_ListFilesSecurityRequirement0 =
+            new global::Portkey.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Portkey.EndPointAuthorizationRequirement[]
+                {                    new global::Portkey.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "x-portkey-api-key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::Portkey.EndPointSecurityRequirement[] s_ListFilesSecurityRequirements =
+            new global::Portkey.EndPointSecurityRequirement[]
+            {                s_ListFilesSecurityRequirement0,
+            };
         partial void PrepareListFilesArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string? purpose);
@@ -37,12 +56,18 @@ namespace Portkey
                 httpClient: HttpClient,
                 purpose: ref purpose);
 
+
+            var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ListFilesSecurityRequirements,
+                operationName: "ListFilesAsync");
+
             var __pathBuilder = new global::Portkey.PathBuilder(
                 path: "/files",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("purpose", purpose) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -52,7 +77,7 @@ namespace Portkey
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

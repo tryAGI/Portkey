@@ -5,6 +5,25 @@ namespace Portkey
 {
     public partial class ResponsesClient
     {
+
+
+        private static readonly global::Portkey.EndPointSecurityRequirement s_ListInputItemsSecurityRequirement0 =
+            new global::Portkey.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Portkey.EndPointAuthorizationRequirement[]
+                {                    new global::Portkey.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "x-portkey-api-key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::Portkey.EndPointSecurityRequirement[] s_ListInputItemsSecurityRequirements =
+            new global::Portkey.EndPointSecurityRequirement[]
+            {                s_ListInputItemsSecurityRequirement0,
+            };
         partial void PrepareListInputItemsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string responseId,
@@ -59,6 +78,12 @@ namespace Portkey
                 after: ref after,
                 before: ref before);
 
+
+            var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ListInputItemsSecurityRequirements,
+                operationName: "ListInputItemsAsync");
+
             var __pathBuilder = new global::Portkey.PathBuilder(
                 path: $"/responses/{responseId}/input_items",
                 baseUri: HttpClient.BaseAddress); 
@@ -67,7 +92,7 @@ namespace Portkey
                 .AddOptionalParameter("order", order?.ToValueString())
                 .AddOptionalParameter("after", after)
                 .AddOptionalParameter("before", before) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -77,7 +102,7 @@ namespace Portkey
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

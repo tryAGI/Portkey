@@ -6,6 +6,7 @@ namespace Portkey
     public sealed partial class PortkeyClient
     {
         /// <inheritdoc cref="PortkeyClient(global::System.Net.Http.HttpClient?, global::System.Uri?, global::System.Collections.Generic.List{global::Portkey.EndPointAuthorization}?, bool)"/>
+
         public PortkeyClient(
             string apiKey,
             global::System.Net.Http.HttpClient? httpClient = null,

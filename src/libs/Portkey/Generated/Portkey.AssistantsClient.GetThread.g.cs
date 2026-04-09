@@ -5,6 +5,25 @@ namespace Portkey
 {
     public partial class AssistantsClient
     {
+
+
+        private static readonly global::Portkey.EndPointSecurityRequirement s_GetThreadSecurityRequirement0 =
+            new global::Portkey.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Portkey.EndPointAuthorizationRequirement[]
+                {                    new global::Portkey.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "x-portkey-api-key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::Portkey.EndPointSecurityRequirement[] s_GetThreadSecurityRequirements =
+            new global::Portkey.EndPointSecurityRequirement[]
+            {                s_GetThreadSecurityRequirement0,
+            };
         partial void PrepareGetThreadArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string threadId);
@@ -37,9 +56,15 @@ namespace Portkey
                 httpClient: HttpClient,
                 threadId: ref threadId);
 
+
+            var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetThreadSecurityRequirements,
+                operationName: "GetThreadAsync");
+
             var __pathBuilder = new global::Portkey.PathBuilder(
                 path: $"/threads/{threadId}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -49,7 +74,7 @@ namespace Portkey
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

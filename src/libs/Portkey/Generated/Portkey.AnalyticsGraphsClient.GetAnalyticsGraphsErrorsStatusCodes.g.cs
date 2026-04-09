@@ -5,6 +5,25 @@ namespace Portkey
 {
     public partial class AnalyticsGraphsClient
     {
+
+
+        private static readonly global::Portkey.EndPointSecurityRequirement s_GetAnalyticsGraphsErrorsStatusCodesSecurityRequirement0 =
+            new global::Portkey.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Portkey.EndPointAuthorizationRequirement[]
+                {                    new global::Portkey.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "x-portkey-api-key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::Portkey.EndPointSecurityRequirement[] s_GetAnalyticsGraphsErrorsStatusCodesSecurityRequirements =
+            new global::Portkey.EndPointSecurityRequirement[]
+            {                s_GetAnalyticsGraphsErrorsStatusCodesSecurityRequirement0,
+            };
         partial void PrepareGetAnalyticsGraphsErrorsStatusCodesArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::System.DateTime timeOfGenerationMin,
@@ -230,6 +249,12 @@ namespace Portkey
                 spanId: ref spanId,
                 promptSlug: ref promptSlug);
 
+
+            var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetAnalyticsGraphsErrorsStatusCodesSecurityRequirements,
+                operationName: "GetAnalyticsGraphsErrorsStatusCodesAsync");
+
             var __pathBuilder = new global::Portkey.PathBuilder(
                 path: "/analytics/graphs/errors/status-codes",
                 baseUri: HttpClient.BaseAddress); 
@@ -256,7 +281,7 @@ namespace Portkey
                 .AddOptionalParameter("trace_id", traceId)
                 .AddOptionalParameter("span_id", spanId)
                 .AddOptionalParameter("prompt_slug", promptSlug) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -266,7 +291,7 @@ namespace Portkey
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

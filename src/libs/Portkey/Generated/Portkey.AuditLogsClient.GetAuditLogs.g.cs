@@ -5,6 +5,25 @@ namespace Portkey
 {
     public partial class AuditLogsClient
     {
+
+
+        private static readonly global::Portkey.EndPointSecurityRequirement s_GetAuditLogsSecurityRequirement0 =
+            new global::Portkey.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Portkey.EndPointAuthorizationRequirement[]
+                {                    new global::Portkey.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "x-portkey-api-key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::Portkey.EndPointSecurityRequirement[] s_GetAuditLogsSecurityRequirements =
+            new global::Portkey.EndPointSecurityRequirement[]
+            {                s_GetAuditLogsSecurityRequirement0,
+            };
         partial void PrepareGetAuditLogsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string startTime,
@@ -112,6 +131,12 @@ namespace Portkey
                 currentPage: ref currentPage,
                 pageSize: ref pageSize);
 
+
+            var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetAuditLogsSecurityRequirements,
+                operationName: "GetAuditLogsAsync");
+
             var __pathBuilder = new global::Portkey.PathBuilder(
                 path: "/audit-logs",
                 baseUri: HttpClient.BaseAddress); 
@@ -132,7 +157,7 @@ namespace Portkey
                 .AddOptionalParameter("country", country)
                 .AddOptionalParameter("current_page", currentPage?.ToString())
                 .AddOptionalParameter("page_size", pageSize?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -142,7 +167,7 @@ namespace Portkey
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

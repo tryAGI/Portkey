@@ -5,6 +5,25 @@ namespace Portkey
 {
     public partial class VectorStoresClient
     {
+
+
+        private static readonly global::Portkey.EndPointSecurityRequirement s_GetVectorStoreSecurityRequirement0 =
+            new global::Portkey.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Portkey.EndPointAuthorizationRequirement[]
+                {                    new global::Portkey.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "x-portkey-api-key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::Portkey.EndPointSecurityRequirement[] s_GetVectorStoreSecurityRequirements =
+            new global::Portkey.EndPointSecurityRequirement[]
+            {                s_GetVectorStoreSecurityRequirement0,
+            };
         partial void PrepareGetVectorStoreArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string vectorStoreId);
@@ -37,9 +56,15 @@ namespace Portkey
                 httpClient: HttpClient,
                 vectorStoreId: ref vectorStoreId);
 
+
+            var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetVectorStoreSecurityRequirements,
+                operationName: "GetVectorStoreAsync");
+
             var __pathBuilder = new global::Portkey.PathBuilder(
                 path: $"/vector_stores/{vectorStoreId}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -49,7 +74,7 @@ namespace Portkey
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

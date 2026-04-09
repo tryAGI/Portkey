@@ -5,6 +5,25 @@ namespace Portkey
 {
     public partial class RateLimitsPoliciesClient
     {
+
+
+        private static readonly global::Portkey.EndPointSecurityRequirement s_ListRateLimitsPoliciesSecurityRequirement0 =
+            new global::Portkey.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Portkey.EndPointAuthorizationRequirement[]
+                {                    new global::Portkey.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "x-portkey-api-key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::Portkey.EndPointSecurityRequirement[] s_ListRateLimitsPoliciesSecurityRequirements =
+            new global::Portkey.EndPointSecurityRequirement[]
+            {                s_ListRateLimitsPoliciesSecurityRequirement0,
+            };
         partial void PrepareListRateLimitsPoliciesArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string? workspaceId,
@@ -65,6 +84,12 @@ namespace Portkey
                 pageSize: ref pageSize,
                 currentPage: ref currentPage);
 
+
+            var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ListRateLimitsPoliciesSecurityRequirements,
+                operationName: "ListRateLimitsPoliciesAsync");
+
             var __pathBuilder = new global::Portkey.PathBuilder(
                 path: "/policies/rate-limits",
                 baseUri: HttpClient.BaseAddress); 
@@ -75,7 +100,7 @@ namespace Portkey
                 .AddOptionalParameter("unit", unit?.ToValueString())
                 .AddOptionalParameter("page_size", pageSize?.ToString())
                 .AddOptionalParameter("current_page", currentPage?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -85,7 +110,7 @@ namespace Portkey
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
