@@ -5,6 +5,25 @@ namespace Portkey
 {
     public partial class RealtimeClient
     {
+
+
+        private static readonly global::Portkey.EndPointSecurityRequirement s_ConnectRealtimeSecurityRequirement0 =
+            new global::Portkey.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Portkey.EndPointAuthorizationRequirement[]
+                {                    new global::Portkey.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "x-portkey-api-key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::Portkey.EndPointSecurityRequirement[] s_ConnectRealtimeSecurityRequirements =
+            new global::Portkey.EndPointSecurityRequirement[]
+            {                s_ConnectRealtimeSecurityRequirement0,
+            };
         partial void PrepareConnectRealtimeArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string? xPortkeyTraceId,
@@ -68,12 +87,18 @@ namespace Portkey
                 xPortkeyCacheForceRefresh: ref xPortkeyCacheForceRefresh,
                 model: ref model);
 
+
+            var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ConnectRealtimeSecurityRequirements,
+                operationName: "ConnectRealtimeAsync");
+
             var __pathBuilder = new global::Portkey.PathBuilder(
                 path: "/realtime",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("model", model) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -83,7 +108,7 @@ namespace Portkey
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

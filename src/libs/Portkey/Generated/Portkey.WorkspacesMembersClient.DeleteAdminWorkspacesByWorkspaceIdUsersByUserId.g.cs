@@ -5,6 +5,25 @@ namespace Portkey
 {
     public partial class WorkspacesMembersClient
     {
+
+
+        private static readonly global::Portkey.EndPointSecurityRequirement s_DeleteAdminWorkspacesByWorkspaceIdUsersByUserIdSecurityRequirement0 =
+            new global::Portkey.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Portkey.EndPointAuthorizationRequirement[]
+                {                    new global::Portkey.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "x-portkey-api-key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::Portkey.EndPointSecurityRequirement[] s_DeleteAdminWorkspacesByWorkspaceIdUsersByUserIdSecurityRequirements =
+            new global::Portkey.EndPointSecurityRequirement[]
+            {                s_DeleteAdminWorkspacesByWorkspaceIdUsersByUserIdSecurityRequirement0,
+            };
         partial void PrepareDeleteAdminWorkspacesByWorkspaceIdUsersByUserIdArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string workspaceId,
@@ -62,9 +81,15 @@ namespace Portkey
                 workspaceId: ref workspaceId,
                 userId: ref userId);
 
+
+            var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_DeleteAdminWorkspacesByWorkspaceIdUsersByUserIdSecurityRequirements,
+                operationName: "DeleteAdminWorkspacesByWorkspaceIdUsersByUserIdAsync");
+
             var __pathBuilder = new global::Portkey.PathBuilder(
                 path: $"/admin/workspaces/{workspaceId}/users/{userId}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -74,7 +99,7 @@ namespace Portkey
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

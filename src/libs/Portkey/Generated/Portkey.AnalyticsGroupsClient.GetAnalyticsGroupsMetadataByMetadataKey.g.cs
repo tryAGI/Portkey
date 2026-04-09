@@ -5,6 +5,25 @@ namespace Portkey
 {
     public partial class AnalyticsGroupsClient
     {
+
+
+        private static readonly global::Portkey.EndPointSecurityRequirement s_GetAnalyticsGroupsMetadataByMetadataKeySecurityRequirement0 =
+            new global::Portkey.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Portkey.EndPointAuthorizationRequirement[]
+                {                    new global::Portkey.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "x-portkey-api-key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::Portkey.EndPointSecurityRequirement[] s_GetAnalyticsGroupsMetadataByMetadataKeySecurityRequirements =
+            new global::Portkey.EndPointSecurityRequirement[]
+            {                s_GetAnalyticsGroupsMetadataByMetadataKeySecurityRequirement0,
+            };
         partial void PrepareGetAnalyticsGroupsMetadataByMetadataKeyArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string metadataKey,
@@ -254,6 +273,12 @@ namespace Portkey
                 spanId: ref spanId,
                 promptSlug: ref promptSlug);
 
+
+            var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetAnalyticsGroupsMetadataByMetadataKeySecurityRequirements,
+                operationName: "GetAnalyticsGroupsMetadataByMetadataKeyAsync");
+
             var __pathBuilder = new global::Portkey.PathBuilder(
                 path: $"/analytics/groups/metadata/{metadataKey}",
                 baseUri: HttpClient.BaseAddress); 
@@ -282,7 +307,7 @@ namespace Portkey
                 .AddOptionalParameter("trace_id", traceId)
                 .AddOptionalParameter("span_id", spanId)
                 .AddOptionalParameter("prompt_slug", promptSlug) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -292,7 +317,7 @@ namespace Portkey
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

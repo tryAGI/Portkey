@@ -5,6 +5,25 @@ namespace Portkey
 {
     public partial class AssistantsClient
     {
+
+
+        private static readonly global::Portkey.EndPointSecurityRequirement s_SubmitToolOuputsToRunSecurityRequirement0 =
+            new global::Portkey.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Portkey.EndPointAuthorizationRequirement[]
+                {                    new global::Portkey.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "x-portkey-api-key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::Portkey.EndPointSecurityRequirement[] s_SubmitToolOuputsToRunSecurityRequirements =
+            new global::Portkey.EndPointSecurityRequirement[]
+            {                s_SubmitToolOuputsToRunSecurityRequirement0,
+            };
         partial void PrepareSubmitToolOuputsToRunArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string threadId,
@@ -50,9 +69,15 @@ namespace Portkey
                 runId: ref runId,
                 request: request);
 
+
+            var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_SubmitToolOuputsToRunSecurityRequirements,
+                operationName: "SubmitToolOuputsToRunAsync");
+
             var __pathBuilder = new global::Portkey.PathBuilder(
                 path: $"/threads/{threadId}/runs/{runId}/submit_tool_outputs",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -62,7 +87,7 @@ namespace Portkey
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

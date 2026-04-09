@@ -5,6 +5,25 @@ namespace Portkey
 {
     public partial class ApiKeysClient
     {
+
+
+        private static readonly global::Portkey.EndPointSecurityRequirement s_DeleteKeysByIdSecurityRequirement0 =
+            new global::Portkey.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Portkey.EndPointAuthorizationRequirement[]
+                {                    new global::Portkey.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "x-portkey-api-key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::Portkey.EndPointSecurityRequirement[] s_DeleteKeysByIdSecurityRequirements =
+            new global::Portkey.EndPointSecurityRequirement[]
+            {                s_DeleteKeysByIdSecurityRequirement0,
+            };
         partial void PrepareDeleteKeysByIdArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::System.Guid id);
@@ -54,9 +73,15 @@ namespace Portkey
                 httpClient: HttpClient,
                 id: ref id);
 
+
+            var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_DeleteKeysByIdSecurityRequirements,
+                operationName: "DeleteKeysByIdAsync");
+
             var __pathBuilder = new global::Portkey.PathBuilder(
                 path: $"/api-keys/{id}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -66,7 +91,7 @@ namespace Portkey
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

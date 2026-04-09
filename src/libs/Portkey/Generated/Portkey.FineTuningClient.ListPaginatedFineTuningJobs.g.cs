@@ -5,6 +5,25 @@ namespace Portkey
 {
     public partial class FineTuningClient
     {
+
+
+        private static readonly global::Portkey.EndPointSecurityRequirement s_ListPaginatedFineTuningJobsSecurityRequirement0 =
+            new global::Portkey.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Portkey.EndPointAuthorizationRequirement[]
+                {                    new global::Portkey.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "x-portkey-api-key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::Portkey.EndPointSecurityRequirement[] s_ListPaginatedFineTuningJobsSecurityRequirements =
+            new global::Portkey.EndPointSecurityRequirement[]
+            {                s_ListPaginatedFineTuningJobsSecurityRequirement0,
+            };
         partial void PrepareListPaginatedFineTuningJobsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string? after,
@@ -44,13 +63,19 @@ namespace Portkey
                 after: ref after,
                 limit: ref limit);
 
+
+            var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ListPaginatedFineTuningJobsSecurityRequirements,
+                operationName: "ListPaginatedFineTuningJobsAsync");
+
             var __pathBuilder = new global::Portkey.PathBuilder(
                 path: "/fine_tuning/jobs",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("after", after)
                 .AddOptionalParameter("limit", limit?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -60,7 +85,7 @@ namespace Portkey
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

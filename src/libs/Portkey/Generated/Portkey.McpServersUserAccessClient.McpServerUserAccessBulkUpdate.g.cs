@@ -5,6 +5,25 @@ namespace Portkey
 {
     public partial class McpServersUserAccessClient
     {
+
+
+        private static readonly global::Portkey.EndPointSecurityRequirement s_McpServerUserAccessBulkUpdateSecurityRequirement0 =
+            new global::Portkey.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Portkey.EndPointAuthorizationRequirement[]
+                {                    new global::Portkey.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "x-portkey-api-key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::Portkey.EndPointSecurityRequirement[] s_McpServerUserAccessBulkUpdateSecurityRequirements =
+            new global::Portkey.EndPointSecurityRequirement[]
+            {                s_McpServerUserAccessBulkUpdateSecurityRequirement0,
+            };
         partial void PrepareMcpServerUserAccessBulkUpdateArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string mcpServerId,
@@ -45,9 +64,15 @@ namespace Portkey
                 mcpServerId: ref mcpServerId,
                 request: request);
 
+
+            var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_McpServerUserAccessBulkUpdateSecurityRequirements,
+                operationName: "McpServerUserAccessBulkUpdateAsync");
+
             var __pathBuilder = new global::Portkey.PathBuilder(
                 path: $"/mcp-servers/{mcpServerId}/user-access",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Put,
@@ -57,7 +82,7 @@ namespace Portkey
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

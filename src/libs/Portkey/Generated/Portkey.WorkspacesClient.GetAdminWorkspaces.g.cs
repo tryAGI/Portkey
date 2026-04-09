@@ -5,6 +5,25 @@ namespace Portkey
 {
     public partial class WorkspacesClient
     {
+
+
+        private static readonly global::Portkey.EndPointSecurityRequirement s_GetAdminWorkspacesSecurityRequirement0 =
+            new global::Portkey.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Portkey.EndPointAuthorizationRequirement[]
+                {                    new global::Portkey.EndPointAuthorizationRequirement
+                    {
+                        Type = "ApiKey",
+                        Location = "Header",
+                        Name = "x-portkey-api-key",
+                        FriendlyName = "ApiKeyInHeader",
+                    },
+                },
+            };
+        private static readonly global::Portkey.EndPointSecurityRequirement[] s_GetAdminWorkspacesSecurityRequirements =
+            new global::Portkey.EndPointSecurityRequirement[]
+            {                s_GetAdminWorkspacesSecurityRequirement0,
+            };
         partial void PrepareGetAdminWorkspacesArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int? pageSize,
@@ -86,6 +105,12 @@ namespace Portkey
                 exactName: ref exactName,
                 status: ref status);
 
+
+            var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetAdminWorkspacesSecurityRequirements,
+                operationName: "GetAdminWorkspacesAsync");
+
             var __pathBuilder = new global::Portkey.PathBuilder(
                 path: "/admin/workspaces",
                 baseUri: HttpClient.BaseAddress); 
@@ -95,7 +120,7 @@ namespace Portkey
                 .AddOptionalParameter("name", name)
                 .AddOptionalParameter("exact_name", exactName)
                 .AddOptionalParameter("status", status?.ToValueString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -105,7 +130,7 @@ namespace Portkey
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
