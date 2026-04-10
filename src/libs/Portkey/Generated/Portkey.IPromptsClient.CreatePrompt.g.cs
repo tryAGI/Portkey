@@ -8,11 +8,13 @@ namespace Portkey
         /// Create a new prompt
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.CreatePromptResponse> CreatePromptAsync(
 
             global::Portkey.CreatePromptRequest request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a new prompt
@@ -48,6 +50,7 @@ namespace Portkey
         /// <param name="templateMetadata">
         /// Metadata for the prompt
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.CreatePromptResponse> CreatePromptAsync(
@@ -62,6 +65,7 @@ namespace Portkey
             string? model = default,
             string? versionDescription = default,
             object? templateMetadata = default,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

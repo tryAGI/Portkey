@@ -8,11 +8,13 @@ namespace Portkey
         /// Creates Image Variation
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.ImagesResponse> CreateImageVariationAsync(
 
             global::Portkey.CreateImageVariationRequest request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Creates Image Variation
@@ -47,6 +49,7 @@ namespace Portkey
         /// A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. [Learn more](https://platform.openai.com/docs/guides/safety-best-practices/end-user-ids).<br/>
         /// Example: user-1234
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.ImagesResponse> CreateImageVariationAsync(
@@ -57,6 +60,7 @@ namespace Portkey
             global::Portkey.CreateImageVariationRequestResponseFormat? responseFormat = default,
             global::Portkey.CreateImageVariationRequestSize? size = default,
             string? user = default,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

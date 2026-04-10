@@ -15,6 +15,7 @@ namespace Portkey
         /// <param name="xPortkeySpanName"></param>
         /// <param name="xPortkeyMetadata"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.CreateRerankResponse> CreateRerankAsync(
@@ -25,6 +26,7 @@ namespace Portkey
             string? xPortkeyParentSpanId = default,
             string? xPortkeySpanName = default,
             object? xPortkeyMetadata = default,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Rerank<br/>
@@ -80,6 +82,7 @@ namespace Portkey
         /// <param name="parameters">
         /// Additional provider-specific parameters. Pinecone-specific parameter.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.CreateRerankResponse> CreateRerankAsync(
@@ -98,6 +101,7 @@ namespace Portkey
             global::System.Collections.Generic.IList<string>? rankFields = default,
             bool? truncation = default,
             object? parameters = default,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

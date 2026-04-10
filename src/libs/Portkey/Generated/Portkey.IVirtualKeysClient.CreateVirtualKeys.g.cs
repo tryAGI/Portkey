@@ -8,11 +8,13 @@ namespace Portkey
         /// Create a Virtual Key
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.CreateVirtualKeysResponse> CreateVirtualKeysAsync(
 
             global::Portkey.CreateVirtualKeysRequest request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a Virtual Key
@@ -36,6 +38,7 @@ namespace Portkey
         /// <param name="secretMappings">
         /// Dynamically resolve secrets from secret references at runtime. Valid target_field values are "key" or "model_config.&lt;field&gt;" (e.g. "model_config.awsSecretAccessKey"). Each target_field must be unique. When "key" is mapped, the key field becomes optional.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.CreateVirtualKeysResponse> CreateVirtualKeysAsync(
@@ -52,6 +55,7 @@ namespace Portkey
             global::Portkey.RateLimits? rateLimits = default,
             global::System.DateTime? expiresAt = default,
             global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? secretMappings = default,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

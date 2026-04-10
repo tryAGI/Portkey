@@ -9,11 +9,13 @@ namespace Portkey
         /// This endpoint allows users to submit feedback for a particular interaction or response.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.FeedbackResponse> CreateFeedbackAsync(
 
             global::Portkey.FeedbackRequest request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create new feedback<br/>
@@ -32,6 +34,7 @@ namespace Portkey
         /// <param name="metadata">
         /// Additional metadata for the feedback.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.FeedbackResponse> CreateFeedbackAsync(
@@ -39,6 +42,7 @@ namespace Portkey
             int value,
             float? weight = default,
             object? metadata = default,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

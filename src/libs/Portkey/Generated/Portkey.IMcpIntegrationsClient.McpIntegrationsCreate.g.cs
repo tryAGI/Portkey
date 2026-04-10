@@ -9,11 +9,13 @@ namespace Portkey
         /// Create a new MCP Integration. Requires either organisation_id (with admin API key) or workspace_id in body.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.McpIntegrationCreateResponse> McpIntegrationsCreateAsync(
 
             global::Portkey.CreateMcpIntegration request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create MCP Integration<br/>
@@ -40,6 +42,7 @@ namespace Portkey
         /// </param>
         /// <param name="authType"></param>
         /// <param name="transport"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.McpIntegrationCreateResponse> McpIntegrationsCreateAsync(
@@ -52,6 +55,7 @@ namespace Portkey
             string? slug = default,
             string? description = default,
             global::Portkey.CreateMcpIntegrationConfigurations? configurations = default,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

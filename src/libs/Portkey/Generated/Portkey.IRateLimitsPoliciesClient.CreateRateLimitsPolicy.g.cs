@@ -9,11 +9,13 @@ namespace Portkey
         /// Create a new rate limits policy to control the rate of requests or tokens consumed per minute, hour, or day.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.CreatePolicyResponse> CreateRateLimitsPolicyAsync(
 
             global::Portkey.CreateRateLimitsPolicyRequest request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Rate Limits Policy<br/>
@@ -47,6 +49,7 @@ namespace Portkey
         /// <param name="organisationId">
         /// Organization ID. Required if not using API key authentication.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.CreatePolicyResponse> CreateRateLimitsPolicyAsync(
@@ -58,6 +61,7 @@ namespace Portkey
             string? name = default,
             string? workspaceId = default,
             global::System.Guid? organisationId = default,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

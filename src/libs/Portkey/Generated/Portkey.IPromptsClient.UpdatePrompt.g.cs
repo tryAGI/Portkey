@@ -12,12 +12,14 @@ namespace Portkey
         /// </summary>
         /// <param name="promptId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.UpdatePromptResponse> UpdatePromptAsync(
             string promptId,
 
             global::Portkey.UpdatePromptRequest request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update a prompt<br/>
@@ -61,6 +63,7 @@ namespace Portkey
         /// <param name="promptMetadata">
         /// Additional metadata for the prompt version. When `patch` is `true`, this field is optional and will be inherited from the current latest version if omitted.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.UpdatePromptResponse> UpdatePromptAsync(
@@ -78,6 +81,7 @@ namespace Portkey
             object? toolChoice = default,
             int? isRawTemplate = default,
             object? promptMetadata = default,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

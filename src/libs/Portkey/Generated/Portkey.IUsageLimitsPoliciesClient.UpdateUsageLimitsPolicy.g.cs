@@ -10,12 +10,14 @@ namespace Portkey
         /// </summary>
         /// <param name="policyUsageLimitsId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         global::System.Threading.Tasks.Task<string> UpdateUsageLimitsPolicyAsync(
             global::System.Guid policyUsageLimitsId,
 
             global::Portkey.UpdateUsageLimitsPolicyRequest request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update Usage Limits Policy<br/>
@@ -23,12 +25,14 @@ namespace Portkey
         /// </summary>
         /// <param name="policyUsageLimitsId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<string>> UpdateUsageLimitsPolicyAsResponseAsync(
             global::System.Guid policyUsageLimitsId,
 
             global::Portkey.UpdateUsageLimitsPolicyRequest request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update Usage Limits Policy<br/>
@@ -50,6 +54,7 @@ namespace Portkey
         /// <param name="resetUsageForValue">
         /// Reset usage for a specific value key (e.g., API key). This will reset the usage counter for that key to 0.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<string> UpdateUsageLimitsPolicyAsync(
@@ -59,6 +64,7 @@ namespace Portkey
             double? alertThreshold = default,
             global::Portkey.UpdateUsageLimitsPolicyRequestPeriodicReset? periodicReset = default,
             string? resetUsageForValue = default,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
