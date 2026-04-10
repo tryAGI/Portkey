@@ -16,6 +16,7 @@ namespace Portkey
         /// <param name="xPortkeyCacheNamespace"></param>
         /// <param name="xPortkeyCacheForceRefresh"></param>
         /// <param name="model"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         global::System.Threading.Tasks.Task ConnectRealtimeAsync(
@@ -27,6 +28,7 @@ namespace Portkey
             string? xPortkeyCacheNamespace = default,
             bool? xPortkeyCacheForceRefresh = default,
             string? model = default,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

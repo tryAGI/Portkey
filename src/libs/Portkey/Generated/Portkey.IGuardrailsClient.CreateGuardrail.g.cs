@@ -9,11 +9,13 @@ namespace Portkey
         /// Creates a new guardrail with specified checks and actions
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.CreateGuardrailResponse> CreateGuardrailAsync(
 
             global::Portkey.CreateGuardrailRequest request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a new guardrail<br/>
@@ -35,6 +37,7 @@ namespace Portkey
         /// <param name="actions">
         /// Actions to take when guardrail checks fail or pass
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.CreateGuardrailResponse> CreateGuardrailAsync(
@@ -43,6 +46,7 @@ namespace Portkey
             global::Portkey.GuardrailActions actions,
             global::System.Guid? workspaceId = default,
             global::System.Guid? organisationId = default,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

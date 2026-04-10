@@ -14,6 +14,7 @@ namespace Portkey
                 {                    new global::Portkey.EndPointAuthorizationRequirement
                     {
                         Type = "ApiKey",
+                        SchemeId = "ApikeyXPortkeyApiKey",
                         Location = "Header",
                         Name = "x-portkey-api-key",
                         FriendlyName = "ApiKeyInHeader",
@@ -111,6 +112,7 @@ namespace Portkey
         /// <param name="traceId"></param>
         /// <param name="spanId"></param>
         /// <param name="promptSlug"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponse> GetAnalyticsGraphsErrorsStatusCodesAsync(
@@ -136,6 +138,7 @@ namespace Portkey
             string? traceId = default,
             string? spanId = default,
             string? promptSlug = default,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await GetAnalyticsGraphsErrorsStatusCodesAsResponseAsync(
@@ -161,6 +164,7 @@ namespace Portkey
                 traceId: traceId,
                 spanId: spanId,
                 promptSlug: promptSlug,
+                requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
 
@@ -195,6 +199,7 @@ namespace Portkey
         /// <param name="traceId"></param>
         /// <param name="spanId"></param>
         /// <param name="promptSlug"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponse>> GetAnalyticsGraphsErrorsStatusCodesAsResponseAsync(
@@ -220,6 +225,7 @@ namespace Portkey
             string? traceId = default,
             string? spanId = default,
             string? promptSlug = default,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -255,46 +261,67 @@ namespace Portkey
                 securityRequirements: s_GetAnalyticsGraphsErrorsStatusCodesSecurityRequirements,
                 operationName: "GetAnalyticsGraphsErrorsStatusCodesAsync");
 
-            var __pathBuilder = new global::Portkey.PathBuilder(
-                path: "/analytics/graphs/errors/status-codes",
-                baseUri: HttpClient.BaseAddress); 
-            __pathBuilder
-                .AddRequiredParameter("time_of_generation_min", timeOfGenerationMin.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                .AddRequiredParameter("time_of_generation_max", timeOfGenerationMax.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                .AddOptionalParameter("total_units_min", totalUnitsMin?.ToString())
-                .AddOptionalParameter("total_units_max", totalUnitsMax?.ToString())
-                .AddOptionalParameter("cost_min", costMin?.ToString())
-                .AddOptionalParameter("cost_max", costMax?.ToString())
-                .AddOptionalParameter("prompt_token_min", promptTokenMin?.ToString())
-                .AddOptionalParameter("prompt_token_max", promptTokenMax?.ToString())
-                .AddOptionalParameter("completion_token_min", completionTokenMin?.ToString())
-                .AddOptionalParameter("completion_token_max", completionTokenMax?.ToString())
-                .AddOptionalParameter("status_code", statusCode)
-                .AddOptionalParameter("weighted_feedback_min", weightedFeedbackMin?.ToString())
-                .AddOptionalParameter("weighted_feedback_max", weightedFeedbackMax?.ToString())
-                .AddOptionalParameter("virtual_keys", virtualKeys)
-                .AddOptionalParameter("configs", configs)
-                .AddRequiredParameter("workspace_slug", workspaceSlug)
-                .AddOptionalParameter("api_key_ids", apiKeyIds)
-                .AddOptionalParameter("metadata", metadata)
-                .AddOptionalParameter("ai_org_model", aiOrgModel)
-                .AddOptionalParameter("trace_id", traceId)
-                .AddOptionalParameter("span_id", spanId)
-                .AddOptionalParameter("prompt_slug", promptSlug) 
-                ;
-            var __path = __pathBuilder.ToString();
-            using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
+            using var __timeoutCancellationTokenSource = global::Portkey.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
+                clientOptions: Options,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken);
+            var __effectiveCancellationToken = __timeoutCancellationTokenSource?.Token ?? cancellationToken;
+            var __effectiveReadResponseAsString = global::Portkey.AutoSDKRequestOptionsSupport.GetReadResponseAsString(
+                clientOptions: Options,
+                requestOptions: requestOptions,
+                fallbackValue: ReadResponseAsString);
+            var __maxAttempts = global::Portkey.AutoSDKRequestOptionsSupport.GetMaxAttempts(
+                clientOptions: Options,
+                requestOptions: requestOptions,
+                supportsRetry: true);
+
+            global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
+            {
+                            var __pathBuilder = new global::Portkey.PathBuilder(
+                                path: "/analytics/graphs/errors/status-codes",
+                                baseUri: HttpClient.BaseAddress); 
+                            __pathBuilder
+                                .AddRequiredParameter("time_of_generation_min", timeOfGenerationMin.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddRequiredParameter("time_of_generation_max", timeOfGenerationMax.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddOptionalParameter("total_units_min", totalUnitsMin?.ToString())
+                                .AddOptionalParameter("total_units_max", totalUnitsMax?.ToString())
+                                .AddOptionalParameter("cost_min", costMin?.ToString())
+                                .AddOptionalParameter("cost_max", costMax?.ToString())
+                                .AddOptionalParameter("prompt_token_min", promptTokenMin?.ToString())
+                                .AddOptionalParameter("prompt_token_max", promptTokenMax?.ToString())
+                                .AddOptionalParameter("completion_token_min", completionTokenMin?.ToString())
+                                .AddOptionalParameter("completion_token_max", completionTokenMax?.ToString())
+                                .AddOptionalParameter("status_code", statusCode)
+                                .AddOptionalParameter("weighted_feedback_min", weightedFeedbackMin?.ToString())
+                                .AddOptionalParameter("weighted_feedback_max", weightedFeedbackMax?.ToString())
+                                .AddOptionalParameter("virtual_keys", virtualKeys)
+                                .AddOptionalParameter("configs", configs)
+                                .AddRequiredParameter("workspace_slug", workspaceSlug)
+                                .AddOptionalParameter("api_key_ids", apiKeyIds)
+                                .AddOptionalParameter("metadata", metadata)
+                                .AddOptionalParameter("ai_org_model", aiOrgModel)
+                                .AddOptionalParameter("trace_id", traceId)
+                                .AddOptionalParameter("span_id", spanId)
+                                .AddOptionalParameter("prompt_slug", promptSlug) 
+                                ;
+                            var __path = __pathBuilder.ToString();
+                __path = global::Portkey.AutoSDKRequestOptionsSupport.AppendQueryParameters(
+                    path: __path,
+                    clientParameters: Options.QueryParameters,
+                    requestParameters: requestOptions?.QueryParameters);
+                var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
+                    method: global::System.Net.Http.HttpMethod.Get,
+                    requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
-            __httpRequest.Version = global::System.Net.HttpVersion.Version11;
-            __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
+                __httpRequest.Version = global::System.Net.HttpVersion.Version11;
+                __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
             foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
-                    __authorization.Type == "OAuth2")
+                    __authorization.Type == "OAuth2" ||
+                    __authorization.Type == "OpenIdConnect")
                 {
                     __httpRequest.Headers.Authorization = new global::System.Net.Http.Headers.AuthenticationHeaderValue(
                         scheme: __authorization.Name,
@@ -304,138 +331,297 @@ namespace Portkey
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                }
+                } 
             }
+                global::Portkey.AutoSDKRequestOptionsSupport.ApplyHeaders(
+                    request: __httpRequest,
+                    clientHeaders: Options.Headers,
+                    requestHeaders: requestOptions?.Headers);
 
-            PrepareRequest(
-                client: HttpClient,
-                request: __httpRequest);
-            PrepareGetAnalyticsGraphsErrorsStatusCodesRequest(
-                httpClient: HttpClient,
-                httpRequestMessage: __httpRequest,
-                timeOfGenerationMin: timeOfGenerationMin,
-                timeOfGenerationMax: timeOfGenerationMax,
-                totalUnitsMin: totalUnitsMin,
-                totalUnitsMax: totalUnitsMax,
-                costMin: costMin,
-                costMax: costMax,
-                promptTokenMin: promptTokenMin,
-                promptTokenMax: promptTokenMax,
-                completionTokenMin: completionTokenMin,
-                completionTokenMax: completionTokenMax,
-                statusCode: statusCode,
-                weightedFeedbackMin: weightedFeedbackMin,
-                weightedFeedbackMax: weightedFeedbackMax,
-                virtualKeys: virtualKeys,
-                configs: configs,
-                workspaceSlug: workspaceSlug,
-                apiKeyIds: apiKeyIds,
-                metadata: metadata,
-                aiOrgModel: aiOrgModel,
-                traceId: traceId,
-                spanId: spanId,
-                promptSlug: promptSlug);
-
-            using var __response = await HttpClient.SendAsync(
-                request: __httpRequest,
-                completionOption: global::System.Net.Http.HttpCompletionOption.ResponseContentRead,
-                cancellationToken: cancellationToken).ConfigureAwait(false);
-
-            ProcessResponse(
-                client: HttpClient,
-                response: __response);
-            ProcessGetAnalyticsGraphsErrorsStatusCodesResponse(
-                httpClient: HttpClient,
-                httpResponseMessage: __response);
-
-            if (ReadResponseAsString)
-            {
-                var __content = await __response.Content.ReadAsStringAsync(
-#if NET5_0_OR_GREATER
-                    cancellationToken
-#endif
-                ).ConfigureAwait(false);
-
-                ProcessResponseContent(
+                PrepareRequest(
                     client: HttpClient,
-                    response: __response,
-                    content: ref __content);
-                ProcessGetAnalyticsGraphsErrorsStatusCodesResponseContent(
+                    request: __httpRequest);
+                PrepareGetAnalyticsGraphsErrorsStatusCodesRequest(
                     httpClient: HttpClient,
-                    httpResponseMessage: __response,
-                    content: ref __content);
+                    httpRequestMessage: __httpRequest,
+                    timeOfGenerationMin: timeOfGenerationMin,
+                    timeOfGenerationMax: timeOfGenerationMax,
+                    totalUnitsMin: totalUnitsMin,
+                    totalUnitsMax: totalUnitsMax,
+                    costMin: costMin,
+                    costMax: costMax,
+                    promptTokenMin: promptTokenMin,
+                    promptTokenMax: promptTokenMax,
+                    completionTokenMin: completionTokenMin,
+                    completionTokenMax: completionTokenMax,
+                    statusCode: statusCode,
+                    weightedFeedbackMin: weightedFeedbackMin,
+                    weightedFeedbackMax: weightedFeedbackMax,
+                    virtualKeys: virtualKeys,
+                    configs: configs,
+                    workspaceSlug: workspaceSlug,
+                    apiKeyIds: apiKeyIds,
+                    metadata: metadata,
+                    aiOrgModel: aiOrgModel,
+                    traceId: traceId,
+                    spanId: spanId,
+                    promptSlug: promptSlug);
 
-                try
-                {
-                    __response.EnsureSuccessStatusCode();
-
-                    var __value = global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponse.FromJson(__content, JsonSerializerContext) ??
-                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponse>(
-                        statusCode: __response.StatusCode,
-                        headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
-                        body: __value);
-                }
-                catch (global::System.Exception __ex)
-                {
-                    throw new global::Portkey.ApiException(
-                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
-                        innerException: __ex,
-                        statusCode: __response.StatusCode)
-                    {
-                        ResponseBody = __content,
-                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
-                            __response.Headers,
-                            h => h.Key,
-                            h => h.Value),
-                    };
-                }
+                return __httpRequest;
             }
-            else
-            {
-                try
-                {
-                    __response.EnsureSuccessStatusCode();
-                    using var __content = await __response.Content.ReadAsStreamAsync(
-#if NET5_0_OR_GREATER
-                        cancellationToken
-#endif
-                    ).ConfigureAwait(false);
 
-                    var __value = await global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
-                        throw new global::System.InvalidOperationException("Response deserialization failed.");
-                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponse>(
-                        statusCode: __response.StatusCode,
-                        headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
-                        body: __value);
-                }
-                catch (global::System.Exception __ex)
+            global::System.Net.Http.HttpRequestMessage? __httpRequest = null;
+            global::System.Net.Http.HttpResponseMessage? __response = null;
+            var __attemptNumber = 0;
+            try
+            {
+                for (var __attempt = 1; __attempt <= __maxAttempts; __attempt++)
                 {
-                    string? __content = null;
+                    __attemptNumber = __attempt;
+                    __httpRequest = __CreateHttpRequest();
+                    await global::Portkey.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
+                            clientOptions: Options,
+                            context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
+                                operationId: "getAnalyticsGraphsErrorsStatusCodes",
+                                methodName: "GetAnalyticsGraphsErrorsStatusCodesAsync",
+                                pathTemplate: "\"/analytics/graphs/errors/status-codes\"",
+                                httpMethod: "GET",
+                                baseUri: BaseUri,
+                                request: __httpRequest!,
+                                response: null,
+                                exception: null,
+                                clientOptions: Options,
+                                requestOptions: requestOptions,
+                                attempt: __attempt,
+                                maxAttempts: __maxAttempts,
+                                willRetry: false,
+                                cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
-                        __content = await __response.Content.ReadAsStringAsync(
-#if NET5_0_OR_GREATER
-                            cancellationToken
-#endif
-                        ).ConfigureAwait(false);
+                        __response = await HttpClient.SendAsync(
+                request: __httpRequest,
+                completionOption: global::System.Net.Http.HttpCompletionOption.ResponseContentRead,
+                cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                     }
-                    catch (global::System.Exception)
+                    catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
+                        await global::Portkey.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
+                            clientOptions: Options,
+                            context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
+                                operationId: "getAnalyticsGraphsErrorsStatusCodes",
+                                methodName: "GetAnalyticsGraphsErrorsStatusCodesAsync",
+                                pathTemplate: "\"/analytics/graphs/errors/status-codes\"",
+                                httpMethod: "GET",
+                                baseUri: BaseUri,
+                                request: __httpRequest!,
+                                response: null,
+                                exception: __exception,
+                                clientOptions: Options,
+                                requestOptions: requestOptions,
+                                attempt: __attempt,
+                                maxAttempts: __maxAttempts,
+                                willRetry: __willRetry,
+                                cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
+                        if (!__willRetry)
+                        {
+                            throw;
+                        }
+
+                        __httpRequest.Dispose();
+                        __httpRequest = null;
+                        await global::Portkey.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
+                        continue;
                     }
 
-                    throw new global::Portkey.ApiException(
-                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
-                        innerException: __ex,
-                        statusCode: __response.StatusCode)
+                    if (__response != null &&
+                        __attempt < __maxAttempts &&
+                        global::Portkey.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
-                        ResponseBody = __content,
-                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
-                            __response.Headers,
-                            h => h.Key,
-                            h => h.Value),
-                    };
+                        await global::Portkey.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
+                            clientOptions: Options,
+                            context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
+                                operationId: "getAnalyticsGraphsErrorsStatusCodes",
+                                methodName: "GetAnalyticsGraphsErrorsStatusCodesAsync",
+                                pathTemplate: "\"/analytics/graphs/errors/status-codes\"",
+                                httpMethod: "GET",
+                                baseUri: BaseUri,
+                                request: __httpRequest!,
+                                response: __response,
+                                exception: null,
+                                clientOptions: Options,
+                                requestOptions: requestOptions,
+                                attempt: __attempt,
+                                maxAttempts: __maxAttempts,
+                                willRetry: true,
+                                cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
+                        __response.Dispose();
+                        __response = null;
+                        __httpRequest.Dispose();
+                        __httpRequest = null;
+                        await global::Portkey.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
+                        continue;
+                    }
+
+                    break;
                 }
+
+                if (__response == null)
+                {
+                    throw new global::System.InvalidOperationException("No response received.");
+                }
+
+                using (__response)
+                {
+
+                ProcessResponse(
+                    client: HttpClient,
+                    response: __response);
+                ProcessGetAnalyticsGraphsErrorsStatusCodesResponse(
+                    httpClient: HttpClient,
+                    httpResponseMessage: __response);
+                if (__response.IsSuccessStatusCode)
+                {
+                    await global::Portkey.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
+                            clientOptions: Options,
+                            context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
+                                operationId: "getAnalyticsGraphsErrorsStatusCodes",
+                                methodName: "GetAnalyticsGraphsErrorsStatusCodesAsync",
+                                pathTemplate: "\"/analytics/graphs/errors/status-codes\"",
+                                httpMethod: "GET",
+                                baseUri: BaseUri,
+                                request: __httpRequest!,
+                                response: __response,
+                                exception: null,
+                                clientOptions: Options,
+                                requestOptions: requestOptions,
+                                attempt: __attemptNumber,
+                                maxAttempts: __maxAttempts,
+                                willRetry: false,
+                                cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
+                }
+                else
+                {
+                    await global::Portkey.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
+                            clientOptions: Options,
+                            context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
+                                operationId: "getAnalyticsGraphsErrorsStatusCodes",
+                                methodName: "GetAnalyticsGraphsErrorsStatusCodesAsync",
+                                pathTemplate: "\"/analytics/graphs/errors/status-codes\"",
+                                httpMethod: "GET",
+                                baseUri: BaseUri,
+                                request: __httpRequest!,
+                                response: __response,
+                                exception: null,
+                                clientOptions: Options,
+                                requestOptions: requestOptions,
+                                attempt: __attemptNumber,
+                                maxAttempts: __maxAttempts,
+                                willRetry: false,
+                                cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
+                }
+
+                            if (__effectiveReadResponseAsString)
+                            {
+                                var __content = await __response.Content.ReadAsStringAsync(
+                #if NET5_0_OR_GREATER
+                                    __effectiveCancellationToken
+                #endif
+                                ).ConfigureAwait(false);
+
+                                ProcessResponseContent(
+                                    client: HttpClient,
+                                    response: __response,
+                                    content: ref __content);
+                                ProcessGetAnalyticsGraphsErrorsStatusCodesResponseContent(
+                                    httpClient: HttpClient,
+                                    httpResponseMessage: __response,
+                                    content: ref __content);
+
+                                try
+                                {
+                                    __response.EnsureSuccessStatusCode();
+
+                                    var __value = global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponse.FromJson(__content, JsonSerializerContext) ??
+                                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        body: __value);
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    throw new global::Portkey.ApiException(
+                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        innerException: __ex,
+                                        statusCode: __response.StatusCode)
+                                    {
+                                        ResponseBody = __content,
+                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                            __response.Headers,
+                                            h => h.Key,
+                                            h => h.Value),
+                                    };
+                                }
+                            }
+                            else
+                            {
+                                try
+                                {
+                                    __response.EnsureSuccessStatusCode();
+                                    using var __content = await __response.Content.ReadAsStreamAsync(
+                #if NET5_0_OR_GREATER
+                                        __effectiveCancellationToken
+                #endif
+                                    ).ConfigureAwait(false);
+
+                                    var __value = await global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                        throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        body: __value);
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    string? __content = null;
+                                    try
+                                    {
+                                        __content = await __response.Content.ReadAsStringAsync(
+                #if NET5_0_OR_GREATER
+                                            __effectiveCancellationToken
+                #endif
+                                        ).ConfigureAwait(false);
+                                    }
+                                    catch (global::System.Exception)
+                                    {
+                                    }
+
+                                    throw new global::Portkey.ApiException(
+                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        innerException: __ex,
+                                        statusCode: __response.StatusCode)
+                                    {
+                                        ResponseBody = __content,
+                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                            __response.Headers,
+                                            h => h.Key,
+                                            h => h.Value),
+                                    };
+                                }
+                            }
+
+                }
+            }
+            finally
+            {
+                __httpRequest?.Dispose();
             }
         }
     }

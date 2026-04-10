@@ -11,12 +11,14 @@ namespace Portkey
         /// </summary>
         /// <param name="slug"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         global::System.Threading.Tasks.Task<string> PutIntegrationsBySlugWorkspacesAsync(
             string slug,
 
             global::Portkey.BulkUpdateWorkspacesRequest request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Bulk update workspace access<br/>
@@ -36,6 +38,7 @@ namespace Portkey
         /// <param name="defaultProviderSlug">
         /// Custom slug for the auto-created default provider. Applies to all workspaces unless overridden per workspace. If the slug already exists, the request will fail with a validation error.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<string> PutIntegrationsBySlugWorkspacesAsync(
@@ -45,6 +48,7 @@ namespace Portkey
             bool? overrideExistingWorkspaceAccess = default,
             bool? createDefaultProvider = default,
             string? defaultProviderSlug = default,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

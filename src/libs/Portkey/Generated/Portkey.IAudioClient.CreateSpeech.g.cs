@@ -8,21 +8,25 @@ namespace Portkey
         /// Create Speech
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         global::System.Threading.Tasks.Task<byte[]> CreateSpeechAsync(
 
             global::Portkey.CreateSpeechRequest request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Speech
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<byte[]>> CreateSpeechAsResponseAsync(
 
             global::Portkey.CreateSpeechRequest request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Speech
@@ -44,6 +48,7 @@ namespace Portkey
         /// The speed of the generated audio. Select a value from `0.25` to `4.0`. `1.0` is the default.<br/>
         /// Default Value: 1.0
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<byte[]> CreateSpeechAsync(
@@ -52,6 +57,7 @@ namespace Portkey
             global::Portkey.CreateSpeechRequestVoice voice,
             global::Portkey.CreateSpeechRequestResponseFormat? responseFormat = default,
             double? speed = default,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -9,11 +9,13 @@ namespace Portkey
         /// Create a new MCP Server (workspace instance of an MCP Integration). Requires workspace_id or x-portkey-api-key header.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.McpServerCreateResponse> McpServersCreateAsync(
 
             global::Portkey.CreateMcpServer request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create MCP Server<br/>
@@ -32,6 +34,7 @@ namespace Portkey
         /// <param name="slug">
         /// Optional slug; must be unique within organisation
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Portkey.McpServerCreateResponse> McpServersCreateAsync(
@@ -40,6 +43,7 @@ namespace Portkey
             global::System.Guid? workspaceId = default,
             string? description = default,
             string? slug = default,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
