@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// Manage rate limits policies to control request or token rates.<br/>
+    /// Manage rate limits policies to control request or token rates<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
@@ -34,6 +34,9 @@ namespace Portkey
 
         /// <inheritdoc/>
         public global::Portkey.AutoSDKClientOptions Options { get; }
+
+
+        internal global::Portkey.AutoSDKServerConfiguration AutoSDKServerConfiguration { get; set; } = new global::Portkey.AutoSDKServerConfiguration();
         /// <summary>
         /// 
         /// </summary>
@@ -85,6 +88,8 @@ namespace Portkey
             Authorizations = authorizations ?? new global::System.Collections.Generic.List<global::Portkey.EndPointAuthorization>();
             Options = options ?? new global::Portkey.AutoSDKClientOptions();
             _disposeHttpClient = disposeHttpClient;
+
+            AutoSDKServerConfiguration.ExplicitBaseUri = baseUri ?? httpClient?.BaseAddress;
 
             Initialized(HttpClient);
         }

@@ -6,6 +6,19 @@ namespace Portkey
     public partial class ApiKeysClient
     {
 
+        private static readonly global::Portkey.AutoSDKServer[] s_GetKeysServers = new global::Portkey.AutoSDKServer[]
+        {            new global::Portkey.AutoSDKServer(
+                id: "https-api-portkey-ai-v1",
+                name: "api.portkey.ai v1",
+                url: "https://api.portkey.ai/v1",
+                description: ""),
+            new global::Portkey.AutoSDKServer(
+                id: "https-self-hosted-control-plane-url",
+                name: "self_hosted_control_plane_url",
+                url: "https://self_hosted_control_plane_url/",
+                description: ""),
+        };
+
 
         private static readonly global::Portkey.EndPointSecurityRequirement s_GetKeysSecurityRequirement0 =
             new global::Portkey.EndPointSecurityRequirement
@@ -119,7 +132,9 @@ namespace Portkey
             {
                             var __pathBuilder = new global::Portkey.PathBuilder(
                                 path: "/api-keys",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: ResolveBaseUri(
+                                servers: s_GetKeysServers,
+                                defaultBaseUrl: "https://api.portkey.ai/v1")); 
                             __pathBuilder
                                 .AddOptionalParameter("page_size", pageSize?.ToString())
                                 .AddOptionalParameter("current_page", currentPage?.ToString())

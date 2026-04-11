@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// Manage usage limits policies to control total usage over time.<br/>
+    /// Manage usage limits policies to control total usage over time<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>

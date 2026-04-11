@@ -6,6 +6,19 @@ namespace Portkey
     public partial class McpServersUserAccessClient
     {
 
+        private static readonly global::Portkey.AutoSDKServer[] s_McpServerUserAccessBulkUpdateServers = new global::Portkey.AutoSDKServer[]
+        {            new global::Portkey.AutoSDKServer(
+                id: "https-api-portkey-ai-v1",
+                name: "Portkey API Public Endpoint",
+                url: "https://api.portkey.ai/v1",
+                description: "Portkey API Public Endpoint"),
+            new global::Portkey.AutoSDKServer(
+                id: "self-hosted-control-plane-url",
+                name: "Self-Hosted Control Plane URL",
+                url: "SELF_HOSTED_CONTROL_PLANE_URL",
+                description: "Self-Hosted Control Plane URL"),
+        };
+
 
         private static readonly global::Portkey.EndPointSecurityRequirement s_McpServerUserAccessBulkUpdateSecurityRequirement0 =
             new global::Portkey.EndPointSecurityRequirement
@@ -91,7 +104,9 @@ namespace Portkey
             {
                             var __pathBuilder = new global::Portkey.PathBuilder(
                                 path: $"/mcp-servers/{mcpServerId}/user-access",
-                                baseUri: HttpClient.BaseAddress);
+                                baseUri: ResolveBaseUri(
+                                servers: s_McpServerUserAccessBulkUpdateServers,
+                                defaultBaseUrl: "https://api.portkey.ai/v1"));
                             var __path = __pathBuilder.ToString();
                 __path = global::Portkey.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,

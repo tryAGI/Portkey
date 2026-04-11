@@ -34,6 +34,9 @@ namespace Portkey
 
         /// <inheritdoc/>
         public global::Portkey.AutoSDKClientOptions Options { get; }
+
+
+        internal global::Portkey.AutoSDKServerConfiguration AutoSDKServerConfiguration { get; set; } = new global::Portkey.AutoSDKServerConfiguration();
         /// <summary>
         /// 
         /// </summary>
@@ -85,6 +88,8 @@ namespace Portkey
             Authorizations = authorizations ?? new global::System.Collections.Generic.List<global::Portkey.EndPointAuthorization>();
             Options = options ?? new global::Portkey.AutoSDKClientOptions();
             _disposeHttpClient = disposeHttpClient;
+
+            AutoSDKServerConfiguration.ExplicitBaseUri = baseUri ?? httpClient?.BaseAddress;
 
             Initialized(HttpClient);
         }

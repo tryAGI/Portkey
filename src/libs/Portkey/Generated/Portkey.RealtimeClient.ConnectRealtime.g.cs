@@ -6,6 +6,19 @@ namespace Portkey
     public partial class RealtimeClient
     {
 
+        private static readonly global::Portkey.AutoSDKServer[] s_ConnectRealtimeServers = new global::Portkey.AutoSDKServer[]
+        {            new global::Portkey.AutoSDKServer(
+                id: "https-api-portkey-ai-v1",
+                name: "Portkey API Public Endpoint",
+                url: "https://api.portkey.ai/v1",
+                description: "Portkey API Public Endpoint"),
+            new global::Portkey.AutoSDKServer(
+                id: "self-hosted-gateway-url",
+                name: "Self-Hosted Gateway URL",
+                url: "SELF_HOSTED_GATEWAY_URL",
+                description: "Self-Hosted Gateway URL"),
+        };
+
 
         private static readonly global::Portkey.EndPointSecurityRequirement s_ConnectRealtimeSecurityRequirement0 =
             new global::Portkey.EndPointSecurityRequirement
@@ -114,7 +127,9 @@ namespace Portkey
             {
                             var __pathBuilder = new global::Portkey.PathBuilder(
                                 path: "/realtime",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: ResolveBaseUri(
+                                servers: s_ConnectRealtimeServers,
+                                defaultBaseUrl: "https://api.portkey.ai/v1")); 
                             __pathBuilder
                                 .AddOptionalParameter("model", model) 
                                 ;

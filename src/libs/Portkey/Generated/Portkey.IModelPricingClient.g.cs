@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// Model pricing configurations for 2300+ LLMs across 40+ providers.<br/>
+    /// Model pricing configurations for 2300+ LLMs across 40+ providers<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>

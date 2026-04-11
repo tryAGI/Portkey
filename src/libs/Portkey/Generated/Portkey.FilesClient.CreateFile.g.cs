@@ -6,6 +6,19 @@ namespace Portkey
     public partial class FilesClient
     {
 
+        private static readonly global::Portkey.AutoSDKServer[] s_CreateFileServers = new global::Portkey.AutoSDKServer[]
+        {            new global::Portkey.AutoSDKServer(
+                id: "https-api-portkey-ai-v1",
+                name: "Portkey API Public Endpoint",
+                url: "https://api.portkey.ai/v1",
+                description: "Portkey API Public Endpoint"),
+            new global::Portkey.AutoSDKServer(
+                id: "self-hosted-gateway-url",
+                name: "Self-Hosted Gateway URL",
+                url: "SELF_HOSTED_GATEWAY_URL",
+                description: "Self-Hosted Gateway URL"),
+        };
+
 
         private static readonly global::Portkey.EndPointSecurityRequirement s_CreateFileSecurityRequirement0 =
             new global::Portkey.EndPointSecurityRequirement
@@ -86,7 +99,9 @@ namespace Portkey
             {
                             var __pathBuilder = new global::Portkey.PathBuilder(
                                 path: "/files",
-                                baseUri: HttpClient.BaseAddress);
+                                baseUri: ResolveBaseUri(
+                                servers: s_CreateFileServers,
+                                defaultBaseUrl: "https://api.portkey.ai/v1"));
                             var __path = __pathBuilder.ToString();
                 __path = global::Portkey.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,

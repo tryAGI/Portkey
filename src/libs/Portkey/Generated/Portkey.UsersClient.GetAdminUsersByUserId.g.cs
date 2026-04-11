@@ -6,6 +6,19 @@ namespace Portkey
     public partial class UsersClient
     {
 
+        private static readonly global::Portkey.AutoSDKServer[] s_GetAdminUsersByUserIdServers = new global::Portkey.AutoSDKServer[]
+        {            new global::Portkey.AutoSDKServer(
+                id: "https-api-portkey-ai-v1",
+                name: "api.portkey.ai v1",
+                url: "https://api.portkey.ai/v1",
+                description: ""),
+            new global::Portkey.AutoSDKServer(
+                id: "https-self-hosted-control-plane-url",
+                name: "self_hosted_control_plane_url",
+                url: "https://self_hosted_control_plane_url/",
+                description: ""),
+        };
+
 
         private static readonly global::Portkey.EndPointSecurityRequirement s_GetAdminUsersByUserIdSecurityRequirement0 =
             new global::Portkey.EndPointSecurityRequirement
@@ -103,7 +116,9 @@ namespace Portkey
             {
                             var __pathBuilder = new global::Portkey.PathBuilder(
                                 path: $"/admin/users/{userId}",
-                                baseUri: HttpClient.BaseAddress);
+                                baseUri: ResolveBaseUri(
+                                servers: s_GetAdminUsersByUserIdServers,
+                                defaultBaseUrl: "https://api.portkey.ai/v1"));
                             var __path = __pathBuilder.ToString();
                 __path = global::Portkey.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
