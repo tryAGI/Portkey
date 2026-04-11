@@ -169,34 +169,34 @@ namespace Portkey
                 } 
             }
 
-                if (xPortkeyTraceId != default)
-                {
-                    __httpRequest.Headers.TryAddWithoutValidation("x-portkey-trace-id", xPortkeyTraceId.ToString());
-                }
-                if (xPortkeySpanId != default)
-                {
-                    __httpRequest.Headers.TryAddWithoutValidation("x-portkey-span-id", xPortkeySpanId.ToString());
-                }
-                if (xPortkeyParentSpanId != default)
-                {
-                    __httpRequest.Headers.TryAddWithoutValidation("x-portkey-parent-span-id", xPortkeyParentSpanId.ToString());
-                }
-                if (xPortkeySpanName != default)
-                {
-                    __httpRequest.Headers.TryAddWithoutValidation("x-portkey-span-name", xPortkeySpanName.ToString());
-                }
-                if (xPortkeyMetadata != default)
-                {
-                    __httpRequest.Headers.TryAddWithoutValidation("x-portkey-metadata", xPortkeyMetadata.ToString());
-                }
-                if (xPortkeyCacheNamespace != default)
-                {
-                    __httpRequest.Headers.TryAddWithoutValidation("x-portkey-cache-namespace", xPortkeyCacheNamespace.ToString());
-                }
-                if (xPortkeyCacheForceRefresh != default)
-                {
-                    __httpRequest.Headers.TryAddWithoutValidation("x-portkey-cache-force-refresh", xPortkeyCacheForceRefresh.ToString());
-                }
+            if (xPortkeyTraceId != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("x-portkey-trace-id", xPortkeyTraceId.ToString());
+            }
+            if (xPortkeySpanId != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("x-portkey-span-id", xPortkeySpanId.ToString());
+            }
+            if (xPortkeyParentSpanId != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("x-portkey-parent-span-id", xPortkeyParentSpanId.ToString());
+            }
+            if (xPortkeySpanName != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("x-portkey-span-name", xPortkeySpanName.ToString());
+            }
+            if (xPortkeyMetadata != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("x-portkey-metadata", xPortkeyMetadata.ToString());
+            }
+            if (xPortkeyCacheNamespace != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("x-portkey-cache-namespace", xPortkeyCacheNamespace.ToString());
+            }
+            if (xPortkeyCacheForceRefresh != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("x-portkey-cache-force-refresh", xPortkeyCacheForceRefresh.ToString());
+            }
 
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
