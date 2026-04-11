@@ -4,16 +4,16 @@
 namespace Portkey
 {
     /// <summary>
-    /// Model pricing configurations for 2300+ LLMs across 40+ providers.<br/>
+    /// Model pricing configurations for 2300+ LLMs across 40+ providers<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
     public sealed partial class ModelPricingClient : global::Portkey.IModelPricingClient, global::System.IDisposable
     {
         /// <summary>
-        /// Portkey API Public Endpoint
+        /// Portkey Public API (no auth required)
         /// </summary>
-        public const string DefaultBaseUrl = "https://api.portkey.ai/v1";
+        public const string DefaultBaseUrl = "https://api.portkey.ai/";
 
         private bool _disposeHttpClient = true;
 
@@ -34,6 +34,9 @@ namespace Portkey
 
         /// <inheritdoc/>
         public global::Portkey.AutoSDKClientOptions Options { get; }
+
+
+        internal global::Portkey.AutoSDKServerConfiguration AutoSDKServerConfiguration { get; set; } = new global::Portkey.AutoSDKServerConfiguration();
         /// <summary>
         /// 
         /// </summary>
@@ -85,6 +88,8 @@ namespace Portkey
             Authorizations = authorizations ?? new global::System.Collections.Generic.List<global::Portkey.EndPointAuthorization>();
             Options = options ?? new global::Portkey.AutoSDKClientOptions();
             _disposeHttpClient = disposeHttpClient;
+
+            AutoSDKServerConfiguration.ExplicitBaseUri = baseUri ?? httpClient?.BaseAddress;
 
             Initialized(HttpClient);
         }

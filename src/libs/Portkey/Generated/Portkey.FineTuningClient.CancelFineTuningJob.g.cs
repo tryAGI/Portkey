@@ -6,6 +6,19 @@ namespace Portkey
     public partial class FineTuningClient
     {
 
+        private static readonly global::Portkey.AutoSDKServer[] s_CancelFineTuningJobServers = new global::Portkey.AutoSDKServer[]
+        {            new global::Portkey.AutoSDKServer(
+                id: "https-api-portkey-ai-v1",
+                name: "Portkey API Public Endpoint",
+                url: "https://api.portkey.ai/v1",
+                description: "Portkey API Public Endpoint"),
+            new global::Portkey.AutoSDKServer(
+                id: "self-hosted-gateway-url",
+                name: "Self-Hosted Gateway URL",
+                url: "SELF_HOSTED_GATEWAY_URL",
+                description: "Self-Hosted Gateway URL"),
+        };
+
 
         private static readonly global::Portkey.EndPointSecurityRequirement s_CancelFineTuningJobSecurityRequirement0 =
             new global::Portkey.EndPointSecurityRequirement
@@ -85,7 +98,9 @@ namespace Portkey
             {
                             var __pathBuilder = new global::Portkey.PathBuilder(
                                 path: $"/fine_tuning/jobs/{fineTuningJobId}/cancel",
-                                baseUri: HttpClient.BaseAddress);
+                                baseUri: ResolveBaseUri(
+                                servers: s_CancelFineTuningJobServers,
+                                defaultBaseUrl: "https://api.portkey.ai/v1"));
                             var __path = __pathBuilder.ToString();
                 __path = global::Portkey.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,

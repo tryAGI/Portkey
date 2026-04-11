@@ -6,6 +6,19 @@ namespace Portkey
     public partial class AnalyticsGroupsClient
     {
 
+        private static readonly global::Portkey.AutoSDKServer[] s_GetAnalyticsGroupsUsersServers = new global::Portkey.AutoSDKServer[]
+        {            new global::Portkey.AutoSDKServer(
+                id: "https-api-portkey-ai-v1",
+                name: "Portkey API Public Endpoint",
+                url: "https://api.portkey.ai/v1",
+                description: "Portkey API Public Endpoint"),
+            new global::Portkey.AutoSDKServer(
+                id: "self-hosted-control-plane-url",
+                name: "Self-Hosted Control Plane URL",
+                url: "SELF_HOSTED_CONTROL_PLANE_URL",
+                description: "Self-Hosted Control Plane URL"),
+        };
+
 
         private static readonly global::Portkey.EndPointSecurityRequirement s_GetAnalyticsGroupsUsersSecurityRequirement0 =
             new global::Portkey.EndPointSecurityRequirement
@@ -295,7 +308,9 @@ namespace Portkey
             {
                             var __pathBuilder = new global::Portkey.PathBuilder(
                                 path: "/analytics/groups/users",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: ResolveBaseUri(
+                                servers: s_GetAnalyticsGroupsUsersServers,
+                                defaultBaseUrl: "https://api.portkey.ai/v1")); 
                             __pathBuilder
                                 .AddRequiredParameter("workspace_slug", workspaceSlug)
                                 .AddRequiredParameter("time_of_generation_min", timeOfGenerationMin.ToString("yyyy-MM-ddTHH:mm:ssZ"))

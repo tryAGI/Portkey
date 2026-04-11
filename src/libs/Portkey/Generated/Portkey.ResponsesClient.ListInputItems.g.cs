@@ -6,6 +6,19 @@ namespace Portkey
     public partial class ResponsesClient
     {
 
+        private static readonly global::Portkey.AutoSDKServer[] s_ListInputItemsServers = new global::Portkey.AutoSDKServer[]
+        {            new global::Portkey.AutoSDKServer(
+                id: "https-api-portkey-ai-v1",
+                name: "Portkey API Public Endpoint",
+                url: "https://api.portkey.ai/v1",
+                description: "Portkey API Public Endpoint"),
+            new global::Portkey.AutoSDKServer(
+                id: "self-hosted-gateway-url",
+                name: "Self-Hosted Gateway URL",
+                url: "SELF_HOSTED_GATEWAY_URL",
+                description: "Self-Hosted Gateway URL"),
+        };
+
 
         private static readonly global::Portkey.EndPointSecurityRequirement s_ListInputItemsSecurityRequirement0 =
             new global::Portkey.EndPointSecurityRequirement
@@ -105,7 +118,9 @@ namespace Portkey
             {
                             var __pathBuilder = new global::Portkey.PathBuilder(
                                 path: $"/responses/{responseId}/input_items",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: ResolveBaseUri(
+                                servers: s_ListInputItemsServers,
+                                defaultBaseUrl: "https://api.portkey.ai/v1")); 
                             __pathBuilder
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("order", order?.ToValueString())

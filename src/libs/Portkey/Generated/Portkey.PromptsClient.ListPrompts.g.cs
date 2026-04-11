@@ -6,6 +6,19 @@ namespace Portkey
     public partial class PromptsClient
     {
 
+        private static readonly global::Portkey.AutoSDKServer[] s_ListPromptsServers = new global::Portkey.AutoSDKServer[]
+        {            new global::Portkey.AutoSDKServer(
+                id: "https-api-portkey-ai-v1",
+                name: "Portkey API Public Endpoint",
+                url: "https://api.portkey.ai/v1",
+                description: "Portkey API Public Endpoint"),
+            new global::Portkey.AutoSDKServer(
+                id: "self-hosted-control-plane-url",
+                name: "Self-Hosted Control Plane URL",
+                url: "SELF_HOSTED_CONTROL_PLANE_URL",
+                description: "Self-Hosted Control Plane URL"),
+        };
+
 
         private static readonly global::Portkey.EndPointSecurityRequirement s_ListPromptsSecurityRequirement0 =
             new global::Portkey.EndPointSecurityRequirement
@@ -103,7 +116,9 @@ namespace Portkey
             {
                             var __pathBuilder = new global::Portkey.PathBuilder(
                                 path: "/prompts",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: ResolveBaseUri(
+                                servers: s_ListPromptsServers,
+                                defaultBaseUrl: "https://api.portkey.ai/v1")); 
                             __pathBuilder
                                 .AddOptionalParameter("collection_id", collectionId)
                                 .AddOptionalParameter("workspace_id", workspaceId)
