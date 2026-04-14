@@ -222,6 +222,11 @@ namespace Portkey
         public McpServersCapabilitiesClient McpServersCapabilities { get; }
 
         /// <summary>
+        /// List and manage user connections for MCP Servers.
+        /// </summary>
+        public McpServersConnectionsClient McpServersConnections { get; }
+
+        /// <summary>
         /// List and manage user access for MCP Servers.
         /// </summary>
         public McpServersUserAccessClient McpServersUserAccess { get; }
