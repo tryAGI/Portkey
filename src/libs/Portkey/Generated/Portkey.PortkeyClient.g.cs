@@ -354,6 +354,16 @@ namespace Portkey
         };
 
         /// <summary>
+        /// List and manage user connections for MCP Servers.
+        /// </summary>
+        public McpServersConnectionsClient McpServersConnections => new McpServersConnectionsClient(HttpClient, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// List and manage user access for MCP Servers.
         /// </summary>
         public McpServersUserAccessClient McpServersUserAccess => new McpServersUserAccessClient(HttpClient, authorizations: Authorizations, options: Options)
