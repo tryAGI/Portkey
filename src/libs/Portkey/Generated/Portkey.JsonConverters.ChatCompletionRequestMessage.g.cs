@@ -23,6 +23,14 @@ namespace Portkey.JsonConverters
                 foreach (var __jsonProp in __jsonDocument.RootElement.EnumerateObject())
                 {
                     __jsonProps.Add(__jsonProp.Name);
+                    if (__jsonProp.Value.ValueKind == global::System.Text.Json.JsonValueKind.Object)
+                    {
+                        foreach (var __nestedJsonProp in __jsonProp.Value.EnumerateObject())
+                        {
+                            __jsonProps.Add(__jsonProp.Name + "." + __nestedJsonProp.Name);
+                        }
+                    }
+
                 }
             }
 
@@ -41,6 +49,8 @@ namespace Portkey.JsonConverters
             var __score3 = 0;
             if (__jsonProps.Contains("content")) __score3++;
             if (__jsonProps.Contains("function_call")) __score3++;
+            if (__jsonProps.Contains("function_call.arguments")) __score3++;
+            if (__jsonProps.Contains("function_call.name")) __score3++;
             if (__jsonProps.Contains("name")) __score3++;
             if (__jsonProps.Contains("role")) __score3++;
             if (__jsonProps.Contains("tool_calls")) __score3++;

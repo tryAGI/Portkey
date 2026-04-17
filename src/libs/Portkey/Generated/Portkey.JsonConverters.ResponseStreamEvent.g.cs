@@ -23,6 +23,14 @@ namespace Portkey.JsonConverters
                 foreach (var __jsonProp in __jsonDocument.RootElement.EnumerateObject())
                 {
                     __jsonProps.Add(__jsonProp.Name);
+                    if (__jsonProp.Value.ValueKind == global::System.Text.Json.JsonValueKind.Object)
+                    {
+                        foreach (var __nestedJsonProp in __jsonProp.Value.EnumerateObject())
+                        {
+                            __jsonProps.Add(__jsonProp.Name + "." + __nestedJsonProp.Name);
+                        }
+                    }
+
                 }
             }
 
@@ -46,14 +54,29 @@ namespace Portkey.JsonConverters
             if (__jsonProps.Contains("type")) __score5++;
             var __score6 = 0;
             if (__jsonProps.Contains("code_interpreter_call")) __score6++;
+            if (__jsonProps.Contains("code_interpreter_call.code")) __score6++;
+            if (__jsonProps.Contains("code_interpreter_call.id")) __score6++;
+            if (__jsonProps.Contains("code_interpreter_call.results")) __score6++;
+            if (__jsonProps.Contains("code_interpreter_call.status")) __score6++;
+            if (__jsonProps.Contains("code_interpreter_call.type")) __score6++;
             if (__jsonProps.Contains("output_index")) __score6++;
             if (__jsonProps.Contains("type")) __score6++;
             var __score7 = 0;
             if (__jsonProps.Contains("code_interpreter_call")) __score7++;
+            if (__jsonProps.Contains("code_interpreter_call.code")) __score7++;
+            if (__jsonProps.Contains("code_interpreter_call.id")) __score7++;
+            if (__jsonProps.Contains("code_interpreter_call.results")) __score7++;
+            if (__jsonProps.Contains("code_interpreter_call.status")) __score7++;
+            if (__jsonProps.Contains("code_interpreter_call.type")) __score7++;
             if (__jsonProps.Contains("output_index")) __score7++;
             if (__jsonProps.Contains("type")) __score7++;
             var __score8 = 0;
             if (__jsonProps.Contains("code_interpreter_call")) __score8++;
+            if (__jsonProps.Contains("code_interpreter_call.code")) __score8++;
+            if (__jsonProps.Contains("code_interpreter_call.id")) __score8++;
+            if (__jsonProps.Contains("code_interpreter_call.results")) __score8++;
+            if (__jsonProps.Contains("code_interpreter_call.status")) __score8++;
+            if (__jsonProps.Contains("code_interpreter_call.type")) __score8++;
             if (__jsonProps.Contains("output_index")) __score8++;
             if (__jsonProps.Contains("type")) __score8++;
             var __score9 = 0;
