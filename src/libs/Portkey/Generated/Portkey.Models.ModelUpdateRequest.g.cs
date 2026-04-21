@@ -43,6 +43,12 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("configurations")]
+        public global::Portkey.ModelConfigurations? Configurations { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pricing_config")]
         public global::Portkey.PricingConfig? PricingConfig { get; set; }
 
@@ -70,6 +76,7 @@ namespace Portkey
         /// <param name="baseModelSlug">
         /// Base model slug for fine-tuned models
         /// </param>
+        /// <param name="configurations"></param>
         /// <param name="pricingConfig"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -80,6 +87,7 @@ namespace Portkey
             bool? isCustom,
             bool? isFinetune,
             string? baseModelSlug,
+            global::Portkey.ModelConfigurations? configurations,
             global::Portkey.PricingConfig? pricingConfig)
         {
             this.Slug = slug ?? throw new global::System.ArgumentNullException(nameof(slug));
@@ -87,6 +95,7 @@ namespace Portkey
             this.IsCustom = isCustom;
             this.IsFinetune = isFinetune;
             this.BaseModelSlug = baseModelSlug;
+            this.Configurations = configurations;
             this.PricingConfig = pricingConfig;
         }
 

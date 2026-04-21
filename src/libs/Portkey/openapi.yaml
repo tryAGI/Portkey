@@ -25532,6 +25532,12 @@ components:
           $ref: '#/components/schemas/TokenPricing'
         response_token:
           $ref: '#/components/schemas/TokenPricing'
+    ModelConfigurations:
+      type: object
+      properties:
+        custom_host:
+          type: string
+          description: Custom Host URL for the model.
     TokenPricing:
       type: object
       properties:
@@ -25575,6 +25581,8 @@ components:
           type: string
           nullable: true
           description: Base model slug for fine-tuned models
+        configurations:
+          $ref: '#/components/schemas/ModelConfigurations'
         pricing_config:
           $ref: '#/components/schemas/PricingConfig'
     IntegrationWorkspacesResponse:

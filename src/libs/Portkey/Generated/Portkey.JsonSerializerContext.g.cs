@@ -3233,6 +3233,7 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PricingConfigType), TypeInfoPropertyName = "PricingConfigType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PayAsYouGoPricing))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.TokenPricing))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ModelConfigurations))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.BulkUpdateModelsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.ModelUpdateRequest>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ModelUpdateRequest))]
