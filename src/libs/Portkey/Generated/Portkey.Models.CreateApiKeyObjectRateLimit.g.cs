@@ -13,21 +13,27 @@ namespace Portkey
         /// </summary>
         /// <example>requests</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
-        public string? Type { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.CreateApiKeyObjectRateLimitTypeJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Portkey.CreateApiKeyObjectRateLimitType Type { get; set; }
 
         /// <summary>
+        /// Rate limit unit: requests/tokens per day, hour, minute, second, or week.<br/>
         /// Example: rpm
         /// </summary>
         /// <example>rpm</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("unit")]
-        public string? Unit { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.CreateApiKeyObjectRateLimitUnitJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Portkey.CreateApiKeyObjectRateLimitUnit Unit { get; set; }
 
         /// <summary>
         /// Example: 100
         /// </summary>
         /// <example>100</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("value")]
-        public int? Value { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int Value { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -42,6 +48,7 @@ namespace Portkey
         /// Example: requests
         /// </param>
         /// <param name="unit">
+        /// Rate limit unit: requests/tokens per day, hour, minute, second, or week.<br/>
         /// Example: rpm
         /// </param>
         /// <param name="value">
@@ -51,9 +58,9 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateApiKeyObjectRateLimit(
-            string? type,
-            string? unit,
-            int? value)
+            global::Portkey.CreateApiKeyObjectRateLimitType type,
+            global::Portkey.CreateApiKeyObjectRateLimitUnit unit,
+            int value)
         {
             this.Type = type;
             this.Unit = unit;

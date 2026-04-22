@@ -4,10 +4,10 @@
 namespace Portkey
 {
     /// <summary>
-    /// Reset the usage periodically.<br/>
+    /// How often to automatically rotate the key.<br/>
     /// Example: monthly
     /// </summary>
-    public enum UsageLimitsPeriodicReset
+    public enum UpdateApiKeyObjectRotationPolicyRotationPeriod
     {
         /// <summary>
         /// 
@@ -22,29 +22,29 @@ namespace Portkey
     /// <summary>
     /// Enum extensions to do fast conversions without the reflection.
     /// </summary>
-    public static class UsageLimitsPeriodicResetExtensions
+    public static class UpdateApiKeyObjectRotationPolicyRotationPeriodExtensions
     {
         /// <summary>
         /// Converts an enum to a string.
         /// </summary>
-        public static string ToValueString(this UsageLimitsPeriodicReset value)
+        public static string ToValueString(this UpdateApiKeyObjectRotationPolicyRotationPeriod value)
         {
             return value switch
             {
-                UsageLimitsPeriodicReset.Monthly => "monthly",
-                UsageLimitsPeriodicReset.Weekly => "weekly",
+                UpdateApiKeyObjectRotationPolicyRotationPeriod.Monthly => "monthly",
+                UpdateApiKeyObjectRotationPolicyRotationPeriod.Weekly => "weekly",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
         /// <summary>
         /// Converts an string to a enum.
         /// </summary>
-        public static UsageLimitsPeriodicReset? ToEnum(string value)
+        public static UpdateApiKeyObjectRotationPolicyRotationPeriod? ToEnum(string value)
         {
             return value switch
             {
-                "monthly" => UsageLimitsPeriodicReset.Monthly,
-                "weekly" => UsageLimitsPeriodicReset.Weekly,
+                "monthly" => UpdateApiKeyObjectRotationPolicyRotationPeriod.Monthly,
+                "weekly" => UpdateApiKeyObjectRotationPolicyRotationPeriod.Weekly,
                 _ => null,
             };
         }

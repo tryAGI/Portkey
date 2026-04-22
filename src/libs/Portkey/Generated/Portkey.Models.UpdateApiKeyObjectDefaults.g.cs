@@ -23,6 +23,15 @@ namespace Portkey
         public string? ConfigId { get; set; }
 
         /// <summary>
+        /// When false, the pinned config_id cannot be overridden at request time.<br/>
+        /// Default Value: true<br/>
+        /// Example: false
+        /// </summary>
+        /// <example>false</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("allow_config_override")]
+        public bool? AllowConfigOverride { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -37,15 +46,22 @@ namespace Portkey
         /// <param name="configId">
         /// Example: config-abc
         /// </param>
+        /// <param name="allowConfigOverride">
+        /// When false, the pinned config_id cannot be overridden at request time.<br/>
+        /// Default Value: true<br/>
+        /// Example: false
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateApiKeyObjectDefaults(
             object? metadata,
-            string? configId)
+            string? configId,
+            bool? allowConfigOverride)
         {
             this.Metadata = metadata;
             this.ConfigId = configId;
+            this.AllowConfigOverride = allowConfigOverride;
         }
 
         /// <summary>

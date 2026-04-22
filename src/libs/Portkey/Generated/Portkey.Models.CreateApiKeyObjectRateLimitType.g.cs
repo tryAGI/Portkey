@@ -4,47 +4,46 @@
 namespace Portkey
 {
     /// <summary>
-    /// Reset the usage periodically.<br/>
-    /// Example: monthly
+    /// Example: requests
     /// </summary>
-    public enum UsageLimitsPeriodicReset
+    public enum CreateApiKeyObjectRateLimitType
     {
         /// <summary>
         /// 
         /// </summary>
-        Monthly,
+        Requests,
         /// <summary>
         /// 
         /// </summary>
-        Weekly,
+        Tokens,
     }
 
     /// <summary>
     /// Enum extensions to do fast conversions without the reflection.
     /// </summary>
-    public static class UsageLimitsPeriodicResetExtensions
+    public static class CreateApiKeyObjectRateLimitTypeExtensions
     {
         /// <summary>
         /// Converts an enum to a string.
         /// </summary>
-        public static string ToValueString(this UsageLimitsPeriodicReset value)
+        public static string ToValueString(this CreateApiKeyObjectRateLimitType value)
         {
             return value switch
             {
-                UsageLimitsPeriodicReset.Monthly => "monthly",
-                UsageLimitsPeriodicReset.Weekly => "weekly",
+                CreateApiKeyObjectRateLimitType.Requests => "requests",
+                CreateApiKeyObjectRateLimitType.Tokens => "tokens",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
         /// <summary>
         /// Converts an string to a enum.
         /// </summary>
-        public static UsageLimitsPeriodicReset? ToEnum(string value)
+        public static CreateApiKeyObjectRateLimitType? ToEnum(string value)
         {
             return value switch
             {
-                "monthly" => UsageLimitsPeriodicReset.Monthly,
-                "weekly" => UsageLimitsPeriodicReset.Weekly,
+                "requests" => CreateApiKeyObjectRateLimitType.Requests,
+                "tokens" => CreateApiKeyObjectRateLimitType.Tokens,
                 _ => null,
             };
         }
