@@ -244,6 +244,17 @@
     },
     {
       "Order": 23,
+      "Title": "Create API Keys",
+      "Slug": "create-api-keys",
+      "Description": "Creates a new API key.",
+      "Language": "csharp",
+      "Code": "using var client = new PortkeyClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::Portkey.CreateApiKeyObject\u003E(\n    @\u0022{\n  \u0022\u0022name\u0022\u0022: \u0022\u0022API_KEY_NAME_0909\u0022\u0022,\n  \u0022\u0022scopes\u0022\u0022: [\n    \u0022\u0022completions.write\u0022\u0022\n  ]\n}\u0022)!;\n\nvar response = await client.ApiKeys.CreateKeysByTypeBySubTypeAsync(\n    type: global::Portkey.CreateKeysType.Organisation,\n    subType: global::Portkey.CreateKeysSubType.User,\n    request: request\n);",
+      "Format": "sdk",
+      "OperationId": "createKeysByTypeBySubType",
+      "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 24,
       "Title": "Remove an API Key",
       "Slug": "remove-an-api-key",
       "Description": "Generated from OpenAPI examples.",
@@ -254,7 +265,7 @@
       "Setup": null
     },
     {
-      "Order": 24,
+      "Order": 25,
       "Title": "Get All",
       "Slug": "get-all",
       "Description": "Generated from OpenAPI examples.",
@@ -265,7 +276,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 25,
+      "Order": 26,
       "Title": "Update API Keys",
       "Slug": "update-api-keys",
       "Description": "Updates an existing API key. The API key type (user vs service) and associated user_id cannot be changed after creation.",
@@ -276,7 +287,7 @@
       "Setup": null
     },
     {
-      "Order": 26,
+      "Order": 27,
       "Title": "Delete collection",
       "Slug": "delete-collection",
       "Description": "Deletes a collection",
@@ -287,7 +298,7 @@
       "Setup": null
     },
     {
-      "Order": 27,
+      "Order": 28,
       "Title": "Update collection",
       "Slug": "update-collection",
       "Description": "Updates a collection\u0027s details",
@@ -298,7 +309,7 @@
       "Setup": null
     },
     {
-      "Order": 28,
+      "Order": 29,
       "Title": "Create a config",
       "Slug": "createconfig",
       "Description": "Generated from OpenAPI examples.",
@@ -309,7 +320,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 29,
+      "Order": 30,
       "Title": "Delete a config",
       "Slug": "deleteconfig",
       "Description": "Generated from OpenAPI examples.",
@@ -320,7 +331,7 @@
       "Setup": null
     },
     {
-      "Order": 30,
+      "Order": 31,
       "Title": "Get a config",
       "Slug": "getconfig",
       "Description": "Generated from OpenAPI examples.",
@@ -331,7 +342,7 @@
       "Setup": null
     },
     {
-      "Order": 31,
+      "Order": 32,
       "Title": "List versions for a config",
       "Slug": "listconfigversions",
       "Description": "Generated from OpenAPI examples.",
@@ -342,7 +353,7 @@
       "Setup": null
     },
     {
-      "Order": 32,
+      "Order": 33,
       "Title": "List all configs",
       "Slug": "listconfigs",
       "Description": "Generated from OpenAPI examples.",
@@ -353,7 +364,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 33,
+      "Order": 34,
       "Title": "Update a config",
       "Slug": "updateconfig",
       "Description": "Generated from OpenAPI examples.",
@@ -364,7 +375,7 @@
       "Setup": null
     },
     {
-      "Order": 34,
+      "Order": 35,
       "Title": "Create a new guardrail",
       "Slug": "createguardrail",
       "Description": "Creates a new guardrail with specified checks and actions",
@@ -375,7 +386,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 35,
+      "Order": 36,
       "Title": "Get a specific guardrail",
       "Slug": "getguardrail",
       "Description": "Retrieves details of a specific guardrail by ID or slug",
@@ -386,7 +397,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 36,
+      "Order": 37,
       "Title": "Delete a label",
       "Slug": "deletelabel",
       "Description": "Deletes a label",
@@ -397,7 +408,7 @@
       "Setup": null
     },
     {
-      "Order": 37,
+      "Order": 38,
       "Title": "Update a label",
       "Slug": "updatelabel",
       "Description": "Updates an existing label",
@@ -408,7 +419,7 @@
       "Setup": null
     },
     {
-      "Order": 38,
+      "Order": 39,
       "Title": "Create MCP Integration",
       "Slug": "mcpintegrations-create",
       "Description": "Create a new MCP Integration. Requires either organisation_id (with admin API key) or workspace_id in body.",
@@ -419,7 +430,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 39,
+      "Order": 40,
       "Title": "Create MCP Server",
       "Slug": "mcpservers-create",
       "Description": "Create a new MCP Server (workspace instance of an MCP Integration). Requires workspace_id or x-portkey-api-key header.",
@@ -430,7 +441,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 40,
+      "Order": 41,
       "Title": "Get Model Pricing",
       "Slug": "getmodelpricing",
       "Description": "Returns pricing configuration for a specific model.\n\n**Note:** Prices are in USD cents per token.\n\n## Supported Providers\n\nopenai, anthropic, google, azure-openai, bedrock, mistral-ai, cohere, \ntogether-ai, groq, deepseek, fireworks-ai, perplexity-ai, anyscale, \ndeepinfra, cerebras, x-ai, and 25\u002B more.\n\n## Example Response Fields\n\n| Field | Description | Unit |\n|-------|-------------|------|\n| \u0060request_token.price\u0060 | Input token cost | cents/token |\n| \u0060response_token.price\u0060 | Output token cost | cents/token |\n| \u0060cache_write_input_token.price\u0060 | Cache write cost | cents/token |\n| \u0060cache_read_input_token.price\u0060 | Cache read cost | cents/token |\n| \u0060additional_units.*\u0060 | Provider-specific features | cents/unit |",
@@ -441,7 +452,7 @@
       "Setup": null
     },
     {
-      "Order": 41,
+      "Order": 42,
       "Title": "List Available Models",
       "Slug": "listmodels",
       "Description": "Lists the currently available models that can be used through Portkey, and provides basic information about each one.",
@@ -452,7 +463,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 42,
+      "Order": 43,
       "Title": "Create a Provider",
       "Slug": "create-a-provider",
       "Description": "Generated from OpenAPI examples.",
@@ -463,7 +474,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 43,
+      "Order": 44,
       "Title": "Create Rate Limits Policy",
       "Slug": "createratelimitspolicy",
       "Description": "Create a new rate limits policy to control the rate of requests or tokens consumed per minute, hour, or day.",
@@ -474,7 +485,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 44,
+      "Order": 45,
       "Title": "Delete Rate Limits Policy",
       "Slug": "deleteratelimitspolicy",
       "Description": "Delete a rate limits policy.",
@@ -485,7 +496,7 @@
       "Setup": null
     },
     {
-      "Order": 45,
+      "Order": 46,
       "Title": "Update Rate Limits Policy",
       "Slug": "updateratelimitspolicy",
       "Description": "Update an existing rate limits policy.",
@@ -496,7 +507,7 @@
       "Setup": null
     },
     {
-      "Order": 46,
+      "Order": 47,
       "Title": "Create Usage Limits Policy",
       "Slug": "createusagelimitspolicy",
       "Description": "Create a new usage limits policy to control total usage (cost or tokens) over a period.",
@@ -507,7 +518,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 47,
+      "Order": 48,
       "Title": "Delete Usage Limits Policy",
       "Slug": "deleteusagelimitspolicy",
       "Description": "Archive (soft delete) a usage limits policy.",
@@ -518,7 +529,7 @@
       "Setup": null
     },
     {
-      "Order": 48,
+      "Order": 49,
       "Title": "Reset Usage Limits Policy Entity",
       "Slug": "resetusagelimitspolicyentity",
       "Description": "Reset the current usage for a specific entity in a usage limits policy.",
@@ -529,7 +540,7 @@
       "Setup": null
     },
     {
-      "Order": 49,
+      "Order": 50,
       "Title": "Update Usage Limits Policy",
       "Slug": "updateusagelimitspolicy",
       "Description": "Update an existing usage limits policy.",
@@ -540,7 +551,7 @@
       "Setup": null
     },
     {
-      "Order": 50,
+      "Order": 51,
       "Title": "Invite User",
       "Slug": "invites-create",
       "Description": "Send an invite to user for your organization",
@@ -551,7 +562,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 51,
+      "Order": 52,
       "Title": "Resend Invite",
       "Slug": "resend-invite",
       "Description": "Resend an invite to user for your organization",
@@ -562,7 +573,7 @@
       "Setup": null
     },
     {
-      "Order": 52,
+      "Order": 53,
       "Title": "Delete Invite By ID",
       "Slug": "delete-invite-by-id",
       "Description": "Generated from OpenAPI examples.",
@@ -573,7 +584,7 @@
       "Setup": null
     },
     {
-      "Order": 53,
+      "Order": 54,
       "Title": "Get All Invites",
       "Slug": "get-all-invites",
       "Description": "Generated from OpenAPI examples.",
@@ -584,7 +595,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 54,
+      "Order": 55,
       "Title": "Get Invite",
       "Slug": "get-invite",
       "Description": "Generated from OpenAPI examples.",
@@ -595,7 +606,7 @@
       "Setup": null
     },
     {
-      "Order": 55,
+      "Order": 56,
       "Title": "Remove a user",
       "Slug": "remove-a-user",
       "Description": "Generated from OpenAPI examples.",
@@ -606,7 +617,7 @@
       "Setup": null
     },
     {
-      "Order": 56,
+      "Order": 57,
       "Title": "Get users",
       "Slug": "get-users",
       "Description": "Generated from OpenAPI examples.",
@@ -617,7 +628,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 57,
+      "Order": 58,
       "Title": "Get user",
       "Slug": "get-user",
       "Description": "Generated from OpenAPI examples.",
@@ -628,7 +639,7 @@
       "Setup": null
     },
     {
-      "Order": 58,
+      "Order": 59,
       "Title": "Update user",
       "Slug": "update-user",
       "Description": "Generated from OpenAPI examples.",
@@ -639,7 +650,7 @@
       "Setup": null
     },
     {
-      "Order": 59,
+      "Order": 60,
       "Title": "Create a Virtual Key",
       "Slug": "create-a-virtual-key",
       "Description": "Generated from OpenAPI examples.",
@@ -650,7 +661,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 60,
+      "Order": 61,
       "Title": "Delete a Virtual Key",
       "Slug": "delete-a-virtual-key",
       "Description": "Generated from OpenAPI examples.",
@@ -661,7 +672,7 @@
       "Setup": null
     },
     {
-      "Order": 61,
+      "Order": 62,
       "Title": "List All Virtual Keys",
       "Slug": "list-all-virtual-keys",
       "Description": "Generated from OpenAPI examples.",
@@ -672,7 +683,7 @@
       "Setup": null
     },
     {
-      "Order": 62,
+      "Order": 63,
       "Title": "Get a Virtual Key",
       "Slug": "get-a-virtual-key",
       "Description": "Generated from OpenAPI examples.",
@@ -683,7 +694,7 @@
       "Setup": null
     },
     {
-      "Order": 63,
+      "Order": 64,
       "Title": "Update a Virtual Key",
       "Slug": "update-a-virtual-key",
       "Description": "Generated from OpenAPI examples.",
@@ -694,7 +705,7 @@
       "Setup": null
     },
     {
-      "Order": 64,
+      "Order": 65,
       "Title": "Create Workspace",
       "Slug": "create-workspace",
       "Description": "Generated from OpenAPI examples.",
@@ -705,7 +716,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 65,
+      "Order": 66,
       "Title": "Get All Workspaces",
       "Slug": "get-all-workspaces",
       "Description": "Generated from OpenAPI examples.",
@@ -716,7 +727,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 66,
+      "Order": 67,
       "Title": "Update Workspace",
       "Slug": "update-workspace",
       "Description": "Generated from OpenAPI examples.",
@@ -727,7 +738,7 @@
       "Setup": null
     },
     {
-      "Order": 67,
+      "Order": 68,
       "Title": "Add workspace member",
       "Slug": "add-workspace-member",
       "Description": "Generated from OpenAPI examples.",
@@ -738,7 +749,7 @@
       "Setup": null
     },
     {
-      "Order": 68,
+      "Order": 69,
       "Title": "Remove workspace member",
       "Slug": "remove-workspace-member",
       "Description": "Generated from OpenAPI examples.",
@@ -749,7 +760,7 @@
       "Setup": null
     },
     {
-      "Order": 69,
+      "Order": 70,
       "Title": "Get workspace members",
       "Slug": "get-workspace-members",
       "Description": "Generated from OpenAPI examples.",
@@ -760,7 +771,7 @@
       "Setup": null
     },
     {
-      "Order": 70,
+      "Order": 71,
       "Title": "Get member",
       "Slug": "get-member",
       "Description": "Generated from OpenAPI examples.",
@@ -771,7 +782,7 @@
       "Setup": null
     },
     {
-      "Order": 71,
+      "Order": 72,
       "Title": "Update workspace member",
       "Slug": "update-workspace-member",
       "Description": "Generated from OpenAPI examples.",

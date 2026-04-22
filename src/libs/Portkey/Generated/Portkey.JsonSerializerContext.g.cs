@@ -1533,6 +1533,30 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.ApiKeyObjectListObjectNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.CreateApiKeyObjectRateLimitTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateApiKeyObjectRateLimitTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateApiKeyObjectRateLimitUnitJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateApiKeyObjectRateLimitUnitNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateApiKeyObjectRotationPolicyRotationPeriodJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateApiKeyObjectRotationPolicyRotationPeriodNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateApiKeyObjectRateLimitTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateApiKeyObjectRateLimitTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateApiKeyObjectRateLimitUnitJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateApiKeyObjectRateLimitUnitNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateApiKeyObjectRotationPolicyRotationPeriodJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateApiKeyObjectRotationPolicyRotationPeriodNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.GuardrailCheckIdJsonConverter),
 
             typeof(global::Portkey.JsonConverters.GuardrailCheckIdNullableJsonConverter),
@@ -3163,6 +3187,7 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UsageLimits))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UsageLimitsType), TypeInfoPropertyName = "UsageLimitsType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UsageLimitsPeriodicReset), TypeInfoPropertyName = "UsageLimitsPeriodicReset2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateIntegrationRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.OpenAIConfiguration, global::Portkey.AzureOpenAIConfiguration, global::Portkey.BedrockConfiguration, global::Portkey.VertexAIConfiguration, global::Portkey.AzureAIConfiguration, global::Portkey.WorkersAIConfiguration, global::Portkey.SageMakerConfiguration?, global::Portkey.HuggingFaceConfiguration, global::Portkey.CortexConfiguration, global::Portkey.CustomHostConfiguration>), TypeInfoPropertyName = "CustomHostConfiguration_746b999d3264bfec")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OpenAIConfiguration))]
@@ -3209,7 +3234,6 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.SecretReferenceListItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.SecretReferenceListItemManagerType), TypeInfoPropertyName = "SecretReferenceListItemManagerType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.SecretReferenceListItemStatus), TypeInfoPropertyName = "SecretReferenceListItemStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.SecretReferenceListItemObject), TypeInfoPropertyName = "SecretReferenceListItemObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.SecretReferenceDetailResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.SecretReferenceDetailResponseManagerType), TypeInfoPropertyName = "SecretReferenceDetailResponseManagerType2")]
@@ -3353,11 +3377,19 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateApiKeyObject))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.CreateApiKeyObjectRateLimit>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateApiKeyObjectRateLimit))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateApiKeyObjectRateLimitType), TypeInfoPropertyName = "CreateApiKeyObjectRateLimitType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateApiKeyObjectRateLimitUnit), TypeInfoPropertyName = "CreateApiKeyObjectRateLimitUnit2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateApiKeyObjectDefaults))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateApiKeyObjectRotationPolicy))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateApiKeyObjectRotationPolicyRotationPeriod), TypeInfoPropertyName = "CreateApiKeyObjectRotationPolicyRotationPeriod2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateApiKeyObject))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.UpdateApiKeyObjectRateLimit>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateApiKeyObjectRateLimit))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateApiKeyObjectRateLimitType), TypeInfoPropertyName = "UpdateApiKeyObjectRateLimitType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateApiKeyObjectRateLimitUnit), TypeInfoPropertyName = "UpdateApiKeyObjectRateLimitUnit2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateApiKeyObjectDefaults))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateApiKeyObjectRotationPolicy))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateApiKeyObjectRotationPolicyRotationPeriod), TypeInfoPropertyName = "UpdateApiKeyObjectRotationPolicyRotationPeriod2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RotateApiKeyRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RotateApiKeyResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PromptRenderResponse))]

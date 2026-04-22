@@ -24,6 +24,14 @@ namespace Portkey
         public string? Description { get; set; }
 
         /// <summary>
+        /// Organisation ID. Optional when calling via an org-level API key (picked from auth context).<br/>
+        /// Example: a1b2c3d4-e5f6-7890-abcd-ef1234567890
+        /// </summary>
+        /// <example>a1b2c3d4-e5f6-7890-abcd-ef1234567890</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("organisation_id")]
+        public global::System.Guid? OrganisationId { get; set; }
+
+        /// <summary>
         /// Example: ws-myworkspace
         /// </summary>
         /// <example>ws-myworkspace</example>
@@ -72,10 +80,18 @@ namespace Portkey
         public global::System.Collections.Generic.IList<string>? AlertEmails { get; set; }
 
         /// <summary>
-        /// 
+        /// ISO 8601 datetime at which this key expires. Must not exceed the org/workspace maximum TTL if configured.<br/>
+        /// Example: 2026-12-31T23:59:59Z
         /// </summary>
+        /// <example>2026-12-31T23:59:59Z</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("expires_at")]
         public global::System.DateTime? ExpiresAt { get; set; }
+
+        /// <summary>
+        /// Automatic key rotation configuration. Requires either rotation_period or next_rotation_at.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("rotation_policy")]
+        public global::Portkey.CreateApiKeyObjectRotationPolicy? RotationPolicy { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -95,6 +111,10 @@ namespace Portkey
         /// <param name="description">
         /// Example: API key for development environment
         /// </param>
+        /// <param name="organisationId">
+        /// Organisation ID. Optional when calling via an org-level API key (picked from auth context).<br/>
+        /// Example: a1b2c3d4-e5f6-7890-abcd-ef1234567890
+        /// </param>
         /// <param name="workspaceId">
         /// Example: ws-myworkspace
         /// </param>
@@ -108,7 +128,13 @@ namespace Portkey
         /// </param>
         /// <param name="defaults"></param>
         /// <param name="alertEmails"></param>
-        /// <param name="expiresAt"></param>
+        /// <param name="expiresAt">
+        /// ISO 8601 datetime at which this key expires. Must not exceed the org/workspace maximum TTL if configured.<br/>
+        /// Example: 2026-12-31T23:59:59Z
+        /// </param>
+        /// <param name="rotationPolicy">
+        /// Automatic key rotation configuration. Requires either rotation_period or next_rotation_at.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -116,16 +142,19 @@ namespace Portkey
             string name,
             global::System.Collections.Generic.IList<string> scopes,
             string? description,
+            global::System.Guid? organisationId,
             string? workspaceId,
             global::System.Guid? userId,
             global::System.Collections.Generic.IList<global::Portkey.CreateApiKeyObjectRateLimit>? rateLimits,
             global::Portkey.UsageLimits? usageLimits,
             global::Portkey.CreateApiKeyObjectDefaults? defaults,
             global::System.Collections.Generic.IList<string>? alertEmails,
-            global::System.DateTime? expiresAt)
+            global::System.DateTime? expiresAt,
+            global::Portkey.CreateApiKeyObjectRotationPolicy? rotationPolicy)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Description = description;
+            this.OrganisationId = organisationId;
             this.WorkspaceId = workspaceId;
             this.UserId = userId;
             this.RateLimits = rateLimits;
@@ -134,6 +163,7 @@ namespace Portkey
             this.Defaults = defaults;
             this.AlertEmails = alertEmails;
             this.ExpiresAt = expiresAt;
+            this.RotationPolicy = rotationPolicy;
         }
 
         /// <summary>

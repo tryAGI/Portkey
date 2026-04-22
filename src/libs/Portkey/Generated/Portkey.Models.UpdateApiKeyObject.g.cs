@@ -63,6 +63,20 @@ namespace Portkey
         public global::System.Collections.Generic.IList<string>? AlertEmails { get; set; }
 
         /// <summary>
+        /// ISO 8601 datetime at which this key expires.<br/>
+        /// Example: 2026-12-31T23:59:59Z
+        /// </summary>
+        /// <example>2026-12-31T23:59:59Z</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("expires_at")]
+        public global::System.DateTime? ExpiresAt { get; set; }
+
+        /// <summary>
+        /// Update or replace the automatic key rotation configuration. Requires either rotation_period or next_rotation_at.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("rotation_policy")]
+        public global::Portkey.UpdateApiKeyObjectRotationPolicy? RotationPolicy { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -90,6 +104,13 @@ namespace Portkey
         /// </param>
         /// <param name="defaults"></param>
         /// <param name="alertEmails"></param>
+        /// <param name="expiresAt">
+        /// ISO 8601 datetime at which this key expires.<br/>
+        /// Example: 2026-12-31T23:59:59Z
+        /// </param>
+        /// <param name="rotationPolicy">
+        /// Update or replace the automatic key rotation configuration. Requires either rotation_period or next_rotation_at.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -101,7 +122,9 @@ namespace Portkey
             bool? resetUsage,
             global::System.Collections.Generic.IList<string>? scopes,
             global::Portkey.UpdateApiKeyObjectDefaults? defaults,
-            global::System.Collections.Generic.IList<string>? alertEmails)
+            global::System.Collections.Generic.IList<string>? alertEmails,
+            global::System.DateTime? expiresAt,
+            global::Portkey.UpdateApiKeyObjectRotationPolicy? rotationPolicy)
         {
             this.Name = name;
             this.Description = description;
@@ -111,6 +134,8 @@ namespace Portkey
             this.Scopes = scopes;
             this.Defaults = defaults;
             this.AlertEmails = alertEmails;
+            this.ExpiresAt = expiresAt;
+            this.RotationPolicy = rotationPolicy;
         }
 
         /// <summary>
