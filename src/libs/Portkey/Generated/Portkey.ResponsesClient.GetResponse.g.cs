@@ -149,7 +149,7 @@ namespace Portkey
                 PrepareGetResponseRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    responseId: responseId,
+                    responseId: responseId!,
                     include: include);
 
                 return __httpRequest;

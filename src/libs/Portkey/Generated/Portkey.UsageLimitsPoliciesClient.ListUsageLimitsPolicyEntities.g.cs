@@ -151,7 +151,7 @@ namespace Portkey
                 PrepareListUsageLimitsPolicyEntitiesRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    policyUsageLimitsId: policyUsageLimitsId,
+                    policyUsageLimitsId: policyUsageLimitsId!,
                     status: status,
                     search: search,
                     pageSize: pageSize,

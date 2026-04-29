@@ -173,7 +173,7 @@ namespace Portkey
                     workspaceId: workspaceId,
                     currentPage: currentPage,
                     pageSize: pageSize,
-                    mcpServerId: mcpServerId);
+                    mcpServerId: mcpServerId!);
 
                 return __httpRequest;
             }

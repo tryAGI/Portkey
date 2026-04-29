@@ -139,7 +139,7 @@ namespace Portkey
                 PrepareGetThreadRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    threadId: threadId);
+                    threadId: threadId!);
 
                 return __httpRequest;
             }

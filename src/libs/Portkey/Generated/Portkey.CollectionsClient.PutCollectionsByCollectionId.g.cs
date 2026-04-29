@@ -180,7 +180,7 @@ namespace Portkey
                 PreparePutCollectionsByCollectionIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    collectionId: collectionId,
+                    collectionId: collectionId!,
                     request: request);
 
                 return __httpRequest;

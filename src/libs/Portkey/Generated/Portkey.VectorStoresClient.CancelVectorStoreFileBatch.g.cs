@@ -129,8 +129,8 @@ namespace Portkey
                 PrepareCancelVectorStoreFileBatchRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    vectorStoreId: vectorStoreId,
-                    batchId: batchId);
+                    vectorStoreId: vectorStoreId!,
+                    batchId: batchId!);
 
                 return __httpRequest;
             }

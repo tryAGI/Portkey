@@ -146,7 +146,7 @@ namespace Portkey
                 PrepareDeleteRateLimitsPolicyRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    rateLimitsPolicyId: rateLimitsPolicyId);
+                    rateLimitsPolicyId: rateLimitsPolicyId!);
 
                 return __httpRequest;
             }

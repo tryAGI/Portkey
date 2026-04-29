@@ -148,8 +148,8 @@ namespace Portkey
                 PrepareGetVirtualKeysRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    currentPage: currentPage,
-                    pageSize: pageSize);
+                    currentPage: currentPage!,
+                    pageSize: pageSize!);
 
                 return __httpRequest;
             }

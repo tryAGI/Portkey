@@ -139,7 +139,7 @@ namespace Portkey
                 PrepareUpdateGuardrailRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    guardrailId: guardrailId,
+                    guardrailId: guardrailId!,
                     request: request);
 
                 return __httpRequest;

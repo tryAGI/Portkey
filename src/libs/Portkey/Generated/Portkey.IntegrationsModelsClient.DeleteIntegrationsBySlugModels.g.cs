@@ -135,8 +135,8 @@ namespace Portkey
                 PrepareDeleteIntegrationsBySlugModelsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    slug: slug,
-                    slugs: slugs);
+                    slug: slug!,
+                    slugs: slugs!);
 
                 return __httpRequest;
             }

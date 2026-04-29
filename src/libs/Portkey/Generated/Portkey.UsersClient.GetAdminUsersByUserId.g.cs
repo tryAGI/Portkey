@@ -159,7 +159,7 @@ namespace Portkey
                 PrepareGetAdminUsersByUserIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    userId: userId);
+                    userId: userId!);
 
                 return __httpRequest;
             }

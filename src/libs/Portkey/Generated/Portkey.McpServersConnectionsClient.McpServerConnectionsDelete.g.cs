@@ -155,7 +155,7 @@ namespace Portkey
                     httpRequestMessage: __httpRequest,
                     userId: userId,
                     workspaceId: workspaceId,
-                    mcpServerId: mcpServerId);
+                    mcpServerId: mcpServerId!);
 
                 return __httpRequest;
             }

@@ -153,7 +153,7 @@ namespace Portkey
                 PrepareUpdateSecretReferenceRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    secretReferenceId: secretReferenceId,
+                    secretReferenceId: secretReferenceId!,
                     request: request);
 
                 return __httpRequest;

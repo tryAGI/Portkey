@@ -157,7 +157,7 @@ namespace Portkey
                 PrepareListFineTuningJobCheckpointsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    fineTuningJobId: fineTuningJobId,
+                    fineTuningJobId: fineTuningJobId!,
                     after: after,
                     limit: limit);
 

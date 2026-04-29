@@ -232,9 +232,9 @@ namespace Portkey
                 PrepareGetAuditLogsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    startTime: startTime,
-                    endTime: endTime,
-                    organisationId: organisationId,
+                    startTime: startTime!,
+                    endTime: endTime!,
+                    organisationId: organisationId!,
                     method: method,
                     uri: uri,
                     requestId: requestId,

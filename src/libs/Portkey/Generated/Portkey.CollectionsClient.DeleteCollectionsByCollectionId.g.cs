@@ -161,7 +161,7 @@ namespace Portkey
                 PrepareDeleteCollectionsByCollectionIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    collectionId: collectionId);
+                    collectionId: collectionId!);
 
                 return __httpRequest;
             }

@@ -165,7 +165,7 @@ namespace Portkey
                 PrepareUpdateUsageLimitsPolicyRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    policyUsageLimitsId: policyUsageLimitsId,
+                    policyUsageLimitsId: policyUsageLimitsId!,
                     request: request);
 
                 return __httpRequest;

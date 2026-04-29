@@ -180,7 +180,7 @@ namespace Portkey
                 PrepareUpdateLabelRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    labelId: labelId,
+                    labelId: labelId!,
                     request: request);
 
                 return __httpRequest;

@@ -165,7 +165,7 @@ namespace Portkey
                 PrepareUpdateRateLimitsPolicyRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    rateLimitsPolicyId: rateLimitsPolicyId,
+                    rateLimitsPolicyId: rateLimitsPolicyId!,
                     request: request);
 
                 return __httpRequest;

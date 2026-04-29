@@ -134,7 +134,7 @@ namespace Portkey
                 PrepareDeleteAdminWorkspacesByWorkspaceIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    workspaceId: workspaceId);
+                    workspaceId: workspaceId!);
 
                 return __httpRequest;
             }

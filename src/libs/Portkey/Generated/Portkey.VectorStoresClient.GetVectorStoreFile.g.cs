@@ -133,8 +133,8 @@ namespace Portkey
                 PrepareGetVectorStoreFileRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    vectorStoreId: vectorStoreId,
-                    fileId: fileId);
+                    vectorStoreId: vectorStoreId!,
+                    fileId: fileId!);
 
                 return __httpRequest;
             }

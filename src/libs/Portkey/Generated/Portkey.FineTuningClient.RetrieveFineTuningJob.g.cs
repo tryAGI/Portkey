@@ -142,7 +142,7 @@ namespace Portkey
                 PrepareRetrieveFineTuningJobRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    fineTuningJobId: fineTuningJobId);
+                    fineTuningJobId: fineTuningJobId!);
 
                 return __httpRequest;
             }

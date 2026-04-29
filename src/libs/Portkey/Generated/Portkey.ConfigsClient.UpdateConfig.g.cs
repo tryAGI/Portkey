@@ -153,7 +153,7 @@ namespace Portkey
                 PrepareUpdateConfigRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    slug: slug,
+                    slug: slug!,
                     request: request);
 
                 return __httpRequest;

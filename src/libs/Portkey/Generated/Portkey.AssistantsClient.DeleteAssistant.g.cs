@@ -139,7 +139,7 @@ namespace Portkey
                 PrepareDeleteAssistantRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    assistantId: assistantId);
+                    assistantId: assistantId!);
 
                 return __httpRequest;
             }

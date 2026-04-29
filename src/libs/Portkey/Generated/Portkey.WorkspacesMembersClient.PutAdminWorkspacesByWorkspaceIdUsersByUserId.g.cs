@@ -186,8 +186,8 @@ namespace Portkey
                 PreparePutAdminWorkspacesByWorkspaceIdUsersByUserIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    workspaceId: workspaceId,
-                    userId: userId,
+                    workspaceId: workspaceId!,
+                    userId: userId!,
                     request: request);
 
                 return __httpRequest;

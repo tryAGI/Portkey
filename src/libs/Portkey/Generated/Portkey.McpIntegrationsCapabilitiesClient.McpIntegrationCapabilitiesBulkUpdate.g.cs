@@ -153,7 +153,7 @@ namespace Portkey
                 PrepareMcpIntegrationCapabilitiesBulkUpdateRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    mcpIntegrationId: mcpIntegrationId,
+                    mcpIntegrationId: mcpIntegrationId!,
                     request: request);
 
                 return __httpRequest;

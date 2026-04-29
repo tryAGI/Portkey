@@ -147,8 +147,8 @@ namespace Portkey
                 PrepareGetModelPricingRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    provider: provider,
-                    model: model);
+                    provider: provider!,
+                    model: model!);
 
                 return __httpRequest;
             }
