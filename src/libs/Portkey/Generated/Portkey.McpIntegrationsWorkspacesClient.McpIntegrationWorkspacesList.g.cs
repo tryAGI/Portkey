@@ -148,7 +148,7 @@ namespace Portkey
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     version: version,
-                    mcpIntegrationId: mcpIntegrationId);
+                    mcpIntegrationId: mcpIntegrationId!);
 
                 return __httpRequest;
             }

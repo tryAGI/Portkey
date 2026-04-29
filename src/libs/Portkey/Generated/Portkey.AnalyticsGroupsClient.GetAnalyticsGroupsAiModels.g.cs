@@ -377,9 +377,9 @@ namespace Portkey
                 PrepareGetAnalyticsGroupsAiModelsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    workspaceSlug: workspaceSlug,
-                    timeOfGenerationMin: timeOfGenerationMin,
-                    timeOfGenerationMax: timeOfGenerationMax,
+                    workspaceSlug: workspaceSlug!,
+                    timeOfGenerationMin: timeOfGenerationMin!,
+                    timeOfGenerationMax: timeOfGenerationMax!,
                     totalUnitsMin: totalUnitsMin,
                     totalUnitsMax: totalUnitsMax,
                     costMin: costMin,

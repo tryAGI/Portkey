@@ -143,7 +143,7 @@ namespace Portkey
                 PrepareGetUsageLimitsPolicyRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    policyUsageLimitsId: policyUsageLimitsId,
+                    policyUsageLimitsId: policyUsageLimitsId!,
                     status: status,
                     includeUsage: includeUsage);
 

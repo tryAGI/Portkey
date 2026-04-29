@@ -130,8 +130,8 @@ namespace Portkey
                 PrepareResetUsageLimitsPolicyEntityRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    policyUsageLimitsId: policyUsageLimitsId,
-                    entityId: entityId);
+                    policyUsageLimitsId: policyUsageLimitsId!,
+                    entityId: entityId!);
 
                 return __httpRequest;
             }

@@ -154,7 +154,7 @@ namespace Portkey
                 PrepareGetLabelRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    labelId: labelId,
+                    labelId: labelId!,
                     organisationId: organisationId,
                     workspaceId: workspaceId);
 

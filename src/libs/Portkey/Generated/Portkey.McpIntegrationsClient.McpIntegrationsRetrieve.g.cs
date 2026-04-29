@@ -139,7 +139,7 @@ namespace Portkey
                 PrepareMcpIntegrationsRetrieveRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    mcpIntegrationId: mcpIntegrationId);
+                    mcpIntegrationId: mcpIntegrationId!);
 
                 return __httpRequest;
             }

@@ -161,7 +161,7 @@ namespace Portkey
                 PrepareGetCollectionsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    workspaceId: workspaceId,
+                    workspaceId: workspaceId!,
                     currentPage: currentPage,
                     pageSize: pageSize,
                     search: search);

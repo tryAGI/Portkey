@@ -153,7 +153,7 @@ namespace Portkey
                 PrepareUpdatePromptPartialDefaultRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    promptPartialId: promptPartialId,
+                    promptPartialId: promptPartialId!,
                     request: request);
 
                 return __httpRequest;

@@ -161,7 +161,7 @@ namespace Portkey
                 PrepareDeleteLabelRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    labelId: labelId);
+                    labelId: labelId!);
 
                 return __httpRequest;
             }

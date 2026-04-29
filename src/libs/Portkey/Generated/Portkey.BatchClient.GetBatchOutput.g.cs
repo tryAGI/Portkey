@@ -139,7 +139,7 @@ namespace Portkey
                 PrepareGetBatchOutputRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    batchId: batchId);
+                    batchId: batchId!);
 
                 return __httpRequest;
             }

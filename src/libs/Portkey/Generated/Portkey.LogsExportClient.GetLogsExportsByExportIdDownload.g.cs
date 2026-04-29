@@ -139,7 +139,7 @@ namespace Portkey
                 PrepareGetLogsExportsByExportIdDownloadRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    exportId: exportId);
+                    exportId: exportId!);
 
                 return __httpRequest;
             }

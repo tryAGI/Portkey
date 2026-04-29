@@ -158,8 +158,8 @@ namespace Portkey
                 PrepareModifyMessageRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    threadId: threadId,
-                    messageId: messageId,
+                    threadId: threadId!,
+                    messageId: messageId!,
                     request: request);
 
                 return __httpRequest;

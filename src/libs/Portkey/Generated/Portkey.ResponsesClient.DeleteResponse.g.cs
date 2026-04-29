@@ -136,7 +136,7 @@ namespace Portkey
                 PrepareDeleteResponseRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    responseId: responseId);
+                    responseId: responseId!);
 
                 return __httpRequest;
             }

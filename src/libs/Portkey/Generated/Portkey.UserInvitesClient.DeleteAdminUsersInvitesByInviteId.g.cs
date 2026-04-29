@@ -159,7 +159,7 @@ namespace Portkey
                 PrepareDeleteAdminUsersInvitesByInviteIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    inviteId: inviteId);
+                    inviteId: inviteId!);
 
                 return __httpRequest;
             }

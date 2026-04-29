@@ -166,7 +166,7 @@ namespace Portkey
                     page: page,
                     pageSize: pageSize,
                     type: type,
-                    mcpIntegrationId: mcpIntegrationId);
+                    mcpIntegrationId: mcpIntegrationId!);
 
                 return __httpRequest;
             }

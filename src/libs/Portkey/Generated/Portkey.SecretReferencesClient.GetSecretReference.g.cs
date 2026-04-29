@@ -139,7 +139,7 @@ namespace Portkey
                 PrepareGetSecretReferenceRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    secretReferenceId: secretReferenceId);
+                    secretReferenceId: secretReferenceId!);
 
                 return __httpRequest;
             }

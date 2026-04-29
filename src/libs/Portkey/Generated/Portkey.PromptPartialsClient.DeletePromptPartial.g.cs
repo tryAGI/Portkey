@@ -139,7 +139,7 @@ namespace Portkey
                 PrepareDeletePromptPartialRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    promptPartialId: promptPartialId);
+                    promptPartialId: promptPartialId!);
 
                 return __httpRequest;
             }

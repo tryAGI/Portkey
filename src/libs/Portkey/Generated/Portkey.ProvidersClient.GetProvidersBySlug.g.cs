@@ -148,7 +148,7 @@ namespace Portkey
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     workspaceId: workspaceId,
-                    slug: slug);
+                    slug: slug!);
 
                 return __httpRequest;
             }

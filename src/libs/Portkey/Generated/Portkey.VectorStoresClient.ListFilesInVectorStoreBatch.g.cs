@@ -165,8 +165,8 @@ namespace Portkey
                 PrepareListFilesInVectorStoreBatchRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    vectorStoreId: vectorStoreId,
-                    batchId: batchId,
+                    vectorStoreId: vectorStoreId!,
+                    batchId: batchId!,
                     limit: limit,
                     order: order,
                     after: after,

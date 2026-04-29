@@ -153,7 +153,7 @@ namespace Portkey
                 PrepareModifyAssistantRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    assistantId: assistantId,
+                    assistantId: assistantId!,
                     request: request);
 
                 return __httpRequest;

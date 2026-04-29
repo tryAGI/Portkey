@@ -139,7 +139,7 @@ namespace Portkey
                 PrepareGetAssistantRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    assistantId: assistantId);
+                    assistantId: assistantId!);
 
                 return __httpRequest;
             }

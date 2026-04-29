@@ -153,7 +153,7 @@ namespace Portkey
                 PrepareMcpServerUserAccessBulkUpdateRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    mcpServerId: mcpServerId,
+                    mcpServerId: mcpServerId!,
                     request: request);
 
                 return __httpRequest;

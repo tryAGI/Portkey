@@ -156,7 +156,7 @@ namespace Portkey
                 PrepareUpdatePromptRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    promptId: promptId,
+                    promptId: promptId!,
                     request: request);
 
                 return __httpRequest;

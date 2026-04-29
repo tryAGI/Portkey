@@ -144,8 +144,8 @@ namespace Portkey
                 PrepareGetRunRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    threadId: threadId,
-                    runId: runId);
+                    threadId: threadId!,
+                    runId: runId!);
 
                 return __httpRequest;
             }

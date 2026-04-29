@@ -146,7 +146,7 @@ namespace Portkey
                 PrepareDeleteUsageLimitsPolicyRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    policyUsageLimitsId: policyUsageLimitsId);
+                    policyUsageLimitsId: policyUsageLimitsId!);
 
                 return __httpRequest;
             }

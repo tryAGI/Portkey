@@ -188,8 +188,8 @@ namespace Portkey
                 PrepareCreateKeysByTypeBySubTypeRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    type: type,
-                    subType: subType,
+                    type: type!,
+                    subType: subType!,
                     request: request);
 
                 return __httpRequest;

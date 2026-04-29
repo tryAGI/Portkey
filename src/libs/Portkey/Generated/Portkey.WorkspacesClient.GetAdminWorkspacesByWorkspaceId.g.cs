@@ -159,7 +159,7 @@ namespace Portkey
                 PrepareGetAdminWorkspacesByWorkspaceIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    workspaceId: workspaceId);
+                    workspaceId: workspaceId!);
 
                 return __httpRequest;
             }

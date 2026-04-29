@@ -124,7 +124,7 @@ namespace Portkey
                 PrepareDeleteVectorStoreRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    vectorStoreId: vectorStoreId);
+                    vectorStoreId: vectorStoreId!);
 
                 return __httpRequest;
             }

@@ -120,7 +120,7 @@ namespace Portkey
                 PrepareDeleteGuardrailRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    guardrailId: guardrailId);
+                    guardrailId: guardrailId!);
 
                 return __httpRequest;
             }

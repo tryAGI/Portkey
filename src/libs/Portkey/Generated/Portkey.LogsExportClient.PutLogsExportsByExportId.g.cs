@@ -153,7 +153,7 @@ namespace Portkey
                 PreparePutLogsExportsByExportIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    exportId: exportId,
+                    exportId: exportId!,
                     request: request);
 
                 return __httpRequest;
