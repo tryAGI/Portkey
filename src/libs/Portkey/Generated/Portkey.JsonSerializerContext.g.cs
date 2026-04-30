@@ -1433,6 +1433,10 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.WorkspaceWithUsersDefaultsObjectNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.ScimWorkspaceMappingRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ScimWorkspaceMappingRoleNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.CollectionStatusJsonConverter),
 
             typeof(global::Portkey.JsonConverters.CollectionStatusNullableJsonConverter),
@@ -1773,6 +1777,10 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.PutAdminWorkspacesUsersRequestRoleNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.CreateScimWorkspacesRequestRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateScimWorkspacesRequestRoleNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.ListModelsSortJsonConverter),
 
             typeof(global::Portkey.JsonConverters.ListModelsSortNullableJsonConverter),
@@ -1844,6 +1852,10 @@ namespace Portkey
             typeof(global::Portkey.JsonConverters.GetAdminWorkspacesStatusJsonConverter),
 
             typeof(global::Portkey.JsonConverters.GetAdminWorkspacesStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetScimWorkspacesRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetScimWorkspacesRoleNullableJsonConverter),
 
             typeof(global::Portkey.JsonConverters.McpIntegrationsListTypeJsonConverter),
 
@@ -1924,6 +1936,10 @@ namespace Portkey
             typeof(global::Portkey.JsonConverters.GetVirtualKeysResponseObjectJsonConverter),
 
             typeof(global::Portkey.JsonConverters.GetVirtualKeysResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetScimWorkspacesResponseMappingRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetScimWorkspacesResponseMappingRoleNullableJsonConverter),
 
             typeof(global::Portkey.JsonConverters.CreateKeysResponseObjectJsonConverter),
 
@@ -3302,6 +3318,8 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.WorkspaceWithUsers))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.WorkspaceWithUsersDefaults))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.WorkspaceWithUsersDefaultsObject), TypeInfoPropertyName = "WorkspaceWithUsersDefaultsObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ScimWorkspaceMapping))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ScimWorkspaceMappingRole), TypeInfoPropertyName = "ScimWorkspaceMappingRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.Collection))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CollectionStatus), TypeInfoPropertyName = "CollectionStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CollectionDetails))]
@@ -3636,6 +3654,8 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateAdminWorkspacesRequestDefaults))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PutAdminWorkspacesRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PutAdminWorkspacesRequestDefaults))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateScimWorkspacesRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateScimWorkspacesRequestRole), TypeInfoPropertyName = "CreateScimWorkspacesRequestRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.CustomLog, global::System.Collections.Generic.IList<global::Portkey.CustomLog>>), TypeInfoPropertyName = "OneOfCustomLogIListCustomLog2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.CustomLog>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PutLogsExportsRequest))]
@@ -3658,6 +3678,7 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetAdminUsersRole), TypeInfoPropertyName = "GetAdminUsersRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetAdminWorkspacesUsersRole), TypeInfoPropertyName = "GetAdminWorkspacesUsersRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetAdminWorkspacesStatus), TypeInfoPropertyName = "GetAdminWorkspacesStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetScimWorkspacesRole), TypeInfoPropertyName = "GetScimWorkspacesRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.McpIntegrationsListType), TypeInfoPropertyName = "McpIntegrationsListType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.McpIntegrationCapabilitiesListType), TypeInfoPropertyName = "McpIntegrationCapabilitiesListType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.McpServerCapabilitiesListType), TypeInfoPropertyName = "McpServerCapabilitiesListType2")]
@@ -3734,6 +3755,11 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeleteVirtualKeysResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeleteVirtualKeysResponseData))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateAdminUsersInvitesResendResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetScimWorkspacesResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.GetScimWorkspacesResponseMapping>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetScimWorkspacesResponseMapping))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetScimWorkspacesResponseMappingRole), TypeInfoPropertyName = "GetScimWorkspacesResponseMappingRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeleteScimWorkspacesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.McpIntegrationWorkspacesListResponse, global::Portkey.McpIntegrationWorkspacesLegacyResponse>), TypeInfoPropertyName = "OneOfMcpIntegrationWorkspacesListResponseMcpIntegrationWorkspacesLegacyResponse2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateKeysResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateKeysResponseObject), TypeInfoPropertyName = "CreateKeysResponseObject2")]
@@ -4001,6 +4027,7 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.IntegrationList>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.Providers>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.VirtualKeys>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.GetScimWorkspacesResponseMapping>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.GetAnalyticsGraphsRequestsResponseDataPoint>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.GetAnalyticsGraphsCostResponseDataPoint>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.GetAnalyticsGraphsLatencyResponseDataPoint>))]

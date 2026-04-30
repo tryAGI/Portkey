@@ -717,6 +717,28 @@
     },
     {
       "Order": 66,
+      "Title": "Create SCIM Group to Workspace Mapping",
+      "Slug": "create-scim-group-to-workspace-mapping",
+      "Description": "Create a mapping between a SCIM group and a workspace. \nYou can either reference an existing SCIM group by ID, or provide a group name \nto pre-create the SCIM group before the IdP provisions it.",
+      "Language": "csharp",
+      "Code": "using var client = new PortkeyClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::Portkey.CreateScimWorkspacesRequest\u003E(\n    @\u0022{\n  \u0022\u0022scim_group_name\u0022\u0022: \u0022\u0022Engineering Team\u0022\u0022,\n  \u0022\u0022workspace_id\u0022\u0022: \u0022\u0022a1b2c3d4-e5f6-7890-abcd-ef1234567890\u0022\u0022,\n  \u0022\u0022role\u0022\u0022: \u0022\u0022admin\u0022\u0022\n}\u0022)!;\n\nvar response = await client.Workspaces.CreateScimWorkspacesAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022id\u0022: \u0022a1b2c3d4-e5f6-7890-abcd-ef1234567890\u0022,\n//   \u0022workspace_id\u0022: \u0022ws-12345\u0022,\n//   \u0022scim_group\u0022: \u0022Engineering Team\u0022,\n//   \u0022role\u0022: \u0022member\u0022,\n//   \u0022scim_group_id\u0022: \u0022d290f1ee-6c54-4b01-90e6-d701748f0851\u0022\n// }",
+      "Format": "sdk",
+      "OperationId": "createScimWorkspaces",
+      "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 67,
+      "Title": "Delete SCIM Group to Workspace Mapping",
+      "Slug": "delete-scim-group-to-workspace-mapping",
+      "Description": "Remove a SCIM group to workspace mapping. This archives the mapping but does not delete the SCIM group or workspace.",
+      "Language": "http",
+      "Code": "### Delete SCIM Group to Workspace Mapping\nDELETE {{host}}/scim/workspaces/{{scimWorkspaceGroupId}}\nx-portkey-api-key: {{api_key}}\nAccept: application/json\n\n## Responses\n# 200\n# Description: OK\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "deleteScimWorkspacesByScimWorkspaceGroupId",
+      "Setup": null
+    },
+    {
+      "Order": 68,
       "Title": "Get All Workspaces",
       "Slug": "get-all-workspaces",
       "Description": "Generated from OpenAPI examples.",
@@ -727,7 +749,18 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 67,
+      "Order": 69,
+      "Title": "List SCIM Group to Workspace Mappings",
+      "Slug": "list-scim-group-to-workspace-mappings",
+      "Description": "List all mappings between SCIM groups and workspaces for the organisation.\nOptionally filter by workspace, SCIM group, or role.",
+      "Language": "csharp",
+      "Code": "using var client = new PortkeyClient(apiKey);\nvar response = await client.Workspaces.GetScimWorkspacesAsync();\n\n// Example response:\n// {\n//   \u0022mappings\u0022: [\n//     {\n//       \u0022id\u0022: \u0022d290f1ee-6c54-4b01-90e6-d701748f0851\u0022,\n//       \u0022workspace_id\u0022: \u0022ws_my-workspace\u0022,\n//       \u0022scim_group\u0022: \u0022Engineering Team\u0022,\n//       \u0022scim_group_id\u0022: \u0022a1b2c3d4-e5f6-7890-abcd-ef1234567890\u0022,\n//       \u0022role\u0022: \u0022member\u0022\n//     }\n//   ],\n//   \u0022total_count\u0022: 1\n// }",
+      "Format": "sdk",
+      "OperationId": "getScimWorkspaces",
+      "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 70,
       "Title": "Update Workspace",
       "Slug": "update-workspace",
       "Description": "Generated from OpenAPI examples.",
@@ -738,7 +771,7 @@
       "Setup": null
     },
     {
-      "Order": 68,
+      "Order": 71,
       "Title": "Add workspace member",
       "Slug": "add-workspace-member",
       "Description": "Generated from OpenAPI examples.",
@@ -749,7 +782,7 @@
       "Setup": null
     },
     {
-      "Order": 69,
+      "Order": 72,
       "Title": "Remove workspace member",
       "Slug": "remove-workspace-member",
       "Description": "Generated from OpenAPI examples.",
@@ -760,7 +793,7 @@
       "Setup": null
     },
     {
-      "Order": 70,
+      "Order": 73,
       "Title": "Get workspace members",
       "Slug": "get-workspace-members",
       "Description": "Generated from OpenAPI examples.",
@@ -771,7 +804,7 @@
       "Setup": null
     },
     {
-      "Order": 71,
+      "Order": 74,
       "Title": "Get member",
       "Slug": "get-member",
       "Description": "Generated from OpenAPI examples.",
@@ -782,7 +815,7 @@
       "Setup": null
     },
     {
-      "Order": 72,
+      "Order": 75,
       "Title": "Update workspace member",
       "Slug": "update-workspace-member",
       "Description": "Generated from OpenAPI examples.",
