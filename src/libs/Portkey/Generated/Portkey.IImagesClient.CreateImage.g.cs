@@ -19,6 +19,18 @@ namespace Portkey
         /// <summary>
         /// Create Image
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.ImagesResponse>> CreateImageAsResponseAsync(
+
+            global::Portkey.CreateImageRequest request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create Image
+        /// </summary>
         /// <param name="prompt">
         /// A text description of the desired image(s). The maximum length is 1000 characters for `dall-e-2` and 4000 characters for `dall-e-3`.<br/>
         /// Example: A cute baby sea otter

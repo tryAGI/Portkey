@@ -19,6 +19,18 @@ namespace Portkey
         /// <summary>
         /// Completions
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.CreateCompletionResponse>> CreateCompletionAsResponseAsync(
+
+            global::Portkey.CreateCompletionRequest request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Completions
+        /// </summary>
         /// <param name="model">
         /// ID of the model to use. You can use the [List models](https://platform.openai.com/docs/api-reference/models/list) API to see all of your available models, or see our [Model overview](https://platform.openai.com/docs/models/overview) for descriptions of them.
         /// </param>

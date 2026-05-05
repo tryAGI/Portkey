@@ -25,6 +25,22 @@ namespace Portkey
         /// </summary>
         /// <param name="threadId"></param>
         /// <param name="messageId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.MessageObject>> ModifyMessageAsResponseAsync(
+            string threadId,
+            string messageId,
+
+            global::Portkey.ModifyMessageRequest request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Modifies a message.
+        /// </summary>
+        /// <param name="threadId"></param>
+        /// <param name="messageId"></param>
         /// <param name="metadata">
         /// Set of 16 key-value pairs that can be attached to an object. This can be useful for storing additional information about the object in a structured format. Keys can be a maximum of 64 characters long and values can be a maxium of 512 characters long.
         /// </param>
