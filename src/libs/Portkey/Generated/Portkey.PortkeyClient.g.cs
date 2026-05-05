@@ -46,7 +46,7 @@ namespace Portkey
         /// <summary>
         /// Get data points for graphical representation.
         /// </summary>
-        public AnalyticsGraphsClient AnalyticsGraphs => new AnalyticsGraphsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public AnalyticsGraphsClient AnalyticsGraphs => new AnalyticsGraphsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -56,7 +56,7 @@ namespace Portkey
         /// <summary>
         /// Get grouped metrics for the selected time bucket.
         /// </summary>
-        public AnalyticsGroupsClient AnalyticsGroups => new AnalyticsGroupsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public AnalyticsGroupsClient AnalyticsGroups => new AnalyticsGroupsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -66,7 +66,7 @@ namespace Portkey
         /// <summary>
         /// Get overall summary for the selected time bucket.
         /// </summary>
-        public AnalyticsSummaryClient AnalyticsSummary => new AnalyticsSummaryClient(HttpClient, authorizations: Authorizations, options: Options)
+        public AnalyticsSummaryClient AnalyticsSummary => new AnalyticsSummaryClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -76,7 +76,7 @@ namespace Portkey
         /// <summary>
         /// Create, List, Retrieve, Update, and Delete your Portkey API keys.
         /// </summary>
-        public ApiKeysClient ApiKeys => new ApiKeysClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ApiKeysClient ApiKeys => new ApiKeysClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -86,7 +86,7 @@ namespace Portkey
         /// <summary>
         /// Build Assistants that can call models and use tools.
         /// </summary>
-        public AssistantsClient Assistants => new AssistantsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public AssistantsClient Assistants => new AssistantsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -96,7 +96,7 @@ namespace Portkey
         /// <summary>
         /// Turn audio into text or text into audio.
         /// </summary>
-        public AudioClient Audio => new AudioClient(HttpClient, authorizations: Authorizations, options: Options)
+        public AudioClient Audio => new AudioClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -106,7 +106,7 @@ namespace Portkey
         /// <summary>
         /// Get audit logs for your Portkey account.
         /// </summary>
-        public AuditLogsClient AuditLogs => new AuditLogsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public AuditLogsClient AuditLogs => new AuditLogsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -116,7 +116,7 @@ namespace Portkey
         /// <summary>
         /// Create large batches of API requests to run asynchronously.
         /// </summary>
-        public BatchClient Batch => new BatchClient(HttpClient, authorizations: Authorizations, options: Options)
+        public BatchClient Batch => new BatchClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -126,7 +126,7 @@ namespace Portkey
         /// <summary>
         /// Given a list of messages comprising a conversation, the model will return a response.
         /// </summary>
-        public ChatClient Chat => new ChatClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ChatClient Chat => new ChatClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -136,7 +136,7 @@ namespace Portkey
         /// <summary>
         /// Create, List, Retrieve, Update, and Delete collections of prompts.
         /// </summary>
-        public CollectionsClient Collections => new CollectionsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public CollectionsClient Collections => new CollectionsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -146,7 +146,7 @@ namespace Portkey
         /// <summary>
         /// Given a prompt, the model will return one or more predicted completions, and can also return the probabilities of alternative tokens at each position.
         /// </summary>
-        public CompletionsClient Completions => new CompletionsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public CompletionsClient Completions => new CompletionsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -156,7 +156,7 @@ namespace Portkey
         /// <summary>
         /// Create, List, Retrieve, and Update your Portkey Configs.
         /// </summary>
-        public ConfigsClient Configs => new ConfigsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ConfigsClient Configs => new ConfigsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -166,7 +166,7 @@ namespace Portkey
         /// <summary>
         /// Get a vector representation of a given input that can be easily consumed by machine learning models and algorithms.
         /// </summary>
-        public EmbeddingsClient Embeddings => new EmbeddingsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public EmbeddingsClient Embeddings => new EmbeddingsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -176,7 +176,7 @@ namespace Portkey
         /// <summary>
         /// Send and Update any feedback.
         /// </summary>
-        public FeedbackClient Feedback => new FeedbackClient(HttpClient, authorizations: Authorizations, options: Options)
+        public FeedbackClient Feedback => new FeedbackClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -186,7 +186,7 @@ namespace Portkey
         /// <summary>
         /// Files are used to upload documents that can be used with features like Assistants and Fine-tuning.
         /// </summary>
-        public FilesClient Files => new FilesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public FilesClient Files => new FilesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -196,7 +196,7 @@ namespace Portkey
         /// <summary>
         /// Manage fine-tuning jobs to tailor a model to your specific training data.
         /// </summary>
-        public FineTuningClient FineTuning => new FineTuningClient(HttpClient, authorizations: Authorizations, options: Options)
+        public FineTuningClient FineTuning => new FineTuningClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -206,7 +206,7 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
-        public FinetuneClient Finetune => new FinetuneClient(HttpClient, authorizations: Authorizations, options: Options)
+        public FinetuneClient Finetune => new FinetuneClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -216,7 +216,7 @@ namespace Portkey
         /// <summary>
         /// Create, List, Retrieve, Update, and Delete prompt Guardrails.
         /// </summary>
-        public GuardrailsClient Guardrails => new GuardrailsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public GuardrailsClient Guardrails => new GuardrailsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -226,7 +226,7 @@ namespace Portkey
         /// <summary>
         /// Given a prompt and/or an input image, the model will generate a new image.
         /// </summary>
-        public ImagesClient Images => new ImagesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ImagesClient Images => new ImagesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -236,7 +236,7 @@ namespace Portkey
         /// <summary>
         /// Create, List, Retrieve, Update, and Delete your Portkey Integrations.
         /// </summary>
-        public IntegrationsClient Integrations => new IntegrationsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public IntegrationsClient Integrations => new IntegrationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -246,7 +246,7 @@ namespace Portkey
         /// <summary>
         /// Manage model access for your Portkey Integrations.
         /// </summary>
-        public IntegrationsModelsClient IntegrationsModels => new IntegrationsModelsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public IntegrationsModelsClient IntegrationsModels => new IntegrationsModelsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -256,7 +256,7 @@ namespace Portkey
         /// <summary>
         /// Manage workspace access for your Portkey Integrations.
         /// </summary>
-        public IntegrationsWorkspacesClient IntegrationsWorkspaces => new IntegrationsWorkspacesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public IntegrationsWorkspacesClient IntegrationsWorkspaces => new IntegrationsWorkspacesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -266,7 +266,7 @@ namespace Portkey
         /// <summary>
         /// Create, List, Retrieve, Update, and Delete labels.
         /// </summary>
-        public LabelsClient Labels => new LabelsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public LabelsClient Labels => new LabelsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -276,7 +276,7 @@ namespace Portkey
         /// <summary>
         /// Custom Logger to add external logs to Portkey.
         /// </summary>
-        public LogsClient Logs => new LogsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public LogsClient Logs => new LogsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -286,7 +286,7 @@ namespace Portkey
         /// <summary>
         /// Exports logs service.
         /// </summary>
-        public LogsExportClient LogsExport => new LogsExportClient(HttpClient, authorizations: Authorizations, options: Options)
+        public LogsExportClient LogsExport => new LogsExportClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -296,7 +296,7 @@ namespace Portkey
         /// <summary>
         /// Create, List, Retrieve, Update, and Delete MCP Integrations.
         /// </summary>
-        public McpIntegrationsClient McpIntegrations => new McpIntegrationsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public McpIntegrationsClient McpIntegrations => new McpIntegrationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -306,7 +306,7 @@ namespace Portkey
         /// <summary>
         /// List and manage capabilities for MCP Integrations.
         /// </summary>
-        public McpIntegrationsCapabilitiesClient McpIntegrationsCapabilities => new McpIntegrationsCapabilitiesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public McpIntegrationsCapabilitiesClient McpIntegrationsCapabilities => new McpIntegrationsCapabilitiesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -316,7 +316,7 @@ namespace Portkey
         /// <summary>
         /// Get MCP Integration metadata and sync info.
         /// </summary>
-        public McpIntegrationsMetadataClient McpIntegrationsMetadata => new McpIntegrationsMetadataClient(HttpClient, authorizations: Authorizations, options: Options)
+        public McpIntegrationsMetadataClient McpIntegrationsMetadata => new McpIntegrationsMetadataClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -326,7 +326,7 @@ namespace Portkey
         /// <summary>
         /// Manage workspace access for MCP Integrations.
         /// </summary>
-        public McpIntegrationsWorkspacesClient McpIntegrationsWorkspaces => new McpIntegrationsWorkspacesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public McpIntegrationsWorkspacesClient McpIntegrationsWorkspaces => new McpIntegrationsWorkspacesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -336,7 +336,7 @@ namespace Portkey
         /// <summary>
         /// Create, List, Retrieve, Update, and Delete MCP Servers (workspace instances of MCP Integrations).
         /// </summary>
-        public McpServersClient McpServers => new McpServersClient(HttpClient, authorizations: Authorizations, options: Options)
+        public McpServersClient McpServers => new McpServersClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -346,7 +346,7 @@ namespace Portkey
         /// <summary>
         /// List and manage capabilities for MCP Servers.
         /// </summary>
-        public McpServersCapabilitiesClient McpServersCapabilities => new McpServersCapabilitiesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public McpServersCapabilitiesClient McpServersCapabilities => new McpServersCapabilitiesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -356,7 +356,7 @@ namespace Portkey
         /// <summary>
         /// List and manage user connections for MCP Servers.
         /// </summary>
-        public McpServersConnectionsClient McpServersConnections => new McpServersConnectionsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public McpServersConnectionsClient McpServersConnections => new McpServersConnectionsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -366,7 +366,7 @@ namespace Portkey
         /// <summary>
         /// List and manage user access for MCP Servers.
         /// </summary>
-        public McpServersUserAccessClient McpServersUserAccess => new McpServersUserAccessClient(HttpClient, authorizations: Authorizations, options: Options)
+        public McpServersUserAccessClient McpServersUserAccess => new McpServersUserAccessClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -376,7 +376,7 @@ namespace Portkey
         /// <summary>
         /// Model pricing configurations for 2300+ LLMs across 40+ providers.
         /// </summary>
-        public ModelPricingClient ModelPricing => new ModelPricingClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ModelPricingClient ModelPricing => new ModelPricingClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -386,7 +386,7 @@ namespace Portkey
         /// <summary>
         /// List and describe the various models available in the API.
         /// </summary>
-        public ModelsClient Models => new ModelsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ModelsClient Models => new ModelsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -396,7 +396,7 @@ namespace Portkey
         /// <summary>
         /// Given a input text, outputs if the model classifies it as potentially harmful.
         /// </summary>
-        public ModerationsClient Moderations => new ModerationsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ModerationsClient Moderations => new ModerationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -406,7 +406,7 @@ namespace Portkey
         /// <summary>
         /// Create, List, Retrieve, Update, and Delete prompt partials.
         /// </summary>
-        public PromptPartialsClient PromptPartials => new PromptPartialsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public PromptPartialsClient PromptPartials => new PromptPartialsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -416,7 +416,7 @@ namespace Portkey
         /// <summary>
         /// Given a prompt template ID and variables, will run the saved prompt template and return a response.
         /// </summary>
-        public PromptsClient Prompts => new PromptsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public PromptsClient Prompts => new PromptsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -426,7 +426,7 @@ namespace Portkey
         /// <summary>
         /// Create, List, Retrieve, Update, and Delete your Portkey Providers.
         /// </summary>
-        public ProvidersClient Providers => new ProvidersClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ProvidersClient Providers => new ProvidersClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -436,7 +436,7 @@ namespace Portkey
         /// <summary>
         /// Manage rate limits policies to control request or token rates.
         /// </summary>
-        public RateLimitsPoliciesClient RateLimitsPolicies => new RateLimitsPoliciesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public RateLimitsPoliciesClient RateLimitsPolicies => new RateLimitsPoliciesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -446,7 +446,7 @@ namespace Portkey
         /// <summary>
         /// WebSocket proxy for provider Realtime APIs.
         /// </summary>
-        public RealtimeClient Realtime => new RealtimeClient(HttpClient, authorizations: Authorizations, options: Options)
+        public RealtimeClient Realtime => new RealtimeClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -456,7 +456,7 @@ namespace Portkey
         /// <summary>
         /// Rerank a list of documents based on their relevance to a query. Supported providers include Cohere, Voyage, Jina, Pinecone, Bedrock, and Azure AI.
         /// </summary>
-        public RerankClient Rerank => new RerankClient(HttpClient, authorizations: Authorizations, options: Options)
+        public RerankClient Rerank => new RerankClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -466,7 +466,7 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
-        public ResponsesClient Responses => new ResponsesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ResponsesClient Responses => new ResponsesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -476,7 +476,7 @@ namespace Portkey
         /// <summary>
         /// Create, List, Retrieve, Update, and Delete secret references to external secret managers.
         /// </summary>
-        public SecretReferencesClient SecretReferences => new SecretReferencesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public SecretReferencesClient SecretReferences => new SecretReferencesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -486,7 +486,7 @@ namespace Portkey
         /// <summary>
         /// Manage usage limits policies to control total usage over time.
         /// </summary>
-        public UsageLimitsPoliciesClient UsageLimitsPolicies => new UsageLimitsPoliciesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public UsageLimitsPoliciesClient UsageLimitsPolicies => new UsageLimitsPoliciesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -496,7 +496,7 @@ namespace Portkey
         /// <summary>
         /// Create and manage user invites.
         /// </summary>
-        public UserInvitesClient UserInvites => new UserInvitesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public UserInvitesClient UserInvites => new UserInvitesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -506,7 +506,7 @@ namespace Portkey
         /// <summary>
         /// Create and manage users.
         /// </summary>
-        public UsersClient Users => new UsersClient(HttpClient, authorizations: Authorizations, options: Options)
+        public UsersClient Users => new UsersClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -516,7 +516,7 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
-        public VectorStoresClient VectorStores => new VectorStoresClient(HttpClient, authorizations: Authorizations, options: Options)
+        public VectorStoresClient VectorStores => new VectorStoresClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -526,7 +526,7 @@ namespace Portkey
         /// <summary>
         /// Create, List, Retrieve, Update, and Delete your Portkey Virtual keys.
         /// </summary>
-        public VirtualKeysClient VirtualKeys => new VirtualKeysClient(HttpClient, authorizations: Authorizations, options: Options)
+        public VirtualKeysClient VirtualKeys => new VirtualKeysClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -536,7 +536,7 @@ namespace Portkey
         /// <summary>
         /// Create and manage workspaces.
         /// </summary>
-        public WorkspacesClient Workspaces => new WorkspacesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public WorkspacesClient Workspaces => new WorkspacesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -546,7 +546,7 @@ namespace Portkey
         /// <summary>
         /// Create and manage workspace members.
         /// </summary>
-        public WorkspacesMembersClient WorkspacesMembers => new WorkspacesMembersClient(HttpClient, authorizations: Authorizations, options: Options)
+        public WorkspacesMembersClient WorkspacesMembers => new WorkspacesMembersClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -629,10 +629,10 @@ namespace Portkey
         /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
         public PortkeyClient(
-            global::System.Net.Http.HttpClient? httpClient = null,
-            global::System.Uri? baseUri = null,
-            global::System.Collections.Generic.List<global::Portkey.EndPointAuthorization>? authorizations = null,
-            global::Portkey.AutoSDKClientOptions? options = null,
+            global::System.Net.Http.HttpClient? httpClient,
+            global::System.Uri? baseUri,
+            global::System.Collections.Generic.List<global::Portkey.EndPointAuthorization>? authorizations,
+            global::Portkey.AutoSDKClientOptions? options,
             bool disposeHttpClient = true)
         {
 

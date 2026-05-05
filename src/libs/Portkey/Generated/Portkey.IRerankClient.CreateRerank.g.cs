@@ -38,6 +38,30 @@ namespace Portkey
         /// <param name="xPortkeyParentSpanId"></param>
         /// <param name="xPortkeySpanName"></param>
         /// <param name="xPortkeyMetadata"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.CreateRerankResponse>> CreateRerankAsResponseAsync(
+
+            global::Portkey.CreateRerankRequest request,
+            string? xPortkeyTraceId = default,
+            string? xPortkeySpanId = default,
+            string? xPortkeyParentSpanId = default,
+            string? xPortkeySpanName = default,
+            object? xPortkeyMetadata = default,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Rerank<br/>
+        /// Reranks a list of documents based on their relevance to a query. This endpoint provides a unified interface to reranking models from multiple providers including Cohere, Voyage, Jina, Pinecone, Bedrock, and Azure AI.<br/>
+        /// Reranking is useful for improving search results by scoring and sorting documents based on semantic relevance to a query, rather than just keyword matching.
+        /// </summary>
+        /// <param name="xPortkeyTraceId"></param>
+        /// <param name="xPortkeySpanId"></param>
+        /// <param name="xPortkeyParentSpanId"></param>
+        /// <param name="xPortkeySpanName"></param>
+        /// <param name="xPortkeyMetadata"></param>
         /// <param name="model">
         /// ID of the model to use for reranking. Model availability depends on the provider:<br/>
         /// - **Cohere**: `rerank-v3.5`, `rerank-english-v3.0`, `rerank-multilingual-v3.0`, `rerank-english-v2.0`, `rerank-multilingual-v2.0`<br/>
