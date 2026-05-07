@@ -85,6 +85,16 @@ namespace Portkey
         public global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? SecretMappings { get; set; }
 
         /// <summary>
+        /// Per-Integration pricing adjustments applied on top of Portkey's base model pricing<br/>
+        /// for cost tracking, analytics, and budget limits. Use to reflect negotiated discounts,<br/>
+        /// committed-use rates, or internal markups for cost showback.<br/>
+        /// Example: {"multiplier":{"default":0.8,"cache_read_input_token":0.9,"cache_write_input_token":0.9}}
+        /// </summary>
+        /// <example>{"multiplier":{"default":0.8,"cache_read_input_token":0.9,"cache_write_input_token":0.9}}</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pricing_adjustments")]
+        public global::Portkey.PricingAdjustments? PricingAdjustments { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -130,6 +140,12 @@ namespace Portkey
         /// <param name="secretMappings">
         /// Dynamically resolve secrets from secret references at runtime. Valid target_field values are "key" or "configurations.&lt;field&gt;" (e.g. "configurations.aws_secret_access_key", "configurations.azure_entra_client_secret"). Each target_field must be unique. When "key" is mapped, the key body field can be omitted.
         /// </param>
+        /// <param name="pricingAdjustments">
+        /// Per-Integration pricing adjustments applied on top of Portkey's base model pricing<br/>
+        /// for cost tracking, analytics, and budget limits. Use to reflect negotiated discounts,<br/>
+        /// committed-use rates, or internal markups for cost showback.<br/>
+        /// Example: {"multiplier":{"default":0.8,"cache_read_input_token":0.9,"cache_write_input_token":0.9}}
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -143,7 +159,8 @@ namespace Portkey
             global::Portkey.OneOf<global::Portkey.OpenAIConfiguration, global::Portkey.AzureOpenAIConfiguration, global::Portkey.BedrockConfiguration, global::Portkey.VertexAIConfiguration, global::Portkey.AzureAIConfiguration, global::Portkey.WorkersAIConfiguration, global::Portkey.SageMakerConfiguration?, global::Portkey.HuggingFaceConfiguration, global::Portkey.CortexConfiguration, global::Portkey.CustomHostConfiguration>? configurations,
             bool? createDefaultProvider,
             string? defaultProviderSlug,
-            global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? secretMappings)
+            global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? secretMappings,
+            global::Portkey.PricingAdjustments? pricingAdjustments)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Slug = slug;
@@ -155,6 +172,7 @@ namespace Portkey
             this.CreateDefaultProvider = createDefaultProvider;
             this.DefaultProviderSlug = defaultProviderSlug;
             this.SecretMappings = secretMappings;
+            this.PricingAdjustments = pricingAdjustments;
         }
 
         /// <summary>

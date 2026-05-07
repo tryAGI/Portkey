@@ -53,6 +53,8 @@ namespace Portkey.JsonConverters
             if (__jsonProps.Contains("global_workspace_access_settings.rate_limits")) __score1++;
             if (__jsonProps.Contains("global_workspace_access_settings.usage_limits")) __score1++;
             if (__jsonProps.Contains("masked_key")) __score1++;
+            if (__jsonProps.Contains("pricing_adjustments")) __score1++;
+            if (__jsonProps.Contains("pricing_adjustments.multiplier")) __score1++;
             if (__jsonProps.Contains("secret_mappings")) __score1++;
             if (__jsonProps.Contains("workspace_count")) __score1++;
             var __bestScore = 0;

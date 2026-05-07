@@ -490,6 +490,12 @@ namespace Portkey
         /// <param name="secretMappings">
         /// Dynamically resolve secrets from secret references at runtime. Valid target_field values are "key" or "configurations.&lt;field&gt;" (e.g. "configurations.aws_secret_access_key", "configurations.azure_entra_client_secret"). Each target_field must be unique. When "key" is mapped, the key body field can be omitted.
         /// </param>
+        /// <param name="pricingAdjustments">
+        /// Per-Integration pricing adjustments applied on top of Portkey's base model pricing<br/>
+        /// for cost tracking, analytics, and budget limits. Use to reflect negotiated discounts,<br/>
+        /// committed-use rates, or internal markups for cost showback.<br/>
+        /// Example: {"multiplier":{"default":0.8,"cache_read_input_token":0.9,"cache_write_input_token":0.9}}
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -504,6 +510,7 @@ namespace Portkey
             bool? createDefaultProvider = default,
             string? defaultProviderSlug = default,
             global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? secretMappings = default,
+            global::Portkey.PricingAdjustments? pricingAdjustments = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -519,6 +526,7 @@ namespace Portkey
                 CreateDefaultProvider = createDefaultProvider,
                 DefaultProviderSlug = defaultProviderSlug,
                 SecretMappings = secretMappings,
+                PricingAdjustments = pricingAdjustments,
             };
 
             return await CreateIntegrationsAsync(
