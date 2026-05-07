@@ -50,6 +50,16 @@ namespace Portkey
         public global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? SecretMappings { get; set; }
 
         /// <summary>
+        /// Per-Integration pricing adjustments applied on top of Portkey's base model pricing<br/>
+        /// for cost tracking, analytics, and budget limits. Use to reflect negotiated discounts,<br/>
+        /// committed-use rates, or internal markups for cost showback.<br/>
+        /// Example: {"multiplier":{"default":0.8,"cache_read_input_token":0.9,"cache_write_input_token":0.9}}
+        /// </summary>
+        /// <example>{"multiplier":{"default":0.8,"cache_read_input_token":0.9,"cache_write_input_token":0.9}}</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pricing_adjustments")]
+        public global::Portkey.PricingAdjustments? PricingAdjustments { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -78,6 +88,12 @@ namespace Portkey
         /// <param name="secretMappings">
         /// Secret reference mappings for this integration. Valid target_field values are "key" or "configurations.&lt;field&gt;".
         /// </param>
+        /// <param name="pricingAdjustments">
+        /// Per-Integration pricing adjustments applied on top of Portkey's base model pricing<br/>
+        /// for cost tracking, analytics, and budget limits. Use to reflect negotiated discounts,<br/>
+        /// committed-use rates, or internal markups for cost showback.<br/>
+        /// Example: {"multiplier":{"default":0.8,"cache_read_input_token":0.9,"cache_write_input_token":0.9}}
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -87,7 +103,8 @@ namespace Portkey
             global::Portkey.GlobalWorkspaceAccess? globalWorkspaceAccessSettings,
             bool? allowAllModels,
             int? workspaceCount,
-            global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? secretMappings)
+            global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? secretMappings,
+            global::Portkey.PricingAdjustments? pricingAdjustments)
         {
             this.MaskedKey = maskedKey;
             this.Configurations = configurations;
@@ -95,6 +112,7 @@ namespace Portkey
             this.AllowAllModels = allowAllModels;
             this.WorkspaceCount = workspaceCount;
             this.SecretMappings = secretMappings;
+            this.PricingAdjustments = pricingAdjustments;
         }
 
         /// <summary>
