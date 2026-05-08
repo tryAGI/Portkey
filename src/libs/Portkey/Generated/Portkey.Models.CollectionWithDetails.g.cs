@@ -29,6 +29,19 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickCollection(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.Collection? value)
+        {
+            value = Collection;
+            return IsCollection;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.CollectionWithDetailsVariant2? CollectionWithDetailsVariant2 { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CollectionWithDetailsVariant2))]
 #endif
         public bool IsCollectionWithDetailsVariant2 => CollectionWithDetailsVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickCollectionWithDetailsVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.CollectionWithDetailsVariant2? value)
+        {
+            value = CollectionWithDetailsVariant2;
+            return IsCollectionWithDetailsVariant2;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -118,8 +144,8 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.Collection?, TResult>? collection = null,
-            global::System.Func<global::Portkey.CollectionWithDetailsVariant2?, TResult>? collectionWithDetailsVariant2 = null,
+            global::System.Func<global::Portkey.Collection, TResult>? collection = null,
+            global::System.Func<global::Portkey.CollectionWithDetailsVariant2, TResult>? collectionWithDetailsVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +169,32 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.Collection?>? collection = null,
-            global::System.Action<global::Portkey.CollectionWithDetailsVariant2?>? collectionWithDetailsVariant2 = null,
+            global::System.Action<global::Portkey.Collection>? collection = null,
+
+            global::System.Action<global::Portkey.CollectionWithDetailsVariant2>? collectionWithDetailsVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsCollection)
+            {
+                collection?.Invoke(Collection!);
+            }
+            else if (IsCollectionWithDetailsVariant2)
+            {
+                collectionWithDetailsVariant2?.Invoke(CollectionWithDetailsVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.Collection>? collection = null,
+            global::System.Action<global::Portkey.CollectionWithDetailsVariant2>? collectionWithDetailsVariant2 = null,
             bool validate = true)
         {
             if (validate)

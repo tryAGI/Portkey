@@ -27,6 +27,19 @@ namespace Portkey
         public bool IsCodeInterpreterTextOutput => CodeInterpreterTextOutput != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickCodeInterpreterTextOutput(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.CodeInterpreterTextOutput? value)
+        {
+            value = CodeInterpreterTextOutput;
+            return IsCodeInterpreterTextOutput;
+        }
+
+        /// <summary>
         /// The output of a code interpreter tool call that is a file.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -42,6 +55,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CodeInterpreterFileOutput))]
 #endif
         public bool IsCodeInterpreterFileOutput => CodeInterpreterFileOutput != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickCodeInterpreterFileOutput(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.CodeInterpreterFileOutput? value)
+        {
+            value = CodeInterpreterFileOutput;
+            return IsCodeInterpreterFileOutput;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -118,8 +144,8 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.CodeInterpreterTextOutput?, TResult>? codeInterpreterTextOutput = null,
-            global::System.Func<global::Portkey.CodeInterpreterFileOutput?, TResult>? codeInterpreterFileOutput = null,
+            global::System.Func<global::Portkey.CodeInterpreterTextOutput, TResult>? codeInterpreterTextOutput = null,
+            global::System.Func<global::Portkey.CodeInterpreterFileOutput, TResult>? codeInterpreterFileOutput = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +169,32 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.CodeInterpreterTextOutput?>? codeInterpreterTextOutput = null,
-            global::System.Action<global::Portkey.CodeInterpreterFileOutput?>? codeInterpreterFileOutput = null,
+            global::System.Action<global::Portkey.CodeInterpreterTextOutput>? codeInterpreterTextOutput = null,
+
+            global::System.Action<global::Portkey.CodeInterpreterFileOutput>? codeInterpreterFileOutput = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsCodeInterpreterTextOutput)
+            {
+                codeInterpreterTextOutput?.Invoke(CodeInterpreterTextOutput!);
+            }
+            else if (IsCodeInterpreterFileOutput)
+            {
+                codeInterpreterFileOutput?.Invoke(CodeInterpreterFileOutput!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.CodeInterpreterTextOutput>? codeInterpreterTextOutput = null,
+            global::System.Action<global::Portkey.CodeInterpreterFileOutput>? codeInterpreterFileOutput = null,
             bool validate = true)
         {
             if (validate)

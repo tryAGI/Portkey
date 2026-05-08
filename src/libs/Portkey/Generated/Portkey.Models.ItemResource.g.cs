@@ -27,6 +27,19 @@ namespace Portkey
         public bool IsInputMessage => InputMessage != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickInputMessage(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.InputMessageResource? value)
+        {
+            value = InputMessage;
+            return IsInputMessage;
+        }
+
+        /// <summary>
         /// An output message from the model.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -42,6 +55,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Message))]
 #endif
         public bool IsMessage => Message != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickMessage(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.OutputMessage? value)
+        {
+            value = Message;
+            return IsMessage;
+        }
 
         /// <summary>
         /// The results of a file search tool call. See the <br/>
@@ -60,6 +86,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FileSearchCall))]
 #endif
         public bool IsFileSearchCall => FileSearchCall != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickFileSearchCall(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.FileSearchToolCall? value)
+        {
+            value = FileSearchCall;
+            return IsFileSearchCall;
+        }
 
         /// <summary>
         /// A tool call to a computer use tool. See the <br/>
@@ -82,6 +121,19 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickComputerCall(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ComputerToolCall? value)
+        {
+            value = ComputerCall;
+            return IsComputerCall;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ComputerToolCallOutputResource? ComputerToolCallOutput { get; init; }
 #else
@@ -95,6 +147,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ComputerToolCallOutput))]
 #endif
         public bool IsComputerToolCallOutput => ComputerToolCallOutput != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickComputerToolCallOutput(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ComputerToolCallOutputResource? value)
+        {
+            value = ComputerToolCallOutput;
+            return IsComputerToolCallOutput;
+        }
 
         /// <summary>
         /// The results of a web search tool call. See the <br/>
@@ -117,6 +182,19 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickWebSearchCall(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.WebSearchToolCall? value)
+        {
+            value = WebSearchCall;
+            return IsWebSearchCall;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.FunctionToolCallResource? FunctionToolCall { get; init; }
 #else
@@ -134,6 +212,19 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickFunctionToolCall(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.FunctionToolCallResource? value)
+        {
+            value = FunctionToolCall;
+            return IsFunctionToolCall;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.FunctionToolCallOutputResource? FunctionToolCallOutput { get; init; }
 #else
@@ -147,6 +238,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FunctionToolCallOutput))]
 #endif
         public bool IsFunctionToolCallOutput => FunctionToolCallOutput != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickFunctionToolCallOutput(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.FunctionToolCallOutputResource? value)
+        {
+            value = FunctionToolCallOutput;
+            return IsFunctionToolCallOutput;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -356,11 +460,11 @@ namespace Portkey
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.InputMessageResource?, TResult>? inputMessage = null,
-            global::System.Func<global::Portkey.OutputMessage?, TResult>? message = null,
-            global::System.Func<global::Portkey.FileSearchToolCall?, TResult>? fileSearchCall = null,
-            global::System.Func<global::Portkey.ComputerToolCall?, TResult>? computerCall = null,
+            global::System.Func<global::Portkey.OutputMessage, TResult>? message = null,
+            global::System.Func<global::Portkey.FileSearchToolCall, TResult>? fileSearchCall = null,
+            global::System.Func<global::Portkey.ComputerToolCall, TResult>? computerCall = null,
             global::System.Func<global::Portkey.ComputerToolCallOutputResource?, TResult>? computerToolCallOutput = null,
-            global::System.Func<global::Portkey.WebSearchToolCall?, TResult>? webSearchCall = null,
+            global::System.Func<global::Portkey.WebSearchToolCall, TResult>? webSearchCall = null,
             global::System.Func<global::Portkey.FunctionToolCallResource?, TResult>? functionToolCall = null,
             global::System.Func<global::Portkey.FunctionToolCallOutputResource?, TResult>? functionToolCallOutput = null,
             bool validate = true)
@@ -411,11 +515,71 @@ namespace Portkey
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.InputMessageResource?>? inputMessage = null,
-            global::System.Action<global::Portkey.OutputMessage?>? message = null,
-            global::System.Action<global::Portkey.FileSearchToolCall?>? fileSearchCall = null,
-            global::System.Action<global::Portkey.ComputerToolCall?>? computerCall = null,
+
+            global::System.Action<global::Portkey.OutputMessage>? message = null,
+
+            global::System.Action<global::Portkey.FileSearchToolCall>? fileSearchCall = null,
+
+            global::System.Action<global::Portkey.ComputerToolCall>? computerCall = null,
+
             global::System.Action<global::Portkey.ComputerToolCallOutputResource?>? computerToolCallOutput = null,
-            global::System.Action<global::Portkey.WebSearchToolCall?>? webSearchCall = null,
+
+            global::System.Action<global::Portkey.WebSearchToolCall>? webSearchCall = null,
+
+            global::System.Action<global::Portkey.FunctionToolCallResource?>? functionToolCall = null,
+
+            global::System.Action<global::Portkey.FunctionToolCallOutputResource?>? functionToolCallOutput = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsInputMessage)
+            {
+                inputMessage?.Invoke(InputMessage!);
+            }
+            else if (IsMessage)
+            {
+                message?.Invoke(Message!);
+            }
+            else if (IsFileSearchCall)
+            {
+                fileSearchCall?.Invoke(FileSearchCall!);
+            }
+            else if (IsComputerCall)
+            {
+                computerCall?.Invoke(ComputerCall!);
+            }
+            else if (IsComputerToolCallOutput)
+            {
+                computerToolCallOutput?.Invoke(ComputerToolCallOutput!);
+            }
+            else if (IsWebSearchCall)
+            {
+                webSearchCall?.Invoke(WebSearchCall!);
+            }
+            else if (IsFunctionToolCall)
+            {
+                functionToolCall?.Invoke(FunctionToolCall!);
+            }
+            else if (IsFunctionToolCallOutput)
+            {
+                functionToolCallOutput?.Invoke(FunctionToolCallOutput!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.InputMessageResource?>? inputMessage = null,
+            global::System.Action<global::Portkey.OutputMessage>? message = null,
+            global::System.Action<global::Portkey.FileSearchToolCall>? fileSearchCall = null,
+            global::System.Action<global::Portkey.ComputerToolCall>? computerCall = null,
+            global::System.Action<global::Portkey.ComputerToolCallOutputResource?>? computerToolCallOutput = null,
+            global::System.Action<global::Portkey.WebSearchToolCall>? webSearchCall = null,
             global::System.Action<global::Portkey.FunctionToolCallResource?>? functionToolCall = null,
             global::System.Action<global::Portkey.FunctionToolCallOutputResource?>? functionToolCallOutput = null,
             bool validate = true)

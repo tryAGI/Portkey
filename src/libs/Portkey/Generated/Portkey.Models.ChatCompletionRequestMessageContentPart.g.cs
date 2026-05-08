@@ -29,6 +29,19 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickTextContentPart(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ChatCompletionRequestMessageContentPartText? value)
+        {
+            value = TextContentPart;
+            return IsTextContentPart;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionRequestMessageContentPartImage? ImageContentPart { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ImageContentPart))]
 #endif
         public bool IsImageContentPart => ImageContentPart != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickImageContentPart(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ChatCompletionRequestMessageContentPartImage? value)
+        {
+            value = ImageContentPart;
+            return IsImageContentPart;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -118,8 +144,8 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.ChatCompletionRequestMessageContentPartText?, TResult>? textContentPart = null,
-            global::System.Func<global::Portkey.ChatCompletionRequestMessageContentPartImage?, TResult>? imageContentPart = null,
+            global::System.Func<global::Portkey.ChatCompletionRequestMessageContentPartText, TResult>? textContentPart = null,
+            global::System.Func<global::Portkey.ChatCompletionRequestMessageContentPartImage, TResult>? imageContentPart = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +169,32 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.ChatCompletionRequestMessageContentPartText?>? textContentPart = null,
-            global::System.Action<global::Portkey.ChatCompletionRequestMessageContentPartImage?>? imageContentPart = null,
+            global::System.Action<global::Portkey.ChatCompletionRequestMessageContentPartText>? textContentPart = null,
+
+            global::System.Action<global::Portkey.ChatCompletionRequestMessageContentPartImage>? imageContentPart = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsTextContentPart)
+            {
+                textContentPart?.Invoke(TextContentPart!);
+            }
+            else if (IsImageContentPart)
+            {
+                imageContentPart?.Invoke(ImageContentPart!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.ChatCompletionRequestMessageContentPartText>? textContentPart = null,
+            global::System.Action<global::Portkey.ChatCompletionRequestMessageContentPartImage>? imageContentPart = null,
             bool validate = true)
         {
             if (validate)

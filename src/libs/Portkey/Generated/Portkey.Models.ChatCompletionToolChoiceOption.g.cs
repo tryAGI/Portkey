@@ -32,6 +32,19 @@ namespace Portkey
         public bool IsEnum => Enum != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickEnum(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ChatCompletionToolChoiceOptionEnum? value)
+        {
+            value = Enum;
+            return IsEnum;
+        }
+
+        /// <summary>
         /// Specifies a tool the model should use. Use to force the model to call a specific function.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -47,6 +60,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Named))]
 #endif
         public bool IsNamed => Named != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickNamed(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ChatCompletionNamedToolChoice? value)
+        {
+            value = Named;
+            return IsNamed;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -124,7 +150,7 @@ namespace Portkey
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.ChatCompletionToolChoiceOptionEnum?, TResult>? @enum = null,
-            global::System.Func<global::Portkey.ChatCompletionNamedToolChoice?, TResult>? named = null,
+            global::System.Func<global::Portkey.ChatCompletionNamedToolChoice, TResult>? named = null,
             bool validate = true)
         {
             if (validate)
@@ -149,7 +175,31 @@ namespace Portkey
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.ChatCompletionToolChoiceOptionEnum?>? @enum = null,
-            global::System.Action<global::Portkey.ChatCompletionNamedToolChoice?>? named = null,
+
+            global::System.Action<global::Portkey.ChatCompletionNamedToolChoice>? named = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsEnum)
+            {
+                @enum?.Invoke(Enum!);
+            }
+            else if (IsNamed)
+            {
+                named?.Invoke(Named!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.ChatCompletionToolChoiceOptionEnum?>? @enum = null,
+            global::System.Action<global::Portkey.ChatCompletionNamedToolChoice>? named = null,
             bool validate = true)
         {
             if (validate)
