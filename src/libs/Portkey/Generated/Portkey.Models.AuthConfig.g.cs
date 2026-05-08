@@ -29,6 +29,19 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickAccessKey(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.AwsAccessKeyAuthConfig? value)
+        {
+            value = AccessKey;
+            return IsAccessKey;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.AwsAssumedRoleAuthConfig? AssumedRole { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AssumedRole))]
 #endif
         public bool IsAssumedRole => AssumedRole != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickAssumedRole(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.AwsAssumedRoleAuthConfig? value)
+        {
+            value = AssumedRole;
+            return IsAssumedRole;
+        }
 
         /// <summary>
         /// 
@@ -63,6 +89,19 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickServiceRole(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.AwsServiceRoleAuthConfig? value)
+        {
+            value = ServiceRole;
+            return IsServiceRole;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.AzureEntraAuthConfig? AzureEntra { get; init; }
 #else
@@ -76,6 +115,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AzureEntra))]
 #endif
         public bool IsAzureEntra => AzureEntra != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickAzureEntra(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.AzureEntraAuthConfig? value)
+        {
+            value = AzureEntra;
+            return IsAzureEntra;
+        }
 
         /// <summary>
         /// 
@@ -97,6 +149,19 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickAzureManaged(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.AzureManagedAuthConfig? value)
+        {
+            value = AzureManaged;
+            return IsAzureManaged;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.AzureDefaultAuthConfig? AzureDefault { get; init; }
 #else
@@ -110,6 +175,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AzureDefault))]
 #endif
         public bool IsAzureDefault => AzureDefault != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickAzureDefault(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.AzureDefaultAuthConfig? value)
+        {
+            value = AzureDefault;
+            return IsAzureDefault;
+        }
 
         /// <summary>
         /// 
@@ -131,6 +209,19 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickHashicorpToken(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.HashicorpTokenAuthConfig? value)
+        {
+            value = HashicorpToken;
+            return IsHashicorpToken;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.HashicorpAppRoleAuthConfig? HashicorpAppRole { get; init; }
 #else
@@ -148,6 +239,19 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickHashicorpAppRole(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.HashicorpAppRoleAuthConfig? value)
+        {
+            value = HashicorpAppRole;
+            return IsHashicorpAppRole;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.HashicorpKubernetesAuthConfig? HashicorpKubernetes { get; init; }
 #else
@@ -161,6 +265,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(HashicorpKubernetes))]
 #endif
         public bool IsHashicorpKubernetes => HashicorpKubernetes != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickHashicorpKubernetes(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.HashicorpKubernetesAuthConfig? value)
+        {
+            value = HashicorpKubernetes;
+            return IsHashicorpKubernetes;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -391,15 +508,15 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.AwsAccessKeyAuthConfig?, TResult>? accessKey = null,
-            global::System.Func<global::Portkey.AwsAssumedRoleAuthConfig?, TResult>? assumedRole = null,
-            global::System.Func<global::Portkey.AwsServiceRoleAuthConfig?, TResult>? serviceRole = null,
-            global::System.Func<global::Portkey.AzureEntraAuthConfig?, TResult>? azureEntra = null,
-            global::System.Func<global::Portkey.AzureManagedAuthConfig?, TResult>? azureManaged = null,
-            global::System.Func<global::Portkey.AzureDefaultAuthConfig?, TResult>? azureDefault = null,
-            global::System.Func<global::Portkey.HashicorpTokenAuthConfig?, TResult>? hashicorpToken = null,
-            global::System.Func<global::Portkey.HashicorpAppRoleAuthConfig?, TResult>? hashicorpAppRole = null,
-            global::System.Func<global::Portkey.HashicorpKubernetesAuthConfig?, TResult>? hashicorpKubernetes = null,
+            global::System.Func<global::Portkey.AwsAccessKeyAuthConfig, TResult>? accessKey = null,
+            global::System.Func<global::Portkey.AwsAssumedRoleAuthConfig, TResult>? assumedRole = null,
+            global::System.Func<global::Portkey.AwsServiceRoleAuthConfig, TResult>? serviceRole = null,
+            global::System.Func<global::Portkey.AzureEntraAuthConfig, TResult>? azureEntra = null,
+            global::System.Func<global::Portkey.AzureManagedAuthConfig, TResult>? azureManaged = null,
+            global::System.Func<global::Portkey.AzureDefaultAuthConfig, TResult>? azureDefault = null,
+            global::System.Func<global::Portkey.HashicorpTokenAuthConfig, TResult>? hashicorpToken = null,
+            global::System.Func<global::Portkey.HashicorpAppRoleAuthConfig, TResult>? hashicorpAppRole = null,
+            global::System.Func<global::Portkey.HashicorpKubernetesAuthConfig, TResult>? hashicorpKubernetes = null,
             bool validate = true)
         {
             if (validate)
@@ -451,15 +568,81 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.AwsAccessKeyAuthConfig?>? accessKey = null,
-            global::System.Action<global::Portkey.AwsAssumedRoleAuthConfig?>? assumedRole = null,
-            global::System.Action<global::Portkey.AwsServiceRoleAuthConfig?>? serviceRole = null,
-            global::System.Action<global::Portkey.AzureEntraAuthConfig?>? azureEntra = null,
-            global::System.Action<global::Portkey.AzureManagedAuthConfig?>? azureManaged = null,
-            global::System.Action<global::Portkey.AzureDefaultAuthConfig?>? azureDefault = null,
-            global::System.Action<global::Portkey.HashicorpTokenAuthConfig?>? hashicorpToken = null,
-            global::System.Action<global::Portkey.HashicorpAppRoleAuthConfig?>? hashicorpAppRole = null,
-            global::System.Action<global::Portkey.HashicorpKubernetesAuthConfig?>? hashicorpKubernetes = null,
+            global::System.Action<global::Portkey.AwsAccessKeyAuthConfig>? accessKey = null,
+
+            global::System.Action<global::Portkey.AwsAssumedRoleAuthConfig>? assumedRole = null,
+
+            global::System.Action<global::Portkey.AwsServiceRoleAuthConfig>? serviceRole = null,
+
+            global::System.Action<global::Portkey.AzureEntraAuthConfig>? azureEntra = null,
+
+            global::System.Action<global::Portkey.AzureManagedAuthConfig>? azureManaged = null,
+
+            global::System.Action<global::Portkey.AzureDefaultAuthConfig>? azureDefault = null,
+
+            global::System.Action<global::Portkey.HashicorpTokenAuthConfig>? hashicorpToken = null,
+
+            global::System.Action<global::Portkey.HashicorpAppRoleAuthConfig>? hashicorpAppRole = null,
+
+            global::System.Action<global::Portkey.HashicorpKubernetesAuthConfig>? hashicorpKubernetes = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsAccessKey)
+            {
+                accessKey?.Invoke(AccessKey!);
+            }
+            else if (IsAssumedRole)
+            {
+                assumedRole?.Invoke(AssumedRole!);
+            }
+            else if (IsServiceRole)
+            {
+                serviceRole?.Invoke(ServiceRole!);
+            }
+            else if (IsAzureEntra)
+            {
+                azureEntra?.Invoke(AzureEntra!);
+            }
+            else if (IsAzureManaged)
+            {
+                azureManaged?.Invoke(AzureManaged!);
+            }
+            else if (IsAzureDefault)
+            {
+                azureDefault?.Invoke(AzureDefault!);
+            }
+            else if (IsHashicorpToken)
+            {
+                hashicorpToken?.Invoke(HashicorpToken!);
+            }
+            else if (IsHashicorpAppRole)
+            {
+                hashicorpAppRole?.Invoke(HashicorpAppRole!);
+            }
+            else if (IsHashicorpKubernetes)
+            {
+                hashicorpKubernetes?.Invoke(HashicorpKubernetes!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.AwsAccessKeyAuthConfig>? accessKey = null,
+            global::System.Action<global::Portkey.AwsAssumedRoleAuthConfig>? assumedRole = null,
+            global::System.Action<global::Portkey.AwsServiceRoleAuthConfig>? serviceRole = null,
+            global::System.Action<global::Portkey.AzureEntraAuthConfig>? azureEntra = null,
+            global::System.Action<global::Portkey.AzureManagedAuthConfig>? azureManaged = null,
+            global::System.Action<global::Portkey.AzureDefaultAuthConfig>? azureDefault = null,
+            global::System.Action<global::Portkey.HashicorpTokenAuthConfig>? hashicorpToken = null,
+            global::System.Action<global::Portkey.HashicorpAppRoleAuthConfig>? hashicorpAppRole = null,
+            global::System.Action<global::Portkey.HashicorpKubernetesAuthConfig>? hashicorpKubernetes = null,
             bool validate = true)
         {
             if (validate)

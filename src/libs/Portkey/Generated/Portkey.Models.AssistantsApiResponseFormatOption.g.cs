@@ -29,6 +29,19 @@ namespace Portkey
         public bool IsEnum => Enum != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickEnum(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.AssistantsApiResponseFormatOptionEnum? value)
+        {
+            value = Enum;
+            return IsEnum;
+        }
+
+        /// <summary>
         /// An object describing the expected output of the model. If `json_object` only `function` type `tools` are allowed to be passed to the Run. If `text` the model can return text or any value needed.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -44,6 +57,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AssistantsApiResponseFormat))]
 #endif
         public bool IsAssistantsApiResponseFormat => AssistantsApiResponseFormat != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickAssistantsApiResponseFormat(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.AssistantsApiResponseFormat? value)
+        {
+            value = AssistantsApiResponseFormat;
+            return IsAssistantsApiResponseFormat;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -121,7 +147,7 @@ namespace Portkey
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.AssistantsApiResponseFormatOptionEnum?, TResult>? @enum = null,
-            global::System.Func<global::Portkey.AssistantsApiResponseFormat?, TResult>? assistantsApiResponseFormat = null,
+            global::System.Func<global::Portkey.AssistantsApiResponseFormat, TResult>? assistantsApiResponseFormat = null,
             bool validate = true)
         {
             if (validate)
@@ -146,7 +172,31 @@ namespace Portkey
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.AssistantsApiResponseFormatOptionEnum?>? @enum = null,
-            global::System.Action<global::Portkey.AssistantsApiResponseFormat?>? assistantsApiResponseFormat = null,
+
+            global::System.Action<global::Portkey.AssistantsApiResponseFormat>? assistantsApiResponseFormat = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsEnum)
+            {
+                @enum?.Invoke(Enum!);
+            }
+            else if (IsAssistantsApiResponseFormat)
+            {
+                assistantsApiResponseFormat?.Invoke(AssistantsApiResponseFormat!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.AssistantsApiResponseFormatOptionEnum?>? @enum = null,
+            global::System.Action<global::Portkey.AssistantsApiResponseFormat>? assistantsApiResponseFormat = null,
             bool validate = true)
         {
             if (validate)

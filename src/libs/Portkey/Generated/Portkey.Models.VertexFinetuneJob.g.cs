@@ -25,6 +25,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(OpenAIParams))]
 #endif
         public bool IsOpenAIParams => OpenAIParams != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickOpenAIParams(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.OpenAIFinetuneJob? value)
+        {
+            value = OpenAIParams;
+            return IsOpenAIParams;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -69,7 +82,7 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.OpenAIFinetuneJob?, TResult>? openAIParams = null,
+            global::System.Func<global::Portkey.OpenAIFinetuneJob, TResult>? openAIParams = null,
             bool validate = true)
         {
             if (validate)
@@ -89,7 +102,25 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.OpenAIFinetuneJob?>? openAIParams = null,
+            global::System.Action<global::Portkey.OpenAIFinetuneJob>? openAIParams = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsOpenAIParams)
+            {
+                openAIParams?.Invoke(OpenAIParams!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.OpenAIFinetuneJob>? openAIParams = null,
             bool validate = true)
         {
             if (validate)

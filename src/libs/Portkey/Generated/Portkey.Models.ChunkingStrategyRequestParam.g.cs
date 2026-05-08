@@ -29,6 +29,19 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickAutoChunkingStrategy(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.AutoChunkingStrategyRequestParam? value)
+        {
+            value = AutoChunkingStrategy;
+            return IsAutoChunkingStrategy;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.StaticChunkingStrategyRequestParam? StaticChunkingStrategy { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(StaticChunkingStrategy))]
 #endif
         public bool IsStaticChunkingStrategy => StaticChunkingStrategy != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickStaticChunkingStrategy(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.StaticChunkingStrategyRequestParam? value)
+        {
+            value = StaticChunkingStrategy;
+            return IsStaticChunkingStrategy;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -118,8 +144,8 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.AutoChunkingStrategyRequestParam?, TResult>? autoChunkingStrategy = null,
-            global::System.Func<global::Portkey.StaticChunkingStrategyRequestParam?, TResult>? staticChunkingStrategy = null,
+            global::System.Func<global::Portkey.AutoChunkingStrategyRequestParam, TResult>? autoChunkingStrategy = null,
+            global::System.Func<global::Portkey.StaticChunkingStrategyRequestParam, TResult>? staticChunkingStrategy = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +169,32 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.AutoChunkingStrategyRequestParam?>? autoChunkingStrategy = null,
-            global::System.Action<global::Portkey.StaticChunkingStrategyRequestParam?>? staticChunkingStrategy = null,
+            global::System.Action<global::Portkey.AutoChunkingStrategyRequestParam>? autoChunkingStrategy = null,
+
+            global::System.Action<global::Portkey.StaticChunkingStrategyRequestParam>? staticChunkingStrategy = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsAutoChunkingStrategy)
+            {
+                autoChunkingStrategy?.Invoke(AutoChunkingStrategy!);
+            }
+            else if (IsStaticChunkingStrategy)
+            {
+                staticChunkingStrategy?.Invoke(StaticChunkingStrategy!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.AutoChunkingStrategyRequestParam>? autoChunkingStrategy = null,
+            global::System.Action<global::Portkey.StaticChunkingStrategyRequestParam>? staticChunkingStrategy = null,
             bool validate = true)
         {
             if (validate)

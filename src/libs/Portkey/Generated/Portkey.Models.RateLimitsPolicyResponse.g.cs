@@ -29,6 +29,19 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickRateLimitsPolicy(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.RateLimitsPolicy? value)
+        {
+            value = RateLimitsPolicy;
+            return IsRateLimitsPolicy;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.RateLimitsPolicyResponseVariant2? RateLimitsPolicyResponseVariant2 { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(RateLimitsPolicyResponseVariant2))]
 #endif
         public bool IsRateLimitsPolicyResponseVariant2 => RateLimitsPolicyResponseVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickRateLimitsPolicyResponseVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.RateLimitsPolicyResponseVariant2? value)
+        {
+            value = RateLimitsPolicyResponseVariant2;
+            return IsRateLimitsPolicyResponseVariant2;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -118,8 +144,8 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.RateLimitsPolicy?, TResult>? rateLimitsPolicy = null,
-            global::System.Func<global::Portkey.RateLimitsPolicyResponseVariant2?, TResult>? rateLimitsPolicyResponseVariant2 = null,
+            global::System.Func<global::Portkey.RateLimitsPolicy, TResult>? rateLimitsPolicy = null,
+            global::System.Func<global::Portkey.RateLimitsPolicyResponseVariant2, TResult>? rateLimitsPolicyResponseVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +169,32 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.RateLimitsPolicy?>? rateLimitsPolicy = null,
-            global::System.Action<global::Portkey.RateLimitsPolicyResponseVariant2?>? rateLimitsPolicyResponseVariant2 = null,
+            global::System.Action<global::Portkey.RateLimitsPolicy>? rateLimitsPolicy = null,
+
+            global::System.Action<global::Portkey.RateLimitsPolicyResponseVariant2>? rateLimitsPolicyResponseVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsRateLimitsPolicy)
+            {
+                rateLimitsPolicy?.Invoke(RateLimitsPolicy!);
+            }
+            else if (IsRateLimitsPolicyResponseVariant2)
+            {
+                rateLimitsPolicyResponseVariant2?.Invoke(RateLimitsPolicyResponseVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.RateLimitsPolicy>? rateLimitsPolicy = null,
+            global::System.Action<global::Portkey.RateLimitsPolicyResponseVariant2>? rateLimitsPolicyResponseVariant2 = null,
             bool validate = true)
         {
             if (validate)

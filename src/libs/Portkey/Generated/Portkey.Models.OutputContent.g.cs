@@ -27,6 +27,19 @@ namespace Portkey
         public bool IsOutputText => OutputText != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickOutputText(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.OutputText? value)
+        {
+            value = OutputText;
+            return IsOutputText;
+        }
+
+        /// <summary>
         /// A refusal from the model.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -42,6 +55,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Refusal))]
 #endif
         public bool IsRefusal => Refusal != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickRefusal(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.Refusal? value)
+        {
+            value = Refusal;
+            return IsRefusal;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -118,8 +144,8 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.OutputText?, TResult>? outputText = null,
-            global::System.Func<global::Portkey.Refusal?, TResult>? refusal = null,
+            global::System.Func<global::Portkey.OutputText, TResult>? outputText = null,
+            global::System.Func<global::Portkey.Refusal, TResult>? refusal = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +169,32 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.OutputText?>? outputText = null,
-            global::System.Action<global::Portkey.Refusal?>? refusal = null,
+            global::System.Action<global::Portkey.OutputText>? outputText = null,
+
+            global::System.Action<global::Portkey.Refusal>? refusal = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsOutputText)
+            {
+                outputText?.Invoke(OutputText!);
+            }
+            else if (IsRefusal)
+            {
+                refusal?.Invoke(Refusal!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.OutputText>? outputText = null,
+            global::System.Action<global::Portkey.Refusal>? refusal = null,
             bool validate = true)
         {
             if (validate)

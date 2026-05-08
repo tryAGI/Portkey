@@ -30,6 +30,19 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickFunctionToolCall(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.FunctionToolCall? value)
+        {
+            value = FunctionToolCall;
+            return IsFunctionToolCall;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.FunctionToolCallResourceVariant2? FunctionToolCallResourceVariant2 { get; init; }
 #else
@@ -43,6 +56,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FunctionToolCallResourceVariant2))]
 #endif
         public bool IsFunctionToolCallResourceVariant2 => FunctionToolCallResourceVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickFunctionToolCallResourceVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.FunctionToolCallResourceVariant2? value)
+        {
+            value = FunctionToolCallResourceVariant2;
+            return IsFunctionToolCallResourceVariant2;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -119,8 +145,8 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.FunctionToolCall?, TResult>? functionToolCall = null,
-            global::System.Func<global::Portkey.FunctionToolCallResourceVariant2?, TResult>? functionToolCallResourceVariant2 = null,
+            global::System.Func<global::Portkey.FunctionToolCall, TResult>? functionToolCall = null,
+            global::System.Func<global::Portkey.FunctionToolCallResourceVariant2, TResult>? functionToolCallResourceVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -144,8 +170,32 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.FunctionToolCall?>? functionToolCall = null,
-            global::System.Action<global::Portkey.FunctionToolCallResourceVariant2?>? functionToolCallResourceVariant2 = null,
+            global::System.Action<global::Portkey.FunctionToolCall>? functionToolCall = null,
+
+            global::System.Action<global::Portkey.FunctionToolCallResourceVariant2>? functionToolCallResourceVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsFunctionToolCall)
+            {
+                functionToolCall?.Invoke(FunctionToolCall!);
+            }
+            else if (IsFunctionToolCallResourceVariant2)
+            {
+                functionToolCallResourceVariant2?.Invoke(FunctionToolCallResourceVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.FunctionToolCall>? functionToolCall = null,
+            global::System.Action<global::Portkey.FunctionToolCallResourceVariant2>? functionToolCallResourceVariant2 = null,
             bool validate = true)
         {
             if (validate)

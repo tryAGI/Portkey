@@ -27,6 +27,19 @@ namespace Portkey
         public bool IsClick => Click != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickClick(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.Click? value)
+        {
+            value = Click;
+            return IsClick;
+        }
+
+        /// <summary>
         /// A double click action.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -42,6 +55,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(DoubleClick))]
 #endif
         public bool IsDoubleClick => DoubleClick != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickDoubleClick(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.DoubleClick? value)
+        {
+            value = DoubleClick;
+            return IsDoubleClick;
+        }
 
         /// <summary>
         /// A drag action.
@@ -61,6 +87,19 @@ namespace Portkey
         public bool IsDrag => Drag != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickDrag(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.Drag? value)
+        {
+            value = Drag;
+            return IsDrag;
+        }
+
+        /// <summary>
         /// A collection of keypresses the model would like to perform.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -76,6 +115,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(KeyPress))]
 #endif
         public bool IsKeyPress => KeyPress != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickKeyPress(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.KeyPress? value)
+        {
+            value = KeyPress;
+            return IsKeyPress;
+        }
 
         /// <summary>
         /// A mouse move action.
@@ -95,6 +147,19 @@ namespace Portkey
         public bool IsMove => Move != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickMove(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.Move? value)
+        {
+            value = Move;
+            return IsMove;
+        }
+
+        /// <summary>
         /// A screenshot action.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -110,6 +175,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Screenshot))]
 #endif
         public bool IsScreenshot => Screenshot != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickScreenshot(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.Screenshot? value)
+        {
+            value = Screenshot;
+            return IsScreenshot;
+        }
 
         /// <summary>
         /// A scroll action.
@@ -129,6 +207,19 @@ namespace Portkey
         public bool IsScroll => Scroll != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickScroll(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.Scroll? value)
+        {
+            value = Scroll;
+            return IsScroll;
+        }
+
+        /// <summary>
         /// An action to type in text.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -146,6 +237,19 @@ namespace Portkey
         public bool IsType => Type != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickType(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.Type? value)
+        {
+            value = Type;
+            return IsType;
+        }
+
+        /// <summary>
         /// A wait action.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -161,6 +265,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Wait))]
 #endif
         public bool IsWait => Wait != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickWait(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.Wait? value)
+        {
+            value = Wait;
+            return IsWait;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -391,15 +508,15 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.Click?, TResult>? click = null,
-            global::System.Func<global::Portkey.DoubleClick?, TResult>? doubleClick = null,
-            global::System.Func<global::Portkey.Drag?, TResult>? drag = null,
-            global::System.Func<global::Portkey.KeyPress?, TResult>? keyPress = null,
-            global::System.Func<global::Portkey.Move?, TResult>? move = null,
-            global::System.Func<global::Portkey.Screenshot?, TResult>? screenshot = null,
-            global::System.Func<global::Portkey.Scroll?, TResult>? scroll = null,
-            global::System.Func<global::Portkey.Type?, TResult>? type = null,
-            global::System.Func<global::Portkey.Wait?, TResult>? wait = null,
+            global::System.Func<global::Portkey.Click, TResult>? click = null,
+            global::System.Func<global::Portkey.DoubleClick, TResult>? doubleClick = null,
+            global::System.Func<global::Portkey.Drag, TResult>? drag = null,
+            global::System.Func<global::Portkey.KeyPress, TResult>? keyPress = null,
+            global::System.Func<global::Portkey.Move, TResult>? move = null,
+            global::System.Func<global::Portkey.Screenshot, TResult>? screenshot = null,
+            global::System.Func<global::Portkey.Scroll, TResult>? scroll = null,
+            global::System.Func<global::Portkey.Type, TResult>? type = null,
+            global::System.Func<global::Portkey.Wait, TResult>? wait = null,
             bool validate = true)
         {
             if (validate)
@@ -451,15 +568,81 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.Click?>? click = null,
-            global::System.Action<global::Portkey.DoubleClick?>? doubleClick = null,
-            global::System.Action<global::Portkey.Drag?>? drag = null,
-            global::System.Action<global::Portkey.KeyPress?>? keyPress = null,
-            global::System.Action<global::Portkey.Move?>? move = null,
-            global::System.Action<global::Portkey.Screenshot?>? screenshot = null,
-            global::System.Action<global::Portkey.Scroll?>? scroll = null,
-            global::System.Action<global::Portkey.Type?>? type = null,
-            global::System.Action<global::Portkey.Wait?>? wait = null,
+            global::System.Action<global::Portkey.Click>? click = null,
+
+            global::System.Action<global::Portkey.DoubleClick>? doubleClick = null,
+
+            global::System.Action<global::Portkey.Drag>? drag = null,
+
+            global::System.Action<global::Portkey.KeyPress>? keyPress = null,
+
+            global::System.Action<global::Portkey.Move>? move = null,
+
+            global::System.Action<global::Portkey.Screenshot>? screenshot = null,
+
+            global::System.Action<global::Portkey.Scroll>? scroll = null,
+
+            global::System.Action<global::Portkey.Type>? type = null,
+
+            global::System.Action<global::Portkey.Wait>? wait = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsClick)
+            {
+                click?.Invoke(Click!);
+            }
+            else if (IsDoubleClick)
+            {
+                doubleClick?.Invoke(DoubleClick!);
+            }
+            else if (IsDrag)
+            {
+                drag?.Invoke(Drag!);
+            }
+            else if (IsKeyPress)
+            {
+                keyPress?.Invoke(KeyPress!);
+            }
+            else if (IsMove)
+            {
+                move?.Invoke(Move!);
+            }
+            else if (IsScreenshot)
+            {
+                screenshot?.Invoke(Screenshot!);
+            }
+            else if (IsScroll)
+            {
+                scroll?.Invoke(Scroll!);
+            }
+            else if (IsType)
+            {
+                type?.Invoke(Type!);
+            }
+            else if (IsWait)
+            {
+                wait?.Invoke(Wait!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.Click>? click = null,
+            global::System.Action<global::Portkey.DoubleClick>? doubleClick = null,
+            global::System.Action<global::Portkey.Drag>? drag = null,
+            global::System.Action<global::Portkey.KeyPress>? keyPress = null,
+            global::System.Action<global::Portkey.Move>? move = null,
+            global::System.Action<global::Portkey.Screenshot>? screenshot = null,
+            global::System.Action<global::Portkey.Scroll>? scroll = null,
+            global::System.Action<global::Portkey.Type>? type = null,
+            global::System.Action<global::Portkey.Wait>? wait = null,
             bool validate = true)
         {
             if (validate)

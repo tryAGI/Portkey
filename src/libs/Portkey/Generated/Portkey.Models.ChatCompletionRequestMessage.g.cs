@@ -27,6 +27,19 @@ namespace Portkey
         public bool IsSystemMessage => SystemMessage != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickSystemMessage(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ChatCompletionRequestSystemMessage? value)
+        {
+            value = SystemMessage;
+            return IsSystemMessage;
+        }
+
+        /// <summary>
         /// New role by OpenAI for select models. Must be explicitly used for models that support it. When used with incompatible models or providers, Portkey automatically converts it to a system role.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -42,6 +55,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(DeveloperMessage))]
 #endif
         public bool IsDeveloperMessage => DeveloperMessage != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickDeveloperMessage(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ChatCompletionRequestDeveloperMessage? value)
+        {
+            value = DeveloperMessage;
+            return IsDeveloperMessage;
+        }
 
         /// <summary>
         /// 
@@ -63,6 +89,19 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickUserMessage(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ChatCompletionRequestUserMessage? value)
+        {
+            value = UserMessage;
+            return IsUserMessage;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionRequestAssistantMessage? AssistantMessage { get; init; }
 #else
@@ -76,6 +115,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AssistantMessage))]
 #endif
         public bool IsAssistantMessage => AssistantMessage != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickAssistantMessage(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ChatCompletionRequestAssistantMessage? value)
+        {
+            value = AssistantMessage;
+            return IsAssistantMessage;
+        }
 
         /// <summary>
         /// 
@@ -97,6 +149,19 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickToolMessage(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ChatCompletionRequestToolMessage? value)
+        {
+            value = ToolMessage;
+            return IsToolMessage;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionRequestFunctionMessage? FunctionMessage { get; init; }
 #else
@@ -110,6 +175,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FunctionMessage))]
 #endif
         public bool IsFunctionMessage => FunctionMessage != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickFunctionMessage(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ChatCompletionRequestFunctionMessage? value)
+        {
+            value = FunctionMessage;
+            return IsFunctionMessage;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -274,12 +352,12 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.ChatCompletionRequestSystemMessage?, TResult>? systemMessage = null,
-            global::System.Func<global::Portkey.ChatCompletionRequestDeveloperMessage?, TResult>? developerMessage = null,
-            global::System.Func<global::Portkey.ChatCompletionRequestUserMessage?, TResult>? userMessage = null,
-            global::System.Func<global::Portkey.ChatCompletionRequestAssistantMessage?, TResult>? assistantMessage = null,
-            global::System.Func<global::Portkey.ChatCompletionRequestToolMessage?, TResult>? toolMessage = null,
-            global::System.Func<global::Portkey.ChatCompletionRequestFunctionMessage?, TResult>? functionMessage = null,
+            global::System.Func<global::Portkey.ChatCompletionRequestSystemMessage, TResult>? systemMessage = null,
+            global::System.Func<global::Portkey.ChatCompletionRequestDeveloperMessage, TResult>? developerMessage = null,
+            global::System.Func<global::Portkey.ChatCompletionRequestUserMessage, TResult>? userMessage = null,
+            global::System.Func<global::Portkey.ChatCompletionRequestAssistantMessage, TResult>? assistantMessage = null,
+            global::System.Func<global::Portkey.ChatCompletionRequestToolMessage, TResult>? toolMessage = null,
+            global::System.Func<global::Portkey.ChatCompletionRequestFunctionMessage, TResult>? functionMessage = null,
             bool validate = true)
         {
             if (validate)
@@ -319,12 +397,60 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.ChatCompletionRequestSystemMessage?>? systemMessage = null,
-            global::System.Action<global::Portkey.ChatCompletionRequestDeveloperMessage?>? developerMessage = null,
-            global::System.Action<global::Portkey.ChatCompletionRequestUserMessage?>? userMessage = null,
-            global::System.Action<global::Portkey.ChatCompletionRequestAssistantMessage?>? assistantMessage = null,
-            global::System.Action<global::Portkey.ChatCompletionRequestToolMessage?>? toolMessage = null,
-            global::System.Action<global::Portkey.ChatCompletionRequestFunctionMessage?>? functionMessage = null,
+            global::System.Action<global::Portkey.ChatCompletionRequestSystemMessage>? systemMessage = null,
+
+            global::System.Action<global::Portkey.ChatCompletionRequestDeveloperMessage>? developerMessage = null,
+
+            global::System.Action<global::Portkey.ChatCompletionRequestUserMessage>? userMessage = null,
+
+            global::System.Action<global::Portkey.ChatCompletionRequestAssistantMessage>? assistantMessage = null,
+
+            global::System.Action<global::Portkey.ChatCompletionRequestToolMessage>? toolMessage = null,
+
+            global::System.Action<global::Portkey.ChatCompletionRequestFunctionMessage>? functionMessage = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsSystemMessage)
+            {
+                systemMessage?.Invoke(SystemMessage!);
+            }
+            else if (IsDeveloperMessage)
+            {
+                developerMessage?.Invoke(DeveloperMessage!);
+            }
+            else if (IsUserMessage)
+            {
+                userMessage?.Invoke(UserMessage!);
+            }
+            else if (IsAssistantMessage)
+            {
+                assistantMessage?.Invoke(AssistantMessage!);
+            }
+            else if (IsToolMessage)
+            {
+                toolMessage?.Invoke(ToolMessage!);
+            }
+            else if (IsFunctionMessage)
+            {
+                functionMessage?.Invoke(FunctionMessage!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.ChatCompletionRequestSystemMessage>? systemMessage = null,
+            global::System.Action<global::Portkey.ChatCompletionRequestDeveloperMessage>? developerMessage = null,
+            global::System.Action<global::Portkey.ChatCompletionRequestUserMessage>? userMessage = null,
+            global::System.Action<global::Portkey.ChatCompletionRequestAssistantMessage>? assistantMessage = null,
+            global::System.Action<global::Portkey.ChatCompletionRequestToolMessage>? toolMessage = null,
+            global::System.Action<global::Portkey.ChatCompletionRequestFunctionMessage>? functionMessage = null,
             bool validate = true)
         {
             if (validate)

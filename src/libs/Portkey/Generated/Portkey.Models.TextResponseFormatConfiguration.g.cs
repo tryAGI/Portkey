@@ -35,6 +35,19 @@ namespace Portkey
         public bool IsText => Text != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickText(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseFormatText? value)
+        {
+            value = Text;
+            return IsText;
+        }
+
+        /// <summary>
         /// JSON Schema response format. Used to generate structured JSON responses.<br/>
         /// Learn more about [Structured Outputs](/docs/guides/structured-outputs).
         /// </summary>
@@ -51,6 +64,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(JsonSchema))]
 #endif
         public bool IsJsonSchema => JsonSchema != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickJsonSchema(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.TextResponseFormatJsonSchema? value)
+        {
+            value = JsonSchema;
+            return IsJsonSchema;
+        }
 
         /// <summary>
         /// JSON object response format. An older method of generating JSON responses.<br/>
@@ -71,6 +97,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(JsonObject))]
 #endif
         public bool IsJsonObject => JsonObject != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickJsonObject(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseFormatJsonObject? value)
+        {
+            value = JsonObject;
+            return IsJsonObject;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -169,9 +208,9 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.ResponseFormatText?, TResult>? text = null,
-            global::System.Func<global::Portkey.TextResponseFormatJsonSchema?, TResult>? jsonSchema = null,
-            global::System.Func<global::Portkey.ResponseFormatJsonObject?, TResult>? jsonObject = null,
+            global::System.Func<global::Portkey.ResponseFormatText, TResult>? text = null,
+            global::System.Func<global::Portkey.TextResponseFormatJsonSchema, TResult>? jsonSchema = null,
+            global::System.Func<global::Portkey.ResponseFormatJsonObject, TResult>? jsonObject = null,
             bool validate = true)
         {
             if (validate)
@@ -199,9 +238,39 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.ResponseFormatText?>? text = null,
-            global::System.Action<global::Portkey.TextResponseFormatJsonSchema?>? jsonSchema = null,
-            global::System.Action<global::Portkey.ResponseFormatJsonObject?>? jsonObject = null,
+            global::System.Action<global::Portkey.ResponseFormatText>? text = null,
+
+            global::System.Action<global::Portkey.TextResponseFormatJsonSchema>? jsonSchema = null,
+
+            global::System.Action<global::Portkey.ResponseFormatJsonObject>? jsonObject = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsText)
+            {
+                text?.Invoke(Text!);
+            }
+            else if (IsJsonSchema)
+            {
+                jsonSchema?.Invoke(JsonSchema!);
+            }
+            else if (IsJsonObject)
+            {
+                jsonObject?.Invoke(JsonObject!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.ResponseFormatText>? text = null,
+            global::System.Action<global::Portkey.TextResponseFormatJsonSchema>? jsonSchema = null,
+            global::System.Action<global::Portkey.ResponseFormatJsonObject>? jsonObject = null,
             bool validate = true)
         {
             if (validate)

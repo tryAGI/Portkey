@@ -27,6 +27,19 @@ namespace Portkey
         public bool IsResponseAudioDelta => ResponseAudioDelta != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseAudioDelta(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseAudioDeltaEvent? value)
+        {
+            value = ResponseAudioDelta;
+            return IsResponseAudioDelta;
+        }
+
+        /// <summary>
         /// Emitted when the audio response is complete.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -42,6 +55,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseAudioDone))]
 #endif
         public bool IsResponseAudioDone => ResponseAudioDone != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseAudioDone(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseAudioDoneEvent? value)
+        {
+            value = ResponseAudioDone;
+            return IsResponseAudioDone;
+        }
 
         /// <summary>
         /// Emitted when there is a partial transcript of audio.
@@ -61,6 +87,19 @@ namespace Portkey
         public bool IsResponseAudioTranscriptDelta => ResponseAudioTranscriptDelta != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseAudioTranscriptDelta(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseAudioTranscriptDeltaEvent? value)
+        {
+            value = ResponseAudioTranscriptDelta;
+            return IsResponseAudioTranscriptDelta;
+        }
+
+        /// <summary>
         /// Emitted when the full audio transcript is completed.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -76,6 +115,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseAudioTranscriptDone))]
 #endif
         public bool IsResponseAudioTranscriptDone => ResponseAudioTranscriptDone != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseAudioTranscriptDone(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseAudioTranscriptDoneEvent? value)
+        {
+            value = ResponseAudioTranscriptDone;
+            return IsResponseAudioTranscriptDone;
+        }
 
         /// <summary>
         /// Emitted when a partial code snippet is added by the code interpreter.
@@ -95,6 +147,19 @@ namespace Portkey
         public bool IsResponseCodeInterpreterCallCodeDelta => ResponseCodeInterpreterCallCodeDelta != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseCodeInterpreterCallCodeDelta(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseCodeInterpreterCallCodeDeltaEvent? value)
+        {
+            value = ResponseCodeInterpreterCallCodeDelta;
+            return IsResponseCodeInterpreterCallCodeDelta;
+        }
+
+        /// <summary>
         /// Emitted when code snippet output is finalized by the code interpreter.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -110,6 +175,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseCodeInterpreterCallCodeDone))]
 #endif
         public bool IsResponseCodeInterpreterCallCodeDone => ResponseCodeInterpreterCallCodeDone != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseCodeInterpreterCallCodeDone(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseCodeInterpreterCallCodeDoneEvent? value)
+        {
+            value = ResponseCodeInterpreterCallCodeDone;
+            return IsResponseCodeInterpreterCallCodeDone;
+        }
 
         /// <summary>
         /// Emitted when the code interpreter call is completed.
@@ -129,6 +207,19 @@ namespace Portkey
         public bool IsResponseCodeInterpreterCallCompleted => ResponseCodeInterpreterCallCompleted != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseCodeInterpreterCallCompleted(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseCodeInterpreterCallCompletedEvent? value)
+        {
+            value = ResponseCodeInterpreterCallCompleted;
+            return IsResponseCodeInterpreterCallCompleted;
+        }
+
+        /// <summary>
         /// Emitted when a code interpreter call is in progress.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -144,6 +235,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseCodeInterpreterCallInProgress))]
 #endif
         public bool IsResponseCodeInterpreterCallInProgress => ResponseCodeInterpreterCallInProgress != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseCodeInterpreterCallInProgress(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseCodeInterpreterCallInProgressEvent? value)
+        {
+            value = ResponseCodeInterpreterCallInProgress;
+            return IsResponseCodeInterpreterCallInProgress;
+        }
 
         /// <summary>
         /// Emitted when the code interpreter is actively interpreting the code snippet.
@@ -163,6 +267,19 @@ namespace Portkey
         public bool IsResponseCodeInterpreterCallInterpreting => ResponseCodeInterpreterCallInterpreting != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseCodeInterpreterCallInterpreting(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseCodeInterpreterCallInterpretingEvent? value)
+        {
+            value = ResponseCodeInterpreterCallInterpreting;
+            return IsResponseCodeInterpreterCallInterpreting;
+        }
+
+        /// <summary>
         /// Emitted when the model response is complete.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -178,6 +295,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseCompleted))]
 #endif
         public bool IsResponseCompleted => ResponseCompleted != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseCompleted(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseCompletedEvent? value)
+        {
+            value = ResponseCompleted;
+            return IsResponseCompleted;
+        }
 
         /// <summary>
         /// Emitted when a new content part is added.
@@ -197,6 +327,19 @@ namespace Portkey
         public bool IsResponseContentPartAdded => ResponseContentPartAdded != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseContentPartAdded(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseContentPartAddedEvent? value)
+        {
+            value = ResponseContentPartAdded;
+            return IsResponseContentPartAdded;
+        }
+
+        /// <summary>
         /// Emitted when a content part is done.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -212,6 +355,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseContentPartDone))]
 #endif
         public bool IsResponseContentPartDone => ResponseContentPartDone != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseContentPartDone(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseContentPartDoneEvent? value)
+        {
+            value = ResponseContentPartDone;
+            return IsResponseContentPartDone;
+        }
 
         /// <summary>
         /// An event that is emitted when a response is created.
@@ -231,6 +387,19 @@ namespace Portkey
         public bool IsResponseCreated => ResponseCreated != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseCreated(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseCreatedEvent? value)
+        {
+            value = ResponseCreated;
+            return IsResponseCreated;
+        }
+
+        /// <summary>
         /// Emitted when an error occurs.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -246,6 +415,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Error))]
 #endif
         public bool IsError => Error != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickError(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseErrorEvent? value)
+        {
+            value = Error;
+            return IsError;
+        }
 
         /// <summary>
         /// Emitted when a file search call is completed (results found).
@@ -265,6 +447,19 @@ namespace Portkey
         public bool IsResponseFileSearchCallCompleted => ResponseFileSearchCallCompleted != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseFileSearchCallCompleted(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseFileSearchCallCompletedEvent? value)
+        {
+            value = ResponseFileSearchCallCompleted;
+            return IsResponseFileSearchCallCompleted;
+        }
+
+        /// <summary>
         /// Emitted when a file search call is initiated.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -280,6 +475,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseFileSearchCallInProgress))]
 #endif
         public bool IsResponseFileSearchCallInProgress => ResponseFileSearchCallInProgress != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseFileSearchCallInProgress(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseFileSearchCallInProgressEvent? value)
+        {
+            value = ResponseFileSearchCallInProgress;
+            return IsResponseFileSearchCallInProgress;
+        }
 
         /// <summary>
         /// Emitted when a file search is currently searching.
@@ -299,6 +507,19 @@ namespace Portkey
         public bool IsResponseFileSearchCallSearching => ResponseFileSearchCallSearching != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseFileSearchCallSearching(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseFileSearchCallSearchingEvent? value)
+        {
+            value = ResponseFileSearchCallSearching;
+            return IsResponseFileSearchCallSearching;
+        }
+
+        /// <summary>
         /// Emitted when there is a partial function-call arguments delta.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -314,6 +535,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseFunctionCallArgumentsDelta))]
 #endif
         public bool IsResponseFunctionCallArgumentsDelta => ResponseFunctionCallArgumentsDelta != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseFunctionCallArgumentsDelta(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseFunctionCallArgumentsDeltaEvent? value)
+        {
+            value = ResponseFunctionCallArgumentsDelta;
+            return IsResponseFunctionCallArgumentsDelta;
+        }
 
         /// <summary>
         /// Emitted when function-call arguments are finalized.
@@ -333,6 +567,19 @@ namespace Portkey
         public bool IsResponseFunctionCallArgumentsDone => ResponseFunctionCallArgumentsDone != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseFunctionCallArgumentsDone(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseFunctionCallArgumentsDoneEvent? value)
+        {
+            value = ResponseFunctionCallArgumentsDone;
+            return IsResponseFunctionCallArgumentsDone;
+        }
+
+        /// <summary>
         /// Emitted when the response is in progress.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -348,6 +595,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseInProgress))]
 #endif
         public bool IsResponseInProgress => ResponseInProgress != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseInProgress(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseInProgressEvent? value)
+        {
+            value = ResponseInProgress;
+            return IsResponseInProgress;
+        }
 
         /// <summary>
         /// An event that is emitted when a response fails.
@@ -367,6 +627,19 @@ namespace Portkey
         public bool IsResponseFailed => ResponseFailed != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseFailed(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseFailedEvent? value)
+        {
+            value = ResponseFailed;
+            return IsResponseFailed;
+        }
+
+        /// <summary>
         /// An event that is emitted when a response finishes as incomplete.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -382,6 +655,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseIncomplete))]
 #endif
         public bool IsResponseIncomplete => ResponseIncomplete != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseIncomplete(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseIncompleteEvent? value)
+        {
+            value = ResponseIncomplete;
+            return IsResponseIncomplete;
+        }
 
         /// <summary>
         /// Emitted when a new output item is added.
@@ -401,6 +687,19 @@ namespace Portkey
         public bool IsResponseOutputItemAdded => ResponseOutputItemAdded != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseOutputItemAdded(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseOutputItemAddedEvent? value)
+        {
+            value = ResponseOutputItemAdded;
+            return IsResponseOutputItemAdded;
+        }
+
+        /// <summary>
         /// Emitted when an output item is marked done.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -416,6 +715,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseOutputItemDone))]
 #endif
         public bool IsResponseOutputItemDone => ResponseOutputItemDone != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseOutputItemDone(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseOutputItemDoneEvent? value)
+        {
+            value = ResponseOutputItemDone;
+            return IsResponseOutputItemDone;
+        }
 
         /// <summary>
         /// Emitted when there is a partial refusal text.
@@ -435,6 +747,19 @@ namespace Portkey
         public bool IsResponseRefusalDelta => ResponseRefusalDelta != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseRefusalDelta(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseRefusalDeltaEvent? value)
+        {
+            value = ResponseRefusalDelta;
+            return IsResponseRefusalDelta;
+        }
+
+        /// <summary>
         /// Emitted when refusal text is finalized.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -450,6 +775,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseRefusalDone))]
 #endif
         public bool IsResponseRefusalDone => ResponseRefusalDone != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseRefusalDone(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseRefusalDoneEvent? value)
+        {
+            value = ResponseRefusalDone;
+            return IsResponseRefusalDone;
+        }
 
         /// <summary>
         /// Emitted when a text annotation is added.
@@ -469,6 +807,19 @@ namespace Portkey
         public bool IsResponseOutputTextAnnotationAdded => ResponseOutputTextAnnotationAdded != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseOutputTextAnnotationAdded(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseTextAnnotationDeltaEvent? value)
+        {
+            value = ResponseOutputTextAnnotationAdded;
+            return IsResponseOutputTextAnnotationAdded;
+        }
+
+        /// <summary>
         /// Emitted when there is an additional text delta.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -484,6 +835,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseOutputTextDelta))]
 #endif
         public bool IsResponseOutputTextDelta => ResponseOutputTextDelta != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseOutputTextDelta(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseTextDeltaEvent? value)
+        {
+            value = ResponseOutputTextDelta;
+            return IsResponseOutputTextDelta;
+        }
 
         /// <summary>
         /// Emitted when text content is finalized.
@@ -503,6 +867,19 @@ namespace Portkey
         public bool IsResponseOutputTextDone => ResponseOutputTextDone != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseOutputTextDone(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseTextDoneEvent? value)
+        {
+            value = ResponseOutputTextDone;
+            return IsResponseOutputTextDone;
+        }
+
+        /// <summary>
         /// Emitted when a web search call is completed.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -518,6 +895,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseWebSearchCallCompleted))]
 #endif
         public bool IsResponseWebSearchCallCompleted => ResponseWebSearchCallCompleted != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseWebSearchCallCompleted(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseWebSearchCallCompletedEvent? value)
+        {
+            value = ResponseWebSearchCallCompleted;
+            return IsResponseWebSearchCallCompleted;
+        }
 
         /// <summary>
         /// Emitted when a web search call is initiated.
@@ -537,6 +927,19 @@ namespace Portkey
         public bool IsResponseWebSearchCallInProgress => ResponseWebSearchCallInProgress != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseWebSearchCallInProgress(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseWebSearchCallInProgressEvent? value)
+        {
+            value = ResponseWebSearchCallInProgress;
+            return IsResponseWebSearchCallInProgress;
+        }
+
+        /// <summary>
         /// Emitted when a web search call is executing.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -552,6 +955,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseWebSearchCallSearching))]
 #endif
         public bool IsResponseWebSearchCallSearching => ResponseWebSearchCallSearching != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseWebSearchCallSearching(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseWebSearchCallSearchingEvent? value)
+        {
+            value = ResponseWebSearchCallSearching;
+            return IsResponseWebSearchCallSearching;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -1288,38 +1704,38 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.ResponseAudioDeltaEvent?, TResult>? responseAudioDelta = null,
-            global::System.Func<global::Portkey.ResponseAudioDoneEvent?, TResult>? responseAudioDone = null,
-            global::System.Func<global::Portkey.ResponseAudioTranscriptDeltaEvent?, TResult>? responseAudioTranscriptDelta = null,
-            global::System.Func<global::Portkey.ResponseAudioTranscriptDoneEvent?, TResult>? responseAudioTranscriptDone = null,
-            global::System.Func<global::Portkey.ResponseCodeInterpreterCallCodeDeltaEvent?, TResult>? responseCodeInterpreterCallCodeDelta = null,
-            global::System.Func<global::Portkey.ResponseCodeInterpreterCallCodeDoneEvent?, TResult>? responseCodeInterpreterCallCodeDone = null,
-            global::System.Func<global::Portkey.ResponseCodeInterpreterCallCompletedEvent?, TResult>? responseCodeInterpreterCallCompleted = null,
-            global::System.Func<global::Portkey.ResponseCodeInterpreterCallInProgressEvent?, TResult>? responseCodeInterpreterCallInProgress = null,
-            global::System.Func<global::Portkey.ResponseCodeInterpreterCallInterpretingEvent?, TResult>? responseCodeInterpreterCallInterpreting = null,
-            global::System.Func<global::Portkey.ResponseCompletedEvent?, TResult>? responseCompleted = null,
-            global::System.Func<global::Portkey.ResponseContentPartAddedEvent?, TResult>? responseContentPartAdded = null,
-            global::System.Func<global::Portkey.ResponseContentPartDoneEvent?, TResult>? responseContentPartDone = null,
-            global::System.Func<global::Portkey.ResponseCreatedEvent?, TResult>? responseCreated = null,
-            global::System.Func<global::Portkey.ResponseErrorEvent?, TResult>? error = null,
-            global::System.Func<global::Portkey.ResponseFileSearchCallCompletedEvent?, TResult>? responseFileSearchCallCompleted = null,
-            global::System.Func<global::Portkey.ResponseFileSearchCallInProgressEvent?, TResult>? responseFileSearchCallInProgress = null,
-            global::System.Func<global::Portkey.ResponseFileSearchCallSearchingEvent?, TResult>? responseFileSearchCallSearching = null,
-            global::System.Func<global::Portkey.ResponseFunctionCallArgumentsDeltaEvent?, TResult>? responseFunctionCallArgumentsDelta = null,
-            global::System.Func<global::Portkey.ResponseFunctionCallArgumentsDoneEvent?, TResult>? responseFunctionCallArgumentsDone = null,
-            global::System.Func<global::Portkey.ResponseInProgressEvent?, TResult>? responseInProgress = null,
-            global::System.Func<global::Portkey.ResponseFailedEvent?, TResult>? responseFailed = null,
-            global::System.Func<global::Portkey.ResponseIncompleteEvent?, TResult>? responseIncomplete = null,
-            global::System.Func<global::Portkey.ResponseOutputItemAddedEvent?, TResult>? responseOutputItemAdded = null,
-            global::System.Func<global::Portkey.ResponseOutputItemDoneEvent?, TResult>? responseOutputItemDone = null,
-            global::System.Func<global::Portkey.ResponseRefusalDeltaEvent?, TResult>? responseRefusalDelta = null,
-            global::System.Func<global::Portkey.ResponseRefusalDoneEvent?, TResult>? responseRefusalDone = null,
-            global::System.Func<global::Portkey.ResponseTextAnnotationDeltaEvent?, TResult>? responseOutputTextAnnotationAdded = null,
-            global::System.Func<global::Portkey.ResponseTextDeltaEvent?, TResult>? responseOutputTextDelta = null,
-            global::System.Func<global::Portkey.ResponseTextDoneEvent?, TResult>? responseOutputTextDone = null,
-            global::System.Func<global::Portkey.ResponseWebSearchCallCompletedEvent?, TResult>? responseWebSearchCallCompleted = null,
-            global::System.Func<global::Portkey.ResponseWebSearchCallInProgressEvent?, TResult>? responseWebSearchCallInProgress = null,
-            global::System.Func<global::Portkey.ResponseWebSearchCallSearchingEvent?, TResult>? responseWebSearchCallSearching = null,
+            global::System.Func<global::Portkey.ResponseAudioDeltaEvent, TResult>? responseAudioDelta = null,
+            global::System.Func<global::Portkey.ResponseAudioDoneEvent, TResult>? responseAudioDone = null,
+            global::System.Func<global::Portkey.ResponseAudioTranscriptDeltaEvent, TResult>? responseAudioTranscriptDelta = null,
+            global::System.Func<global::Portkey.ResponseAudioTranscriptDoneEvent, TResult>? responseAudioTranscriptDone = null,
+            global::System.Func<global::Portkey.ResponseCodeInterpreterCallCodeDeltaEvent, TResult>? responseCodeInterpreterCallCodeDelta = null,
+            global::System.Func<global::Portkey.ResponseCodeInterpreterCallCodeDoneEvent, TResult>? responseCodeInterpreterCallCodeDone = null,
+            global::System.Func<global::Portkey.ResponseCodeInterpreterCallCompletedEvent, TResult>? responseCodeInterpreterCallCompleted = null,
+            global::System.Func<global::Portkey.ResponseCodeInterpreterCallInProgressEvent, TResult>? responseCodeInterpreterCallInProgress = null,
+            global::System.Func<global::Portkey.ResponseCodeInterpreterCallInterpretingEvent, TResult>? responseCodeInterpreterCallInterpreting = null,
+            global::System.Func<global::Portkey.ResponseCompletedEvent, TResult>? responseCompleted = null,
+            global::System.Func<global::Portkey.ResponseContentPartAddedEvent, TResult>? responseContentPartAdded = null,
+            global::System.Func<global::Portkey.ResponseContentPartDoneEvent, TResult>? responseContentPartDone = null,
+            global::System.Func<global::Portkey.ResponseCreatedEvent, TResult>? responseCreated = null,
+            global::System.Func<global::Portkey.ResponseErrorEvent, TResult>? error = null,
+            global::System.Func<global::Portkey.ResponseFileSearchCallCompletedEvent, TResult>? responseFileSearchCallCompleted = null,
+            global::System.Func<global::Portkey.ResponseFileSearchCallInProgressEvent, TResult>? responseFileSearchCallInProgress = null,
+            global::System.Func<global::Portkey.ResponseFileSearchCallSearchingEvent, TResult>? responseFileSearchCallSearching = null,
+            global::System.Func<global::Portkey.ResponseFunctionCallArgumentsDeltaEvent, TResult>? responseFunctionCallArgumentsDelta = null,
+            global::System.Func<global::Portkey.ResponseFunctionCallArgumentsDoneEvent, TResult>? responseFunctionCallArgumentsDone = null,
+            global::System.Func<global::Portkey.ResponseInProgressEvent, TResult>? responseInProgress = null,
+            global::System.Func<global::Portkey.ResponseFailedEvent, TResult>? responseFailed = null,
+            global::System.Func<global::Portkey.ResponseIncompleteEvent, TResult>? responseIncomplete = null,
+            global::System.Func<global::Portkey.ResponseOutputItemAddedEvent, TResult>? responseOutputItemAdded = null,
+            global::System.Func<global::Portkey.ResponseOutputItemDoneEvent, TResult>? responseOutputItemDone = null,
+            global::System.Func<global::Portkey.ResponseRefusalDeltaEvent, TResult>? responseRefusalDelta = null,
+            global::System.Func<global::Portkey.ResponseRefusalDoneEvent, TResult>? responseRefusalDone = null,
+            global::System.Func<global::Portkey.ResponseTextAnnotationDeltaEvent, TResult>? responseOutputTextAnnotationAdded = null,
+            global::System.Func<global::Portkey.ResponseTextDeltaEvent, TResult>? responseOutputTextDelta = null,
+            global::System.Func<global::Portkey.ResponseTextDoneEvent, TResult>? responseOutputTextDone = null,
+            global::System.Func<global::Portkey.ResponseWebSearchCallCompletedEvent, TResult>? responseWebSearchCallCompleted = null,
+            global::System.Func<global::Portkey.ResponseWebSearchCallInProgressEvent, TResult>? responseWebSearchCallInProgress = null,
+            global::System.Func<global::Portkey.ResponseWebSearchCallSearchingEvent, TResult>? responseWebSearchCallSearching = null,
             bool validate = true)
         {
             if (validate)
@@ -1463,38 +1879,242 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.ResponseAudioDeltaEvent?>? responseAudioDelta = null,
-            global::System.Action<global::Portkey.ResponseAudioDoneEvent?>? responseAudioDone = null,
-            global::System.Action<global::Portkey.ResponseAudioTranscriptDeltaEvent?>? responseAudioTranscriptDelta = null,
-            global::System.Action<global::Portkey.ResponseAudioTranscriptDoneEvent?>? responseAudioTranscriptDone = null,
-            global::System.Action<global::Portkey.ResponseCodeInterpreterCallCodeDeltaEvent?>? responseCodeInterpreterCallCodeDelta = null,
-            global::System.Action<global::Portkey.ResponseCodeInterpreterCallCodeDoneEvent?>? responseCodeInterpreterCallCodeDone = null,
-            global::System.Action<global::Portkey.ResponseCodeInterpreterCallCompletedEvent?>? responseCodeInterpreterCallCompleted = null,
-            global::System.Action<global::Portkey.ResponseCodeInterpreterCallInProgressEvent?>? responseCodeInterpreterCallInProgress = null,
-            global::System.Action<global::Portkey.ResponseCodeInterpreterCallInterpretingEvent?>? responseCodeInterpreterCallInterpreting = null,
-            global::System.Action<global::Portkey.ResponseCompletedEvent?>? responseCompleted = null,
-            global::System.Action<global::Portkey.ResponseContentPartAddedEvent?>? responseContentPartAdded = null,
-            global::System.Action<global::Portkey.ResponseContentPartDoneEvent?>? responseContentPartDone = null,
-            global::System.Action<global::Portkey.ResponseCreatedEvent?>? responseCreated = null,
-            global::System.Action<global::Portkey.ResponseErrorEvent?>? error = null,
-            global::System.Action<global::Portkey.ResponseFileSearchCallCompletedEvent?>? responseFileSearchCallCompleted = null,
-            global::System.Action<global::Portkey.ResponseFileSearchCallInProgressEvent?>? responseFileSearchCallInProgress = null,
-            global::System.Action<global::Portkey.ResponseFileSearchCallSearchingEvent?>? responseFileSearchCallSearching = null,
-            global::System.Action<global::Portkey.ResponseFunctionCallArgumentsDeltaEvent?>? responseFunctionCallArgumentsDelta = null,
-            global::System.Action<global::Portkey.ResponseFunctionCallArgumentsDoneEvent?>? responseFunctionCallArgumentsDone = null,
-            global::System.Action<global::Portkey.ResponseInProgressEvent?>? responseInProgress = null,
-            global::System.Action<global::Portkey.ResponseFailedEvent?>? responseFailed = null,
-            global::System.Action<global::Portkey.ResponseIncompleteEvent?>? responseIncomplete = null,
-            global::System.Action<global::Portkey.ResponseOutputItemAddedEvent?>? responseOutputItemAdded = null,
-            global::System.Action<global::Portkey.ResponseOutputItemDoneEvent?>? responseOutputItemDone = null,
-            global::System.Action<global::Portkey.ResponseRefusalDeltaEvent?>? responseRefusalDelta = null,
-            global::System.Action<global::Portkey.ResponseRefusalDoneEvent?>? responseRefusalDone = null,
-            global::System.Action<global::Portkey.ResponseTextAnnotationDeltaEvent?>? responseOutputTextAnnotationAdded = null,
-            global::System.Action<global::Portkey.ResponseTextDeltaEvent?>? responseOutputTextDelta = null,
-            global::System.Action<global::Portkey.ResponseTextDoneEvent?>? responseOutputTextDone = null,
-            global::System.Action<global::Portkey.ResponseWebSearchCallCompletedEvent?>? responseWebSearchCallCompleted = null,
-            global::System.Action<global::Portkey.ResponseWebSearchCallInProgressEvent?>? responseWebSearchCallInProgress = null,
-            global::System.Action<global::Portkey.ResponseWebSearchCallSearchingEvent?>? responseWebSearchCallSearching = null,
+            global::System.Action<global::Portkey.ResponseAudioDeltaEvent>? responseAudioDelta = null,
+
+            global::System.Action<global::Portkey.ResponseAudioDoneEvent>? responseAudioDone = null,
+
+            global::System.Action<global::Portkey.ResponseAudioTranscriptDeltaEvent>? responseAudioTranscriptDelta = null,
+
+            global::System.Action<global::Portkey.ResponseAudioTranscriptDoneEvent>? responseAudioTranscriptDone = null,
+
+            global::System.Action<global::Portkey.ResponseCodeInterpreterCallCodeDeltaEvent>? responseCodeInterpreterCallCodeDelta = null,
+
+            global::System.Action<global::Portkey.ResponseCodeInterpreterCallCodeDoneEvent>? responseCodeInterpreterCallCodeDone = null,
+
+            global::System.Action<global::Portkey.ResponseCodeInterpreterCallCompletedEvent>? responseCodeInterpreterCallCompleted = null,
+
+            global::System.Action<global::Portkey.ResponseCodeInterpreterCallInProgressEvent>? responseCodeInterpreterCallInProgress = null,
+
+            global::System.Action<global::Portkey.ResponseCodeInterpreterCallInterpretingEvent>? responseCodeInterpreterCallInterpreting = null,
+
+            global::System.Action<global::Portkey.ResponseCompletedEvent>? responseCompleted = null,
+
+            global::System.Action<global::Portkey.ResponseContentPartAddedEvent>? responseContentPartAdded = null,
+
+            global::System.Action<global::Portkey.ResponseContentPartDoneEvent>? responseContentPartDone = null,
+
+            global::System.Action<global::Portkey.ResponseCreatedEvent>? responseCreated = null,
+
+            global::System.Action<global::Portkey.ResponseErrorEvent>? error = null,
+
+            global::System.Action<global::Portkey.ResponseFileSearchCallCompletedEvent>? responseFileSearchCallCompleted = null,
+
+            global::System.Action<global::Portkey.ResponseFileSearchCallInProgressEvent>? responseFileSearchCallInProgress = null,
+
+            global::System.Action<global::Portkey.ResponseFileSearchCallSearchingEvent>? responseFileSearchCallSearching = null,
+
+            global::System.Action<global::Portkey.ResponseFunctionCallArgumentsDeltaEvent>? responseFunctionCallArgumentsDelta = null,
+
+            global::System.Action<global::Portkey.ResponseFunctionCallArgumentsDoneEvent>? responseFunctionCallArgumentsDone = null,
+
+            global::System.Action<global::Portkey.ResponseInProgressEvent>? responseInProgress = null,
+
+            global::System.Action<global::Portkey.ResponseFailedEvent>? responseFailed = null,
+
+            global::System.Action<global::Portkey.ResponseIncompleteEvent>? responseIncomplete = null,
+
+            global::System.Action<global::Portkey.ResponseOutputItemAddedEvent>? responseOutputItemAdded = null,
+
+            global::System.Action<global::Portkey.ResponseOutputItemDoneEvent>? responseOutputItemDone = null,
+
+            global::System.Action<global::Portkey.ResponseRefusalDeltaEvent>? responseRefusalDelta = null,
+
+            global::System.Action<global::Portkey.ResponseRefusalDoneEvent>? responseRefusalDone = null,
+
+            global::System.Action<global::Portkey.ResponseTextAnnotationDeltaEvent>? responseOutputTextAnnotationAdded = null,
+
+            global::System.Action<global::Portkey.ResponseTextDeltaEvent>? responseOutputTextDelta = null,
+
+            global::System.Action<global::Portkey.ResponseTextDoneEvent>? responseOutputTextDone = null,
+
+            global::System.Action<global::Portkey.ResponseWebSearchCallCompletedEvent>? responseWebSearchCallCompleted = null,
+
+            global::System.Action<global::Portkey.ResponseWebSearchCallInProgressEvent>? responseWebSearchCallInProgress = null,
+
+            global::System.Action<global::Portkey.ResponseWebSearchCallSearchingEvent>? responseWebSearchCallSearching = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsResponseAudioDelta)
+            {
+                responseAudioDelta?.Invoke(ResponseAudioDelta!);
+            }
+            else if (IsResponseAudioDone)
+            {
+                responseAudioDone?.Invoke(ResponseAudioDone!);
+            }
+            else if (IsResponseAudioTranscriptDelta)
+            {
+                responseAudioTranscriptDelta?.Invoke(ResponseAudioTranscriptDelta!);
+            }
+            else if (IsResponseAudioTranscriptDone)
+            {
+                responseAudioTranscriptDone?.Invoke(ResponseAudioTranscriptDone!);
+            }
+            else if (IsResponseCodeInterpreterCallCodeDelta)
+            {
+                responseCodeInterpreterCallCodeDelta?.Invoke(ResponseCodeInterpreterCallCodeDelta!);
+            }
+            else if (IsResponseCodeInterpreterCallCodeDone)
+            {
+                responseCodeInterpreterCallCodeDone?.Invoke(ResponseCodeInterpreterCallCodeDone!);
+            }
+            else if (IsResponseCodeInterpreterCallCompleted)
+            {
+                responseCodeInterpreterCallCompleted?.Invoke(ResponseCodeInterpreterCallCompleted!);
+            }
+            else if (IsResponseCodeInterpreterCallInProgress)
+            {
+                responseCodeInterpreterCallInProgress?.Invoke(ResponseCodeInterpreterCallInProgress!);
+            }
+            else if (IsResponseCodeInterpreterCallInterpreting)
+            {
+                responseCodeInterpreterCallInterpreting?.Invoke(ResponseCodeInterpreterCallInterpreting!);
+            }
+            else if (IsResponseCompleted)
+            {
+                responseCompleted?.Invoke(ResponseCompleted!);
+            }
+            else if (IsResponseContentPartAdded)
+            {
+                responseContentPartAdded?.Invoke(ResponseContentPartAdded!);
+            }
+            else if (IsResponseContentPartDone)
+            {
+                responseContentPartDone?.Invoke(ResponseContentPartDone!);
+            }
+            else if (IsResponseCreated)
+            {
+                responseCreated?.Invoke(ResponseCreated!);
+            }
+            else if (IsError)
+            {
+                error?.Invoke(Error!);
+            }
+            else if (IsResponseFileSearchCallCompleted)
+            {
+                responseFileSearchCallCompleted?.Invoke(ResponseFileSearchCallCompleted!);
+            }
+            else if (IsResponseFileSearchCallInProgress)
+            {
+                responseFileSearchCallInProgress?.Invoke(ResponseFileSearchCallInProgress!);
+            }
+            else if (IsResponseFileSearchCallSearching)
+            {
+                responseFileSearchCallSearching?.Invoke(ResponseFileSearchCallSearching!);
+            }
+            else if (IsResponseFunctionCallArgumentsDelta)
+            {
+                responseFunctionCallArgumentsDelta?.Invoke(ResponseFunctionCallArgumentsDelta!);
+            }
+            else if (IsResponseFunctionCallArgumentsDone)
+            {
+                responseFunctionCallArgumentsDone?.Invoke(ResponseFunctionCallArgumentsDone!);
+            }
+            else if (IsResponseInProgress)
+            {
+                responseInProgress?.Invoke(ResponseInProgress!);
+            }
+            else if (IsResponseFailed)
+            {
+                responseFailed?.Invoke(ResponseFailed!);
+            }
+            else if (IsResponseIncomplete)
+            {
+                responseIncomplete?.Invoke(ResponseIncomplete!);
+            }
+            else if (IsResponseOutputItemAdded)
+            {
+                responseOutputItemAdded?.Invoke(ResponseOutputItemAdded!);
+            }
+            else if (IsResponseOutputItemDone)
+            {
+                responseOutputItemDone?.Invoke(ResponseOutputItemDone!);
+            }
+            else if (IsResponseRefusalDelta)
+            {
+                responseRefusalDelta?.Invoke(ResponseRefusalDelta!);
+            }
+            else if (IsResponseRefusalDone)
+            {
+                responseRefusalDone?.Invoke(ResponseRefusalDone!);
+            }
+            else if (IsResponseOutputTextAnnotationAdded)
+            {
+                responseOutputTextAnnotationAdded?.Invoke(ResponseOutputTextAnnotationAdded!);
+            }
+            else if (IsResponseOutputTextDelta)
+            {
+                responseOutputTextDelta?.Invoke(ResponseOutputTextDelta!);
+            }
+            else if (IsResponseOutputTextDone)
+            {
+                responseOutputTextDone?.Invoke(ResponseOutputTextDone!);
+            }
+            else if (IsResponseWebSearchCallCompleted)
+            {
+                responseWebSearchCallCompleted?.Invoke(ResponseWebSearchCallCompleted!);
+            }
+            else if (IsResponseWebSearchCallInProgress)
+            {
+                responseWebSearchCallInProgress?.Invoke(ResponseWebSearchCallInProgress!);
+            }
+            else if (IsResponseWebSearchCallSearching)
+            {
+                responseWebSearchCallSearching?.Invoke(ResponseWebSearchCallSearching!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.ResponseAudioDeltaEvent>? responseAudioDelta = null,
+            global::System.Action<global::Portkey.ResponseAudioDoneEvent>? responseAudioDone = null,
+            global::System.Action<global::Portkey.ResponseAudioTranscriptDeltaEvent>? responseAudioTranscriptDelta = null,
+            global::System.Action<global::Portkey.ResponseAudioTranscriptDoneEvent>? responseAudioTranscriptDone = null,
+            global::System.Action<global::Portkey.ResponseCodeInterpreterCallCodeDeltaEvent>? responseCodeInterpreterCallCodeDelta = null,
+            global::System.Action<global::Portkey.ResponseCodeInterpreterCallCodeDoneEvent>? responseCodeInterpreterCallCodeDone = null,
+            global::System.Action<global::Portkey.ResponseCodeInterpreterCallCompletedEvent>? responseCodeInterpreterCallCompleted = null,
+            global::System.Action<global::Portkey.ResponseCodeInterpreterCallInProgressEvent>? responseCodeInterpreterCallInProgress = null,
+            global::System.Action<global::Portkey.ResponseCodeInterpreterCallInterpretingEvent>? responseCodeInterpreterCallInterpreting = null,
+            global::System.Action<global::Portkey.ResponseCompletedEvent>? responseCompleted = null,
+            global::System.Action<global::Portkey.ResponseContentPartAddedEvent>? responseContentPartAdded = null,
+            global::System.Action<global::Portkey.ResponseContentPartDoneEvent>? responseContentPartDone = null,
+            global::System.Action<global::Portkey.ResponseCreatedEvent>? responseCreated = null,
+            global::System.Action<global::Portkey.ResponseErrorEvent>? error = null,
+            global::System.Action<global::Portkey.ResponseFileSearchCallCompletedEvent>? responseFileSearchCallCompleted = null,
+            global::System.Action<global::Portkey.ResponseFileSearchCallInProgressEvent>? responseFileSearchCallInProgress = null,
+            global::System.Action<global::Portkey.ResponseFileSearchCallSearchingEvent>? responseFileSearchCallSearching = null,
+            global::System.Action<global::Portkey.ResponseFunctionCallArgumentsDeltaEvent>? responseFunctionCallArgumentsDelta = null,
+            global::System.Action<global::Portkey.ResponseFunctionCallArgumentsDoneEvent>? responseFunctionCallArgumentsDone = null,
+            global::System.Action<global::Portkey.ResponseInProgressEvent>? responseInProgress = null,
+            global::System.Action<global::Portkey.ResponseFailedEvent>? responseFailed = null,
+            global::System.Action<global::Portkey.ResponseIncompleteEvent>? responseIncomplete = null,
+            global::System.Action<global::Portkey.ResponseOutputItemAddedEvent>? responseOutputItemAdded = null,
+            global::System.Action<global::Portkey.ResponseOutputItemDoneEvent>? responseOutputItemDone = null,
+            global::System.Action<global::Portkey.ResponseRefusalDeltaEvent>? responseRefusalDelta = null,
+            global::System.Action<global::Portkey.ResponseRefusalDoneEvent>? responseRefusalDone = null,
+            global::System.Action<global::Portkey.ResponseTextAnnotationDeltaEvent>? responseOutputTextAnnotationAdded = null,
+            global::System.Action<global::Portkey.ResponseTextDeltaEvent>? responseOutputTextDelta = null,
+            global::System.Action<global::Portkey.ResponseTextDoneEvent>? responseOutputTextDone = null,
+            global::System.Action<global::Portkey.ResponseWebSearchCallCompletedEvent>? responseWebSearchCallCompleted = null,
+            global::System.Action<global::Portkey.ResponseWebSearchCallInProgressEvent>? responseWebSearchCallInProgress = null,
+            global::System.Action<global::Portkey.ResponseWebSearchCallSearchingEvent>? responseWebSearchCallSearching = null,
             bool validate = true)
         {
             if (validate)

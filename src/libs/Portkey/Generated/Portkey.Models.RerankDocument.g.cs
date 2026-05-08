@@ -28,6 +28,19 @@ namespace Portkey
         public bool IsString => String != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickString(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = String;
+            return IsString;
+        }
+
+        /// <summary>
         /// An object containing the document text and optional metadata.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -43,6 +56,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ObjectValue))]
 #endif
         public bool IsObjectValue => ObjectValue != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickObjectValue(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.RerankDocumentObject? value)
+        {
+            value = ObjectValue;
+            return IsObjectValue;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -119,8 +145,8 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? @string = null,
-            global::System.Func<global::Portkey.RerankDocumentObject?, TResult>? objectValue = null,
+            global::System.Func<string, TResult>? @string = null,
+            global::System.Func<global::Portkey.RerankDocumentObject, TResult>? objectValue = null,
             bool validate = true)
         {
             if (validate)
@@ -144,8 +170,32 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? @string = null,
-            global::System.Action<global::Portkey.RerankDocumentObject?>? objectValue = null,
+            global::System.Action<string>? @string = null,
+
+            global::System.Action<global::Portkey.RerankDocumentObject>? objectValue = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsString)
+            {
+                @string?.Invoke(String!);
+            }
+            else if (IsObjectValue)
+            {
+                objectValue?.Invoke(ObjectValue!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<string>? @string = null,
+            global::System.Action<global::Portkey.RerankDocumentObject>? objectValue = null,
             bool validate = true)
         {
             if (validate)

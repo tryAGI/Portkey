@@ -31,6 +31,19 @@ namespace Portkey
         public bool IsEnum => Enum != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickEnum(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.AssistantsApiToolChoiceOptionEnum? value)
+        {
+            value = Enum;
+            return IsEnum;
+        }
+
+        /// <summary>
         /// Specifies a tool the model should use. Use to force the model to call a specific tool.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -46,6 +59,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Named))]
 #endif
         public bool IsNamed => Named != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickNamed(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.AssistantsNamedToolChoice? value)
+        {
+            value = Named;
+            return IsNamed;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -123,7 +149,7 @@ namespace Portkey
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.AssistantsApiToolChoiceOptionEnum?, TResult>? @enum = null,
-            global::System.Func<global::Portkey.AssistantsNamedToolChoice?, TResult>? named = null,
+            global::System.Func<global::Portkey.AssistantsNamedToolChoice, TResult>? named = null,
             bool validate = true)
         {
             if (validate)
@@ -148,7 +174,31 @@ namespace Portkey
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.AssistantsApiToolChoiceOptionEnum?>? @enum = null,
-            global::System.Action<global::Portkey.AssistantsNamedToolChoice?>? named = null,
+
+            global::System.Action<global::Portkey.AssistantsNamedToolChoice>? named = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsEnum)
+            {
+                @enum?.Invoke(Enum!);
+            }
+            else if (IsNamed)
+            {
+                named?.Invoke(Named!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.AssistantsApiToolChoiceOptionEnum?>? @enum = null,
+            global::System.Action<global::Portkey.AssistantsNamedToolChoice>? named = null,
             bool validate = true)
         {
             if (validate)

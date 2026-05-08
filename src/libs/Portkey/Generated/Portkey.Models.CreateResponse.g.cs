@@ -29,6 +29,19 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickModelProperties(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.CreateModelResponseProperties? value)
+        {
+            value = ModelProperties;
+            return IsModelProperties;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ResponseProperties? Properties { get; init; }
 #else
@@ -46,6 +59,19 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickProperties(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseProperties? value)
+        {
+            value = Properties;
+            return IsProperties;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.CreateResponseVariant3? CreateResponseVariant3 { get; init; }
 #else
@@ -59,6 +85,19 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CreateResponseVariant3))]
 #endif
         public bool IsCreateResponseVariant3 => CreateResponseVariant3 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickCreateResponseVariant3(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.CreateResponseVariant3? value)
+        {
+            value = CreateResponseVariant3;
+            return IsCreateResponseVariant3;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -158,8 +197,8 @@ namespace Portkey
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.CreateModelResponseProperties?, TResult>? modelProperties = null,
-            global::System.Func<global::Portkey.ResponseProperties?, TResult>? properties = null,
-            global::System.Func<global::Portkey.CreateResponseVariant3?, TResult>? createResponseVariant3 = null,
+            global::System.Func<global::Portkey.ResponseProperties, TResult>? properties = null,
+            global::System.Func<global::Portkey.CreateResponseVariant3, TResult>? createResponseVariant3 = null,
             bool validate = true)
         {
             if (validate)
@@ -188,8 +227,38 @@ namespace Portkey
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.CreateModelResponseProperties?>? modelProperties = null,
-            global::System.Action<global::Portkey.ResponseProperties?>? properties = null,
-            global::System.Action<global::Portkey.CreateResponseVariant3?>? createResponseVariant3 = null,
+
+            global::System.Action<global::Portkey.ResponseProperties>? properties = null,
+
+            global::System.Action<global::Portkey.CreateResponseVariant3>? createResponseVariant3 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsModelProperties)
+            {
+                modelProperties?.Invoke(ModelProperties!);
+            }
+            else if (IsProperties)
+            {
+                properties?.Invoke(Properties!);
+            }
+            else if (IsCreateResponseVariant3)
+            {
+                createResponseVariant3?.Invoke(CreateResponseVariant3!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.CreateModelResponseProperties?>? modelProperties = null,
+            global::System.Action<global::Portkey.ResponseProperties>? properties = null,
+            global::System.Action<global::Portkey.CreateResponseVariant3>? createResponseVariant3 = null,
             bool validate = true)
         {
             if (validate)
