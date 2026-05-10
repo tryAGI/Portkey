@@ -129,5 +129,6 @@ namespace Portkey
         public SageMakerConfigurationVariant2()
         {
         }
+
     }
 }

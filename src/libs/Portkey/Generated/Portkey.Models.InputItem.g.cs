@@ -44,6 +44,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.EasyInputMessage PickMessage() => IsMessage
+            ? Message!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Message' but the value was {ToString()}.");
+
+        /// <summary>
         /// Content item used to generate a response.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -74,6 +81,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.Item PickItem() => IsItem
+            ? Item!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Item' but the value was {ToString()}.");
+
+        /// <summary>
         /// An internal identifier for an item to reference.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -102,6 +116,13 @@ namespace Portkey
             value = ItemReference;
             return IsItemReference;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ItemReference PickItemReference() => IsItemReference
+            ? ItemReference!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ItemReference' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

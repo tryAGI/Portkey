@@ -38,6 +38,13 @@ namespace Portkey
             value = ModelResponseProperties;
             return IsModelResponseProperties;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ModelResponseProperties PickModelResponseProperties() => IsModelResponseProperties
+            ? ModelResponseProperties!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ModelResponseProperties' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

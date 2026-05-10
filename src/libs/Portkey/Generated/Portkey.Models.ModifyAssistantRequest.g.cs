@@ -159,5 +159,6 @@ namespace Portkey
         public ModifyAssistantRequest()
         {
         }
+
     }
 }

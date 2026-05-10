@@ -41,6 +41,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.FileSearchTool PickFileSearch() => IsFileSearch
+            ? FileSearch!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FileSearch' but the value was {ToString()}.");
+
+        /// <summary>
         /// Defines a function in your own code the model can choose to call. Learn more<br/>
         /// about [function calling](/docs/guides/function-calling).
         /// </summary>
@@ -70,6 +77,13 @@ namespace Portkey
             value = Function;
             return IsFunction;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.FunctionTool PickFunction() => IsFunction
+            ? Function!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Function' but the value was {ToString()}.");
 
         /// <summary>
         /// A tool that controls a virtual computer. Learn more about the <br/>
@@ -103,6 +117,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ComputerTool PickComputerUse() => IsComputerUse
+            ? ComputerUse!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ComputerUse' but the value was {ToString()}.");
+
+        /// <summary>
         /// This tool searches the web for relevant results to use in a response.<br/>
         /// Learn more about the [web search tool](/docs/guides/tools-web-search).
         /// </summary>
@@ -132,6 +153,13 @@ namespace Portkey
             value = WebSearch;
             return IsWebSearch;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.WebSearchTool PickWebSearch() => IsWebSearch
+            ? WebSearch!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'WebSearch' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

@@ -47,6 +47,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.InputMessage PickMessage1() => IsMessage1
+            ? Message1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Message1' but the value was {ToString()}.");
+
+        /// <summary>
         /// An output message from the model.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -75,6 +82,13 @@ namespace Portkey
             value = Message2;
             return IsMessage2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.OutputMessage PickMessage2() => IsMessage2
+            ? Message2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Message2' but the value was {ToString()}.");
 
         /// <summary>
         /// The results of a file search tool call. See the <br/>
@@ -108,6 +122,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.FileSearchToolCall PickFileSearchCall() => IsFileSearchCall
+            ? FileSearchCall!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FileSearchCall' but the value was {ToString()}.");
+
+        /// <summary>
         /// A tool call to a computer use tool. See the <br/>
         /// [computer use guide](/docs/guides/tools-computer-use) for more information.
         /// </summary>
@@ -139,6 +160,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ComputerToolCall PickComputerCall() => IsComputerCall
+            ? ComputerCall!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ComputerCall' but the value was {ToString()}.");
+
+        /// <summary>
         /// The output of a computer tool call.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -167,6 +195,13 @@ namespace Portkey
             value = ComputerCallOutput;
             return IsComputerCallOutput;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ComputerToolCallOutput PickComputerCallOutput() => IsComputerCallOutput
+            ? ComputerCallOutput!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ComputerCallOutput' but the value was {ToString()}.");
 
         /// <summary>
         /// The results of a web search tool call. See the <br/>
@@ -200,6 +235,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.WebSearchToolCall PickWebSearchCall() => IsWebSearchCall
+            ? WebSearchCall!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'WebSearchCall' but the value was {ToString()}.");
+
+        /// <summary>
         /// A tool call to run a function. See the <br/>
         /// [function calling guide](/docs/guides/function-calling) for more information.
         /// </summary>
@@ -229,6 +271,13 @@ namespace Portkey
             value = FunctionCall;
             return IsFunctionCall;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.FunctionToolCall PickFunctionCall() => IsFunctionCall
+            ? FunctionCall!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionCall' but the value was {ToString()}.");
 
         /// <summary>
         /// The output of a function tool call.
@@ -261,6 +310,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.FunctionToolCallOutput PickFunctionCallOutput() => IsFunctionCallOutput
+            ? FunctionCallOutput!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionCallOutput' but the value was {ToString()}.");
+
+        /// <summary>
         /// A description of the chain of thought used by a reasoning model while generating<br/>
         /// a response.
         /// </summary>
@@ -290,6 +346,13 @@ namespace Portkey
             value = Reasoning;
             return IsReasoning;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ReasoningItem PickReasoning() => IsReasoning
+            ? Reasoning!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Reasoning' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

@@ -179,5 +179,6 @@ namespace Portkey
         public SecretReferenceDetailResponse()
         {
         }
+
     }
 }

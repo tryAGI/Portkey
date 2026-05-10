@@ -40,6 +40,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.FileCitation PickFileCitation() => IsFileCitation
+            ? FileCitation!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FileCitation' but the value was {ToString()}.");
+
+        /// <summary>
         /// A citation for a web resource used to generate a model response.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -70,6 +77,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.UrlCitation PickUrlCitation() => IsUrlCitation
+            ? UrlCitation!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UrlCitation' but the value was {ToString()}.");
+
+        /// <summary>
         /// A path to a file.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -98,6 +112,13 @@ namespace Portkey
             value = FilePath;
             return IsFilePath;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.FilePath PickFilePath() => IsFilePath
+            ? FilePath!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FilePath' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

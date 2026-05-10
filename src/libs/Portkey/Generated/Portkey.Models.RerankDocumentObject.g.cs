@@ -45,5 +45,6 @@ namespace Portkey
         public RerankDocumentObject()
         {
         }
+
     }
 }

@@ -42,6 +42,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.Collection PickCollection() => IsCollection
+            ? Collection!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Collection' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.CollectionWithChildCollectionsVariant2? CollectionWithChildCollectionsVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Portkey
             value = CollectionWithChildCollectionsVariant2;
             return IsCollectionWithChildCollectionsVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.CollectionWithChildCollectionsVariant2 PickCollectionWithChildCollectionsVariant2() => IsCollectionWithChildCollectionsVariant2
+            ? CollectionWithChildCollectionsVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CollectionWithChildCollectionsVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

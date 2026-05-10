@@ -40,6 +40,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.InputMessageResource PickInputMessage() => IsInputMessage
+            ? InputMessage!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'InputMessage' but the value was {ToString()}.");
+
+        /// <summary>
         /// An output message from the model.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -68,6 +75,13 @@ namespace Portkey
             value = Message;
             return IsMessage;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.OutputMessage PickMessage() => IsMessage
+            ? Message!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Message' but the value was {ToString()}.");
 
         /// <summary>
         /// The results of a file search tool call. See the <br/>
@@ -99,6 +113,13 @@ namespace Portkey
             value = FileSearchCall;
             return IsFileSearchCall;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.FileSearchToolCall PickFileSearchCall() => IsFileSearchCall
+            ? FileSearchCall!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FileSearchCall' but the value was {ToString()}.");
 
         /// <summary>
         /// A tool call to a computer use tool. See the <br/>
@@ -134,6 +155,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.ComputerToolCall PickComputerCall() => IsComputerCall
+            ? ComputerCall!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ComputerCall' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ComputerToolCallOutputResource? ComputerToolCallOutput { get; init; }
 #else
@@ -160,6 +188,13 @@ namespace Portkey
             value = ComputerToolCallOutput;
             return IsComputerToolCallOutput;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ComputerToolCallOutputResource PickComputerToolCallOutput() => IsComputerToolCallOutput
+            ? ComputerToolCallOutput!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ComputerToolCallOutput' but the value was {ToString()}.");
 
         /// <summary>
         /// The results of a web search tool call. See the <br/>
@@ -195,6 +230,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.WebSearchToolCall PickWebSearchCall() => IsWebSearchCall
+            ? WebSearchCall!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'WebSearchCall' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.FunctionToolCallResource? FunctionToolCall { get; init; }
 #else
@@ -225,6 +267,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.FunctionToolCallResource PickFunctionToolCall() => IsFunctionToolCall
+            ? FunctionToolCall!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionToolCall' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.FunctionToolCallOutputResource? FunctionToolCallOutput { get; init; }
 #else
@@ -251,6 +300,13 @@ namespace Portkey
             value = FunctionToolCallOutput;
             return IsFunctionToolCallOutput;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.FunctionToolCallOutputResource PickFunctionToolCallOutput() => IsFunctionToolCallOutput
+            ? FunctionToolCallOutput!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionToolCallOutput' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

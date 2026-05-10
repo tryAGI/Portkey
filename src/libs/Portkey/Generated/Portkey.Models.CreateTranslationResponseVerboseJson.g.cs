@@ -77,5 +77,6 @@ namespace Portkey
         public CreateTranslationResponseVerboseJson()
         {
         }
+
     }
 }

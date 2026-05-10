@@ -42,6 +42,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.AwsAccessKeyAuthConfig PickAccessKey() => IsAccessKey
+            ? AccessKey!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AccessKey' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.AwsAssumedRoleAuthConfig? AssumedRole { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Portkey
             value = AssumedRole;
             return IsAssumedRole;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.AwsAssumedRoleAuthConfig PickAssumedRole() => IsAssumedRole
+            ? AssumedRole!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AssumedRole' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -102,6 +116,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.AwsServiceRoleAuthConfig PickServiceRole() => IsServiceRole
+            ? ServiceRole!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ServiceRole' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.AzureEntraAuthConfig? AzureEntra { get; init; }
 #else
@@ -128,6 +149,13 @@ namespace Portkey
             value = AzureEntra;
             return IsAzureEntra;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.AzureEntraAuthConfig PickAzureEntra() => IsAzureEntra
+            ? AzureEntra!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AzureEntra' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -162,6 +190,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.AzureManagedAuthConfig PickAzureManaged() => IsAzureManaged
+            ? AzureManaged!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AzureManaged' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.AzureDefaultAuthConfig? AzureDefault { get; init; }
 #else
@@ -188,6 +223,13 @@ namespace Portkey
             value = AzureDefault;
             return IsAzureDefault;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.AzureDefaultAuthConfig PickAzureDefault() => IsAzureDefault
+            ? AzureDefault!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AzureDefault' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -222,6 +264,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.HashicorpTokenAuthConfig PickHashicorpToken() => IsHashicorpToken
+            ? HashicorpToken!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'HashicorpToken' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.HashicorpAppRoleAuthConfig? HashicorpAppRole { get; init; }
 #else
@@ -252,6 +301,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.HashicorpAppRoleAuthConfig PickHashicorpAppRole() => IsHashicorpAppRole
+            ? HashicorpAppRole!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'HashicorpAppRole' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.HashicorpKubernetesAuthConfig? HashicorpKubernetes { get; init; }
 #else
@@ -278,6 +334,13 @@ namespace Portkey
             value = HashicorpKubernetes;
             return IsHashicorpKubernetes;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.HashicorpKubernetesAuthConfig PickHashicorpKubernetes() => IsHashicorpKubernetes
+            ? HashicorpKubernetes!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'HashicorpKubernetes' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

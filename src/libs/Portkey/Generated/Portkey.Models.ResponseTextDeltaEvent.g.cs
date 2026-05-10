@@ -90,5 +90,6 @@ namespace Portkey
         public ResponseTextDeltaEvent()
         {
         }
+
     }
 }

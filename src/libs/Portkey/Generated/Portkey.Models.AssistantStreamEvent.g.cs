@@ -56,6 +56,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.ThreadStreamEvent PickThread() => IsThread
+            ? Thread!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Thread' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.RunStreamEvent? Run { get; init; }
 #else
@@ -82,6 +89,13 @@ namespace Portkey
             value = Run;
             return IsRun;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.RunStreamEvent PickRun() => IsRun
+            ? Run!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Run' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -116,6 +130,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.RunStepStreamEvent PickRunStep() => IsRunStep
+            ? RunStep!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'RunStep' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.MessageStreamEvent? Message { get; init; }
 #else
@@ -142,6 +163,13 @@ namespace Portkey
             value = Message;
             return IsMessage;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.MessageStreamEvent PickMessage() => IsMessage
+            ? Message!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Message' but the value was {ToString()}.");
 
         /// <summary>
         /// Occurs when an [error](https://platform.openai.com/docs/guides/error-codes/api-errors) occurs. This can happen due to an internal server error or a timeout.
@@ -174,6 +202,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ErrorEvent PickError() => IsError
+            ? Error!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Error' but the value was {ToString()}.");
+
+        /// <summary>
         /// Occurs when a stream ends.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -202,6 +237,13 @@ namespace Portkey
             value = Done;
             return IsDone;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.DoneEvent PickDone() => IsDone
+            ? Done!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Done' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

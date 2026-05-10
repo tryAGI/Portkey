@@ -45,6 +45,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseAudioDeltaEvent PickResponseAudioDelta() => IsResponseAudioDelta
+            ? ResponseAudioDelta!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseAudioDelta' but the value was {ToString()}.");
+
+        /// <summary>
         /// Emitted when the audio response is complete.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -73,6 +80,13 @@ namespace Portkey
             value = ResponseAudioDone;
             return IsResponseAudioDone;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseAudioDoneEvent PickResponseAudioDone() => IsResponseAudioDone
+            ? ResponseAudioDone!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseAudioDone' but the value was {ToString()}.");
 
         /// <summary>
         /// Emitted when there is a partial transcript of audio.
@@ -105,6 +119,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseAudioTranscriptDeltaEvent PickResponseAudioTranscriptDelta() => IsResponseAudioTranscriptDelta
+            ? ResponseAudioTranscriptDelta!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseAudioTranscriptDelta' but the value was {ToString()}.");
+
+        /// <summary>
         /// Emitted when the full audio transcript is completed.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -133,6 +154,13 @@ namespace Portkey
             value = ResponseAudioTranscriptDone;
             return IsResponseAudioTranscriptDone;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseAudioTranscriptDoneEvent PickResponseAudioTranscriptDone() => IsResponseAudioTranscriptDone
+            ? ResponseAudioTranscriptDone!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseAudioTranscriptDone' but the value was {ToString()}.");
 
         /// <summary>
         /// Emitted when a partial code snippet is added by the code interpreter.
@@ -165,6 +193,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseCodeInterpreterCallCodeDeltaEvent PickResponseCodeInterpreterCallCodeDelta() => IsResponseCodeInterpreterCallCodeDelta
+            ? ResponseCodeInterpreterCallCodeDelta!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseCodeInterpreterCallCodeDelta' but the value was {ToString()}.");
+
+        /// <summary>
         /// Emitted when code snippet output is finalized by the code interpreter.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -193,6 +228,13 @@ namespace Portkey
             value = ResponseCodeInterpreterCallCodeDone;
             return IsResponseCodeInterpreterCallCodeDone;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseCodeInterpreterCallCodeDoneEvent PickResponseCodeInterpreterCallCodeDone() => IsResponseCodeInterpreterCallCodeDone
+            ? ResponseCodeInterpreterCallCodeDone!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseCodeInterpreterCallCodeDone' but the value was {ToString()}.");
 
         /// <summary>
         /// Emitted when the code interpreter call is completed.
@@ -225,6 +267,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseCodeInterpreterCallCompletedEvent PickResponseCodeInterpreterCallCompleted() => IsResponseCodeInterpreterCallCompleted
+            ? ResponseCodeInterpreterCallCompleted!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseCodeInterpreterCallCompleted' but the value was {ToString()}.");
+
+        /// <summary>
         /// Emitted when a code interpreter call is in progress.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -253,6 +302,13 @@ namespace Portkey
             value = ResponseCodeInterpreterCallInProgress;
             return IsResponseCodeInterpreterCallInProgress;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseCodeInterpreterCallInProgressEvent PickResponseCodeInterpreterCallInProgress() => IsResponseCodeInterpreterCallInProgress
+            ? ResponseCodeInterpreterCallInProgress!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseCodeInterpreterCallInProgress' but the value was {ToString()}.");
 
         /// <summary>
         /// Emitted when the code interpreter is actively interpreting the code snippet.
@@ -285,6 +341,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseCodeInterpreterCallInterpretingEvent PickResponseCodeInterpreterCallInterpreting() => IsResponseCodeInterpreterCallInterpreting
+            ? ResponseCodeInterpreterCallInterpreting!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseCodeInterpreterCallInterpreting' but the value was {ToString()}.");
+
+        /// <summary>
         /// Emitted when the model response is complete.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -313,6 +376,13 @@ namespace Portkey
             value = ResponseCompleted;
             return IsResponseCompleted;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseCompletedEvent PickResponseCompleted() => IsResponseCompleted
+            ? ResponseCompleted!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseCompleted' but the value was {ToString()}.");
 
         /// <summary>
         /// Emitted when a new content part is added.
@@ -345,6 +415,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseContentPartAddedEvent PickResponseContentPartAdded() => IsResponseContentPartAdded
+            ? ResponseContentPartAdded!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseContentPartAdded' but the value was {ToString()}.");
+
+        /// <summary>
         /// Emitted when a content part is done.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -373,6 +450,13 @@ namespace Portkey
             value = ResponseContentPartDone;
             return IsResponseContentPartDone;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseContentPartDoneEvent PickResponseContentPartDone() => IsResponseContentPartDone
+            ? ResponseContentPartDone!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseContentPartDone' but the value was {ToString()}.");
 
         /// <summary>
         /// An event that is emitted when a response is created.
@@ -405,6 +489,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseCreatedEvent PickResponseCreated() => IsResponseCreated
+            ? ResponseCreated!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseCreated' but the value was {ToString()}.");
+
+        /// <summary>
         /// Emitted when an error occurs.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -433,6 +524,13 @@ namespace Portkey
             value = Error;
             return IsError;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseErrorEvent PickError() => IsError
+            ? Error!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Error' but the value was {ToString()}.");
 
         /// <summary>
         /// Emitted when a file search call is completed (results found).
@@ -465,6 +563,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseFileSearchCallCompletedEvent PickResponseFileSearchCallCompleted() => IsResponseFileSearchCallCompleted
+            ? ResponseFileSearchCallCompleted!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseFileSearchCallCompleted' but the value was {ToString()}.");
+
+        /// <summary>
         /// Emitted when a file search call is initiated.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -493,6 +598,13 @@ namespace Portkey
             value = ResponseFileSearchCallInProgress;
             return IsResponseFileSearchCallInProgress;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseFileSearchCallInProgressEvent PickResponseFileSearchCallInProgress() => IsResponseFileSearchCallInProgress
+            ? ResponseFileSearchCallInProgress!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseFileSearchCallInProgress' but the value was {ToString()}.");
 
         /// <summary>
         /// Emitted when a file search is currently searching.
@@ -525,6 +637,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseFileSearchCallSearchingEvent PickResponseFileSearchCallSearching() => IsResponseFileSearchCallSearching
+            ? ResponseFileSearchCallSearching!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseFileSearchCallSearching' but the value was {ToString()}.");
+
+        /// <summary>
         /// Emitted when there is a partial function-call arguments delta.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -553,6 +672,13 @@ namespace Portkey
             value = ResponseFunctionCallArgumentsDelta;
             return IsResponseFunctionCallArgumentsDelta;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseFunctionCallArgumentsDeltaEvent PickResponseFunctionCallArgumentsDelta() => IsResponseFunctionCallArgumentsDelta
+            ? ResponseFunctionCallArgumentsDelta!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseFunctionCallArgumentsDelta' but the value was {ToString()}.");
 
         /// <summary>
         /// Emitted when function-call arguments are finalized.
@@ -585,6 +711,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseFunctionCallArgumentsDoneEvent PickResponseFunctionCallArgumentsDone() => IsResponseFunctionCallArgumentsDone
+            ? ResponseFunctionCallArgumentsDone!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseFunctionCallArgumentsDone' but the value was {ToString()}.");
+
+        /// <summary>
         /// Emitted when the response is in progress.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -613,6 +746,13 @@ namespace Portkey
             value = ResponseInProgress;
             return IsResponseInProgress;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseInProgressEvent PickResponseInProgress() => IsResponseInProgress
+            ? ResponseInProgress!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseInProgress' but the value was {ToString()}.");
 
         /// <summary>
         /// An event that is emitted when a response fails.
@@ -645,6 +785,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseFailedEvent PickResponseFailed() => IsResponseFailed
+            ? ResponseFailed!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseFailed' but the value was {ToString()}.");
+
+        /// <summary>
         /// An event that is emitted when a response finishes as incomplete.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -673,6 +820,13 @@ namespace Portkey
             value = ResponseIncomplete;
             return IsResponseIncomplete;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseIncompleteEvent PickResponseIncomplete() => IsResponseIncomplete
+            ? ResponseIncomplete!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseIncomplete' but the value was {ToString()}.");
 
         /// <summary>
         /// Emitted when a new output item is added.
@@ -705,6 +859,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseOutputItemAddedEvent PickResponseOutputItemAdded() => IsResponseOutputItemAdded
+            ? ResponseOutputItemAdded!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseOutputItemAdded' but the value was {ToString()}.");
+
+        /// <summary>
         /// Emitted when an output item is marked done.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -733,6 +894,13 @@ namespace Portkey
             value = ResponseOutputItemDone;
             return IsResponseOutputItemDone;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseOutputItemDoneEvent PickResponseOutputItemDone() => IsResponseOutputItemDone
+            ? ResponseOutputItemDone!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseOutputItemDone' but the value was {ToString()}.");
 
         /// <summary>
         /// Emitted when there is a partial refusal text.
@@ -765,6 +933,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseRefusalDeltaEvent PickResponseRefusalDelta() => IsResponseRefusalDelta
+            ? ResponseRefusalDelta!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseRefusalDelta' but the value was {ToString()}.");
+
+        /// <summary>
         /// Emitted when refusal text is finalized.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -793,6 +968,13 @@ namespace Portkey
             value = ResponseRefusalDone;
             return IsResponseRefusalDone;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseRefusalDoneEvent PickResponseRefusalDone() => IsResponseRefusalDone
+            ? ResponseRefusalDone!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseRefusalDone' but the value was {ToString()}.");
 
         /// <summary>
         /// Emitted when a text annotation is added.
@@ -825,6 +1007,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseTextAnnotationDeltaEvent PickResponseOutputTextAnnotationAdded() => IsResponseOutputTextAnnotationAdded
+            ? ResponseOutputTextAnnotationAdded!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseOutputTextAnnotationAdded' but the value was {ToString()}.");
+
+        /// <summary>
         /// Emitted when there is an additional text delta.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -853,6 +1042,13 @@ namespace Portkey
             value = ResponseOutputTextDelta;
             return IsResponseOutputTextDelta;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseTextDeltaEvent PickResponseOutputTextDelta() => IsResponseOutputTextDelta
+            ? ResponseOutputTextDelta!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseOutputTextDelta' but the value was {ToString()}.");
 
         /// <summary>
         /// Emitted when text content is finalized.
@@ -885,6 +1081,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseTextDoneEvent PickResponseOutputTextDone() => IsResponseOutputTextDone
+            ? ResponseOutputTextDone!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseOutputTextDone' but the value was {ToString()}.");
+
+        /// <summary>
         /// Emitted when a web search call is completed.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -913,6 +1116,13 @@ namespace Portkey
             value = ResponseWebSearchCallCompleted;
             return IsResponseWebSearchCallCompleted;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseWebSearchCallCompletedEvent PickResponseWebSearchCallCompleted() => IsResponseWebSearchCallCompleted
+            ? ResponseWebSearchCallCompleted!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseWebSearchCallCompleted' but the value was {ToString()}.");
 
         /// <summary>
         /// Emitted when a web search call is initiated.
@@ -945,6 +1155,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseWebSearchCallInProgressEvent PickResponseWebSearchCallInProgress() => IsResponseWebSearchCallInProgress
+            ? ResponseWebSearchCallInProgress!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseWebSearchCallInProgress' but the value was {ToString()}.");
+
+        /// <summary>
         /// Emitted when a web search call is executing.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -973,6 +1190,13 @@ namespace Portkey
             value = ResponseWebSearchCallSearching;
             return IsResponseWebSearchCallSearching;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseWebSearchCallSearchingEvent PickResponseWebSearchCallSearching() => IsResponseWebSearchCallSearching
+            ? ResponseWebSearchCallSearching!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseWebSearchCallSearching' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

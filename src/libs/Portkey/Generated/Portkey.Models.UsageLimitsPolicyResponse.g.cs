@@ -42,6 +42,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.UsageLimitsPolicy PickUsageLimitsPolicy() => IsUsageLimitsPolicy
+            ? UsageLimitsPolicy!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UsageLimitsPolicy' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.UsageLimitsPolicyResponseVariant2? UsageLimitsPolicyResponseVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Portkey
             value = UsageLimitsPolicyResponseVariant2;
             return IsUsageLimitsPolicyResponseVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.UsageLimitsPolicyResponseVariant2 PickUsageLimitsPolicyResponseVariant2() => IsUsageLimitsPolicyResponseVariant2
+            ? UsageLimitsPolicyResponseVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UsageLimitsPolicyResponseVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

@@ -42,6 +42,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.AutoChunkingStrategyRequestParam PickAutoChunkingStrategy() => IsAutoChunkingStrategy
+            ? AutoChunkingStrategy!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AutoChunkingStrategy' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.StaticChunkingStrategyRequestParam? StaticChunkingStrategy { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Portkey
             value = StaticChunkingStrategy;
             return IsStaticChunkingStrategy;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.StaticChunkingStrategyRequestParam PickStaticChunkingStrategy() => IsStaticChunkingStrategy
+            ? StaticChunkingStrategy!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'StaticChunkingStrategy' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
