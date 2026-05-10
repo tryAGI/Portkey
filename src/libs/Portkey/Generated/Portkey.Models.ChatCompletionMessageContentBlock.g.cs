@@ -42,6 +42,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.ChatCompletionRequestMessageContentPartText PickTextContentPart() => IsTextContentPart
+            ? TextContentPart!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'TextContentPart' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionMessageContentPartThinking? ThinkingContentPart { get; init; }
 #else
@@ -72,6 +79,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.ChatCompletionMessageContentPartThinking PickThinkingContentPart() => IsThinkingContentPart
+            ? ThinkingContentPart!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ThinkingContentPart' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionMessageContentPartRedactedThinking? RedactedThinkingContentPart { get; init; }
 #else
@@ -98,6 +112,13 @@ namespace Portkey
             value = RedactedThinkingContentPart;
             return IsRedactedThinkingContentPart;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ChatCompletionMessageContentPartRedactedThinking PickRedactedThinkingContentPart() => IsRedactedThinkingContentPart
+            ? RedactedThinkingContentPart!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'RedactedThinkingContentPart' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

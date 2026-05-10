@@ -40,6 +40,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ChatCompletionRequestSystemMessage PickSystemMessage() => IsSystemMessage
+            ? SystemMessage!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'SystemMessage' but the value was {ToString()}.");
+
+        /// <summary>
         /// New role by OpenAI for select models. Must be explicitly used for models that support it. When used with incompatible models or providers, Portkey automatically converts it to a system role.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -68,6 +75,13 @@ namespace Portkey
             value = DeveloperMessage;
             return IsDeveloperMessage;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ChatCompletionRequestDeveloperMessage PickDeveloperMessage() => IsDeveloperMessage
+            ? DeveloperMessage!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'DeveloperMessage' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -102,6 +116,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.ChatCompletionRequestUserMessage PickUserMessage() => IsUserMessage
+            ? UserMessage!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UserMessage' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionRequestAssistantMessage? AssistantMessage { get; init; }
 #else
@@ -128,6 +149,13 @@ namespace Portkey
             value = AssistantMessage;
             return IsAssistantMessage;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ChatCompletionRequestAssistantMessage PickAssistantMessage() => IsAssistantMessage
+            ? AssistantMessage!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AssistantMessage' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -162,6 +190,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.ChatCompletionRequestToolMessage PickToolMessage() => IsToolMessage
+            ? ToolMessage!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolMessage' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionRequestFunctionMessage? FunctionMessage { get; init; }
 #else
@@ -188,6 +223,13 @@ namespace Portkey
             value = FunctionMessage;
             return IsFunctionMessage;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ChatCompletionRequestFunctionMessage PickFunctionMessage() => IsFunctionMessage
+            ? FunctionMessage!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionMessage' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

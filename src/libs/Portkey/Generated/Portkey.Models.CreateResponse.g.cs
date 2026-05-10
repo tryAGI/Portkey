@@ -42,6 +42,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.CreateModelResponseProperties PickModelProperties() => IsModelProperties
+            ? ModelProperties!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ModelProperties' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ResponseProperties? Properties { get; init; }
 #else
@@ -72,6 +79,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.ResponseProperties PickProperties() => IsProperties
+            ? Properties!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Properties' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.CreateResponseVariant3? CreateResponseVariant3 { get; init; }
 #else
@@ -98,6 +112,13 @@ namespace Portkey
             value = CreateResponseVariant3;
             return IsCreateResponseVariant3;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.CreateResponseVariant3 PickCreateResponseVariant3() => IsCreateResponseVariant3
+            ? CreateResponseVariant3!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CreateResponseVariant3' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

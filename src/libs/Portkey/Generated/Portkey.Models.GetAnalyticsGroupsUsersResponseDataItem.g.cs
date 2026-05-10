@@ -75,5 +75,6 @@ namespace Portkey
         public GetAnalyticsGroupsUsersResponseDataItem()
         {
         }
+
     }
 }

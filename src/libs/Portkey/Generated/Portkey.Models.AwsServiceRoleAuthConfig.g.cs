@@ -49,5 +49,6 @@ namespace Portkey
         public AwsServiceRoleAuthConfig()
         {
         }
+
     }
 }

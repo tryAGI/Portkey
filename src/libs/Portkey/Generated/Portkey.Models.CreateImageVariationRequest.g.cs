@@ -135,5 +135,6 @@ namespace Portkey
         public CreateImageVariationRequest()
         {
         }
+
     }
 }

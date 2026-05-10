@@ -42,6 +42,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.FunctionToolCallOutput PickFunctionToolCallOutput() => IsFunctionToolCallOutput
+            ? FunctionToolCallOutput!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionToolCallOutput' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.FunctionToolCallOutputResourceVariant2? FunctionToolCallOutputResourceVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Portkey
             value = FunctionToolCallOutputResourceVariant2;
             return IsFunctionToolCallOutputResourceVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.FunctionToolCallOutputResourceVariant2 PickFunctionToolCallOutputResourceVariant2() => IsFunctionToolCallOutputResourceVariant2
+            ? FunctionToolCallOutputResourceVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionToolCallOutputResourceVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

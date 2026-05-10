@@ -52,5 +52,6 @@ namespace Portkey
         public ThreadStreamEventVariant1()
         {
         }
+
     }
 }

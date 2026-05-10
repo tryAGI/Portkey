@@ -42,6 +42,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.InputContent PickInputContent() => IsInputContent
+            ? InputContent!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'InputContent' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.OutputContent? OutputContent { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Portkey
             value = OutputContent;
             return IsOutputContent;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.OutputContent PickOutputContent() => IsOutputContent
+            ? OutputContent!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'OutputContent' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

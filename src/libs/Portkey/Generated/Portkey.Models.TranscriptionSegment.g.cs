@@ -150,5 +150,6 @@ namespace Portkey
         public TranscriptionSegment()
         {
         }
+
     }
 }

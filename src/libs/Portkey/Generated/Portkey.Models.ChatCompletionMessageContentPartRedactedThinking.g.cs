@@ -54,5 +54,6 @@ namespace Portkey
         public ChatCompletionMessageContentPartRedactedThinking()
         {
         }
+
     }
 }

@@ -42,6 +42,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.BedrockConfiguration PickBedrock() => IsBedrock
+            ? Bedrock!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Bedrock' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.SageMakerConfigurationVariant2? SageMakerConfigurationVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Portkey
             value = SageMakerConfigurationVariant2;
             return IsSageMakerConfigurationVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.SageMakerConfigurationVariant2 PickSageMakerConfigurationVariant2() => IsSageMakerConfigurationVariant2
+            ? SageMakerConfigurationVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'SageMakerConfigurationVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

@@ -41,6 +41,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public string PickString() => IsString
+            ? String!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'String' but the value was {ToString()}.");
+
+        /// <summary>
         /// An object containing the document text and optional metadata.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -69,6 +76,13 @@ namespace Portkey
             value = ObjectValue;
             return IsObjectValue;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.RerankDocumentObject PickObjectValue() => IsObjectValue
+            ? ObjectValue!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ObjectValue' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

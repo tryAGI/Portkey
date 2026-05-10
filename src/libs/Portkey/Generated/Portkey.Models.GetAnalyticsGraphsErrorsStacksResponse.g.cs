@@ -64,5 +64,6 @@ namespace Portkey
         public GetAnalyticsGraphsErrorsStacksResponse()
         {
         }
+
     }
 }

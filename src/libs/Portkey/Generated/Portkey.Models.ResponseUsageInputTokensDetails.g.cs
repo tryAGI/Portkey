@@ -44,5 +44,6 @@ namespace Portkey
         public ResponseUsageInputTokensDetails()
         {
         }
+
     }
 }

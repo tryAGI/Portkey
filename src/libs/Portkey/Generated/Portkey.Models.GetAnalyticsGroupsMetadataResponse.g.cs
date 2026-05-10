@@ -62,5 +62,6 @@ namespace Portkey
         public GetAnalyticsGroupsMetadataResponse()
         {
         }
+
     }
 }

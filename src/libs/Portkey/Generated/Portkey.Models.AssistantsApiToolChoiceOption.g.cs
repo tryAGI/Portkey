@@ -44,6 +44,13 @@ namespace Portkey
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.AssistantsApiToolChoiceOptionEnum PickEnum() => IsEnum
+            ? Enum!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Enum' but the value was {ToString()}.");
+
+        /// <summary>
         /// Specifies a tool the model should use. Use to force the model to call a specific tool.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -72,6 +79,13 @@ namespace Portkey
             value = Named;
             return IsNamed;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.AssistantsNamedToolChoice PickNamed() => IsNamed
+            ? Named!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Named' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

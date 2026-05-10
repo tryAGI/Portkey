@@ -42,6 +42,13 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public global::Portkey.ChatCompletionRequestMessageContentPartText PickTextContentPart() => IsTextContentPart
+            ? TextContentPart!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'TextContentPart' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionRequestMessageContentPartImage? ImageContentPart { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Portkey
             value = ImageContentPart;
             return IsImageContentPart;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ChatCompletionRequestMessageContentPartImage PickImageContentPart() => IsImageContentPart
+            ? ImageContentPart!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ImageContentPart' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

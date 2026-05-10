@@ -60,5 +60,6 @@ namespace Portkey
         public GetProvidersResponse()
         {
         }
+
     }
 }
