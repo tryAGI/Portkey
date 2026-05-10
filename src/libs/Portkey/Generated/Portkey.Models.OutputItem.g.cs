@@ -10,6 +10,11 @@ namespace Portkey
     public readonly partial struct OutputItem : global::System.IEquatable<OutputItem>
     {
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.OutputItemDiscriminatorType? Type { get; }
+
+        /// <summary>
         /// An output message from the model.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -305,6 +310,7 @@ namespace Portkey
         /// 
         /// </summary>
         public OutputItem(
+            global::Portkey.OutputItemDiscriminatorType? type,
             global::Portkey.OutputMessage? message,
             global::Portkey.FileSearchToolCall? fileSearchCall,
             global::Portkey.FunctionToolCall? functionCall,
@@ -313,6 +319,8 @@ namespace Portkey
             global::Portkey.ReasoningItem? reasoning
             )
         {
+            Type = type;
+
             Message = message;
             FileSearchCall = fileSearchCall;
             FunctionCall = functionCall;

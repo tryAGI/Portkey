@@ -87,6 +87,7 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.RateLimitsPolicy), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.RateLimitsPolicy> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.RateLimitsPolicy).Name}");
                     rateLimitsPolicy = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -97,9 +98,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (rateLimitsPolicy == null && rateLimitsPolicyResponseVariant2 == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.RateLimitsPolicyResponseVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.RateLimitsPolicyResponseVariant2> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.RateLimitsPolicyResponseVariant2).Name}");
                     rateLimitsPolicyResponseVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

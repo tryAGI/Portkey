@@ -10,6 +10,11 @@ namespace Portkey
     public readonly partial struct ResponseStreamEvent : global::System.IEquatable<ResponseStreamEvent>
     {
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseStreamEventDiscriminatorType? Type { get; }
+
+        /// <summary>
         /// Emitted when there is a partial audio response.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -1548,6 +1553,7 @@ namespace Portkey
         /// 
         /// </summary>
         public ResponseStreamEvent(
+            global::Portkey.ResponseStreamEventDiscriminatorType? type,
             global::Portkey.ResponseAudioDeltaEvent? responseAudioDelta,
             global::Portkey.ResponseAudioDoneEvent? responseAudioDone,
             global::Portkey.ResponseAudioTranscriptDeltaEvent? responseAudioTranscriptDelta,
@@ -1582,6 +1588,8 @@ namespace Portkey
             global::Portkey.ResponseWebSearchCallSearchingEvent? responseWebSearchCallSearching
             )
         {
+            Type = type;
+
             ResponseAudioDelta = responseAudioDelta;
             ResponseAudioDone = responseAudioDone;
             ResponseAudioTranscriptDelta = responseAudioTranscriptDelta;
