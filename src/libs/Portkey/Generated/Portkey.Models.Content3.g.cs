@@ -89,6 +89,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static Content3 FromInputContent(global::Portkey.InputContent? value) => new Content3(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Content3(global::Portkey.OutputContent value) => new Content3((global::Portkey.OutputContent?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace Portkey
         {
             OutputContent = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Content3 FromOutputContent(global::Portkey.OutputContent? value) => new Content3(value);
 
         /// <summary>
         /// 

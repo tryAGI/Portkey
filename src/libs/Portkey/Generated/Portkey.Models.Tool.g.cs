@@ -153,6 +153,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static Tool FromFileSearch(global::Portkey.FileSearchTool? value) => new Tool(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Tool(global::Portkey.FunctionTool value) => new Tool((global::Portkey.FunctionTool?)value);
 
         /// <summary>
@@ -167,6 +172,11 @@ namespace Portkey
         {
             Function = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Tool FromFunction(global::Portkey.FunctionTool? value) => new Tool(value);
 
         /// <summary>
         /// 
@@ -189,6 +199,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static Tool FromComputerUse(global::Portkey.ComputerTool? value) => new Tool(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Tool(global::Portkey.WebSearchTool value) => new Tool((global::Portkey.WebSearchTool?)value);
 
         /// <summary>
@@ -203,6 +218,11 @@ namespace Portkey
         {
             WebSearch = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Tool FromWebSearch(global::Portkey.WebSearchTool? value) => new Tool(value);
 
         /// <summary>
         /// 

@@ -89,6 +89,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static VoiceIdsShared FromVoiceIdsSharedVariant1(string? value) => new VoiceIdsShared(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator VoiceIdsShared(global::Portkey.VoiceIdsSharedEnum value) => new VoiceIdsShared((global::Portkey.VoiceIdsSharedEnum?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace Portkey
         {
             Enum = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static VoiceIdsShared FromEnum(global::Portkey.VoiceIdsSharedEnum? value) => new VoiceIdsShared(value);
 
         /// <summary>
         /// 

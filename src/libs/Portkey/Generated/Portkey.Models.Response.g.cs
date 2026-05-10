@@ -119,6 +119,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static Response FromModelProperties(global::Portkey.ModelResponseProperties? value) => new Response(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Response(global::Portkey.ResponseProperties value) => new Response((global::Portkey.ResponseProperties?)value);
 
         /// <summary>
@@ -137,6 +142,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static Response FromProperties(global::Portkey.ResponseProperties? value) => new Response(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Response(global::Portkey.ResponseVariant3 value) => new Response((global::Portkey.ResponseVariant3?)value);
 
         /// <summary>
@@ -151,6 +161,11 @@ namespace Portkey
         {
             ResponseVariant3 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Response FromResponseVariant3(global::Portkey.ResponseVariant3? value) => new Response(value);
 
         /// <summary>
         /// 

@@ -219,6 +219,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static OutputItem FromMessage(global::Portkey.OutputMessage? value) => new OutputItem(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator OutputItem(global::Portkey.FileSearchToolCall value) => new OutputItem((global::Portkey.FileSearchToolCall?)value);
 
         /// <summary>
@@ -233,6 +238,11 @@ namespace Portkey
         {
             FileSearchCall = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static OutputItem FromFileSearchCall(global::Portkey.FileSearchToolCall? value) => new OutputItem(value);
 
         /// <summary>
         /// 
@@ -255,6 +265,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static OutputItem FromFunctionCall(global::Portkey.FunctionToolCall? value) => new OutputItem(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator OutputItem(global::Portkey.WebSearchToolCall value) => new OutputItem((global::Portkey.WebSearchToolCall?)value);
 
         /// <summary>
@@ -269,6 +284,11 @@ namespace Portkey
         {
             WebSearchCall = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static OutputItem FromWebSearchCall(global::Portkey.WebSearchToolCall? value) => new OutputItem(value);
 
         /// <summary>
         /// 
@@ -291,6 +311,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static OutputItem FromComputerCall(global::Portkey.ComputerToolCall? value) => new OutputItem(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator OutputItem(global::Portkey.ReasoningItem value) => new OutputItem((global::Portkey.ReasoningItem?)value);
 
         /// <summary>
@@ -305,6 +330,11 @@ namespace Portkey
         {
             Reasoning = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static OutputItem FromReasoning(global::Portkey.ReasoningItem? value) => new OutputItem(value);
 
         /// <summary>
         /// 

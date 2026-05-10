@@ -91,6 +91,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static AssistantsApiResponseFormatOption FromEnum(global::Portkey.AssistantsApiResponseFormatOptionEnum? value) => new AssistantsApiResponseFormatOption(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AssistantsApiResponseFormatOption(global::Portkey.AssistantsApiResponseFormat value) => new AssistantsApiResponseFormatOption((global::Portkey.AssistantsApiResponseFormat?)value);
 
         /// <summary>
@@ -105,6 +110,11 @@ namespace Portkey
         {
             AssistantsApiResponseFormat = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AssistantsApiResponseFormatOption FromAssistantsApiResponseFormat(global::Portkey.AssistantsApiResponseFormat? value) => new AssistantsApiResponseFormatOption(value);
 
         /// <summary>
         /// 

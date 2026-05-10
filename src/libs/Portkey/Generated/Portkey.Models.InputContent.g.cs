@@ -119,6 +119,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static InputContent FromTextInput(global::Portkey.InputText? value) => new InputContent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator InputContent(global::Portkey.InputImage value) => new InputContent((global::Portkey.InputImage?)value);
 
         /// <summary>
@@ -137,6 +142,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static InputContent FromImageInput(global::Portkey.InputImage? value) => new InputContent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator InputContent(global::Portkey.InputFile value) => new InputContent((global::Portkey.InputFile?)value);
 
         /// <summary>
@@ -151,6 +161,11 @@ namespace Portkey
         {
             FileInput = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static InputContent FromFileInput(global::Portkey.InputFile? value) => new InputContent(value);
 
         /// <summary>
         /// 

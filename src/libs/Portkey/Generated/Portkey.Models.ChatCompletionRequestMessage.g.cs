@@ -209,6 +209,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static ChatCompletionRequestMessage FromSystemMessage(global::Portkey.ChatCompletionRequestSystemMessage? value) => new ChatCompletionRequestMessage(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ChatCompletionRequestMessage(global::Portkey.ChatCompletionRequestDeveloperMessage value) => new ChatCompletionRequestMessage((global::Portkey.ChatCompletionRequestDeveloperMessage?)value);
 
         /// <summary>
@@ -223,6 +228,11 @@ namespace Portkey
         {
             DeveloperMessage = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ChatCompletionRequestMessage FromDeveloperMessage(global::Portkey.ChatCompletionRequestDeveloperMessage? value) => new ChatCompletionRequestMessage(value);
 
         /// <summary>
         /// 
@@ -245,6 +255,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static ChatCompletionRequestMessage FromUserMessage(global::Portkey.ChatCompletionRequestUserMessage? value) => new ChatCompletionRequestMessage(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ChatCompletionRequestMessage(global::Portkey.ChatCompletionRequestAssistantMessage value) => new ChatCompletionRequestMessage((global::Portkey.ChatCompletionRequestAssistantMessage?)value);
 
         /// <summary>
@@ -259,6 +274,11 @@ namespace Portkey
         {
             AssistantMessage = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ChatCompletionRequestMessage FromAssistantMessage(global::Portkey.ChatCompletionRequestAssistantMessage? value) => new ChatCompletionRequestMessage(value);
 
         /// <summary>
         /// 
@@ -281,6 +301,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static ChatCompletionRequestMessage FromToolMessage(global::Portkey.ChatCompletionRequestToolMessage? value) => new ChatCompletionRequestMessage(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ChatCompletionRequestMessage(global::Portkey.ChatCompletionRequestFunctionMessage value) => new ChatCompletionRequestMessage((global::Portkey.ChatCompletionRequestFunctionMessage?)value);
 
         /// <summary>
@@ -295,6 +320,11 @@ namespace Portkey
         {
             FunctionMessage = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ChatCompletionRequestMessage FromFunctionMessage(global::Portkey.ChatCompletionRequestFunctionMessage? value) => new ChatCompletionRequestMessage(value);
 
         /// <summary>
         /// 

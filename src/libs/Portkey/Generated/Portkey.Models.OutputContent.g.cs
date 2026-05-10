@@ -89,6 +89,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static OutputContent FromOutputText(global::Portkey.OutputText? value) => new OutputContent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator OutputContent(global::Portkey.Refusal value) => new OutputContent((global::Portkey.Refusal?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace Portkey
         {
             Refusal = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static OutputContent FromRefusal(global::Portkey.Refusal? value) => new OutputContent(value);
 
         /// <summary>
         /// 

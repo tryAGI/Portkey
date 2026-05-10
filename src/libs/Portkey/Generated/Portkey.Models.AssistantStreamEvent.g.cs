@@ -223,6 +223,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static AssistantStreamEvent FromThread(global::Portkey.ThreadStreamEvent? value) => new AssistantStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AssistantStreamEvent(global::Portkey.RunStreamEvent value) => new AssistantStreamEvent((global::Portkey.RunStreamEvent?)value);
 
         /// <summary>
@@ -237,6 +242,11 @@ namespace Portkey
         {
             Run = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AssistantStreamEvent FromRun(global::Portkey.RunStreamEvent? value) => new AssistantStreamEvent(value);
 
         /// <summary>
         /// 
@@ -259,6 +269,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static AssistantStreamEvent FromRunStep(global::Portkey.RunStepStreamEvent? value) => new AssistantStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AssistantStreamEvent(global::Portkey.MessageStreamEvent value) => new AssistantStreamEvent((global::Portkey.MessageStreamEvent?)value);
 
         /// <summary>
@@ -273,6 +288,11 @@ namespace Portkey
         {
             Message = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AssistantStreamEvent FromMessage(global::Portkey.MessageStreamEvent? value) => new AssistantStreamEvent(value);
 
         /// <summary>
         /// 
@@ -295,6 +315,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static AssistantStreamEvent FromError(global::Portkey.ErrorEvent? value) => new AssistantStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AssistantStreamEvent(global::Portkey.DoneEvent value) => new AssistantStreamEvent((global::Portkey.DoneEvent?)value);
 
         /// <summary>
@@ -309,6 +334,11 @@ namespace Portkey
         {
             Done = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AssistantStreamEvent FromDone(global::Portkey.DoneEvent? value) => new AssistantStreamEvent(value);
 
         /// <summary>
         /// 

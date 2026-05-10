@@ -299,6 +299,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static ComputerAction FromClick(global::Portkey.Click? value) => new ComputerAction(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ComputerAction(global::Portkey.DoubleClick value) => new ComputerAction((global::Portkey.DoubleClick?)value);
 
         /// <summary>
@@ -313,6 +318,11 @@ namespace Portkey
         {
             DoubleClick = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ComputerAction FromDoubleClick(global::Portkey.DoubleClick? value) => new ComputerAction(value);
 
         /// <summary>
         /// 
@@ -335,6 +345,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static ComputerAction FromDrag(global::Portkey.Drag? value) => new ComputerAction(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ComputerAction(global::Portkey.KeyPress value) => new ComputerAction((global::Portkey.KeyPress?)value);
 
         /// <summary>
@@ -349,6 +364,11 @@ namespace Portkey
         {
             KeyPress = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ComputerAction FromKeyPress(global::Portkey.KeyPress? value) => new ComputerAction(value);
 
         /// <summary>
         /// 
@@ -371,6 +391,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static ComputerAction FromMove(global::Portkey.Move? value) => new ComputerAction(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ComputerAction(global::Portkey.Screenshot value) => new ComputerAction((global::Portkey.Screenshot?)value);
 
         /// <summary>
@@ -385,6 +410,11 @@ namespace Portkey
         {
             Screenshot = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ComputerAction FromScreenshot(global::Portkey.Screenshot? value) => new ComputerAction(value);
 
         /// <summary>
         /// 
@@ -407,6 +437,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static ComputerAction FromScroll(global::Portkey.Scroll? value) => new ComputerAction(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ComputerAction(global::Portkey.Type value) => new ComputerAction((global::Portkey.Type?)value);
 
         /// <summary>
@@ -425,6 +460,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static ComputerAction FromType(global::Portkey.Type? value) => new ComputerAction(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ComputerAction(global::Portkey.Wait value) => new ComputerAction((global::Portkey.Wait?)value);
 
         /// <summary>
@@ -439,6 +479,11 @@ namespace Portkey
         {
             Wait = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ComputerAction FromWait(global::Portkey.Wait? value) => new ComputerAction(value);
 
         /// <summary>
         /// 

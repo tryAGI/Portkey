@@ -89,6 +89,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static RateLimitsPolicyResponse FromRateLimitsPolicy(global::Portkey.RateLimitsPolicy? value) => new RateLimitsPolicyResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator RateLimitsPolicyResponse(global::Portkey.RateLimitsPolicyResponseVariant2 value) => new RateLimitsPolicyResponse((global::Portkey.RateLimitsPolicyResponseVariant2?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace Portkey
         {
             RateLimitsPolicyResponseVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static RateLimitsPolicyResponse FromRateLimitsPolicyResponseVariant2(global::Portkey.RateLimitsPolicyResponseVariant2? value) => new RateLimitsPolicyResponse(value);
 
         /// <summary>
         /// 

@@ -131,6 +131,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static TextResponseFormatConfiguration FromText(global::Portkey.ResponseFormatText? value) => new TextResponseFormatConfiguration(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator TextResponseFormatConfiguration(global::Portkey.TextResponseFormatJsonSchema value) => new TextResponseFormatConfiguration((global::Portkey.TextResponseFormatJsonSchema?)value);
 
         /// <summary>
@@ -149,6 +154,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static TextResponseFormatConfiguration FromJsonSchema(global::Portkey.TextResponseFormatJsonSchema? value) => new TextResponseFormatConfiguration(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator TextResponseFormatConfiguration(global::Portkey.ResponseFormatJsonObject value) => new TextResponseFormatConfiguration((global::Portkey.ResponseFormatJsonObject?)value);
 
         /// <summary>
@@ -163,6 +173,11 @@ namespace Portkey
         {
             JsonObject = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static TextResponseFormatConfiguration FromJsonObject(global::Portkey.ResponseFormatJsonObject? value) => new TextResponseFormatConfiguration(value);
 
         /// <summary>
         /// 

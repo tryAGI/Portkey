@@ -93,6 +93,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static AssistantsApiToolChoiceOption FromEnum(global::Portkey.AssistantsApiToolChoiceOptionEnum? value) => new AssistantsApiToolChoiceOption(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AssistantsApiToolChoiceOption(global::Portkey.AssistantsNamedToolChoice value) => new AssistantsApiToolChoiceOption((global::Portkey.AssistantsNamedToolChoice?)value);
 
         /// <summary>
@@ -107,6 +112,11 @@ namespace Portkey
         {
             Named = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AssistantsApiToolChoiceOption FromNamed(global::Portkey.AssistantsNamedToolChoice? value) => new AssistantsApiToolChoiceOption(value);
 
         /// <summary>
         /// 

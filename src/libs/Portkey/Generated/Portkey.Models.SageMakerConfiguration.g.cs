@@ -89,6 +89,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static SageMakerConfiguration FromBedrock(global::Portkey.BedrockConfiguration? value) => new SageMakerConfiguration(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator SageMakerConfiguration(global::Portkey.SageMakerConfigurationVariant2 value) => new SageMakerConfiguration((global::Portkey.SageMakerConfigurationVariant2?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace Portkey
         {
             SageMakerConfigurationVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static SageMakerConfiguration FromSageMakerConfigurationVariant2(global::Portkey.SageMakerConfigurationVariant2? value) => new SageMakerConfiguration(value);
 
         /// <summary>
         /// 

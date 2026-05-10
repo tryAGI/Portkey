@@ -329,6 +329,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static RunStreamEvent FromRunStreamEventVariant1(global::Portkey.RunStreamEventVariant1? value) => new RunStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator RunStreamEvent(global::Portkey.RunStreamEventVariant2 value) => new RunStreamEvent((global::Portkey.RunStreamEventVariant2?)value);
 
         /// <summary>
@@ -343,6 +348,11 @@ namespace Portkey
         {
             RunStreamEventVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static RunStreamEvent FromRunStreamEventVariant2(global::Portkey.RunStreamEventVariant2? value) => new RunStreamEvent(value);
 
         /// <summary>
         /// 
@@ -365,6 +375,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static RunStreamEvent FromRunStreamEventVariant3(global::Portkey.RunStreamEventVariant3? value) => new RunStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator RunStreamEvent(global::Portkey.RunStreamEventVariant4 value) => new RunStreamEvent((global::Portkey.RunStreamEventVariant4?)value);
 
         /// <summary>
@@ -379,6 +394,11 @@ namespace Portkey
         {
             RunStreamEventVariant4 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static RunStreamEvent FromRunStreamEventVariant4(global::Portkey.RunStreamEventVariant4? value) => new RunStreamEvent(value);
 
         /// <summary>
         /// 
@@ -401,6 +421,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static RunStreamEvent FromRunStreamEventVariant5(global::Portkey.RunStreamEventVariant5? value) => new RunStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator RunStreamEvent(global::Portkey.RunStreamEventVariant6 value) => new RunStreamEvent((global::Portkey.RunStreamEventVariant6?)value);
 
         /// <summary>
@@ -415,6 +440,11 @@ namespace Portkey
         {
             RunStreamEventVariant6 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static RunStreamEvent FromRunStreamEventVariant6(global::Portkey.RunStreamEventVariant6? value) => new RunStreamEvent(value);
 
         /// <summary>
         /// 
@@ -437,6 +467,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static RunStreamEvent FromRunStreamEventVariant7(global::Portkey.RunStreamEventVariant7? value) => new RunStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator RunStreamEvent(global::Portkey.RunStreamEventVariant8 value) => new RunStreamEvent((global::Portkey.RunStreamEventVariant8?)value);
 
         /// <summary>
@@ -451,6 +486,11 @@ namespace Portkey
         {
             RunStreamEventVariant8 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static RunStreamEvent FromRunStreamEventVariant8(global::Portkey.RunStreamEventVariant8? value) => new RunStreamEvent(value);
 
         /// <summary>
         /// 
@@ -473,6 +513,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static RunStreamEvent FromRunStreamEventVariant9(global::Portkey.RunStreamEventVariant9? value) => new RunStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator RunStreamEvent(global::Portkey.RunStreamEventVariant10 value) => new RunStreamEvent((global::Portkey.RunStreamEventVariant10?)value);
 
         /// <summary>
@@ -487,6 +532,11 @@ namespace Portkey
         {
             RunStreamEventVariant10 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static RunStreamEvent FromRunStreamEventVariant10(global::Portkey.RunStreamEventVariant10? value) => new RunStreamEvent(value);
 
         /// <summary>
         /// 

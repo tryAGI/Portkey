@@ -299,6 +299,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static AuthConfig FromAccessKey(global::Portkey.AwsAccessKeyAuthConfig? value) => new AuthConfig(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AuthConfig(global::Portkey.AwsAssumedRoleAuthConfig value) => new AuthConfig((global::Portkey.AwsAssumedRoleAuthConfig?)value);
 
         /// <summary>
@@ -313,6 +318,11 @@ namespace Portkey
         {
             AssumedRole = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AuthConfig FromAssumedRole(global::Portkey.AwsAssumedRoleAuthConfig? value) => new AuthConfig(value);
 
         /// <summary>
         /// 
@@ -335,6 +345,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static AuthConfig FromServiceRole(global::Portkey.AwsServiceRoleAuthConfig? value) => new AuthConfig(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AuthConfig(global::Portkey.AzureEntraAuthConfig value) => new AuthConfig((global::Portkey.AzureEntraAuthConfig?)value);
 
         /// <summary>
@@ -349,6 +364,11 @@ namespace Portkey
         {
             AzureEntra = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AuthConfig FromAzureEntra(global::Portkey.AzureEntraAuthConfig? value) => new AuthConfig(value);
 
         /// <summary>
         /// 
@@ -371,6 +391,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static AuthConfig FromAzureManaged(global::Portkey.AzureManagedAuthConfig? value) => new AuthConfig(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AuthConfig(global::Portkey.AzureDefaultAuthConfig value) => new AuthConfig((global::Portkey.AzureDefaultAuthConfig?)value);
 
         /// <summary>
@@ -385,6 +410,11 @@ namespace Portkey
         {
             AzureDefault = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AuthConfig FromAzureDefault(global::Portkey.AzureDefaultAuthConfig? value) => new AuthConfig(value);
 
         /// <summary>
         /// 
@@ -407,6 +437,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static AuthConfig FromHashicorpToken(global::Portkey.HashicorpTokenAuthConfig? value) => new AuthConfig(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AuthConfig(global::Portkey.HashicorpAppRoleAuthConfig value) => new AuthConfig((global::Portkey.HashicorpAppRoleAuthConfig?)value);
 
         /// <summary>
@@ -425,6 +460,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static AuthConfig FromHashicorpAppRole(global::Portkey.HashicorpAppRoleAuthConfig? value) => new AuthConfig(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AuthConfig(global::Portkey.HashicorpKubernetesAuthConfig value) => new AuthConfig((global::Portkey.HashicorpKubernetesAuthConfig?)value);
 
         /// <summary>
@@ -439,6 +479,11 @@ namespace Portkey
         {
             HashicorpKubernetes = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AuthConfig FromHashicorpKubernetes(global::Portkey.HashicorpKubernetesAuthConfig? value) => new AuthConfig(value);
 
         /// <summary>
         /// 

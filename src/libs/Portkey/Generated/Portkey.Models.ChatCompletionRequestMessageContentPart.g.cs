@@ -89,6 +89,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static ChatCompletionRequestMessageContentPart FromTextContentPart(global::Portkey.ChatCompletionRequestMessageContentPartText? value) => new ChatCompletionRequestMessageContentPart(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ChatCompletionRequestMessageContentPart(global::Portkey.ChatCompletionRequestMessageContentPartImage value) => new ChatCompletionRequestMessageContentPart((global::Portkey.ChatCompletionRequestMessageContentPartImage?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace Portkey
         {
             ImageContentPart = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ChatCompletionRequestMessageContentPart FromImageContentPart(global::Portkey.ChatCompletionRequestMessageContentPartImage? value) => new ChatCompletionRequestMessageContentPart(value);
 
         /// <summary>
         /// 

@@ -59,6 +59,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static VertexFinetuneJob FromOpenAIParams(global::Portkey.OpenAIFinetuneJob? value) => new VertexFinetuneJob(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public object? Object =>
             OpenAIParams as object 
             ;

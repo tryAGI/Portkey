@@ -90,6 +90,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static RerankDocument FromString(string? value) => new RerankDocument(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator RerankDocument(global::Portkey.RerankDocumentObject value) => new RerankDocument((global::Portkey.RerankDocumentObject?)value);
 
         /// <summary>
@@ -104,6 +109,11 @@ namespace Portkey
         {
             ObjectValue = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static RerankDocument FromObjectValue(global::Portkey.RerankDocumentObject? value) => new RerankDocument(value);
 
         /// <summary>
         /// 

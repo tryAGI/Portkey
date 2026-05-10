@@ -89,6 +89,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static ComputerToolCallOutputResource FromComputerToolCallOutput(global::Portkey.ComputerToolCallOutput? value) => new ComputerToolCallOutputResource(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ComputerToolCallOutputResource(global::Portkey.ComputerToolCallOutputResourceVariant2 value) => new ComputerToolCallOutputResource((global::Portkey.ComputerToolCallOutputResourceVariant2?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace Portkey
         {
             ComputerToolCallOutputResourceVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ComputerToolCallOutputResource FromComputerToolCallOutputResourceVariant2(global::Portkey.ComputerToolCallOutputResourceVariant2? value) => new ComputerToolCallOutputResource(value);
 
         /// <summary>
         /// 

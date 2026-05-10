@@ -89,6 +89,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static IntegrationDetailResponse FromList(global::Portkey.IntegrationList? value) => new IntegrationDetailResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator IntegrationDetailResponse(global::Portkey.IntegrationDetailResponseVariant2 value) => new IntegrationDetailResponse((global::Portkey.IntegrationDetailResponseVariant2?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace Portkey
         {
             IntegrationDetailResponseVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IntegrationDetailResponse FromIntegrationDetailResponseVariant2(global::Portkey.IntegrationDetailResponseVariant2? value) => new IntegrationDetailResponse(value);
 
         /// <summary>
         /// 

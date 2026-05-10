@@ -91,6 +91,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static InputMessageResource FromInputMessage(global::Portkey.InputMessage? value) => new InputMessageResource(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator InputMessageResource(global::Portkey.InputMessageResourceVariant2 value) => new InputMessageResource((global::Portkey.InputMessageResourceVariant2?)value);
 
         /// <summary>
@@ -105,6 +110,11 @@ namespace Portkey
         {
             InputMessageResourceVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static InputMessageResource FromInputMessageResourceVariant2(global::Portkey.InputMessageResourceVariant2? value) => new InputMessageResource(value);
 
         /// <summary>
         /// 
