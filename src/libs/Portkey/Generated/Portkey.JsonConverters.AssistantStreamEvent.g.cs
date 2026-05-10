@@ -161,6 +161,7 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ThreadStreamEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ThreadStreamEvent> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ThreadStreamEvent).Name}");
                     thread = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -171,9 +172,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (thread == null && run == null && runStep == null && message == null && error == null && done == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.RunStreamEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.RunStreamEvent> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.RunStreamEvent).Name}");
                     run = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -184,9 +189,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (thread == null && run == null && runStep == null && message == null && error == null && done == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.RunStepStreamEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.RunStepStreamEvent> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.RunStepStreamEvent).Name}");
                     runStep = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -197,9 +206,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (thread == null && run == null && runStep == null && message == null && error == null && done == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.MessageStreamEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.MessageStreamEvent> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.MessageStreamEvent).Name}");
                     message = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -210,9 +223,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (thread == null && run == null && runStep == null && message == null && error == null && done == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ErrorEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ErrorEvent> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ErrorEvent).Name}");
                     error = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -223,9 +240,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (thread == null && run == null && runStep == null && message == null && error == null && done == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.DoneEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.DoneEvent> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.DoneEvent).Name}");
                     done = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

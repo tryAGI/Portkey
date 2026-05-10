@@ -75,6 +75,7 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AssistantsApiResponseFormatOptionEnum), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AssistantsApiResponseFormatOptionEnum> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AssistantsApiResponseFormatOptionEnum).Name}");
                     @enum = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -85,9 +86,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (@enum == null && assistantsApiResponseFormat == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AssistantsApiResponseFormat), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AssistantsApiResponseFormat> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AssistantsApiResponseFormat).Name}");
                     assistantsApiResponseFormat = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

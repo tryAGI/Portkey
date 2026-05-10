@@ -10,6 +10,11 @@ namespace Portkey
     public readonly partial struct Item : global::System.IEquatable<Item>
     {
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ItemDiscriminatorType? Type { get; }
+
+        /// <summary>
         /// A message input to the model with a role indicating instruction following<br/>
         /// hierarchy. Instructions given with the `developer` or `system` role take<br/>
         /// precedence over instructions given with the `user` role.
@@ -451,6 +456,7 @@ namespace Portkey
         /// 
         /// </summary>
         public Item(
+            global::Portkey.ItemDiscriminatorType? type,
             global::Portkey.InputMessage? message1,
             global::Portkey.OutputMessage? message2,
             global::Portkey.FileSearchToolCall? fileSearchCall,
@@ -462,6 +468,8 @@ namespace Portkey
             global::Portkey.ReasoningItem? reasoning
             )
         {
+            Type = type;
+
             Message1 = message1;
             Message2 = message2;
             FileSearchCall = fileSearchCall;

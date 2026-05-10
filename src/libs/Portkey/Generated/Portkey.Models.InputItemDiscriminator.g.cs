@@ -12,7 +12,8 @@ namespace Portkey
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
-        public string? Type { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.InputItemDiscriminatorTypeJsonConverter))]
+        public global::Portkey.InputItemDiscriminatorType? Type { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -28,7 +29,7 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public InputItemDiscriminator(
-            string? type)
+            global::Portkey.InputItemDiscriminatorType? type)
         {
             this.Type = type;
         }

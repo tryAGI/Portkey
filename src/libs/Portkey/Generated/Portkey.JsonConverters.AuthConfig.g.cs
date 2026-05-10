@@ -233,6 +233,7 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AwsAccessKeyAuthConfig), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AwsAccessKeyAuthConfig> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AwsAccessKeyAuthConfig).Name}");
                     accessKey = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -243,9 +244,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (accessKey == null && assumedRole == null && serviceRole == null && azureEntra == null && azureManaged == null && azureDefault == null && hashicorpToken == null && hashicorpAppRole == null && hashicorpKubernetes == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AwsAssumedRoleAuthConfig), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AwsAssumedRoleAuthConfig> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AwsAssumedRoleAuthConfig).Name}");
                     assumedRole = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -256,9 +261,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (accessKey == null && assumedRole == null && serviceRole == null && azureEntra == null && azureManaged == null && azureDefault == null && hashicorpToken == null && hashicorpAppRole == null && hashicorpKubernetes == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AwsServiceRoleAuthConfig), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AwsServiceRoleAuthConfig> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AwsServiceRoleAuthConfig).Name}");
                     serviceRole = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -269,9 +278,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (accessKey == null && assumedRole == null && serviceRole == null && azureEntra == null && azureManaged == null && azureDefault == null && hashicorpToken == null && hashicorpAppRole == null && hashicorpKubernetes == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AzureEntraAuthConfig), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AzureEntraAuthConfig> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AzureEntraAuthConfig).Name}");
                     azureEntra = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -282,9 +295,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (accessKey == null && assumedRole == null && serviceRole == null && azureEntra == null && azureManaged == null && azureDefault == null && hashicorpToken == null && hashicorpAppRole == null && hashicorpKubernetes == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AzureManagedAuthConfig), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AzureManagedAuthConfig> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AzureManagedAuthConfig).Name}");
                     azureManaged = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -295,9 +312,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (accessKey == null && assumedRole == null && serviceRole == null && azureEntra == null && azureManaged == null && azureDefault == null && hashicorpToken == null && hashicorpAppRole == null && hashicorpKubernetes == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AzureDefaultAuthConfig), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AzureDefaultAuthConfig> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AzureDefaultAuthConfig).Name}");
                     azureDefault = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -308,9 +329,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (accessKey == null && assumedRole == null && serviceRole == null && azureEntra == null && azureManaged == null && azureDefault == null && hashicorpToken == null && hashicorpAppRole == null && hashicorpKubernetes == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.HashicorpTokenAuthConfig), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.HashicorpTokenAuthConfig> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.HashicorpTokenAuthConfig).Name}");
                     hashicorpToken = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -321,9 +346,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (accessKey == null && assumedRole == null && serviceRole == null && azureEntra == null && azureManaged == null && azureDefault == null && hashicorpToken == null && hashicorpAppRole == null && hashicorpKubernetes == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.HashicorpAppRoleAuthConfig), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.HashicorpAppRoleAuthConfig> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.HashicorpAppRoleAuthConfig).Name}");
                     hashicorpAppRole = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -334,9 +363,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (accessKey == null && assumedRole == null && serviceRole == null && azureEntra == null && azureManaged == null && azureDefault == null && hashicorpToken == null && hashicorpAppRole == null && hashicorpKubernetes == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.HashicorpKubernetesAuthConfig), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.HashicorpKubernetesAuthConfig> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.HashicorpKubernetesAuthConfig).Name}");
                     hashicorpKubernetes = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

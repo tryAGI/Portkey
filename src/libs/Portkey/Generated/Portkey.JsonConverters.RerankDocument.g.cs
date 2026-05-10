@@ -75,6 +75,7 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(string), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<string> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(string).Name}");
                     @string = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -85,9 +86,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (@string == null && objectValue == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.RerankDocumentObject), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.RerankDocumentObject> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.RerankDocumentObject).Name}");
                     objectValue = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

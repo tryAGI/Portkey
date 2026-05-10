@@ -12,7 +12,8 @@ namespace Portkey
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("aws_auth_type")]
-        public string? AwsAuthType { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.CreateSecretReferenceRequestAuthConfigDiscriminatorAwsAuthTypeJsonConverter))]
+        public global::Portkey.CreateSecretReferenceRequestAuthConfigDiscriminatorAwsAuthType? AwsAuthType { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -28,7 +29,7 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateSecretReferenceRequestAuthConfigDiscriminator(
-            string? awsAuthType)
+            global::Portkey.CreateSecretReferenceRequestAuthConfigDiscriminatorAwsAuthType? awsAuthType)
         {
             this.AwsAuthType = awsAuthType;
         }

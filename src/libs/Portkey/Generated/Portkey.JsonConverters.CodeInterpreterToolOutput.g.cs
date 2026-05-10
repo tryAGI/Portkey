@@ -78,6 +78,7 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.CodeInterpreterTextOutput), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.CodeInterpreterTextOutput> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.CodeInterpreterTextOutput).Name}");
                     codeInterpreterTextOutput = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -88,9 +89,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (codeInterpreterTextOutput == null && codeInterpreterFileOutput == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.CodeInterpreterFileOutput), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.CodeInterpreterFileOutput> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.CodeInterpreterFileOutput).Name}");
                     codeInterpreterFileOutput = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
