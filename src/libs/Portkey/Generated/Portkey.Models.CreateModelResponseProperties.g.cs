@@ -59,6 +59,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static CreateModelResponseProperties FromModelResponseProperties(global::Portkey.ModelResponseProperties? value) => new CreateModelResponseProperties(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public object? Object =>
             ModelResponseProperties as object 
             ;

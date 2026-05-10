@@ -90,6 +90,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static FunctionToolCallResource FromFunctionToolCall(global::Portkey.FunctionToolCall? value) => new FunctionToolCallResource(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator FunctionToolCallResource(global::Portkey.FunctionToolCallResourceVariant2 value) => new FunctionToolCallResource((global::Portkey.FunctionToolCallResourceVariant2?)value);
 
         /// <summary>
@@ -104,6 +109,11 @@ namespace Portkey
         {
             FunctionToolCallResourceVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static FunctionToolCallResource FromFunctionToolCallResourceVariant2(global::Portkey.FunctionToolCallResourceVariant2? value) => new FunctionToolCallResource(value);
 
         /// <summary>
         /// 

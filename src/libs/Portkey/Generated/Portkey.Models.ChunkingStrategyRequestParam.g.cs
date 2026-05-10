@@ -89,6 +89,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static ChunkingStrategyRequestParam FromAutoChunkingStrategy(global::Portkey.AutoChunkingStrategyRequestParam? value) => new ChunkingStrategyRequestParam(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ChunkingStrategyRequestParam(global::Portkey.StaticChunkingStrategyRequestParam value) => new ChunkingStrategyRequestParam((global::Portkey.StaticChunkingStrategyRequestParam?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace Portkey
         {
             StaticChunkingStrategy = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ChunkingStrategyRequestParam FromStaticChunkingStrategy(global::Portkey.StaticChunkingStrategyRequestParam? value) => new ChunkingStrategyRequestParam(value);
 
         /// <summary>
         /// 

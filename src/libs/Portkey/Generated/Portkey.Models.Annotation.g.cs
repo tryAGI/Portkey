@@ -119,6 +119,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static Annotation FromFileCitation(global::Portkey.FileCitation? value) => new Annotation(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Annotation(global::Portkey.UrlCitation value) => new Annotation((global::Portkey.UrlCitation?)value);
 
         /// <summary>
@@ -137,6 +142,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static Annotation FromUrlCitation(global::Portkey.UrlCitation? value) => new Annotation(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Annotation(global::Portkey.FilePath value) => new Annotation((global::Portkey.FilePath?)value);
 
         /// <summary>
@@ -151,6 +161,11 @@ namespace Portkey
         {
             FilePath = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Annotation FromFilePath(global::Portkey.FilePath? value) => new Annotation(value);
 
         /// <summary>
         /// 

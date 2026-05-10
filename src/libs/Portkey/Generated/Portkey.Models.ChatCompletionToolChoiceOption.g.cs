@@ -94,6 +94,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static ChatCompletionToolChoiceOption FromEnum(global::Portkey.ChatCompletionToolChoiceOptionEnum? value) => new ChatCompletionToolChoiceOption(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ChatCompletionToolChoiceOption(global::Portkey.ChatCompletionNamedToolChoice value) => new ChatCompletionToolChoiceOption((global::Portkey.ChatCompletionNamedToolChoice?)value);
 
         /// <summary>
@@ -108,6 +113,11 @@ namespace Portkey
         {
             Named = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ChatCompletionToolChoiceOption FromNamed(global::Portkey.ChatCompletionNamedToolChoice? value) => new ChatCompletionToolChoiceOption(value);
 
         /// <summary>
         /// 

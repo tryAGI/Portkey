@@ -311,6 +311,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static Item FromMessage1(global::Portkey.InputMessage? value) => new Item(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Item(global::Portkey.OutputMessage value) => new Item((global::Portkey.OutputMessage?)value);
 
         /// <summary>
@@ -325,6 +330,11 @@ namespace Portkey
         {
             Message2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Item FromMessage2(global::Portkey.OutputMessage? value) => new Item(value);
 
         /// <summary>
         /// 
@@ -347,6 +357,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static Item FromFileSearchCall(global::Portkey.FileSearchToolCall? value) => new Item(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Item(global::Portkey.ComputerToolCall value) => new Item((global::Portkey.ComputerToolCall?)value);
 
         /// <summary>
@@ -361,6 +376,11 @@ namespace Portkey
         {
             ComputerCall = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Item FromComputerCall(global::Portkey.ComputerToolCall? value) => new Item(value);
 
         /// <summary>
         /// 
@@ -383,6 +403,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static Item FromComputerCallOutput(global::Portkey.ComputerToolCallOutput? value) => new Item(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Item(global::Portkey.WebSearchToolCall value) => new Item((global::Portkey.WebSearchToolCall?)value);
 
         /// <summary>
@@ -397,6 +422,11 @@ namespace Portkey
         {
             WebSearchCall = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Item FromWebSearchCall(global::Portkey.WebSearchToolCall? value) => new Item(value);
 
         /// <summary>
         /// 
@@ -419,6 +449,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static Item FromFunctionCall(global::Portkey.FunctionToolCall? value) => new Item(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Item(global::Portkey.FunctionToolCallOutput value) => new Item((global::Portkey.FunctionToolCallOutput?)value);
 
         /// <summary>
@@ -437,6 +472,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static Item FromFunctionCallOutput(global::Portkey.FunctionToolCallOutput? value) => new Item(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Item(global::Portkey.ReasoningItem value) => new Item((global::Portkey.ReasoningItem?)value);
 
         /// <summary>
@@ -451,6 +491,11 @@ namespace Portkey
         {
             Reasoning = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Item FromReasoning(global::Portkey.ReasoningItem? value) => new Item(value);
 
         /// <summary>
         /// 

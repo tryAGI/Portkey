@@ -89,6 +89,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static CollectionWithChildCollections FromCollection(global::Portkey.Collection? value) => new CollectionWithChildCollections(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CollectionWithChildCollections(global::Portkey.CollectionWithChildCollectionsVariant2 value) => new CollectionWithChildCollections((global::Portkey.CollectionWithChildCollectionsVariant2?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace Portkey
         {
             CollectionWithChildCollectionsVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CollectionWithChildCollections FromCollectionWithChildCollectionsVariant2(global::Portkey.CollectionWithChildCollectionsVariant2? value) => new CollectionWithChildCollections(value);
 
         /// <summary>
         /// 

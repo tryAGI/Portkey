@@ -89,6 +89,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static CollectionWithDetails FromCollection(global::Portkey.Collection? value) => new CollectionWithDetails(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CollectionWithDetails(global::Portkey.CollectionWithDetailsVariant2 value) => new CollectionWithDetails((global::Portkey.CollectionWithDetailsVariant2?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace Portkey
         {
             CollectionWithDetailsVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CollectionWithDetails FromCollectionWithDetailsVariant2(global::Portkey.CollectionWithDetailsVariant2? value) => new CollectionWithDetails(value);
 
         /// <summary>
         /// 

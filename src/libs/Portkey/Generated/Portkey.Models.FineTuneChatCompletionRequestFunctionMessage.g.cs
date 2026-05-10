@@ -89,6 +89,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static FineTuneChatCompletionRequestFunctionMessage FromFunctionMessage2(global::Portkey.ChatCompletionRequestFunctionMessage? value) => new FineTuneChatCompletionRequestFunctionMessage(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public FineTuneChatCompletionRequestFunctionMessage(
             object? functionMessage1,
             global::Portkey.ChatCompletionRequestFunctionMessage? functionMessage2

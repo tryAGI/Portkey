@@ -89,6 +89,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static CodeInterpreterToolOutput FromCodeInterpreterTextOutput(global::Portkey.CodeInterpreterTextOutput? value) => new CodeInterpreterToolOutput(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CodeInterpreterToolOutput(global::Portkey.CodeInterpreterFileOutput value) => new CodeInterpreterToolOutput((global::Portkey.CodeInterpreterFileOutput?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace Portkey
         {
             CodeInterpreterFileOutput = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CodeInterpreterToolOutput FromCodeInterpreterFileOutput(global::Portkey.CodeInterpreterFileOutput? value) => new CodeInterpreterToolOutput(value);
 
         /// <summary>
         /// 

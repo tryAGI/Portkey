@@ -59,6 +59,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static ModelIdsResponses FromEnum(global::Portkey.ModelIdsResponsesEnum? value) => new ModelIdsResponses(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public object? Object =>
             Enum as object 
             ;

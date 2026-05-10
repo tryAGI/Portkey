@@ -179,6 +179,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static MessageStreamEvent FromMessageStreamEventVariant1(global::Portkey.MessageStreamEventVariant1? value) => new MessageStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator MessageStreamEvent(global::Portkey.MessageStreamEventVariant2 value) => new MessageStreamEvent((global::Portkey.MessageStreamEventVariant2?)value);
 
         /// <summary>
@@ -193,6 +198,11 @@ namespace Portkey
         {
             MessageStreamEventVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static MessageStreamEvent FromMessageStreamEventVariant2(global::Portkey.MessageStreamEventVariant2? value) => new MessageStreamEvent(value);
 
         /// <summary>
         /// 
@@ -215,6 +225,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static MessageStreamEvent FromMessageStreamEventVariant3(global::Portkey.MessageStreamEventVariant3? value) => new MessageStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator MessageStreamEvent(global::Portkey.MessageStreamEventVariant4 value) => new MessageStreamEvent((global::Portkey.MessageStreamEventVariant4?)value);
 
         /// <summary>
@@ -233,6 +248,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static MessageStreamEvent FromMessageStreamEventVariant4(global::Portkey.MessageStreamEventVariant4? value) => new MessageStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator MessageStreamEvent(global::Portkey.MessageStreamEventVariant5 value) => new MessageStreamEvent((global::Portkey.MessageStreamEventVariant5?)value);
 
         /// <summary>
@@ -247,6 +267,11 @@ namespace Portkey
         {
             MessageStreamEventVariant5 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static MessageStreamEvent FromMessageStreamEventVariant5(global::Portkey.MessageStreamEventVariant5? value) => new MessageStreamEvent(value);
 
         /// <summary>
         /// 

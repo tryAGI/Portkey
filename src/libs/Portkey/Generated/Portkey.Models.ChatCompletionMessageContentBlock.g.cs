@@ -119,6 +119,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static ChatCompletionMessageContentBlock FromTextContentPart(global::Portkey.ChatCompletionRequestMessageContentPartText? value) => new ChatCompletionMessageContentBlock(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ChatCompletionMessageContentBlock(global::Portkey.ChatCompletionMessageContentPartThinking value) => new ChatCompletionMessageContentBlock((global::Portkey.ChatCompletionMessageContentPartThinking?)value);
 
         /// <summary>
@@ -137,6 +142,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static ChatCompletionMessageContentBlock FromThinkingContentPart(global::Portkey.ChatCompletionMessageContentPartThinking? value) => new ChatCompletionMessageContentBlock(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ChatCompletionMessageContentBlock(global::Portkey.ChatCompletionMessageContentPartRedactedThinking value) => new ChatCompletionMessageContentBlock((global::Portkey.ChatCompletionMessageContentPartRedactedThinking?)value);
 
         /// <summary>
@@ -151,6 +161,11 @@ namespace Portkey
         {
             RedactedThinkingContentPart = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ChatCompletionMessageContentBlock FromRedactedThinkingContentPart(global::Portkey.ChatCompletionMessageContentPartRedactedThinking? value) => new ChatCompletionMessageContentBlock(value);
 
         /// <summary>
         /// 

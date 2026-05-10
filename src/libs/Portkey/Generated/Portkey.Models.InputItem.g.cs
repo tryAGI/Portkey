@@ -123,6 +123,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static InputItem FromMessage(global::Portkey.EasyInputMessage? value) => new InputItem(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator InputItem(global::Portkey.Item value) => new InputItem((global::Portkey.Item?)value);
 
         /// <summary>
@@ -141,6 +146,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static InputItem FromItem(global::Portkey.Item? value) => new InputItem(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator InputItem(global::Portkey.ItemReference value) => new InputItem((global::Portkey.ItemReference?)value);
 
         /// <summary>
@@ -155,6 +165,11 @@ namespace Portkey
         {
             ItemReference = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static InputItem FromItemReference(global::Portkey.ItemReference? value) => new InputItem(value);
 
         /// <summary>
         /// 

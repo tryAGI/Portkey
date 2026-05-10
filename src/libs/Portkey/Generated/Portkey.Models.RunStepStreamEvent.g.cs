@@ -239,6 +239,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static RunStepStreamEvent FromRunStepStreamEventVariant1(global::Portkey.RunStepStreamEventVariant1? value) => new RunStepStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator RunStepStreamEvent(global::Portkey.RunStepStreamEventVariant2 value) => new RunStepStreamEvent((global::Portkey.RunStepStreamEventVariant2?)value);
 
         /// <summary>
@@ -253,6 +258,11 @@ namespace Portkey
         {
             RunStepStreamEventVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static RunStepStreamEvent FromRunStepStreamEventVariant2(global::Portkey.RunStepStreamEventVariant2? value) => new RunStepStreamEvent(value);
 
         /// <summary>
         /// 
@@ -275,6 +285,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static RunStepStreamEvent FromRunStepStreamEventVariant3(global::Portkey.RunStepStreamEventVariant3? value) => new RunStepStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator RunStepStreamEvent(global::Portkey.RunStepStreamEventVariant4 value) => new RunStepStreamEvent((global::Portkey.RunStepStreamEventVariant4?)value);
 
         /// <summary>
@@ -289,6 +304,11 @@ namespace Portkey
         {
             RunStepStreamEventVariant4 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static RunStepStreamEvent FromRunStepStreamEventVariant4(global::Portkey.RunStepStreamEventVariant4? value) => new RunStepStreamEvent(value);
 
         /// <summary>
         /// 
@@ -311,6 +331,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static RunStepStreamEvent FromRunStepStreamEventVariant5(global::Portkey.RunStepStreamEventVariant5? value) => new RunStepStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator RunStepStreamEvent(global::Portkey.RunStepStreamEventVariant6 value) => new RunStepStreamEvent((global::Portkey.RunStepStreamEventVariant6?)value);
 
         /// <summary>
@@ -329,6 +354,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static RunStepStreamEvent FromRunStepStreamEventVariant6(global::Portkey.RunStepStreamEventVariant6? value) => new RunStepStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator RunStepStreamEvent(global::Portkey.RunStepStreamEventVariant7 value) => new RunStepStreamEvent((global::Portkey.RunStepStreamEventVariant7?)value);
 
         /// <summary>
@@ -343,6 +373,11 @@ namespace Portkey
         {
             RunStepStreamEventVariant7 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static RunStepStreamEvent FromRunStepStreamEventVariant7(global::Portkey.RunStepStreamEventVariant7? value) => new RunStepStreamEvent(value);
 
         /// <summary>
         /// 
