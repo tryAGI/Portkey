@@ -1305,6 +1305,10 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.AzureAIConfigurationAzureAuthModeNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.SecretMappingValueFormatJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.SecretMappingValueFormatNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.CreateSecretReferenceRequestManagerTypeJsonConverter),
 
             typeof(global::Portkey.JsonConverters.CreateSecretReferenceRequestManagerTypeNullableJsonConverter),
@@ -4114,6 +4118,10 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.AzureAIConfigurationAzureAuthModeNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.SecretMappingValueFormatJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.SecretMappingValueFormatNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.CreateSecretReferenceRequestManagerTypeJsonConverter),
 
             typeof(global::Portkey.JsonConverters.CreateSecretReferenceRequestManagerTypeNullableJsonConverter),
@@ -5601,6 +5609,7 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.SageMakerConfigurationVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.VertexAIConfigurationVertexAuthType), TypeInfoPropertyName = "VertexAIConfigurationVertexAuthType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AzureAIConfigurationAzureAuthMode), TypeInfoPropertyName = "AzureAIConfigurationAzureAuthMode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.SecretMappingValueFormat), TypeInfoPropertyName = "SecretMappingValueFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateSecretReferenceRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateSecretReferenceRequestManagerType), TypeInfoPropertyName = "CreateSecretReferenceRequestManagerType2")]
@@ -5619,7 +5628,6 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateSecretReferenceRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.SecretReferenceListItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.SecretReferenceListItemManagerType), TypeInfoPropertyName = "SecretReferenceListItemManagerType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.SecretReferenceListItemStatus), TypeInfoPropertyName = "SecretReferenceListItemStatus2")]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -6923,6 +6931,10 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.AzureAIConfigurationAzureAuthModeNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.SecretMappingValueFormatJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.SecretMappingValueFormatNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.CreateSecretReferenceRequestManagerTypeJsonConverter),
 
             typeof(global::Portkey.JsonConverters.CreateSecretReferenceRequestManagerTypeNullableJsonConverter),
@@ -7946,6 +7958,7 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.JWTParameters, global::Portkey.ModelWhitelistParameters, global::Portkey.RegexMatchParameters, global::Portkey.SentenceCountParameters, global::Portkey.WordCountParameters, global::Portkey.CharacterCountParameters, global::Portkey.JSONSchemaParameters, global::Portkey.JSONKeysParameters, global::Portkey.ContainsParameters, global::Portkey.ValidUrlsParameters, global::Portkey.ContainsCodeParameters, global::Portkey.WebhookParameters, global::Portkey.EndsWithParameters, global::Portkey.UppercaseParameters, global::Portkey.RequiredMetadataKeysParameters, global::Portkey.AllowedRequestTypesParameters, global::Portkey.SydeGuardParameters, global::Portkey.AporiaParameters, global::Portkey.PillarScanParameters, global::Portkey.PatronusParameters, global::Portkey.PatronusCustomParameters, global::Portkey.PortkeyModerationParameters, global::Portkey.PortkeyLanguageParameters, global::Portkey.PortkeyPIIParameters, global::Portkey.MistralModerationParameters, global::Portkey.BedrockGuardParameters, global::Portkey.PromptfooParameters, global::Portkey.AcuvityScanParameters, global::Portkey.AzureContentSafetyParameters, global::Portkey.AzurePIIParameters, global::Portkey.PANWPrismaParameters, global::Portkey.BasicParameters>?), TypeInfoPropertyName = "BasicParameters_b9f37200e2abf3e9")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_12be480b1039da9e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObject>>), TypeInfoPropertyName = "RunStepDeltaStepDetailsToolCallsFunctionObject_5640d9ed7ecfcd45")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.SecretReferenceListItemStatus), TypeInfoPropertyName = "SecretReferenceListItemStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.SecretReferenceListItemObject), TypeInfoPropertyName = "SecretReferenceListItemObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.SecretReferenceDetailResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.SecretReferenceDetailResponseManagerType), TypeInfoPropertyName = "SecretReferenceDetailResponseManagerType2")]
@@ -8428,7 +8441,6 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetIntegrationsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetIntegrationsResponseObject), TypeInfoPropertyName = "GetIntegrationsResponseObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.IntegrationList>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateIntegrationsResponse))]
     internal sealed partial class SourceGenerationContextChunk2 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -9732,6 +9744,10 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.AzureAIConfigurationAzureAuthModeNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.SecretMappingValueFormatJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.SecretMappingValueFormatNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.CreateSecretReferenceRequestManagerTypeJsonConverter),
 
             typeof(global::Portkey.JsonConverters.CreateSecretReferenceRequestManagerTypeNullableJsonConverter),
@@ -10755,6 +10771,7 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.JWTParameters, global::Portkey.ModelWhitelistParameters, global::Portkey.RegexMatchParameters, global::Portkey.SentenceCountParameters, global::Portkey.WordCountParameters, global::Portkey.CharacterCountParameters, global::Portkey.JSONSchemaParameters, global::Portkey.JSONKeysParameters, global::Portkey.ContainsParameters, global::Portkey.ValidUrlsParameters, global::Portkey.ContainsCodeParameters, global::Portkey.WebhookParameters, global::Portkey.EndsWithParameters, global::Portkey.UppercaseParameters, global::Portkey.RequiredMetadataKeysParameters, global::Portkey.AllowedRequestTypesParameters, global::Portkey.SydeGuardParameters, global::Portkey.AporiaParameters, global::Portkey.PillarScanParameters, global::Portkey.PatronusParameters, global::Portkey.PatronusCustomParameters, global::Portkey.PortkeyModerationParameters, global::Portkey.PortkeyLanguageParameters, global::Portkey.PortkeyPIIParameters, global::Portkey.MistralModerationParameters, global::Portkey.BedrockGuardParameters, global::Portkey.PromptfooParameters, global::Portkey.AcuvityScanParameters, global::Portkey.AzureContentSafetyParameters, global::Portkey.AzurePIIParameters, global::Portkey.PANWPrismaParameters, global::Portkey.BasicParameters>?), TypeInfoPropertyName = "BasicParameters_b9f37200e2abf3e9")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_12be480b1039da9e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObject>>), TypeInfoPropertyName = "RunStepDeltaStepDetailsToolCallsFunctionObject_5640d9ed7ecfcd45")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateIntegrationsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetProvidersResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetProvidersResponseObject), TypeInfoPropertyName = "GetProvidersResponseObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.Providers>))]
@@ -11762,6 +11779,8 @@ namespace Portkey
             options.Converters.Add(new global::Portkey.JsonConverters.VertexAIConfigurationVertexAuthTypeNullableJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.AzureAIConfigurationAzureAuthModeJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.AzureAIConfigurationAzureAuthModeNullableJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.SecretMappingValueFormatJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.SecretMappingValueFormatNullableJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.CreateSecretReferenceRequestManagerTypeJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.CreateSecretReferenceRequestManagerTypeNullableJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.CreateSecretReferenceRequestAuthConfigDiscriminatorAwsAuthTypeJsonConverter());

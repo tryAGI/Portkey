@@ -102,6 +102,12 @@ namespace Portkey
         public global::Portkey.McpIntegrationType? Type { get; set; }
 
         /// <summary>
+        /// Secret reference mappings for this MCP integration. Valid target_field values are "configurations.&lt;field&gt;".
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("secret_mappings")]
+        public global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? SecretMappings { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -127,6 +133,9 @@ namespace Portkey
         /// <param name="authType"></param>
         /// <param name="transport"></param>
         /// <param name="type"></param>
+        /// <param name="secretMappings">
+        /// Secret reference mappings for this MCP integration. Valid target_field values are "configurations.&lt;field&gt;".
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -145,7 +154,8 @@ namespace Portkey
             string? url,
             global::Portkey.McpIntegrationAuthType? authType,
             global::Portkey.McpIntegrationTransport? transport,
-            global::Portkey.McpIntegrationType? type)
+            global::Portkey.McpIntegrationType? type,
+            global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? secretMappings)
         {
             this.Id = id;
             this.Name = name;
@@ -162,6 +172,7 @@ namespace Portkey
             this.AuthType = authType;
             this.Transport = transport;
             this.Type = type;
+            this.SecretMappings = secretMappings;
         }
 
         /// <summary>

@@ -55,6 +55,9 @@ namespace Portkey
         /// </param>
         /// <param name="authType"></param>
         /// <param name="transport"></param>
+        /// <param name="secretMappings">
+        /// Dynamically resolve secrets from secret references at runtime. Valid target_field values are "configurations.&lt;field&gt;" (e.g. "configurations.oauth_metadata"). Each target_field must be unique.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -68,6 +71,7 @@ namespace Portkey
             string? slug = default,
             string? description = default,
             global::Portkey.CreateMcpIntegrationConfigurations? configurations = default,
+            global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? secretMappings = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

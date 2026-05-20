@@ -104,7 +104,10 @@ namespace Portkey
         {
 
             HttpClient = httpClient ?? new global::System.Net.Http.HttpClient();
-            HttpClient.BaseAddress ??= baseUri ?? new global::System.Uri(DefaultBaseUrl);
+            if (baseUri is not null)
+            {
+                HttpClient.BaseAddress ??= baseUri;
+            }
             Authorizations = authorizations ?? new global::System.Collections.Generic.List<global::Portkey.EndPointAuthorization>();
             Options = options ?? new global::Portkey.AutoSDKClientOptions();
             _disposeHttpClient = disposeHttpClient;
