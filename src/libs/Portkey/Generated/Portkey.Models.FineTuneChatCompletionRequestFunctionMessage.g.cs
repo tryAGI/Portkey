@@ -29,6 +29,26 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickFunctionMessage1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out object? value)
+        {
+            value = FunctionMessage1;
+            return IsFunctionMessage1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public object PickFunctionMessage1() => IsFunctionMessage1
+            ? FunctionMessage1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionMessage1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionRequestFunctionMessage? FunctionMessage2 { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FunctionMessage2))]
 #endif
         public bool IsFunctionMessage2 => FunctionMessage2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickFunctionMessage2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ChatCompletionRequestFunctionMessage? value)
+        {
+            value = FunctionMessage2;
+            return IsFunctionMessage2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ChatCompletionRequestFunctionMessage PickFunctionMessage2() => IsFunctionMessage2
+            ? FunctionMessage2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionMessage2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -59,6 +99,11 @@ namespace Portkey
         {
             FunctionMessage2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static FineTuneChatCompletionRequestFunctionMessage FromFunctionMessage2(global::Portkey.ChatCompletionRequestFunctionMessage? value) => new FineTuneChatCompletionRequestFunctionMessage(value);
 
         /// <summary>
         /// 
@@ -100,8 +145,8 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<object?, TResult>? functionMessage1 = null,
-            global::System.Func<global::Portkey.ChatCompletionRequestFunctionMessage?, TResult>? functionMessage2 = null,
+            global::System.Func<object, TResult>? functionMessage1 = null,
+            global::System.Func<global::Portkey.ChatCompletionRequestFunctionMessage, TResult>? functionMessage2 = null,
             bool validate = true)
         {
             if (validate)
@@ -125,8 +170,32 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<object?>? functionMessage1 = null,
-            global::System.Action<global::Portkey.ChatCompletionRequestFunctionMessage?>? functionMessage2 = null,
+            global::System.Action<object>? functionMessage1 = null,
+
+            global::System.Action<global::Portkey.ChatCompletionRequestFunctionMessage>? functionMessage2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsFunctionMessage1)
+            {
+                functionMessage1?.Invoke(FunctionMessage1!);
+            }
+            else if (IsFunctionMessage2)
+            {
+                functionMessage2?.Invoke(FunctionMessage2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<object>? functionMessage1 = null,
+            global::System.Action<global::Portkey.ChatCompletionRequestFunctionMessage>? functionMessage2 = null,
             bool validate = true)
         {
             if (validate)

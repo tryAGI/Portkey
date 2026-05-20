@@ -29,6 +29,26 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickModelProperties(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.CreateModelResponseProperties? value)
+        {
+            value = ModelProperties;
+            return IsModelProperties;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.CreateModelResponseProperties PickModelProperties() => IsModelProperties
+            ? ModelProperties!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ModelProperties' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ResponseProperties? Properties { get; init; }
 #else
@@ -46,6 +66,26 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickProperties(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseProperties? value)
+        {
+            value = Properties;
+            return IsProperties;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseProperties PickProperties() => IsProperties
+            ? Properties!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Properties' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.CreateResponseVariant3? CreateResponseVariant3 { get; init; }
 #else
@@ -59,6 +99,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CreateResponseVariant3))]
 #endif
         public bool IsCreateResponseVariant3 => CreateResponseVariant3 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickCreateResponseVariant3(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.CreateResponseVariant3? value)
+        {
+            value = CreateResponseVariant3;
+            return IsCreateResponseVariant3;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.CreateResponseVariant3 PickCreateResponseVariant3() => IsCreateResponseVariant3
+            ? CreateResponseVariant3!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CreateResponseVariant3' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -76,6 +136,11 @@ namespace Portkey
         {
             ModelProperties = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CreateResponse FromModelProperties(global::Portkey.CreateModelResponseProperties? value) => new CreateResponse(value);
 
         /// <summary>
         /// 
@@ -98,6 +163,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static CreateResponse FromProperties(global::Portkey.ResponseProperties? value) => new CreateResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CreateResponse(global::Portkey.CreateResponseVariant3 value) => new CreateResponse((global::Portkey.CreateResponseVariant3?)value);
 
         /// <summary>
@@ -112,6 +182,11 @@ namespace Portkey
         {
             CreateResponseVariant3 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CreateResponse FromCreateResponseVariant3(global::Portkey.CreateResponseVariant3? value) => new CreateResponse(value);
 
         /// <summary>
         /// 
@@ -158,8 +233,8 @@ namespace Portkey
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.CreateModelResponseProperties?, TResult>? modelProperties = null,
-            global::System.Func<global::Portkey.ResponseProperties?, TResult>? properties = null,
-            global::System.Func<global::Portkey.CreateResponseVariant3?, TResult>? createResponseVariant3 = null,
+            global::System.Func<global::Portkey.ResponseProperties, TResult>? properties = null,
+            global::System.Func<global::Portkey.CreateResponseVariant3, TResult>? createResponseVariant3 = null,
             bool validate = true)
         {
             if (validate)
@@ -188,8 +263,38 @@ namespace Portkey
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.CreateModelResponseProperties?>? modelProperties = null,
-            global::System.Action<global::Portkey.ResponseProperties?>? properties = null,
-            global::System.Action<global::Portkey.CreateResponseVariant3?>? createResponseVariant3 = null,
+
+            global::System.Action<global::Portkey.ResponseProperties>? properties = null,
+
+            global::System.Action<global::Portkey.CreateResponseVariant3>? createResponseVariant3 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsModelProperties)
+            {
+                modelProperties?.Invoke(ModelProperties!);
+            }
+            else if (IsProperties)
+            {
+                properties?.Invoke(Properties!);
+            }
+            else if (IsCreateResponseVariant3)
+            {
+                createResponseVariant3?.Invoke(CreateResponseVariant3!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.CreateModelResponseProperties?>? modelProperties = null,
+            global::System.Action<global::Portkey.ResponseProperties>? properties = null,
+            global::System.Action<global::Portkey.CreateResponseVariant3>? createResponseVariant3 = null,
             bool validate = true)
         {
             if (validate)

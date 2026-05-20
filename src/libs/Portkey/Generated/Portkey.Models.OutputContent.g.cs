@@ -27,6 +27,26 @@ namespace Portkey
         public bool IsOutputText => OutputText != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickOutputText(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.OutputText? value)
+        {
+            value = OutputText;
+            return IsOutputText;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.OutputText PickOutputText() => IsOutputText
+            ? OutputText!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'OutputText' but the value was {ToString()}.");
+
+        /// <summary>
         /// A refusal from the model.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -42,6 +62,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Refusal))]
 #endif
         public bool IsRefusal => Refusal != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickRefusal(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.Refusal? value)
+        {
+            value = Refusal;
+            return IsRefusal;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.Refusal PickRefusal() => IsRefusal
+            ? Refusal!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Refusal' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -63,6 +103,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static OutputContent FromOutputText(global::Portkey.OutputText? value) => new OutputContent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator OutputContent(global::Portkey.Refusal value) => new OutputContent((global::Portkey.Refusal?)value);
 
         /// <summary>
@@ -77,6 +122,11 @@ namespace Portkey
         {
             Refusal = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static OutputContent FromRefusal(global::Portkey.Refusal? value) => new OutputContent(value);
 
         /// <summary>
         /// 
@@ -118,8 +168,8 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.OutputText?, TResult>? outputText = null,
-            global::System.Func<global::Portkey.Refusal?, TResult>? refusal = null,
+            global::System.Func<global::Portkey.OutputText, TResult>? outputText = null,
+            global::System.Func<global::Portkey.Refusal, TResult>? refusal = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +193,32 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.OutputText?>? outputText = null,
-            global::System.Action<global::Portkey.Refusal?>? refusal = null,
+            global::System.Action<global::Portkey.OutputText>? outputText = null,
+
+            global::System.Action<global::Portkey.Refusal>? refusal = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsOutputText)
+            {
+                outputText?.Invoke(OutputText!);
+            }
+            else if (IsRefusal)
+            {
+                refusal?.Invoke(Refusal!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.OutputText>? outputText = null,
+            global::System.Action<global::Portkey.Refusal>? refusal = null,
             bool validate = true)
         {
             if (validate)

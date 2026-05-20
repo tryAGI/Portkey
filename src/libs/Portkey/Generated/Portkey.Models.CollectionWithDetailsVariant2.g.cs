@@ -39,5 +39,6 @@ namespace Portkey
         public CollectionWithDetailsVariant2()
         {
         }
+
     }
 }

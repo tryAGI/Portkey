@@ -29,6 +29,26 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickList(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.IntegrationList? value)
+        {
+            value = List;
+            return IsList;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.IntegrationList PickList() => IsList
+            ? List!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'List' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.IntegrationDetailResponseVariant2? IntegrationDetailResponseVariant2 { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IntegrationDetailResponseVariant2))]
 #endif
         public bool IsIntegrationDetailResponseVariant2 => IntegrationDetailResponseVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickIntegrationDetailResponseVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.IntegrationDetailResponseVariant2? value)
+        {
+            value = IntegrationDetailResponseVariant2;
+            return IsIntegrationDetailResponseVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.IntegrationDetailResponseVariant2 PickIntegrationDetailResponseVariant2() => IsIntegrationDetailResponseVariant2
+            ? IntegrationDetailResponseVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'IntegrationDetailResponseVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -63,6 +103,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static IntegrationDetailResponse FromList(global::Portkey.IntegrationList? value) => new IntegrationDetailResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator IntegrationDetailResponse(global::Portkey.IntegrationDetailResponseVariant2 value) => new IntegrationDetailResponse((global::Portkey.IntegrationDetailResponseVariant2?)value);
 
         /// <summary>
@@ -77,6 +122,11 @@ namespace Portkey
         {
             IntegrationDetailResponseVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IntegrationDetailResponse FromIntegrationDetailResponseVariant2(global::Portkey.IntegrationDetailResponseVariant2? value) => new IntegrationDetailResponse(value);
 
         /// <summary>
         /// 
@@ -118,8 +168,8 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.IntegrationList?, TResult>? list = null,
-            global::System.Func<global::Portkey.IntegrationDetailResponseVariant2?, TResult>? integrationDetailResponseVariant2 = null,
+            global::System.Func<global::Portkey.IntegrationList, TResult>? list = null,
+            global::System.Func<global::Portkey.IntegrationDetailResponseVariant2, TResult>? integrationDetailResponseVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +193,32 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.IntegrationList?>? list = null,
-            global::System.Action<global::Portkey.IntegrationDetailResponseVariant2?>? integrationDetailResponseVariant2 = null,
+            global::System.Action<global::Portkey.IntegrationList>? list = null,
+
+            global::System.Action<global::Portkey.IntegrationDetailResponseVariant2>? integrationDetailResponseVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsList)
+            {
+                list?.Invoke(List!);
+            }
+            else if (IsIntegrationDetailResponseVariant2)
+            {
+                integrationDetailResponseVariant2?.Invoke(IntegrationDetailResponseVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.IntegrationList>? list = null,
+            global::System.Action<global::Portkey.IntegrationDetailResponseVariant2>? integrationDetailResponseVariant2 = null,
             bool validate = true)
         {
             if (validate)

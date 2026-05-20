@@ -28,6 +28,26 @@ namespace Portkey
         public bool IsString => String != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickString(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = String;
+            return IsString;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PickString() => IsString
+            ? String!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'String' but the value was {ToString()}.");
+
+        /// <summary>
         /// An object containing the document text and optional metadata.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -43,6 +63,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ObjectValue))]
 #endif
         public bool IsObjectValue => ObjectValue != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickObjectValue(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.RerankDocumentObject? value)
+        {
+            value = ObjectValue;
+            return IsObjectValue;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.RerankDocumentObject PickObjectValue() => IsObjectValue
+            ? ObjectValue!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ObjectValue' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -64,6 +104,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static RerankDocument FromString(string? value) => new RerankDocument(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator RerankDocument(global::Portkey.RerankDocumentObject value) => new RerankDocument((global::Portkey.RerankDocumentObject?)value);
 
         /// <summary>
@@ -78,6 +123,11 @@ namespace Portkey
         {
             ObjectValue = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static RerankDocument FromObjectValue(global::Portkey.RerankDocumentObject? value) => new RerankDocument(value);
 
         /// <summary>
         /// 
@@ -119,8 +169,8 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? @string = null,
-            global::System.Func<global::Portkey.RerankDocumentObject?, TResult>? objectValue = null,
+            global::System.Func<string, TResult>? @string = null,
+            global::System.Func<global::Portkey.RerankDocumentObject, TResult>? objectValue = null,
             bool validate = true)
         {
             if (validate)
@@ -144,8 +194,32 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? @string = null,
-            global::System.Action<global::Portkey.RerankDocumentObject?>? objectValue = null,
+            global::System.Action<string>? @string = null,
+
+            global::System.Action<global::Portkey.RerankDocumentObject>? objectValue = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsString)
+            {
+                @string?.Invoke(String!);
+            }
+            else if (IsObjectValue)
+            {
+                objectValue?.Invoke(ObjectValue!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<string>? @string = null,
+            global::System.Action<global::Portkey.RerankDocumentObject>? objectValue = null,
             bool validate = true)
         {
             if (validate)

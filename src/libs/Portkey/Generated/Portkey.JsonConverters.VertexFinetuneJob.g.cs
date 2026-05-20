@@ -71,6 +71,7 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.OpenAIFinetuneJob), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.OpenAIFinetuneJob> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.OpenAIFinetuneJob).Name}");
                     openAIParams = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

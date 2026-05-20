@@ -98,6 +98,7 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionRequestMessageContentPartText), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionRequestMessageContentPartText> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionRequestMessageContentPartText).Name}");
                     textContentPart = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -108,9 +109,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (textContentPart == null && thinkingContentPart == null && redactedThinkingContentPart == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionMessageContentPartThinking), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionMessageContentPartThinking> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionMessageContentPartThinking).Name}");
                     thinkingContentPart = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -121,9 +126,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (textContentPart == null && thinkingContentPart == null && redactedThinkingContentPart == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ChatCompletionMessageContentPartRedactedThinking), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ChatCompletionMessageContentPartRedactedThinking> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ChatCompletionMessageContentPartRedactedThinking).Name}");
                     redactedThinkingContentPart = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

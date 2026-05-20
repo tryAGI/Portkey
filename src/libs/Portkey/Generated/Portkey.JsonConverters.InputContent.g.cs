@@ -102,6 +102,7 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.InputText), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.InputText> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.InputText).Name}");
                     textInput = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -112,9 +113,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (textInput == null && imageInput == null && fileInput == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.InputImage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.InputImage> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.InputImage).Name}");
                     imageInput = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -125,9 +130,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (textInput == null && imageInput == null && fileInput == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.InputFile), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.InputFile> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.InputFile).Name}");
                     fileInput = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

@@ -97,5 +97,6 @@ namespace Portkey
         public VectorStoreSearchResultItem()
         {
         }
+
     }
 }

@@ -47,5 +47,6 @@ namespace Portkey
         public AssistantsApiResponseFormat()
         {
         }
+
     }
 }

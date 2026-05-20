@@ -29,6 +29,26 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickComputerToolCallOutput(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ComputerToolCallOutput? value)
+        {
+            value = ComputerToolCallOutput;
+            return IsComputerToolCallOutput;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ComputerToolCallOutput PickComputerToolCallOutput() => IsComputerToolCallOutput
+            ? ComputerToolCallOutput!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ComputerToolCallOutput' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ComputerToolCallOutputResourceVariant2? ComputerToolCallOutputResourceVariant2 { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ComputerToolCallOutputResourceVariant2))]
 #endif
         public bool IsComputerToolCallOutputResourceVariant2 => ComputerToolCallOutputResourceVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickComputerToolCallOutputResourceVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ComputerToolCallOutputResourceVariant2? value)
+        {
+            value = ComputerToolCallOutputResourceVariant2;
+            return IsComputerToolCallOutputResourceVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ComputerToolCallOutputResourceVariant2 PickComputerToolCallOutputResourceVariant2() => IsComputerToolCallOutputResourceVariant2
+            ? ComputerToolCallOutputResourceVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ComputerToolCallOutputResourceVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -63,6 +103,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static ComputerToolCallOutputResource FromComputerToolCallOutput(global::Portkey.ComputerToolCallOutput? value) => new ComputerToolCallOutputResource(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ComputerToolCallOutputResource(global::Portkey.ComputerToolCallOutputResourceVariant2 value) => new ComputerToolCallOutputResource((global::Portkey.ComputerToolCallOutputResourceVariant2?)value);
 
         /// <summary>
@@ -77,6 +122,11 @@ namespace Portkey
         {
             ComputerToolCallOutputResourceVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ComputerToolCallOutputResource FromComputerToolCallOutputResourceVariant2(global::Portkey.ComputerToolCallOutputResourceVariant2? value) => new ComputerToolCallOutputResource(value);
 
         /// <summary>
         /// 
@@ -118,8 +168,8 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.ComputerToolCallOutput?, TResult>? computerToolCallOutput = null,
-            global::System.Func<global::Portkey.ComputerToolCallOutputResourceVariant2?, TResult>? computerToolCallOutputResourceVariant2 = null,
+            global::System.Func<global::Portkey.ComputerToolCallOutput, TResult>? computerToolCallOutput = null,
+            global::System.Func<global::Portkey.ComputerToolCallOutputResourceVariant2, TResult>? computerToolCallOutputResourceVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +193,32 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.ComputerToolCallOutput?>? computerToolCallOutput = null,
-            global::System.Action<global::Portkey.ComputerToolCallOutputResourceVariant2?>? computerToolCallOutputResourceVariant2 = null,
+            global::System.Action<global::Portkey.ComputerToolCallOutput>? computerToolCallOutput = null,
+
+            global::System.Action<global::Portkey.ComputerToolCallOutputResourceVariant2>? computerToolCallOutputResourceVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsComputerToolCallOutput)
+            {
+                computerToolCallOutput?.Invoke(ComputerToolCallOutput!);
+            }
+            else if (IsComputerToolCallOutputResourceVariant2)
+            {
+                computerToolCallOutputResourceVariant2?.Invoke(ComputerToolCallOutputResourceVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.ComputerToolCallOutput>? computerToolCallOutput = null,
+            global::System.Action<global::Portkey.ComputerToolCallOutputResourceVariant2>? computerToolCallOutputResourceVariant2 = null,
             bool validate = true)
         {
             if (validate)

@@ -27,6 +27,26 @@ namespace Portkey
         public bool IsFileCitation => FileCitation != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickFileCitation(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.FileCitation? value)
+        {
+            value = FileCitation;
+            return IsFileCitation;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.FileCitation PickFileCitation() => IsFileCitation
+            ? FileCitation!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FileCitation' but the value was {ToString()}.");
+
+        /// <summary>
         /// A citation for a web resource used to generate a model response.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -44,6 +64,26 @@ namespace Portkey
         public bool IsUrlCitation => UrlCitation != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickUrlCitation(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.UrlCitation? value)
+        {
+            value = UrlCitation;
+            return IsUrlCitation;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.UrlCitation PickUrlCitation() => IsUrlCitation
+            ? UrlCitation!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UrlCitation' but the value was {ToString()}.");
+
+        /// <summary>
         /// A path to a file.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -59,6 +99,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FilePath))]
 #endif
         public bool IsFilePath => FilePath != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickFilePath(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.FilePath? value)
+        {
+            value = FilePath;
+            return IsFilePath;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.FilePath PickFilePath() => IsFilePath
+            ? FilePath!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FilePath' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -76,6 +136,11 @@ namespace Portkey
         {
             FileCitation = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Annotation FromFileCitation(global::Portkey.FileCitation? value) => new Annotation(value);
 
         /// <summary>
         /// 
@@ -98,6 +163,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static Annotation FromUrlCitation(global::Portkey.UrlCitation? value) => new Annotation(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Annotation(global::Portkey.FilePath value) => new Annotation((global::Portkey.FilePath?)value);
 
         /// <summary>
@@ -112,6 +182,11 @@ namespace Portkey
         {
             FilePath = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Annotation FromFilePath(global::Portkey.FilePath? value) => new Annotation(value);
 
         /// <summary>
         /// 
@@ -157,9 +232,9 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.FileCitation?, TResult>? fileCitation = null,
-            global::System.Func<global::Portkey.UrlCitation?, TResult>? urlCitation = null,
-            global::System.Func<global::Portkey.FilePath?, TResult>? filePath = null,
+            global::System.Func<global::Portkey.FileCitation, TResult>? fileCitation = null,
+            global::System.Func<global::Portkey.UrlCitation, TResult>? urlCitation = null,
+            global::System.Func<global::Portkey.FilePath, TResult>? filePath = null,
             bool validate = true)
         {
             if (validate)
@@ -187,9 +262,39 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.FileCitation?>? fileCitation = null,
-            global::System.Action<global::Portkey.UrlCitation?>? urlCitation = null,
-            global::System.Action<global::Portkey.FilePath?>? filePath = null,
+            global::System.Action<global::Portkey.FileCitation>? fileCitation = null,
+
+            global::System.Action<global::Portkey.UrlCitation>? urlCitation = null,
+
+            global::System.Action<global::Portkey.FilePath>? filePath = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsFileCitation)
+            {
+                fileCitation?.Invoke(FileCitation!);
+            }
+            else if (IsUrlCitation)
+            {
+                urlCitation?.Invoke(UrlCitation!);
+            }
+            else if (IsFilePath)
+            {
+                filePath?.Invoke(FilePath!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.FileCitation>? fileCitation = null,
+            global::System.Action<global::Portkey.UrlCitation>? urlCitation = null,
+            global::System.Action<global::Portkey.FilePath>? filePath = null,
             bool validate = true)
         {
             if (validate)

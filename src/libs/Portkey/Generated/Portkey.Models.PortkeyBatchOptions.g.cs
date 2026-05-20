@@ -76,5 +76,6 @@ namespace Portkey
         public PortkeyBatchOptions()
         {
         }
+
     }
 }

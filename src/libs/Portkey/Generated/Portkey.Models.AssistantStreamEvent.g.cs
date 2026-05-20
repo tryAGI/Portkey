@@ -43,6 +43,26 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickThread(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ThreadStreamEvent? value)
+        {
+            value = Thread;
+            return IsThread;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ThreadStreamEvent PickThread() => IsThread
+            ? Thread!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Thread' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.RunStreamEvent? Run { get; init; }
 #else
@@ -56,6 +76,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Run))]
 #endif
         public bool IsRun => Run != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickRun(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.RunStreamEvent? value)
+        {
+            value = Run;
+            return IsRun;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.RunStreamEvent PickRun() => IsRun
+            ? Run!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Run' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -77,6 +117,26 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickRunStep(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.RunStepStreamEvent? value)
+        {
+            value = RunStep;
+            return IsRunStep;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.RunStepStreamEvent PickRunStep() => IsRunStep
+            ? RunStep!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'RunStep' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.MessageStreamEvent? Message { get; init; }
 #else
@@ -90,6 +150,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Message))]
 #endif
         public bool IsMessage => Message != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickMessage(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.MessageStreamEvent? value)
+        {
+            value = Message;
+            return IsMessage;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.MessageStreamEvent PickMessage() => IsMessage
+            ? Message!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Message' but the value was {ToString()}.");
 
         /// <summary>
         /// Occurs when an [error](https://platform.openai.com/docs/guides/error-codes/api-errors) occurs. This can happen due to an internal server error or a timeout.
@@ -109,6 +189,26 @@ namespace Portkey
         public bool IsError => Error != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickError(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ErrorEvent? value)
+        {
+            value = Error;
+            return IsError;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ErrorEvent PickError() => IsError
+            ? Error!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Error' but the value was {ToString()}.");
+
+        /// <summary>
         /// Occurs when a stream ends.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -124,6 +224,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Done))]
 #endif
         public bool IsDone => Done != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickDone(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.DoneEvent? value)
+        {
+            value = Done;
+            return IsDone;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.DoneEvent PickDone() => IsDone
+            ? Done!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Done' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -141,6 +261,11 @@ namespace Portkey
         {
             Thread = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AssistantStreamEvent FromThread(global::Portkey.ThreadStreamEvent? value) => new AssistantStreamEvent(value);
 
         /// <summary>
         /// 
@@ -163,6 +288,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static AssistantStreamEvent FromRun(global::Portkey.RunStreamEvent? value) => new AssistantStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AssistantStreamEvent(global::Portkey.RunStepStreamEvent value) => new AssistantStreamEvent((global::Portkey.RunStepStreamEvent?)value);
 
         /// <summary>
@@ -177,6 +307,11 @@ namespace Portkey
         {
             RunStep = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AssistantStreamEvent FromRunStep(global::Portkey.RunStepStreamEvent? value) => new AssistantStreamEvent(value);
 
         /// <summary>
         /// 
@@ -199,6 +334,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static AssistantStreamEvent FromMessage(global::Portkey.MessageStreamEvent? value) => new AssistantStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AssistantStreamEvent(global::Portkey.ErrorEvent value) => new AssistantStreamEvent((global::Portkey.ErrorEvent?)value);
 
         /// <summary>
@@ -217,6 +357,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static AssistantStreamEvent FromError(global::Portkey.ErrorEvent? value) => new AssistantStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator AssistantStreamEvent(global::Portkey.DoneEvent value) => new AssistantStreamEvent((global::Portkey.DoneEvent?)value);
 
         /// <summary>
@@ -231,6 +376,11 @@ namespace Portkey
         {
             Done = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static AssistantStreamEvent FromDone(global::Portkey.DoneEvent? value) => new AssistantStreamEvent(value);
 
         /// <summary>
         /// 
@@ -292,8 +442,8 @@ namespace Portkey
             global::System.Func<global::Portkey.RunStreamEvent?, TResult>? run = null,
             global::System.Func<global::Portkey.RunStepStreamEvent?, TResult>? runStep = null,
             global::System.Func<global::Portkey.MessageStreamEvent?, TResult>? message = null,
-            global::System.Func<global::Portkey.ErrorEvent?, TResult>? error = null,
-            global::System.Func<global::Portkey.DoneEvent?, TResult>? done = null,
+            global::System.Func<global::Portkey.ErrorEvent, TResult>? error = null,
+            global::System.Func<global::Portkey.DoneEvent, TResult>? done = null,
             bool validate = true)
         {
             if (validate)
@@ -334,11 +484,59 @@ namespace Portkey
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.ThreadStreamEvent?>? thread = null,
+
+            global::System.Action<global::Portkey.RunStreamEvent?>? run = null,
+
+            global::System.Action<global::Portkey.RunStepStreamEvent?>? runStep = null,
+
+            global::System.Action<global::Portkey.MessageStreamEvent?>? message = null,
+
+            global::System.Action<global::Portkey.ErrorEvent>? error = null,
+
+            global::System.Action<global::Portkey.DoneEvent>? done = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsThread)
+            {
+                thread?.Invoke(Thread!);
+            }
+            else if (IsRun)
+            {
+                run?.Invoke(Run!);
+            }
+            else if (IsRunStep)
+            {
+                runStep?.Invoke(RunStep!);
+            }
+            else if (IsMessage)
+            {
+                message?.Invoke(Message!);
+            }
+            else if (IsError)
+            {
+                error?.Invoke(Error!);
+            }
+            else if (IsDone)
+            {
+                done?.Invoke(Done!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.ThreadStreamEvent?>? thread = null,
             global::System.Action<global::Portkey.RunStreamEvent?>? run = null,
             global::System.Action<global::Portkey.RunStepStreamEvent?>? runStep = null,
             global::System.Action<global::Portkey.MessageStreamEvent?>? message = null,
-            global::System.Action<global::Portkey.ErrorEvent?>? error = null,
-            global::System.Action<global::Portkey.DoneEvent?>? done = null,
+            global::System.Action<global::Portkey.ErrorEvent>? error = null,
+            global::System.Action<global::Portkey.DoneEvent>? done = null,
             bool validate = true)
         {
             if (validate)

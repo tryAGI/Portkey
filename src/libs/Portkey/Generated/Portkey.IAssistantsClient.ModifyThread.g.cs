@@ -22,6 +22,20 @@ namespace Portkey
         /// Modifies a thread.
         /// </summary>
         /// <param name="threadId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.ThreadObject>> ModifyThreadAsResponseAsync(
+            string threadId,
+
+            global::Portkey.ModifyThreadRequest request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Modifies a thread.
+        /// </summary>
+        /// <param name="threadId"></param>
         /// <param name="toolResources">
         /// A set of resources that are made available to the assistant's tools in this thread. The resources are specific to the type of tool. For example, the `code_interpreter` tool requires a list of file IDs, while the `file_search` tool requires a list of vector store IDs.
         /// </param>

@@ -29,6 +29,26 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickVoiceIdsSharedVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = VoiceIdsSharedVariant1;
+            return IsVoiceIdsSharedVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PickVoiceIdsSharedVariant1() => IsVoiceIdsSharedVariant1
+            ? VoiceIdsSharedVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'VoiceIdsSharedVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.VoiceIdsSharedEnum? Enum { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Enum))]
 #endif
         public bool IsEnum => Enum != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickEnum(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.VoiceIdsSharedEnum? value)
+        {
+            value = Enum;
+            return IsEnum;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.VoiceIdsSharedEnum PickEnum() => IsEnum
+            ? Enum!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Enum' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -63,6 +103,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static VoiceIdsShared FromVoiceIdsSharedVariant1(string? value) => new VoiceIdsShared(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator VoiceIdsShared(global::Portkey.VoiceIdsSharedEnum value) => new VoiceIdsShared((global::Portkey.VoiceIdsSharedEnum?)value);
 
         /// <summary>
@@ -77,6 +122,11 @@ namespace Portkey
         {
             Enum = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static VoiceIdsShared FromEnum(global::Portkey.VoiceIdsSharedEnum? value) => new VoiceIdsShared(value);
 
         /// <summary>
         /// 
@@ -118,7 +168,7 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string?, TResult>? voiceIdsSharedVariant1 = null,
+            global::System.Func<string, TResult>? voiceIdsSharedVariant1 = null,
             global::System.Func<global::Portkey.VoiceIdsSharedEnum?, TResult>? @enum = null,
             bool validate = true)
         {
@@ -143,7 +193,31 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<string?>? voiceIdsSharedVariant1 = null,
+            global::System.Action<string>? voiceIdsSharedVariant1 = null,
+
+            global::System.Action<global::Portkey.VoiceIdsSharedEnum?>? @enum = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsVoiceIdsSharedVariant1)
+            {
+                voiceIdsSharedVariant1?.Invoke(VoiceIdsSharedVariant1!);
+            }
+            else if (IsEnum)
+            {
+                @enum?.Invoke(Enum!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<string>? voiceIdsSharedVariant1 = null,
             global::System.Action<global::Portkey.VoiceIdsSharedEnum?>? @enum = null,
             bool validate = true)
         {

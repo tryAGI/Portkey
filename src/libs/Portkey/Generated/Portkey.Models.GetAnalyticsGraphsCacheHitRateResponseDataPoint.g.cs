@@ -102,5 +102,6 @@ namespace Portkey
         public GetAnalyticsGraphsCacheHitRateResponseDataPoint()
         {
         }
+
     }
 }

@@ -26,6 +26,22 @@ namespace Portkey
         /// Can configure global workspace access or per-workspace settings.
         /// </summary>
         /// <param name="slug"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<string>> PutIntegrationsBySlugWorkspacesAsResponseAsync(
+            string slug,
+
+            global::Portkey.BulkUpdateWorkspacesRequest request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Bulk update workspace access<br/>
+        /// Updates workspace access permissions, usage limits, and rate limits for an integration.<br/>
+        /// Can configure global workspace access or per-workspace settings.
+        /// </summary>
+        /// <param name="slug"></param>
         /// <param name="workspaces"></param>
         /// <param name="globalWorkspaceAccess"></param>
         /// <param name="overrideExistingWorkspaceAccess">

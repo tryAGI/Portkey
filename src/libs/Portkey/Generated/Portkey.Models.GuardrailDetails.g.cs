@@ -29,6 +29,26 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickSummary(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.GuardrailSummary? value)
+        {
+            value = Summary;
+            return IsSummary;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.GuardrailSummary PickSummary() => IsSummary
+            ? Summary!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Summary' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.GuardrailDetailsVariant2? GuardrailDetailsVariant2 { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(GuardrailDetailsVariant2))]
 #endif
         public bool IsGuardrailDetailsVariant2 => GuardrailDetailsVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickGuardrailDetailsVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.GuardrailDetailsVariant2? value)
+        {
+            value = GuardrailDetailsVariant2;
+            return IsGuardrailDetailsVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.GuardrailDetailsVariant2 PickGuardrailDetailsVariant2() => IsGuardrailDetailsVariant2
+            ? GuardrailDetailsVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'GuardrailDetailsVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -63,6 +103,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static GuardrailDetails FromSummary(global::Portkey.GuardrailSummary? value) => new GuardrailDetails(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator GuardrailDetails(global::Portkey.GuardrailDetailsVariant2 value) => new GuardrailDetails((global::Portkey.GuardrailDetailsVariant2?)value);
 
         /// <summary>
@@ -77,6 +122,11 @@ namespace Portkey
         {
             GuardrailDetailsVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static GuardrailDetails FromGuardrailDetailsVariant2(global::Portkey.GuardrailDetailsVariant2? value) => new GuardrailDetails(value);
 
         /// <summary>
         /// 
@@ -118,8 +168,8 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.GuardrailSummary?, TResult>? summary = null,
-            global::System.Func<global::Portkey.GuardrailDetailsVariant2?, TResult>? guardrailDetailsVariant2 = null,
+            global::System.Func<global::Portkey.GuardrailSummary, TResult>? summary = null,
+            global::System.Func<global::Portkey.GuardrailDetailsVariant2, TResult>? guardrailDetailsVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +193,32 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.GuardrailSummary?>? summary = null,
-            global::System.Action<global::Portkey.GuardrailDetailsVariant2?>? guardrailDetailsVariant2 = null,
+            global::System.Action<global::Portkey.GuardrailSummary>? summary = null,
+
+            global::System.Action<global::Portkey.GuardrailDetailsVariant2>? guardrailDetailsVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsSummary)
+            {
+                summary?.Invoke(Summary!);
+            }
+            else if (IsGuardrailDetailsVariant2)
+            {
+                guardrailDetailsVariant2?.Invoke(GuardrailDetailsVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.GuardrailSummary>? summary = null,
+            global::System.Action<global::Portkey.GuardrailDetailsVariant2>? guardrailDetailsVariant2 = null,
             bool validate = true)
         {
             if (validate)

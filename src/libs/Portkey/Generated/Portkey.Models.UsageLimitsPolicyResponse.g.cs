@@ -29,6 +29,26 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickUsageLimitsPolicy(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.UsageLimitsPolicy? value)
+        {
+            value = UsageLimitsPolicy;
+            return IsUsageLimitsPolicy;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.UsageLimitsPolicy PickUsageLimitsPolicy() => IsUsageLimitsPolicy
+            ? UsageLimitsPolicy!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UsageLimitsPolicy' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.UsageLimitsPolicyResponseVariant2? UsageLimitsPolicyResponseVariant2 { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UsageLimitsPolicyResponseVariant2))]
 #endif
         public bool IsUsageLimitsPolicyResponseVariant2 => UsageLimitsPolicyResponseVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickUsageLimitsPolicyResponseVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.UsageLimitsPolicyResponseVariant2? value)
+        {
+            value = UsageLimitsPolicyResponseVariant2;
+            return IsUsageLimitsPolicyResponseVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.UsageLimitsPolicyResponseVariant2 PickUsageLimitsPolicyResponseVariant2() => IsUsageLimitsPolicyResponseVariant2
+            ? UsageLimitsPolicyResponseVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UsageLimitsPolicyResponseVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -63,6 +103,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static UsageLimitsPolicyResponse FromUsageLimitsPolicy(global::Portkey.UsageLimitsPolicy? value) => new UsageLimitsPolicyResponse(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator UsageLimitsPolicyResponse(global::Portkey.UsageLimitsPolicyResponseVariant2 value) => new UsageLimitsPolicyResponse((global::Portkey.UsageLimitsPolicyResponseVariant2?)value);
 
         /// <summary>
@@ -77,6 +122,11 @@ namespace Portkey
         {
             UsageLimitsPolicyResponseVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static UsageLimitsPolicyResponse FromUsageLimitsPolicyResponseVariant2(global::Portkey.UsageLimitsPolicyResponseVariant2? value) => new UsageLimitsPolicyResponse(value);
 
         /// <summary>
         /// 
@@ -118,8 +168,8 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.UsageLimitsPolicy?, TResult>? usageLimitsPolicy = null,
-            global::System.Func<global::Portkey.UsageLimitsPolicyResponseVariant2?, TResult>? usageLimitsPolicyResponseVariant2 = null,
+            global::System.Func<global::Portkey.UsageLimitsPolicy, TResult>? usageLimitsPolicy = null,
+            global::System.Func<global::Portkey.UsageLimitsPolicyResponseVariant2, TResult>? usageLimitsPolicyResponseVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +193,32 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.UsageLimitsPolicy?>? usageLimitsPolicy = null,
-            global::System.Action<global::Portkey.UsageLimitsPolicyResponseVariant2?>? usageLimitsPolicyResponseVariant2 = null,
+            global::System.Action<global::Portkey.UsageLimitsPolicy>? usageLimitsPolicy = null,
+
+            global::System.Action<global::Portkey.UsageLimitsPolicyResponseVariant2>? usageLimitsPolicyResponseVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsUsageLimitsPolicy)
+            {
+                usageLimitsPolicy?.Invoke(UsageLimitsPolicy!);
+            }
+            else if (IsUsageLimitsPolicyResponseVariant2)
+            {
+                usageLimitsPolicyResponseVariant2?.Invoke(UsageLimitsPolicyResponseVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.UsageLimitsPolicy>? usageLimitsPolicy = null,
+            global::System.Action<global::Portkey.UsageLimitsPolicyResponseVariant2>? usageLimitsPolicyResponseVariant2 = null,
             bool validate = true)
         {
             if (validate)

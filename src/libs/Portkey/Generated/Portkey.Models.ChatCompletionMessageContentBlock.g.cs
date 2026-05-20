@@ -29,6 +29,26 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickTextContentPart(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ChatCompletionRequestMessageContentPartText? value)
+        {
+            value = TextContentPart;
+            return IsTextContentPart;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ChatCompletionRequestMessageContentPartText PickTextContentPart() => IsTextContentPart
+            ? TextContentPart!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'TextContentPart' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionMessageContentPartThinking? ThinkingContentPart { get; init; }
 #else
@@ -46,6 +66,26 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickThinkingContentPart(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ChatCompletionMessageContentPartThinking? value)
+        {
+            value = ThinkingContentPart;
+            return IsThinkingContentPart;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ChatCompletionMessageContentPartThinking PickThinkingContentPart() => IsThinkingContentPart
+            ? ThinkingContentPart!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ThinkingContentPart' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionMessageContentPartRedactedThinking? RedactedThinkingContentPart { get; init; }
 #else
@@ -59,6 +99,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(RedactedThinkingContentPart))]
 #endif
         public bool IsRedactedThinkingContentPart => RedactedThinkingContentPart != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickRedactedThinkingContentPart(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ChatCompletionMessageContentPartRedactedThinking? value)
+        {
+            value = RedactedThinkingContentPart;
+            return IsRedactedThinkingContentPart;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ChatCompletionMessageContentPartRedactedThinking PickRedactedThinkingContentPart() => IsRedactedThinkingContentPart
+            ? RedactedThinkingContentPart!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'RedactedThinkingContentPart' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -76,6 +136,11 @@ namespace Portkey
         {
             TextContentPart = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ChatCompletionMessageContentBlock FromTextContentPart(global::Portkey.ChatCompletionRequestMessageContentPartText? value) => new ChatCompletionMessageContentBlock(value);
 
         /// <summary>
         /// 
@@ -98,6 +163,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static ChatCompletionMessageContentBlock FromThinkingContentPart(global::Portkey.ChatCompletionMessageContentPartThinking? value) => new ChatCompletionMessageContentBlock(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ChatCompletionMessageContentBlock(global::Portkey.ChatCompletionMessageContentPartRedactedThinking value) => new ChatCompletionMessageContentBlock((global::Portkey.ChatCompletionMessageContentPartRedactedThinking?)value);
 
         /// <summary>
@@ -112,6 +182,11 @@ namespace Portkey
         {
             RedactedThinkingContentPart = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ChatCompletionMessageContentBlock FromRedactedThinkingContentPart(global::Portkey.ChatCompletionMessageContentPartRedactedThinking? value) => new ChatCompletionMessageContentBlock(value);
 
         /// <summary>
         /// 
@@ -157,9 +232,9 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.ChatCompletionRequestMessageContentPartText?, TResult>? textContentPart = null,
-            global::System.Func<global::Portkey.ChatCompletionMessageContentPartThinking?, TResult>? thinkingContentPart = null,
-            global::System.Func<global::Portkey.ChatCompletionMessageContentPartRedactedThinking?, TResult>? redactedThinkingContentPart = null,
+            global::System.Func<global::Portkey.ChatCompletionRequestMessageContentPartText, TResult>? textContentPart = null,
+            global::System.Func<global::Portkey.ChatCompletionMessageContentPartThinking, TResult>? thinkingContentPart = null,
+            global::System.Func<global::Portkey.ChatCompletionMessageContentPartRedactedThinking, TResult>? redactedThinkingContentPart = null,
             bool validate = true)
         {
             if (validate)
@@ -187,9 +262,39 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.ChatCompletionRequestMessageContentPartText?>? textContentPart = null,
-            global::System.Action<global::Portkey.ChatCompletionMessageContentPartThinking?>? thinkingContentPart = null,
-            global::System.Action<global::Portkey.ChatCompletionMessageContentPartRedactedThinking?>? redactedThinkingContentPart = null,
+            global::System.Action<global::Portkey.ChatCompletionRequestMessageContentPartText>? textContentPart = null,
+
+            global::System.Action<global::Portkey.ChatCompletionMessageContentPartThinking>? thinkingContentPart = null,
+
+            global::System.Action<global::Portkey.ChatCompletionMessageContentPartRedactedThinking>? redactedThinkingContentPart = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsTextContentPart)
+            {
+                textContentPart?.Invoke(TextContentPart!);
+            }
+            else if (IsThinkingContentPart)
+            {
+                thinkingContentPart?.Invoke(ThinkingContentPart!);
+            }
+            else if (IsRedactedThinkingContentPart)
+            {
+                redactedThinkingContentPart?.Invoke(RedactedThinkingContentPart!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.ChatCompletionRequestMessageContentPartText>? textContentPart = null,
+            global::System.Action<global::Portkey.ChatCompletionMessageContentPartThinking>? thinkingContentPart = null,
+            global::System.Action<global::Portkey.ChatCompletionMessageContentPartRedactedThinking>? redactedThinkingContentPart = null,
             bool validate = true)
         {
             if (validate)

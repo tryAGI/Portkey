@@ -21,6 +21,19 @@ namespace Portkey
         /// Create new feedback<br/>
         /// This endpoint allows users to submit feedback for a particular interaction or response.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.FeedbackResponse>> CreateFeedbackAsResponseAsync(
+
+            global::Portkey.FeedbackRequest request,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create new feedback<br/>
+        /// This endpoint allows users to submit feedback for a particular interaction or response.
+        /// </summary>
         /// <param name="traceId">
         /// Unique identifier for the request trace.
         /// </param>

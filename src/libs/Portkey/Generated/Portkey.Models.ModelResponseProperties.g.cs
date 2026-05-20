@@ -105,5 +105,6 @@ namespace Portkey
         public ModelResponseProperties()
         {
         }
+
     }
 }

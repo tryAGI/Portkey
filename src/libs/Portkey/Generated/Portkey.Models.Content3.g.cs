@@ -29,6 +29,26 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickInputContent(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.InputContent? value)
+        {
+            value = InputContent;
+            return IsInputContent;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.InputContent PickInputContent() => IsInputContent
+            ? InputContent!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'InputContent' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.OutputContent? OutputContent { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(OutputContent))]
 #endif
         public bool IsOutputContent => OutputContent != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickOutputContent(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.OutputContent? value)
+        {
+            value = OutputContent;
+            return IsOutputContent;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.OutputContent PickOutputContent() => IsOutputContent
+            ? OutputContent!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'OutputContent' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -63,6 +103,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static Content3 FromInputContent(global::Portkey.InputContent? value) => new Content3(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Content3(global::Portkey.OutputContent value) => new Content3((global::Portkey.OutputContent?)value);
 
         /// <summary>
@@ -77,6 +122,11 @@ namespace Portkey
         {
             OutputContent = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Content3 FromOutputContent(global::Portkey.OutputContent? value) => new Content3(value);
 
         /// <summary>
         /// 
@@ -143,6 +193,30 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
+            global::System.Action<global::Portkey.InputContent?>? inputContent = null,
+
+            global::System.Action<global::Portkey.OutputContent?>? outputContent = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsInputContent)
+            {
+                inputContent?.Invoke(InputContent!);
+            }
+            else if (IsOutputContent)
+            {
+                outputContent?.Invoke(OutputContent!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
             global::System.Action<global::Portkey.InputContent?>? inputContent = null,
             global::System.Action<global::Portkey.OutputContent?>? outputContent = null,
             bool validate = true)

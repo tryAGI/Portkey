@@ -31,6 +31,26 @@ namespace Portkey
         public bool IsMessage => Message != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickMessage(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.EasyInputMessage? value)
+        {
+            value = Message;
+            return IsMessage;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.EasyInputMessage PickMessage() => IsMessage
+            ? Message!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Message' but the value was {ToString()}.");
+
+        /// <summary>
         /// Content item used to generate a response.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -48,6 +68,26 @@ namespace Portkey
         public bool IsItem => Item != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickItem(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.Item? value)
+        {
+            value = Item;
+            return IsItem;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.Item PickItem() => IsItem
+            ? Item!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Item' but the value was {ToString()}.");
+
+        /// <summary>
         /// An internal identifier for an item to reference.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -63,6 +103,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ItemReference))]
 #endif
         public bool IsItemReference => ItemReference != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickItemReference(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ItemReference? value)
+        {
+            value = ItemReference;
+            return IsItemReference;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ItemReference PickItemReference() => IsItemReference
+            ? ItemReference!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ItemReference' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -80,6 +140,11 @@ namespace Portkey
         {
             Message = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static InputItem FromMessage(global::Portkey.EasyInputMessage? value) => new InputItem(value);
 
         /// <summary>
         /// 
@@ -102,6 +167,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static InputItem FromItem(global::Portkey.Item? value) => new InputItem(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator InputItem(global::Portkey.ItemReference value) => new InputItem((global::Portkey.ItemReference?)value);
 
         /// <summary>
@@ -116,6 +186,11 @@ namespace Portkey
         {
             ItemReference = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static InputItem FromItemReference(global::Portkey.ItemReference? value) => new InputItem(value);
 
         /// <summary>
         /// 
@@ -161,9 +236,9 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.EasyInputMessage?, TResult>? message = null,
+            global::System.Func<global::Portkey.EasyInputMessage, TResult>? message = null,
             global::System.Func<global::Portkey.Item?, TResult>? item = null,
-            global::System.Func<global::Portkey.ItemReference?, TResult>? itemReference = null,
+            global::System.Func<global::Portkey.ItemReference, TResult>? itemReference = null,
             bool validate = true)
         {
             if (validate)
@@ -191,9 +266,39 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.EasyInputMessage?>? message = null,
+            global::System.Action<global::Portkey.EasyInputMessage>? message = null,
+
             global::System.Action<global::Portkey.Item?>? item = null,
-            global::System.Action<global::Portkey.ItemReference?>? itemReference = null,
+
+            global::System.Action<global::Portkey.ItemReference>? itemReference = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsMessage)
+            {
+                message?.Invoke(Message!);
+            }
+            else if (IsItem)
+            {
+                item?.Invoke(Item!);
+            }
+            else if (IsItemReference)
+            {
+                itemReference?.Invoke(ItemReference!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.EasyInputMessage>? message = null,
+            global::System.Action<global::Portkey.Item?>? item = null,
+            global::System.Action<global::Portkey.ItemReference>? itemReference = null,
             bool validate = true)
         {
             if (validate)

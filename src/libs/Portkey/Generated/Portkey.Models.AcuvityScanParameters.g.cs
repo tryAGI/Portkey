@@ -300,5 +300,6 @@ namespace Portkey
         public AcuvityScanParameters()
         {
         }
+
     }
 }

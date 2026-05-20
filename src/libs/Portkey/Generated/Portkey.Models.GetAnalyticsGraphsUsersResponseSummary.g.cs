@@ -42,5 +42,6 @@ namespace Portkey
         public GetAnalyticsGraphsUsersResponseSummary()
         {
         }
+
     }
 }

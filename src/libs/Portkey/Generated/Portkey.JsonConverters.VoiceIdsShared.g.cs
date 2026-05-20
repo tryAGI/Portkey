@@ -108,7 +108,10 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (voiceIdsSharedVariant1 == null && @enum == null)
+            {
                 try
                 {
 

@@ -89,6 +89,7 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.BedrockConfiguration), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.BedrockConfiguration> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.BedrockConfiguration).Name}");
                     bedrock = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -99,9 +100,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (bedrock == null && sageMakerConfigurationVariant2 == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.SageMakerConfigurationVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.SageMakerConfigurationVariant2> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.SageMakerConfigurationVariant2).Name}");
                     sageMakerConfigurationVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

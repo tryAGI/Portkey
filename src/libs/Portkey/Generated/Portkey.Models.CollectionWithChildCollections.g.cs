@@ -29,6 +29,26 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickCollection(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.Collection? value)
+        {
+            value = Collection;
+            return IsCollection;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.Collection PickCollection() => IsCollection
+            ? Collection!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Collection' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.CollectionWithChildCollectionsVariant2? CollectionWithChildCollectionsVariant2 { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CollectionWithChildCollectionsVariant2))]
 #endif
         public bool IsCollectionWithChildCollectionsVariant2 => CollectionWithChildCollectionsVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickCollectionWithChildCollectionsVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.CollectionWithChildCollectionsVariant2? value)
+        {
+            value = CollectionWithChildCollectionsVariant2;
+            return IsCollectionWithChildCollectionsVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.CollectionWithChildCollectionsVariant2 PickCollectionWithChildCollectionsVariant2() => IsCollectionWithChildCollectionsVariant2
+            ? CollectionWithChildCollectionsVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CollectionWithChildCollectionsVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -63,6 +103,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static CollectionWithChildCollections FromCollection(global::Portkey.Collection? value) => new CollectionWithChildCollections(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CollectionWithChildCollections(global::Portkey.CollectionWithChildCollectionsVariant2 value) => new CollectionWithChildCollections((global::Portkey.CollectionWithChildCollectionsVariant2?)value);
 
         /// <summary>
@@ -77,6 +122,11 @@ namespace Portkey
         {
             CollectionWithChildCollectionsVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CollectionWithChildCollections FromCollectionWithChildCollectionsVariant2(global::Portkey.CollectionWithChildCollectionsVariant2? value) => new CollectionWithChildCollections(value);
 
         /// <summary>
         /// 
@@ -118,8 +168,8 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.Collection?, TResult>? collection = null,
-            global::System.Func<global::Portkey.CollectionWithChildCollectionsVariant2?, TResult>? collectionWithChildCollectionsVariant2 = null,
+            global::System.Func<global::Portkey.Collection, TResult>? collection = null,
+            global::System.Func<global::Portkey.CollectionWithChildCollectionsVariant2, TResult>? collectionWithChildCollectionsVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +193,32 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.Collection?>? collection = null,
-            global::System.Action<global::Portkey.CollectionWithChildCollectionsVariant2?>? collectionWithChildCollectionsVariant2 = null,
+            global::System.Action<global::Portkey.Collection>? collection = null,
+
+            global::System.Action<global::Portkey.CollectionWithChildCollectionsVariant2>? collectionWithChildCollectionsVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsCollection)
+            {
+                collection?.Invoke(Collection!);
+            }
+            else if (IsCollectionWithChildCollectionsVariant2)
+            {
+                collectionWithChildCollectionsVariant2?.Invoke(CollectionWithChildCollectionsVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.Collection>? collection = null,
+            global::System.Action<global::Portkey.CollectionWithChildCollectionsVariant2>? collectionWithChildCollectionsVariant2 = null,
             bool validate = true)
         {
             if (validate)

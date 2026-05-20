@@ -53,5 +53,6 @@ namespace Portkey
         public VectorStoreSearchRequestRankingOptions()
         {
         }
+
     }
 }

@@ -28,6 +28,26 @@ namespace Portkey
         public bool IsFileSearch => FileSearch != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickFileSearch(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.FileSearchTool? value)
+        {
+            value = FileSearch;
+            return IsFileSearch;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.FileSearchTool PickFileSearch() => IsFileSearch
+            ? FileSearch!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FileSearch' but the value was {ToString()}.");
+
+        /// <summary>
         /// Defines a function in your own code the model can choose to call. Learn more<br/>
         /// about [function calling](/docs/guides/function-calling).
         /// </summary>
@@ -44,6 +64,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Function))]
 #endif
         public bool IsFunction => Function != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickFunction(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.FunctionTool? value)
+        {
+            value = Function;
+            return IsFunction;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.FunctionTool PickFunction() => IsFunction
+            ? Function!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Function' but the value was {ToString()}.");
 
         /// <summary>
         /// A tool that controls a virtual computer. Learn more about the <br/>
@@ -64,6 +104,26 @@ namespace Portkey
         public bool IsComputerUse => ComputerUse != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickComputerUse(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ComputerTool? value)
+        {
+            value = ComputerUse;
+            return IsComputerUse;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ComputerTool PickComputerUse() => IsComputerUse
+            ? ComputerUse!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ComputerUse' but the value was {ToString()}.");
+
+        /// <summary>
         /// This tool searches the web for relevant results to use in a response.<br/>
         /// Learn more about the [web search tool](/docs/guides/tools-web-search).
         /// </summary>
@@ -80,6 +140,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(WebSearch))]
 #endif
         public bool IsWebSearch => WebSearch != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickWebSearch(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.WebSearchTool? value)
+        {
+            value = WebSearch;
+            return IsWebSearch;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.WebSearchTool PickWebSearch() => IsWebSearch
+            ? WebSearch!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'WebSearch' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -97,6 +177,11 @@ namespace Portkey
         {
             FileSearch = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Tool FromFileSearch(global::Portkey.FileSearchTool? value) => new Tool(value);
 
         /// <summary>
         /// 
@@ -119,6 +204,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static Tool FromFunction(global::Portkey.FunctionTool? value) => new Tool(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Tool(global::Portkey.ComputerTool value) => new Tool((global::Portkey.ComputerTool?)value);
 
         /// <summary>
@@ -137,6 +227,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static Tool FromComputerUse(global::Portkey.ComputerTool? value) => new Tool(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Tool(global::Portkey.WebSearchTool value) => new Tool((global::Portkey.WebSearchTool?)value);
 
         /// <summary>
@@ -151,6 +246,11 @@ namespace Portkey
         {
             WebSearch = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Tool FromWebSearch(global::Portkey.WebSearchTool? value) => new Tool(value);
 
         /// <summary>
         /// 
@@ -200,10 +300,10 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.FileSearchTool?, TResult>? fileSearch = null,
-            global::System.Func<global::Portkey.FunctionTool?, TResult>? function = null,
-            global::System.Func<global::Portkey.ComputerTool?, TResult>? computerUse = null,
-            global::System.Func<global::Portkey.WebSearchTool?, TResult>? webSearch = null,
+            global::System.Func<global::Portkey.FileSearchTool, TResult>? fileSearch = null,
+            global::System.Func<global::Portkey.FunctionTool, TResult>? function = null,
+            global::System.Func<global::Portkey.ComputerTool, TResult>? computerUse = null,
+            global::System.Func<global::Portkey.WebSearchTool, TResult>? webSearch = null,
             bool validate = true)
         {
             if (validate)
@@ -235,10 +335,46 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.FileSearchTool?>? fileSearch = null,
-            global::System.Action<global::Portkey.FunctionTool?>? function = null,
-            global::System.Action<global::Portkey.ComputerTool?>? computerUse = null,
-            global::System.Action<global::Portkey.WebSearchTool?>? webSearch = null,
+            global::System.Action<global::Portkey.FileSearchTool>? fileSearch = null,
+
+            global::System.Action<global::Portkey.FunctionTool>? function = null,
+
+            global::System.Action<global::Portkey.ComputerTool>? computerUse = null,
+
+            global::System.Action<global::Portkey.WebSearchTool>? webSearch = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsFileSearch)
+            {
+                fileSearch?.Invoke(FileSearch!);
+            }
+            else if (IsFunction)
+            {
+                function?.Invoke(Function!);
+            }
+            else if (IsComputerUse)
+            {
+                computerUse?.Invoke(ComputerUse!);
+            }
+            else if (IsWebSearch)
+            {
+                webSearch?.Invoke(WebSearch!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.FileSearchTool>? fileSearch = null,
+            global::System.Action<global::Portkey.FunctionTool>? function = null,
+            global::System.Action<global::Portkey.ComputerTool>? computerUse = null,
+            global::System.Action<global::Portkey.WebSearchTool>? webSearch = null,
             bool validate = true)
         {
             if (validate)

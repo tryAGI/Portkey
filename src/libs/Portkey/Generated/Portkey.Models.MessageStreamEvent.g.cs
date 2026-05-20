@@ -27,6 +27,26 @@ namespace Portkey
         public bool IsMessageStreamEventVariant1 => MessageStreamEventVariant1 != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickMessageStreamEventVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.MessageStreamEventVariant1? value)
+        {
+            value = MessageStreamEventVariant1;
+            return IsMessageStreamEventVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.MessageStreamEventVariant1 PickMessageStreamEventVariant1() => IsMessageStreamEventVariant1
+            ? MessageStreamEventVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'MessageStreamEventVariant1' but the value was {ToString()}.");
+
+        /// <summary>
         /// Occurs when a [message](https://platform.openai.com/docs/api-reference/messages/object) moves to an `in_progress` state.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -42,6 +62,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MessageStreamEventVariant2))]
 #endif
         public bool IsMessageStreamEventVariant2 => MessageStreamEventVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickMessageStreamEventVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.MessageStreamEventVariant2? value)
+        {
+            value = MessageStreamEventVariant2;
+            return IsMessageStreamEventVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.MessageStreamEventVariant2 PickMessageStreamEventVariant2() => IsMessageStreamEventVariant2
+            ? MessageStreamEventVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'MessageStreamEventVariant2' but the value was {ToString()}.");
 
         /// <summary>
         /// Occurs when parts of a [Message](https://platform.openai.com/docs/api-reference/messages/object) are being streamed.
@@ -61,6 +101,26 @@ namespace Portkey
         public bool IsMessageStreamEventVariant3 => MessageStreamEventVariant3 != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickMessageStreamEventVariant3(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.MessageStreamEventVariant3? value)
+        {
+            value = MessageStreamEventVariant3;
+            return IsMessageStreamEventVariant3;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.MessageStreamEventVariant3 PickMessageStreamEventVariant3() => IsMessageStreamEventVariant3
+            ? MessageStreamEventVariant3!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'MessageStreamEventVariant3' but the value was {ToString()}.");
+
+        /// <summary>
         /// Occurs when a [message](https://platform.openai.com/docs/api-reference/messages/object) is completed.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -78,6 +138,26 @@ namespace Portkey
         public bool IsMessageStreamEventVariant4 => MessageStreamEventVariant4 != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickMessageStreamEventVariant4(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.MessageStreamEventVariant4? value)
+        {
+            value = MessageStreamEventVariant4;
+            return IsMessageStreamEventVariant4;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.MessageStreamEventVariant4 PickMessageStreamEventVariant4() => IsMessageStreamEventVariant4
+            ? MessageStreamEventVariant4!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'MessageStreamEventVariant4' but the value was {ToString()}.");
+
+        /// <summary>
         /// Occurs when a [message](https://platform.openai.com/docs/api-reference/messages/object) ends before it is completed.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -93,6 +173,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MessageStreamEventVariant5))]
 #endif
         public bool IsMessageStreamEventVariant5 => MessageStreamEventVariant5 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickMessageStreamEventVariant5(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.MessageStreamEventVariant5? value)
+        {
+            value = MessageStreamEventVariant5;
+            return IsMessageStreamEventVariant5;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.MessageStreamEventVariant5 PickMessageStreamEventVariant5() => IsMessageStreamEventVariant5
+            ? MessageStreamEventVariant5!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'MessageStreamEventVariant5' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -110,6 +210,11 @@ namespace Portkey
         {
             MessageStreamEventVariant1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static MessageStreamEvent FromMessageStreamEventVariant1(global::Portkey.MessageStreamEventVariant1? value) => new MessageStreamEvent(value);
 
         /// <summary>
         /// 
@@ -132,6 +237,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static MessageStreamEvent FromMessageStreamEventVariant2(global::Portkey.MessageStreamEventVariant2? value) => new MessageStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator MessageStreamEvent(global::Portkey.MessageStreamEventVariant3 value) => new MessageStreamEvent((global::Portkey.MessageStreamEventVariant3?)value);
 
         /// <summary>
@@ -146,6 +256,11 @@ namespace Portkey
         {
             MessageStreamEventVariant3 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static MessageStreamEvent FromMessageStreamEventVariant3(global::Portkey.MessageStreamEventVariant3? value) => new MessageStreamEvent(value);
 
         /// <summary>
         /// 
@@ -168,6 +283,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static MessageStreamEvent FromMessageStreamEventVariant4(global::Portkey.MessageStreamEventVariant4? value) => new MessageStreamEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator MessageStreamEvent(global::Portkey.MessageStreamEventVariant5 value) => new MessageStreamEvent((global::Portkey.MessageStreamEventVariant5?)value);
 
         /// <summary>
@@ -182,6 +302,11 @@ namespace Portkey
         {
             MessageStreamEventVariant5 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static MessageStreamEvent FromMessageStreamEventVariant5(global::Portkey.MessageStreamEventVariant5? value) => new MessageStreamEvent(value);
 
         /// <summary>
         /// 
@@ -235,11 +360,11 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.MessageStreamEventVariant1?, TResult>? messageStreamEventVariant1 = null,
-            global::System.Func<global::Portkey.MessageStreamEventVariant2?, TResult>? messageStreamEventVariant2 = null,
-            global::System.Func<global::Portkey.MessageStreamEventVariant3?, TResult>? messageStreamEventVariant3 = null,
-            global::System.Func<global::Portkey.MessageStreamEventVariant4?, TResult>? messageStreamEventVariant4 = null,
-            global::System.Func<global::Portkey.MessageStreamEventVariant5?, TResult>? messageStreamEventVariant5 = null,
+            global::System.Func<global::Portkey.MessageStreamEventVariant1, TResult>? messageStreamEventVariant1 = null,
+            global::System.Func<global::Portkey.MessageStreamEventVariant2, TResult>? messageStreamEventVariant2 = null,
+            global::System.Func<global::Portkey.MessageStreamEventVariant3, TResult>? messageStreamEventVariant3 = null,
+            global::System.Func<global::Portkey.MessageStreamEventVariant4, TResult>? messageStreamEventVariant4 = null,
+            global::System.Func<global::Portkey.MessageStreamEventVariant5, TResult>? messageStreamEventVariant5 = null,
             bool validate = true)
         {
             if (validate)
@@ -275,11 +400,53 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.MessageStreamEventVariant1?>? messageStreamEventVariant1 = null,
-            global::System.Action<global::Portkey.MessageStreamEventVariant2?>? messageStreamEventVariant2 = null,
-            global::System.Action<global::Portkey.MessageStreamEventVariant3?>? messageStreamEventVariant3 = null,
-            global::System.Action<global::Portkey.MessageStreamEventVariant4?>? messageStreamEventVariant4 = null,
-            global::System.Action<global::Portkey.MessageStreamEventVariant5?>? messageStreamEventVariant5 = null,
+            global::System.Action<global::Portkey.MessageStreamEventVariant1>? messageStreamEventVariant1 = null,
+
+            global::System.Action<global::Portkey.MessageStreamEventVariant2>? messageStreamEventVariant2 = null,
+
+            global::System.Action<global::Portkey.MessageStreamEventVariant3>? messageStreamEventVariant3 = null,
+
+            global::System.Action<global::Portkey.MessageStreamEventVariant4>? messageStreamEventVariant4 = null,
+
+            global::System.Action<global::Portkey.MessageStreamEventVariant5>? messageStreamEventVariant5 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsMessageStreamEventVariant1)
+            {
+                messageStreamEventVariant1?.Invoke(MessageStreamEventVariant1!);
+            }
+            else if (IsMessageStreamEventVariant2)
+            {
+                messageStreamEventVariant2?.Invoke(MessageStreamEventVariant2!);
+            }
+            else if (IsMessageStreamEventVariant3)
+            {
+                messageStreamEventVariant3?.Invoke(MessageStreamEventVariant3!);
+            }
+            else if (IsMessageStreamEventVariant4)
+            {
+                messageStreamEventVariant4?.Invoke(MessageStreamEventVariant4!);
+            }
+            else if (IsMessageStreamEventVariant5)
+            {
+                messageStreamEventVariant5?.Invoke(MessageStreamEventVariant5!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.MessageStreamEventVariant1>? messageStreamEventVariant1 = null,
+            global::System.Action<global::Portkey.MessageStreamEventVariant2>? messageStreamEventVariant2 = null,
+            global::System.Action<global::Portkey.MessageStreamEventVariant3>? messageStreamEventVariant3 = null,
+            global::System.Action<global::Portkey.MessageStreamEventVariant4>? messageStreamEventVariant4 = null,
+            global::System.Action<global::Portkey.MessageStreamEventVariant5>? messageStreamEventVariant5 = null,
             bool validate = true)
         {
             if (validate)

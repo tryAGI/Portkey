@@ -164,5 +164,6 @@ namespace Portkey
         public CreateAssistantRequest()
         {
         }
+
     }
 }

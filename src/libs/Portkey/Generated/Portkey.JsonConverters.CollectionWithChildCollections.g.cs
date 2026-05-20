@@ -84,6 +84,7 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.Collection), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.Collection> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.Collection).Name}");
                     collection = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -94,9 +95,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (collection == null && collectionWithChildCollectionsVariant2 == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.CollectionWithChildCollectionsVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.CollectionWithChildCollectionsVariant2> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.CollectionWithChildCollectionsVariant2).Name}");
                     collectionWithChildCollectionsVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

@@ -29,5 +29,30 @@ namespace Portkey
             string? before = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Returns a list of run steps belonging to a run.
+        /// </summary>
+        /// <param name="threadId"></param>
+        /// <param name="runId"></param>
+        /// <param name="limit">
+        /// Default Value: 20
+        /// </param>
+        /// <param name="order">
+        /// Default Value: desc
+        /// </param>
+        /// <param name="after"></param>
+        /// <param name="before"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.ListRunStepsResponse>> ListRunStepsAsResponseAsync(
+            string threadId,
+            string runId,
+            int? limit = default,
+            global::Portkey.ListRunStepsOrder? order = default,
+            string? after = default,
+            string? before = default,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

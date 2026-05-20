@@ -55,5 +55,6 @@ namespace Portkey
         public MistralModerationParameters()
         {
         }
+
     }
 }

@@ -79,6 +79,7 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.OutputText), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.OutputText> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.OutputText).Name}");
                     outputText = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -89,9 +90,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (outputText == null && refusal == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.Refusal), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.Refusal> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.Refusal).Name}");
                     refusal = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

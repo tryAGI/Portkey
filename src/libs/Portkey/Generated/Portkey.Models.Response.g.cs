@@ -29,6 +29,26 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickModelProperties(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ModelResponseProperties? value)
+        {
+            value = ModelProperties;
+            return IsModelProperties;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ModelResponseProperties PickModelProperties() => IsModelProperties
+            ? ModelProperties!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ModelProperties' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ResponseProperties? Properties { get; init; }
 #else
@@ -46,6 +66,26 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickProperties(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseProperties? value)
+        {
+            value = Properties;
+            return IsProperties;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseProperties PickProperties() => IsProperties
+            ? Properties!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Properties' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ResponseVariant3? ResponseVariant3 { get; init; }
 #else
@@ -59,6 +99,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseVariant3))]
 #endif
         public bool IsResponseVariant3 => ResponseVariant3 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickResponseVariant3(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.ResponseVariant3? value)
+        {
+            value = ResponseVariant3;
+            return IsResponseVariant3;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.ResponseVariant3 PickResponseVariant3() => IsResponseVariant3
+            ? ResponseVariant3!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseVariant3' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -76,6 +136,11 @@ namespace Portkey
         {
             ModelProperties = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Response FromModelProperties(global::Portkey.ModelResponseProperties? value) => new Response(value);
 
         /// <summary>
         /// 
@@ -98,6 +163,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static Response FromProperties(global::Portkey.ResponseProperties? value) => new Response(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Response(global::Portkey.ResponseVariant3 value) => new Response((global::Portkey.ResponseVariant3?)value);
 
         /// <summary>
@@ -112,6 +182,11 @@ namespace Portkey
         {
             ResponseVariant3 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Response FromResponseVariant3(global::Portkey.ResponseVariant3? value) => new Response(value);
 
         /// <summary>
         /// 
@@ -157,9 +232,9 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.ModelResponseProperties?, TResult>? modelProperties = null,
-            global::System.Func<global::Portkey.ResponseProperties?, TResult>? properties = null,
-            global::System.Func<global::Portkey.ResponseVariant3?, TResult>? responseVariant3 = null,
+            global::System.Func<global::Portkey.ModelResponseProperties, TResult>? modelProperties = null,
+            global::System.Func<global::Portkey.ResponseProperties, TResult>? properties = null,
+            global::System.Func<global::Portkey.ResponseVariant3, TResult>? responseVariant3 = null,
             bool validate = true)
         {
             if (validate)
@@ -187,9 +262,39 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.ModelResponseProperties?>? modelProperties = null,
-            global::System.Action<global::Portkey.ResponseProperties?>? properties = null,
-            global::System.Action<global::Portkey.ResponseVariant3?>? responseVariant3 = null,
+            global::System.Action<global::Portkey.ModelResponseProperties>? modelProperties = null,
+
+            global::System.Action<global::Portkey.ResponseProperties>? properties = null,
+
+            global::System.Action<global::Portkey.ResponseVariant3>? responseVariant3 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsModelProperties)
+            {
+                modelProperties?.Invoke(ModelProperties!);
+            }
+            else if (IsProperties)
+            {
+                properties?.Invoke(Properties!);
+            }
+            else if (IsResponseVariant3)
+            {
+                responseVariant3?.Invoke(ResponseVariant3!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.ModelResponseProperties>? modelProperties = null,
+            global::System.Action<global::Portkey.ResponseProperties>? properties = null,
+            global::System.Action<global::Portkey.ResponseVariant3>? responseVariant3 = null,
             bool validate = true)
         {
             if (validate)

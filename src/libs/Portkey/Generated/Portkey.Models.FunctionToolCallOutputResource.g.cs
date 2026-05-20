@@ -29,6 +29,26 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickFunctionToolCallOutput(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.FunctionToolCallOutput? value)
+        {
+            value = FunctionToolCallOutput;
+            return IsFunctionToolCallOutput;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.FunctionToolCallOutput PickFunctionToolCallOutput() => IsFunctionToolCallOutput
+            ? FunctionToolCallOutput!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionToolCallOutput' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.FunctionToolCallOutputResourceVariant2? FunctionToolCallOutputResourceVariant2 { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FunctionToolCallOutputResourceVariant2))]
 #endif
         public bool IsFunctionToolCallOutputResourceVariant2 => FunctionToolCallOutputResourceVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickFunctionToolCallOutputResourceVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.FunctionToolCallOutputResourceVariant2? value)
+        {
+            value = FunctionToolCallOutputResourceVariant2;
+            return IsFunctionToolCallOutputResourceVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.FunctionToolCallOutputResourceVariant2 PickFunctionToolCallOutputResourceVariant2() => IsFunctionToolCallOutputResourceVariant2
+            ? FunctionToolCallOutputResourceVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionToolCallOutputResourceVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -63,6 +103,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static FunctionToolCallOutputResource FromFunctionToolCallOutput(global::Portkey.FunctionToolCallOutput? value) => new FunctionToolCallOutputResource(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator FunctionToolCallOutputResource(global::Portkey.FunctionToolCallOutputResourceVariant2 value) => new FunctionToolCallOutputResource((global::Portkey.FunctionToolCallOutputResourceVariant2?)value);
 
         /// <summary>
@@ -77,6 +122,11 @@ namespace Portkey
         {
             FunctionToolCallOutputResourceVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static FunctionToolCallOutputResource FromFunctionToolCallOutputResourceVariant2(global::Portkey.FunctionToolCallOutputResourceVariant2? value) => new FunctionToolCallOutputResource(value);
 
         /// <summary>
         /// 
@@ -118,8 +168,8 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.FunctionToolCallOutput?, TResult>? functionToolCallOutput = null,
-            global::System.Func<global::Portkey.FunctionToolCallOutputResourceVariant2?, TResult>? functionToolCallOutputResourceVariant2 = null,
+            global::System.Func<global::Portkey.FunctionToolCallOutput, TResult>? functionToolCallOutput = null,
+            global::System.Func<global::Portkey.FunctionToolCallOutputResourceVariant2, TResult>? functionToolCallOutputResourceVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +193,32 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.FunctionToolCallOutput?>? functionToolCallOutput = null,
-            global::System.Action<global::Portkey.FunctionToolCallOutputResourceVariant2?>? functionToolCallOutputResourceVariant2 = null,
+            global::System.Action<global::Portkey.FunctionToolCallOutput>? functionToolCallOutput = null,
+
+            global::System.Action<global::Portkey.FunctionToolCallOutputResourceVariant2>? functionToolCallOutputResourceVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsFunctionToolCallOutput)
+            {
+                functionToolCallOutput?.Invoke(FunctionToolCallOutput!);
+            }
+            else if (IsFunctionToolCallOutputResourceVariant2)
+            {
+                functionToolCallOutputResourceVariant2?.Invoke(FunctionToolCallOutputResourceVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.FunctionToolCallOutput>? functionToolCallOutput = null,
+            global::System.Action<global::Portkey.FunctionToolCallOutputResourceVariant2>? functionToolCallOutputResourceVariant2 = null,
             bool validate = true)
         {
             if (validate)

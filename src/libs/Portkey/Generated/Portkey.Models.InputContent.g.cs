@@ -27,6 +27,26 @@ namespace Portkey
         public bool IsTextInput => TextInput != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickTextInput(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.InputText? value)
+        {
+            value = TextInput;
+            return IsTextInput;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.InputText PickTextInput() => IsTextInput
+            ? TextInput!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'TextInput' but the value was {ToString()}.");
+
+        /// <summary>
         /// An image input to the model. Learn about [image inputs](/docs/guides/vision).
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -44,6 +64,26 @@ namespace Portkey
         public bool IsImageInput => ImageInput != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickImageInput(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.InputImage? value)
+        {
+            value = ImageInput;
+            return IsImageInput;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.InputImage PickImageInput() => IsImageInput
+            ? ImageInput!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ImageInput' but the value was {ToString()}.");
+
+        /// <summary>
         /// A file input to the model.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -59,6 +99,26 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FileInput))]
 #endif
         public bool IsFileInput => FileInput != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickFileInput(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Portkey.InputFile? value)
+        {
+            value = FileInput;
+            return IsFileInput;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Portkey.InputFile PickFileInput() => IsFileInput
+            ? FileInput!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FileInput' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -76,6 +136,11 @@ namespace Portkey
         {
             TextInput = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static InputContent FromTextInput(global::Portkey.InputText? value) => new InputContent(value);
 
         /// <summary>
         /// 
@@ -98,6 +163,11 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        public static InputContent FromImageInput(global::Portkey.InputImage? value) => new InputContent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator InputContent(global::Portkey.InputFile value) => new InputContent((global::Portkey.InputFile?)value);
 
         /// <summary>
@@ -112,6 +182,11 @@ namespace Portkey
         {
             FileInput = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static InputContent FromFileInput(global::Portkey.InputFile? value) => new InputContent(value);
 
         /// <summary>
         /// 
@@ -157,9 +232,9 @@ namespace Portkey
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Portkey.InputText?, TResult>? textInput = null,
-            global::System.Func<global::Portkey.InputImage?, TResult>? imageInput = null,
-            global::System.Func<global::Portkey.InputFile?, TResult>? fileInput = null,
+            global::System.Func<global::Portkey.InputText, TResult>? textInput = null,
+            global::System.Func<global::Portkey.InputImage, TResult>? imageInput = null,
+            global::System.Func<global::Portkey.InputFile, TResult>? fileInput = null,
             bool validate = true)
         {
             if (validate)
@@ -187,9 +262,39 @@ namespace Portkey
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Portkey.InputText?>? textInput = null,
-            global::System.Action<global::Portkey.InputImage?>? imageInput = null,
-            global::System.Action<global::Portkey.InputFile?>? fileInput = null,
+            global::System.Action<global::Portkey.InputText>? textInput = null,
+
+            global::System.Action<global::Portkey.InputImage>? imageInput = null,
+
+            global::System.Action<global::Portkey.InputFile>? fileInput = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsTextInput)
+            {
+                textInput?.Invoke(TextInput!);
+            }
+            else if (IsImageInput)
+            {
+                imageInput?.Invoke(ImageInput!);
+            }
+            else if (IsFileInput)
+            {
+                fileInput?.Invoke(FileInput!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Portkey.InputText>? textInput = null,
+            global::System.Action<global::Portkey.InputImage>? imageInput = null,
+            global::System.Action<global::Portkey.InputFile>? fileInput = null,
             bool validate = true)
         {
             if (validate)

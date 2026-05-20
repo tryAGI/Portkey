@@ -75,6 +75,47 @@ namespace Portkey
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await GetModelPricingAsResponseAsync(
+                provider: provider,
+                model: model,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Get Model Pricing<br/>
+        /// Returns pricing configuration for a specific model.<br/>
+        /// **Note:** Prices are in USD cents per token.<br/>
+        /// ## Supported Providers<br/>
+        /// openai, anthropic, google, azure-openai, bedrock, mistral-ai, cohere, <br/>
+        /// together-ai, groq, deepseek, fireworks-ai, perplexity-ai, anyscale, <br/>
+        /// deepinfra, cerebras, x-ai, and 25+ more.<br/>
+        /// ## Example Response Fields<br/>
+        /// | Field | Description | Unit |<br/>
+        /// |-------|-------------|------|<br/>
+        /// | `request_token.price` | Input token cost | cents/token |<br/>
+        /// | `response_token.price` | Output token cost | cents/token |<br/>
+        /// | `cache_write_input_token.price` | Cache write cost | cents/token |<br/>
+        /// | `cache_read_input_token.price` | Cache read cost | cents/token |<br/>
+        /// | `additional_units.*` | Provider-specific features | cents/unit |
+        /// </summary>
+        /// <param name="provider">
+        /// Example: openai
+        /// </param>
+        /// <param name="model">
+        /// Example: gpt-5
+        /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Portkey.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.ModelPricingConfig>> GetModelPricingAsResponseAsync(
+            string provider,
+            string model,
+            global::Portkey.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareGetModelPricingArguments(
@@ -104,6 +145,7 @@ namespace Portkey
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Portkey.PathBuilder(
                                 path: $"/model-configs/pricing/{provider}/{model}",
                                 baseUri: HttpClient.BaseAddress ?? new global::System.Uri("https://api.portkey.ai/", global::System.UriKind.RelativeOrAbsolute));
@@ -178,6 +220,8 @@ namespace Portkey
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -188,6 +232,11 @@ namespace Portkey
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Portkey.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Portkey.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -205,6 +254,8 @@ namespace Portkey
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -214,8 +265,7 @@ namespace Portkey
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Portkey.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -224,6 +274,11 @@ namespace Portkey
                         __attempt < __maxAttempts &&
                         global::Portkey.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Portkey.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Portkey.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -240,14 +295,15 @@ namespace Portkey
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Portkey.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -287,6 +343,8 @@ namespace Portkey
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -307,6 +365,8 @@ namespace Portkey
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // Model or provider not found
@@ -369,9 +429,13 @@ namespace Portkey
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::Portkey.ModelPricingConfig.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Portkey.ModelPricingConfig.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.ModelPricingConfig>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -399,9 +463,13 @@ namespace Portkey
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::Portkey.ModelPricingConfig.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Portkey.ModelPricingConfig.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.ModelPricingConfig>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

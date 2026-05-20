@@ -103,6 +103,7 @@ namespace Portkey.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.FileCitation), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.FileCitation> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.FileCitation).Name}");
                     fileCitation = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -113,9 +114,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (fileCitation == null && urlCitation == null && filePath == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.UrlCitation), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.UrlCitation> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.UrlCitation).Name}");
                     urlCitation = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -126,9 +131,13 @@ namespace Portkey.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (fileCitation == null && urlCitation == null && filePath == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.FilePath), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.FilePath> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.FilePath).Name}");
                     filePath = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
