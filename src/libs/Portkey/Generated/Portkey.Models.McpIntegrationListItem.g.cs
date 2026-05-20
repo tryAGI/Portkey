@@ -102,6 +102,12 @@ namespace Portkey
         public double? WorkspacesCount { get; set; }
 
         /// <summary>
+        /// Secret reference mappings for this MCP integration. Valid target_field values are "configurations.&lt;field&gt;".
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("secret_mappings")]
+        public global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? SecretMappings { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -125,6 +131,9 @@ namespace Portkey
         /// <param name="workspaceId"></param>
         /// <param name="description"></param>
         /// <param name="workspacesCount"></param>
+        /// <param name="secretMappings">
+        /// Secret reference mappings for this MCP integration. Valid target_field values are "configurations.&lt;field&gt;".
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -143,7 +152,8 @@ namespace Portkey
             string? slug,
             string? workspaceId,
             string? description,
-            double? workspacesCount)
+            double? workspacesCount,
+            global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? secretMappings)
         {
             this.Id = id;
             this.Name = name;
@@ -160,6 +170,7 @@ namespace Portkey
             this.WorkspaceId = workspaceId;
             this.Description = description;
             this.WorkspacesCount = workspacesCount;
+            this.SecretMappings = secretMappings;
         }
 
         /// <summary>

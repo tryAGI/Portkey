@@ -69,6 +69,12 @@ namespace Portkey
         public required global::Portkey.CreateMcpIntegrationTransport Transport { get; set; }
 
         /// <summary>
+        /// Dynamically resolve secrets from secret references at runtime. Valid target_field values are "configurations.&lt;field&gt;" (e.g. "configurations.oauth_metadata"). Each target_field must be unique.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("secret_mappings")]
+        public global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? SecretMappings { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -98,6 +104,9 @@ namespace Portkey
         /// <param name="configurations">
         /// Auth/config key-value pairs (e.g. headers, client credentials)
         /// </param>
+        /// <param name="secretMappings">
+        /// Dynamically resolve secrets from secret references at runtime. Valid target_field values are "configurations.&lt;field&gt;" (e.g. "configurations.oauth_metadata"). Each target_field must be unique.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -110,7 +119,8 @@ namespace Portkey
             global::System.Guid? workspaceId,
             string? slug,
             string? description,
-            global::Portkey.CreateMcpIntegrationConfigurations? configurations)
+            global::Portkey.CreateMcpIntegrationConfigurations? configurations,
+            global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? secretMappings)
         {
             this.OrganisationId = organisationId;
             this.WorkspaceId = workspaceId;
@@ -121,6 +131,7 @@ namespace Portkey
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.AuthType = authType;
             this.Transport = transport;
+            this.SecretMappings = secretMappings;
         }
 
         /// <summary>
