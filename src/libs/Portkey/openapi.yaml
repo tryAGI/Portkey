@@ -25536,6 +25536,8 @@ components:
 
             - **Virtual Keys**: `key` or `model_config.<field>` (e.g. `model_config.awsSecretAccessKey`)
 
+            - **MCP Integrations**: `configurations.<field>` (e.g. `configurations.oauth_metadata`)
+
             '
           example: key
         secret_reference_id:
@@ -25546,6 +25548,20 @@ components:
           type: string
           nullable: true
           description: Override the secret_key defined on the secret reference. Use to pick a specific key from a multi-value secret.
+        value_format:
+          type: string
+          nullable: true
+          enum:
+          - json
+          - string
+          description: 'Format of the secret value.
+
+            - `string`: The secret value is treated as a plain string.
+
+            - `json`: The secret value is parsed as JSON before being applied to the target field. Use this when the target field expects a structured object (e.g. `configurations.oauth_metadata`).
+
+            '
+          example: json
     CreateSecretReferenceRequest:
       type: object
       required:
@@ -29798,6 +29814,12 @@ components:
           enum:
           - http
           - sse
+        secret_mappings:
+          type: array
+          items:
+            $ref: '#/components/schemas/SecretMapping'
+          description: Dynamically resolve secrets from secret references at runtime. Valid target_field values are "configurations.<field>" (e.g. "configurations.oauth_metadata"). Each target_field must
+            be unique.
     McpIntegrationCreateResponse:
       type: object
       properties:
@@ -29860,6 +29882,11 @@ components:
           enum:
           - workspace
           - organisation
+        secret_mappings:
+          type: array
+          items:
+            $ref: '#/components/schemas/SecretMapping'
+          description: Secret reference mappings for this MCP integration. Valid target_field values are "configurations.<field>".
     McpIntegrationListItem:
       type: object
       properties:
@@ -29911,6 +29938,11 @@ components:
         workspaces_count:
           type: number
           nullable: true
+        secret_mappings:
+          type: array
+          items:
+            $ref: '#/components/schemas/SecretMapping'
+          description: Secret reference mappings for this MCP integration. Valid target_field values are "configurations.<field>".
     McpIntegrationListResponse:
       type: object
       properties:
@@ -29968,6 +30000,12 @@ components:
           enum:
           - http
           - sse
+        secret_mappings:
+          type: array
+          items:
+            $ref: '#/components/schemas/SecretMapping'
+          description: Dynamically resolve secrets from secret references at runtime. Valid target_field values are "configurations.<field>" (e.g. "configurations.oauth_metadata"). Each target_field must
+            be unique.
     McpIntegrationWorkspaceItem:
       type: object
       properties:

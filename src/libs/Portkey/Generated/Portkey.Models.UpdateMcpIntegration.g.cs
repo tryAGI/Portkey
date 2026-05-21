@@ -47,6 +47,12 @@ namespace Portkey
         public global::Portkey.UpdateMcpIntegrationTransport? Transport { get; set; }
 
         /// <summary>
+        /// Dynamically resolve secrets from secret references at runtime. Valid target_field values are "configurations.&lt;field&gt;" (e.g. "configurations.oauth_metadata"). Each target_field must be unique.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("secret_mappings")]
+        public global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? SecretMappings { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -63,6 +69,9 @@ namespace Portkey
         /// <param name="url"></param>
         /// <param name="authType"></param>
         /// <param name="transport"></param>
+        /// <param name="secretMappings">
+        /// Dynamically resolve secrets from secret references at runtime. Valid target_field values are "configurations.&lt;field&gt;" (e.g. "configurations.oauth_metadata"). Each target_field must be unique.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -72,7 +81,8 @@ namespace Portkey
             global::Portkey.UpdateMcpIntegrationConfigurations? configurations,
             string? url,
             global::Portkey.UpdateMcpIntegrationAuthType? authType,
-            global::Portkey.UpdateMcpIntegrationTransport? transport)
+            global::Portkey.UpdateMcpIntegrationTransport? transport,
+            global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? secretMappings)
         {
             this.Name = name;
             this.Description = description;
@@ -80,6 +90,7 @@ namespace Portkey
             this.Url = url;
             this.AuthType = authType;
             this.Transport = transport;
+            this.SecretMappings = secretMappings;
         }
 
         /// <summary>
