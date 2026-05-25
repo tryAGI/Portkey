@@ -139,7 +139,7 @@ namespace Portkey
             {
 
                             var __pathBuilder = new global::Portkey.PathBuilder(
-                                path: $"/api-keys/{type}/{subType}",
+                                path: $"/api-keys/{(global::System.Uri.EscapeDataString(type.ToValueString()))}/{(global::System.Uri.EscapeDataString(subType.ToValueString()))}",
                                 baseUri: ResolveBaseUri(
                                 servers: s_CreateKeysByTypeBySubTypeServers,
                                 defaultBaseUrl: "https://api.portkey.ai/v1"));
@@ -210,7 +210,7 @@ namespace Portkey
                             context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createKeysByTypeBySubType",
                                 methodName: "CreateKeysByTypeBySubTypeAsync",
-                                pathTemplate: "$\"/api-keys/{type}/{subType}\"",
+                                pathTemplate: "$\"/api-keys/{(global::System.Uri.EscapeDataString(type.ToValueString()))}/{(global::System.Uri.EscapeDataString(subType.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -244,7 +244,7 @@ namespace Portkey
                             context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createKeysByTypeBySubType",
                                 methodName: "CreateKeysByTypeBySubTypeAsync",
-                                pathTemplate: "$\"/api-keys/{type}/{subType}\"",
+                                pathTemplate: "$\"/api-keys/{(global::System.Uri.EscapeDataString(type.ToValueString()))}/{(global::System.Uri.EscapeDataString(subType.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -285,7 +285,7 @@ namespace Portkey
                             context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createKeysByTypeBySubType",
                                 methodName: "CreateKeysByTypeBySubTypeAsync",
-                                pathTemplate: "$\"/api-keys/{type}/{subType}\"",
+                                pathTemplate: "$\"/api-keys/{(global::System.Uri.EscapeDataString(type.ToValueString()))}/{(global::System.Uri.EscapeDataString(subType.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -333,7 +333,7 @@ namespace Portkey
                             context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createKeysByTypeBySubType",
                                 methodName: "CreateKeysByTypeBySubTypeAsync",
-                                pathTemplate: "$\"/api-keys/{type}/{subType}\"",
+                                pathTemplate: "$\"/api-keys/{(global::System.Uri.EscapeDataString(type.ToValueString()))}/{(global::System.Uri.EscapeDataString(subType.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -355,7 +355,7 @@ namespace Portkey
                             context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "createKeysByTypeBySubType",
                                 methodName: "CreateKeysByTypeBySubTypeAsync",
-                                pathTemplate: "$\"/api-keys/{type}/{subType}\"",
+                                pathTemplate: "$\"/api-keys/{(global::System.Uri.EscapeDataString(type.ToValueString()))}/{(global::System.Uri.EscapeDataString(subType.ToValueString()))}\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
