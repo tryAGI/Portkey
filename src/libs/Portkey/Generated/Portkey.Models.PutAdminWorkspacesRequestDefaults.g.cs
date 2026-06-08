@@ -27,6 +27,12 @@ namespace Portkey
         public global::System.Collections.Generic.IList<string>? OutputGuardrails { get; set; }
 
         /// <summary>
+        /// Config slug (pc-...) or UUIDin this workspace. null clears the default.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("user_api_key_config")]
+        public string? UserApiKeyConfig { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -38,17 +44,22 @@ namespace Portkey
         /// <param name="metadata"></param>
         /// <param name="inputGuardrails"></param>
         /// <param name="outputGuardrails"></param>
+        /// <param name="userApiKeyConfig">
+        /// Config slug (pc-...) or UUIDin this workspace. null clears the default.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PutAdminWorkspacesRequestDefaults(
             global::System.Collections.Generic.Dictionary<string, string>? metadata,
             global::System.Collections.Generic.IList<string>? inputGuardrails,
-            global::System.Collections.Generic.IList<string>? outputGuardrails)
+            global::System.Collections.Generic.IList<string>? outputGuardrails,
+            string? userApiKeyConfig)
         {
             this.Metadata = metadata;
             this.InputGuardrails = inputGuardrails;
             this.OutputGuardrails = outputGuardrails;
+            this.UserApiKeyConfig = userApiKeyConfig;
         }
 
         /// <summary>
