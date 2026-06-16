@@ -34,10 +34,13 @@ namespace Portkey.JsonConverters
             if (__jsonProps.Contains("credit_limit")) __score0++;
             if (__jsonProps.Contains("group_by")) __score0++;
             if (__jsonProps.Contains("id")) __score0++;
+            if (__jsonProps.Contains("last_reset_at")) __score0++;
             if (__jsonProps.Contains("last_updated_at")) __score0++;
             if (__jsonProps.Contains("name")) __score0++;
+            if (__jsonProps.Contains("next_usage_reset_at")) __score0++;
             if (__jsonProps.Contains("organisation_id")) __score0++;
             if (__jsonProps.Contains("periodic_reset")) __score0++;
+            if (__jsonProps.Contains("periodic_reset_days")) __score0++;
             if (__jsonProps.Contains("status")) __score0++;
             if (__jsonProps.Contains("type")) __score0++;
             if (__jsonProps.Contains("value_key_usage_map")) __score0++;

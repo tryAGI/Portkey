@@ -61,6 +61,24 @@ namespace Portkey
         public global::Portkey.UsageLimitsPolicyPeriodicReset? PeriodicReset { get; set; }
 
         /// <summary>
+        /// Reset the usage counter every N days (1-365). Mutually exclusive with periodic_reset.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("periodic_reset_days")]
+        public int? PeriodicResetDays { get; set; }
+
+        /// <summary>
+        /// ISO 8601 datetime for the next scheduled usage reset. Populated for periodic_reset_days policies.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("next_usage_reset_at")]
+        public global::System.DateTime? NextUsageResetAt { get; set; }
+
+        /// <summary>
+        /// ISO 8601 datetime of the last usage reset.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("last_reset_at")]
+        public global::System.DateTime? LastResetAt { get; set; }
+
+        /// <summary>
         /// Policy status
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
@@ -150,6 +168,15 @@ namespace Portkey
         /// <param name="periodicReset">
         /// Reset period
         /// </param>
+        /// <param name="periodicResetDays">
+        /// Reset the usage counter every N days (1-365). Mutually exclusive with periodic_reset.
+        /// </param>
+        /// <param name="nextUsageResetAt">
+        /// ISO 8601 datetime for the next scheduled usage reset. Populated for periodic_reset_days policies.
+        /// </param>
+        /// <param name="lastResetAt">
+        /// ISO 8601 datetime of the last usage reset.
+        /// </param>
         /// <param name="valueKeyUsageMap">
         /// Map of value keys to usage information (only included when include_usage=true)
         /// </param>
@@ -170,6 +197,9 @@ namespace Portkey
             double? creditLimit,
             double? alertThreshold,
             global::Portkey.UsageLimitsPolicyPeriodicReset? periodicReset,
+            int? periodicResetDays,
+            global::System.DateTime? nextUsageResetAt,
+            global::System.DateTime? lastResetAt,
             global::System.Collections.Generic.Dictionary<string, global::Portkey.ValueKeyUsage>? valueKeyUsageMap)
         {
             this.Id = id;
@@ -180,6 +210,9 @@ namespace Portkey
             this.CreditLimit = creditLimit;
             this.AlertThreshold = alertThreshold;
             this.PeriodicReset = periodicReset;
+            this.PeriodicResetDays = periodicResetDays;
+            this.NextUsageResetAt = nextUsageResetAt;
+            this.LastResetAt = lastResetAt;
             this.Status = status;
             this.WorkspaceId = workspaceId;
             this.OrganisationId = organisationId;

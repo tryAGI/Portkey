@@ -37,6 +37,12 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("user_api_key_config")]
+        public string? UserApiKeyConfig { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("object")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.WorkspaceWithUsersDefaultsObjectJsonConverter))]
         public global::Portkey.WorkspaceWithUsersDefaultsObject? Object { get; set; }
@@ -58,6 +64,7 @@ namespace Portkey
         /// </param>
         /// <param name="inputGuardrails"></param>
         /// <param name="outputGuardrails"></param>
+        /// <param name="userApiKeyConfig"></param>
         /// <param name="object"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -67,12 +74,14 @@ namespace Portkey
             int? isDefault,
             global::System.Collections.Generic.IList<string>? inputGuardrails,
             global::System.Collections.Generic.IList<string>? outputGuardrails,
+            string? userApiKeyConfig,
             global::Portkey.WorkspaceWithUsersDefaultsObject? @object)
         {
             this.Metadata = metadata;
             this.IsDefault = isDefault;
             this.InputGuardrails = inputGuardrails;
             this.OutputGuardrails = outputGuardrails;
+            this.UserApiKeyConfig = userApiKeyConfig;
             this.Object = @object;
         }
 
