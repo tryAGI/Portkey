@@ -141,5 +141,36 @@ namespace Portkey
             global::System.Net.Http.HttpClient client,
             global::System.Net.Http.HttpResponseMessage response,
             ref string content);
+
+
+        private global::System.Uri? ResolveBaseUri(
+            global::Portkey.AutoSDKServer[] servers,
+            string defaultBaseUrl)
+        {
+            if (AutoSDKServerConfiguration.ExplicitBaseUri is global::System.Uri explicitBaseUri)
+            {
+                return explicitBaseUri;
+            }
+
+            if (AutoSDKServerConfiguration.SelectedServer is global::Portkey.AutoSDKServer selectedServer)
+            {
+                foreach (var server in servers)
+                {
+                    if (string.Equals(server.Id, selectedServer.Id, global::System.StringComparison.Ordinal))
+                    {
+                        return server.Uri;
+                    }
+                }
+            }
+
+            if (servers.Length > 0)
+            {
+                return servers[0].Uri;
+            }
+
+            return string.IsNullOrWhiteSpace(defaultBaseUrl)
+                ? HttpClient.BaseAddress
+                : new global::System.Uri(defaultBaseUrl, global::System.UriKind.RelativeOrAbsolute);
+        }
     }
 }
