@@ -41,12 +41,6 @@ namespace Portkey
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("is_default")]
-        public int? IsDefault { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         public string? Status { get; set; }
 
@@ -88,7 +82,6 @@ namespace Portkey
         /// <param name="slug"></param>
         /// <param name="organisationId"></param>
         /// <param name="workspaceId"></param>
-        /// <param name="isDefault"></param>
         /// <param name="status"></param>
         /// <param name="ownerId"></param>
         /// <param name="updatedBy"></param>
@@ -103,7 +96,6 @@ namespace Portkey
             string? slug,
             global::System.Guid? organisationId,
             global::System.Guid? workspaceId,
-            int? isDefault,
             string? status,
             global::System.Guid? ownerId,
             global::System.Guid? updatedBy,
@@ -115,7 +107,6 @@ namespace Portkey
             this.Slug = slug;
             this.OrganisationId = organisationId;
             this.WorkspaceId = workspaceId;
-            this.IsDefault = isDefault;
             this.Status = status;
             this.OwnerId = ownerId;
             this.UpdatedBy = updatedBy;

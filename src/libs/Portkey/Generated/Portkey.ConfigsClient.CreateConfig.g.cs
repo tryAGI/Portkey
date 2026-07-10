@@ -451,7 +451,6 @@ namespace Portkey
         /// </summary>
         /// <param name="name"></param>
         /// <param name="config"></param>
-        /// <param name="isDefault"></param>
         /// <param name="workspaceId">
         /// optional, when using organisation admin API keys
         /// </param>
@@ -461,7 +460,6 @@ namespace Portkey
         public async global::System.Threading.Tasks.Task<global::Portkey.CreateConfigResponse> CreateConfigAsync(
             string? name = default,
             object? config = default,
-            int? isDefault = default,
             global::System.Guid? workspaceId = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -470,7 +468,6 @@ namespace Portkey
             {
                 Name = name,
                 Config = config,
-                IsDefault = isDefault,
                 WorkspaceId = workspaceId,
             };
 
