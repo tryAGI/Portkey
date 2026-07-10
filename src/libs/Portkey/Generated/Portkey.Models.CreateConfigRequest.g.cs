@@ -21,12 +21,6 @@ namespace Portkey
         public object? Config { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("isDefault")]
-        public int? IsDefault { get; set; }
-
-        /// <summary>
         /// optional, when using organisation admin API keys
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("workspace_id")]
@@ -43,7 +37,6 @@ namespace Portkey
         /// </summary>
         /// <param name="name"></param>
         /// <param name="config"></param>
-        /// <param name="isDefault"></param>
         /// <param name="workspaceId">
         /// optional, when using organisation admin API keys
         /// </param>
@@ -53,12 +46,10 @@ namespace Portkey
         public CreateConfigRequest(
             string? name,
             object? config,
-            int? isDefault,
             global::System.Guid? workspaceId)
         {
             this.Name = name;
             this.Config = config;
-            this.IsDefault = isDefault;
             this.WorkspaceId = workspaceId;
         }
 
