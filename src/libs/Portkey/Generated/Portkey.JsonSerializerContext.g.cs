@@ -1897,6 +1897,14 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.McpServerCapabilitiesListTypeNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.GetLogsPathFormatJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetLogsPathFormatNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetLogsTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetLogsTypeNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.GetAuditLogsMethodJsonConverter),
 
             typeof(global::Portkey.JsonConverters.GetAuditLogsMethodNullableJsonConverter),
@@ -4709,6 +4717,14 @@ namespace Portkey
             typeof(global::Portkey.JsonConverters.McpServerCapabilitiesListTypeJsonConverter),
 
             typeof(global::Portkey.JsonConverters.McpServerCapabilitiesListTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetLogsPathFormatJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetLogsPathFormatNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetLogsTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetLogsTypeNullableJsonConverter),
 
             typeof(global::Portkey.JsonConverters.GetAuditLogsMethodJsonConverter),
 
@@ -7523,6 +7539,14 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.McpServerCapabilitiesListTypeNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.GetLogsPathFormatJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetLogsPathFormatNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetLogsTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetLogsTypeNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.GetAuditLogsMethodJsonConverter),
 
             typeof(global::Portkey.JsonConverters.GetAuditLogsMethodNullableJsonConverter),
@@ -8390,6 +8414,8 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.McpIntegrationsListType), TypeInfoPropertyName = "McpIntegrationsListType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.McpIntegrationCapabilitiesListType), TypeInfoPropertyName = "McpIntegrationCapabilitiesListType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.McpServerCapabilitiesListType), TypeInfoPropertyName = "McpServerCapabilitiesListType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetLogsPathFormat), TypeInfoPropertyName = "GetLogsPathFormat2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetLogsType), TypeInfoPropertyName = "GetLogsType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetAuditLogsMethod), TypeInfoPropertyName = "GetAuditLogsMethod2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetAuditLogsUserType), TypeInfoPropertyName = "GetAuditLogsUserType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateKeysType), TypeInfoPropertyName = "CreateKeysType2")]
@@ -8439,8 +8465,6 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.ListConfigVersionsResponseDataItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListConfigVersionsResponseDataItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetIntegrationsResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetIntegrationsResponseObject), TypeInfoPropertyName = "GetIntegrationsResponseObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.IntegrationList>))]
     internal sealed partial class SourceGenerationContextChunk2 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -10336,6 +10360,14 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.McpServerCapabilitiesListTypeNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.GetLogsPathFormatJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetLogsPathFormatNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetLogsTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetLogsTypeNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.GetAuditLogsMethodJsonConverter),
 
             typeof(global::Portkey.JsonConverters.GetAuditLogsMethodNullableJsonConverter),
@@ -10771,6 +10803,8 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.JWTParameters, global::Portkey.ModelWhitelistParameters, global::Portkey.RegexMatchParameters, global::Portkey.SentenceCountParameters, global::Portkey.WordCountParameters, global::Portkey.CharacterCountParameters, global::Portkey.JSONSchemaParameters, global::Portkey.JSONKeysParameters, global::Portkey.ContainsParameters, global::Portkey.ValidUrlsParameters, global::Portkey.ContainsCodeParameters, global::Portkey.WebhookParameters, global::Portkey.EndsWithParameters, global::Portkey.UppercaseParameters, global::Portkey.RequiredMetadataKeysParameters, global::Portkey.AllowedRequestTypesParameters, global::Portkey.SydeGuardParameters, global::Portkey.AporiaParameters, global::Portkey.PillarScanParameters, global::Portkey.PatronusParameters, global::Portkey.PatronusCustomParameters, global::Portkey.PortkeyModerationParameters, global::Portkey.PortkeyLanguageParameters, global::Portkey.PortkeyPIIParameters, global::Portkey.MistralModerationParameters, global::Portkey.BedrockGuardParameters, global::Portkey.PromptfooParameters, global::Portkey.AcuvityScanParameters, global::Portkey.AzureContentSafetyParameters, global::Portkey.AzurePIIParameters, global::Portkey.PANWPrismaParameters, global::Portkey.BasicParameters>?), TypeInfoPropertyName = "BasicParameters_b9f37200e2abf3e9")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_12be480b1039da9e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObject>>), TypeInfoPropertyName = "RunStepDeltaStepDetailsToolCallsFunctionObject_5640d9ed7ecfcd45")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetIntegrationsResponseObject), TypeInfoPropertyName = "GetIntegrationsResponseObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.IntegrationList>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateIntegrationsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetProvidersResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetProvidersResponseObject), TypeInfoPropertyName = "GetProvidersResponseObject2")]
@@ -12075,6 +12109,10 @@ namespace Portkey
             options.Converters.Add(new global::Portkey.JsonConverters.McpIntegrationCapabilitiesListTypeNullableJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.McpServerCapabilitiesListTypeJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.McpServerCapabilitiesListTypeNullableJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.GetLogsPathFormatJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.GetLogsPathFormatNullableJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.GetLogsTypeJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.GetLogsTypeNullableJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.GetAuditLogsMethodJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.GetAuditLogsMethodNullableJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.GetAuditLogsUserTypeJsonConverter());
