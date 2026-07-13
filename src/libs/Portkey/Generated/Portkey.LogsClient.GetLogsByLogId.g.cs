@@ -40,11 +40,17 @@ namespace Portkey
             };
         partial void PrepareGetLogsByLogIdArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string logId);
+            ref string logId,
+            ref global::Portkey.GetLogsPathFormat? pathFormat,
+            ref global::System.DateTime? createdAt,
+            ref global::Portkey.GetLogsType? type);
         partial void PrepareGetLogsByLogIdRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string logId);
+            string logId,
+            global::Portkey.GetLogsPathFormat? pathFormat,
+            global::System.DateTime? createdAt,
+            global::Portkey.GetLogsType? type);
         partial void ProcessGetLogsByLogIdResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -58,16 +64,27 @@ namespace Portkey
         /// Get a specific log
         /// </summary>
         /// <param name="logId"></param>
+        /// <param name="pathFormat">
+        /// Default Value: v1
+        /// </param>
+        /// <param name="createdAt"></param>
+        /// <param name="type"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Portkey.LogObject> GetLogsByLogIdAsync(
             string logId,
+            global::Portkey.GetLogsPathFormat? pathFormat = default,
+            global::System.DateTime? createdAt = default,
+            global::Portkey.GetLogsType? type = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await GetLogsByLogIdAsResponseAsync(
                 logId: logId,
+                pathFormat: pathFormat,
+                createdAt: createdAt,
+                type: type,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -78,11 +95,19 @@ namespace Portkey
         /// Get a specific log
         /// </summary>
         /// <param name="logId"></param>
+        /// <param name="pathFormat">
+        /// Default Value: v1
+        /// </param>
+        /// <param name="createdAt"></param>
+        /// <param name="type"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.LogObject>> GetLogsByLogIdAsResponseAsync(
             string logId,
+            global::Portkey.GetLogsPathFormat? pathFormat = default,
+            global::System.DateTime? createdAt = default,
+            global::Portkey.GetLogsType? type = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -90,7 +115,10 @@ namespace Portkey
                 client: HttpClient);
             PrepareGetLogsByLogIdArguments(
                 httpClient: HttpClient,
-                logId: ref logId);
+                logId: ref logId,
+                pathFormat: ref pathFormat,
+                createdAt: ref createdAt,
+                type: ref type);
 
 
             var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
@@ -120,6 +148,11 @@ namespace Portkey
                                 baseUri: ResolveBaseUri(
                                 servers: s_GetLogsByLogIdServers,
                                 defaultBaseUrl: "https://api.portkey.ai/v1"));
+                            __pathBuilder
+                                .AddOptionalParameter("path_format", pathFormat?.ToValueString())
+                                .AddOptionalParameter("created_at", createdAt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddOptionalParameter("type", type?.ToValueString())
+                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Portkey.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
@@ -160,7 +193,10 @@ namespace Portkey
                 PrepareGetLogsByLogIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    logId: logId!);
+                    logId: logId!,
+                    pathFormat: pathFormat,
+                    createdAt: createdAt,
+                    type: type);
 
                 return __httpRequest;
             }
