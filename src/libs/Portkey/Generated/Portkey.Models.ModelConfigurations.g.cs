@@ -15,6 +15,12 @@ namespace Portkey
         public string? CustomHost { get; set; }
 
         /// <summary>
+        /// Custom Headers for the model.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("custom_headers")]
+        public global::Portkey.ModelConfigurationsCustomHeaders? CustomHeaders { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -26,13 +32,18 @@ namespace Portkey
         /// <param name="customHost">
         /// Custom Host URL for the model.
         /// </param>
+        /// <param name="customHeaders">
+        /// Custom Headers for the model.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ModelConfigurations(
-            string? customHost)
+            string? customHost,
+            global::Portkey.ModelConfigurationsCustomHeaders? customHeaders)
         {
             this.CustomHost = customHost;
+            this.CustomHeaders = customHeaders;
         }
 
         /// <summary>
