@@ -127,6 +127,11 @@ namespace Portkey
         public ConfigsClient Configs { get; }
 
         /// <summary>
+        /// Register, List, Retrieve, Update, and Delete self-hosted Gateway deployments.
+        /// </summary>
+        public DeploymentsClient Deployments { get; }
+
+        /// <summary>
         /// Get a vector representation of a given input that can be easily consumed by machine learning models and algorithms.
         /// </summary>
         public EmbeddingsClient Embeddings { get; }
