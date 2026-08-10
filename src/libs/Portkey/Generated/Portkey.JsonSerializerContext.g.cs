@@ -1789,6 +1789,54 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.BulkUpdateMcpServerUserAccessDefaultUserAccessNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.CreateDeploymentRequestTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateDeploymentRequestTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentCreateResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentCreateResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemConnectionStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemConnectionStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseOutboundStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseOutboundStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseInboundStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseInboundStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseObjectNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.CreateVirtualKeysRequestProviderJsonConverter),
 
             typeof(global::Portkey.JsonConverters.CreateVirtualKeysRequestProviderNullableJsonConverter),
@@ -1957,6 +2005,14 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.ListSecretReferencesManagerTypeNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.ListDeploymentsStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsTypeNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.CreatePromptResponseObjectJsonConverter),
 
             typeof(global::Portkey.JsonConverters.CreatePromptResponseObjectNullableJsonConverter),
@@ -2085,6 +2141,10 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.CreateSecretReferenceResponseObjectNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.ListDeploymentsResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsResponseObjectNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.ChatCompletionRequestMessageContentPartJsonConverter),
 
             typeof(global::Portkey.JsonConverters.ChatCompletionRequestMessageJsonConverter),
@@ -2174,6 +2234,8 @@ namespace Portkey
             typeof(global::Portkey.JsonConverters.UsageLimitsPolicyResponseJsonConverter),
 
             typeof(global::Portkey.JsonConverters.RateLimitsPolicyResponseJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentDetailResponseJsonConverter),
 
             typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.ModelCalculateOperation, global::Portkey.ModelValueReference>),
 
@@ -2302,6 +2364,10 @@ namespace Portkey
             typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.JWTParameters, global::Portkey.ModelWhitelistParameters, global::Portkey.RegexMatchParameters, global::Portkey.SentenceCountParameters, global::Portkey.WordCountParameters, global::Portkey.CharacterCountParameters, global::Portkey.JSONSchemaParameters, global::Portkey.JSONKeysParameters, global::Portkey.ContainsParameters, global::Portkey.ValidUrlsParameters, global::Portkey.ContainsCodeParameters, global::Portkey.WebhookParameters, global::Portkey.EndsWithParameters, global::Portkey.UppercaseParameters, global::Portkey.RequiredMetadataKeysParameters, global::Portkey.AllowedRequestTypesParameters, global::Portkey.SydeGuardParameters, global::Portkey.AporiaParameters, global::Portkey.PillarScanParameters, global::Portkey.PatronusParameters, global::Portkey.PatronusCustomParameters, global::Portkey.PortkeyModerationParameters, global::Portkey.PortkeyLanguageParameters, global::Portkey.PortkeyPIIParameters, global::Portkey.MistralModerationParameters, global::Portkey.BedrockGuardParameters, global::Portkey.PromptfooParameters, global::Portkey.AcuvityScanParameters, global::Portkey.AzureContentSafetyParameters, global::Portkey.AzurePIIParameters, global::Portkey.PANWPrismaParameters, global::Portkey.BasicParameters>),
 
             typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<global::Portkey.PortkeyBatchJobProviderOptionsBedrockOptions, global::Portkey.PortkeyBatchJobProviderOptionsVertexOptions>),
+
+            typeof(global::Portkey.JsonConverters.AllOfJsonConverter<global::Portkey.DeploymentAuthSettingsInput, global::Portkey.UpdateDeploymentRequestAuthSettings>),
+
+            typeof(global::Portkey.JsonConverters.AllOfJsonConverter<global::Portkey.DeploymentAuthSettings, global::Portkey.DeploymentDetailResponseVariant2AuthSettings>),
 
             typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CreateChatCompletionRequest, global::Portkey.CreateCompletionRequest>),
 
@@ -4610,6 +4676,54 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.BulkUpdateMcpServerUserAccessDefaultUserAccessNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.CreateDeploymentRequestTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateDeploymentRequestTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentCreateResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentCreateResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemConnectionStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemConnectionStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseOutboundStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseOutboundStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseInboundStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseInboundStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseObjectNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.CreateVirtualKeysRequestProviderJsonConverter),
 
             typeof(global::Portkey.JsonConverters.CreateVirtualKeysRequestProviderNullableJsonConverter),
@@ -4778,6 +4892,14 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.ListSecretReferencesManagerTypeNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.ListDeploymentsStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsTypeNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.CreatePromptResponseObjectJsonConverter),
 
             typeof(global::Portkey.JsonConverters.CreatePromptResponseObjectNullableJsonConverter),
@@ -4906,6 +5028,10 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.CreateSecretReferenceResponseObjectNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.ListDeploymentsResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsResponseObjectNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.ChatCompletionRequestMessageContentPartJsonConverter),
 
             typeof(global::Portkey.JsonConverters.ChatCompletionRequestMessageJsonConverter),
@@ -4995,6 +5121,8 @@ namespace Portkey
             typeof(global::Portkey.JsonConverters.UsageLimitsPolicyResponseJsonConverter),
 
             typeof(global::Portkey.JsonConverters.RateLimitsPolicyResponseJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentDetailResponseJsonConverter),
 
             typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.ModelCalculateOperation, global::Portkey.ModelValueReference>),
 
@@ -5123,6 +5251,10 @@ namespace Portkey
             typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.JWTParameters, global::Portkey.ModelWhitelistParameters, global::Portkey.RegexMatchParameters, global::Portkey.SentenceCountParameters, global::Portkey.WordCountParameters, global::Portkey.CharacterCountParameters, global::Portkey.JSONSchemaParameters, global::Portkey.JSONKeysParameters, global::Portkey.ContainsParameters, global::Portkey.ValidUrlsParameters, global::Portkey.ContainsCodeParameters, global::Portkey.WebhookParameters, global::Portkey.EndsWithParameters, global::Portkey.UppercaseParameters, global::Portkey.RequiredMetadataKeysParameters, global::Portkey.AllowedRequestTypesParameters, global::Portkey.SydeGuardParameters, global::Portkey.AporiaParameters, global::Portkey.PillarScanParameters, global::Portkey.PatronusParameters, global::Portkey.PatronusCustomParameters, global::Portkey.PortkeyModerationParameters, global::Portkey.PortkeyLanguageParameters, global::Portkey.PortkeyPIIParameters, global::Portkey.MistralModerationParameters, global::Portkey.BedrockGuardParameters, global::Portkey.PromptfooParameters, global::Portkey.AcuvityScanParameters, global::Portkey.AzureContentSafetyParameters, global::Portkey.AzurePIIParameters, global::Portkey.PANWPrismaParameters, global::Portkey.BasicParameters>),
 
             typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<global::Portkey.PortkeyBatchJobProviderOptionsBedrockOptions, global::Portkey.PortkeyBatchJobProviderOptionsVertexOptions>),
+
+            typeof(global::Portkey.JsonConverters.AllOfJsonConverter<global::Portkey.DeploymentAuthSettingsInput, global::Portkey.UpdateDeploymentRequestAuthSettings>),
+
+            typeof(global::Portkey.JsonConverters.AllOfJsonConverter<global::Portkey.DeploymentAuthSettings, global::Portkey.DeploymentDetailResponseVariant2AuthSettings>),
 
             typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CreateChatCompletionRequest, global::Portkey.CreateCompletionRequest>),
 
@@ -7431,6 +7563,54 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.BulkUpdateMcpServerUserAccessDefaultUserAccessNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.CreateDeploymentRequestTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateDeploymentRequestTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentCreateResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentCreateResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemConnectionStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemConnectionStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseOutboundStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseOutboundStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseInboundStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseInboundStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseObjectNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.CreateVirtualKeysRequestProviderJsonConverter),
 
             typeof(global::Portkey.JsonConverters.CreateVirtualKeysRequestProviderNullableJsonConverter),
@@ -7599,6 +7779,14 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.ListSecretReferencesManagerTypeNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.ListDeploymentsStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsTypeNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.CreatePromptResponseObjectJsonConverter),
 
             typeof(global::Portkey.JsonConverters.CreatePromptResponseObjectNullableJsonConverter),
@@ -7727,6 +7915,10 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.CreateSecretReferenceResponseObjectNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.ListDeploymentsResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsResponseObjectNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.ChatCompletionRequestMessageContentPartJsonConverter),
 
             typeof(global::Portkey.JsonConverters.ChatCompletionRequestMessageJsonConverter),
@@ -7816,6 +8008,8 @@ namespace Portkey
             typeof(global::Portkey.JsonConverters.UsageLimitsPolicyResponseJsonConverter),
 
             typeof(global::Portkey.JsonConverters.RateLimitsPolicyResponseJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentDetailResponseJsonConverter),
 
             typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.ModelCalculateOperation, global::Portkey.ModelValueReference>),
 
@@ -7944,6 +8138,10 @@ namespace Portkey
             typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.JWTParameters, global::Portkey.ModelWhitelistParameters, global::Portkey.RegexMatchParameters, global::Portkey.SentenceCountParameters, global::Portkey.WordCountParameters, global::Portkey.CharacterCountParameters, global::Portkey.JSONSchemaParameters, global::Portkey.JSONKeysParameters, global::Portkey.ContainsParameters, global::Portkey.ValidUrlsParameters, global::Portkey.ContainsCodeParameters, global::Portkey.WebhookParameters, global::Portkey.EndsWithParameters, global::Portkey.UppercaseParameters, global::Portkey.RequiredMetadataKeysParameters, global::Portkey.AllowedRequestTypesParameters, global::Portkey.SydeGuardParameters, global::Portkey.AporiaParameters, global::Portkey.PillarScanParameters, global::Portkey.PatronusParameters, global::Portkey.PatronusCustomParameters, global::Portkey.PortkeyModerationParameters, global::Portkey.PortkeyLanguageParameters, global::Portkey.PortkeyPIIParameters, global::Portkey.MistralModerationParameters, global::Portkey.BedrockGuardParameters, global::Portkey.PromptfooParameters, global::Portkey.AcuvityScanParameters, global::Portkey.AzureContentSafetyParameters, global::Portkey.AzurePIIParameters, global::Portkey.PANWPrismaParameters, global::Portkey.BasicParameters>),
 
             typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<global::Portkey.PortkeyBatchJobProviderOptionsBedrockOptions, global::Portkey.PortkeyBatchJobProviderOptionsVertexOptions>),
+
+            typeof(global::Portkey.JsonConverters.AllOfJsonConverter<global::Portkey.DeploymentAuthSettingsInput, global::Portkey.UpdateDeploymentRequestAuthSettings>),
+
+            typeof(global::Portkey.JsonConverters.AllOfJsonConverter<global::Portkey.DeploymentAuthSettings, global::Portkey.DeploymentDetailResponseVariant2AuthSettings>),
 
             typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CreateChatCompletionRequest, global::Portkey.CreateCompletionRequest>),
 
@@ -8351,6 +8549,36 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.McpServerConnectionsListResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.McpServerConnectionItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.McpServerConnectionDeleteResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentAuthSettings))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentAuthSettingsInput))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentCredentials))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateDeploymentRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateDeploymentRequestType), TypeInfoPropertyName = "CreateDeploymentRequestType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateDeploymentRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateDeploymentRequestType), TypeInfoPropertyName = "UpdateDeploymentRequestType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateDeploymentRequestStatus), TypeInfoPropertyName = "UpdateDeploymentRequestStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AllOf<global::Portkey.DeploymentAuthSettingsInput, global::Portkey.UpdateDeploymentRequestAuthSettings>), TypeInfoPropertyName = "AllOfDeploymentAuthSettingsInputUpdateDeploymentRequestAuthSettings2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateDeploymentRequestAuthSettings))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentCreateResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentCreateResponseObject), TypeInfoPropertyName = "DeploymentCreateResponseObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentListItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentListItemType), TypeInfoPropertyName = "DeploymentListItemType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentListItemStatus), TypeInfoPropertyName = "DeploymentListItemStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentListItemConnectionStatus), TypeInfoPropertyName = "DeploymentListItemConnectionStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentListItemObject), TypeInfoPropertyName = "DeploymentListItemObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentDetailResponse), TypeInfoPropertyName = "DeploymentDetailResponse2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentDetailResponseVariant2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AllOf<global::Portkey.DeploymentAuthSettings, global::Portkey.DeploymentDetailResponseVariant2AuthSettings>), TypeInfoPropertyName = "AllOfDeploymentAuthSettingsDeploymentDetailResponseVariant2AuthSettings2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentDetailResponseVariant2AuthSettings))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.DeploymentDetailResponseVariant2Workspace>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentDetailResponseVariant2Workspace))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentPingResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentPingResponseStatus), TypeInfoPropertyName = "DeploymentPingResponseStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentPingResponseOutbound))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentPingResponseOutboundStatus), TypeInfoPropertyName = "DeploymentPingResponseOutboundStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentPingResponseInbound))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentPingResponseInboundStatus), TypeInfoPropertyName = "DeploymentPingResponseInboundStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentPingResponseObject), TypeInfoPropertyName = "DeploymentPingResponseObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateCollectionsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PutCollectionsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreatePromptRequest))]
@@ -8431,40 +8659,10 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListRateLimitsPoliciesUnit), TypeInfoPropertyName = "ListRateLimitsPoliciesUnit2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetRateLimitsPolicyStatus), TypeInfoPropertyName = "GetRateLimitsPolicyStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListSecretReferencesManagerType), TypeInfoPropertyName = "ListSecretReferencesManagerType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListDeploymentsStatus), TypeInfoPropertyName = "ListDeploymentsStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListDeploymentsType), TypeInfoPropertyName = "ListDeploymentsType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateCollectionsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetCollectionsResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.CollectionWithDetails>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreatePromptResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreatePromptResponseObject), TypeInfoPropertyName = "CreatePromptResponseObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListPromptsResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.PromptSummary>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdatePromptResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.PromptVersionSummary>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreatePromptPartialResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.PromptPartialSummary>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdatePromptPartialResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.PromptPartialVersion>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreatePromptCompletionResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.CreateChatCompletionResponse, global::Portkey.CreateCompletionResponse>), TypeInfoPropertyName = "OneOfCreateChatCompletionResponseCreateCompletionResponse2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.CreateTranscriptionResponseJson, global::Portkey.CreateTranscriptionResponseVerboseJson>), TypeInfoPropertyName = "OneOfCreateTranscriptionResponseJsonCreateTranscriptionResponseVerboseJson2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.CreateTranslationResponseJson, global::Portkey.CreateTranslationResponseVerboseJson>), TypeInfoPropertyName = "OneOfCreateTranslationResponseJsonCreateTranslationResponseVerboseJson2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListConfigsResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.ListConfigsResponseDataItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListConfigsResponseDataItem))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateConfigResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateConfigResponseData))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetConfigResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetConfigResponseData))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetConfigResponseDataConfig))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetConfigResponseDataConfigRetry))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetConfigResponseDataConfigCache))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetConfigResponseDataConfigStrategy))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.GetConfigResponseDataConfigTarget>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetConfigResponseDataConfigTarget))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateConfigResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateConfigResponseData))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListConfigVersionsResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.ListConfigVersionsResponseDataItem>))]
     internal sealed partial class SourceGenerationContextChunk2 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -10252,6 +10450,54 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.BulkUpdateMcpServerUserAccessDefaultUserAccessNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.CreateDeploymentRequestTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateDeploymentRequestTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentCreateResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentCreateResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemConnectionStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemConnectionStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseOutboundStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseOutboundStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseInboundStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseInboundStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseObjectNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.CreateVirtualKeysRequestProviderJsonConverter),
 
             typeof(global::Portkey.JsonConverters.CreateVirtualKeysRequestProviderNullableJsonConverter),
@@ -10420,6 +10666,14 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.ListSecretReferencesManagerTypeNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.ListDeploymentsStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsTypeNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.CreatePromptResponseObjectJsonConverter),
 
             typeof(global::Portkey.JsonConverters.CreatePromptResponseObjectNullableJsonConverter),
@@ -10548,6 +10802,10 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.CreateSecretReferenceResponseObjectNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.ListDeploymentsResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsResponseObjectNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.ChatCompletionRequestMessageContentPartJsonConverter),
 
             typeof(global::Portkey.JsonConverters.ChatCompletionRequestMessageJsonConverter),
@@ -10637,6 +10895,8 @@ namespace Portkey
             typeof(global::Portkey.JsonConverters.UsageLimitsPolicyResponseJsonConverter),
 
             typeof(global::Portkey.JsonConverters.RateLimitsPolicyResponseJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentDetailResponseJsonConverter),
 
             typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.ModelCalculateOperation, global::Portkey.ModelValueReference>),
 
@@ -10766,6 +11026,10 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<global::Portkey.PortkeyBatchJobProviderOptionsBedrockOptions, global::Portkey.PortkeyBatchJobProviderOptionsVertexOptions>),
 
+            typeof(global::Portkey.JsonConverters.AllOfJsonConverter<global::Portkey.DeploymentAuthSettingsInput, global::Portkey.UpdateDeploymentRequestAuthSettings>),
+
+            typeof(global::Portkey.JsonConverters.AllOfJsonConverter<global::Portkey.DeploymentAuthSettings, global::Portkey.DeploymentDetailResponseVariant2AuthSettings>),
+
             typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CreateChatCompletionRequest, global::Portkey.CreateCompletionRequest>),
 
             typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CreateChatCompletionRequest, global::Portkey.CreateCompletionRequest>),
@@ -10803,6 +11067,38 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.JWTParameters, global::Portkey.ModelWhitelistParameters, global::Portkey.RegexMatchParameters, global::Portkey.SentenceCountParameters, global::Portkey.WordCountParameters, global::Portkey.CharacterCountParameters, global::Portkey.JSONSchemaParameters, global::Portkey.JSONKeysParameters, global::Portkey.ContainsParameters, global::Portkey.ValidUrlsParameters, global::Portkey.ContainsCodeParameters, global::Portkey.WebhookParameters, global::Portkey.EndsWithParameters, global::Portkey.UppercaseParameters, global::Portkey.RequiredMetadataKeysParameters, global::Portkey.AllowedRequestTypesParameters, global::Portkey.SydeGuardParameters, global::Portkey.AporiaParameters, global::Portkey.PillarScanParameters, global::Portkey.PatronusParameters, global::Portkey.PatronusCustomParameters, global::Portkey.PortkeyModerationParameters, global::Portkey.PortkeyLanguageParameters, global::Portkey.PortkeyPIIParameters, global::Portkey.MistralModerationParameters, global::Portkey.BedrockGuardParameters, global::Portkey.PromptfooParameters, global::Portkey.AcuvityScanParameters, global::Portkey.AzureContentSafetyParameters, global::Portkey.AzurePIIParameters, global::Portkey.PANWPrismaParameters, global::Portkey.BasicParameters>?), TypeInfoPropertyName = "BasicParameters_b9f37200e2abf3e9")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_12be480b1039da9e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObject>>), TypeInfoPropertyName = "RunStepDeltaStepDetailsToolCallsFunctionObject_5640d9ed7ecfcd45")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.CollectionWithDetails>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreatePromptResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreatePromptResponseObject), TypeInfoPropertyName = "CreatePromptResponseObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListPromptsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.PromptSummary>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdatePromptResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.PromptVersionSummary>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreatePromptPartialResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.PromptPartialSummary>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdatePromptPartialResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.PromptPartialVersion>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreatePromptCompletionResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.CreateChatCompletionResponse, global::Portkey.CreateCompletionResponse>), TypeInfoPropertyName = "OneOfCreateChatCompletionResponseCreateCompletionResponse2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.CreateTranscriptionResponseJson, global::Portkey.CreateTranscriptionResponseVerboseJson>), TypeInfoPropertyName = "OneOfCreateTranscriptionResponseJsonCreateTranscriptionResponseVerboseJson2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.CreateTranslationResponseJson, global::Portkey.CreateTranslationResponseVerboseJson>), TypeInfoPropertyName = "OneOfCreateTranslationResponseJsonCreateTranslationResponseVerboseJson2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListConfigsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.ListConfigsResponseDataItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListConfigsResponseDataItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateConfigResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateConfigResponseData))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetConfigResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetConfigResponseData))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetConfigResponseDataConfig))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetConfigResponseDataConfigRetry))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetConfigResponseDataConfigCache))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetConfigResponseDataConfigStrategy))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.GetConfigResponseDataConfigTarget>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetConfigResponseDataConfigTarget))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateConfigResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateConfigResponseData))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListConfigVersionsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.ListConfigVersionsResponseDataItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListConfigVersionsResponseDataItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetIntegrationsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetIntegrationsResponseObject), TypeInfoPropertyName = "GetIntegrationsResponseObject2")]
@@ -10948,6 +11244,9 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.SecretReferenceListItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateSecretReferenceResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateSecretReferenceResponseObject), TypeInfoPropertyName = "CreateSecretReferenceResponseObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListDeploymentsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListDeploymentsResponseObject), TypeInfoPropertyName = "ListDeploymentsResponseObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.DeploymentListItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ModelPricingConfigCurrency?), TypeInfoPropertyName = "NullableModelPricingConfigCurrency2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ModelCalculateOperationOperation?), TypeInfoPropertyName = "NullableModelCalculateOperationOperation2")]
@@ -11251,41 +11550,6 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.MessageContentTextAnnotationsFileCitationObjectType?), TypeInfoPropertyName = "NullableMessageContentTextAnnotationsFileCitationObjectType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.MessageContentTextAnnotationsFilePathObjectType?), TypeInfoPropertyName = "NullableMessageContentTextAnnotationsFilePathObjectType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.MessageDeltaContentTextObjectType?), TypeInfoPropertyName = "NullableMessageDeltaContentTextObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.MessageDeltaContentTextAnnotationsFileCitationObject, global::Portkey.MessageDeltaContentTextAnnotationsFilePathObject>?), TypeInfoPropertyName = "NullableOneOfMessageDeltaContentTextAnnotationsFileCitationObjectMessageDeltaContentTextAnnotationsFilePathObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.MessageDeltaContentTextAnnotationsFileCitationObjectType?), TypeInfoPropertyName = "NullableMessageDeltaContentTextAnnotationsFileCitationObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.MessageDeltaContentTextAnnotationsFilePathObjectType?), TypeInfoPropertyName = "NullableMessageDeltaContentTextAnnotationsFilePathObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepObjectObject?), TypeInfoPropertyName = "NullableRunStepObjectObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepObjectType?), TypeInfoPropertyName = "NullableRunStepObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepObjectStatus?), TypeInfoPropertyName = "NullableRunStepObjectStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.RunStepDetailsMessageCreationObject, global::Portkey.RunStepDetailsToolCallsObject>?), TypeInfoPropertyName = "NullableOneOfRunStepDetailsMessageCreationObjectRunStepDetailsToolCallsObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepObjectLastErrorCode?), TypeInfoPropertyName = "NullableRunStepObjectLastErrorCode2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDeltaObjectObject?), TypeInfoPropertyName = "NullableRunStepDeltaObjectObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsMessageCreationObject, global::Portkey.RunStepDeltaStepDetailsToolCallsObject>?), TypeInfoPropertyName = "NullableOneOfRunStepDeltaStepDetailsMessageCreationObjectRunStepDeltaStepDetailsToolCallsObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDetailsMessageCreationObjectType?), TypeInfoPropertyName = "NullableRunStepDetailsMessageCreationObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDeltaStepDetailsMessageCreationObjectType?), TypeInfoPropertyName = "NullableRunStepDeltaStepDetailsMessageCreationObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDetailsToolCallsObjectType?), TypeInfoPropertyName = "NullableRunStepDetailsToolCallsObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDeltaStepDetailsToolCallsObjectType?), TypeInfoPropertyName = "NullableRunStepDeltaStepDetailsToolCallsObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDetailsToolCallsCodeObjectType?), TypeInfoPropertyName = "NullableRunStepDetailsToolCallsCodeObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.RunStepDetailsToolCallsCodeOutputLogsObject, global::Portkey.RunStepDetailsToolCallsCodeOutputImageObject>?), TypeInfoPropertyName = "NullableOneOfRunStepDetailsToolCallsCodeOutputLogsObjectRunStepDetailsToolCallsCodeOutputImageObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObjectType?), TypeInfoPropertyName = "NullableRunStepDeltaStepDetailsToolCallsCodeObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeOutputLogsObject, global::Portkey.RunStepDeltaStepDetailsToolCallsCodeOutputImageObject>?), TypeInfoPropertyName = "NullableOneOfRunStepDeltaStepDetailsToolCallsCodeOutputLogsObjectRunStepDeltaStepDetailsToolCallsCodeOutputImageObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDetailsToolCallsCodeOutputLogsObjectType?), TypeInfoPropertyName = "NullableRunStepDetailsToolCallsCodeOutputLogsObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDeltaStepDetailsToolCallsCodeOutputLogsObjectType?), TypeInfoPropertyName = "NullableRunStepDeltaStepDetailsToolCallsCodeOutputLogsObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDetailsToolCallsCodeOutputImageObjectType?), TypeInfoPropertyName = "NullableRunStepDetailsToolCallsCodeOutputImageObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDeltaStepDetailsToolCallsCodeOutputImageObjectType?), TypeInfoPropertyName = "NullableRunStepDeltaStepDetailsToolCallsCodeOutputImageObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDetailsToolCallsFileSearchObjectType?), TypeInfoPropertyName = "NullableRunStepDetailsToolCallsFileSearchObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObjectType?), TypeInfoPropertyName = "NullableRunStepDeltaStepDetailsToolCallsFileSearchObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDetailsToolCallsFunctionObjectType?), TypeInfoPropertyName = "NullableRunStepDetailsToolCallsFunctionObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObjectType?), TypeInfoPropertyName = "NullableRunStepDeltaStepDetailsToolCallsFunctionObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.VectorStoreExpirationAfterAnchor?), TypeInfoPropertyName = "NullableVectorStoreExpirationAfterAnchor2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.VectorStoreObjectObject?), TypeInfoPropertyName = "NullableVectorStoreObjectObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.VectorStoreObjectStatus?), TypeInfoPropertyName = "NullableVectorStoreObjectStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.VectorStoreSearchRequestRankingOptionsRanker?), TypeInfoPropertyName = "NullableVectorStoreSearchRequestRankingOptionsRanker2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.VectorStoreSearchResultContentObjectType?), TypeInfoPropertyName = "NullableVectorStoreSearchResultContentObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.VectorStoreSearchResultsPageObject?), TypeInfoPropertyName = "NullableVectorStoreSearchResultsPageObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.VoiceIdsShared?), TypeInfoPropertyName = "NullableVoiceIdsShared2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.VoiceIdsSharedEnum?), TypeInfoPropertyName = "NullableVoiceIdsSharedEnum2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.WaitType?), TypeInfoPropertyName = "NullableWaitType2")]
     internal sealed partial class SourceGenerationContextChunk3 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -13073,6 +13337,54 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.BulkUpdateMcpServerUserAccessDefaultUserAccessNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.CreateDeploymentRequestTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateDeploymentRequestTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentCreateResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentCreateResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemConnectionStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemConnectionStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseOutboundStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseOutboundStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseInboundStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseInboundStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseObjectNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.CreateVirtualKeysRequestProviderJsonConverter),
 
             typeof(global::Portkey.JsonConverters.CreateVirtualKeysRequestProviderNullableJsonConverter),
@@ -13241,6 +13553,14 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.ListSecretReferencesManagerTypeNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.ListDeploymentsStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsTypeNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.CreatePromptResponseObjectJsonConverter),
 
             typeof(global::Portkey.JsonConverters.CreatePromptResponseObjectNullableJsonConverter),
@@ -13369,6 +13689,10 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.CreateSecretReferenceResponseObjectNullableJsonConverter),
 
+            typeof(global::Portkey.JsonConverters.ListDeploymentsResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsResponseObjectNullableJsonConverter),
+
             typeof(global::Portkey.JsonConverters.ChatCompletionRequestMessageContentPartJsonConverter),
 
             typeof(global::Portkey.JsonConverters.ChatCompletionRequestMessageJsonConverter),
@@ -13458,6 +13782,8 @@ namespace Portkey
             typeof(global::Portkey.JsonConverters.UsageLimitsPolicyResponseJsonConverter),
 
             typeof(global::Portkey.JsonConverters.RateLimitsPolicyResponseJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentDetailResponseJsonConverter),
 
             typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.ModelCalculateOperation, global::Portkey.ModelValueReference>),
 
@@ -13587,6 +13913,10 @@ namespace Portkey
 
             typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<global::Portkey.PortkeyBatchJobProviderOptionsBedrockOptions, global::Portkey.PortkeyBatchJobProviderOptionsVertexOptions>),
 
+            typeof(global::Portkey.JsonConverters.AllOfJsonConverter<global::Portkey.DeploymentAuthSettingsInput, global::Portkey.UpdateDeploymentRequestAuthSettings>),
+
+            typeof(global::Portkey.JsonConverters.AllOfJsonConverter<global::Portkey.DeploymentAuthSettings, global::Portkey.DeploymentDetailResponseVariant2AuthSettings>),
+
             typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CreateChatCompletionRequest, global::Portkey.CreateCompletionRequest>),
 
             typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CreateChatCompletionRequest, global::Portkey.CreateCompletionRequest>),
@@ -13624,6 +13954,41 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.JWTParameters, global::Portkey.ModelWhitelistParameters, global::Portkey.RegexMatchParameters, global::Portkey.SentenceCountParameters, global::Portkey.WordCountParameters, global::Portkey.CharacterCountParameters, global::Portkey.JSONSchemaParameters, global::Portkey.JSONKeysParameters, global::Portkey.ContainsParameters, global::Portkey.ValidUrlsParameters, global::Portkey.ContainsCodeParameters, global::Portkey.WebhookParameters, global::Portkey.EndsWithParameters, global::Portkey.UppercaseParameters, global::Portkey.RequiredMetadataKeysParameters, global::Portkey.AllowedRequestTypesParameters, global::Portkey.SydeGuardParameters, global::Portkey.AporiaParameters, global::Portkey.PillarScanParameters, global::Portkey.PatronusParameters, global::Portkey.PatronusCustomParameters, global::Portkey.PortkeyModerationParameters, global::Portkey.PortkeyLanguageParameters, global::Portkey.PortkeyPIIParameters, global::Portkey.MistralModerationParameters, global::Portkey.BedrockGuardParameters, global::Portkey.PromptfooParameters, global::Portkey.AcuvityScanParameters, global::Portkey.AzureContentSafetyParameters, global::Portkey.AzurePIIParameters, global::Portkey.PANWPrismaParameters, global::Portkey.BasicParameters>?), TypeInfoPropertyName = "BasicParameters_b9f37200e2abf3e9")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_12be480b1039da9e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObject>>), TypeInfoPropertyName = "RunStepDeltaStepDetailsToolCallsFunctionObject_5640d9ed7ecfcd45")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.MessageDeltaContentTextAnnotationsFileCitationObject, global::Portkey.MessageDeltaContentTextAnnotationsFilePathObject>?), TypeInfoPropertyName = "NullableOneOfMessageDeltaContentTextAnnotationsFileCitationObjectMessageDeltaContentTextAnnotationsFilePathObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.MessageDeltaContentTextAnnotationsFileCitationObjectType?), TypeInfoPropertyName = "NullableMessageDeltaContentTextAnnotationsFileCitationObjectType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.MessageDeltaContentTextAnnotationsFilePathObjectType?), TypeInfoPropertyName = "NullableMessageDeltaContentTextAnnotationsFilePathObjectType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepObjectObject?), TypeInfoPropertyName = "NullableRunStepObjectObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepObjectType?), TypeInfoPropertyName = "NullableRunStepObjectType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepObjectStatus?), TypeInfoPropertyName = "NullableRunStepObjectStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.RunStepDetailsMessageCreationObject, global::Portkey.RunStepDetailsToolCallsObject>?), TypeInfoPropertyName = "NullableOneOfRunStepDetailsMessageCreationObjectRunStepDetailsToolCallsObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepObjectLastErrorCode?), TypeInfoPropertyName = "NullableRunStepObjectLastErrorCode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDeltaObjectObject?), TypeInfoPropertyName = "NullableRunStepDeltaObjectObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsMessageCreationObject, global::Portkey.RunStepDeltaStepDetailsToolCallsObject>?), TypeInfoPropertyName = "NullableOneOfRunStepDeltaStepDetailsMessageCreationObjectRunStepDeltaStepDetailsToolCallsObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDetailsMessageCreationObjectType?), TypeInfoPropertyName = "NullableRunStepDetailsMessageCreationObjectType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDeltaStepDetailsMessageCreationObjectType?), TypeInfoPropertyName = "NullableRunStepDeltaStepDetailsMessageCreationObjectType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDetailsToolCallsObjectType?), TypeInfoPropertyName = "NullableRunStepDetailsToolCallsObjectType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDeltaStepDetailsToolCallsObjectType?), TypeInfoPropertyName = "NullableRunStepDeltaStepDetailsToolCallsObjectType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDetailsToolCallsCodeObjectType?), TypeInfoPropertyName = "NullableRunStepDetailsToolCallsCodeObjectType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.RunStepDetailsToolCallsCodeOutputLogsObject, global::Portkey.RunStepDetailsToolCallsCodeOutputImageObject>?), TypeInfoPropertyName = "NullableOneOfRunStepDetailsToolCallsCodeOutputLogsObjectRunStepDetailsToolCallsCodeOutputImageObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObjectType?), TypeInfoPropertyName = "NullableRunStepDeltaStepDetailsToolCallsCodeObjectType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeOutputLogsObject, global::Portkey.RunStepDeltaStepDetailsToolCallsCodeOutputImageObject>?), TypeInfoPropertyName = "NullableOneOfRunStepDeltaStepDetailsToolCallsCodeOutputLogsObjectRunStepDeltaStepDetailsToolCallsCodeOutputImageObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDetailsToolCallsCodeOutputLogsObjectType?), TypeInfoPropertyName = "NullableRunStepDetailsToolCallsCodeOutputLogsObjectType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDeltaStepDetailsToolCallsCodeOutputLogsObjectType?), TypeInfoPropertyName = "NullableRunStepDeltaStepDetailsToolCallsCodeOutputLogsObjectType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDetailsToolCallsCodeOutputImageObjectType?), TypeInfoPropertyName = "NullableRunStepDetailsToolCallsCodeOutputImageObjectType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDeltaStepDetailsToolCallsCodeOutputImageObjectType?), TypeInfoPropertyName = "NullableRunStepDeltaStepDetailsToolCallsCodeOutputImageObjectType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDetailsToolCallsFileSearchObjectType?), TypeInfoPropertyName = "NullableRunStepDetailsToolCallsFileSearchObjectType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObjectType?), TypeInfoPropertyName = "NullableRunStepDeltaStepDetailsToolCallsFileSearchObjectType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDetailsToolCallsFunctionObjectType?), TypeInfoPropertyName = "NullableRunStepDetailsToolCallsFunctionObjectType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObjectType?), TypeInfoPropertyName = "NullableRunStepDeltaStepDetailsToolCallsFunctionObjectType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.VectorStoreExpirationAfterAnchor?), TypeInfoPropertyName = "NullableVectorStoreExpirationAfterAnchor2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.VectorStoreObjectObject?), TypeInfoPropertyName = "NullableVectorStoreObjectObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.VectorStoreObjectStatus?), TypeInfoPropertyName = "NullableVectorStoreObjectStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.VectorStoreSearchRequestRankingOptionsRanker?), TypeInfoPropertyName = "NullableVectorStoreSearchRequestRankingOptionsRanker2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.VectorStoreSearchResultContentObjectType?), TypeInfoPropertyName = "NullableVectorStoreSearchResultContentObjectType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.VectorStoreSearchResultsPageObject?), TypeInfoPropertyName = "NullableVectorStoreSearchResultsPageObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.VoiceIdsShared?), TypeInfoPropertyName = "NullableVoiceIdsShared2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.VoiceIdsSharedEnum?), TypeInfoPropertyName = "NullableVoiceIdsSharedEnum2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.WaitType?), TypeInfoPropertyName = "NullableWaitType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.WebSearchContextSize?), TypeInfoPropertyName = "NullableWebSearchContextSize2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.WebSearchToolType?), TypeInfoPropertyName = "NullableWebSearchToolType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AllOf<global::Portkey.WebSearchLocation, global::Portkey.WebSearchToolUserLocation>?), TypeInfoPropertyName = "NullableAllOfWebSearchLocationWebSearchToolUserLocation2")]
@@ -13826,6 +14191,21 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.McpServerUserAccessItemConnectionStatus?), TypeInfoPropertyName = "NullableMcpServerUserAccessItemConnectionStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.McpServerUserAccessListResponseDefaultUserAccess?), TypeInfoPropertyName = "NullableMcpServerUserAccessListResponseDefaultUserAccess2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.BulkUpdateMcpServerUserAccessDefaultUserAccess?), TypeInfoPropertyName = "NullableBulkUpdateMcpServerUserAccessDefaultUserAccess2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateDeploymentRequestType?), TypeInfoPropertyName = "NullableCreateDeploymentRequestType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateDeploymentRequestType?), TypeInfoPropertyName = "NullableUpdateDeploymentRequestType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateDeploymentRequestStatus?), TypeInfoPropertyName = "NullableUpdateDeploymentRequestStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AllOf<global::Portkey.DeploymentAuthSettingsInput, global::Portkey.UpdateDeploymentRequestAuthSettings>?), TypeInfoPropertyName = "NullableAllOfDeploymentAuthSettingsInputUpdateDeploymentRequestAuthSettings2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentCreateResponseObject?), TypeInfoPropertyName = "NullableDeploymentCreateResponseObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentListItemType?), TypeInfoPropertyName = "NullableDeploymentListItemType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentListItemStatus?), TypeInfoPropertyName = "NullableDeploymentListItemStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentListItemConnectionStatus?), TypeInfoPropertyName = "NullableDeploymentListItemConnectionStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentListItemObject?), TypeInfoPropertyName = "NullableDeploymentListItemObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentDetailResponse?), TypeInfoPropertyName = "NullableDeploymentDetailResponse2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AllOf<global::Portkey.DeploymentAuthSettings, global::Portkey.DeploymentDetailResponseVariant2AuthSettings>?), TypeInfoPropertyName = "NullableAllOfDeploymentAuthSettingsDeploymentDetailResponseVariant2AuthSettings2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentPingResponseStatus?), TypeInfoPropertyName = "NullableDeploymentPingResponseStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentPingResponseOutboundStatus?), TypeInfoPropertyName = "NullableDeploymentPingResponseOutboundStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentPingResponseInboundStatus?), TypeInfoPropertyName = "NullableDeploymentPingResponseInboundStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentPingResponseObject?), TypeInfoPropertyName = "NullableDeploymentPingResponseObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AnyOf<global::Portkey.OpenAIFinetuneJob, global::Portkey.BedrockFinetuneJob, global::Portkey.PortkeyFinetuneJob>?), TypeInfoPropertyName = "NullableAnyOfOpenAIFinetuneJobBedrockFinetuneJobPortkeyFinetuneJob2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AnyOf<global::Portkey.OpenAIBatchJob, global::Portkey.BedrockBatchJob, global::Portkey.VertexBatchJob, global::Portkey.PortkeyBatchJob>?), TypeInfoPropertyName = "NullableAnyOfOpenAIBatchJobBedrockBatchJobVertexBatchJobPortkeyBatchJob2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateVirtualKeysRequestProvider?), TypeInfoPropertyName = "NullableCreateVirtualKeysRequestProvider2")]
@@ -13871,6 +14251,8 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListRateLimitsPoliciesUnit?), TypeInfoPropertyName = "NullableListRateLimitsPoliciesUnit2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetRateLimitsPolicyStatus?), TypeInfoPropertyName = "NullableGetRateLimitsPolicyStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListSecretReferencesManagerType?), TypeInfoPropertyName = "NullableListSecretReferencesManagerType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListDeploymentsStatus?), TypeInfoPropertyName = "NullableListDeploymentsStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListDeploymentsType?), TypeInfoPropertyName = "NullableListDeploymentsType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreatePromptResponseObject?), TypeInfoPropertyName = "NullableCreatePromptResponseObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.CreateChatCompletionResponse, global::Portkey.CreateCompletionResponse>?), TypeInfoPropertyName = "NullableOneOfCreateChatCompletionResponseCreateCompletionResponse2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.CreateTranscriptionResponseJson, global::Portkey.CreateTranscriptionResponseVerboseJson>?), TypeInfoPropertyName = "NullableOneOfCreateTranscriptionResponseJsonCreateTranscriptionResponseVerboseJson2")]
@@ -13907,6 +14289,7 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetAnalyticsGroupsMetadataResponseDataItemObject?), TypeInfoPropertyName = "NullableGetAnalyticsGroupsMetadataResponseDataItemObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListSecretReferencesResponseObject?), TypeInfoPropertyName = "NullableListSecretReferencesResponseObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateSecretReferenceResponseObject?), TypeInfoPropertyName = "NullableCreateSecretReferenceResponseObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListDeploymentsResponseObject?), TypeInfoPropertyName = "NullableListDeploymentsResponseObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.ModelCalculateOperation, global::Portkey.ModelValueReference>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.WorkspaceInvite>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
@@ -14042,6 +14425,7 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.McpServerUserAccessItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.BulkUpdateMcpServerUserAccessUserAcces>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.McpServerConnectionItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.DeploymentDetailResponseVariant2Workspace>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.CreateVirtualKeysRequestDeploymentConfigItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.PutVirtualKeysRequestDeploymentConfigItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.CreateAdminWorkspacesUsersRequestUser>))]
@@ -14053,6 +14437,2410 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.PromptPartialSummary>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.PromptPartialVersion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.ListConfigsResponseDataItem>))]
+    internal sealed partial class SourceGenerationContextChunk4 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        Converters = new global::System.Type[]
+        {
+            typeof(global::Portkey.JsonConverters.ModelPricingConfigCurrencyJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ModelPricingConfigCurrencyNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ModelCalculateOperationOperationJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ModelCalculateOperationOperationNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InviteRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InviteRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceInviteRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceInviteRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceInviteTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceInviteTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListModelsResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListModelsResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateCompletionRequestModelJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateCompletionRequestModelNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateCompletionResponseChoiceFinishReasonJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateCompletionResponseChoiceFinishReasonNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateCompletionResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateCompletionResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestMessageContentPartImageTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestMessageContentPartImageTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestMessageContentPartImageImageUrlDetailJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestMessageContentPartImageImageUrlDetailNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestMessageContentPartTextTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestMessageContentPartTextTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionMessageContentPartThinkingTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionMessageContentPartThinkingTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionMessageContentPartRedactedThinkingTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionMessageContentPartRedactedThinkingTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestSystemMessageRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestSystemMessageRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestDeveloperMessageRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestDeveloperMessageRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestUserMessageRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestUserMessageRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestAssistantMessageRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestAssistantMessageRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FileSearchToolTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FileSearchToolTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FileSearchToolRankingOptionsRankerJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FileSearchToolRankingOptionsRankerNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FileSearchToolCallTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FileSearchToolCallTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FileSearchToolCallStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FileSearchToolCallStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FineTuneChatCompletionRequestAssistantMessageRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FineTuneChatCompletionRequestAssistantMessageRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestToolMessageRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestToolMessageRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestFunctionMessageRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestFunctionMessageRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionToolTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionToolTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionToolChoiceOptionEnumJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionToolChoiceOptionEnumNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionNamedToolChoiceTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionNamedToolChoiceTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OutputAudioTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OutputAudioTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OutputItemDiscriminatorTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OutputItemDiscriminatorTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OutputMessageTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OutputMessageTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OutputMessageRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OutputMessageRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OutputMessageStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OutputMessageStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OutputTextTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OutputTextTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionMessageToolCallTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionMessageToolCallTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionMessageToolCallChunkTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionMessageToolCallChunkTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionResponseMessageRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionResponseMessageRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionStreamResponseDeltaRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionStreamResponseDeltaRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateChatCompletionRequestModelJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateChatCompletionRequestModelNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateChatCompletionRequestThinkingTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateChatCompletionRequestThinkingTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateChatCompletionRequestFunctionCallJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateChatCompletionRequestFunctionCallNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateChatCompletionResponseChoiceFinishReasonJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateChatCompletionResponseChoiceFinishReasonNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateChatCompletionResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateChatCompletionResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateChatCompletionFunctionResponseChoiceFinishReasonJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateChatCompletionFunctionResponseChoiceFinishReasonNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateChatCompletionFunctionResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateChatCompletionFunctionResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListPaginatedFineTuningJobsResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListPaginatedFineTuningJobsResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateChatCompletionStreamResponseChoiceFinishReasonJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateChatCompletionStreamResponseChoiceFinishReasonNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateChatCompletionStreamResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateChatCompletionStreamResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageRequestModelJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageRequestModelNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageRequestQualityJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageRequestQualityNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageRequestResponseFormatJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageRequestResponseFormatNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageRequestSizeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageRequestSizeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageRequestStyleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageRequestStyleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.IncludableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.IncludableNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FunctionToolTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FunctionToolTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FunctionToolCallTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FunctionToolCallTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FunctionToolCallStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FunctionToolCallStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FunctionToolCallOutputTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FunctionToolCallOutputTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FunctionToolCallOutputStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FunctionToolCallOutputStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputAudioTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputAudioTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputAudioFormatJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputAudioFormatNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputFileTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputFileTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputImageTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputImageTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputImageDetailJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputImageDetailNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputItemDiscriminatorTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputItemDiscriminatorTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputMessageTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputMessageTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputMessageRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputMessageRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputMessageStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputMessageStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputTextTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputTextTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageEditRequestModelJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageEditRequestModelNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageEditRequestSizeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageEditRequestSizeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageEditRequestResponseFormatJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageEditRequestResponseFormatNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageVariationRequestModelJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageVariationRequestModelNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageVariationRequestResponseFormatJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageVariationRequestResponseFormatNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageVariationRequestSizeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateImageVariationRequestSizeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateModerationRequestModelJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateModerationRequestModelNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListFilesResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListFilesResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateFileRequestPurposeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateFileRequestPurposeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeleteFileResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeleteFileResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OpenAIFinetuneJobMethodTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OpenAIFinetuneJobMethodTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListFineTuningJobEventsResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListFineTuningJobEventsResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListFineTuningJobCheckpointsResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListFineTuningJobCheckpointsResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateEmbeddingRequestModelJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateEmbeddingRequestModelNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateEmbeddingRequestEncodingFormatJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateEmbeddingRequestEncodingFormatNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateEmbeddingResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateEmbeddingResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateRerankResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateRerankResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateTranscriptionRequestModelJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateTranscriptionRequestModelNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateTranscriptionRequestResponseFormatJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateTranscriptionRequestResponseFormatNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateTranscriptionRequestTimestampGranularitieJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateTranscriptionRequestTimestampGranularitieNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateTranslationRequestModelJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateTranslationRequestModelNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateSpeechRequestModelJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateSpeechRequestModelNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateSpeechRequestVoiceJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateSpeechRequestVoiceNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateSpeechRequestResponseFormatJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateSpeechRequestResponseFormatNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ModelObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ModelObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MoveTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MoveTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OpenAIFileObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OpenAIFileObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OpenAIFilePurposeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OpenAIFilePurposeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OpenAIFileStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OpenAIFileStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DoubleClickTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DoubleClickTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DragTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DragTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.EasyInputMessageRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.EasyInputMessageRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.EasyInputMessageTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.EasyInputMessageTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.EmbeddingObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.EmbeddingObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FineTuningJobHyperparametersNEpochsJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FineTuningJobHyperparametersNEpochsNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FineTuningJobObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FineTuningJobObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FineTuningJobStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FineTuningJobStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FineTuningIntegrationTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FineTuningIntegrationTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FineTuningJobEventLevelJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FineTuningJobEventLevelNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FineTuningJobEventObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FineTuningJobEventObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FineTuningJobCheckpointObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FineTuningJobCheckpointObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ClickTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ClickTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ClickButtonJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ClickButtonNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CodeInterpreterFileOutputTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CodeInterpreterFileOutputTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CodeInterpreterTextOutputTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CodeInterpreterTextOutputTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CodeInterpreterToolTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CodeInterpreterToolTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CodeInterpreterToolCallTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CodeInterpreterToolCallTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CodeInterpreterToolCallStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CodeInterpreterToolCallStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ComparisonFilterTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ComparisonFilterTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CompoundFilterTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CompoundFilterTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ComputerScreenshotImageTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ComputerScreenshotImageTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ComputerToolTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ComputerToolTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ComputerToolEnvironmentJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ComputerToolEnvironmentNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ComputerToolCallTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ComputerToolCallTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ComputerToolCallStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ComputerToolCallStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ComputerToolCallOutputTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ComputerToolCallOutputTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ComputerToolCallOutputStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ComputerToolCallOutputStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CostsResultObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CostsResultObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ReasoningGenerateSummaryJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ReasoningGenerateSummaryNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ReasoningEffortJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ReasoningEffortNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ReasoningItemTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ReasoningItemTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ReasoningItemSummaryItemTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ReasoningItemSummaryItemTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ReasoningItemStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ReasoningItemStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RefusalTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RefusalTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseVariant3ObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseVariant3ObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseVariant3StatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseVariant3StatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseVariant3IncompleteDetailsReasonJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseVariant3IncompleteDetailsReasonNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseAudioDeltaEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseAudioDeltaEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseAudioDoneEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseAudioDoneEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseAudioTranscriptDeltaEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseAudioTranscriptDeltaEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseAudioTranscriptDoneEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseAudioTranscriptDoneEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseCodeInterpreterCallCodeDeltaEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseCodeInterpreterCallCodeDeltaEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseCodeInterpreterCallCodeDoneEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseCodeInterpreterCallCodeDoneEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseCodeInterpreterCallCompletedEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseCodeInterpreterCallCompletedEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseCodeInterpreterCallInProgressEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseCodeInterpreterCallInProgressEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseCodeInterpreterCallInterpretingEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseCodeInterpreterCallInterpretingEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseCompletedEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseCompletedEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseContentPartAddedEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseContentPartAddedEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseContentPartDoneEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseContentPartDoneEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseCreatedEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseCreatedEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseErrorCodeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseErrorCodeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseErrorEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseErrorEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseFailedEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseFailedEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseFileSearchCallCompletedEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseFileSearchCallCompletedEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseFileSearchCallInProgressEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseFileSearchCallInProgressEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseFileSearchCallSearchingEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseFileSearchCallSearchingEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseFormatJsonObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseFormatJsonObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseFormatJsonSchemaTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseFormatJsonSchemaTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseFormatTextTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseFormatTextTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseFunctionCallArgumentsDeltaEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseFunctionCallArgumentsDeltaEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseFunctionCallArgumentsDoneEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseFunctionCallArgumentsDoneEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseInProgressEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseInProgressEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseIncompleteEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseIncompleteEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseItemListObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseItemListObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseModalitieJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseModalitieNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseModalitiesTextOnlyItemJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseModalitiesTextOnlyItemNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseOutputItemAddedEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseOutputItemAddedEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseOutputItemDoneEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseOutputItemDoneEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponsePropertiesTruncationJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponsePropertiesTruncationNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseRefusalDeltaEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseRefusalDeltaEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseRefusalDoneEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseRefusalDoneEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseStreamEventDiscriminatorTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseStreamEventDiscriminatorTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseTextAnnotationDeltaEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseTextAnnotationDeltaEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseTextDeltaEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseTextDeltaEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseTextDoneEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseTextDoneEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseWebSearchCallCompletedEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseWebSearchCallCompletedEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseWebSearchCallInProgressEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseWebSearchCallInProgressEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseWebSearchCallSearchingEventTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseWebSearchCallSearchingEventTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantsApiResponseFormatOptionEnumJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantsApiResponseFormatOptionEnumNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantsApiResponseFormatTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantsApiResponseFormatTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantObjectObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantObjectObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateAssistantRequestModelJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateAssistantRequestModelNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateAssistantRequestToolResourcesFileSearchVectorStoreChunkingStrategyAutoChunkingStrategyTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateAssistantRequestToolResourcesFileSearchVectorStoreChunkingStrategyAutoChunkingStrategyTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateAssistantRequestToolResourcesFileSearchVectorStoreChunkingStrategyStaticChunkingStrategyTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateAssistantRequestToolResourcesFileSearchVectorStoreChunkingStrategyStaticChunkingStrategyTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ModelIdsResponsesEnumJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ModelIdsResponsesEnumNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeleteAssistantResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeleteAssistantResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ItemDiscriminatorTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ItemDiscriminatorTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ItemReferenceTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ItemReferenceTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ItemResourceDiscriminatorTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ItemResourceDiscriminatorTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.KeyPressTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.KeyPressTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantToolsCodeTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantToolsCodeTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantToolsFileSearchTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantToolsFileSearchTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantToolsFileSearchTypeOnlyTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantToolsFileSearchTypeOnlyTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantToolsFunctionTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantToolsFunctionTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.TruncationObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.TruncationObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantsApiToolChoiceOptionEnumJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantsApiToolChoiceOptionEnumNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantsNamedToolChoiceTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantsNamedToolChoiceTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunObjectObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunObjectObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunObjectStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunObjectStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunObjectRequiredActionTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunObjectRequiredActionTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunObjectLastErrorCodeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunObjectLastErrorCodeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunObjectIncompleteDetailsReasonJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunObjectIncompleteDetailsReasonNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateRunRequestModelJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateRunRequestModelNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.TextResponseFormatJsonSchemaTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.TextResponseFormatJsonSchemaTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunToolCallObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunToolCallObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ScreenshotTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ScreenshotTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ScrollTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ScrollTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateThreadAndRunRequestModelJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateThreadAndRunRequestModelNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ThreadObjectObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ThreadObjectObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateThreadRequestToolResourcesFileSearchVectorStoreChunkingStrategyAutoChunkingStrategyTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateThreadRequestToolResourcesFileSearchVectorStoreChunkingStrategyAutoChunkingStrategyTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateThreadRequestToolResourcesFileSearchVectorStoreChunkingStrategyStaticChunkingStrategyTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateThreadRequestToolResourcesFileSearchVectorStoreChunkingStrategyStaticChunkingStrategyTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeleteThreadResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeleteThreadResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageObjectObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageObjectObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageObjectStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageObjectStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageObjectIncompleteDetailsReasonJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageObjectIncompleteDetailsReasonNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageObjectRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageObjectRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageDeltaObjectObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageDeltaObjectObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageDeltaObjectDeltaRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageDeltaObjectDeltaRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateMessageRequestRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateMessageRequestRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeleteMessageResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeleteMessageResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageContentImageFileObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageContentImageFileObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageContentImageFileObjectImageFileDetailJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageContentImageFileObjectImageFileDetailNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageDeltaContentImageFileObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageDeltaContentImageFileObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageDeltaContentImageFileObjectImageFileDetailJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageDeltaContentImageFileObjectImageFileDetailNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageContentImageUrlObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageContentImageUrlObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageContentImageUrlObjectImageUrlDetailJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageContentImageUrlObjectImageUrlDetailNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageDeltaContentImageUrlObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageDeltaContentImageUrlObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageDeltaContentImageUrlObjectImageUrlDetailJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageDeltaContentImageUrlObjectImageUrlDetailNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageContentTextObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageContentTextObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageRequestContentTextObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageRequestContentTextObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageContentTextAnnotationsFileCitationObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageContentTextAnnotationsFileCitationObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageContentTextAnnotationsFilePathObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageContentTextAnnotationsFilePathObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageDeltaContentTextObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageDeltaContentTextObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageDeltaContentTextAnnotationsFileCitationObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageDeltaContentTextAnnotationsFileCitationObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageDeltaContentTextAnnotationsFilePathObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageDeltaContentTextAnnotationsFilePathObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepObjectObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepObjectObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepObjectStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepObjectStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepObjectLastErrorCodeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepObjectLastErrorCodeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDeltaObjectObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDeltaObjectObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDetailsMessageCreationObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDetailsMessageCreationObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDeltaStepDetailsMessageCreationObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDeltaStepDetailsMessageCreationObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDetailsToolCallsObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDetailsToolCallsObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDeltaStepDetailsToolCallsObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDeltaStepDetailsToolCallsObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDetailsToolCallsCodeObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDetailsToolCallsCodeObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDeltaStepDetailsToolCallsCodeObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDeltaStepDetailsToolCallsCodeObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDetailsToolCallsCodeOutputLogsObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDetailsToolCallsCodeOutputLogsObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDeltaStepDetailsToolCallsCodeOutputLogsObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDeltaStepDetailsToolCallsCodeOutputLogsObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDetailsToolCallsCodeOutputImageObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDetailsToolCallsCodeOutputImageObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDeltaStepDetailsToolCallsCodeOutputImageObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDeltaStepDetailsToolCallsCodeOutputImageObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDetailsToolCallsFileSearchObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDetailsToolCallsFileSearchObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDeltaStepDetailsToolCallsFileSearchObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDeltaStepDetailsToolCallsFileSearchObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDetailsToolCallsFunctionObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDetailsToolCallsFunctionObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDeltaStepDetailsToolCallsFunctionObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepDeltaStepDetailsToolCallsFunctionObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreExpirationAfterAnchorJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreExpirationAfterAnchorNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreObjectObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreObjectObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreObjectStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreObjectStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreSearchRequestRankingOptionsRankerJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreSearchRequestRankingOptionsRankerNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreSearchResultContentObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreSearchResultContentObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreSearchResultsPageObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreSearchResultsPageObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VoiceIdsSharedEnumJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VoiceIdsSharedEnumNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WaitTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WaitTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WebSearchContextSizeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WebSearchContextSizeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WebSearchToolTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WebSearchToolTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WebSearchToolUserLocationTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WebSearchToolUserLocationTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WebSearchToolCallTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WebSearchToolCallTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WebSearchToolCallStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WebSearchToolCallStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.TypeType1JsonConverter),
+
+            typeof(global::Portkey.JsonConverters.TypeType1NullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UrlCitationTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UrlCitationTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeleteVectorStoreResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeleteVectorStoreResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreFileObjectObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreFileObjectObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreFileObjectStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreFileObjectStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreFileObjectLastErrorCodeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreFileObjectLastErrorCodeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OtherChunkingStrategyResponseParamTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OtherChunkingStrategyResponseParamTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.StaticChunkingStrategyResponseParamTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.StaticChunkingStrategyResponseParamTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AutoChunkingStrategyRequestParamTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AutoChunkingStrategyRequestParamTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.StaticChunkingStrategyRequestParamTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.StaticChunkingStrategyRequestParamTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeleteVectorStoreFileResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeleteVectorStoreFileResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreFileBatchObjectObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreFileBatchObjectObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreFileBatchObjectStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VectorStoreFileBatchObjectStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ThreadStreamEventVariant1EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ThreadStreamEventVariant1EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ToolChoiceFunctionTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ToolChoiceFunctionTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ToolChoiceOptionsJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ToolChoiceOptionsNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ToolChoiceTypesTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ToolChoiceTypesTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant1EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant1EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant2EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant2EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant3EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant3EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant4EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant4EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant5EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant5EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant6EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant6EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant7EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant7EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant8EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant8EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant9EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant9EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant10EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventVariant10EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepStreamEventVariant1EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepStreamEventVariant1EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepStreamEventVariant2EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepStreamEventVariant2EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepStreamEventVariant3EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepStreamEventVariant3EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepStreamEventVariant4EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepStreamEventVariant4EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepStreamEventVariant5EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepStreamEventVariant5EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepStreamEventVariant6EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepStreamEventVariant6EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepStreamEventVariant7EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepStreamEventVariant7EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageStreamEventVariant1EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageStreamEventVariant1EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageStreamEventVariant2EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageStreamEventVariant2EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageStreamEventVariant3EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageStreamEventVariant3EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageStreamEventVariant4EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageStreamEventVariant4EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageStreamEventVariant5EventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageStreamEventVariant5EventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ErrorEventEventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ErrorEventEventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FileCitationTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FileCitationTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FilePathTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FilePathTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DoneEventEventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DoneEventEventNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DoneEventDataJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DoneEventDataNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.BatchObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.BatchObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.BatchStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.BatchStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.BatchRequestInputMethodJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.BatchRequestInputMethodNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListBatchesResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListBatchesResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RateLimitsTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RateLimitsTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RateLimitsUnitJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RateLimitsUnitNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UsageLimitsTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UsageLimitsTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UsageLimitsPeriodicResetJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UsageLimitsPeriodicResetNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AzureOpenAIConfigurationAzureAuthModeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AzureOpenAIConfigurationAzureAuthModeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.BedrockConfigurationAwsAuthTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.BedrockConfigurationAwsAuthTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VertexAIConfigurationVertexAuthTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VertexAIConfigurationVertexAuthTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AzureAIConfigurationAzureAuthModeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AzureAIConfigurationAzureAuthModeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.SecretMappingValueFormatJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.SecretMappingValueFormatNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateSecretReferenceRequestManagerTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateSecretReferenceRequestManagerTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateSecretReferenceRequestAuthConfigDiscriminatorAwsAuthTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateSecretReferenceRequestAuthConfigDiscriminatorAwsAuthTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.SecretReferenceListItemManagerTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.SecretReferenceListItemManagerTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.SecretReferenceListItemStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.SecretReferenceListItemStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.SecretReferenceListItemObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.SecretReferenceListItemObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.SecretReferenceDetailResponseManagerTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.SecretReferenceDetailResponseManagerTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.SecretReferenceDetailResponseStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.SecretReferenceDetailResponseStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.SecretReferenceDetailResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.SecretReferenceDetailResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AwsAccessKeyAuthConfigAwsAuthTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AwsAccessKeyAuthConfigAwsAuthTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AwsAssumedRoleAuthConfigAwsAuthTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AwsAssumedRoleAuthConfigAwsAuthTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AwsServiceRoleAuthConfigAwsAuthTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AwsServiceRoleAuthConfigAwsAuthTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AzureEntraAuthConfigAzureAuthModeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AzureEntraAuthConfigAzureAuthModeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AzureManagedAuthConfigAzureAuthModeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AzureManagedAuthConfigAzureAuthModeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AzureDefaultAuthConfigAzureAuthModeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AzureDefaultAuthConfigAzureAuthModeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.HashicorpTokenAuthConfigVaultAuthTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.HashicorpTokenAuthConfigVaultAuthTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.HashicorpAppRoleAuthConfigVaultAuthTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.HashicorpAppRoleAuthConfigVaultAuthTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.HashicorpKubernetesAuthConfigVaultAuthTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.HashicorpKubernetesAuthConfigVaultAuthTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.IntegrationListStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.IntegrationListStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.IntegrationListObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.IntegrationListObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PricingConfigTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PricingConfigTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ProvidersStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ProvidersStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ProvidersObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ProvidersObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VirtualKeysStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VirtualKeysStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VirtualKeysObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VirtualKeysObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InviteRole2JsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InviteRole2NullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InviteStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InviteStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InviteListObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InviteListObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UserObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UserObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UserRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UserRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UserListObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UserListObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceMemberObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceMemberObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceMemberOrgRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceMemberOrgRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceMemberRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceMemberRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceMemberStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceMemberStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceMemberListObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceMemberListObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceDefaultsObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceDefaultsObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceListObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceListObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceWithUsersDefaultsObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.WorkspaceWithUsersDefaultsObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ScimWorkspaceMappingRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ScimWorkspaceMappingRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CollectionStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CollectionStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PromptSummaryObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PromptSummaryObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PromptPromptVersionStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PromptPromptVersionStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PromptVersionSummaryStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PromptVersionSummaryStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PromptVersionSummaryObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PromptVersionSummaryObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PromptPartialSummaryStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PromptPartialSummaryStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PromptPartialSummaryObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PromptPartialSummaryObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PromptPartialStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PromptPartialStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PromptPartialVersionPromptVersionStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PromptPartialVersionPromptVersionStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PromptPartialVersionObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PromptPartialVersionObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ExportListResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ExportListResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ExportItemStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ExportItemStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ExportItemObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ExportItemObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateExportResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateExportResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ExportTaskResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ExportTaskResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.LogRequestMethodJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.LogRequestMethodNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.LogExportsRequestedDataItemJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.LogExportsRequestedDataItemNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AuditLogObjectListRecordMethodJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AuditLogObjectListRecordMethodNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AuditLogObjectListRecordUserTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AuditLogObjectListRecordUserTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AuditLogObjectListObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AuditLogObjectListObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ApiKeyObjectTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ApiKeyObjectTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ApiKeyObjectStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ApiKeyObjectStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ApiKeyObjectCreationModeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ApiKeyObjectCreationModeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ApiKeyObjectObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ApiKeyObjectObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ApiKeyObjectListObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ApiKeyObjectListObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateApiKeyObjectRateLimitTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateApiKeyObjectRateLimitTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateApiKeyObjectRateLimitUnitJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateApiKeyObjectRateLimitUnitNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateApiKeyObjectRotationPolicyRotationPeriodJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateApiKeyObjectRotationPolicyRotationPeriodNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateApiKeyObjectRateLimitTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateApiKeyObjectRateLimitTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateApiKeyObjectRateLimitUnitJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateApiKeyObjectRateLimitUnitNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateApiKeyObjectRotationPolicyRotationPeriodJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateApiKeyObjectRotationPolicyRotationPeriodNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GuardrailCheckIdJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GuardrailCheckIdNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GuardrailSummaryStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GuardrailSummaryStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.JSONKeysParametersOperatorJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.JSONKeysParametersOperatorNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ContainsParametersOperatorJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ContainsParametersOperatorNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ContainsCodeParametersFormatJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ContainsCodeParametersFormatNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RequiredMetadataKeysParametersOperatorJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RequiredMetadataKeysParametersOperatorNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AllowedRequestTypesParametersAllowedTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AllowedRequestTypesParametersAllowedTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AllowedRequestTypesParametersBlockedTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AllowedRequestTypesParametersBlockedTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PillarScanParametersScannerJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PillarScanParametersScannerNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PortkeyModerationParametersCategorieJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PortkeyModerationParametersCategorieNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PortkeyLanguageParametersLanguageJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PortkeyLanguageParametersLanguageNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PortkeyPIIParametersCategorieJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PortkeyPIIParametersCategorieNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MistralModerationParametersCategorieJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MistralModerationParametersCategorieNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AcuvityScanParametersLanguageValuesJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AcuvityScanParametersLanguageValuesNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AcuvityScanParametersPiiCategorieJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AcuvityScanParametersPiiCategorieNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AcuvityScanParametersSecretsCategorieJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AcuvityScanParametersSecretsCategorieNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AzureContentSafetyParametersCategorieJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AzureContentSafetyParametersCategorieNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AzurePIIParametersDomainJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AzurePIIParametersDomainNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OpenAIBatchJobCompletionWindowJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OpenAIBatchJobCompletionWindowNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OpenAIBatchJobEndpointJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OpenAIBatchJobEndpointNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateUsageLimitsPolicyRequestTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateUsageLimitsPolicyRequestTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateUsageLimitsPolicyRequestPeriodicResetJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateUsageLimitsPolicyRequestPeriodicResetNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateUsageLimitsPolicyRequestPeriodicResetJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateUsageLimitsPolicyRequestPeriodicResetNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateRateLimitsPolicyRequestTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateRateLimitsPolicyRequestTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateRateLimitsPolicyRequestUnitJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateRateLimitsPolicyRequestUnitNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateRateLimitsPolicyRequestUnitJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateRateLimitsPolicyRequestUnitNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UsageLimitsPolicyTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UsageLimitsPolicyTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UsageLimitsPolicyPeriodicResetJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UsageLimitsPolicyPeriodicResetNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UsageLimitsPolicyStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UsageLimitsPolicyStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ValueKeyUsageStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ValueKeyUsageStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RateLimitsPolicyTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RateLimitsPolicyTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RateLimitsPolicyUnitJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RateLimitsPolicyUnitNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RateLimitsPolicyStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RateLimitsPolicyStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateMcpIntegrationAuthTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateMcpIntegrationAuthTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateMcpIntegrationTransportJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateMcpIntegrationTransportNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpIntegrationAuthTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpIntegrationAuthTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpIntegrationTransportJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpIntegrationTransportNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpIntegrationTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpIntegrationTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpIntegrationListItemTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpIntegrationListItemTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpIntegrationListItemAuthTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpIntegrationListItemAuthTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpIntegrationListItemTransportJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpIntegrationListItemTransportNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateMcpIntegrationAuthTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateMcpIntegrationAuthTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateMcpIntegrationTransportJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateMcpIntegrationTransportNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpIntegrationCapabilityItemTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpIntegrationCapabilityItemTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.BulkUpdateMcpIntegrationCapabilitiesCapabilitieTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.BulkUpdateMcpIntegrationCapabilitiesCapabilitieTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpServerCapabilityItemTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpServerCapabilityItemTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.BulkUpdateMcpServerCapabilitiesCapabilitieTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.BulkUpdateMcpServerCapabilitiesCapabilitieTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpServerUserAccessItemConnectionStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpServerUserAccessItemConnectionStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpServerUserAccessListResponseDefaultUserAccessJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpServerUserAccessListResponseDefaultUserAccessNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.BulkUpdateMcpServerUserAccessDefaultUserAccessJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.BulkUpdateMcpServerUserAccessDefaultUserAccessNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateDeploymentRequestTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateDeploymentRequestTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UpdateDeploymentRequestStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentCreateResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentCreateResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemConnectionStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemConnectionStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentListItemObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseOutboundStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseOutboundStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseInboundStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseInboundStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentPingResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateVirtualKeysRequestProviderJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateVirtualKeysRequestProviderNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PutAdminUsersRequestRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PutAdminUsersRequestRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateAdminWorkspacesUsersRequestUserRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateAdminWorkspacesUsersRequestUserRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PutAdminWorkspacesUsersRequestRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.PutAdminWorkspacesUsersRequestRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateScimWorkspacesRequestRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateScimWorkspacesRequestRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListModelsSortJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListModelsSortNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListModelsOrderJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListModelsOrderNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListAssistantsOrderJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListAssistantsOrderNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListInputItemsOrderJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListInputItemsOrderNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListMessagesOrderJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListMessagesOrderNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListRunsOrderJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListRunsOrderNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListRunStepsOrderJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListRunStepsOrderNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListVectorStoresOrderJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListVectorStoresOrderNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListVectorStoreFilesOrderJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListVectorStoreFilesOrderNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListVectorStoreFilesFilterJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListVectorStoreFilesFilterNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListFilesInVectorStoreBatchOrderJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListFilesInVectorStoreBatchOrderNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListFilesInVectorStoreBatchFilterJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListFilesInVectorStoreBatchFilterNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetIntegrationsTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetIntegrationsTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAdminUsersInvitesRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAdminUsersInvitesRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAdminUsersInvitesStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAdminUsersInvitesStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAdminUsersRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAdminUsersRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAdminWorkspacesUsersRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAdminWorkspacesUsersRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAdminWorkspacesStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAdminWorkspacesStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetScimWorkspacesRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetScimWorkspacesRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpIntegrationsListTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpIntegrationsListTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpIntegrationCapabilitiesListTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpIntegrationCapabilitiesListTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpServerCapabilitiesListTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.McpServerCapabilitiesListTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetLogsPathFormatJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetLogsPathFormatNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetLogsTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetLogsTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAuditLogsMethodJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAuditLogsMethodNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAuditLogsUserTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAuditLogsUserTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateKeysTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateKeysTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateKeysSubTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateKeysSubTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListUsageLimitsPoliciesStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListUsageLimitsPoliciesStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListUsageLimitsPoliciesTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListUsageLimitsPoliciesTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetUsageLimitsPolicyStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetUsageLimitsPolicyStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListUsageLimitsPolicyEntitiesStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListUsageLimitsPolicyEntitiesStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListRateLimitsPoliciesStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListRateLimitsPoliciesStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListRateLimitsPoliciesTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListRateLimitsPoliciesTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListRateLimitsPoliciesUnitJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListRateLimitsPoliciesUnitNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetRateLimitsPolicyStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetRateLimitsPolicyStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListSecretReferencesManagerTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListSecretReferencesManagerTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsStatusJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsStatusNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsTypeJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsTypeNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreatePromptResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreatePromptResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetIntegrationsResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetIntegrationsResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetProvidersResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetProvidersResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetVirtualKeysResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetVirtualKeysResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetScimWorkspacesResponseMappingRoleJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetScimWorkspacesResponseMappingRoleNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateKeysResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateKeysResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsRequestsResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsRequestsResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsCostResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsCostResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsLatencyResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsLatencyResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsTokensResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsTokensResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsUsersResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsUsersResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsUsersRequestsResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsUsersRequestsResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsErrorsResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsErrorsResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsErrorsRateResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsErrorsRateResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsErrorsStacksResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsErrorsStacksResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsErrorsStatusCodesResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsErrorsStatusCodesResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsRequestsRescuedResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsRequestsRescuedResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsCacheHitRateResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsCacheHitRateResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsCacheLatencyResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsCacheLatencyResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsFeedbacksResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsFeedbacksResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsFeedbacksScoresResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsFeedbacksScoresResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsFeedbacksWeightedResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsFeedbacksWeightedResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsFeedbacksAiModelsResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGraphsFeedbacksAiModelsResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsSummaryCacheResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsSummaryCacheResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGroupsUsersResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGroupsUsersResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGroupsUsersResponseDataItemObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGroupsUsersResponseDataItemObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGroupsAiModelsResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGroupsAiModelsResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGroupsAiModelsResponseDataItemObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGroupsAiModelsResponseDataItemObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGroupsMetadataResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGroupsMetadataResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGroupsMetadataResponseDataItemObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GetAnalyticsGroupsMetadataResponseDataItemObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListSecretReferencesResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListSecretReferencesResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateSecretReferenceResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateSecretReferenceResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsResponseObjectJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ListDeploymentsResponseObjectNullableJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestMessageContentPartJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionRequestMessageJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FineTuneChatCompletionRequestFunctionMessageJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionToolChoiceOptionJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OutputContentJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OutputItemJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChatCompletionMessageContentBlockJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FunctionToolCallOutputResourceJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.FunctionToolCallResourceJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputContentJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputItemJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.InputMessageResourceJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateModelResponsePropertiesJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CreateResponseJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VertexFinetuneJobJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RerankDocumentJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CodeInterpreterToolOutputJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ComputerActionJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ComputerToolCallOutputResourceJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.Content3JsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ResponseStreamEventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantsApiResponseFormatOptionJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AnnotationJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ModelIdsResponsesJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ItemJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ItemResourceJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantsApiToolChoiceOptionJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.TextResponseFormatConfigurationJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.VoiceIdsSharedJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ChunkingStrategyRequestParamJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AssistantStreamEventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ThreadStreamEventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.ToolJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStreamEventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RunStepStreamEventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.MessageStreamEventJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.IntegrationDetailResponseJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.SageMakerConfigurationJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.AuthConfigJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CollectionWithDetailsJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.CollectionWithChildCollectionsJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.GuardrailDetailsJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.UsageLimitsPolicyResponseJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.RateLimitsPolicyResponseJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.DeploymentDetailResponseJsonConverter),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.ModelCalculateOperation, global::Portkey.ModelValueReference>),
+
+            typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<string, global::Portkey.CreateCompletionRequestModel?>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>, global::System.Collections.Generic.IList<int>, global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<global::Portkey.ChatCompletionRequestMessageContentPart>>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.ComparisonFilter, global::Portkey.CompoundFilter>),
+
+            typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<string, global::Portkey.CreateChatCompletionRequestModel?>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.ResponseFormatText, global::Portkey.ResponseFormatJsonSchema, global::Portkey.ResponseFormatJsonObject>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CreateChatCompletionRequestFunctionCall?, global::Portkey.ChatCompletionFunctionCallOption>),
+
+            typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<string, global::Portkey.CreateImageRequestModel?>),
+
+            typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<string, global::Portkey.CreateImageEditRequestModel?>),
+
+            typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<string, global::Portkey.CreateImageVariationRequestModel?>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<string, global::Portkey.CreateModerationRequestModel?>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<global::Portkey.InputItem>>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>, global::System.Collections.Generic.IList<int>, global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>>),
+
+            typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<string, global::Portkey.CreateEmbeddingRequestModel?>),
+
+            typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<string, global::Portkey.CreateTranscriptionRequestModel?>),
+
+            typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<string, global::Portkey.CreateTranslationRequestModel?>),
+
+            typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<string, global::Portkey.CreateSpeechRequestModel?>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<global::Portkey.InputContent>>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.FineTuningJobHyperparametersNEpochs?, int?>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<string, double?, bool?>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.ComparisonFilter, object>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.ToolChoiceOptions?, global::Portkey.ToolChoiceTypes, global::Portkey.ToolChoiceFunction>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.AssistantToolsCode, global::Portkey.AssistantToolsFileSearch, global::Portkey.AssistantToolsFunction>),
+
+            typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<string, global::Portkey.CreateAssistantRequestModel?>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.AssistantToolsCode, global::Portkey.AssistantToolsFileSearch, global::Portkey.AssistantToolsFunction>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CreateAssistantRequestToolResourcesFileSearchVectorStoreChunkingStrategyAutoChunkingStrategy, global::Portkey.CreateAssistantRequestToolResourcesFileSearchVectorStoreChunkingStrategyStaticChunkingStrategy>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.AssistantToolsCode, global::Portkey.AssistantToolsFileSearch, global::Portkey.AssistantToolsFunction>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.AssistantToolsCode, global::Portkey.AssistantToolsFileSearch, global::Portkey.AssistantToolsFunction>),
+
+            typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<string, global::Portkey.CreateRunRequestModel?>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.AssistantToolsCode, global::Portkey.AssistantToolsFileSearch, global::Portkey.AssistantToolsFunction>),
+
+            typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<string, global::Portkey.CreateThreadAndRunRequestModel?>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.AssistantToolsCode, global::Portkey.AssistantToolsFileSearch, global::Portkey.AssistantToolsFunction>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CreateThreadRequestToolResourcesFileSearchVectorStoreChunkingStrategyAutoChunkingStrategy, global::Portkey.CreateThreadRequestToolResourcesFileSearchVectorStoreChunkingStrategyStaticChunkingStrategy>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.MessageContentImageFileObject, global::Portkey.MessageContentImageUrlObject, global::Portkey.MessageContentTextObject>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.AssistantToolsCode, global::Portkey.AssistantToolsFileSearchTypeOnly>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.MessageDeltaContentImageFileObject, global::Portkey.MessageDeltaContentTextObject, global::Portkey.MessageDeltaContentImageUrlObject>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<global::Portkey.OneOf<global::Portkey.MessageContentImageFileObject, global::Portkey.MessageContentImageUrlObject, global::Portkey.MessageRequestContentTextObject>>>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.MessageContentImageFileObject, global::Portkey.MessageContentImageUrlObject, global::Portkey.MessageRequestContentTextObject>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.AssistantToolsCode, global::Portkey.AssistantToolsFileSearchTypeOnly>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.MessageContentTextAnnotationsFileCitationObject, global::Portkey.MessageContentTextAnnotationsFilePathObject>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.MessageDeltaContentTextAnnotationsFileCitationObject, global::Portkey.MessageDeltaContentTextAnnotationsFilePathObject>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.RunStepDetailsMessageCreationObject, global::Portkey.RunStepDetailsToolCallsObject>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.RunStepDeltaStepDetailsMessageCreationObject, global::Portkey.RunStepDeltaStepDetailsToolCallsObject>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.RunStepDetailsToolCallsCodeObject, global::Portkey.RunStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDetailsToolCallsFunctionObject>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObject>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.RunStepDetailsToolCallsCodeOutputLogsObject, global::Portkey.RunStepDetailsToolCallsCodeOutputImageObject>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeOutputLogsObject, global::Portkey.RunStepDeltaStepDetailsToolCallsCodeOutputImageObject>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.ComparisonFilter, global::Portkey.CompoundFilter>),
+
+            typeof(global::Portkey.JsonConverters.AllOfJsonConverter<global::Portkey.WebSearchLocation, global::Portkey.WebSearchToolUserLocation>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.AutoChunkingStrategyRequestParam, global::Portkey.StaticChunkingStrategyRequestParam>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.StaticChunkingStrategyResponseParam, global::Portkey.OtherChunkingStrategyResponseParam>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<string, double?, bool?>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.OpenAIConfiguration, global::Portkey.AzureOpenAIConfiguration, global::Portkey.BedrockConfiguration, global::Portkey.VertexAIConfiguration, global::Portkey.AzureAIConfiguration, global::Portkey.WorkersAIConfiguration, global::Portkey.SageMakerConfiguration?, global::Portkey.HuggingFaceConfiguration, global::Portkey.CortexConfiguration, global::Portkey.CustomHostConfiguration>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.OpenAIConfiguration, global::Portkey.AzureOpenAIConfiguration, global::Portkey.BedrockConfiguration, global::Portkey.VertexAIConfiguration, global::Portkey.AzureAIConfiguration, global::Portkey.WorkersAIConfiguration, global::Portkey.SageMakerConfiguration?, global::Portkey.HuggingFaceConfiguration, global::Portkey.CortexConfiguration, global::Portkey.CustomHostConfiguration>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.OpenAIConfiguration, global::Portkey.AzureOpenAIConfiguration, global::Portkey.BedrockConfiguration, global::Portkey.VertexAIConfiguration, global::Portkey.AzureAIConfiguration, global::Portkey.WorkersAIConfiguration, global::Portkey.SageMakerConfiguration?, global::Portkey.HuggingFaceConfiguration, global::Portkey.CortexConfiguration, global::Portkey.CustomHostConfiguration>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CreateChatCompletionRequest, global::Portkey.CreateCompletionRequest>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.JWTParameters, global::Portkey.ModelWhitelistParameters, global::Portkey.RegexMatchParameters, global::Portkey.SentenceCountParameters, global::Portkey.WordCountParameters, global::Portkey.CharacterCountParameters, global::Portkey.JSONSchemaParameters, global::Portkey.JSONKeysParameters, global::Portkey.ContainsParameters, global::Portkey.ValidUrlsParameters, global::Portkey.ContainsCodeParameters, global::Portkey.WebhookParameters, global::Portkey.EndsWithParameters, global::Portkey.UppercaseParameters, global::Portkey.RequiredMetadataKeysParameters, global::Portkey.AllowedRequestTypesParameters, global::Portkey.SydeGuardParameters, global::Portkey.AporiaParameters, global::Portkey.PillarScanParameters, global::Portkey.PatronusParameters, global::Portkey.PatronusCustomParameters, global::Portkey.PortkeyModerationParameters, global::Portkey.PortkeyLanguageParameters, global::Portkey.PortkeyPIIParameters, global::Portkey.MistralModerationParameters, global::Portkey.BedrockGuardParameters, global::Portkey.PromptfooParameters, global::Portkey.AcuvityScanParameters, global::Portkey.AzureContentSafetyParameters, global::Portkey.AzurePIIParameters, global::Portkey.PANWPrismaParameters, global::Portkey.BasicParameters>),
+
+            typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<global::Portkey.PortkeyBatchJobProviderOptionsBedrockOptions, global::Portkey.PortkeyBatchJobProviderOptionsVertexOptions>),
+
+            typeof(global::Portkey.JsonConverters.AllOfJsonConverter<global::Portkey.DeploymentAuthSettingsInput, global::Portkey.UpdateDeploymentRequestAuthSettings>),
+
+            typeof(global::Portkey.JsonConverters.AllOfJsonConverter<global::Portkey.DeploymentAuthSettings, global::Portkey.DeploymentDetailResponseVariant2AuthSettings>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CreateChatCompletionRequest, global::Portkey.CreateCompletionRequest>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CreateChatCompletionRequest, global::Portkey.CreateCompletionRequest>),
+
+            typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<global::Portkey.OpenAIFinetuneJob, global::Portkey.BedrockFinetuneJob, global::Portkey.PortkeyFinetuneJob>),
+
+            typeof(global::Portkey.JsonConverters.AnyOfJsonConverter<global::Portkey.OpenAIBatchJob, global::Portkey.BedrockBatchJob, global::Portkey.VertexBatchJob, global::Portkey.PortkeyBatchJob>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CustomLog, global::System.Collections.Generic.IList<global::Portkey.CustomLog>>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CreateChatCompletionResponse, global::Portkey.CreateCompletionResponse>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CreateTranscriptionResponseJson, global::Portkey.CreateTranscriptionResponseVerboseJson>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CreateTranslationResponseJson, global::Portkey.CreateTranslationResponseVerboseJson>),
+
+            typeof(global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.McpIntegrationWorkspacesListResponse, global::Portkey.McpIntegrationWorkspacesLegacyResponse>),
+
+            typeof(global::Portkey.JsonConverters.UnixTimestampJsonConverter),
+        })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_8bdfb68d714d7b89")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_e3b878686b59ca1a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.CreateAssistantRequestToolResourcesFileSearchVectorStoreChunkingStrategyAutoChunkingStrategy, global::Portkey.CreateAssistantRequestToolResourcesFileSearchVectorStoreChunkingStrategyStaticChunkingStrategy>), TypeInfoPropertyName = "CreateAssistantRequestToolResourcesFileSearchVectorStoreChunkingStrategyStaticChunkingStrategy_0ffeca8e0fd10c1e")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.CreateThreadRequestToolResourcesFileSearchVectorStoreChunkingStrategyAutoChunkingStrategy, global::Portkey.CreateThreadRequestToolResourcesFileSearchVectorStoreChunkingStrategyStaticChunkingStrategy>), TypeInfoPropertyName = "CreateThreadRequestToolResourcesFileSearchVectorStoreChunkingStrategyStaticChunkingStrategy_fc9fff4902f1d3b1")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObject>>), TypeInfoPropertyName = "RunStepDeltaStepDetailsToolCallsFunctionObject_95e54e44510b0009")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObject>), TypeInfoPropertyName = "RunStepDeltaStepDetailsToolCallsFunctionObject_d5b932e79734fe15")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.OpenAIConfiguration, global::Portkey.AzureOpenAIConfiguration, global::Portkey.BedrockConfiguration, global::Portkey.VertexAIConfiguration, global::Portkey.AzureAIConfiguration, global::Portkey.WorkersAIConfiguration, global::Portkey.SageMakerConfiguration?, global::Portkey.HuggingFaceConfiguration, global::Portkey.CortexConfiguration, global::Portkey.CustomHostConfiguration>), TypeInfoPropertyName = "CustomHostConfiguration_746b999d3264bfec")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.JWTParameters, global::Portkey.ModelWhitelistParameters, global::Portkey.RegexMatchParameters, global::Portkey.SentenceCountParameters, global::Portkey.WordCountParameters, global::Portkey.CharacterCountParameters, global::Portkey.JSONSchemaParameters, global::Portkey.JSONKeysParameters, global::Portkey.ContainsParameters, global::Portkey.ValidUrlsParameters, global::Portkey.ContainsCodeParameters, global::Portkey.WebhookParameters, global::Portkey.EndsWithParameters, global::Portkey.UppercaseParameters, global::Portkey.RequiredMetadataKeysParameters, global::Portkey.AllowedRequestTypesParameters, global::Portkey.SydeGuardParameters, global::Portkey.AporiaParameters, global::Portkey.PillarScanParameters, global::Portkey.PatronusParameters, global::Portkey.PatronusCustomParameters, global::Portkey.PortkeyModerationParameters, global::Portkey.PortkeyLanguageParameters, global::Portkey.PortkeyPIIParameters, global::Portkey.MistralModerationParameters, global::Portkey.BedrockGuardParameters, global::Portkey.PromptfooParameters, global::Portkey.AcuvityScanParameters, global::Portkey.AzureContentSafetyParameters, global::Portkey.AzurePIIParameters, global::Portkey.PANWPrismaParameters, global::Portkey.BasicParameters>), TypeInfoPropertyName = "BasicParameters_7d207863ae46619e")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>?), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_2c63885c957eec9f")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.CreateAssistantRequestToolResourcesFileSearchVectorStoreChunkingStrategyAutoChunkingStrategy, global::Portkey.CreateAssistantRequestToolResourcesFileSearchVectorStoreChunkingStrategyStaticChunkingStrategy>?), TypeInfoPropertyName = "CreateAssistantRequestToolResourcesFileSearchVectorStoreChunkingStrategyStaticChunkingStrategy_88d857ee171edc8e")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.CreateThreadRequestToolResourcesFileSearchVectorStoreChunkingStrategyAutoChunkingStrategy, global::Portkey.CreateThreadRequestToolResourcesFileSearchVectorStoreChunkingStrategyStaticChunkingStrategy>?), TypeInfoPropertyName = "CreateThreadRequestToolResourcesFileSearchVectorStoreChunkingStrategyStaticChunkingStrategy_4cfbf8c2a0aac51c")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.RunStepDetailsToolCallsCodeObject, global::Portkey.RunStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDetailsToolCallsFunctionObject>?), TypeInfoPropertyName = "RunStepDetailsToolCallsFunctionObject_13a1058b9149fee5")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObject>?), TypeInfoPropertyName = "RunStepDeltaStepDetailsToolCallsFunctionObject_e709669a9d6096a0")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.OpenAIConfiguration, global::Portkey.AzureOpenAIConfiguration, global::Portkey.BedrockConfiguration, global::Portkey.VertexAIConfiguration, global::Portkey.AzureAIConfiguration, global::Portkey.WorkersAIConfiguration, global::Portkey.SageMakerConfiguration?, global::Portkey.HuggingFaceConfiguration, global::Portkey.CortexConfiguration, global::Portkey.CustomHostConfiguration>?), TypeInfoPropertyName = "CustomHostConfiguration_41e2b51f1fff9f7b")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.JWTParameters, global::Portkey.ModelWhitelistParameters, global::Portkey.RegexMatchParameters, global::Portkey.SentenceCountParameters, global::Portkey.WordCountParameters, global::Portkey.CharacterCountParameters, global::Portkey.JSONSchemaParameters, global::Portkey.JSONKeysParameters, global::Portkey.ContainsParameters, global::Portkey.ValidUrlsParameters, global::Portkey.ContainsCodeParameters, global::Portkey.WebhookParameters, global::Portkey.EndsWithParameters, global::Portkey.UppercaseParameters, global::Portkey.RequiredMetadataKeysParameters, global::Portkey.AllowedRequestTypesParameters, global::Portkey.SydeGuardParameters, global::Portkey.AporiaParameters, global::Portkey.PillarScanParameters, global::Portkey.PatronusParameters, global::Portkey.PatronusCustomParameters, global::Portkey.PortkeyModerationParameters, global::Portkey.PortkeyLanguageParameters, global::Portkey.PortkeyPIIParameters, global::Portkey.MistralModerationParameters, global::Portkey.BedrockGuardParameters, global::Portkey.PromptfooParameters, global::Portkey.AcuvityScanParameters, global::Portkey.AzureContentSafetyParameters, global::Portkey.AzurePIIParameters, global::Portkey.PANWPrismaParameters, global::Portkey.BasicParameters>?), TypeInfoPropertyName = "BasicParameters_b9f37200e2abf3e9")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_12be480b1039da9e")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObject>>), TypeInfoPropertyName = "RunStepDeltaStepDetailsToolCallsFunctionObject_5640d9ed7ecfcd45")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.GetConfigResponseDataConfigTarget>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.ListConfigVersionsResponseDataItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.IntegrationList>))]
@@ -14082,7 +16870,8 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.GetAnalyticsGroupsAiModelsResponseDataItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.GetAnalyticsGroupsMetadataResponseDataItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.SecretReferenceListItem>))]
-    internal sealed partial class SourceGenerationContextChunk4 : global::System.Text.Json.Serialization.JsonSerializerContext
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.DeploymentListItem>))]
+    internal sealed partial class SourceGenerationContextChunk5 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
     /// <summary>
@@ -14099,7 +16888,9 @@ namespace Portkey
 
             SourceGenerationContextChunk3.Default,
 
-            SourceGenerationContextChunk4.Default
+            SourceGenerationContextChunk4.Default,
+
+            SourceGenerationContextChunk5.Default
             );
 
         private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
@@ -15018,6 +17809,30 @@ namespace Portkey
             options.Converters.Add(new global::Portkey.JsonConverters.McpServerUserAccessListResponseDefaultUserAccessNullableJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.BulkUpdateMcpServerUserAccessDefaultUserAccessJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.BulkUpdateMcpServerUserAccessDefaultUserAccessNullableJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.CreateDeploymentRequestTypeJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.CreateDeploymentRequestTypeNullableJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.UpdateDeploymentRequestTypeJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.UpdateDeploymentRequestTypeNullableJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.UpdateDeploymentRequestStatusJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.UpdateDeploymentRequestStatusNullableJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.DeploymentCreateResponseObjectJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.DeploymentCreateResponseObjectNullableJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.DeploymentListItemTypeJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.DeploymentListItemTypeNullableJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.DeploymentListItemStatusJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.DeploymentListItemStatusNullableJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.DeploymentListItemConnectionStatusJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.DeploymentListItemConnectionStatusNullableJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.DeploymentListItemObjectJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.DeploymentListItemObjectNullableJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.DeploymentPingResponseStatusJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.DeploymentPingResponseStatusNullableJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.DeploymentPingResponseOutboundStatusJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.DeploymentPingResponseOutboundStatusNullableJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.DeploymentPingResponseInboundStatusJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.DeploymentPingResponseInboundStatusNullableJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.DeploymentPingResponseObjectJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.DeploymentPingResponseObjectNullableJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.CreateVirtualKeysRequestProviderJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.CreateVirtualKeysRequestProviderNullableJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.PutAdminUsersRequestRoleJsonConverter());
@@ -15102,6 +17917,10 @@ namespace Portkey
             options.Converters.Add(new global::Portkey.JsonConverters.GetRateLimitsPolicyStatusNullableJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.ListSecretReferencesManagerTypeJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.ListSecretReferencesManagerTypeNullableJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.ListDeploymentsStatusJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.ListDeploymentsStatusNullableJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.ListDeploymentsTypeJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.ListDeploymentsTypeNullableJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.CreatePromptResponseObjectJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.CreatePromptResponseObjectNullableJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.GetIntegrationsResponseObjectJsonConverter());
@@ -15166,6 +17985,8 @@ namespace Portkey
             options.Converters.Add(new global::Portkey.JsonConverters.ListSecretReferencesResponseObjectNullableJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.CreateSecretReferenceResponseObjectJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.CreateSecretReferenceResponseObjectNullableJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.ListDeploymentsResponseObjectJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.ListDeploymentsResponseObjectNullableJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.ChatCompletionRequestMessageContentPartJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.ChatCompletionRequestMessageJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.FineTuneChatCompletionRequestFunctionMessageJsonConverter());
@@ -15211,6 +18032,7 @@ namespace Portkey
             options.Converters.Add(new global::Portkey.JsonConverters.GuardrailDetailsJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.UsageLimitsPolicyResponseJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.RateLimitsPolicyResponseJsonConverter());
+            options.Converters.Add(new global::Portkey.JsonConverters.DeploymentDetailResponseJsonConverter());
             options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.ModelCalculateOperation, global::Portkey.ModelValueReference>());
             options.Converters.Add(new global::Portkey.JsonConverters.AnyOfJsonConverter<string, global::Portkey.CreateCompletionRequestModel?>());
             options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>, global::System.Collections.Generic.IList<int>, global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>>());
@@ -15275,6 +18097,8 @@ namespace Portkey
             options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CreateChatCompletionRequest, global::Portkey.CreateCompletionRequest>());
             options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.JWTParameters, global::Portkey.ModelWhitelistParameters, global::Portkey.RegexMatchParameters, global::Portkey.SentenceCountParameters, global::Portkey.WordCountParameters, global::Portkey.CharacterCountParameters, global::Portkey.JSONSchemaParameters, global::Portkey.JSONKeysParameters, global::Portkey.ContainsParameters, global::Portkey.ValidUrlsParameters, global::Portkey.ContainsCodeParameters, global::Portkey.WebhookParameters, global::Portkey.EndsWithParameters, global::Portkey.UppercaseParameters, global::Portkey.RequiredMetadataKeysParameters, global::Portkey.AllowedRequestTypesParameters, global::Portkey.SydeGuardParameters, global::Portkey.AporiaParameters, global::Portkey.PillarScanParameters, global::Portkey.PatronusParameters, global::Portkey.PatronusCustomParameters, global::Portkey.PortkeyModerationParameters, global::Portkey.PortkeyLanguageParameters, global::Portkey.PortkeyPIIParameters, global::Portkey.MistralModerationParameters, global::Portkey.BedrockGuardParameters, global::Portkey.PromptfooParameters, global::Portkey.AcuvityScanParameters, global::Portkey.AzureContentSafetyParameters, global::Portkey.AzurePIIParameters, global::Portkey.PANWPrismaParameters, global::Portkey.BasicParameters>());
             options.Converters.Add(new global::Portkey.JsonConverters.AnyOfJsonConverter<global::Portkey.PortkeyBatchJobProviderOptionsBedrockOptions, global::Portkey.PortkeyBatchJobProviderOptionsVertexOptions>());
+            options.Converters.Add(new global::Portkey.JsonConverters.AllOfJsonConverter<global::Portkey.DeploymentAuthSettingsInput, global::Portkey.UpdateDeploymentRequestAuthSettings>());
+            options.Converters.Add(new global::Portkey.JsonConverters.AllOfJsonConverter<global::Portkey.DeploymentAuthSettings, global::Portkey.DeploymentDetailResponseVariant2AuthSettings>());
             options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CreateChatCompletionRequest, global::Portkey.CreateCompletionRequest>());
             options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<global::Portkey.CreateChatCompletionRequest, global::Portkey.CreateCompletionRequest>());
             options.Converters.Add(new global::Portkey.JsonConverters.AnyOfJsonConverter<global::Portkey.OpenAIFinetuneJob, global::Portkey.BedrockFinetuneJob, global::Portkey.PortkeyFinetuneJob>());
