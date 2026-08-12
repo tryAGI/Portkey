@@ -28,6 +28,12 @@ namespace Portkey
         public double? Value { get; set; }
 
         /// <summary>
+        /// Array of conditions that define which requests the policy applies to
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("conditions")]
+        public global::System.Collections.Generic.IList<global::Portkey.Condition>? Conditions { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -45,17 +51,22 @@ namespace Portkey
         /// <param name="value">
         /// Rate limit value
         /// </param>
+        /// <param name="conditions">
+        /// Array of conditions that define which requests the policy applies to
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateRateLimitsPolicyRequest(
             string? name,
             global::Portkey.UpdateRateLimitsPolicyRequestUnit? unit,
-            double? value)
+            double? value,
+            global::System.Collections.Generic.IList<global::Portkey.Condition>? conditions)
         {
             this.Name = name;
             this.Unit = unit;
             this.Value = value;
+            this.Conditions = conditions;
         }
 
         /// <summary>

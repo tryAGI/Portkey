@@ -31,6 +31,7 @@ namespace Portkey
             ref global::Portkey.ListRateLimitsPoliciesStatus? status,
             ref global::Portkey.ListRateLimitsPoliciesType? type,
             ref global::Portkey.ListRateLimitsPoliciesUnit? unit,
+            ref global::Portkey.ListRateLimitsPoliciesTarget? target,
             ref int? pageSize,
             ref int? currentPage);
         partial void PrepareListRateLimitsPoliciesRequest(
@@ -40,6 +41,7 @@ namespace Portkey
             global::Portkey.ListRateLimitsPoliciesStatus? status,
             global::Portkey.ListRateLimitsPoliciesType? type,
             global::Portkey.ListRateLimitsPoliciesUnit? unit,
+            global::Portkey.ListRateLimitsPoliciesTarget? target,
             int? pageSize,
             int? currentPage);
         partial void ProcessListRateLimitsPoliciesResponse(
@@ -61,6 +63,7 @@ namespace Portkey
         /// </param>
         /// <param name="type"></param>
         /// <param name="unit"></param>
+        /// <param name="target"></param>
         /// <param name="pageSize"></param>
         /// <param name="currentPage"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -71,6 +74,7 @@ namespace Portkey
             global::Portkey.ListRateLimitsPoliciesStatus? status = default,
             global::Portkey.ListRateLimitsPoliciesType? type = default,
             global::Portkey.ListRateLimitsPoliciesUnit? unit = default,
+            global::Portkey.ListRateLimitsPoliciesTarget? target = default,
             int? pageSize = default,
             int? currentPage = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
@@ -81,6 +85,7 @@ namespace Portkey
                 status: status,
                 type: type,
                 unit: unit,
+                target: target,
                 pageSize: pageSize,
                 currentPage: currentPage,
                 requestOptions: requestOptions,
@@ -99,6 +104,7 @@ namespace Portkey
         /// </param>
         /// <param name="type"></param>
         /// <param name="unit"></param>
+        /// <param name="target"></param>
         /// <param name="pageSize"></param>
         /// <param name="currentPage"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -109,6 +115,7 @@ namespace Portkey
             global::Portkey.ListRateLimitsPoliciesStatus? status = default,
             global::Portkey.ListRateLimitsPoliciesType? type = default,
             global::Portkey.ListRateLimitsPoliciesUnit? unit = default,
+            global::Portkey.ListRateLimitsPoliciesTarget? target = default,
             int? pageSize = default,
             int? currentPage = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
@@ -122,6 +129,7 @@ namespace Portkey
                 status: ref status,
                 type: ref type,
                 unit: ref unit,
+                target: ref target,
                 pageSize: ref pageSize,
                 currentPage: ref currentPage);
 
@@ -156,6 +164,7 @@ namespace Portkey
                                 .AddOptionalParameter("status", status?.ToValueString())
                                 .AddOptionalParameter("type", type?.ToValueString())
                                 .AddOptionalParameter("unit", unit?.ToValueString())
+                                .AddOptionalParameter("target", target?.ToValueString())
                                 .AddOptionalParameter("page_size", pageSize?.ToString())
                                 .AddOptionalParameter("current_page", currentPage?.ToString())
                                 ;
@@ -203,6 +212,7 @@ namespace Portkey
                     status: status,
                     type: type,
                     unit: unit,
+                    target: target,
                     pageSize: pageSize,
                     currentPage: currentPage);
 

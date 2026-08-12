@@ -20,6 +20,10 @@ namespace Portkey
         /// 
         /// </summary>
         Rpm,
+        /// <summary>
+        /// 
+        /// </summary>
+        Rpw,
     }
 
     /// <summary>
@@ -37,6 +41,7 @@ namespace Portkey
                 UpdateRateLimitsPolicyRequestUnit.Rpd => "rpd",
                 UpdateRateLimitsPolicyRequestUnit.Rph => "rph",
                 UpdateRateLimitsPolicyRequestUnit.Rpm => "rpm",
+                UpdateRateLimitsPolicyRequestUnit.Rpw => "rpw",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -50,6 +55,7 @@ namespace Portkey
                 "rpd" => UpdateRateLimitsPolicyRequestUnit.Rpd,
                 "rph" => UpdateRateLimitsPolicyRequestUnit.Rph,
                 "rpm" => UpdateRateLimitsPolicyRequestUnit.Rpm,
+                "rpw" => UpdateRateLimitsPolicyRequestUnit.Rpw,
                 _ => null,
             };
         }

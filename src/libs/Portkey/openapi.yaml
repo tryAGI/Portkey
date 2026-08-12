@@ -11733,6 +11733,16 @@ paths:
           - rpm
           - rph
           - rpd
+          - rpw
+      - name: target
+        in: query
+        description: Filter by target resource
+        required: false
+        schema:
+          type: string
+          enum:
+          - llm
+          - mcp_tools
       - $ref: '#/components/parameters/PageSize'
       - $ref: '#/components/parameters/CurrentPage'
       responses:
@@ -29848,22 +29858,61 @@ components:
       properties:
         key:
           type: string
-          description: 'Condition key. Valid values:
+          description: 'Condition key. Valid keys depend on the policy target:
 
-            - `api_key` - Apply to a specific API key
 
-            - `organisation_id` - Apply to an organization
+            **LLM policies (target: llm):**
 
-            - `workspace_id` - Apply to a workspace
+            - `api_key` - Match by API key ID
 
-            - `metadata.*` - Apply based on custom metadata fields (e.g., `metadata.user_id`, `metadata.team`)
+            - `virtual_key` - Match by virtual key slug
+
+            - `provider` - Match by provider (e.g., `openai`, `anthropic`, `azure-openai`)
+
+            - `config` - Match by config slug
+
+            - `prompt` - Match by prompt slug
+
+            - `model` - Match by model (supports wildcards, e.g., `@openai/gpt-4o`, `@anthropic/*`)
+
+            - `endpoint_type` - Match by endpoint type (e.g., `chatComplete`, `embed`, `imageGenerate`) — rate limit policies only
+
+            - `metadata.*` - Match by request metadata (e.g., `metadata._user`, `metadata.team`)
+
+
+            **MCP policies (target: mcp_tools):**
+
+            - `api_key` - Match by API key ID
+
+            - `workspace_id` - Match by workspace ID
+
+            - `mcp_server` - Match by MCP server name
+
+            - `mcp_tool` - Match by MCP tool name
+
+            - `metadata.*` - Match by request metadata
 
             '
-          example: workspace_id
+          example: api_key
         value:
-          type: string
-          description: Condition value
-          example: workspace-123
+          oneOf:
+          - type: string
+          - type: array
+            items:
+              type: string
+          description: 'Value(s) to match. Use `"*"` for wildcard matching.
+
+            Can be a single string or an array of strings (OR logic for arrays).
+
+            '
+          example: '*'
+        excludes:
+          oneOf:
+          - type: string
+          - type: array
+            items:
+              type: string
+          description: Value(s) to exclude from matching.
     GroupBy:
       type: object
       required:
@@ -29871,13 +29920,37 @@ components:
       properties:
         key:
           type: string
-          description: 'Group by key. Valid values:
+          description: 'Group by key. Each unique combination of group_by values gets its own counter.
+
+
+            **LLM policies (target: llm):**
 
             - `api_key` - Group by API key
 
-            - `organisation_id` - Group by organization
+            - `workspace_id` - Group by workspace
+
+            - `virtual_key` - Group by virtual key
+
+            - `provider` - Group by provider
+
+            - `config` - Group by config
+
+            - `prompt` - Group by prompt
+
+            - `model` - Group by model (uses request model name)
+
+            - `metadata.*` - Group by custom metadata fields (e.g., `metadata._user`)
+
+
+            **MCP policies (target: mcp_tools):**
+
+            - `api_key` - Group by API key
 
             - `workspace_id` - Group by workspace
+
+            - `mcp_server` - Group by MCP server name
+
+            - `mcp_tool` - Group by MCP tool name
 
             - `metadata.*` - Group by custom metadata fields
 
@@ -30001,6 +30074,7 @@ components:
           - rpm
           - rph
           - rpd
+          - rpw
           description: 'Rate unit:
 
             - `rpm` - Requests/Tokens per minute
@@ -30009,10 +30083,25 @@ components:
 
             - `rpd` - Requests/Tokens per day
 
+            - `rpw` - Requests/Tokens per week
+
             '
         value:
           type: number
           description: Rate limit value
+        target:
+          type: string
+          enum:
+          - llm
+          - mcp_tools
+          default: llm
+          description: 'The target resource for rate limiting:
+
+            - `llm` - Apply rate limit to LLM requests (default)
+
+            - `mcp_tools` - Apply rate limit to MCP tool calls
+
+            '
         workspace_id:
           type: string
           description: Workspace ID or slug. Required if not using API key authentication.
@@ -30033,10 +30122,17 @@ components:
           - rpm
           - rph
           - rpd
+          - rpw
           description: Rate unit
         value:
           type: number
           description: Rate limit value
+        conditions:
+          type: array
+          minItems: 1
+          items:
+            $ref: '#/components/schemas/Condition'
+          description: Array of conditions that define which requests the policy applies to
     UsageLimitsPolicy:
       type: object
       required:
@@ -30190,6 +30286,7 @@ components:
           - rpm
           - rph
           - rpd
+          - rpw
           description: Rate unit
         value:
           type: number
@@ -30216,6 +30313,19 @@ components:
           type: string
           format: date-time
           description: Last update timestamp
+        target:
+          type: string
+          enum:
+          - llm
+          - mcp_tools
+          default: llm
+          description: 'The target resource for rate limiting:
+
+            - `llm` - Apply rate limit to LLM requests (default)
+
+            - `mcp_tools` - Apply rate limit to MCP tool calls
+
+            '
     CreatePolicyResponse:
       type: object
       properties:

@@ -36,6 +36,7 @@ namespace Portkey.JsonConverters
             if (__jsonProps.Contains("name")) __score0++;
             if (__jsonProps.Contains("organisation_id")) __score0++;
             if (__jsonProps.Contains("status")) __score0++;
+            if (__jsonProps.Contains("target")) __score0++;
             if (__jsonProps.Contains("type")) __score0++;
             if (__jsonProps.Contains("unit")) __score0++;
             if (__jsonProps.Contains("value")) __score0++;
