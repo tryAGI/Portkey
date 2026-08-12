@@ -252,6 +252,11 @@ namespace Portkey
         public ModerationsClient Moderations { get; }
 
         /// <summary>
+        /// Extract text and structured content from documents (PDFs and images) using OCR models. Supported providers include Mistral AI and Azure AI Foundry.
+        /// </summary>
+        public OcrClient Ocr { get; }
+
+        /// <summary>
         /// Create, List, Retrieve, Update, and Delete prompt partials.
         /// </summary>
         public PromptPartialsClient PromptPartials { get; }

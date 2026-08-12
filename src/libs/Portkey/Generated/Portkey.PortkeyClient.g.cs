@@ -414,6 +414,16 @@ namespace Portkey
         };
 
         /// <summary>
+        /// Extract text and structured content from documents (PDFs and images) using OCR models. Supported providers include Mistral AI and Azure AI Foundry.
+        /// </summary>
+        public OcrClient Ocr => new OcrClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Create, List, Retrieve, Update, and Delete prompt partials.
         /// </summary>
         public PromptPartialsClient PromptPartials => new PromptPartialsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
