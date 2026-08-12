@@ -582,10 +582,17 @@ namespace Portkey
         /// Rate unit:<br/>
         /// - `rpm` - Requests/Tokens per minute<br/>
         /// - `rph` - Requests/Tokens per hour<br/>
-        /// - `rpd` - Requests/Tokens per day
+        /// - `rpd` - Requests/Tokens per day<br/>
+        /// - `rpw` - Requests/Tokens per week
         /// </param>
         /// <param name="value">
         /// Rate limit value
+        /// </param>
+        /// <param name="target">
+        /// The target resource for rate limiting:<br/>
+        /// - `llm` - Apply rate limit to LLM requests (default)<br/>
+        /// - `mcp_tools` - Apply rate limit to MCP tool calls<br/>
+        /// Default Value: llm
         /// </param>
         /// <param name="workspaceId">
         /// Workspace ID or slug. Required if not using API key authentication.
@@ -603,6 +610,7 @@ namespace Portkey
             global::Portkey.CreateRateLimitsPolicyRequestUnit unit,
             double value,
             string? name = default,
+            global::Portkey.CreateRateLimitsPolicyRequestTarget? target = default,
             string? workspaceId = default,
             global::System.Guid? organisationId = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
@@ -616,6 +624,7 @@ namespace Portkey
                 Type = type,
                 Unit = unit,
                 Value = value,
+                Target = target,
                 WorkspaceId = workspaceId,
                 OrganisationId = organisationId,
             };

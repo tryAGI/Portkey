@@ -42,7 +42,8 @@ namespace Portkey
         /// Rate unit:<br/>
         /// - `rpm` - Requests/Tokens per minute<br/>
         /// - `rph` - Requests/Tokens per hour<br/>
-        /// - `rpd` - Requests/Tokens per day
+        /// - `rpd` - Requests/Tokens per day<br/>
+        /// - `rpw` - Requests/Tokens per week
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("unit")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.CreateRateLimitsPolicyRequestUnitJsonConverter))]
@@ -55,6 +56,16 @@ namespace Portkey
         [global::System.Text.Json.Serialization.JsonPropertyName("value")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Value { get; set; }
+
+        /// <summary>
+        /// The target resource for rate limiting:<br/>
+        /// - `llm` - Apply rate limit to LLM requests (default)<br/>
+        /// - `mcp_tools` - Apply rate limit to MCP tool calls<br/>
+        /// Default Value: llm
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("target")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.CreateRateLimitsPolicyRequestTargetJsonConverter))]
+        public global::Portkey.CreateRateLimitsPolicyRequestTarget? Target { get; set; }
 
         /// <summary>
         /// Workspace ID or slug. Required if not using API key authentication.
@@ -90,7 +101,8 @@ namespace Portkey
         /// Rate unit:<br/>
         /// - `rpm` - Requests/Tokens per minute<br/>
         /// - `rph` - Requests/Tokens per hour<br/>
-        /// - `rpd` - Requests/Tokens per day
+        /// - `rpd` - Requests/Tokens per day<br/>
+        /// - `rpw` - Requests/Tokens per week
         /// </param>
         /// <param name="value">
         /// Rate limit value
@@ -98,6 +110,12 @@ namespace Portkey
         /// <param name="name">
         /// Policy name<br/>
         /// Example: 100 Requests per Minute
+        /// </param>
+        /// <param name="target">
+        /// The target resource for rate limiting:<br/>
+        /// - `llm` - Apply rate limit to LLM requests (default)<br/>
+        /// - `mcp_tools` - Apply rate limit to MCP tool calls<br/>
+        /// Default Value: llm
         /// </param>
         /// <param name="workspaceId">
         /// Workspace ID or slug. Required if not using API key authentication.
@@ -115,6 +133,7 @@ namespace Portkey
             global::Portkey.CreateRateLimitsPolicyRequestUnit unit,
             double value,
             string? name,
+            global::Portkey.CreateRateLimitsPolicyRequestTarget? target,
             string? workspaceId,
             global::System.Guid? organisationId)
         {
@@ -124,6 +143,7 @@ namespace Portkey
             this.Type = type;
             this.Unit = unit;
             this.Value = value;
+            this.Target = target;
             this.WorkspaceId = workspaceId;
             this.OrganisationId = organisationId;
         }

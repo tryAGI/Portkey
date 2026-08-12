@@ -7,7 +7,8 @@ namespace Portkey
     /// Rate unit:<br/>
     /// - `rpm` - Requests/Tokens per minute<br/>
     /// - `rph` - Requests/Tokens per hour<br/>
-    /// - `rpd` - Requests/Tokens per day
+    /// - `rpd` - Requests/Tokens per day<br/>
+    /// - `rpw` - Requests/Tokens per week
     /// </summary>
     public enum CreateRateLimitsPolicyRequestUnit
     {
@@ -23,6 +24,10 @@ namespace Portkey
         /// 
         /// </summary>
         Rpm,
+        /// <summary>
+        /// 
+        /// </summary>
+        Rpw,
     }
 
     /// <summary>
@@ -40,6 +45,7 @@ namespace Portkey
                 CreateRateLimitsPolicyRequestUnit.Rpd => "rpd",
                 CreateRateLimitsPolicyRequestUnit.Rph => "rph",
                 CreateRateLimitsPolicyRequestUnit.Rpm => "rpm",
+                CreateRateLimitsPolicyRequestUnit.Rpw => "rpw",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -53,6 +59,7 @@ namespace Portkey
                 "rpd" => CreateRateLimitsPolicyRequestUnit.Rpd,
                 "rph" => CreateRateLimitsPolicyRequestUnit.Rph,
                 "rpm" => CreateRateLimitsPolicyRequestUnit.Rpm,
+                "rpw" => CreateRateLimitsPolicyRequestUnit.Rpw,
                 _ => null,
             };
         }

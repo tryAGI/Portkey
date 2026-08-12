@@ -93,6 +93,16 @@ namespace Portkey
         public required global::System.DateTime LastUpdatedAt { get; set; }
 
         /// <summary>
+        /// The target resource for rate limiting:<br/>
+        /// - `llm` - Apply rate limit to LLM requests (default)<br/>
+        /// - `mcp_tools` - Apply rate limit to MCP tool calls<br/>
+        /// Default Value: llm
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("target")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.RateLimitsPolicyTargetJsonConverter))]
+        public global::Portkey.RateLimitsPolicyTarget? Target { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -137,6 +147,12 @@ namespace Portkey
         /// <param name="groupBy">
         /// Array of group by fields
         /// </param>
+        /// <param name="target">
+        /// The target resource for rate limiting:<br/>
+        /// - `llm` - Apply rate limit to LLM requests (default)<br/>
+        /// - `mcp_tools` - Apply rate limit to MCP tool calls<br/>
+        /// Default Value: llm
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -152,7 +168,8 @@ namespace Portkey
             global::System.DateTime lastUpdatedAt,
             string? name,
             global::System.Collections.Generic.IList<global::Portkey.Condition>? conditions,
-            global::System.Collections.Generic.IList<global::Portkey.GroupBy>? groupBy)
+            global::System.Collections.Generic.IList<global::Portkey.GroupBy>? groupBy,
+            global::Portkey.RateLimitsPolicyTarget? target)
         {
             this.Id = id;
             this.Name = name;
@@ -166,6 +183,7 @@ namespace Portkey
             this.OrganisationId = organisationId;
             this.CreatedAt = createdAt;
             this.LastUpdatedAt = lastUpdatedAt;
+            this.Target = target;
         }
 
         /// <summary>

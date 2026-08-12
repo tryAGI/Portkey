@@ -9,10 +9,21 @@ namespace Portkey
     public sealed partial class GroupBy
     {
         /// <summary>
-        /// Group by key. Valid values:<br/>
+        /// Group by key. Each unique combination of group_by values gets its own counter.<br/>
+        /// **LLM policies (target: llm):**<br/>
         /// - `api_key` - Group by API key<br/>
-        /// - `organisation_id` - Group by organization<br/>
         /// - `workspace_id` - Group by workspace<br/>
+        /// - `virtual_key` - Group by virtual key<br/>
+        /// - `provider` - Group by provider<br/>
+        /// - `config` - Group by config<br/>
+        /// - `prompt` - Group by prompt<br/>
+        /// - `model` - Group by model (uses request model name)<br/>
+        /// - `metadata.*` - Group by custom metadata fields (e.g., `metadata._user`)<br/>
+        /// **MCP policies (target: mcp_tools):**<br/>
+        /// - `api_key` - Group by API key<br/>
+        /// - `workspace_id` - Group by workspace<br/>
+        /// - `mcp_server` - Group by MCP server name<br/>
+        /// - `mcp_tool` - Group by MCP tool name<br/>
         /// - `metadata.*` - Group by custom metadata fields<br/>
         /// Example: api_key
         /// </summary>
@@ -31,10 +42,21 @@ namespace Portkey
         /// Initializes a new instance of the <see cref="GroupBy" /> class.
         /// </summary>
         /// <param name="key">
-        /// Group by key. Valid values:<br/>
+        /// Group by key. Each unique combination of group_by values gets its own counter.<br/>
+        /// **LLM policies (target: llm):**<br/>
         /// - `api_key` - Group by API key<br/>
-        /// - `organisation_id` - Group by organization<br/>
         /// - `workspace_id` - Group by workspace<br/>
+        /// - `virtual_key` - Group by virtual key<br/>
+        /// - `provider` - Group by provider<br/>
+        /// - `config` - Group by config<br/>
+        /// - `prompt` - Group by prompt<br/>
+        /// - `model` - Group by model (uses request model name)<br/>
+        /// - `metadata.*` - Group by custom metadata fields (e.g., `metadata._user`)<br/>
+        /// **MCP policies (target: mcp_tools):**<br/>
+        /// - `api_key` - Group by API key<br/>
+        /// - `workspace_id` - Group by workspace<br/>
+        /// - `mcp_server` - Group by MCP server name<br/>
+        /// - `mcp_tool` - Group by MCP tool name<br/>
         /// - `metadata.*` - Group by custom metadata fields<br/>
         /// Example: api_key
         /// </param>

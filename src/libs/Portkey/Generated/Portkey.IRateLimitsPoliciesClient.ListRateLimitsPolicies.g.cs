@@ -14,6 +14,7 @@ namespace Portkey
         /// </param>
         /// <param name="type"></param>
         /// <param name="unit"></param>
+        /// <param name="target"></param>
         /// <param name="pageSize"></param>
         /// <param name="currentPage"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -24,6 +25,7 @@ namespace Portkey
             global::Portkey.ListRateLimitsPoliciesStatus? status = default,
             global::Portkey.ListRateLimitsPoliciesType? type = default,
             global::Portkey.ListRateLimitsPoliciesUnit? unit = default,
+            global::Portkey.ListRateLimitsPoliciesTarget? target = default,
             int? pageSize = default,
             int? currentPage = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
@@ -38,6 +40,7 @@ namespace Portkey
         /// </param>
         /// <param name="type"></param>
         /// <param name="unit"></param>
+        /// <param name="target"></param>
         /// <param name="pageSize"></param>
         /// <param name="currentPage"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -48,6 +51,7 @@ namespace Portkey
             global::Portkey.ListRateLimitsPoliciesStatus? status = default,
             global::Portkey.ListRateLimitsPoliciesType? type = default,
             global::Portkey.ListRateLimitsPoliciesUnit? unit = default,
+            global::Portkey.ListRateLimitsPoliciesTarget? target = default,
             int? pageSize = default,
             int? currentPage = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
