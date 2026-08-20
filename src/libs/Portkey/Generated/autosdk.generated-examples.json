@@ -211,6 +211,17 @@
     },
     {
       "Order": 20,
+      "Title": "Get provider grouped data.",
+      "Slug": "get-provider-grouped-data",
+      "Description": "Generated from OpenAPI examples.",
+      "Language": "http",
+      "Code": "### Get provider grouped data.\nGET {{host}}/analytics/groups/provider?workspace_slug={{workspace_slug}}\u0026time_of_generation_min={{time_of_generation_min}}\u0026time_of_generation_max={{time_of_generation_max}}\u0026total_units_min={{total_units_min}}\u0026total_units_max={{total_units_max}}\u0026cost_min={{cost_min}}\u0026cost_max={{cost_max}}\u0026prompt_token_min={{prompt_token_min}}\u0026prompt_token_max={{prompt_token_max}}\u0026completion_token_min={{completion_token_min}}\u0026completion_token_max={{completion_token_max}}\u0026status_code=401,403\u0026weighted_feedback_min={{weighted_feedback_min}}\u0026weighted_feedback_max={{weighted_feedback_max}}\u0026virtual_keys=vk-slug-1,vk-slug-2\u0026configs=pc-config-slug-1,pc-config-slug-2\u0026api_key_ids=765768a9-b4ec-4694-962c-d55f40cdb0dc,7c22af5a-8119-46b8-8d9b-bad3ad382387\u0026current_page={{current_page}}\u0026page_size={{page_size}}\u0026metadata={\u0022_user\u0022:\u0022user_1\u0022, \u0022env\u0022: \u0022staging\u0022}\u0026ai_org_model=openai__gpt-3.5-turbo,azure-openai__gpt-35-turbo\u0026order_by={{order_by}}\u0026order_by_type={{order_by_type}}\u0026columns=requests,cost,avg_latency\u0026include_total=true\nx-portkey-api-key: {{api_key}}\nAccept: application/json\n\n## Responses\n# 200\n# Description: OK\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "getAnalyticsGroupsProvider",
+      "Setup": null
+    },
+    {
+      "Order": 21,
       "Title": "Get metadata users grouped data.",
       "Slug": "get-metadata-users-grouped-data",
       "Description": "Generated from OpenAPI examples.",
@@ -221,7 +232,7 @@
       "Setup": null
     },
     {
-      "Order": 21,
+      "Order": 22,
       "Title": "Get cache summary data for the selected time period",
       "Slug": "get-cache-summary-data-for-the-selected-time-period",
       "Description": "Generated from OpenAPI examples.",
@@ -232,7 +243,7 @@
       "Setup": null
     },
     {
-      "Order": 22,
+      "Order": 23,
       "Title": "Rotate API Key",
       "Slug": "rotate-api-key",
       "Description": "Rotates an existing API key and returns a newly generated key value.\nThe previous key remains valid during the transition period and expires at \u0060key_transition_expires_at\u0060.",
@@ -243,7 +254,7 @@
       "Setup": null
     },
     {
-      "Order": 23,
+      "Order": 24,
       "Title": "Create API Keys",
       "Slug": "create-api-keys",
       "Description": "Creates a new API key.",
@@ -254,7 +265,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 24,
+      "Order": 25,
       "Title": "Remove an API Key",
       "Slug": "remove-an-api-key",
       "Description": "Generated from OpenAPI examples.",
@@ -265,7 +276,7 @@
       "Setup": null
     },
     {
-      "Order": 25,
+      "Order": 26,
       "Title": "Get All",
       "Slug": "get-all",
       "Description": "Generated from OpenAPI examples.",
@@ -276,7 +287,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 26,
+      "Order": 27,
       "Title": "Update API Keys",
       "Slug": "update-api-keys",
       "Description": "Updates an existing API key. The API key type (user vs service) and associated user_id cannot be changed after creation.",
@@ -287,7 +298,7 @@
       "Setup": null
     },
     {
-      "Order": 27,
+      "Order": 28,
       "Title": "Delete collection",
       "Slug": "delete-collection",
       "Description": "Deletes a collection",
@@ -298,7 +309,7 @@
       "Setup": null
     },
     {
-      "Order": 28,
+      "Order": 29,
       "Title": "Update collection",
       "Slug": "update-collection",
       "Description": "Updates a collection\u0027s details",
@@ -309,7 +320,7 @@
       "Setup": null
     },
     {
-      "Order": 29,
+      "Order": 30,
       "Title": "Create a config",
       "Slug": "createconfig",
       "Description": "Generated from OpenAPI examples.",
@@ -320,7 +331,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 30,
+      "Order": 31,
       "Title": "Delete a config",
       "Slug": "deleteconfig",
       "Description": "Generated from OpenAPI examples.",
@@ -331,7 +342,7 @@
       "Setup": null
     },
     {
-      "Order": 31,
+      "Order": 32,
       "Title": "Get a config",
       "Slug": "getconfig",
       "Description": "Generated from OpenAPI examples.",
@@ -342,7 +353,7 @@
       "Setup": null
     },
     {
-      "Order": 32,
+      "Order": 33,
       "Title": "List versions for a config",
       "Slug": "listconfigversions",
       "Description": "Generated from OpenAPI examples.",
@@ -353,7 +364,7 @@
       "Setup": null
     },
     {
-      "Order": 33,
+      "Order": 34,
       "Title": "List all configs",
       "Slug": "listconfigs",
       "Description": "Generated from OpenAPI examples.",
@@ -364,7 +375,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 34,
+      "Order": 35,
       "Title": "Update a config",
       "Slug": "updateconfig",
       "Description": "Generated from OpenAPI examples.",
@@ -375,7 +386,7 @@
       "Setup": null
     },
     {
-      "Order": 35,
+      "Order": 36,
       "Title": "Create a new guardrail",
       "Slug": "createguardrail",
       "Description": "Creates a new guardrail with specified checks and actions",
@@ -386,7 +397,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 36,
+      "Order": 37,
       "Title": "Get a specific guardrail",
       "Slug": "getguardrail",
       "Description": "Retrieves details of a specific guardrail by ID or slug",
@@ -397,7 +408,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 37,
+      "Order": 38,
       "Title": "Delete a label",
       "Slug": "deletelabel",
       "Description": "Deletes a label",
@@ -408,7 +419,7 @@
       "Setup": null
     },
     {
-      "Order": 38,
+      "Order": 39,
       "Title": "Update a label",
       "Slug": "updatelabel",
       "Description": "Updates an existing label",
@@ -419,7 +430,7 @@
       "Setup": null
     },
     {
-      "Order": 39,
+      "Order": 40,
       "Title": "Get a specific log",
       "Slug": "get-a-specific-log",
       "Description": "Generated from OpenAPI examples.",
@@ -430,7 +441,7 @@
       "Setup": null
     },
     {
-      "Order": 40,
+      "Order": 41,
       "Title": "Create MCP Integration",
       "Slug": "mcpintegrations-create",
       "Description": "Create a new MCP Integration. Requires either organisation_id (with admin API key) or workspace_id in body.",
@@ -441,7 +452,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 41,
+      "Order": 42,
       "Title": "Create MCP Server",
       "Slug": "mcpservers-create",
       "Description": "Create a new MCP Server (workspace instance of an MCP Integration). Requires workspace_id or x-portkey-api-key header.",
@@ -452,7 +463,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 42,
+      "Order": 43,
       "Title": "Get Model Pricing",
       "Slug": "getmodelpricing",
       "Description": "Returns pricing configuration for a specific model.\n\n**Note:** Prices are in USD cents per token.\n\n## Supported Providers\n\nopenai, anthropic, google, azure-openai, bedrock, mistral-ai, cohere, \ntogether-ai, groq, deepseek, fireworks-ai, perplexity-ai, anyscale, \ndeepinfra, cerebras, x-ai, and 25\u002B more.\n\n## Example Response Fields\n\n| Field | Description | Unit |\n|-------|-------------|------|\n| \u0060request_token.price\u0060 | Input token cost | cents/token |\n| \u0060response_token.price\u0060 | Output token cost | cents/token |\n| \u0060cache_write_input_token.price\u0060 | Cache write cost | cents/token |\n| \u0060cache_read_input_token.price\u0060 | Cache read cost | cents/token |\n| \u0060additional_units.*\u0060 | Provider-specific features | cents/unit |",
@@ -463,7 +474,7 @@
       "Setup": null
     },
     {
-      "Order": 43,
+      "Order": 44,
       "Title": "List Available Models",
       "Slug": "listmodels",
       "Description": "Lists the currently available models that can be used through Portkey, and provides basic information about each one.",
@@ -474,7 +485,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 44,
+      "Order": 45,
       "Title": "Create a Provider",
       "Slug": "create-a-provider",
       "Description": "Generated from OpenAPI examples.",
@@ -485,7 +496,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 45,
+      "Order": 46,
       "Title": "Create Rate Limits Policy",
       "Slug": "createratelimitspolicy",
       "Description": "Create a new rate limits policy to control the rate of requests or tokens consumed per minute, hour, or day.",
@@ -496,7 +507,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 46,
+      "Order": 47,
       "Title": "Delete Rate Limits Policy",
       "Slug": "deleteratelimitspolicy",
       "Description": "Delete a rate limits policy.",
@@ -507,7 +518,7 @@
       "Setup": null
     },
     {
-      "Order": 47,
+      "Order": 48,
       "Title": "Update Rate Limits Policy",
       "Slug": "updateratelimitspolicy",
       "Description": "Update an existing rate limits policy.",
@@ -518,7 +529,7 @@
       "Setup": null
     },
     {
-      "Order": 48,
+      "Order": 49,
       "Title": "Create Usage Limits Policy",
       "Slug": "createusagelimitspolicy",
       "Description": "Create a new usage limits policy to control total usage (cost or tokens) over a period.",
@@ -529,7 +540,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 49,
+      "Order": 50,
       "Title": "Delete Usage Limits Policy",
       "Slug": "deleteusagelimitspolicy",
       "Description": "Archive (soft delete) a usage limits policy.",
@@ -540,7 +551,7 @@
       "Setup": null
     },
     {
-      "Order": 50,
+      "Order": 51,
       "Title": "Reset Usage Limits Policy Entity",
       "Slug": "resetusagelimitspolicyentity",
       "Description": "Reset the current usage for a specific entity in a usage limits policy.",
@@ -551,7 +562,7 @@
       "Setup": null
     },
     {
-      "Order": 51,
+      "Order": 52,
       "Title": "Update Usage Limits Policy",
       "Slug": "updateusagelimitspolicy",
       "Description": "Update an existing usage limits policy.",
@@ -562,7 +573,7 @@
       "Setup": null
     },
     {
-      "Order": 52,
+      "Order": 53,
       "Title": "Invite User",
       "Slug": "invites-create",
       "Description": "Send an invite to user for your organization",
@@ -573,7 +584,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 53,
+      "Order": 54,
       "Title": "Resend Invite",
       "Slug": "resend-invite",
       "Description": "Resend an invite to user for your organization",
@@ -584,7 +595,7 @@
       "Setup": null
     },
     {
-      "Order": 54,
+      "Order": 55,
       "Title": "Delete Invite By ID",
       "Slug": "delete-invite-by-id",
       "Description": "Generated from OpenAPI examples.",
@@ -595,7 +606,7 @@
       "Setup": null
     },
     {
-      "Order": 55,
+      "Order": 56,
       "Title": "Get All Invites",
       "Slug": "get-all-invites",
       "Description": "Generated from OpenAPI examples.",
@@ -606,7 +617,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 56,
+      "Order": 57,
       "Title": "Get Invite",
       "Slug": "get-invite",
       "Description": "Generated from OpenAPI examples.",
@@ -617,7 +628,7 @@
       "Setup": null
     },
     {
-      "Order": 57,
+      "Order": 58,
       "Title": "Remove a user",
       "Slug": "remove-a-user",
       "Description": "Generated from OpenAPI examples.",
@@ -628,7 +639,7 @@
       "Setup": null
     },
     {
-      "Order": 58,
+      "Order": 59,
       "Title": "Get users",
       "Slug": "get-users",
       "Description": "Generated from OpenAPI examples.",
@@ -639,7 +650,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 59,
+      "Order": 60,
       "Title": "Get user",
       "Slug": "get-user",
       "Description": "Generated from OpenAPI examples.",
@@ -650,7 +661,7 @@
       "Setup": null
     },
     {
-      "Order": 60,
+      "Order": 61,
       "Title": "Update user",
       "Slug": "update-user",
       "Description": "Generated from OpenAPI examples.",
@@ -661,7 +672,7 @@
       "Setup": null
     },
     {
-      "Order": 61,
+      "Order": 62,
       "Title": "Create a Virtual Key",
       "Slug": "create-a-virtual-key",
       "Description": "Generated from OpenAPI examples.",
@@ -672,7 +683,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 62,
+      "Order": 63,
       "Title": "Delete a Virtual Key",
       "Slug": "delete-a-virtual-key",
       "Description": "Generated from OpenAPI examples.",
@@ -683,7 +694,7 @@
       "Setup": null
     },
     {
-      "Order": 63,
+      "Order": 64,
       "Title": "List All Virtual Keys",
       "Slug": "list-all-virtual-keys",
       "Description": "Generated from OpenAPI examples.",
@@ -694,7 +705,7 @@
       "Setup": null
     },
     {
-      "Order": 64,
+      "Order": 65,
       "Title": "Get a Virtual Key",
       "Slug": "get-a-virtual-key",
       "Description": "Generated from OpenAPI examples.",
@@ -705,7 +716,7 @@
       "Setup": null
     },
     {
-      "Order": 65,
+      "Order": 66,
       "Title": "Update a Virtual Key",
       "Slug": "update-a-virtual-key",
       "Description": "Generated from OpenAPI examples.",
@@ -716,7 +727,7 @@
       "Setup": null
     },
     {
-      "Order": 66,
+      "Order": 67,
       "Title": "Create Workspace",
       "Slug": "create-workspace",
       "Description": "Generated from OpenAPI examples.",
@@ -727,7 +738,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 67,
+      "Order": 68,
       "Title": "Create SCIM Group to Workspace Mapping",
       "Slug": "create-scim-group-to-workspace-mapping",
       "Description": "Create a mapping between a SCIM group and a workspace. \nYou can either reference an existing SCIM group by ID, or provide a group name \nto pre-create the SCIM group before the IdP provisions it.",
@@ -738,7 +749,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 68,
+      "Order": 69,
       "Title": "Delete SCIM Group to Workspace Mapping",
       "Slug": "delete-scim-group-to-workspace-mapping",
       "Description": "Remove a SCIM group to workspace mapping. This archives the mapping but does not delete the SCIM group or workspace.",
@@ -749,7 +760,7 @@
       "Setup": null
     },
     {
-      "Order": 69,
+      "Order": 70,
       "Title": "Get All Workspaces",
       "Slug": "get-all-workspaces",
       "Description": "Generated from OpenAPI examples.",
@@ -760,7 +771,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 70,
+      "Order": 71,
       "Title": "List SCIM Group to Workspace Mappings",
       "Slug": "list-scim-group-to-workspace-mappings",
       "Description": "List all mappings between SCIM groups and workspaces for the organisation.\nOptionally filter by workspace, SCIM group, or role.",
@@ -771,7 +782,7 @@
       "Setup": "This example assumes \u0060using Portkey;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 71,
+      "Order": 72,
       "Title": "Update Workspace",
       "Slug": "update-workspace",
       "Description": "Generated from OpenAPI examples.",
@@ -782,7 +793,7 @@
       "Setup": null
     },
     {
-      "Order": 72,
+      "Order": 73,
       "Title": "Add workspace member",
       "Slug": "add-workspace-member",
       "Description": "Generated from OpenAPI examples.",
@@ -793,7 +804,7 @@
       "Setup": null
     },
     {
-      "Order": 73,
+      "Order": 74,
       "Title": "Remove workspace member",
       "Slug": "remove-workspace-member",
       "Description": "Generated from OpenAPI examples.",
@@ -804,7 +815,7 @@
       "Setup": null
     },
     {
-      "Order": 74,
+      "Order": 75,
       "Title": "Get workspace members",
       "Slug": "get-workspace-members",
       "Description": "Generated from OpenAPI examples.",
@@ -815,7 +826,7 @@
       "Setup": null
     },
     {
-      "Order": 75,
+      "Order": 76,
       "Title": "Get member",
       "Slug": "get-member",
       "Description": "Generated from OpenAPI examples.",
@@ -826,7 +837,7 @@
       "Setup": null
     },
     {
-      "Order": 76,
+      "Order": 77,
       "Title": "Update workspace member",
       "Slug": "update-workspace-member",
       "Description": "Generated from OpenAPI examples.",
