@@ -4,16 +4,16 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum OpenAIFinetuneJobMethodType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dpo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Supervised,
     }

@@ -4,19 +4,19 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetAnalyticsGraphsRequestsResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("summary")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Portkey.GetAnalyticsGraphsRequestsResponseSummary Summary { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("data_points")]
         [global::System.Text.Json.Serialization.JsonRequired]

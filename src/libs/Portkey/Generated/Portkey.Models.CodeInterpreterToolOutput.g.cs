@@ -5,7 +5,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct CodeInterpreterToolOutput : global::System.IEquatable<CodeInterpreterToolOutput>
     {
@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CodeInterpreterTextOutput))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsCodeInterpreterTextOutput => CodeInterpreterTextOutput != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickCodeInterpreterTextOutput(
 #if NET6_0_OR_GREATER
@@ -40,7 +40,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.CodeInterpreterTextOutput PickCodeInterpreterTextOutput() => IsCodeInterpreterTextOutput
             ? CodeInterpreterTextOutput!
@@ -56,7 +56,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CodeInterpreterFileOutput))]
@@ -64,7 +64,7 @@ namespace Portkey
         public bool IsCodeInterpreterFileOutput => CodeInterpreterFileOutput != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickCodeInterpreterFileOutput(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.CodeInterpreterFileOutput PickCodeInterpreterFileOutput() => IsCodeInterpreterFileOutput
             ? CodeInterpreterFileOutput!
             : throw new global::System.InvalidOperationException($"Expected union variant 'CodeInterpreterFileOutput' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator CodeInterpreterToolOutput(global::Portkey.CodeInterpreterTextOutput value) => new CodeInterpreterToolOutput((global::Portkey.CodeInterpreterTextOutput?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.CodeInterpreterTextOutput?(CodeInterpreterToolOutput @this) => @this.CodeInterpreterTextOutput;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CodeInterpreterToolOutput(global::Portkey.CodeInterpreterTextOutput? value)
         {
@@ -101,22 +101,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static CodeInterpreterToolOutput FromCodeInterpreterTextOutput(global::Portkey.CodeInterpreterTextOutput? value) => new CodeInterpreterToolOutput(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator CodeInterpreterToolOutput(global::Portkey.CodeInterpreterFileOutput value) => new CodeInterpreterToolOutput((global::Portkey.CodeInterpreterFileOutput?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.CodeInterpreterFileOutput?(CodeInterpreterToolOutput @this) => @this.CodeInterpreterFileOutput;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CodeInterpreterToolOutput(global::Portkey.CodeInterpreterFileOutput? value)
         {
@@ -124,12 +124,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static CodeInterpreterToolOutput FromCodeInterpreterFileOutput(global::Portkey.CodeInterpreterFileOutput? value) => new CodeInterpreterToolOutput(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CodeInterpreterToolOutput(
             global::Portkey.CodeInterpreterTextOutput? codeInterpreterTextOutput,
@@ -141,23 +141,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             CodeInterpreterFileOutput as object ??
-            CodeInterpreterTextOutput as object 
+            CodeInterpreterTextOutput as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             CodeInterpreterTextOutput?.ToString() ??
-            CodeInterpreterFileOutput?.ToString() 
+            CodeInterpreterFileOutput?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.CodeInterpreterTextOutput, TResult>? codeInterpreterTextOutput = null,
@@ -190,7 +190,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.CodeInterpreterTextOutput>? codeInterpreterTextOutput = null,
@@ -214,7 +214,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.CodeInterpreterTextOutput>? codeInterpreterTextOutput = null,
@@ -237,7 +237,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(CodeInterpreterToolOutput other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.CodeInterpreterTextOutput?>.Default.Equals(CodeInterpreterTextOutput, other.CodeInterpreterTextOutput) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.CodeInterpreterFileOutput?>.Default.Equals(CodeInterpreterFileOutput, other.CodeInterpreterFileOutput) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.CodeInterpreterFileOutput?>.Default.Equals(CodeInterpreterFileOutput, other.CodeInterpreterFileOutput)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(CodeInterpreterToolOutput obj1, CodeInterpreterToolOutput obj2)
         {
@@ -277,7 +277,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(CodeInterpreterToolOutput obj1, CodeInterpreterToolOutput obj2)
         {
@@ -285,7 +285,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

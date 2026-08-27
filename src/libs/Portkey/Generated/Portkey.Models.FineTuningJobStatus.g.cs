@@ -9,27 +9,27 @@ namespace Portkey
     public enum FineTuningJobStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cancelled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Failed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Queued,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Running,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Succeeded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ValidatingFiles,
     }

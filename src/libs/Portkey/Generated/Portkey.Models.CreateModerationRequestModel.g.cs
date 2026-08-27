@@ -4,16 +4,16 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateModerationRequestModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextModerationLatest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextModerationStable,
     }

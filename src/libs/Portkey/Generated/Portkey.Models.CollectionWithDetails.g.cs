@@ -5,12 +5,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct CollectionWithDetails : global::System.IEquatable<CollectionWithDetails>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.Collection? Collection { get; init; }
@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Collection))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsCollection => Collection != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickCollection(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.Collection PickCollection() => IsCollection
             ? Collection!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Collection' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.CollectionWithDetailsVariant2? CollectionWithDetailsVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CollectionWithDetailsVariant2))]
@@ -64,7 +64,7 @@ namespace Portkey
         public bool IsCollectionWithDetailsVariant2 => CollectionWithDetailsVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickCollectionWithDetailsVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.CollectionWithDetailsVariant2 PickCollectionWithDetailsVariant2() => IsCollectionWithDetailsVariant2
             ? CollectionWithDetailsVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'CollectionWithDetailsVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator CollectionWithDetails(global::Portkey.Collection value) => new CollectionWithDetails((global::Portkey.Collection?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.Collection?(CollectionWithDetails @this) => @this.Collection;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CollectionWithDetails(global::Portkey.Collection? value)
         {
@@ -101,22 +101,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static CollectionWithDetails FromCollection(global::Portkey.Collection? value) => new CollectionWithDetails(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator CollectionWithDetails(global::Portkey.CollectionWithDetailsVariant2 value) => new CollectionWithDetails((global::Portkey.CollectionWithDetailsVariant2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.CollectionWithDetailsVariant2?(CollectionWithDetails @this) => @this.CollectionWithDetailsVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CollectionWithDetails(global::Portkey.CollectionWithDetailsVariant2? value)
         {
@@ -124,12 +124,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static CollectionWithDetails FromCollectionWithDetailsVariant2(global::Portkey.CollectionWithDetailsVariant2? value) => new CollectionWithDetails(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CollectionWithDetails(
             global::Portkey.Collection? collection,
@@ -141,23 +141,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             CollectionWithDetailsVariant2 as object ??
-            Collection as object 
+            Collection as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Collection?.ToString() ??
-            CollectionWithDetailsVariant2?.ToString() 
+            CollectionWithDetailsVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.Collection, TResult>? collection = null,
@@ -190,7 +190,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.Collection>? collection = null,
@@ -214,7 +214,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.Collection>? collection = null,
@@ -237,7 +237,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(CollectionWithDetails other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.Collection?>.Default.Equals(Collection, other.Collection) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.CollectionWithDetailsVariant2?>.Default.Equals(CollectionWithDetailsVariant2, other.CollectionWithDetailsVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.CollectionWithDetailsVariant2?>.Default.Equals(CollectionWithDetailsVariant2, other.CollectionWithDetailsVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(CollectionWithDetails obj1, CollectionWithDetails obj2)
         {
@@ -277,7 +277,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(CollectionWithDetails obj1, CollectionWithDetails obj2)
         {
@@ -285,7 +285,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

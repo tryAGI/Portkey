@@ -9,7 +9,7 @@ namespace Portkey
     public enum ChatCompletionRequestToolMessageRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tool,
     }

@@ -9,7 +9,7 @@ namespace Portkey
     public enum GetAnalyticsGroupsMetadataResponseDataItemObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnalyticsGroup,
     }

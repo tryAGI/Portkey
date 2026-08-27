@@ -4,24 +4,24 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class McpIntegrationWorkspacesListResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("data")]
         public global::System.Collections.Generic.IList<global::Portkey.McpIntegrationWorkspaceItem>? Data { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("global_workspace_access")]
         public object? GlobalWorkspaceAccess { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total")]
         public int? Total { get; set; }

@@ -9,13 +9,13 @@ namespace Portkey
     public sealed partial class CreateThreadAndRunRequestToolResources
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("code_interpreter")]
         public global::Portkey.CreateThreadAndRunRequestToolResourcesCodeInterpreter? CodeInterpreter { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("file_search")]
         public global::Portkey.CreateThreadAndRunRequestToolResourcesFileSearch? FileSearch { get; set; }

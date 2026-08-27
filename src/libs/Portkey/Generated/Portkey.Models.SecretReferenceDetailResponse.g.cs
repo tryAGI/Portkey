@@ -4,92 +4,92 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class SecretReferenceDetailResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         public global::System.Guid? Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("organisation_id")]
         public global::System.Guid? OrganisationId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         public string? Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("slug")]
         public string? Slug { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
         public string? Description { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("manager_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.SecretReferenceDetailResponseManagerTypeJsonConverter))]
         public global::Portkey.SecretReferenceDetailResponseManagerType? ManagerType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_path")]
         public string? SecretPath { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_key")]
         public string? SecretKey { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_all_workspaces")]
         public bool? AllowAllWorkspaces { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
         public global::System.Collections.Generic.Dictionary<string, string>? Tags { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.SecretReferenceDetailResponseStatusJsonConverter))]
         public global::Portkey.SecretReferenceDetailResponseStatus? Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_by")]
         public string? CreatedBy { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
         public global::System.DateTime? CreatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("last_updated_at")]
         public global::System.DateTime? LastUpdatedAt { get; set; }
@@ -101,7 +101,7 @@ namespace Portkey
         public object? AuthConfig { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("object")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.SecretReferenceDetailResponseObjectJsonConverter))]

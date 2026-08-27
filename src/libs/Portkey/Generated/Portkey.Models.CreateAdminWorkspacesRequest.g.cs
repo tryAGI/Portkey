@@ -9,37 +9,37 @@ namespace Portkey
     public sealed partial class CreateAdminWorkspacesRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         public string? Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
         public string? Description { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("defaults")]
         public global::Portkey.CreateAdminWorkspacesRequestDefaults? Defaults { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("users")]
         public global::System.Collections.Generic.IList<string>? Users { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("usage_limits")]
         public global::System.Collections.Generic.IList<global::Portkey.UsageLimits>? UsageLimits { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("rate_limits")]
         public global::System.Collections.Generic.IList<global::Portkey.RateLimits>? RateLimits { get; set; }

@@ -9,19 +9,19 @@ namespace Portkey
     public enum CreateChatCompletionFunctionResponseChoiceFinishReason
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContentFilter,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FunctionCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Length,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Stop,
     }

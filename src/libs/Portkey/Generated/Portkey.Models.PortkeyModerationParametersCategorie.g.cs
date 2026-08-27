@@ -4,52 +4,52 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PortkeyModerationParametersCategorie
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Harassment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HarassmentThreatening,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HateThreatening,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SelfHarm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SelfHarmInstructions,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SelfHarmIntent,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sexual,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SexualMinors,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Violence,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ViolenceGraphic,
     }

@@ -9,15 +9,15 @@ namespace Portkey
     public enum ApiKeyObjectCreationMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Api,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Auto,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ui,
     }

@@ -4,12 +4,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateSecretReferenceRequestAuthConfigDiscriminator
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("aws_auth_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.CreateSecretReferenceRequestAuthConfigDiscriminatorAwsAuthTypeJsonConverter))]

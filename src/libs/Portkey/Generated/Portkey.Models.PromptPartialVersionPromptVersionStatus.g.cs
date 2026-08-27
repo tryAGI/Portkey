@@ -4,16 +4,16 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PromptPartialVersionPromptVersionStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Active,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Archived,
     }

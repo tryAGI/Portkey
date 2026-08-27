@@ -9,23 +9,23 @@ namespace Portkey
     public enum MessageObjectIncompleteDetailsReason
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContentFilter,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MaxTokens,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RunCancelled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RunExpired,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RunFailed,
     }

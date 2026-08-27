@@ -5,12 +5,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct AuthConfig : global::System.IEquatable<AuthConfig>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.AwsAccessKeyAuthConfig? AccessKey { get; init; }
@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AccessKey))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsAccessKey => AccessKey != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickAccessKey(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.AwsAccessKeyAuthConfig PickAccessKey() => IsAccessKey
             ? AccessKey!
             : throw new global::System.InvalidOperationException($"Expected union variant 'AccessKey' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.AwsAssumedRoleAuthConfig? AssumedRole { get; init; }
@@ -56,7 +56,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AssumedRole))]
@@ -64,7 +64,7 @@ namespace Portkey
         public bool IsAssumedRole => AssumedRole != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickAssumedRole(
 #if NET6_0_OR_GREATER
@@ -77,14 +77,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.AwsAssumedRoleAuthConfig PickAssumedRole() => IsAssumedRole
             ? AssumedRole!
             : throw new global::System.InvalidOperationException($"Expected union variant 'AssumedRole' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.AwsServiceRoleAuthConfig? ServiceRole { get; init; }
@@ -93,7 +93,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ServiceRole))]
@@ -101,7 +101,7 @@ namespace Portkey
         public bool IsServiceRole => ServiceRole != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickServiceRole(
 #if NET6_0_OR_GREATER
@@ -114,14 +114,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.AwsServiceRoleAuthConfig PickServiceRole() => IsServiceRole
             ? ServiceRole!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ServiceRole' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.AzureEntraAuthConfig? AzureEntra { get; init; }
@@ -130,7 +130,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AzureEntra))]
@@ -138,7 +138,7 @@ namespace Portkey
         public bool IsAzureEntra => AzureEntra != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickAzureEntra(
 #if NET6_0_OR_GREATER
@@ -151,14 +151,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.AzureEntraAuthConfig PickAzureEntra() => IsAzureEntra
             ? AzureEntra!
             : throw new global::System.InvalidOperationException($"Expected union variant 'AzureEntra' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.AzureManagedAuthConfig? AzureManaged { get; init; }
@@ -167,7 +167,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AzureManaged))]
@@ -175,7 +175,7 @@ namespace Portkey
         public bool IsAzureManaged => AzureManaged != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickAzureManaged(
 #if NET6_0_OR_GREATER
@@ -188,14 +188,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.AzureManagedAuthConfig PickAzureManaged() => IsAzureManaged
             ? AzureManaged!
             : throw new global::System.InvalidOperationException($"Expected union variant 'AzureManaged' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.AzureDefaultAuthConfig? AzureDefault { get; init; }
@@ -204,7 +204,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AzureDefault))]
@@ -212,7 +212,7 @@ namespace Portkey
         public bool IsAzureDefault => AzureDefault != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickAzureDefault(
 #if NET6_0_OR_GREATER
@@ -225,14 +225,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.AzureDefaultAuthConfig PickAzureDefault() => IsAzureDefault
             ? AzureDefault!
             : throw new global::System.InvalidOperationException($"Expected union variant 'AzureDefault' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.HashicorpTokenAuthConfig? HashicorpToken { get; init; }
@@ -241,7 +241,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(HashicorpToken))]
@@ -249,7 +249,7 @@ namespace Portkey
         public bool IsHashicorpToken => HashicorpToken != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickHashicorpToken(
 #if NET6_0_OR_GREATER
@@ -262,14 +262,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.HashicorpTokenAuthConfig PickHashicorpToken() => IsHashicorpToken
             ? HashicorpToken!
             : throw new global::System.InvalidOperationException($"Expected union variant 'HashicorpToken' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.HashicorpAppRoleAuthConfig? HashicorpAppRole { get; init; }
@@ -278,7 +278,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(HashicorpAppRole))]
@@ -286,7 +286,7 @@ namespace Portkey
         public bool IsHashicorpAppRole => HashicorpAppRole != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickHashicorpAppRole(
 #if NET6_0_OR_GREATER
@@ -299,14 +299,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.HashicorpAppRoleAuthConfig PickHashicorpAppRole() => IsHashicorpAppRole
             ? HashicorpAppRole!
             : throw new global::System.InvalidOperationException($"Expected union variant 'HashicorpAppRole' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.HashicorpKubernetesAuthConfig? HashicorpKubernetes { get; init; }
@@ -315,7 +315,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(HashicorpKubernetes))]
@@ -323,7 +323,7 @@ namespace Portkey
         public bool IsHashicorpKubernetes => HashicorpKubernetes != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickHashicorpKubernetes(
 #if NET6_0_OR_GREATER
@@ -336,23 +336,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.HashicorpKubernetesAuthConfig PickHashicorpKubernetes() => IsHashicorpKubernetes
             ? HashicorpKubernetes!
             : throw new global::System.InvalidOperationException($"Expected union variant 'HashicorpKubernetes' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AuthConfig(global::Portkey.AwsAccessKeyAuthConfig value) => new AuthConfig((global::Portkey.AwsAccessKeyAuthConfig?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.AwsAccessKeyAuthConfig?(AuthConfig @this) => @this.AccessKey;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AuthConfig(global::Portkey.AwsAccessKeyAuthConfig? value)
         {
@@ -360,22 +360,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AuthConfig FromAccessKey(global::Portkey.AwsAccessKeyAuthConfig? value) => new AuthConfig(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AuthConfig(global::Portkey.AwsAssumedRoleAuthConfig value) => new AuthConfig((global::Portkey.AwsAssumedRoleAuthConfig?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.AwsAssumedRoleAuthConfig?(AuthConfig @this) => @this.AssumedRole;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AuthConfig(global::Portkey.AwsAssumedRoleAuthConfig? value)
         {
@@ -383,22 +383,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AuthConfig FromAssumedRole(global::Portkey.AwsAssumedRoleAuthConfig? value) => new AuthConfig(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AuthConfig(global::Portkey.AwsServiceRoleAuthConfig value) => new AuthConfig((global::Portkey.AwsServiceRoleAuthConfig?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.AwsServiceRoleAuthConfig?(AuthConfig @this) => @this.ServiceRole;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AuthConfig(global::Portkey.AwsServiceRoleAuthConfig? value)
         {
@@ -406,22 +406,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AuthConfig FromServiceRole(global::Portkey.AwsServiceRoleAuthConfig? value) => new AuthConfig(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AuthConfig(global::Portkey.AzureEntraAuthConfig value) => new AuthConfig((global::Portkey.AzureEntraAuthConfig?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.AzureEntraAuthConfig?(AuthConfig @this) => @this.AzureEntra;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AuthConfig(global::Portkey.AzureEntraAuthConfig? value)
         {
@@ -429,22 +429,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AuthConfig FromAzureEntra(global::Portkey.AzureEntraAuthConfig? value) => new AuthConfig(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AuthConfig(global::Portkey.AzureManagedAuthConfig value) => new AuthConfig((global::Portkey.AzureManagedAuthConfig?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.AzureManagedAuthConfig?(AuthConfig @this) => @this.AzureManaged;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AuthConfig(global::Portkey.AzureManagedAuthConfig? value)
         {
@@ -452,22 +452,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AuthConfig FromAzureManaged(global::Portkey.AzureManagedAuthConfig? value) => new AuthConfig(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AuthConfig(global::Portkey.AzureDefaultAuthConfig value) => new AuthConfig((global::Portkey.AzureDefaultAuthConfig?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.AzureDefaultAuthConfig?(AuthConfig @this) => @this.AzureDefault;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AuthConfig(global::Portkey.AzureDefaultAuthConfig? value)
         {
@@ -475,22 +475,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AuthConfig FromAzureDefault(global::Portkey.AzureDefaultAuthConfig? value) => new AuthConfig(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AuthConfig(global::Portkey.HashicorpTokenAuthConfig value) => new AuthConfig((global::Portkey.HashicorpTokenAuthConfig?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.HashicorpTokenAuthConfig?(AuthConfig @this) => @this.HashicorpToken;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AuthConfig(global::Portkey.HashicorpTokenAuthConfig? value)
         {
@@ -498,22 +498,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AuthConfig FromHashicorpToken(global::Portkey.HashicorpTokenAuthConfig? value) => new AuthConfig(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AuthConfig(global::Portkey.HashicorpAppRoleAuthConfig value) => new AuthConfig((global::Portkey.HashicorpAppRoleAuthConfig?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.HashicorpAppRoleAuthConfig?(AuthConfig @this) => @this.HashicorpAppRole;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AuthConfig(global::Portkey.HashicorpAppRoleAuthConfig? value)
         {
@@ -521,22 +521,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AuthConfig FromHashicorpAppRole(global::Portkey.HashicorpAppRoleAuthConfig? value) => new AuthConfig(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AuthConfig(global::Portkey.HashicorpKubernetesAuthConfig value) => new AuthConfig((global::Portkey.HashicorpKubernetesAuthConfig?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.HashicorpKubernetesAuthConfig?(AuthConfig @this) => @this.HashicorpKubernetes;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AuthConfig(global::Portkey.HashicorpKubernetesAuthConfig? value)
         {
@@ -544,12 +544,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AuthConfig FromHashicorpKubernetes(global::Portkey.HashicorpKubernetesAuthConfig? value) => new AuthConfig(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AuthConfig(
             global::Portkey.AwsAccessKeyAuthConfig? accessKey,
@@ -575,7 +575,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             HashicorpKubernetes as object ??
@@ -586,11 +586,11 @@ namespace Portkey
             AzureEntra as object ??
             ServiceRole as object ??
             AssumedRole as object ??
-            AccessKey as object 
+            AccessKey as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             AccessKey?.ToString() ??
@@ -601,11 +601,11 @@ namespace Portkey
             AzureDefault?.ToString() ??
             HashicorpToken?.ToString() ??
             HashicorpAppRole?.ToString() ??
-            HashicorpKubernetes?.ToString() 
+            HashicorpKubernetes?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -613,7 +613,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.AwsAccessKeyAuthConfig, TResult>? accessKey = null,
@@ -673,7 +673,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.AwsAccessKeyAuthConfig>? accessKey = null,
@@ -739,7 +739,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.AwsAccessKeyAuthConfig>? accessKey = null,
@@ -797,7 +797,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -832,7 +832,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(AuthConfig other)
         {
@@ -845,12 +845,12 @@ namespace Portkey
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.AzureDefaultAuthConfig?>.Default.Equals(AzureDefault, other.AzureDefault) &&
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.HashicorpTokenAuthConfig?>.Default.Equals(HashicorpToken, other.HashicorpToken) &&
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.HashicorpAppRoleAuthConfig?>.Default.Equals(HashicorpAppRole, other.HashicorpAppRole) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.HashicorpKubernetesAuthConfig?>.Default.Equals(HashicorpKubernetes, other.HashicorpKubernetes) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.HashicorpKubernetesAuthConfig?>.Default.Equals(HashicorpKubernetes, other.HashicorpKubernetes)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(AuthConfig obj1, AuthConfig obj2)
         {
@@ -858,7 +858,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(AuthConfig obj1, AuthConfig obj2)
         {
@@ -866,7 +866,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

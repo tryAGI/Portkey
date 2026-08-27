@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetAnalyticsGraphsRequestsRescuedResponseDataPoint
     {
@@ -16,7 +16,7 @@ namespace Portkey
         public required global::System.DateTime Timestamp { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("retry")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -9,7 +9,7 @@ namespace Portkey
     public sealed partial class CreateAdminWorkspacesUsersRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("users")]
         public global::System.Collections.Generic.IList<global::Portkey.CreateAdminWorkspacesUsersRequestUser>? Users { get; set; }

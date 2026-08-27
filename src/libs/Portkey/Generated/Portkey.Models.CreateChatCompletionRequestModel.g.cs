@@ -4,128 +4,128 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateChatCompletionRequestModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt35Turbo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt35Turbo0125,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt35Turbo0301,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt35Turbo0613,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt35Turbo1106,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt35Turbo16k,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt35Turbo16k0613,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt40125Preview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt40314,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt40613,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt41106Preview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt432k,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt432k0314,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt432k0613,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4Turbo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4Turbo20240409,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4TurboPreview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4VisionPreview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4o20240513,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt4oMini,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5Mini,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpt5Nano,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         O1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         O1Mini,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         O3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         O3Mini,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         O4Mini,
     }

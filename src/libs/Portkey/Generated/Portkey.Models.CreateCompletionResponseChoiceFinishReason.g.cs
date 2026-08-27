@@ -11,15 +11,15 @@ namespace Portkey
     public enum CreateCompletionResponseChoiceFinishReason
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContentFilter,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Length,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Stop,
     }

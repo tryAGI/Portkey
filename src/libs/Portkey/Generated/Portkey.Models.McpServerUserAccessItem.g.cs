@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class McpServerUserAccessItem
     {
@@ -15,31 +15,31 @@ namespace Portkey
         public string? UserId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("first_name")]
         public string? FirstName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("last_name")]
         public string? LastName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("enabled")]
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_override")]
         public bool? HasOverride { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("connection_status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.McpServerUserAccessItemConnectionStatusJsonConverter))]

@@ -37,7 +37,7 @@ namespace Portkey
         public required int ContentIndex { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("part")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.OutputContentJsonConverter))]

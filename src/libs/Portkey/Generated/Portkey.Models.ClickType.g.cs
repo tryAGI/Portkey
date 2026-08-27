@@ -11,7 +11,7 @@ namespace Portkey
     public enum ClickType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Click,
     }

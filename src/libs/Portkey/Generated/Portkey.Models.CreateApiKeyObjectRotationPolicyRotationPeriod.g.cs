@@ -10,11 +10,11 @@ namespace Portkey
     public enum CreateApiKeyObjectRotationPolicyRotationPeriod
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Monthly,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Weekly,
     }

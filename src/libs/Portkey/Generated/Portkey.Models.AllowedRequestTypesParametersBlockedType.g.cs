@@ -4,128 +4,128 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AllowedRequestTypesParametersBlockedType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CancelBatch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CancelFinetune,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChatComplete,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Complete,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreateBatch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreateFinetune,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreateModelResponse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreateSpeech,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreateTranscription,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreateTranslation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeleteFile,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeleteModelResponse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Embed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GetBatchOutput,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GetModelResponse,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageGenerate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ListBatches,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ListFiles,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ListFinetunes,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ListResponseInputItems,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Messages,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Moderate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Proxy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Realtime,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rerank,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RetrieveBatch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RetrieveFile,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RetrieveFileContent,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RetrieveFinetune,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UploadFile,
     }

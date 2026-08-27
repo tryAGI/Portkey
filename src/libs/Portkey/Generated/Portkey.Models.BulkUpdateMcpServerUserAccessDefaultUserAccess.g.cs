@@ -9,11 +9,11 @@ namespace Portkey
     public enum BulkUpdateMcpServerUserAccessDefaultUserAccess
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Allow,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deny,
     }

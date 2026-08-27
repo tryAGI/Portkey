@@ -4,36 +4,36 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AcuvityScanParametersSecretsCategorie
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AwsSecretKey,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Credentials,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Github,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Jwt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Openai,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PrivateKey,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Stripe,
     }

@@ -4,16 +4,16 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum RateLimitsType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Requests,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tokens,
     }

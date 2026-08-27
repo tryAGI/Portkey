@@ -9,103 +9,103 @@ namespace Portkey
     public enum ContainsCodeParametersFormat
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         C,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         C_,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CPlusPlus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Css,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Dockerfile,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Go,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Html,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Json,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Java,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         JavaScript,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Kotlin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Markdown,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Php,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Perl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Python,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         R,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ruby,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rust,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sql,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Scala,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Shell,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Swift,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TypeScript,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Xml,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Yaml,
     }

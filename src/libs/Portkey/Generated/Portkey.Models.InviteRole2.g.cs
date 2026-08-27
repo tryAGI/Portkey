@@ -4,16 +4,16 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum InviteRole2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Admin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Member,
     }

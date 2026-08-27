@@ -15,15 +15,15 @@ namespace Portkey
     public enum ReasoningEffort
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         High,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Low,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Medium,
     }

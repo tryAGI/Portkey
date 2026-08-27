@@ -10,7 +10,7 @@ namespace Portkey
     public enum CreateRerankResponseObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         List,
     }

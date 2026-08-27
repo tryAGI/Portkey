@@ -9,11 +9,11 @@ namespace Portkey
     public enum AssistantsApiResponseFormatOptionEnum
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Auto,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         None,
     }

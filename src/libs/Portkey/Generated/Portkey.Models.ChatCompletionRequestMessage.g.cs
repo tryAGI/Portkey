@@ -5,12 +5,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct ChatCompletionRequestMessage : global::System.IEquatable<ChatCompletionRequestMessage>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionRequestSystemMessage? SystemMessage { get; init; }
@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(SystemMessage))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsSystemMessage => SystemMessage != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickSystemMessage(
 #if NET6_0_OR_GREATER
@@ -40,7 +40,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ChatCompletionRequestSystemMessage PickSystemMessage() => IsSystemMessage
             ? SystemMessage!
@@ -56,7 +56,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(DeveloperMessage))]
@@ -64,7 +64,7 @@ namespace Portkey
         public bool IsDeveloperMessage => DeveloperMessage != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickDeveloperMessage(
 #if NET6_0_OR_GREATER
@@ -77,14 +77,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ChatCompletionRequestDeveloperMessage PickDeveloperMessage() => IsDeveloperMessage
             ? DeveloperMessage!
             : throw new global::System.InvalidOperationException($"Expected union variant 'DeveloperMessage' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionRequestUserMessage? UserMessage { get; init; }
@@ -93,7 +93,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UserMessage))]
@@ -101,7 +101,7 @@ namespace Portkey
         public bool IsUserMessage => UserMessage != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickUserMessage(
 #if NET6_0_OR_GREATER
@@ -114,14 +114,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ChatCompletionRequestUserMessage PickUserMessage() => IsUserMessage
             ? UserMessage!
             : throw new global::System.InvalidOperationException($"Expected union variant 'UserMessage' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionRequestAssistantMessage? AssistantMessage { get; init; }
@@ -130,7 +130,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AssistantMessage))]
@@ -138,7 +138,7 @@ namespace Portkey
         public bool IsAssistantMessage => AssistantMessage != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickAssistantMessage(
 #if NET6_0_OR_GREATER
@@ -151,14 +151,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ChatCompletionRequestAssistantMessage PickAssistantMessage() => IsAssistantMessage
             ? AssistantMessage!
             : throw new global::System.InvalidOperationException($"Expected union variant 'AssistantMessage' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionRequestToolMessage? ToolMessage { get; init; }
@@ -167,7 +167,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ToolMessage))]
@@ -175,7 +175,7 @@ namespace Portkey
         public bool IsToolMessage => ToolMessage != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickToolMessage(
 #if NET6_0_OR_GREATER
@@ -188,14 +188,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ChatCompletionRequestToolMessage PickToolMessage() => IsToolMessage
             ? ToolMessage!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ToolMessage' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionRequestFunctionMessage? FunctionMessage { get; init; }
@@ -204,7 +204,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FunctionMessage))]
@@ -212,7 +212,7 @@ namespace Portkey
         public bool IsFunctionMessage => FunctionMessage != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickFunctionMessage(
 #if NET6_0_OR_GREATER
@@ -225,23 +225,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ChatCompletionRequestFunctionMessage PickFunctionMessage() => IsFunctionMessage
             ? FunctionMessage!
             : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionMessage' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ChatCompletionRequestMessage(global::Portkey.ChatCompletionRequestSystemMessage value) => new ChatCompletionRequestMessage((global::Portkey.ChatCompletionRequestSystemMessage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ChatCompletionRequestSystemMessage?(ChatCompletionRequestMessage @this) => @this.SystemMessage;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionRequestMessage(global::Portkey.ChatCompletionRequestSystemMessage? value)
         {
@@ -249,22 +249,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ChatCompletionRequestMessage FromSystemMessage(global::Portkey.ChatCompletionRequestSystemMessage? value) => new ChatCompletionRequestMessage(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ChatCompletionRequestMessage(global::Portkey.ChatCompletionRequestDeveloperMessage value) => new ChatCompletionRequestMessage((global::Portkey.ChatCompletionRequestDeveloperMessage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ChatCompletionRequestDeveloperMessage?(ChatCompletionRequestMessage @this) => @this.DeveloperMessage;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionRequestMessage(global::Portkey.ChatCompletionRequestDeveloperMessage? value)
         {
@@ -272,22 +272,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ChatCompletionRequestMessage FromDeveloperMessage(global::Portkey.ChatCompletionRequestDeveloperMessage? value) => new ChatCompletionRequestMessage(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ChatCompletionRequestMessage(global::Portkey.ChatCompletionRequestUserMessage value) => new ChatCompletionRequestMessage((global::Portkey.ChatCompletionRequestUserMessage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ChatCompletionRequestUserMessage?(ChatCompletionRequestMessage @this) => @this.UserMessage;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionRequestMessage(global::Portkey.ChatCompletionRequestUserMessage? value)
         {
@@ -295,22 +295,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ChatCompletionRequestMessage FromUserMessage(global::Portkey.ChatCompletionRequestUserMessage? value) => new ChatCompletionRequestMessage(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ChatCompletionRequestMessage(global::Portkey.ChatCompletionRequestAssistantMessage value) => new ChatCompletionRequestMessage((global::Portkey.ChatCompletionRequestAssistantMessage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ChatCompletionRequestAssistantMessage?(ChatCompletionRequestMessage @this) => @this.AssistantMessage;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionRequestMessage(global::Portkey.ChatCompletionRequestAssistantMessage? value)
         {
@@ -318,22 +318,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ChatCompletionRequestMessage FromAssistantMessage(global::Portkey.ChatCompletionRequestAssistantMessage? value) => new ChatCompletionRequestMessage(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ChatCompletionRequestMessage(global::Portkey.ChatCompletionRequestToolMessage value) => new ChatCompletionRequestMessage((global::Portkey.ChatCompletionRequestToolMessage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ChatCompletionRequestToolMessage?(ChatCompletionRequestMessage @this) => @this.ToolMessage;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionRequestMessage(global::Portkey.ChatCompletionRequestToolMessage? value)
         {
@@ -341,22 +341,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ChatCompletionRequestMessage FromToolMessage(global::Portkey.ChatCompletionRequestToolMessage? value) => new ChatCompletionRequestMessage(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ChatCompletionRequestMessage(global::Portkey.ChatCompletionRequestFunctionMessage value) => new ChatCompletionRequestMessage((global::Portkey.ChatCompletionRequestFunctionMessage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ChatCompletionRequestFunctionMessage?(ChatCompletionRequestMessage @this) => @this.FunctionMessage;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionRequestMessage(global::Portkey.ChatCompletionRequestFunctionMessage? value)
         {
@@ -364,12 +364,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ChatCompletionRequestMessage FromFunctionMessage(global::Portkey.ChatCompletionRequestFunctionMessage? value) => new ChatCompletionRequestMessage(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionRequestMessage(
             global::Portkey.ChatCompletionRequestSystemMessage? systemMessage,
@@ -389,7 +389,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             FunctionMessage as object ??
@@ -397,11 +397,11 @@ namespace Portkey
             AssistantMessage as object ??
             UserMessage as object ??
             DeveloperMessage as object ??
-            SystemMessage as object 
+            SystemMessage as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             SystemMessage?.ToString() ??
@@ -409,11 +409,11 @@ namespace Portkey
             UserMessage?.ToString() ??
             AssistantMessage?.ToString() ??
             ToolMessage?.ToString() ??
-            FunctionMessage?.ToString() 
+            FunctionMessage?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -421,7 +421,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.ChatCompletionRequestSystemMessage, TResult>? systemMessage = null,
@@ -466,7 +466,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.ChatCompletionRequestSystemMessage>? systemMessage = null,
@@ -514,7 +514,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.ChatCompletionRequestSystemMessage>? systemMessage = null,
@@ -557,7 +557,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -586,7 +586,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(ChatCompletionRequestMessage other)
         {
@@ -596,12 +596,12 @@ namespace Portkey
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.ChatCompletionRequestUserMessage?>.Default.Equals(UserMessage, other.UserMessage) &&
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.ChatCompletionRequestAssistantMessage?>.Default.Equals(AssistantMessage, other.AssistantMessage) &&
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.ChatCompletionRequestToolMessage?>.Default.Equals(ToolMessage, other.ToolMessage) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.ChatCompletionRequestFunctionMessage?>.Default.Equals(FunctionMessage, other.FunctionMessage) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.ChatCompletionRequestFunctionMessage?>.Default.Equals(FunctionMessage, other.FunctionMessage)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(ChatCompletionRequestMessage obj1, ChatCompletionRequestMessage obj2)
         {
@@ -609,7 +609,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(ChatCompletionRequestMessage obj1, ChatCompletionRequestMessage obj2)
         {
@@ -617,7 +617,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

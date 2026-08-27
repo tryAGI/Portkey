@@ -10,31 +10,31 @@ namespace Portkey
     public enum AcuvityScanParametersLanguageValues
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Chinese,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         English,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         French,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         German,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gibberish,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Japanese,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Spanish,
     }

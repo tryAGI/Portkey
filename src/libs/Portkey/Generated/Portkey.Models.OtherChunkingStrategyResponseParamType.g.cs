@@ -9,7 +9,7 @@ namespace Portkey
     public enum OtherChunkingStrategyResponseParamType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Other,
     }

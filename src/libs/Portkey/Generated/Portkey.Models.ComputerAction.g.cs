@@ -5,7 +5,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct ComputerAction : global::System.IEquatable<ComputerAction>
     {
@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Click))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsClick => Click != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickClick(
 #if NET6_0_OR_GREATER
@@ -40,7 +40,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.Click PickClick() => IsClick
             ? Click!
@@ -56,7 +56,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(DoubleClick))]
@@ -64,7 +64,7 @@ namespace Portkey
         public bool IsDoubleClick => DoubleClick != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickDoubleClick(
 #if NET6_0_OR_GREATER
@@ -77,7 +77,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.DoubleClick PickDoubleClick() => IsDoubleClick
             ? DoubleClick!
@@ -93,7 +93,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Drag))]
@@ -101,7 +101,7 @@ namespace Portkey
         public bool IsDrag => Drag != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickDrag(
 #if NET6_0_OR_GREATER
@@ -114,7 +114,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.Drag PickDrag() => IsDrag
             ? Drag!
@@ -130,7 +130,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(KeyPress))]
@@ -138,7 +138,7 @@ namespace Portkey
         public bool IsKeyPress => KeyPress != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickKeyPress(
 #if NET6_0_OR_GREATER
@@ -151,7 +151,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.KeyPress PickKeyPress() => IsKeyPress
             ? KeyPress!
@@ -167,7 +167,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Move))]
@@ -175,7 +175,7 @@ namespace Portkey
         public bool IsMove => Move != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickMove(
 #if NET6_0_OR_GREATER
@@ -188,7 +188,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.Move PickMove() => IsMove
             ? Move!
@@ -204,7 +204,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Screenshot))]
@@ -212,7 +212,7 @@ namespace Portkey
         public bool IsScreenshot => Screenshot != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickScreenshot(
 #if NET6_0_OR_GREATER
@@ -225,7 +225,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.Screenshot PickScreenshot() => IsScreenshot
             ? Screenshot!
@@ -241,7 +241,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Scroll))]
@@ -249,7 +249,7 @@ namespace Portkey
         public bool IsScroll => Scroll != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickScroll(
 #if NET6_0_OR_GREATER
@@ -262,7 +262,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.Scroll PickScroll() => IsScroll
             ? Scroll!
@@ -278,7 +278,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Type))]
@@ -286,7 +286,7 @@ namespace Portkey
         public bool IsType => Type != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickType(
 #if NET6_0_OR_GREATER
@@ -299,7 +299,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.Type PickType() => IsType
             ? Type!
@@ -315,7 +315,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Wait))]
@@ -323,7 +323,7 @@ namespace Portkey
         public bool IsWait => Wait != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickWait(
 #if NET6_0_OR_GREATER
@@ -336,23 +336,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.Wait PickWait() => IsWait
             ? Wait!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Wait' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ComputerAction(global::Portkey.Click value) => new ComputerAction((global::Portkey.Click?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.Click?(ComputerAction @this) => @this.Click;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ComputerAction(global::Portkey.Click? value)
         {
@@ -360,22 +360,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ComputerAction FromClick(global::Portkey.Click? value) => new ComputerAction(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ComputerAction(global::Portkey.DoubleClick value) => new ComputerAction((global::Portkey.DoubleClick?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.DoubleClick?(ComputerAction @this) => @this.DoubleClick;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ComputerAction(global::Portkey.DoubleClick? value)
         {
@@ -383,22 +383,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ComputerAction FromDoubleClick(global::Portkey.DoubleClick? value) => new ComputerAction(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ComputerAction(global::Portkey.Drag value) => new ComputerAction((global::Portkey.Drag?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.Drag?(ComputerAction @this) => @this.Drag;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ComputerAction(global::Portkey.Drag? value)
         {
@@ -406,22 +406,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ComputerAction FromDrag(global::Portkey.Drag? value) => new ComputerAction(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ComputerAction(global::Portkey.KeyPress value) => new ComputerAction((global::Portkey.KeyPress?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.KeyPress?(ComputerAction @this) => @this.KeyPress;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ComputerAction(global::Portkey.KeyPress? value)
         {
@@ -429,22 +429,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ComputerAction FromKeyPress(global::Portkey.KeyPress? value) => new ComputerAction(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ComputerAction(global::Portkey.Move value) => new ComputerAction((global::Portkey.Move?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.Move?(ComputerAction @this) => @this.Move;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ComputerAction(global::Portkey.Move? value)
         {
@@ -452,22 +452,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ComputerAction FromMove(global::Portkey.Move? value) => new ComputerAction(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ComputerAction(global::Portkey.Screenshot value) => new ComputerAction((global::Portkey.Screenshot?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.Screenshot?(ComputerAction @this) => @this.Screenshot;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ComputerAction(global::Portkey.Screenshot? value)
         {
@@ -475,22 +475,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ComputerAction FromScreenshot(global::Portkey.Screenshot? value) => new ComputerAction(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ComputerAction(global::Portkey.Scroll value) => new ComputerAction((global::Portkey.Scroll?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.Scroll?(ComputerAction @this) => @this.Scroll;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ComputerAction(global::Portkey.Scroll? value)
         {
@@ -498,22 +498,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ComputerAction FromScroll(global::Portkey.Scroll? value) => new ComputerAction(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ComputerAction(global::Portkey.Type value) => new ComputerAction((global::Portkey.Type?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.Type?(ComputerAction @this) => @this.Type;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ComputerAction(global::Portkey.Type? value)
         {
@@ -521,22 +521,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ComputerAction FromType(global::Portkey.Type? value) => new ComputerAction(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ComputerAction(global::Portkey.Wait value) => new ComputerAction((global::Portkey.Wait?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.Wait?(ComputerAction @this) => @this.Wait;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ComputerAction(global::Portkey.Wait? value)
         {
@@ -544,12 +544,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ComputerAction FromWait(global::Portkey.Wait? value) => new ComputerAction(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ComputerAction(
             global::Portkey.Click? click,
@@ -575,7 +575,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Wait as object ??
@@ -586,11 +586,11 @@ namespace Portkey
             KeyPress as object ??
             Drag as object ??
             DoubleClick as object ??
-            Click as object 
+            Click as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Click?.ToString() ??
@@ -601,11 +601,11 @@ namespace Portkey
             Screenshot?.ToString() ??
             Scroll?.ToString() ??
             Type?.ToString() ??
-            Wait?.ToString() 
+            Wait?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -613,7 +613,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.Click, TResult>? click = null,
@@ -673,7 +673,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.Click>? click = null,
@@ -739,7 +739,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.Click>? click = null,
@@ -797,7 +797,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -832,7 +832,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(ComputerAction other)
         {
@@ -845,12 +845,12 @@ namespace Portkey
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.Screenshot?>.Default.Equals(Screenshot, other.Screenshot) &&
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.Scroll?>.Default.Equals(Scroll, other.Scroll) &&
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.Type?>.Default.Equals(Type, other.Type) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.Wait?>.Default.Equals(Wait, other.Wait) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.Wait?>.Default.Equals(Wait, other.Wait)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(ComputerAction obj1, ComputerAction obj2)
         {
@@ -858,7 +858,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(ComputerAction obj1, ComputerAction obj2)
         {
@@ -866,7 +866,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

@@ -9,7 +9,7 @@ namespace Portkey
     public enum TextResponseFormatJsonSchemaType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         JsonSchema,
     }

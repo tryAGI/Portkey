@@ -9,7 +9,7 @@ namespace Portkey
     public enum ResponseCreatedEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseCreated,
     }

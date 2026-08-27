@@ -24,7 +24,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Enum))]
@@ -32,7 +32,7 @@ namespace Portkey
         public bool IsEnum => Enum != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickEnum(
 #if NET6_0_OR_GREATER
@@ -45,7 +45,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ChatCompletionToolChoiceOptionEnum PickEnum() => IsEnum
             ? Enum!.Value
@@ -61,7 +61,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Named))]
@@ -69,7 +69,7 @@ namespace Portkey
         public bool IsNamed => Named != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickNamed(
 #if NET6_0_OR_GREATER
@@ -82,23 +82,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ChatCompletionNamedToolChoice PickNamed() => IsNamed
             ? Named!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Named' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ChatCompletionToolChoiceOption(global::Portkey.ChatCompletionToolChoiceOptionEnum value) => new ChatCompletionToolChoiceOption((global::Portkey.ChatCompletionToolChoiceOptionEnum?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ChatCompletionToolChoiceOptionEnum?(ChatCompletionToolChoiceOption @this) => @this.Enum;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionToolChoiceOption(global::Portkey.ChatCompletionToolChoiceOptionEnum? value)
         {
@@ -106,22 +106,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ChatCompletionToolChoiceOption FromEnum(global::Portkey.ChatCompletionToolChoiceOptionEnum? value) => new ChatCompletionToolChoiceOption(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ChatCompletionToolChoiceOption(global::Portkey.ChatCompletionNamedToolChoice value) => new ChatCompletionToolChoiceOption((global::Portkey.ChatCompletionNamedToolChoice?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ChatCompletionNamedToolChoice?(ChatCompletionToolChoiceOption @this) => @this.Named;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionToolChoiceOption(global::Portkey.ChatCompletionNamedToolChoice? value)
         {
@@ -129,12 +129,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ChatCompletionToolChoiceOption FromNamed(global::Portkey.ChatCompletionNamedToolChoice? value) => new ChatCompletionToolChoiceOption(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionToolChoiceOption(
             global::Portkey.ChatCompletionToolChoiceOptionEnum? @enum,
@@ -146,23 +146,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Named as object ??
-            Enum as object 
+            Enum as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Enum?.ToValueString() ??
-            Named?.ToString() 
+            Named?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -170,7 +170,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.ChatCompletionToolChoiceOptionEnum?, TResult>? @enum = null,
@@ -195,7 +195,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.ChatCompletionToolChoiceOptionEnum?>? @enum = null,
@@ -219,7 +219,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.ChatCompletionToolChoiceOptionEnum?>? @enum = null,
@@ -242,7 +242,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -263,18 +263,18 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(ChatCompletionToolChoiceOption other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.ChatCompletionToolChoiceOptionEnum?>.Default.Equals(Enum, other.Enum) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.ChatCompletionNamedToolChoice?>.Default.Equals(Named, other.Named) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.ChatCompletionNamedToolChoice?>.Default.Equals(Named, other.Named)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(ChatCompletionToolChoiceOption obj1, ChatCompletionToolChoiceOption obj2)
         {
@@ -282,7 +282,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(ChatCompletionToolChoiceOption obj1, ChatCompletionToolChoiceOption obj2)
         {
@@ -290,7 +290,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

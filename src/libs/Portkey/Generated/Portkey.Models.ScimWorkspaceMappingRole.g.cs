@@ -9,15 +9,15 @@ namespace Portkey
     public enum ScimWorkspaceMappingRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Admin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Manager,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Member,
     }

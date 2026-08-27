@@ -4,16 +4,16 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum McpServerUserAccessListResponseDefaultUserAccess
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Allow,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deny,
     }

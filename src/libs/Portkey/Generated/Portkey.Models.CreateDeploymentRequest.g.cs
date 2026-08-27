@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateDeploymentRequest
     {
@@ -15,7 +15,7 @@ namespace Portkey
         public global::System.Guid? OrganisationId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -47,7 +47,7 @@ namespace Portkey
         public bool? IsDefault { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("auth_settings")]
         public global::Portkey.DeploymentAuthSettingsInput? AuthSettings { get; set; }

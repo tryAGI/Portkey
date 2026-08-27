@@ -9,7 +9,7 @@ namespace Portkey
     public enum ChatCompletionRequestMessageContentPartTextType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
     }

@@ -4,16 +4,16 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum DeploymentListItemType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NonProduction,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Production,
     }

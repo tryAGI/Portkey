@@ -9,7 +9,7 @@ namespace Portkey
     public enum ExportTaskResponseObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Export,
     }

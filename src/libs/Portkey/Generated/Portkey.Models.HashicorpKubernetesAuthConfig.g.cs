@@ -4,33 +4,33 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class HashicorpKubernetesAuthConfig
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("vault_auth_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.HashicorpKubernetesAuthConfigVaultAuthTypeJsonConverter))]
         public global::Portkey.HashicorpKubernetesAuthConfigVaultAuthType VaultAuthType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("vault_addr")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string VaultAddr { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("vault_role")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string VaultRole { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("vault_namespace")]
         public string? VaultNamespace { get; set; }

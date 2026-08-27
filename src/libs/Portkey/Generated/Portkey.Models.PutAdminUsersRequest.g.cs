@@ -9,7 +9,7 @@ namespace Portkey
     public sealed partial class PutAdminUsersRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.PutAdminUsersRequestRoleJsonConverter))]

@@ -9,7 +9,7 @@ namespace Portkey
     public enum ChatCompletionMessageToolCallChunkType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Function,
     }

@@ -23,7 +23,7 @@ namespace Portkey
         public global::Portkey.MessageDeltaContentTextObjectType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("text")]
         public global::Portkey.MessageDeltaContentTextObjectText? Text { get; set; }

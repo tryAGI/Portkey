@@ -10,11 +10,11 @@ namespace Portkey
     public enum CreateChatCompletionRequestThinkingType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Disabled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Enabled,
     }

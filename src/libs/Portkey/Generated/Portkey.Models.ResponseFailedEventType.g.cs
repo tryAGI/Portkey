@@ -9,7 +9,7 @@ namespace Portkey
     public enum ResponseFailedEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseFailed,
     }

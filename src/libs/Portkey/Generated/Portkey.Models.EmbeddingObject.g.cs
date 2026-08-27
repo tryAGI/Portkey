@@ -9,7 +9,7 @@ namespace Portkey
     public enum EmbeddingObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Embedding,
     }

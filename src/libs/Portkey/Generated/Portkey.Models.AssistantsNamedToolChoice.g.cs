@@ -17,7 +17,7 @@ namespace Portkey
         public required global::Portkey.AssistantsNamedToolChoiceType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("function")]
         public global::Portkey.AssistantsNamedToolChoiceFunction? Function { get; set; }

@@ -4,20 +4,20 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum SecretReferenceListItemManagerType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AwsSm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AzureKv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HashicorpVault,
     }

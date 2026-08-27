@@ -4,20 +4,20 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum FineTuningJobEventLevel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Info,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Warn,
     }

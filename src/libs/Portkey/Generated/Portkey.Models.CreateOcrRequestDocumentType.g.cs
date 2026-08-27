@@ -10,11 +10,11 @@ namespace Portkey
     public enum CreateOcrRequestDocumentType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DocumentUrl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageUrl,
     }

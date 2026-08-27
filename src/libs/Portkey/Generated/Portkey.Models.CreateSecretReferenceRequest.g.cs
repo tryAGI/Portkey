@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateSecretReferenceRequest
     {
@@ -15,7 +15,7 @@ namespace Portkey
         public global::System.Guid? OrganisationId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -28,13 +28,13 @@ namespace Portkey
         public string? Slug { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
         public string? Description { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("manager_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.CreateSecretReferenceRequestManagerTypeJsonConverter))]
@@ -42,7 +42,7 @@ namespace Portkey
         public required global::Portkey.CreateSecretReferenceRequestManagerType ManagerType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("auth_config")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.AuthConfigJsonConverter))]
@@ -50,14 +50,14 @@ namespace Portkey
         public required global::Portkey.AuthConfig AuthConfig { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_path")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string SecretPath { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_key")]
         public string? SecretKey { get; set; }
@@ -76,7 +76,7 @@ namespace Portkey
         public global::System.Collections.Generic.IList<string>? AllowedWorkspaces { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
         public global::System.Collections.Generic.Dictionary<string, string>? Tags { get; set; }

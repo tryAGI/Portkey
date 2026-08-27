@@ -11,7 +11,7 @@ namespace Portkey
     public enum TypeType1
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Type,
     }

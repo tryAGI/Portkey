@@ -9,7 +9,7 @@ namespace Portkey
     public enum ResponseTextDeltaEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseOutputTextDelta,
     }

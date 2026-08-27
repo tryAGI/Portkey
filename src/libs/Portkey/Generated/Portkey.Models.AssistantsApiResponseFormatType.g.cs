@@ -11,11 +11,11 @@ namespace Portkey
     public enum AssistantsApiResponseFormatType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         JsonObject,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
     }

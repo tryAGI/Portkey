@@ -4,20 +4,20 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum WorkspaceInviteType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Add,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Remove,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Update,
     }

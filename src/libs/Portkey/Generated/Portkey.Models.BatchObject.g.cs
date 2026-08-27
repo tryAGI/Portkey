@@ -9,7 +9,7 @@ namespace Portkey
     public enum BatchObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Batch,
     }

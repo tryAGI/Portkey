@@ -9,7 +9,7 @@ namespace Portkey
     public enum FineTuningJobCheckpointObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FineTuningJobCheckpoint,
     }

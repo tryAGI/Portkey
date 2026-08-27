@@ -9,15 +9,15 @@ namespace Portkey
     public enum CreateScimWorkspacesRequestRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Admin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Manager,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Member,
     }

@@ -4,16 +4,16 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum InputItemDiscriminatorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ItemReference,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Message,
     }

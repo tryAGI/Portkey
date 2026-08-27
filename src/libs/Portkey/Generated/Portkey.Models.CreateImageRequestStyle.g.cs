@@ -11,11 +11,11 @@ namespace Portkey
     public enum CreateImageRequestStyle
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Natural,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vivid,
     }

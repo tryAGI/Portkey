@@ -5,12 +5,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct GuardrailDetails : global::System.IEquatable<GuardrailDetails>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.GuardrailSummary? Summary { get; init; }
@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Summary))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsSummary => Summary != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickSummary(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.GuardrailSummary PickSummary() => IsSummary
             ? Summary!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Summary' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.GuardrailDetailsVariant2? GuardrailDetailsVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(GuardrailDetailsVariant2))]
@@ -64,7 +64,7 @@ namespace Portkey
         public bool IsGuardrailDetailsVariant2 => GuardrailDetailsVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickGuardrailDetailsVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.GuardrailDetailsVariant2 PickGuardrailDetailsVariant2() => IsGuardrailDetailsVariant2
             ? GuardrailDetailsVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'GuardrailDetailsVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator GuardrailDetails(global::Portkey.GuardrailSummary value) => new GuardrailDetails((global::Portkey.GuardrailSummary?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.GuardrailSummary?(GuardrailDetails @this) => @this.Summary;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public GuardrailDetails(global::Portkey.GuardrailSummary? value)
         {
@@ -101,22 +101,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static GuardrailDetails FromSummary(global::Portkey.GuardrailSummary? value) => new GuardrailDetails(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator GuardrailDetails(global::Portkey.GuardrailDetailsVariant2 value) => new GuardrailDetails((global::Portkey.GuardrailDetailsVariant2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.GuardrailDetailsVariant2?(GuardrailDetails @this) => @this.GuardrailDetailsVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public GuardrailDetails(global::Portkey.GuardrailDetailsVariant2? value)
         {
@@ -124,12 +124,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static GuardrailDetails FromGuardrailDetailsVariant2(global::Portkey.GuardrailDetailsVariant2? value) => new GuardrailDetails(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public GuardrailDetails(
             global::Portkey.GuardrailSummary? summary,
@@ -141,23 +141,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             GuardrailDetailsVariant2 as object ??
-            Summary as object 
+            Summary as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Summary?.ToString() ??
-            GuardrailDetailsVariant2?.ToString() 
+            GuardrailDetailsVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.GuardrailSummary, TResult>? summary = null,
@@ -190,7 +190,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.GuardrailSummary>? summary = null,
@@ -214,7 +214,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.GuardrailSummary>? summary = null,
@@ -237,7 +237,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(GuardrailDetails other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.GuardrailSummary?>.Default.Equals(Summary, other.Summary) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.GuardrailDetailsVariant2?>.Default.Equals(GuardrailDetailsVariant2, other.GuardrailDetailsVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.GuardrailDetailsVariant2?>.Default.Equals(GuardrailDetailsVariant2, other.GuardrailDetailsVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(GuardrailDetails obj1, GuardrailDetails obj2)
         {
@@ -277,7 +277,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(GuardrailDetails obj1, GuardrailDetails obj2)
         {
@@ -285,7 +285,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

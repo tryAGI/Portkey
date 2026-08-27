@@ -20,7 +20,7 @@ namespace Portkey.JsonConverters
                     {
                         return global::Portkey.RunStreamEventVariant10EventExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

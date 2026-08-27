@@ -4,20 +4,20 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum BulkUpdateMcpIntegrationCapabilitiesCapabilitieType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Prompt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Resource,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tool,
     }

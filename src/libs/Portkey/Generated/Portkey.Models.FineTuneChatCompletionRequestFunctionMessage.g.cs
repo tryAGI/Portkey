@@ -5,12 +5,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct FineTuneChatCompletionRequestFunctionMessage : global::System.IEquatable<FineTuneChatCompletionRequestFunctionMessage>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public object? FunctionMessage1 { get; init; }
@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FunctionMessage1))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsFunctionMessage1 => FunctionMessage1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickFunctionMessage1(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object PickFunctionMessage1() => IsFunctionMessage1
             ? FunctionMessage1!
             : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionMessage1' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionRequestFunctionMessage? FunctionMessage2 { get; init; }
@@ -56,7 +56,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FunctionMessage2))]
@@ -64,7 +64,7 @@ namespace Portkey
         public bool IsFunctionMessage2 => FunctionMessage2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickFunctionMessage2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ChatCompletionRequestFunctionMessage PickFunctionMessage2() => IsFunctionMessage2
             ? FunctionMessage2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionMessage2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator FineTuneChatCompletionRequestFunctionMessage(global::Portkey.ChatCompletionRequestFunctionMessage value) => new FineTuneChatCompletionRequestFunctionMessage((global::Portkey.ChatCompletionRequestFunctionMessage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ChatCompletionRequestFunctionMessage?(FineTuneChatCompletionRequestFunctionMessage @this) => @this.FunctionMessage2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FineTuneChatCompletionRequestFunctionMessage(global::Portkey.ChatCompletionRequestFunctionMessage? value)
         {
@@ -101,12 +101,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static FineTuneChatCompletionRequestFunctionMessage FromFunctionMessage2(global::Portkey.ChatCompletionRequestFunctionMessage? value) => new FineTuneChatCompletionRequestFunctionMessage(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FineTuneChatCompletionRequestFunctionMessage(
             object? functionMessage1,
@@ -118,23 +118,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             FunctionMessage2 as object ??
-            FunctionMessage1 as object 
+            FunctionMessage1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             FunctionMessage1?.ToString() ??
-            FunctionMessage2?.ToString() 
+            FunctionMessage2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -142,7 +142,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<object, TResult>? functionMessage1 = null,
@@ -167,7 +167,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<object>? functionMessage1 = null,
@@ -191,7 +191,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<object>? functionMessage1 = null,
@@ -214,7 +214,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -235,18 +235,18 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(FineTuneChatCompletionRequestFunctionMessage other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<object?>.Default.Equals(FunctionMessage1, other.FunctionMessage1) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.ChatCompletionRequestFunctionMessage?>.Default.Equals(FunctionMessage2, other.FunctionMessage2) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.ChatCompletionRequestFunctionMessage?>.Default.Equals(FunctionMessage2, other.FunctionMessage2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(FineTuneChatCompletionRequestFunctionMessage obj1, FineTuneChatCompletionRequestFunctionMessage obj2)
         {
@@ -254,7 +254,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(FineTuneChatCompletionRequestFunctionMessage obj1, FineTuneChatCompletionRequestFunctionMessage obj2)
         {
@@ -262,7 +262,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

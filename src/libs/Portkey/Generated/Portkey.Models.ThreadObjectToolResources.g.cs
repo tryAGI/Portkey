@@ -9,13 +9,13 @@ namespace Portkey
     public sealed partial class ThreadObjectToolResources
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("code_interpreter")]
         public global::Portkey.ThreadObjectToolResourcesCodeInterpreter? CodeInterpreter { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("file_search")]
         public global::Portkey.ThreadObjectToolResourcesFileSearch? FileSearch { get; set; }

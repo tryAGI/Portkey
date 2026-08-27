@@ -9,7 +9,7 @@ namespace Portkey
     public enum RunStepDeltaObjectObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThreadRunStepDelta,
     }

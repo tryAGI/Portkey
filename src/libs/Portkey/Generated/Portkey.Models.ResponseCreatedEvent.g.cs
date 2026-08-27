@@ -16,7 +16,7 @@ namespace Portkey
         public global::Portkey.ResponseCreatedEventType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("response")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.ResponseJsonConverter))]

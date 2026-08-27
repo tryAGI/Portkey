@@ -23,7 +23,7 @@ namespace Portkey
         public required int OutputIndex { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("item")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.OutputItemJsonConverter))]

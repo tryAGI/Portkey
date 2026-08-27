@@ -9,7 +9,7 @@ namespace Portkey
     public enum ResponseContentPartDoneEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseContentPartDone,
     }

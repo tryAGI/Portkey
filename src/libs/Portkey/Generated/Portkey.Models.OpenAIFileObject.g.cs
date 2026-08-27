@@ -9,7 +9,7 @@ namespace Portkey
     public enum OpenAIFileObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         File,
     }

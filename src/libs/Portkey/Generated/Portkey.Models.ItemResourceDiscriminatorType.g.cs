@@ -4,24 +4,24 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ItemResourceDiscriminatorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputerCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FileSearchCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Message,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WebSearchCall,
     }

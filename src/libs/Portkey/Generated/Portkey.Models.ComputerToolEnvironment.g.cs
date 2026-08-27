@@ -9,19 +9,19 @@ namespace Portkey
     public enum ComputerToolEnvironment
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Browser,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mac,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ubuntu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Windows,
     }

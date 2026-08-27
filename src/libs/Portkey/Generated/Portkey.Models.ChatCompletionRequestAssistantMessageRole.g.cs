@@ -9,7 +9,7 @@ namespace Portkey
     public enum ChatCompletionRequestAssistantMessageRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
     }

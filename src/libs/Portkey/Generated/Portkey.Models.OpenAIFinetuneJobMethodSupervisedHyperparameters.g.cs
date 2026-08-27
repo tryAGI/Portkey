@@ -4,26 +4,26 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class OpenAIFinetuneJobMethodSupervisedHyperparameters
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("n_epochs")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int NEpochs { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("learning_rate_multiplier")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required float LearningRateMultiplier { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("batch_size")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,20 +4,20 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetScimWorkspacesRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Admin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Manager,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Member,
     }

@@ -4,28 +4,28 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PillarScanParametersScanner
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InvisibleCharacters,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pii,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PromptInjection,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Secrets,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToxicLanguage,
     }

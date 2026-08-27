@@ -10,7 +10,7 @@ namespace Portkey
     public enum ComputerToolCallOutputType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputerCallOutput,
     }

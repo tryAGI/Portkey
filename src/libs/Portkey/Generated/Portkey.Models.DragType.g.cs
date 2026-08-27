@@ -11,7 +11,7 @@ namespace Portkey
     public enum DragType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Drag,
     }

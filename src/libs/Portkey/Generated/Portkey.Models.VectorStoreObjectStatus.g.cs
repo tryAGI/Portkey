@@ -9,15 +9,15 @@ namespace Portkey
     public enum VectorStoreObjectStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Completed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Expired,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InProgress,
     }

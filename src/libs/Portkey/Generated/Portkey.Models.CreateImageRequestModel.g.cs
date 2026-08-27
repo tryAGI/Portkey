@@ -4,16 +4,16 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateImageRequestModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DallE2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DallE3,
     }

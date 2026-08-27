@@ -9,7 +9,7 @@ namespace Portkey
     public enum OutputTextType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OutputText,
     }

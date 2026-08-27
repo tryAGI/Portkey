@@ -10,7 +10,7 @@ namespace Portkey
     public readonly partial struct Item : global::System.IEquatable<Item>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ItemDiscriminatorType? Type { get; }
 
@@ -26,7 +26,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Message1))]
@@ -34,7 +34,7 @@ namespace Portkey
         public bool IsMessage1 => Message1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickMessage1(
 #if NET6_0_OR_GREATER
@@ -47,7 +47,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.InputMessage PickMessage1() => IsMessage1
             ? Message1!
@@ -63,7 +63,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Message2))]
@@ -71,7 +71,7 @@ namespace Portkey
         public bool IsMessage2 => Message2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickMessage2(
 #if NET6_0_OR_GREATER
@@ -84,7 +84,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.OutputMessage PickMessage2() => IsMessage2
             ? Message2!
@@ -101,7 +101,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FileSearchCall))]
@@ -109,7 +109,7 @@ namespace Portkey
         public bool IsFileSearchCall => FileSearchCall != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickFileSearchCall(
 #if NET6_0_OR_GREATER
@@ -122,7 +122,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.FileSearchToolCall PickFileSearchCall() => IsFileSearchCall
             ? FileSearchCall!
@@ -139,7 +139,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ComputerCall))]
@@ -147,7 +147,7 @@ namespace Portkey
         public bool IsComputerCall => ComputerCall != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickComputerCall(
 #if NET6_0_OR_GREATER
@@ -160,7 +160,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ComputerToolCall PickComputerCall() => IsComputerCall
             ? ComputerCall!
@@ -176,7 +176,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ComputerCallOutput))]
@@ -184,7 +184,7 @@ namespace Portkey
         public bool IsComputerCallOutput => ComputerCallOutput != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickComputerCallOutput(
 #if NET6_0_OR_GREATER
@@ -197,7 +197,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ComputerToolCallOutput PickComputerCallOutput() => IsComputerCallOutput
             ? ComputerCallOutput!
@@ -214,7 +214,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(WebSearchCall))]
@@ -222,7 +222,7 @@ namespace Portkey
         public bool IsWebSearchCall => WebSearchCall != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickWebSearchCall(
 #if NET6_0_OR_GREATER
@@ -235,7 +235,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.WebSearchToolCall PickWebSearchCall() => IsWebSearchCall
             ? WebSearchCall!
@@ -252,7 +252,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FunctionCall))]
@@ -260,7 +260,7 @@ namespace Portkey
         public bool IsFunctionCall => FunctionCall != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickFunctionCall(
 #if NET6_0_OR_GREATER
@@ -273,7 +273,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.FunctionToolCall PickFunctionCall() => IsFunctionCall
             ? FunctionCall!
@@ -289,7 +289,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FunctionCallOutput))]
@@ -297,7 +297,7 @@ namespace Portkey
         public bool IsFunctionCallOutput => FunctionCallOutput != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickFunctionCallOutput(
 #if NET6_0_OR_GREATER
@@ -310,7 +310,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.FunctionToolCallOutput PickFunctionCallOutput() => IsFunctionCallOutput
             ? FunctionCallOutput!
@@ -327,7 +327,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Reasoning))]
@@ -335,7 +335,7 @@ namespace Portkey
         public bool IsReasoning => Reasoning != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickReasoning(
 #if NET6_0_OR_GREATER
@@ -348,23 +348,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ReasoningItem PickReasoning() => IsReasoning
             ? Reasoning!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Reasoning' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator Item(global::Portkey.InputMessage value) => new Item((global::Portkey.InputMessage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.InputMessage?(Item @this) => @this.Message1;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Item(global::Portkey.InputMessage? value)
         {
@@ -372,22 +372,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static Item FromMessage1(global::Portkey.InputMessage? value) => new Item(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator Item(global::Portkey.OutputMessage value) => new Item((global::Portkey.OutputMessage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.OutputMessage?(Item @this) => @this.Message2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Item(global::Portkey.OutputMessage? value)
         {
@@ -395,22 +395,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static Item FromMessage2(global::Portkey.OutputMessage? value) => new Item(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator Item(global::Portkey.FileSearchToolCall value) => new Item((global::Portkey.FileSearchToolCall?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.FileSearchToolCall?(Item @this) => @this.FileSearchCall;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Item(global::Portkey.FileSearchToolCall? value)
         {
@@ -418,22 +418,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static Item FromFileSearchCall(global::Portkey.FileSearchToolCall? value) => new Item(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator Item(global::Portkey.ComputerToolCall value) => new Item((global::Portkey.ComputerToolCall?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ComputerToolCall?(Item @this) => @this.ComputerCall;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Item(global::Portkey.ComputerToolCall? value)
         {
@@ -441,22 +441,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static Item FromComputerCall(global::Portkey.ComputerToolCall? value) => new Item(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator Item(global::Portkey.ComputerToolCallOutput value) => new Item((global::Portkey.ComputerToolCallOutput?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ComputerToolCallOutput?(Item @this) => @this.ComputerCallOutput;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Item(global::Portkey.ComputerToolCallOutput? value)
         {
@@ -464,22 +464,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static Item FromComputerCallOutput(global::Portkey.ComputerToolCallOutput? value) => new Item(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator Item(global::Portkey.WebSearchToolCall value) => new Item((global::Portkey.WebSearchToolCall?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.WebSearchToolCall?(Item @this) => @this.WebSearchCall;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Item(global::Portkey.WebSearchToolCall? value)
         {
@@ -487,22 +487,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static Item FromWebSearchCall(global::Portkey.WebSearchToolCall? value) => new Item(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator Item(global::Portkey.FunctionToolCall value) => new Item((global::Portkey.FunctionToolCall?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.FunctionToolCall?(Item @this) => @this.FunctionCall;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Item(global::Portkey.FunctionToolCall? value)
         {
@@ -510,22 +510,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static Item FromFunctionCall(global::Portkey.FunctionToolCall? value) => new Item(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator Item(global::Portkey.FunctionToolCallOutput value) => new Item((global::Portkey.FunctionToolCallOutput?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.FunctionToolCallOutput?(Item @this) => @this.FunctionCallOutput;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Item(global::Portkey.FunctionToolCallOutput? value)
         {
@@ -533,22 +533,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static Item FromFunctionCallOutput(global::Portkey.FunctionToolCallOutput? value) => new Item(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator Item(global::Portkey.ReasoningItem value) => new Item((global::Portkey.ReasoningItem?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ReasoningItem?(Item @this) => @this.Reasoning;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Item(global::Portkey.ReasoningItem? value)
         {
@@ -556,12 +556,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static Item FromReasoning(global::Portkey.ReasoningItem? value) => new Item(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Item(
             global::Portkey.ItemDiscriminatorType? type,
@@ -590,7 +590,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Reasoning as object ??
@@ -601,11 +601,11 @@ namespace Portkey
             ComputerCall as object ??
             FileSearchCall as object ??
             Message2 as object ??
-            Message1 as object 
+            Message1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Message1?.ToString() ??
@@ -616,11 +616,11 @@ namespace Portkey
             WebSearchCall?.ToString() ??
             FunctionCall?.ToString() ??
             FunctionCallOutput?.ToString() ??
-            Reasoning?.ToString() 
+            Reasoning?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -628,7 +628,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.InputMessage, TResult>? message1 = null,
@@ -688,7 +688,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.InputMessage>? message1 = null,
@@ -754,7 +754,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.InputMessage>? message1 = null,
@@ -812,7 +812,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -847,7 +847,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(Item other)
         {
@@ -860,12 +860,12 @@ namespace Portkey
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.WebSearchToolCall?>.Default.Equals(WebSearchCall, other.WebSearchCall) &&
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.FunctionToolCall?>.Default.Equals(FunctionCall, other.FunctionCall) &&
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.FunctionToolCallOutput?>.Default.Equals(FunctionCallOutput, other.FunctionCallOutput) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.ReasoningItem?>.Default.Equals(Reasoning, other.Reasoning) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.ReasoningItem?>.Default.Equals(Reasoning, other.Reasoning)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(Item obj1, Item obj2)
         {
@@ -873,7 +873,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(Item obj1, Item obj2)
         {
@@ -881,7 +881,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

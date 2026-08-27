@@ -10,15 +10,15 @@ namespace Portkey
     public enum MessageDeltaContentImageUrlObjectImageUrlDetail
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Auto,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         High,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Low,
     }

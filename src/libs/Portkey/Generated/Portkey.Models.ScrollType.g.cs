@@ -11,7 +11,7 @@ namespace Portkey
     public enum ScrollType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Scroll,
     }

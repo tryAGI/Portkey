@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class IntegrationModelsResponse
     {
@@ -15,7 +15,7 @@ namespace Portkey
         public int? Total { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("models")]
         public global::System.Collections.Generic.IList<global::Portkey.IntegrationModel>? Models { get; set; }

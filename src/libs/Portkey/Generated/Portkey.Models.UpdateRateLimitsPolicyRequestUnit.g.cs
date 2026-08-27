@@ -9,19 +9,19 @@ namespace Portkey
     public enum UpdateRateLimitsPolicyRequestUnit
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rpd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rph,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rpm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rpw,
     }

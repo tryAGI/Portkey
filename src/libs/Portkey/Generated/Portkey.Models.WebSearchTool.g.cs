@@ -20,7 +20,7 @@ namespace Portkey
         public required global::Portkey.WebSearchToolType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user_location")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.AllOfJsonConverter<global::Portkey.WebSearchLocation, global::Portkey.WebSearchToolUserLocation>))]

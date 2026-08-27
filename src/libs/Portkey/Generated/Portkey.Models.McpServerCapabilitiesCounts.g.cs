@@ -4,30 +4,30 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class McpServerCapabilitiesCounts
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tools")]
         public global::Portkey.McpServerCapabilitiesCountsTools? Tools { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("prompts")]
         public global::Portkey.McpServerCapabilitiesCountsPrompts? Prompts { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resources")]
         public global::Portkey.McpServerCapabilitiesCountsResources? Resources { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resource_templates")]
         public global::Portkey.McpServerCapabilitiesCountsResourceTemplates? ResourceTemplates { get; set; }

@@ -9,11 +9,11 @@ namespace Portkey
     public enum VectorStoreSearchRequestRankingOptionsRanker
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Auto,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Default20241115,
     }

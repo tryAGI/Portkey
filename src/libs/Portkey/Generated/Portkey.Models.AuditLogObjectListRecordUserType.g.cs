@@ -9,11 +9,11 @@ namespace Portkey
     public enum AuditLogObjectListRecordUserType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApiKey,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

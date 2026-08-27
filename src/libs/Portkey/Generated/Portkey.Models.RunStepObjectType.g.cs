@@ -9,11 +9,11 @@ namespace Portkey
     public enum RunStepObjectType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MessageCreation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolCalls,
     }

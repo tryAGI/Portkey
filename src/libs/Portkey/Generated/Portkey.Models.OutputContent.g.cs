@@ -5,7 +5,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct OutputContent : global::System.IEquatable<OutputContent>
     {
@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(OutputText))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsOutputText => OutputText != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickOutputText(
 #if NET6_0_OR_GREATER
@@ -40,7 +40,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.OutputText PickOutputText() => IsOutputText
             ? OutputText!
@@ -56,7 +56,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Refusal))]
@@ -64,7 +64,7 @@ namespace Portkey
         public bool IsRefusal => Refusal != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickRefusal(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.Refusal PickRefusal() => IsRefusal
             ? Refusal!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Refusal' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator OutputContent(global::Portkey.OutputText value) => new OutputContent((global::Portkey.OutputText?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.OutputText?(OutputContent @this) => @this.OutputText;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OutputContent(global::Portkey.OutputText? value)
         {
@@ -101,22 +101,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static OutputContent FromOutputText(global::Portkey.OutputText? value) => new OutputContent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator OutputContent(global::Portkey.Refusal value) => new OutputContent((global::Portkey.Refusal?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.Refusal?(OutputContent @this) => @this.Refusal;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OutputContent(global::Portkey.Refusal? value)
         {
@@ -124,12 +124,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static OutputContent FromRefusal(global::Portkey.Refusal? value) => new OutputContent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OutputContent(
             global::Portkey.OutputText? outputText,
@@ -141,23 +141,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             Refusal as object ??
-            OutputText as object 
+            OutputText as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             OutputText?.ToString() ??
-            Refusal?.ToString() 
+            Refusal?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.OutputText, TResult>? outputText = null,
@@ -190,7 +190,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.OutputText>? outputText = null,
@@ -214,7 +214,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.OutputText>? outputText = null,
@@ -237,7 +237,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(OutputContent other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.OutputText?>.Default.Equals(OutputText, other.OutputText) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.Refusal?>.Default.Equals(Refusal, other.Refusal) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.Refusal?>.Default.Equals(Refusal, other.Refusal)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(OutputContent obj1, OutputContent obj2)
         {
@@ -277,7 +277,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(OutputContent obj1, OutputContent obj2)
         {
@@ -285,7 +285,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

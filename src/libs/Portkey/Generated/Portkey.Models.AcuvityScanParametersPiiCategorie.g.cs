@@ -4,68 +4,68 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AcuvityScanParametersPiiCategorie
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AbaRoutingNumber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Address,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BankAccount,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BitcoinWallet,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreditCard,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DriverLicense,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EmailAddress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ItinNumber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Location,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MedicalLicense,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MoneyAmount,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PassportNumber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Person,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PhoneNumber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ssn,
     }

@@ -10,15 +10,15 @@ namespace Portkey
     public enum ComputerToolCallStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Completed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InProgress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Incomplete,
     }

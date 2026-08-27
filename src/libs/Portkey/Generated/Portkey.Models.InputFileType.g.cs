@@ -9,7 +9,7 @@ namespace Portkey
     public enum InputFileType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InputFile,
     }

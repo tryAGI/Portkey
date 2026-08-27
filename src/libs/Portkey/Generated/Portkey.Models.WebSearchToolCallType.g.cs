@@ -9,7 +9,7 @@ namespace Portkey
     public enum WebSearchToolCallType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WebSearchCall,
     }

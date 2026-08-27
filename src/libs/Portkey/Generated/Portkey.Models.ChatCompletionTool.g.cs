@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ChatCompletionTool
     {
@@ -16,7 +16,7 @@ namespace Portkey
         public global::Portkey.ChatCompletionToolType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("function")]
         [global::System.Text.Json.Serialization.JsonRequired]

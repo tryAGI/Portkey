@@ -9,15 +9,15 @@ namespace Portkey
     public enum AzureAIConfigurationAzureAuthMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Default,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Entra,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Managed,
     }

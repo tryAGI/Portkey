@@ -4,18 +4,18 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetConfigResponseDataConfigRetry
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("attempts")]
         public int? Attempts { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("on_status_codes")]
         public global::System.Collections.Generic.IList<int>? OnStatusCodes { get; set; }

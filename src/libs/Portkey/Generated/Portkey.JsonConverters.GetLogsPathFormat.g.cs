@@ -20,7 +20,7 @@ namespace Portkey.JsonConverters
                     {
                         return global::Portkey.GetLogsPathFormatExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

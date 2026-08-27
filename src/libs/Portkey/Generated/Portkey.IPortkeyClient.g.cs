@@ -61,7 +61,7 @@ namespace Portkey
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
@@ -152,7 +152,7 @@ namespace Portkey
         public FineTuningClient FineTuning { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FinetuneClient Finetune { get; }
 
@@ -287,7 +287,7 @@ namespace Portkey
         public RerankClient Rerank { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponsesClient Responses { get; }
 
@@ -312,7 +312,7 @@ namespace Portkey
         public UsersClient Users { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public VectorStoresClient VectorStores { get; }
 

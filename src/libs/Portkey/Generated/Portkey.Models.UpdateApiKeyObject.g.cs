@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UpdateApiKeyObject
     {
@@ -23,7 +23,7 @@ namespace Portkey
         public string? Description { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("rate_limits")]
         public global::System.Collections.Generic.IList<global::Portkey.UpdateApiKeyObjectRateLimit>? RateLimits { get; set; }
@@ -51,13 +51,13 @@ namespace Portkey
         public global::System.Collections.Generic.IList<string>? Scopes { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("defaults")]
         public global::Portkey.UpdateApiKeyObjectDefaults? Defaults { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("alert_emails")]
         public global::System.Collections.Generic.IList<string>? AlertEmails { get; set; }

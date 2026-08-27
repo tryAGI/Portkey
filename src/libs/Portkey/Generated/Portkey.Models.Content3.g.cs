@@ -10,7 +10,7 @@ namespace Portkey
     public readonly partial struct Content3 : global::System.IEquatable<Content3>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.InputContent? InputContent { get; init; }
@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(InputContent))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsInputContent => InputContent != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickInputContent(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.InputContent PickInputContent() => IsInputContent
             ? InputContent!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'InputContent' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.OutputContent? OutputContent { get; init; }
@@ -56,7 +56,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(OutputContent))]
@@ -64,7 +64,7 @@ namespace Portkey
         public bool IsOutputContent => OutputContent != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickOutputContent(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.OutputContent PickOutputContent() => IsOutputContent
             ? OutputContent!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'OutputContent' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator Content3(global::Portkey.InputContent value) => new Content3((global::Portkey.InputContent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.InputContent?(Content3 @this) => @this.InputContent;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Content3(global::Portkey.InputContent? value)
         {
@@ -101,22 +101,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static Content3 FromInputContent(global::Portkey.InputContent? value) => new Content3(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator Content3(global::Portkey.OutputContent value) => new Content3((global::Portkey.OutputContent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.OutputContent?(Content3 @this) => @this.OutputContent;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Content3(global::Portkey.OutputContent? value)
         {
@@ -124,12 +124,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static Content3 FromOutputContent(global::Portkey.OutputContent? value) => new Content3(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Content3(
             global::Portkey.InputContent? inputContent,
@@ -141,23 +141,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             OutputContent as object ??
-            InputContent as object 
+            InputContent as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             InputContent?.ToString() ??
-            OutputContent?.ToString() 
+            OutputContent?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.InputContent?, TResult>? inputContent = null,
@@ -190,7 +190,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.InputContent?>? inputContent = null,
@@ -214,7 +214,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.InputContent?>? inputContent = null,
@@ -237,7 +237,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(Content3 other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.InputContent?>.Default.Equals(InputContent, other.InputContent) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.OutputContent?>.Default.Equals(OutputContent, other.OutputContent) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.OutputContent?>.Default.Equals(OutputContent, other.OutputContent)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(Content3 obj1, Content3 obj2)
         {
@@ -277,7 +277,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(Content3 obj1, Content3 obj2)
         {
@@ -285,7 +285,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

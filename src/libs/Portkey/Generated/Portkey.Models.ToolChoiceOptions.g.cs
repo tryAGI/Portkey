@@ -13,15 +13,15 @@ namespace Portkey
     public enum ToolChoiceOptions
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Auto,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         None,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Required,
     }

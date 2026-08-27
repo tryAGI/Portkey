@@ -10,7 +10,7 @@ namespace Portkey
     public readonly partial struct ChatCompletionMessageContentBlock : global::System.IEquatable<ChatCompletionMessageContentBlock>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionRequestMessageContentPartText? TextContentPart { get; init; }
@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(TextContentPart))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsTextContentPart => TextContentPart != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickTextContentPart(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ChatCompletionRequestMessageContentPartText PickTextContentPart() => IsTextContentPart
             ? TextContentPart!
             : throw new global::System.InvalidOperationException($"Expected union variant 'TextContentPart' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionMessageContentPartThinking? ThinkingContentPart { get; init; }
@@ -56,7 +56,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ThinkingContentPart))]
@@ -64,7 +64,7 @@ namespace Portkey
         public bool IsThinkingContentPart => ThinkingContentPart != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickThinkingContentPart(
 #if NET6_0_OR_GREATER
@@ -77,14 +77,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ChatCompletionMessageContentPartThinking PickThinkingContentPart() => IsThinkingContentPart
             ? ThinkingContentPart!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ThinkingContentPart' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ChatCompletionMessageContentPartRedactedThinking? RedactedThinkingContentPart { get; init; }
@@ -93,7 +93,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(RedactedThinkingContentPart))]
@@ -101,7 +101,7 @@ namespace Portkey
         public bool IsRedactedThinkingContentPart => RedactedThinkingContentPart != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickRedactedThinkingContentPart(
 #if NET6_0_OR_GREATER
@@ -114,23 +114,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ChatCompletionMessageContentPartRedactedThinking PickRedactedThinkingContentPart() => IsRedactedThinkingContentPart
             ? RedactedThinkingContentPart!
             : throw new global::System.InvalidOperationException($"Expected union variant 'RedactedThinkingContentPart' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ChatCompletionMessageContentBlock(global::Portkey.ChatCompletionRequestMessageContentPartText value) => new ChatCompletionMessageContentBlock((global::Portkey.ChatCompletionRequestMessageContentPartText?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ChatCompletionRequestMessageContentPartText?(ChatCompletionMessageContentBlock @this) => @this.TextContentPart;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionMessageContentBlock(global::Portkey.ChatCompletionRequestMessageContentPartText? value)
         {
@@ -138,22 +138,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ChatCompletionMessageContentBlock FromTextContentPart(global::Portkey.ChatCompletionRequestMessageContentPartText? value) => new ChatCompletionMessageContentBlock(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ChatCompletionMessageContentBlock(global::Portkey.ChatCompletionMessageContentPartThinking value) => new ChatCompletionMessageContentBlock((global::Portkey.ChatCompletionMessageContentPartThinking?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ChatCompletionMessageContentPartThinking?(ChatCompletionMessageContentBlock @this) => @this.ThinkingContentPart;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionMessageContentBlock(global::Portkey.ChatCompletionMessageContentPartThinking? value)
         {
@@ -161,22 +161,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ChatCompletionMessageContentBlock FromThinkingContentPart(global::Portkey.ChatCompletionMessageContentPartThinking? value) => new ChatCompletionMessageContentBlock(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ChatCompletionMessageContentBlock(global::Portkey.ChatCompletionMessageContentPartRedactedThinking value) => new ChatCompletionMessageContentBlock((global::Portkey.ChatCompletionMessageContentPartRedactedThinking?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ChatCompletionMessageContentPartRedactedThinking?(ChatCompletionMessageContentBlock @this) => @this.RedactedThinkingContentPart;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionMessageContentBlock(global::Portkey.ChatCompletionMessageContentPartRedactedThinking? value)
         {
@@ -184,12 +184,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ChatCompletionMessageContentBlock FromRedactedThinkingContentPart(global::Portkey.ChatCompletionMessageContentPartRedactedThinking? value) => new ChatCompletionMessageContentBlock(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatCompletionMessageContentBlock(
             global::Portkey.ChatCompletionRequestMessageContentPartText? textContentPart,
@@ -203,25 +203,25 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             RedactedThinkingContentPart as object ??
             ThinkingContentPart as object ??
-            TextContentPart as object 
+            TextContentPart as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             TextContentPart?.ToString() ??
             ThinkingContentPart?.ToString() ??
-            RedactedThinkingContentPart?.ToString() 
+            RedactedThinkingContentPart?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -229,7 +229,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.ChatCompletionRequestMessageContentPartText, TResult>? textContentPart = null,
@@ -259,7 +259,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.ChatCompletionRequestMessageContentPartText>? textContentPart = null,
@@ -289,7 +289,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.ChatCompletionRequestMessageContentPartText>? textContentPart = null,
@@ -317,7 +317,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -340,19 +340,19 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(ChatCompletionMessageContentBlock other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.ChatCompletionRequestMessageContentPartText?>.Default.Equals(TextContentPart, other.TextContentPart) &&
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.ChatCompletionMessageContentPartThinking?>.Default.Equals(ThinkingContentPart, other.ThinkingContentPart) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.ChatCompletionMessageContentPartRedactedThinking?>.Default.Equals(RedactedThinkingContentPart, other.RedactedThinkingContentPart) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.ChatCompletionMessageContentPartRedactedThinking?>.Default.Equals(RedactedThinkingContentPart, other.RedactedThinkingContentPart)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(ChatCompletionMessageContentBlock obj1, ChatCompletionMessageContentBlock obj2)
         {
@@ -360,7 +360,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(ChatCompletionMessageContentBlock obj1, ChatCompletionMessageContentBlock obj2)
         {
@@ -368,7 +368,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

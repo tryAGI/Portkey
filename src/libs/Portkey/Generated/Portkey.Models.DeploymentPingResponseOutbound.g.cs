@@ -4,19 +4,19 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DeploymentPingResponseOutbound
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.DeploymentPingResponseOutboundStatusJsonConverter))]
         public global::Portkey.DeploymentPingResponseOutboundStatus? Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status_code")]
         public int? StatusCode { get; set; }
@@ -28,7 +28,7 @@ namespace Portkey
         public string? Version { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("error")]
         public string? Error { get; set; }

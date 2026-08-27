@@ -9,7 +9,7 @@ namespace Portkey
     public enum RunStepObjectObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThreadRunStep,
     }

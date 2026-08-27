@@ -4,33 +4,33 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AwsAccessKeyAuthConfig
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("aws_auth_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.AwsAccessKeyAuthConfigAwsAuthTypeJsonConverter))]
         public global::Portkey.AwsAccessKeyAuthConfigAwsAuthType AwsAuthType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("aws_access_key_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AwsAccessKeyId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("aws_secret_access_key")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AwsSecretAccessKey { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("aws_region")]
         [global::System.Text.Json.Serialization.JsonRequired]

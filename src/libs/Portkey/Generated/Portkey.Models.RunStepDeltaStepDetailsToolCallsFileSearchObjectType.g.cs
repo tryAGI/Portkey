@@ -9,7 +9,7 @@ namespace Portkey
     public enum RunStepDeltaStepDetailsToolCallsFileSearchObjectType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FileSearch,
     }

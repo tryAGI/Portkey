@@ -9,14 +9,14 @@ namespace Portkey
     public sealed partial class DoneEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("event")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.DoneEventEventJsonConverter))]
         public global::Portkey.DoneEventEvent Event { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("data")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.DoneEventDataJsonConverter))]

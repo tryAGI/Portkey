@@ -9,11 +9,11 @@ namespace Portkey
     public enum RunObjectIncompleteDetailsReason
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MaxCompletionTokens,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MaxPromptTokens,
     }

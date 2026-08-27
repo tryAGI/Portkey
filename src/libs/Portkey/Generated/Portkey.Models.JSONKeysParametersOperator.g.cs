@@ -10,15 +10,15 @@ namespace Portkey
     public enum JSONKeysParametersOperator
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         All,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Any,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         None,
     }

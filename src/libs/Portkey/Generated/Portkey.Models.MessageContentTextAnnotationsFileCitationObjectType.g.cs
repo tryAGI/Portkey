@@ -9,7 +9,7 @@ namespace Portkey
     public enum MessageContentTextAnnotationsFileCitationObjectType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FileCitation,
     }

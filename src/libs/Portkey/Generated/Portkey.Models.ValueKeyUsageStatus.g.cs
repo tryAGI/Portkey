@@ -9,11 +9,11 @@ namespace Portkey
     public enum ValueKeyUsageStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Active,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Exhausted,
     }

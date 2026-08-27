@@ -4,16 +4,16 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateKeysType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Organisation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Workspace,
     }

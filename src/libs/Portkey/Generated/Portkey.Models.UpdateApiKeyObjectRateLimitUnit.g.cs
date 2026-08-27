@@ -10,23 +10,23 @@ namespace Portkey
     public enum UpdateApiKeyObjectRateLimitUnit
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rpd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rph,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rpm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rps,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rpw,
     }

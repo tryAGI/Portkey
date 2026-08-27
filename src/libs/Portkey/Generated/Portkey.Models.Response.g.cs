@@ -5,12 +5,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct Response : global::System.IEquatable<Response>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ModelResponseProperties? ModelProperties { get; init; }
@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ModelProperties))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsModelProperties => ModelProperties != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickModelProperties(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ModelResponseProperties PickModelProperties() => IsModelProperties
             ? ModelProperties!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ModelProperties' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ResponseProperties? Properties { get; init; }
@@ -56,7 +56,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Properties))]
@@ -64,7 +64,7 @@ namespace Portkey
         public bool IsProperties => Properties != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickProperties(
 #if NET6_0_OR_GREATER
@@ -77,14 +77,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseProperties PickProperties() => IsProperties
             ? Properties!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Properties' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ResponseVariant3? ResponseVariant3 { get; init; }
@@ -93,7 +93,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseVariant3))]
@@ -101,7 +101,7 @@ namespace Portkey
         public bool IsResponseVariant3 => ResponseVariant3 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseVariant3(
 #if NET6_0_OR_GREATER
@@ -114,23 +114,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseVariant3 PickResponseVariant3() => IsResponseVariant3
             ? ResponseVariant3!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseVariant3' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator Response(global::Portkey.ModelResponseProperties value) => new Response((global::Portkey.ModelResponseProperties?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ModelResponseProperties?(Response @this) => @this.ModelProperties;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Response(global::Portkey.ModelResponseProperties? value)
         {
@@ -138,22 +138,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static Response FromModelProperties(global::Portkey.ModelResponseProperties? value) => new Response(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator Response(global::Portkey.ResponseProperties value) => new Response((global::Portkey.ResponseProperties?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseProperties?(Response @this) => @this.Properties;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Response(global::Portkey.ResponseProperties? value)
         {
@@ -161,22 +161,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static Response FromProperties(global::Portkey.ResponseProperties? value) => new Response(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator Response(global::Portkey.ResponseVariant3 value) => new Response((global::Portkey.ResponseVariant3?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseVariant3?(Response @this) => @this.ResponseVariant3;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Response(global::Portkey.ResponseVariant3? value)
         {
@@ -184,12 +184,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static Response FromResponseVariant3(global::Portkey.ResponseVariant3? value) => new Response(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Response(
             global::Portkey.ModelResponseProperties? modelProperties,
@@ -203,25 +203,25 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             ResponseVariant3 as object ??
             Properties as object ??
-            ModelProperties as object 
+            ModelProperties as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             ModelProperties?.ToString() ??
             Properties?.ToString() ??
-            ResponseVariant3?.ToString() 
+            ResponseVariant3?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -229,7 +229,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.ModelResponseProperties, TResult>? modelProperties = null,
@@ -259,7 +259,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.ModelResponseProperties>? modelProperties = null,
@@ -289,7 +289,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.ModelResponseProperties>? modelProperties = null,
@@ -317,7 +317,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -340,19 +340,19 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(Response other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.ModelResponseProperties?>.Default.Equals(ModelProperties, other.ModelProperties) &&
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.ResponseProperties?>.Default.Equals(Properties, other.Properties) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.ResponseVariant3?>.Default.Equals(ResponseVariant3, other.ResponseVariant3) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.ResponseVariant3?>.Default.Equals(ResponseVariant3, other.ResponseVariant3)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(Response obj1, Response obj2)
         {
@@ -360,7 +360,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(Response obj1, Response obj2)
         {
@@ -368,7 +368,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

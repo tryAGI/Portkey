@@ -4,18 +4,18 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PayAsYouGoPricing
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("request_token")]
         public global::Portkey.TokenPricing? RequestToken { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("response_token")]
         public global::Portkey.TokenPricing? ResponseToken { get; set; }

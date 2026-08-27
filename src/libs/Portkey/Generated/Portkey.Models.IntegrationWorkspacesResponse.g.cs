@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class IntegrationWorkspacesResponse
     {
@@ -15,7 +15,7 @@ namespace Portkey
         public int? Total { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("workspaces")]
         public global::System.Collections.Generic.IList<global::Portkey.IntegrationWorkspace>? Workspaces { get; set; }

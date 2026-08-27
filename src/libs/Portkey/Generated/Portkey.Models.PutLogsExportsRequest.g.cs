@@ -4,25 +4,25 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PutLogsExportsRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("workspace_id")]
         public string? WorkspaceId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("filters")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Portkey.GenerationsFilterSchema Filters { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requested_data")]
         public global::System.Collections.Generic.IList<global::Portkey.LogExportsRequestedDataItem>? RequestedData { get; set; }

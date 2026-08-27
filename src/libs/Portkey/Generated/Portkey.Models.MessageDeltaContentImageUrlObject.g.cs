@@ -23,7 +23,7 @@ namespace Portkey
         public global::Portkey.MessageDeltaContentImageUrlObjectType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("image_url")]
         public global::Portkey.MessageDeltaContentImageUrlObjectImageUrl? ImageUrl { get; set; }

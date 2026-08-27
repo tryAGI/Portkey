@@ -45,7 +45,7 @@ namespace Portkey
         public required long UsageBytes { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("file_counts")]
         [global::System.Text.Json.Serialization.JsonRequired]

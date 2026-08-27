@@ -9,7 +9,7 @@ namespace Portkey
     public sealed partial class OpenAIFinetuneJobMethod
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.OpenAIFinetuneJobMethodTypeJsonConverter))]
@@ -17,13 +17,13 @@ namespace Portkey
         public required global::Portkey.OpenAIFinetuneJobMethodType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("supervised")]
         public global::Portkey.OpenAIFinetuneJobMethodSupervised? Supervised { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dpo")]
         public global::Portkey.OpenAIFinetuneJobMethodDpo? Dpo { get; set; }

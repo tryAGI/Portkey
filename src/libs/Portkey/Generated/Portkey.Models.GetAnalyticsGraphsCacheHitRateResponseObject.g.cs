@@ -9,7 +9,7 @@ namespace Portkey
     public enum GetAnalyticsGraphsCacheHitRateResponseObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnalyticsGraph,
     }

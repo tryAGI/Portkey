@@ -9,7 +9,7 @@ namespace Portkey
     public enum ChatCompletionNamedToolChoiceType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Function,
     }

@@ -5,7 +5,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct InputItem : global::System.IEquatable<InputItem>
     {
@@ -23,7 +23,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Message))]
@@ -31,7 +31,7 @@ namespace Portkey
         public bool IsMessage => Message != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickMessage(
 #if NET6_0_OR_GREATER
@@ -44,7 +44,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.EasyInputMessage PickMessage() => IsMessage
             ? Message!
@@ -60,7 +60,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Item))]
@@ -68,7 +68,7 @@ namespace Portkey
         public bool IsItem => Item != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickItem(
 #if NET6_0_OR_GREATER
@@ -81,7 +81,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.Item PickItem() => IsItem
             ? Item!.Value
@@ -97,7 +97,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ItemReference))]
@@ -105,7 +105,7 @@ namespace Portkey
         public bool IsItemReference => ItemReference != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickItemReference(
 #if NET6_0_OR_GREATER
@@ -118,23 +118,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ItemReference PickItemReference() => IsItemReference
             ? ItemReference!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ItemReference' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator InputItem(global::Portkey.EasyInputMessage value) => new InputItem((global::Portkey.EasyInputMessage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.EasyInputMessage?(InputItem @this) => @this.Message;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InputItem(global::Portkey.EasyInputMessage? value)
         {
@@ -142,22 +142,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static InputItem FromMessage(global::Portkey.EasyInputMessage? value) => new InputItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator InputItem(global::Portkey.Item value) => new InputItem((global::Portkey.Item?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.Item?(InputItem @this) => @this.Item;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InputItem(global::Portkey.Item? value)
         {
@@ -165,22 +165,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static InputItem FromItem(global::Portkey.Item? value) => new InputItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator InputItem(global::Portkey.ItemReference value) => new InputItem((global::Portkey.ItemReference?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ItemReference?(InputItem @this) => @this.ItemReference;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InputItem(global::Portkey.ItemReference? value)
         {
@@ -188,12 +188,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static InputItem FromItemReference(global::Portkey.ItemReference? value) => new InputItem(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InputItem(
             global::Portkey.EasyInputMessage? message,
@@ -207,25 +207,25 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             ItemReference as object ??
             Item as object ??
-            Message as object 
+            Message as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Message?.ToString() ??
             Item?.ToString() ??
-            ItemReference?.ToString() 
+            ItemReference?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -233,7 +233,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.EasyInputMessage, TResult>? message = null,
@@ -263,7 +263,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.EasyInputMessage>? message = null,
@@ -293,7 +293,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.EasyInputMessage>? message = null,
@@ -321,7 +321,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -344,19 +344,19 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(InputItem other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.EasyInputMessage?>.Default.Equals(Message, other.Message) &&
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.Item?>.Default.Equals(Item, other.Item) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.ItemReference?>.Default.Equals(ItemReference, other.ItemReference) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.ItemReference?>.Default.Equals(ItemReference, other.ItemReference)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(InputItem obj1, InputItem obj2)
         {
@@ -364,7 +364,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(InputItem obj1, InputItem obj2)
         {
@@ -372,7 +372,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

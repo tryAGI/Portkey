@@ -5,12 +5,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct SageMakerConfiguration : global::System.IEquatable<SageMakerConfiguration>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.BedrockConfiguration? Bedrock { get; init; }
@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Bedrock))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsBedrock => Bedrock != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickBedrock(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.BedrockConfiguration PickBedrock() => IsBedrock
             ? Bedrock!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Bedrock' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.SageMakerConfigurationVariant2? SageMakerConfigurationVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(SageMakerConfigurationVariant2))]
@@ -64,7 +64,7 @@ namespace Portkey
         public bool IsSageMakerConfigurationVariant2 => SageMakerConfigurationVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickSageMakerConfigurationVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.SageMakerConfigurationVariant2 PickSageMakerConfigurationVariant2() => IsSageMakerConfigurationVariant2
             ? SageMakerConfigurationVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'SageMakerConfigurationVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator SageMakerConfiguration(global::Portkey.BedrockConfiguration value) => new SageMakerConfiguration((global::Portkey.BedrockConfiguration?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.BedrockConfiguration?(SageMakerConfiguration @this) => @this.Bedrock;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SageMakerConfiguration(global::Portkey.BedrockConfiguration? value)
         {
@@ -101,22 +101,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static SageMakerConfiguration FromBedrock(global::Portkey.BedrockConfiguration? value) => new SageMakerConfiguration(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator SageMakerConfiguration(global::Portkey.SageMakerConfigurationVariant2 value) => new SageMakerConfiguration((global::Portkey.SageMakerConfigurationVariant2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.SageMakerConfigurationVariant2?(SageMakerConfiguration @this) => @this.SageMakerConfigurationVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SageMakerConfiguration(global::Portkey.SageMakerConfigurationVariant2? value)
         {
@@ -124,12 +124,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static SageMakerConfiguration FromSageMakerConfigurationVariant2(global::Portkey.SageMakerConfigurationVariant2? value) => new SageMakerConfiguration(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public SageMakerConfiguration(
             global::Portkey.BedrockConfiguration? bedrock,
@@ -141,23 +141,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             SageMakerConfigurationVariant2 as object ??
-            Bedrock as object 
+            Bedrock as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Bedrock?.ToString() ??
-            SageMakerConfigurationVariant2?.ToString() 
+            SageMakerConfigurationVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.BedrockConfiguration, TResult>? bedrock = null,
@@ -190,7 +190,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.BedrockConfiguration>? bedrock = null,
@@ -214,7 +214,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.BedrockConfiguration>? bedrock = null,
@@ -237,7 +237,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(SageMakerConfiguration other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.BedrockConfiguration?>.Default.Equals(Bedrock, other.Bedrock) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.SageMakerConfigurationVariant2?>.Default.Equals(SageMakerConfigurationVariant2, other.SageMakerConfigurationVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.SageMakerConfigurationVariant2?>.Default.Equals(SageMakerConfigurationVariant2, other.SageMakerConfigurationVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(SageMakerConfiguration obj1, SageMakerConfiguration obj2)
         {
@@ -277,7 +277,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(SageMakerConfiguration obj1, SageMakerConfiguration obj2)
         {
@@ -285,7 +285,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

@@ -9,7 +9,7 @@ namespace Portkey
     public enum ResponseAudioDoneEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseAudioDone,
     }

@@ -9,7 +9,7 @@ namespace Portkey
     public enum GetAnalyticsGraphsUsersRequestsResponseObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnalyticsGraph,
     }

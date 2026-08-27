@@ -4,40 +4,40 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AzureEntraAuthConfig
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("azure_auth_mode")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.AzureEntraAuthConfigAzureAuthModeJsonConverter))]
         public global::Portkey.AzureEntraAuthConfigAzureAuthMode AzureAuthMode { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("azure_entra_tenant_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AzureEntraTenantId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("azure_entra_client_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AzureEntraClientId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("azure_entra_client_secret")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AzureEntraClientSecret { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("azure_vault_url")]
         [global::System.Text.Json.Serialization.JsonRequired]

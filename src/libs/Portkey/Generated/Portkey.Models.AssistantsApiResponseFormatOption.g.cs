@@ -21,7 +21,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Enum))]
@@ -29,7 +29,7 @@ namespace Portkey
         public bool IsEnum => Enum != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickEnum(
 #if NET6_0_OR_GREATER
@@ -42,7 +42,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.AssistantsApiResponseFormatOptionEnum PickEnum() => IsEnum
             ? Enum!.Value
@@ -58,7 +58,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AssistantsApiResponseFormat))]
@@ -66,7 +66,7 @@ namespace Portkey
         public bool IsAssistantsApiResponseFormat => AssistantsApiResponseFormat != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickAssistantsApiResponseFormat(
 #if NET6_0_OR_GREATER
@@ -79,23 +79,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.AssistantsApiResponseFormat PickAssistantsApiResponseFormat() => IsAssistantsApiResponseFormat
             ? AssistantsApiResponseFormat!
             : throw new global::System.InvalidOperationException($"Expected union variant 'AssistantsApiResponseFormat' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AssistantsApiResponseFormatOption(global::Portkey.AssistantsApiResponseFormatOptionEnum value) => new AssistantsApiResponseFormatOption((global::Portkey.AssistantsApiResponseFormatOptionEnum?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.AssistantsApiResponseFormatOptionEnum?(AssistantsApiResponseFormatOption @this) => @this.Enum;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AssistantsApiResponseFormatOption(global::Portkey.AssistantsApiResponseFormatOptionEnum? value)
         {
@@ -103,22 +103,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AssistantsApiResponseFormatOption FromEnum(global::Portkey.AssistantsApiResponseFormatOptionEnum? value) => new AssistantsApiResponseFormatOption(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator AssistantsApiResponseFormatOption(global::Portkey.AssistantsApiResponseFormat value) => new AssistantsApiResponseFormatOption((global::Portkey.AssistantsApiResponseFormat?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.AssistantsApiResponseFormat?(AssistantsApiResponseFormatOption @this) => @this.AssistantsApiResponseFormat;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AssistantsApiResponseFormatOption(global::Portkey.AssistantsApiResponseFormat? value)
         {
@@ -126,12 +126,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static AssistantsApiResponseFormatOption FromAssistantsApiResponseFormat(global::Portkey.AssistantsApiResponseFormat? value) => new AssistantsApiResponseFormatOption(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AssistantsApiResponseFormatOption(
             global::Portkey.AssistantsApiResponseFormatOptionEnum? @enum,
@@ -143,23 +143,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             AssistantsApiResponseFormat as object ??
-            Enum as object 
+            Enum as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Enum?.ToValueString() ??
-            AssistantsApiResponseFormat?.ToString() 
+            AssistantsApiResponseFormat?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -167,7 +167,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.AssistantsApiResponseFormatOptionEnum?, TResult>? @enum = null,
@@ -192,7 +192,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.AssistantsApiResponseFormatOptionEnum?>? @enum = null,
@@ -216,7 +216,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.AssistantsApiResponseFormatOptionEnum?>? @enum = null,
@@ -239,7 +239,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -260,18 +260,18 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(AssistantsApiResponseFormatOption other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.AssistantsApiResponseFormatOptionEnum?>.Default.Equals(Enum, other.Enum) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.AssistantsApiResponseFormat?>.Default.Equals(AssistantsApiResponseFormat, other.AssistantsApiResponseFormat) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.AssistantsApiResponseFormat?>.Default.Equals(AssistantsApiResponseFormat, other.AssistantsApiResponseFormat)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(AssistantsApiResponseFormatOption obj1, AssistantsApiResponseFormatOption obj2)
         {
@@ -279,7 +279,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(AssistantsApiResponseFormatOption obj1, AssistantsApiResponseFormatOption obj2)
         {
@@ -287,7 +287,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

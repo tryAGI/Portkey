@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class WorkspaceWithUsers
     {
@@ -51,25 +51,25 @@ namespace Portkey
         public global::System.DateTime? LastUpdatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("defaults")]
         public global::Portkey.WorkspaceWithUsersDefaults? Defaults { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("users")]
         public global::System.Collections.Generic.IList<global::Portkey.WorkspaceMember>? Users { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("usage_limits")]
         public global::System.Collections.Generic.IList<global::Portkey.UsageLimits>? UsageLimits { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("rate_limits")]
         public global::System.Collections.Generic.IList<global::Portkey.RateLimits>? RateLimits { get; set; }

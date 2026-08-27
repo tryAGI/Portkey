@@ -10,19 +10,19 @@ namespace Portkey
     public enum EasyInputMessageRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Developer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         System,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

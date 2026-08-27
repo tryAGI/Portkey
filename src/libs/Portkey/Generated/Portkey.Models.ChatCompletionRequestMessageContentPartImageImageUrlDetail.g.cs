@@ -10,7 +10,7 @@ namespace Portkey
     public enum ChatCompletionRequestMessageContentPartImageImageUrlDetail
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Auto,
         /// <summary>

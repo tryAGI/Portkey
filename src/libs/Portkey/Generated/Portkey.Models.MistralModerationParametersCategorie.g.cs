@@ -4,44 +4,44 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum MistralModerationParametersCategorie
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DangerousAndCriminalContent,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Financial,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HateAndDiscrimination,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Health,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Law,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pii,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Selfharm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sexual,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ViolenceAndThreats,
     }

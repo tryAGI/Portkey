@@ -9,15 +9,15 @@ namespace Portkey
     public enum WorkspaceMemberOrgRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Admin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Member,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Owner,
     }

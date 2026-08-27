@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateThreadAndRunRequest
     {
@@ -16,7 +16,7 @@ namespace Portkey
         public required string AssistantId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("thread")]
         public global::Portkey.CreateThreadRequest? Thread { get; set; }

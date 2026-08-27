@@ -9,15 +9,15 @@ namespace Portkey
     public enum AssistantsNamedToolChoiceType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CodeInterpreter,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FileSearch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Function,
     }

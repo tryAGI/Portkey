@@ -9,11 +9,11 @@ namespace Portkey
     public enum ListRateLimitsPoliciesStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Active,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Archived,
     }

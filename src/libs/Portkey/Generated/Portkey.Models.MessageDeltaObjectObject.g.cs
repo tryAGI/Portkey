@@ -9,7 +9,7 @@ namespace Portkey
     public enum MessageDeltaObjectObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThreadMessageDelta,
     }

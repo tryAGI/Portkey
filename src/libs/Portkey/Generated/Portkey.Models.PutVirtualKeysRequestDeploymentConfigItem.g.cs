@@ -4,31 +4,31 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PutVirtualKeysRequestDeploymentConfigItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("apiVersion")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ApiVersion { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("alias")]
         public string? Alias { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("is_default")]
         public bool? IsDefault { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("deploymentName")]
         [global::System.Text.Json.Serialization.JsonRequired]

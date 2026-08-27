@@ -20,7 +20,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(String))]
@@ -28,7 +28,7 @@ namespace Portkey
         public bool IsString => String != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickString(
 #if NET6_0_OR_GREATER
@@ -41,7 +41,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string PickString() => IsString
             ? String!
@@ -57,7 +57,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ObjectValue))]
@@ -65,7 +65,7 @@ namespace Portkey
         public bool IsObjectValue => ObjectValue != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickObjectValue(
 #if NET6_0_OR_GREATER
@@ -78,23 +78,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.RerankDocumentObject PickObjectValue() => IsObjectValue
             ? ObjectValue!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ObjectValue' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator RerankDocument(string value) => new RerankDocument((string?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator string?(RerankDocument @this) => @this.String;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RerankDocument(string? value)
         {
@@ -102,22 +102,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static RerankDocument FromString(string? value) => new RerankDocument(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator RerankDocument(global::Portkey.RerankDocumentObject value) => new RerankDocument((global::Portkey.RerankDocumentObject?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.RerankDocumentObject?(RerankDocument @this) => @this.ObjectValue;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RerankDocument(global::Portkey.RerankDocumentObject? value)
         {
@@ -125,12 +125,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static RerankDocument FromObjectValue(global::Portkey.RerankDocumentObject? value) => new RerankDocument(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RerankDocument(
             string? @string,
@@ -142,23 +142,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             ObjectValue as object ??
-            String as object 
+            String as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             String?.ToString() ??
-            ObjectValue?.ToString() 
+            ObjectValue?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -166,7 +166,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<string, TResult>? @string = null,
@@ -191,7 +191,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<string>? @string = null,
@@ -215,7 +215,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<string>? @string = null,
@@ -238,7 +238,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -259,18 +259,18 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(RerankDocument other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(String, other.String) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.RerankDocumentObject?>.Default.Equals(ObjectValue, other.ObjectValue) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.RerankDocumentObject?>.Default.Equals(ObjectValue, other.ObjectValue)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(RerankDocument obj1, RerankDocument obj2)
         {
@@ -278,7 +278,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(RerankDocument obj1, RerankDocument obj2)
         {
@@ -286,7 +286,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

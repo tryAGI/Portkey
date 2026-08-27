@@ -4,20 +4,20 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum McpIntegrationTransport
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Http,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Interactive,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sse,
     }

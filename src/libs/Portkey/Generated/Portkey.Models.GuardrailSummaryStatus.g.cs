@@ -9,11 +9,11 @@ namespace Portkey
     public enum GuardrailSummaryStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Active,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Archived,
     }

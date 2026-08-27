@@ -5,12 +5,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct IntegrationDetailResponse : global::System.IEquatable<IntegrationDetailResponse>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.IntegrationList? List { get; init; }
@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(List))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsList => List != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickList(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.IntegrationList PickList() => IsList
             ? List!
             : throw new global::System.InvalidOperationException($"Expected union variant 'List' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.IntegrationDetailResponseVariant2? IntegrationDetailResponseVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IntegrationDetailResponseVariant2))]
@@ -64,7 +64,7 @@ namespace Portkey
         public bool IsIntegrationDetailResponseVariant2 => IntegrationDetailResponseVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickIntegrationDetailResponseVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.IntegrationDetailResponseVariant2 PickIntegrationDetailResponseVariant2() => IsIntegrationDetailResponseVariant2
             ? IntegrationDetailResponseVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'IntegrationDetailResponseVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IntegrationDetailResponse(global::Portkey.IntegrationList value) => new IntegrationDetailResponse((global::Portkey.IntegrationList?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.IntegrationList?(IntegrationDetailResponse @this) => @this.List;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IntegrationDetailResponse(global::Portkey.IntegrationList? value)
         {
@@ -101,22 +101,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IntegrationDetailResponse FromList(global::Portkey.IntegrationList? value) => new IntegrationDetailResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IntegrationDetailResponse(global::Portkey.IntegrationDetailResponseVariant2 value) => new IntegrationDetailResponse((global::Portkey.IntegrationDetailResponseVariant2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.IntegrationDetailResponseVariant2?(IntegrationDetailResponse @this) => @this.IntegrationDetailResponseVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IntegrationDetailResponse(global::Portkey.IntegrationDetailResponseVariant2? value)
         {
@@ -124,12 +124,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IntegrationDetailResponse FromIntegrationDetailResponseVariant2(global::Portkey.IntegrationDetailResponseVariant2? value) => new IntegrationDetailResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IntegrationDetailResponse(
             global::Portkey.IntegrationList? list,
@@ -141,23 +141,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             IntegrationDetailResponseVariant2 as object ??
-            List as object 
+            List as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             List?.ToString() ??
-            IntegrationDetailResponseVariant2?.ToString() 
+            IntegrationDetailResponseVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.IntegrationList, TResult>? list = null,
@@ -190,7 +190,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.IntegrationList>? list = null,
@@ -214,7 +214,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.IntegrationList>? list = null,
@@ -237,7 +237,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(IntegrationDetailResponse other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.IntegrationList?>.Default.Equals(List, other.List) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.IntegrationDetailResponseVariant2?>.Default.Equals(IntegrationDetailResponseVariant2, other.IntegrationDetailResponseVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.IntegrationDetailResponseVariant2?>.Default.Equals(IntegrationDetailResponseVariant2, other.IntegrationDetailResponseVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(IntegrationDetailResponse obj1, IntegrationDetailResponse obj2)
         {
@@ -277,7 +277,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(IntegrationDetailResponse obj1, IntegrationDetailResponse obj2)
         {
@@ -285,7 +285,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

@@ -10,11 +10,11 @@ namespace Portkey
     public enum AzurePIIParametersDomain
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         None,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Phi,
     }

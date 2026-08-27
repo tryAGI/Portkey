@@ -9,11 +9,11 @@ namespace Portkey
     public enum ModelCalculateOperationOperation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Multiply,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sum,
     }

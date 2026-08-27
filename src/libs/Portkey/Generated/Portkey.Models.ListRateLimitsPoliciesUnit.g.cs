@@ -4,24 +4,24 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ListRateLimitsPoliciesUnit
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rpd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rph,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rpm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rpw,
     }

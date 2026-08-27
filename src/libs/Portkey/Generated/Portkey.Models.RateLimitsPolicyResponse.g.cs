@@ -5,12 +5,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct RateLimitsPolicyResponse : global::System.IEquatable<RateLimitsPolicyResponse>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.RateLimitsPolicy? RateLimitsPolicy { get; init; }
@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(RateLimitsPolicy))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsRateLimitsPolicy => RateLimitsPolicy != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickRateLimitsPolicy(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.RateLimitsPolicy PickRateLimitsPolicy() => IsRateLimitsPolicy
             ? RateLimitsPolicy!
             : throw new global::System.InvalidOperationException($"Expected union variant 'RateLimitsPolicy' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.RateLimitsPolicyResponseVariant2? RateLimitsPolicyResponseVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(RateLimitsPolicyResponseVariant2))]
@@ -64,7 +64,7 @@ namespace Portkey
         public bool IsRateLimitsPolicyResponseVariant2 => RateLimitsPolicyResponseVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickRateLimitsPolicyResponseVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.RateLimitsPolicyResponseVariant2 PickRateLimitsPolicyResponseVariant2() => IsRateLimitsPolicyResponseVariant2
             ? RateLimitsPolicyResponseVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'RateLimitsPolicyResponseVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator RateLimitsPolicyResponse(global::Portkey.RateLimitsPolicy value) => new RateLimitsPolicyResponse((global::Portkey.RateLimitsPolicy?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.RateLimitsPolicy?(RateLimitsPolicyResponse @this) => @this.RateLimitsPolicy;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RateLimitsPolicyResponse(global::Portkey.RateLimitsPolicy? value)
         {
@@ -101,22 +101,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static RateLimitsPolicyResponse FromRateLimitsPolicy(global::Portkey.RateLimitsPolicy? value) => new RateLimitsPolicyResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator RateLimitsPolicyResponse(global::Portkey.RateLimitsPolicyResponseVariant2 value) => new RateLimitsPolicyResponse((global::Portkey.RateLimitsPolicyResponseVariant2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.RateLimitsPolicyResponseVariant2?(RateLimitsPolicyResponse @this) => @this.RateLimitsPolicyResponseVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RateLimitsPolicyResponse(global::Portkey.RateLimitsPolicyResponseVariant2? value)
         {
@@ -124,12 +124,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static RateLimitsPolicyResponse FromRateLimitsPolicyResponseVariant2(global::Portkey.RateLimitsPolicyResponseVariant2? value) => new RateLimitsPolicyResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RateLimitsPolicyResponse(
             global::Portkey.RateLimitsPolicy? rateLimitsPolicy,
@@ -141,23 +141,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             RateLimitsPolicyResponseVariant2 as object ??
-            RateLimitsPolicy as object 
+            RateLimitsPolicy as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             RateLimitsPolicy?.ToString() ??
-            RateLimitsPolicyResponseVariant2?.ToString() 
+            RateLimitsPolicyResponseVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.RateLimitsPolicy, TResult>? rateLimitsPolicy = null,
@@ -190,7 +190,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.RateLimitsPolicy>? rateLimitsPolicy = null,
@@ -214,7 +214,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.RateLimitsPolicy>? rateLimitsPolicy = null,
@@ -237,7 +237,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(RateLimitsPolicyResponse other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.RateLimitsPolicy?>.Default.Equals(RateLimitsPolicy, other.RateLimitsPolicy) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.RateLimitsPolicyResponseVariant2?>.Default.Equals(RateLimitsPolicyResponseVariant2, other.RateLimitsPolicyResponseVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.RateLimitsPolicyResponseVariant2?>.Default.Equals(RateLimitsPolicyResponseVariant2, other.RateLimitsPolicyResponseVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(RateLimitsPolicyResponse obj1, RateLimitsPolicyResponse obj2)
         {
@@ -277,7 +277,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(RateLimitsPolicyResponse obj1, RateLimitsPolicyResponse obj2)
         {
@@ -285,7 +285,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

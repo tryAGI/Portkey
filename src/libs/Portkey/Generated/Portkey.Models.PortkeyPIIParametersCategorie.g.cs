@@ -4,36 +4,36 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PortkeyPIIParametersCategorie
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreditCard,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EmailAddress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IpAddress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LocationAddress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Name,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PhoneNumber,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ssn,
     }

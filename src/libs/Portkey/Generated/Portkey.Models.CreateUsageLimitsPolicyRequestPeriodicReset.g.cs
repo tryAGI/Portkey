@@ -9,11 +9,11 @@ namespace Portkey
     public enum CreateUsageLimitsPolicyRequestPeriodicReset
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Monthly,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Weekly,
     }

@@ -9,11 +9,11 @@ namespace Portkey
     public enum CreateUsageLimitsPolicyRequestType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tokens,
     }

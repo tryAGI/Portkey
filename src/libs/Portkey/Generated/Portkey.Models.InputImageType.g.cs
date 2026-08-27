@@ -9,7 +9,7 @@ namespace Portkey
     public enum InputImageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InputImage,
     }

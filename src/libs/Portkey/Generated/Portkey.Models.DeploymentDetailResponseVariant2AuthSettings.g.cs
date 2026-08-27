@@ -4,12 +4,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DeploymentDetailResponseVariant2AuthSettings
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_all_workspaces")]
         public int? AllowAllWorkspaces { get; set; }

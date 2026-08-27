@@ -9,7 +9,7 @@ namespace Portkey
     public enum MessageDeltaContentTextAnnotationsFilePathObjectType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FilePath,
     }

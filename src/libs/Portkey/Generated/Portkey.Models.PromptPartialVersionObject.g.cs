@@ -4,12 +4,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PromptPartialVersionObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Partial,
     }

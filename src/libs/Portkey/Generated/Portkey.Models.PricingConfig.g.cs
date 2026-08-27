@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PricingConfig
     {
@@ -16,7 +16,7 @@ namespace Portkey
         public global::Portkey.PricingConfigType? Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pay_as_you_go")]
         public global::Portkey.PayAsYouGoPricing? PayAsYouGo { get; set; }

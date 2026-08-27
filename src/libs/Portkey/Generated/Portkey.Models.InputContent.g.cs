@@ -5,7 +5,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct InputContent : global::System.IEquatable<InputContent>
     {
@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(TextInput))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsTextInput => TextInput != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickTextInput(
 #if NET6_0_OR_GREATER
@@ -40,7 +40,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.InputText PickTextInput() => IsTextInput
             ? TextInput!
@@ -56,7 +56,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ImageInput))]
@@ -64,7 +64,7 @@ namespace Portkey
         public bool IsImageInput => ImageInput != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickImageInput(
 #if NET6_0_OR_GREATER
@@ -77,7 +77,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.InputImage PickImageInput() => IsImageInput
             ? ImageInput!
@@ -93,7 +93,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FileInput))]
@@ -101,7 +101,7 @@ namespace Portkey
         public bool IsFileInput => FileInput != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickFileInput(
 #if NET6_0_OR_GREATER
@@ -114,23 +114,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.InputFile PickFileInput() => IsFileInput
             ? FileInput!
             : throw new global::System.InvalidOperationException($"Expected union variant 'FileInput' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator InputContent(global::Portkey.InputText value) => new InputContent((global::Portkey.InputText?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.InputText?(InputContent @this) => @this.TextInput;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InputContent(global::Portkey.InputText? value)
         {
@@ -138,22 +138,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static InputContent FromTextInput(global::Portkey.InputText? value) => new InputContent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator InputContent(global::Portkey.InputImage value) => new InputContent((global::Portkey.InputImage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.InputImage?(InputContent @this) => @this.ImageInput;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InputContent(global::Portkey.InputImage? value)
         {
@@ -161,22 +161,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static InputContent FromImageInput(global::Portkey.InputImage? value) => new InputContent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator InputContent(global::Portkey.InputFile value) => new InputContent((global::Portkey.InputFile?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.InputFile?(InputContent @this) => @this.FileInput;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InputContent(global::Portkey.InputFile? value)
         {
@@ -184,12 +184,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static InputContent FromFileInput(global::Portkey.InputFile? value) => new InputContent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InputContent(
             global::Portkey.InputText? textInput,
@@ -203,25 +203,25 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             FileInput as object ??
             ImageInput as object ??
-            TextInput as object 
+            TextInput as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             TextInput?.ToString() ??
             ImageInput?.ToString() ??
-            FileInput?.ToString() 
+            FileInput?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -229,7 +229,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.InputText, TResult>? textInput = null,
@@ -259,7 +259,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.InputText>? textInput = null,
@@ -289,7 +289,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.InputText>? textInput = null,
@@ -317,7 +317,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -340,19 +340,19 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(InputContent other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.InputText?>.Default.Equals(TextInput, other.TextInput) &&
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.InputImage?>.Default.Equals(ImageInput, other.ImageInput) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.InputFile?>.Default.Equals(FileInput, other.FileInput) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.InputFile?>.Default.Equals(FileInput, other.FileInput)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(InputContent obj1, InputContent obj2)
         {
@@ -360,7 +360,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(InputContent obj1, InputContent obj2)
         {
@@ -368,7 +368,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

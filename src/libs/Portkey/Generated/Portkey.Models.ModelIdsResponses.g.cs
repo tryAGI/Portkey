@@ -10,7 +10,7 @@ namespace Portkey
     public readonly partial struct ModelIdsResponses : global::System.IEquatable<ModelIdsResponses>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.ModelIdsResponsesEnum? Enum { get; init; }
@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Enum))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsEnum => Enum != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickEnum(
 #if NET6_0_OR_GREATER
@@ -40,23 +40,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ModelIdsResponsesEnum PickEnum() => IsEnum
             ? Enum!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Enum' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ModelIdsResponses(global::Portkey.ModelIdsResponsesEnum value) => new ModelIdsResponses((global::Portkey.ModelIdsResponsesEnum?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ModelIdsResponsesEnum?(ModelIdsResponses @this) => @this.Enum;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ModelIdsResponses(global::Portkey.ModelIdsResponsesEnum? value)
         {
@@ -64,26 +64,26 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ModelIdsResponses FromEnum(global::Portkey.ModelIdsResponsesEnum? value) => new ModelIdsResponses(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
-            Enum as object 
+            Enum as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
-            Enum?.ToValueString() 
+            Enum?.ToValueString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -91,7 +91,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.ModelIdsResponsesEnum?, TResult>? @enum = null,
@@ -111,7 +111,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.ModelIdsResponsesEnum?>? @enum = null,
@@ -129,7 +129,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.ModelIdsResponsesEnum?>? @enum = null,
@@ -147,7 +147,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -166,17 +166,17 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(ModelIdsResponses other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.ModelIdsResponsesEnum?>.Default.Equals(Enum, other.Enum) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.ModelIdsResponsesEnum?>.Default.Equals(Enum, other.Enum)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(ModelIdsResponses obj1, ModelIdsResponses obj2)
         {
@@ -184,7 +184,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(ModelIdsResponses obj1, ModelIdsResponses obj2)
         {
@@ -192,7 +192,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

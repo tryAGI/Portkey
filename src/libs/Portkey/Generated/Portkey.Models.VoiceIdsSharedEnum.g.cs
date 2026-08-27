@@ -4,52 +4,52 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum VoiceIdsSharedEnum
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Alloy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ash,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ballad,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Coral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Echo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Nova,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Onyx,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Shimmer,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Verse,
     }

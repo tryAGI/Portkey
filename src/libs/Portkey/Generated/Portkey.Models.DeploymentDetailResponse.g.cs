@@ -5,12 +5,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct DeploymentDetailResponse : global::System.IEquatable<DeploymentDetailResponse>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.DeploymentListItem? ListItem { get; init; }
@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ListItem))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsListItem => ListItem != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickListItem(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.DeploymentListItem PickListItem() => IsListItem
             ? ListItem!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ListItem' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.DeploymentDetailResponseVariant2? DeploymentDetailResponseVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(DeploymentDetailResponseVariant2))]
@@ -64,7 +64,7 @@ namespace Portkey
         public bool IsDeploymentDetailResponseVariant2 => DeploymentDetailResponseVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickDeploymentDetailResponseVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.DeploymentDetailResponseVariant2 PickDeploymentDetailResponseVariant2() => IsDeploymentDetailResponseVariant2
             ? DeploymentDetailResponseVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'DeploymentDetailResponseVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator DeploymentDetailResponse(global::Portkey.DeploymentListItem value) => new DeploymentDetailResponse((global::Portkey.DeploymentListItem?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.DeploymentListItem?(DeploymentDetailResponse @this) => @this.ListItem;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DeploymentDetailResponse(global::Portkey.DeploymentListItem? value)
         {
@@ -101,22 +101,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static DeploymentDetailResponse FromListItem(global::Portkey.DeploymentListItem? value) => new DeploymentDetailResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator DeploymentDetailResponse(global::Portkey.DeploymentDetailResponseVariant2 value) => new DeploymentDetailResponse((global::Portkey.DeploymentDetailResponseVariant2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.DeploymentDetailResponseVariant2?(DeploymentDetailResponse @this) => @this.DeploymentDetailResponseVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DeploymentDetailResponse(global::Portkey.DeploymentDetailResponseVariant2? value)
         {
@@ -124,12 +124,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static DeploymentDetailResponse FromDeploymentDetailResponseVariant2(global::Portkey.DeploymentDetailResponseVariant2? value) => new DeploymentDetailResponse(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DeploymentDetailResponse(
             global::Portkey.DeploymentListItem? listItem,
@@ -141,23 +141,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             DeploymentDetailResponseVariant2 as object ??
-            ListItem as object 
+            ListItem as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             ListItem?.ToString() ??
-            DeploymentDetailResponseVariant2?.ToString() 
+            DeploymentDetailResponseVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.DeploymentListItem, TResult>? listItem = null,
@@ -190,7 +190,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.DeploymentListItem>? listItem = null,
@@ -214,7 +214,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.DeploymentListItem>? listItem = null,
@@ -237,7 +237,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(DeploymentDetailResponse other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.DeploymentListItem?>.Default.Equals(ListItem, other.ListItem) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.DeploymentDetailResponseVariant2?>.Default.Equals(DeploymentDetailResponseVariant2, other.DeploymentDetailResponseVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.DeploymentDetailResponseVariant2?>.Default.Equals(DeploymentDetailResponseVariant2, other.DeploymentDetailResponseVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(DeploymentDetailResponse obj1, DeploymentDetailResponse obj2)
         {
@@ -277,7 +277,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(DeploymentDetailResponse obj1, DeploymentDetailResponse obj2)
         {
@@ -285,7 +285,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

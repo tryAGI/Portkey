@@ -9,7 +9,7 @@ namespace Portkey
     public sealed partial class CostsResult
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("object")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.CostsResultObjectJsonConverter))]

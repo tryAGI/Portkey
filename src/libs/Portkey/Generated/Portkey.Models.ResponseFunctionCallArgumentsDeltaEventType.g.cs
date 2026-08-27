@@ -9,7 +9,7 @@ namespace Portkey
     public enum ResponseFunctionCallArgumentsDeltaEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseFunctionCallArgumentsDelta,
     }

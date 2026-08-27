@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DeploymentDetailResponseVariant2
     {
@@ -16,13 +16,13 @@ namespace Portkey
         public global::Portkey.AllOf<global::Portkey.DeploymentAuthSettings, global::Portkey.DeploymentDetailResponseVariant2AuthSettings>? AuthSettings { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("deployment_config")]
         public object? DeploymentConfig { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("workspaces")]
         public global::System.Collections.Generic.IList<global::Portkey.DeploymentDetailResponseVariant2Workspace>? Workspaces { get; set; }

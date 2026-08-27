@@ -44,7 +44,7 @@ namespace Portkey
         public required int AnnotationIndex { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("annotation")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.AnnotationJsonConverter))]

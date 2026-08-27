@@ -9,11 +9,11 @@ namespace Portkey
     public enum MessageObjectRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

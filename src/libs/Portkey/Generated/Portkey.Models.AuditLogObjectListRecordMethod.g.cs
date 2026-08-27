@@ -9,15 +9,15 @@ namespace Portkey
     public enum AuditLogObjectListRecordMethod
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Delete,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Post,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Put,
     }

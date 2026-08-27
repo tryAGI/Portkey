@@ -9,7 +9,7 @@ namespace Portkey
     public enum MessageContentImageFileObjectType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageFile,
     }

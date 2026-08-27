@@ -11,7 +11,7 @@ namespace Portkey
     public sealed partial class WorkspacesMembersClient : global::Portkey.IWorkspacesMembersClient, global::System.IDisposable
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public const string DefaultBaseUrl = "https://api.portkey.ai/v1";
 
@@ -41,7 +41,7 @@ namespace Portkey
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Portkey.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {

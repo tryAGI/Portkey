@@ -4,24 +4,24 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum InviteStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Accepted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cancelled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Expired,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pending,
     }

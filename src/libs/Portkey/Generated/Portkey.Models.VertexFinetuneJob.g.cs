@@ -5,7 +5,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct VertexFinetuneJob : global::System.IEquatable<VertexFinetuneJob>
     {
@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(OpenAIParams))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsOpenAIParams => OpenAIParams != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickOpenAIParams(
 #if NET6_0_OR_GREATER
@@ -40,23 +40,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.OpenAIFinetuneJob PickOpenAIParams() => IsOpenAIParams
             ? OpenAIParams!
             : throw new global::System.InvalidOperationException($"Expected union variant 'OpenAIParams' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator VertexFinetuneJob(global::Portkey.OpenAIFinetuneJob value) => new VertexFinetuneJob((global::Portkey.OpenAIFinetuneJob?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.OpenAIFinetuneJob?(VertexFinetuneJob @this) => @this.OpenAIParams;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public VertexFinetuneJob(global::Portkey.OpenAIFinetuneJob? value)
         {
@@ -64,26 +64,26 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static VertexFinetuneJob FromOpenAIParams(global::Portkey.OpenAIFinetuneJob? value) => new VertexFinetuneJob(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
-            OpenAIParams as object 
+            OpenAIParams as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
-            OpenAIParams?.ToString() 
+            OpenAIParams?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -91,7 +91,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.OpenAIFinetuneJob, TResult>? openAIParams = null,
@@ -111,7 +111,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.OpenAIFinetuneJob>? openAIParams = null,
@@ -129,7 +129,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.OpenAIFinetuneJob>? openAIParams = null,
@@ -147,7 +147,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -166,17 +166,17 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(VertexFinetuneJob other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.OpenAIFinetuneJob?>.Default.Equals(OpenAIParams, other.OpenAIParams) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.OpenAIFinetuneJob?>.Default.Equals(OpenAIParams, other.OpenAIParams)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(VertexFinetuneJob obj1, VertexFinetuneJob obj2)
         {
@@ -184,7 +184,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(VertexFinetuneJob obj1, VertexFinetuneJob obj2)
         {
@@ -192,7 +192,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

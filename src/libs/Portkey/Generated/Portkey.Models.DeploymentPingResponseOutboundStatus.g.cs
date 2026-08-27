@@ -4,20 +4,20 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum DeploymentPingResponseOutboundStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Healthy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unhealthy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unreachable,
     }

@@ -9,7 +9,7 @@ namespace Portkey
     public enum GetAnalyticsSummaryCacheResponseObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnalyticsSummary,
     }

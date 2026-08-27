@@ -9,11 +9,11 @@ namespace Portkey
     public enum OpenAIBatchJobCompletionWindow
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x24h,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Immediate,
     }

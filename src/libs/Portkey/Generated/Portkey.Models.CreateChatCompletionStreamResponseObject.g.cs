@@ -9,7 +9,7 @@ namespace Portkey
     public enum CreateChatCompletionStreamResponseObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChatCompletionChunk,
     }

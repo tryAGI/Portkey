@@ -9,7 +9,7 @@ namespace Portkey
     public enum CreateThreadRequestToolResourcesFileSearchVectorStoreChunkingStrategyStaticChunkingStrategyType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Static,
     }
