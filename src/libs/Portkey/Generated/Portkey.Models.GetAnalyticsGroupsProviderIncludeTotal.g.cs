@@ -9,11 +9,11 @@ namespace Portkey
     public enum GetAnalyticsGroupsProviderIncludeTotal
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         False,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         True,
     }

@@ -4,12 +4,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AuditLogObjectList
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("records")]
         public global::System.Collections.Generic.IList<global::Portkey.AuditLogObjectListRecord>? Records { get; set; }

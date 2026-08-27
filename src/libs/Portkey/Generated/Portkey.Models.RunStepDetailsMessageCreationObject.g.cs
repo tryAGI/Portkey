@@ -16,7 +16,7 @@ namespace Portkey
         public global::Portkey.RunStepDetailsMessageCreationObjectType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("message_creation")]
         [global::System.Text.Json.Serialization.JsonRequired]

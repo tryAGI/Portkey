@@ -9,7 +9,7 @@ namespace Portkey
     public enum ResponseVariant3Object
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Response,
     }

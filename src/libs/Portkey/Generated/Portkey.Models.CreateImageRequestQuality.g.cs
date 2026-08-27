@@ -11,11 +11,11 @@ namespace Portkey
     public enum CreateImageRequestQuality
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Standard,
     }

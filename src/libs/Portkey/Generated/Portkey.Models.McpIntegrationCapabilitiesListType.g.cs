@@ -4,24 +4,24 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum McpIntegrationCapabilitiesListType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Prompt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Resource,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResourceTemplate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tool,
     }

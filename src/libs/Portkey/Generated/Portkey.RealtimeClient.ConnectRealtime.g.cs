@@ -201,7 +201,7 @@ namespace Portkey
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
 
             if (xPortkeyTraceId != default)
@@ -430,7 +430,7 @@ namespace Portkey
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // 
+                            //
                             if ((int)__response.StatusCode == 101)
                             {
                                 string? __content_101 = null;
@@ -462,7 +462,7 @@ namespace Portkey
                                         h => h.Key,
                                         h => h.Value));
                             }
-                            // 
+                            //
                             if (!__response.IsSuccessStatusCode)
                             {
                                 string? __content_default = null;

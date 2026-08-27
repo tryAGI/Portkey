@@ -10,11 +10,11 @@ namespace Portkey
     public enum FileSearchToolRankingOptionsRanker
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Auto,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Default20241115,
     }

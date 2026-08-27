@@ -9,11 +9,11 @@ namespace Portkey
     public enum BedrockConfigurationAwsAuthType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AccessKey,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssumedRole,
     }

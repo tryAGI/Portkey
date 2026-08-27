@@ -11,7 +11,7 @@ namespace Portkey
     public enum ComputerScreenshotImageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputerScreenshot,
     }

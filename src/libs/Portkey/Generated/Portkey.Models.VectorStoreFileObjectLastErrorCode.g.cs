@@ -9,19 +9,19 @@ namespace Portkey
     public enum VectorStoreFileObjectLastErrorCode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FileNotFound,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InternalError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ParsingError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UnhandledMimeType,
     }

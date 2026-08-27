@@ -9,7 +9,7 @@ namespace Portkey
     public enum EasyInputMessageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Message,
     }

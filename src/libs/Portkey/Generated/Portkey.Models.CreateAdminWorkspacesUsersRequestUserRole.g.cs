@@ -9,15 +9,15 @@ namespace Portkey
     public enum CreateAdminWorkspacesUsersRequestUserRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Admin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Manager,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Member,
     }

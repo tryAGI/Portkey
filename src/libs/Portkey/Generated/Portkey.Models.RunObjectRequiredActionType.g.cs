@@ -9,7 +9,7 @@ namespace Portkey
     public enum RunObjectRequiredActionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SubmitToolOutputs,
     }

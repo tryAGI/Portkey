@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ModelUpdateRequest
     {
@@ -41,13 +41,13 @@ namespace Portkey
         public string? BaseModelSlug { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("configurations")]
         public global::Portkey.ModelConfigurations? Configurations { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pricing_config")]
         public global::Portkey.PricingConfig? PricingConfig { get; set; }

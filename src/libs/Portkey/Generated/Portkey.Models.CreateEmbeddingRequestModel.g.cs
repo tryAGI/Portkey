@@ -4,20 +4,20 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateEmbeddingRequestModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextEmbedding3Large,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextEmbedding3Small,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextEmbeddingAda002,
     }

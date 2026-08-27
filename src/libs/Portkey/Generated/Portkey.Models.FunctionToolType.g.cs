@@ -9,7 +9,7 @@ namespace Portkey
     public enum FunctionToolType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Function,
     }

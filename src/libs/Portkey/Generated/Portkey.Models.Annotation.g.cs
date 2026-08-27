@@ -5,7 +5,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct Annotation : global::System.IEquatable<Annotation>
     {
@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FileCitation))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsFileCitation => FileCitation != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickFileCitation(
 #if NET6_0_OR_GREATER
@@ -40,7 +40,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.FileCitation PickFileCitation() => IsFileCitation
             ? FileCitation!
@@ -56,7 +56,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UrlCitation))]
@@ -64,7 +64,7 @@ namespace Portkey
         public bool IsUrlCitation => UrlCitation != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickUrlCitation(
 #if NET6_0_OR_GREATER
@@ -77,7 +77,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.UrlCitation PickUrlCitation() => IsUrlCitation
             ? UrlCitation!
@@ -93,7 +93,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FilePath))]
@@ -101,7 +101,7 @@ namespace Portkey
         public bool IsFilePath => FilePath != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickFilePath(
 #if NET6_0_OR_GREATER
@@ -114,23 +114,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.FilePath PickFilePath() => IsFilePath
             ? FilePath!
             : throw new global::System.InvalidOperationException($"Expected union variant 'FilePath' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator Annotation(global::Portkey.FileCitation value) => new Annotation((global::Portkey.FileCitation?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.FileCitation?(Annotation @this) => @this.FileCitation;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Annotation(global::Portkey.FileCitation? value)
         {
@@ -138,22 +138,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static Annotation FromFileCitation(global::Portkey.FileCitation? value) => new Annotation(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator Annotation(global::Portkey.UrlCitation value) => new Annotation((global::Portkey.UrlCitation?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.UrlCitation?(Annotation @this) => @this.UrlCitation;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Annotation(global::Portkey.UrlCitation? value)
         {
@@ -161,22 +161,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static Annotation FromUrlCitation(global::Portkey.UrlCitation? value) => new Annotation(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator Annotation(global::Portkey.FilePath value) => new Annotation((global::Portkey.FilePath?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.FilePath?(Annotation @this) => @this.FilePath;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Annotation(global::Portkey.FilePath? value)
         {
@@ -184,12 +184,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static Annotation FromFilePath(global::Portkey.FilePath? value) => new Annotation(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public Annotation(
             global::Portkey.FileCitation? fileCitation,
@@ -203,25 +203,25 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             FilePath as object ??
             UrlCitation as object ??
-            FileCitation as object 
+            FileCitation as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             FileCitation?.ToString() ??
             UrlCitation?.ToString() ??
-            FilePath?.ToString() 
+            FilePath?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -229,7 +229,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.FileCitation, TResult>? fileCitation = null,
@@ -259,7 +259,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.FileCitation>? fileCitation = null,
@@ -289,7 +289,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.FileCitation>? fileCitation = null,
@@ -317,7 +317,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -340,19 +340,19 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(Annotation other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.FileCitation?>.Default.Equals(FileCitation, other.FileCitation) &&
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.UrlCitation?>.Default.Equals(UrlCitation, other.UrlCitation) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.FilePath?>.Default.Equals(FilePath, other.FilePath) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.FilePath?>.Default.Equals(FilePath, other.FilePath)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(Annotation obj1, Annotation obj2)
         {
@@ -360,7 +360,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(Annotation obj1, Annotation obj2)
         {
@@ -368,7 +368,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

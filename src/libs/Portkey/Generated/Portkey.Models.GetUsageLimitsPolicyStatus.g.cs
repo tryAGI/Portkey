@@ -9,11 +9,11 @@ namespace Portkey
     public enum GetUsageLimitsPolicyStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Active,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Archived,
     }

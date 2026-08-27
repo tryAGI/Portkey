@@ -9,15 +9,15 @@ namespace Portkey
     public enum GetIntegrationsType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         All,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Organisation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Workspace,
     }

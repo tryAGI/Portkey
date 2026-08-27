@@ -9,199 +9,199 @@ namespace Portkey
     public enum PortkeyLanguageParametersLanguage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AraArab,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArbLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AzeLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BenBeng,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BulCyrl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CatLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CesLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DanLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeuLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EllGrek,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EngLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EstLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FasArab,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FilLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FinLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FraLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HebHebr,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HinDeva,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HrvLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HunLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IndLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ItaLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         JpnJpan,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KanKnda,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KorHang,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LavLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LitLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MarDeva,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MsaLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NldLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NorLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PesArab,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PolLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PorLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RonLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RusCyrl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SlkLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SlvLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpaLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SrpCyrl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SweLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TamTaml,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TelTelu,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThaThai,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TurLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UkrCyrl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UrdArab,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VieLatn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ZhoHans,
     }

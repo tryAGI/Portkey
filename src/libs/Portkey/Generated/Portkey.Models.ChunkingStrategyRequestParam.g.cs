@@ -19,7 +19,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AutoChunkingStrategy))]
@@ -27,7 +27,7 @@ namespace Portkey
         public bool IsAutoChunkingStrategy => AutoChunkingStrategy != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickAutoChunkingStrategy(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.AutoChunkingStrategyRequestParam PickAutoChunkingStrategy() => IsAutoChunkingStrategy
             ? AutoChunkingStrategy!
             : throw new global::System.InvalidOperationException($"Expected union variant 'AutoChunkingStrategy' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.StaticChunkingStrategyRequestParam? StaticChunkingStrategy { get; init; }
@@ -56,7 +56,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(StaticChunkingStrategy))]
@@ -64,7 +64,7 @@ namespace Portkey
         public bool IsStaticChunkingStrategy => StaticChunkingStrategy != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickStaticChunkingStrategy(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.StaticChunkingStrategyRequestParam PickStaticChunkingStrategy() => IsStaticChunkingStrategy
             ? StaticChunkingStrategy!
             : throw new global::System.InvalidOperationException($"Expected union variant 'StaticChunkingStrategy' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ChunkingStrategyRequestParam(global::Portkey.AutoChunkingStrategyRequestParam value) => new ChunkingStrategyRequestParam((global::Portkey.AutoChunkingStrategyRequestParam?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.AutoChunkingStrategyRequestParam?(ChunkingStrategyRequestParam @this) => @this.AutoChunkingStrategy;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChunkingStrategyRequestParam(global::Portkey.AutoChunkingStrategyRequestParam? value)
         {
@@ -101,22 +101,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ChunkingStrategyRequestParam FromAutoChunkingStrategy(global::Portkey.AutoChunkingStrategyRequestParam? value) => new ChunkingStrategyRequestParam(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ChunkingStrategyRequestParam(global::Portkey.StaticChunkingStrategyRequestParam value) => new ChunkingStrategyRequestParam((global::Portkey.StaticChunkingStrategyRequestParam?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.StaticChunkingStrategyRequestParam?(ChunkingStrategyRequestParam @this) => @this.StaticChunkingStrategy;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChunkingStrategyRequestParam(global::Portkey.StaticChunkingStrategyRequestParam? value)
         {
@@ -124,12 +124,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ChunkingStrategyRequestParam FromStaticChunkingStrategy(global::Portkey.StaticChunkingStrategyRequestParam? value) => new ChunkingStrategyRequestParam(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChunkingStrategyRequestParam(
             global::Portkey.AutoChunkingStrategyRequestParam? autoChunkingStrategy,
@@ -141,23 +141,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             StaticChunkingStrategy as object ??
-            AutoChunkingStrategy as object 
+            AutoChunkingStrategy as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             AutoChunkingStrategy?.ToString() ??
-            StaticChunkingStrategy?.ToString() 
+            StaticChunkingStrategy?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.AutoChunkingStrategyRequestParam, TResult>? autoChunkingStrategy = null,
@@ -190,7 +190,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.AutoChunkingStrategyRequestParam>? autoChunkingStrategy = null,
@@ -214,7 +214,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.AutoChunkingStrategyRequestParam>? autoChunkingStrategy = null,
@@ -237,7 +237,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(ChunkingStrategyRequestParam other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.AutoChunkingStrategyRequestParam?>.Default.Equals(AutoChunkingStrategy, other.AutoChunkingStrategy) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.StaticChunkingStrategyRequestParam?>.Default.Equals(StaticChunkingStrategy, other.StaticChunkingStrategy) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.StaticChunkingStrategyRequestParam?>.Default.Equals(StaticChunkingStrategy, other.StaticChunkingStrategy)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(ChunkingStrategyRequestParam obj1, ChunkingStrategyRequestParam obj2)
         {
@@ -277,7 +277,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(ChunkingStrategyRequestParam obj1, ChunkingStrategyRequestParam obj2)
         {
@@ -285,7 +285,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

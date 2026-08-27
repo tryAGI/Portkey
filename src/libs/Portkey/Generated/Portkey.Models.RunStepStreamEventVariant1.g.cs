@@ -9,7 +9,7 @@ namespace Portkey
     public sealed partial class RunStepStreamEventVariant1
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("event")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.RunStepStreamEventVariant1EventJsonConverter))]

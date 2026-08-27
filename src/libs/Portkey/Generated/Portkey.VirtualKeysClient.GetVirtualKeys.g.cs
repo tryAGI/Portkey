@@ -159,7 +159,7 @@ namespace Portkey
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Portkey.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

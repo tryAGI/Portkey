@@ -9,11 +9,11 @@ namespace Portkey
     public enum ListVectorStoreFilesOrder
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Asc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Desc,
     }

@@ -4,16 +4,16 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum McpServerUserAccessItemConnectionStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Connected,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NotConnected,
     }

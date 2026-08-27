@@ -9,13 +9,13 @@ namespace Portkey
     public sealed partial class AssistantObjectToolResources
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("code_interpreter")]
         public global::Portkey.AssistantObjectToolResourcesCodeInterpreter? CodeInterpreter { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("file_search")]
         public global::Portkey.AssistantObjectToolResourcesFileSearch? FileSearch { get; set; }

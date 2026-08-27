@@ -9,7 +9,7 @@ namespace Portkey
     public enum MessageContentTextObjectType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
     }

@@ -9,11 +9,11 @@ namespace Portkey
     public enum VertexAIConfigurationVertexAuthType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Basic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ServiceAccount,
     }

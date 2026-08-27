@@ -9,7 +9,7 @@ namespace Portkey
     public enum ThreadObjectObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Thread,
     }

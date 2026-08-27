@@ -4,19 +4,19 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AwsServiceRoleAuthConfig
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("aws_auth_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.AwsServiceRoleAuthConfigAwsAuthTypeJsonConverter))]
         public global::Portkey.AwsServiceRoleAuthConfigAwsAuthType AwsAuthType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("aws_region")]
         public string? AwsRegion { get; set; }

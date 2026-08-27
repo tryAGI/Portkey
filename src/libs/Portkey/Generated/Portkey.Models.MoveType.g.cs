@@ -11,7 +11,7 @@ namespace Portkey
     public enum MoveType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Move,
     }

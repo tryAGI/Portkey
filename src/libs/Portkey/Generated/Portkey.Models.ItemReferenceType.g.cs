@@ -9,7 +9,7 @@ namespace Portkey
     public enum ItemReferenceType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ItemReference,
     }

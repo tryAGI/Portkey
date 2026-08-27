@@ -4,12 +4,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum MessageStreamEventVariant4Event
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThreadMessageCompleted,
     }

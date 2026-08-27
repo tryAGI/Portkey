@@ -9,7 +9,7 @@ namespace Portkey
     public enum ComputerToolType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputerUsePreview,
     }

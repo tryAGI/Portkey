@@ -9,7 +9,7 @@ namespace Portkey
     public enum RefusalType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Refusal,
     }

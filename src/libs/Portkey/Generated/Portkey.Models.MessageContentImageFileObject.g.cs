@@ -16,7 +16,7 @@ namespace Portkey
         public global::Portkey.MessageContentImageFileObjectType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("image_file")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -12,11 +12,11 @@ namespace Portkey
     public enum ReasoningGenerateSummary
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Concise,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Detailed,
     }

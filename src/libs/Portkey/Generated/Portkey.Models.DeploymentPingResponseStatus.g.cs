@@ -9,15 +9,15 @@ namespace Portkey
     public enum DeploymentPingResponseStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Healthy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Partial,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unhealthy,
     }

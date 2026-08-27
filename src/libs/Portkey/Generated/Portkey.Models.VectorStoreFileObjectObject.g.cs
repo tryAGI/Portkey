@@ -9,7 +9,7 @@ namespace Portkey
     public enum VectorStoreFileObjectObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VectorStoreFile,
     }

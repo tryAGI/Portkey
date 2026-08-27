@@ -9,7 +9,7 @@ namespace Portkey
     public enum InputMessageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Message,
     }

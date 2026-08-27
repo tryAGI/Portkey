@@ -9,7 +9,7 @@ namespace Portkey
     public enum WorkspaceMemberListObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         List,
     }

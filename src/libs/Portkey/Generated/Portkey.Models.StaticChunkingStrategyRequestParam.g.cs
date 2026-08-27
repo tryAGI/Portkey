@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class StaticChunkingStrategyRequestParam
     {
@@ -16,7 +16,7 @@ namespace Portkey
         public global::Portkey.StaticChunkingStrategyRequestParamType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("static")]
         [global::System.Text.Json.Serialization.JsonRequired]

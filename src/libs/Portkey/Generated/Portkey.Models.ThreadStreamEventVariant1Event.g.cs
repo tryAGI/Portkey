@@ -4,12 +4,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ThreadStreamEventVariant1Event
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThreadCreated,
     }

@@ -9,7 +9,7 @@ namespace Portkey
     public sealed partial class ResponseFunctionCallArgumentsDoneEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.ResponseFunctionCallArgumentsDoneEventTypeJsonConverter))]

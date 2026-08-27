@@ -9,7 +9,7 @@ namespace Portkey
     public enum ResponseRefusalDoneEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseRefusalDone,
     }

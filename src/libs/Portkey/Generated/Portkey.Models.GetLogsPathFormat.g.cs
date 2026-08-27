@@ -9,11 +9,11 @@ namespace Portkey
     public enum GetLogsPathFormat
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         V1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         V2,
     }

@@ -34,7 +34,7 @@ namespace Portkey
         public required string Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
         public string? Description { get; set; }
@@ -53,7 +53,7 @@ namespace Portkey
         public required string Url { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("auth_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.CreateMcpIntegrationAuthTypeJsonConverter))]
@@ -61,7 +61,7 @@ namespace Portkey
         public required global::Portkey.CreateMcpIntegrationAuthType AuthType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("transport")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.CreateMcpIntegrationTransportJsonConverter))]

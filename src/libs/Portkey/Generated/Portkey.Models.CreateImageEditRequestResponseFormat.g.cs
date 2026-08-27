@@ -11,11 +11,11 @@ namespace Portkey
     public enum CreateImageEditRequestResponseFormat
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         B64Json,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Url,
     }

@@ -9,7 +9,7 @@ namespace Portkey
     public enum CreateCompletionResponseObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextCompletion,
     }

@@ -5,7 +5,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct InputMessageResource : global::System.IEquatable<InputMessageResource>
     {
@@ -21,7 +21,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(InputMessage))]
@@ -29,7 +29,7 @@ namespace Portkey
         public bool IsInputMessage => InputMessage != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickInputMessage(
 #if NET6_0_OR_GREATER
@@ -42,14 +42,14 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.InputMessage PickInputMessage() => IsInputMessage
             ? InputMessage!
             : throw new global::System.InvalidOperationException($"Expected union variant 'InputMessage' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Portkey.InputMessageResourceVariant2? InputMessageResourceVariant2 { get; init; }
@@ -58,7 +58,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(InputMessageResourceVariant2))]
@@ -66,7 +66,7 @@ namespace Portkey
         public bool IsInputMessageResourceVariant2 => InputMessageResourceVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickInputMessageResourceVariant2(
 #if NET6_0_OR_GREATER
@@ -79,23 +79,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.InputMessageResourceVariant2 PickInputMessageResourceVariant2() => IsInputMessageResourceVariant2
             ? InputMessageResourceVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'InputMessageResourceVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator InputMessageResource(global::Portkey.InputMessage value) => new InputMessageResource((global::Portkey.InputMessage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.InputMessage?(InputMessageResource @this) => @this.InputMessage;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InputMessageResource(global::Portkey.InputMessage? value)
         {
@@ -103,22 +103,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static InputMessageResource FromInputMessage(global::Portkey.InputMessage? value) => new InputMessageResource(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator InputMessageResource(global::Portkey.InputMessageResourceVariant2 value) => new InputMessageResource((global::Portkey.InputMessageResourceVariant2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.InputMessageResourceVariant2?(InputMessageResource @this) => @this.InputMessageResourceVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InputMessageResource(global::Portkey.InputMessageResourceVariant2? value)
         {
@@ -126,12 +126,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static InputMessageResource FromInputMessageResourceVariant2(global::Portkey.InputMessageResourceVariant2? value) => new InputMessageResource(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InputMessageResource(
             global::Portkey.InputMessage? inputMessage,
@@ -143,23 +143,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             InputMessageResourceVariant2 as object ??
-            InputMessage as object 
+            InputMessage as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             InputMessage?.ToString() ??
-            InputMessageResourceVariant2?.ToString() 
+            InputMessageResourceVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -167,7 +167,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.InputMessage, TResult>? inputMessage = null,
@@ -192,7 +192,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.InputMessage>? inputMessage = null,
@@ -216,7 +216,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.InputMessage>? inputMessage = null,
@@ -239,7 +239,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -260,18 +260,18 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(InputMessageResource other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.InputMessage?>.Default.Equals(InputMessage, other.InputMessage) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.InputMessageResourceVariant2?>.Default.Equals(InputMessageResourceVariant2, other.InputMessageResourceVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.InputMessageResourceVariant2?>.Default.Equals(InputMessageResourceVariant2, other.InputMessageResourceVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(InputMessageResource obj1, InputMessageResource obj2)
         {
@@ -279,7 +279,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(InputMessageResource obj1, InputMessageResource obj2)
         {
@@ -287,7 +287,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

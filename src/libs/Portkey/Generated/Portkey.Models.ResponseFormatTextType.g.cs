@@ -9,7 +9,7 @@ namespace Portkey
     public enum ResponseFormatTextType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
     }

@@ -9,7 +9,7 @@ namespace Portkey
     public enum VectorStoreSearchResultsPageObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VectorStoreSearchResultsPage,
     }

@@ -9,11 +9,11 @@ namespace Portkey
     public enum UpdateApiKeyObjectRateLimitType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Requests,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tokens,
     }

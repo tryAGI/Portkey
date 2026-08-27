@@ -9,7 +9,7 @@ namespace Portkey
     public enum AuditLogObjectListObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnalyticsGraph,
     }

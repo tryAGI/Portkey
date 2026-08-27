@@ -4,12 +4,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum DeploymentPingResponseObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deployment,
     }

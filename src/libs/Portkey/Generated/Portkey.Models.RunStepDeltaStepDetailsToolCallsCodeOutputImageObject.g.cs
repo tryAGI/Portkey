@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class RunStepDeltaStepDetailsToolCallsCodeOutputImageObject
     {
@@ -23,7 +23,7 @@ namespace Portkey
         public global::Portkey.RunStepDeltaStepDetailsToolCallsCodeOutputImageObjectType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("image")]
         public global::Portkey.RunStepDeltaStepDetailsToolCallsCodeOutputImageObjectImage? Image { get; set; }

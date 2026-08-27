@@ -11,7 +11,7 @@ namespace Portkey
     public enum WaitType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wait,
     }

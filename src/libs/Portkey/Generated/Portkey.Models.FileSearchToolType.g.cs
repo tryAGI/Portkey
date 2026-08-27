@@ -9,7 +9,7 @@ namespace Portkey
     public enum FileSearchToolType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FileSearch,
     }

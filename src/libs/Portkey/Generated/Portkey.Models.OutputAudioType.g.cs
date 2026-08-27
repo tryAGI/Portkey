@@ -9,7 +9,7 @@ namespace Portkey
     public enum OutputAudioType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OutputAudio,
     }

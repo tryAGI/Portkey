@@ -9,11 +9,11 @@ namespace Portkey
     public enum RunStepObjectLastErrorCode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RateLimitExceeded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ServerError,
     }

@@ -4,16 +4,16 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum McpIntegrationListItemType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Organisation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Workspace,
     }

@@ -9,11 +9,11 @@ namespace Portkey
     public enum ApiKeyObjectStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Active,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Exhausted,
     }

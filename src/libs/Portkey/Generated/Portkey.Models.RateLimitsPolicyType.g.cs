@@ -9,11 +9,11 @@ namespace Portkey
     public enum RateLimitsPolicyType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Requests,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tokens,
     }

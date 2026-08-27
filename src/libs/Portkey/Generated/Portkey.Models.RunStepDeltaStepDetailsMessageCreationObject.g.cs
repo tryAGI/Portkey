@@ -16,7 +16,7 @@ namespace Portkey
         public global::Portkey.RunStepDeltaStepDetailsMessageCreationObjectType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("message_creation")]
         public global::Portkey.RunStepDeltaStepDetailsMessageCreationObjectMessageCreation? MessageCreation { get; set; }

@@ -9,7 +9,7 @@ namespace Portkey
     public enum ResponseFileSearchCallInProgressEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseFileSearchCallInProgress,
     }

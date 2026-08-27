@@ -5,12 +5,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct ResponseStreamEvent : global::System.IEquatable<ResponseStreamEvent>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseStreamEventDiscriminatorType? Type { get; }
 
@@ -24,7 +24,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseAudioDelta))]
@@ -32,7 +32,7 @@ namespace Portkey
         public bool IsResponseAudioDelta => ResponseAudioDelta != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseAudioDelta(
 #if NET6_0_OR_GREATER
@@ -45,7 +45,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseAudioDeltaEvent PickResponseAudioDelta() => IsResponseAudioDelta
             ? ResponseAudioDelta!
@@ -61,7 +61,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseAudioDone))]
@@ -69,7 +69,7 @@ namespace Portkey
         public bool IsResponseAudioDone => ResponseAudioDone != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseAudioDone(
 #if NET6_0_OR_GREATER
@@ -82,7 +82,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseAudioDoneEvent PickResponseAudioDone() => IsResponseAudioDone
             ? ResponseAudioDone!
@@ -98,7 +98,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseAudioTranscriptDelta))]
@@ -106,7 +106,7 @@ namespace Portkey
         public bool IsResponseAudioTranscriptDelta => ResponseAudioTranscriptDelta != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseAudioTranscriptDelta(
 #if NET6_0_OR_GREATER
@@ -119,7 +119,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseAudioTranscriptDeltaEvent PickResponseAudioTranscriptDelta() => IsResponseAudioTranscriptDelta
             ? ResponseAudioTranscriptDelta!
@@ -135,7 +135,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseAudioTranscriptDone))]
@@ -143,7 +143,7 @@ namespace Portkey
         public bool IsResponseAudioTranscriptDone => ResponseAudioTranscriptDone != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseAudioTranscriptDone(
 #if NET6_0_OR_GREATER
@@ -156,7 +156,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseAudioTranscriptDoneEvent PickResponseAudioTranscriptDone() => IsResponseAudioTranscriptDone
             ? ResponseAudioTranscriptDone!
@@ -172,7 +172,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseCodeInterpreterCallCodeDelta))]
@@ -180,7 +180,7 @@ namespace Portkey
         public bool IsResponseCodeInterpreterCallCodeDelta => ResponseCodeInterpreterCallCodeDelta != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseCodeInterpreterCallCodeDelta(
 #if NET6_0_OR_GREATER
@@ -193,7 +193,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseCodeInterpreterCallCodeDeltaEvent PickResponseCodeInterpreterCallCodeDelta() => IsResponseCodeInterpreterCallCodeDelta
             ? ResponseCodeInterpreterCallCodeDelta!
@@ -209,7 +209,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseCodeInterpreterCallCodeDone))]
@@ -217,7 +217,7 @@ namespace Portkey
         public bool IsResponseCodeInterpreterCallCodeDone => ResponseCodeInterpreterCallCodeDone != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseCodeInterpreterCallCodeDone(
 #if NET6_0_OR_GREATER
@@ -230,7 +230,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseCodeInterpreterCallCodeDoneEvent PickResponseCodeInterpreterCallCodeDone() => IsResponseCodeInterpreterCallCodeDone
             ? ResponseCodeInterpreterCallCodeDone!
@@ -246,7 +246,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseCodeInterpreterCallCompleted))]
@@ -254,7 +254,7 @@ namespace Portkey
         public bool IsResponseCodeInterpreterCallCompleted => ResponseCodeInterpreterCallCompleted != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseCodeInterpreterCallCompleted(
 #if NET6_0_OR_GREATER
@@ -267,7 +267,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseCodeInterpreterCallCompletedEvent PickResponseCodeInterpreterCallCompleted() => IsResponseCodeInterpreterCallCompleted
             ? ResponseCodeInterpreterCallCompleted!
@@ -283,7 +283,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseCodeInterpreterCallInProgress))]
@@ -291,7 +291,7 @@ namespace Portkey
         public bool IsResponseCodeInterpreterCallInProgress => ResponseCodeInterpreterCallInProgress != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseCodeInterpreterCallInProgress(
 #if NET6_0_OR_GREATER
@@ -304,7 +304,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseCodeInterpreterCallInProgressEvent PickResponseCodeInterpreterCallInProgress() => IsResponseCodeInterpreterCallInProgress
             ? ResponseCodeInterpreterCallInProgress!
@@ -320,7 +320,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseCodeInterpreterCallInterpreting))]
@@ -328,7 +328,7 @@ namespace Portkey
         public bool IsResponseCodeInterpreterCallInterpreting => ResponseCodeInterpreterCallInterpreting != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseCodeInterpreterCallInterpreting(
 #if NET6_0_OR_GREATER
@@ -341,7 +341,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseCodeInterpreterCallInterpretingEvent PickResponseCodeInterpreterCallInterpreting() => IsResponseCodeInterpreterCallInterpreting
             ? ResponseCodeInterpreterCallInterpreting!
@@ -357,7 +357,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseCompleted))]
@@ -365,7 +365,7 @@ namespace Portkey
         public bool IsResponseCompleted => ResponseCompleted != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseCompleted(
 #if NET6_0_OR_GREATER
@@ -378,7 +378,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseCompletedEvent PickResponseCompleted() => IsResponseCompleted
             ? ResponseCompleted!
@@ -394,7 +394,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseContentPartAdded))]
@@ -402,7 +402,7 @@ namespace Portkey
         public bool IsResponseContentPartAdded => ResponseContentPartAdded != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseContentPartAdded(
 #if NET6_0_OR_GREATER
@@ -415,7 +415,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseContentPartAddedEvent PickResponseContentPartAdded() => IsResponseContentPartAdded
             ? ResponseContentPartAdded!
@@ -431,7 +431,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseContentPartDone))]
@@ -439,7 +439,7 @@ namespace Portkey
         public bool IsResponseContentPartDone => ResponseContentPartDone != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseContentPartDone(
 #if NET6_0_OR_GREATER
@@ -452,7 +452,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseContentPartDoneEvent PickResponseContentPartDone() => IsResponseContentPartDone
             ? ResponseContentPartDone!
@@ -468,7 +468,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseCreated))]
@@ -476,7 +476,7 @@ namespace Portkey
         public bool IsResponseCreated => ResponseCreated != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseCreated(
 #if NET6_0_OR_GREATER
@@ -489,7 +489,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseCreatedEvent PickResponseCreated() => IsResponseCreated
             ? ResponseCreated!
@@ -505,7 +505,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Error))]
@@ -513,7 +513,7 @@ namespace Portkey
         public bool IsError => Error != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickError(
 #if NET6_0_OR_GREATER
@@ -526,7 +526,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseErrorEvent PickError() => IsError
             ? Error!
@@ -542,7 +542,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseFileSearchCallCompleted))]
@@ -550,7 +550,7 @@ namespace Portkey
         public bool IsResponseFileSearchCallCompleted => ResponseFileSearchCallCompleted != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseFileSearchCallCompleted(
 #if NET6_0_OR_GREATER
@@ -563,7 +563,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseFileSearchCallCompletedEvent PickResponseFileSearchCallCompleted() => IsResponseFileSearchCallCompleted
             ? ResponseFileSearchCallCompleted!
@@ -579,7 +579,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseFileSearchCallInProgress))]
@@ -587,7 +587,7 @@ namespace Portkey
         public bool IsResponseFileSearchCallInProgress => ResponseFileSearchCallInProgress != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseFileSearchCallInProgress(
 #if NET6_0_OR_GREATER
@@ -600,7 +600,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseFileSearchCallInProgressEvent PickResponseFileSearchCallInProgress() => IsResponseFileSearchCallInProgress
             ? ResponseFileSearchCallInProgress!
@@ -616,7 +616,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseFileSearchCallSearching))]
@@ -624,7 +624,7 @@ namespace Portkey
         public bool IsResponseFileSearchCallSearching => ResponseFileSearchCallSearching != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseFileSearchCallSearching(
 #if NET6_0_OR_GREATER
@@ -637,7 +637,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseFileSearchCallSearchingEvent PickResponseFileSearchCallSearching() => IsResponseFileSearchCallSearching
             ? ResponseFileSearchCallSearching!
@@ -653,7 +653,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseFunctionCallArgumentsDelta))]
@@ -661,7 +661,7 @@ namespace Portkey
         public bool IsResponseFunctionCallArgumentsDelta => ResponseFunctionCallArgumentsDelta != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseFunctionCallArgumentsDelta(
 #if NET6_0_OR_GREATER
@@ -674,7 +674,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseFunctionCallArgumentsDeltaEvent PickResponseFunctionCallArgumentsDelta() => IsResponseFunctionCallArgumentsDelta
             ? ResponseFunctionCallArgumentsDelta!
@@ -690,7 +690,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseFunctionCallArgumentsDone))]
@@ -698,7 +698,7 @@ namespace Portkey
         public bool IsResponseFunctionCallArgumentsDone => ResponseFunctionCallArgumentsDone != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseFunctionCallArgumentsDone(
 #if NET6_0_OR_GREATER
@@ -711,7 +711,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseFunctionCallArgumentsDoneEvent PickResponseFunctionCallArgumentsDone() => IsResponseFunctionCallArgumentsDone
             ? ResponseFunctionCallArgumentsDone!
@@ -727,7 +727,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseInProgress))]
@@ -735,7 +735,7 @@ namespace Portkey
         public bool IsResponseInProgress => ResponseInProgress != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseInProgress(
 #if NET6_0_OR_GREATER
@@ -748,7 +748,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseInProgressEvent PickResponseInProgress() => IsResponseInProgress
             ? ResponseInProgress!
@@ -764,7 +764,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseFailed))]
@@ -772,7 +772,7 @@ namespace Portkey
         public bool IsResponseFailed => ResponseFailed != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseFailed(
 #if NET6_0_OR_GREATER
@@ -785,7 +785,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseFailedEvent PickResponseFailed() => IsResponseFailed
             ? ResponseFailed!
@@ -801,7 +801,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseIncomplete))]
@@ -809,7 +809,7 @@ namespace Portkey
         public bool IsResponseIncomplete => ResponseIncomplete != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseIncomplete(
 #if NET6_0_OR_GREATER
@@ -822,7 +822,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseIncompleteEvent PickResponseIncomplete() => IsResponseIncomplete
             ? ResponseIncomplete!
@@ -838,7 +838,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseOutputItemAdded))]
@@ -846,7 +846,7 @@ namespace Portkey
         public bool IsResponseOutputItemAdded => ResponseOutputItemAdded != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseOutputItemAdded(
 #if NET6_0_OR_GREATER
@@ -859,7 +859,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseOutputItemAddedEvent PickResponseOutputItemAdded() => IsResponseOutputItemAdded
             ? ResponseOutputItemAdded!
@@ -875,7 +875,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseOutputItemDone))]
@@ -883,7 +883,7 @@ namespace Portkey
         public bool IsResponseOutputItemDone => ResponseOutputItemDone != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseOutputItemDone(
 #if NET6_0_OR_GREATER
@@ -896,7 +896,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseOutputItemDoneEvent PickResponseOutputItemDone() => IsResponseOutputItemDone
             ? ResponseOutputItemDone!
@@ -912,7 +912,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseRefusalDelta))]
@@ -920,7 +920,7 @@ namespace Portkey
         public bool IsResponseRefusalDelta => ResponseRefusalDelta != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseRefusalDelta(
 #if NET6_0_OR_GREATER
@@ -933,7 +933,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseRefusalDeltaEvent PickResponseRefusalDelta() => IsResponseRefusalDelta
             ? ResponseRefusalDelta!
@@ -949,7 +949,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseRefusalDone))]
@@ -957,7 +957,7 @@ namespace Portkey
         public bool IsResponseRefusalDone => ResponseRefusalDone != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseRefusalDone(
 #if NET6_0_OR_GREATER
@@ -970,7 +970,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseRefusalDoneEvent PickResponseRefusalDone() => IsResponseRefusalDone
             ? ResponseRefusalDone!
@@ -986,7 +986,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseOutputTextAnnotationAdded))]
@@ -994,7 +994,7 @@ namespace Portkey
         public bool IsResponseOutputTextAnnotationAdded => ResponseOutputTextAnnotationAdded != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseOutputTextAnnotationAdded(
 #if NET6_0_OR_GREATER
@@ -1007,7 +1007,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseTextAnnotationDeltaEvent PickResponseOutputTextAnnotationAdded() => IsResponseOutputTextAnnotationAdded
             ? ResponseOutputTextAnnotationAdded!
@@ -1023,7 +1023,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseOutputTextDelta))]
@@ -1031,7 +1031,7 @@ namespace Portkey
         public bool IsResponseOutputTextDelta => ResponseOutputTextDelta != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseOutputTextDelta(
 #if NET6_0_OR_GREATER
@@ -1044,7 +1044,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseTextDeltaEvent PickResponseOutputTextDelta() => IsResponseOutputTextDelta
             ? ResponseOutputTextDelta!
@@ -1060,7 +1060,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseOutputTextDone))]
@@ -1068,7 +1068,7 @@ namespace Portkey
         public bool IsResponseOutputTextDone => ResponseOutputTextDone != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseOutputTextDone(
 #if NET6_0_OR_GREATER
@@ -1081,7 +1081,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseTextDoneEvent PickResponseOutputTextDone() => IsResponseOutputTextDone
             ? ResponseOutputTextDone!
@@ -1097,7 +1097,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseWebSearchCallCompleted))]
@@ -1105,7 +1105,7 @@ namespace Portkey
         public bool IsResponseWebSearchCallCompleted => ResponseWebSearchCallCompleted != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseWebSearchCallCompleted(
 #if NET6_0_OR_GREATER
@@ -1118,7 +1118,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseWebSearchCallCompletedEvent PickResponseWebSearchCallCompleted() => IsResponseWebSearchCallCompleted
             ? ResponseWebSearchCallCompleted!
@@ -1134,7 +1134,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseWebSearchCallInProgress))]
@@ -1142,7 +1142,7 @@ namespace Portkey
         public bool IsResponseWebSearchCallInProgress => ResponseWebSearchCallInProgress != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseWebSearchCallInProgress(
 #if NET6_0_OR_GREATER
@@ -1155,7 +1155,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseWebSearchCallInProgressEvent PickResponseWebSearchCallInProgress() => IsResponseWebSearchCallInProgress
             ? ResponseWebSearchCallInProgress!
@@ -1171,7 +1171,7 @@ namespace Portkey
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ResponseWebSearchCallSearching))]
@@ -1179,7 +1179,7 @@ namespace Portkey
         public bool IsResponseWebSearchCallSearching => ResponseWebSearchCallSearching != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickResponseWebSearchCallSearching(
 #if NET6_0_OR_GREATER
@@ -1192,23 +1192,23 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Portkey.ResponseWebSearchCallSearchingEvent PickResponseWebSearchCallSearching() => IsResponseWebSearchCallSearching
             ? ResponseWebSearchCallSearching!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseWebSearchCallSearching' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseAudioDeltaEvent value) => new ResponseStreamEvent((global::Portkey.ResponseAudioDeltaEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseAudioDeltaEvent?(ResponseStreamEvent @this) => @this.ResponseAudioDelta;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseAudioDeltaEvent? value)
         {
@@ -1216,22 +1216,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseAudioDelta(global::Portkey.ResponseAudioDeltaEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseAudioDoneEvent value) => new ResponseStreamEvent((global::Portkey.ResponseAudioDoneEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseAudioDoneEvent?(ResponseStreamEvent @this) => @this.ResponseAudioDone;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseAudioDoneEvent? value)
         {
@@ -1239,22 +1239,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseAudioDone(global::Portkey.ResponseAudioDoneEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseAudioTranscriptDeltaEvent value) => new ResponseStreamEvent((global::Portkey.ResponseAudioTranscriptDeltaEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseAudioTranscriptDeltaEvent?(ResponseStreamEvent @this) => @this.ResponseAudioTranscriptDelta;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseAudioTranscriptDeltaEvent? value)
         {
@@ -1262,22 +1262,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseAudioTranscriptDelta(global::Portkey.ResponseAudioTranscriptDeltaEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseAudioTranscriptDoneEvent value) => new ResponseStreamEvent((global::Portkey.ResponseAudioTranscriptDoneEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseAudioTranscriptDoneEvent?(ResponseStreamEvent @this) => @this.ResponseAudioTranscriptDone;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseAudioTranscriptDoneEvent? value)
         {
@@ -1285,22 +1285,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseAudioTranscriptDone(global::Portkey.ResponseAudioTranscriptDoneEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseCodeInterpreterCallCodeDeltaEvent value) => new ResponseStreamEvent((global::Portkey.ResponseCodeInterpreterCallCodeDeltaEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseCodeInterpreterCallCodeDeltaEvent?(ResponseStreamEvent @this) => @this.ResponseCodeInterpreterCallCodeDelta;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseCodeInterpreterCallCodeDeltaEvent? value)
         {
@@ -1308,22 +1308,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseCodeInterpreterCallCodeDelta(global::Portkey.ResponseCodeInterpreterCallCodeDeltaEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseCodeInterpreterCallCodeDoneEvent value) => new ResponseStreamEvent((global::Portkey.ResponseCodeInterpreterCallCodeDoneEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseCodeInterpreterCallCodeDoneEvent?(ResponseStreamEvent @this) => @this.ResponseCodeInterpreterCallCodeDone;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseCodeInterpreterCallCodeDoneEvent? value)
         {
@@ -1331,22 +1331,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseCodeInterpreterCallCodeDone(global::Portkey.ResponseCodeInterpreterCallCodeDoneEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseCodeInterpreterCallCompletedEvent value) => new ResponseStreamEvent((global::Portkey.ResponseCodeInterpreterCallCompletedEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseCodeInterpreterCallCompletedEvent?(ResponseStreamEvent @this) => @this.ResponseCodeInterpreterCallCompleted;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseCodeInterpreterCallCompletedEvent? value)
         {
@@ -1354,22 +1354,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseCodeInterpreterCallCompleted(global::Portkey.ResponseCodeInterpreterCallCompletedEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseCodeInterpreterCallInProgressEvent value) => new ResponseStreamEvent((global::Portkey.ResponseCodeInterpreterCallInProgressEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseCodeInterpreterCallInProgressEvent?(ResponseStreamEvent @this) => @this.ResponseCodeInterpreterCallInProgress;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseCodeInterpreterCallInProgressEvent? value)
         {
@@ -1377,22 +1377,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseCodeInterpreterCallInProgress(global::Portkey.ResponseCodeInterpreterCallInProgressEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseCodeInterpreterCallInterpretingEvent value) => new ResponseStreamEvent((global::Portkey.ResponseCodeInterpreterCallInterpretingEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseCodeInterpreterCallInterpretingEvent?(ResponseStreamEvent @this) => @this.ResponseCodeInterpreterCallInterpreting;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseCodeInterpreterCallInterpretingEvent? value)
         {
@@ -1400,22 +1400,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseCodeInterpreterCallInterpreting(global::Portkey.ResponseCodeInterpreterCallInterpretingEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseCompletedEvent value) => new ResponseStreamEvent((global::Portkey.ResponseCompletedEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseCompletedEvent?(ResponseStreamEvent @this) => @this.ResponseCompleted;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseCompletedEvent? value)
         {
@@ -1423,22 +1423,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseCompleted(global::Portkey.ResponseCompletedEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseContentPartAddedEvent value) => new ResponseStreamEvent((global::Portkey.ResponseContentPartAddedEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseContentPartAddedEvent?(ResponseStreamEvent @this) => @this.ResponseContentPartAdded;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseContentPartAddedEvent? value)
         {
@@ -1446,22 +1446,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseContentPartAdded(global::Portkey.ResponseContentPartAddedEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseContentPartDoneEvent value) => new ResponseStreamEvent((global::Portkey.ResponseContentPartDoneEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseContentPartDoneEvent?(ResponseStreamEvent @this) => @this.ResponseContentPartDone;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseContentPartDoneEvent? value)
         {
@@ -1469,22 +1469,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseContentPartDone(global::Portkey.ResponseContentPartDoneEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseCreatedEvent value) => new ResponseStreamEvent((global::Portkey.ResponseCreatedEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseCreatedEvent?(ResponseStreamEvent @this) => @this.ResponseCreated;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseCreatedEvent? value)
         {
@@ -1492,22 +1492,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseCreated(global::Portkey.ResponseCreatedEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseErrorEvent value) => new ResponseStreamEvent((global::Portkey.ResponseErrorEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseErrorEvent?(ResponseStreamEvent @this) => @this.Error;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseErrorEvent? value)
         {
@@ -1515,22 +1515,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromError(global::Portkey.ResponseErrorEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseFileSearchCallCompletedEvent value) => new ResponseStreamEvent((global::Portkey.ResponseFileSearchCallCompletedEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseFileSearchCallCompletedEvent?(ResponseStreamEvent @this) => @this.ResponseFileSearchCallCompleted;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseFileSearchCallCompletedEvent? value)
         {
@@ -1538,22 +1538,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseFileSearchCallCompleted(global::Portkey.ResponseFileSearchCallCompletedEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseFileSearchCallInProgressEvent value) => new ResponseStreamEvent((global::Portkey.ResponseFileSearchCallInProgressEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseFileSearchCallInProgressEvent?(ResponseStreamEvent @this) => @this.ResponseFileSearchCallInProgress;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseFileSearchCallInProgressEvent? value)
         {
@@ -1561,22 +1561,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseFileSearchCallInProgress(global::Portkey.ResponseFileSearchCallInProgressEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseFileSearchCallSearchingEvent value) => new ResponseStreamEvent((global::Portkey.ResponseFileSearchCallSearchingEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseFileSearchCallSearchingEvent?(ResponseStreamEvent @this) => @this.ResponseFileSearchCallSearching;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseFileSearchCallSearchingEvent? value)
         {
@@ -1584,22 +1584,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseFileSearchCallSearching(global::Portkey.ResponseFileSearchCallSearchingEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseFunctionCallArgumentsDeltaEvent value) => new ResponseStreamEvent((global::Portkey.ResponseFunctionCallArgumentsDeltaEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseFunctionCallArgumentsDeltaEvent?(ResponseStreamEvent @this) => @this.ResponseFunctionCallArgumentsDelta;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseFunctionCallArgumentsDeltaEvent? value)
         {
@@ -1607,22 +1607,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseFunctionCallArgumentsDelta(global::Portkey.ResponseFunctionCallArgumentsDeltaEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseFunctionCallArgumentsDoneEvent value) => new ResponseStreamEvent((global::Portkey.ResponseFunctionCallArgumentsDoneEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseFunctionCallArgumentsDoneEvent?(ResponseStreamEvent @this) => @this.ResponseFunctionCallArgumentsDone;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseFunctionCallArgumentsDoneEvent? value)
         {
@@ -1630,22 +1630,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseFunctionCallArgumentsDone(global::Portkey.ResponseFunctionCallArgumentsDoneEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseInProgressEvent value) => new ResponseStreamEvent((global::Portkey.ResponseInProgressEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseInProgressEvent?(ResponseStreamEvent @this) => @this.ResponseInProgress;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseInProgressEvent? value)
         {
@@ -1653,22 +1653,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseInProgress(global::Portkey.ResponseInProgressEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseFailedEvent value) => new ResponseStreamEvent((global::Portkey.ResponseFailedEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseFailedEvent?(ResponseStreamEvent @this) => @this.ResponseFailed;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseFailedEvent? value)
         {
@@ -1676,22 +1676,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseFailed(global::Portkey.ResponseFailedEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseIncompleteEvent value) => new ResponseStreamEvent((global::Portkey.ResponseIncompleteEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseIncompleteEvent?(ResponseStreamEvent @this) => @this.ResponseIncomplete;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseIncompleteEvent? value)
         {
@@ -1699,22 +1699,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseIncomplete(global::Portkey.ResponseIncompleteEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseOutputItemAddedEvent value) => new ResponseStreamEvent((global::Portkey.ResponseOutputItemAddedEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseOutputItemAddedEvent?(ResponseStreamEvent @this) => @this.ResponseOutputItemAdded;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseOutputItemAddedEvent? value)
         {
@@ -1722,22 +1722,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseOutputItemAdded(global::Portkey.ResponseOutputItemAddedEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseOutputItemDoneEvent value) => new ResponseStreamEvent((global::Portkey.ResponseOutputItemDoneEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseOutputItemDoneEvent?(ResponseStreamEvent @this) => @this.ResponseOutputItemDone;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseOutputItemDoneEvent? value)
         {
@@ -1745,22 +1745,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseOutputItemDone(global::Portkey.ResponseOutputItemDoneEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseRefusalDeltaEvent value) => new ResponseStreamEvent((global::Portkey.ResponseRefusalDeltaEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseRefusalDeltaEvent?(ResponseStreamEvent @this) => @this.ResponseRefusalDelta;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseRefusalDeltaEvent? value)
         {
@@ -1768,22 +1768,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseRefusalDelta(global::Portkey.ResponseRefusalDeltaEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseRefusalDoneEvent value) => new ResponseStreamEvent((global::Portkey.ResponseRefusalDoneEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseRefusalDoneEvent?(ResponseStreamEvent @this) => @this.ResponseRefusalDone;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseRefusalDoneEvent? value)
         {
@@ -1791,22 +1791,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseRefusalDone(global::Portkey.ResponseRefusalDoneEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseTextAnnotationDeltaEvent value) => new ResponseStreamEvent((global::Portkey.ResponseTextAnnotationDeltaEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseTextAnnotationDeltaEvent?(ResponseStreamEvent @this) => @this.ResponseOutputTextAnnotationAdded;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseTextAnnotationDeltaEvent? value)
         {
@@ -1814,22 +1814,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseOutputTextAnnotationAdded(global::Portkey.ResponseTextAnnotationDeltaEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseTextDeltaEvent value) => new ResponseStreamEvent((global::Portkey.ResponseTextDeltaEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseTextDeltaEvent?(ResponseStreamEvent @this) => @this.ResponseOutputTextDelta;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseTextDeltaEvent? value)
         {
@@ -1837,22 +1837,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseOutputTextDelta(global::Portkey.ResponseTextDeltaEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseTextDoneEvent value) => new ResponseStreamEvent((global::Portkey.ResponseTextDoneEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseTextDoneEvent?(ResponseStreamEvent @this) => @this.ResponseOutputTextDone;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseTextDoneEvent? value)
         {
@@ -1860,22 +1860,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseOutputTextDone(global::Portkey.ResponseTextDoneEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseWebSearchCallCompletedEvent value) => new ResponseStreamEvent((global::Portkey.ResponseWebSearchCallCompletedEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseWebSearchCallCompletedEvent?(ResponseStreamEvent @this) => @this.ResponseWebSearchCallCompleted;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseWebSearchCallCompletedEvent? value)
         {
@@ -1883,22 +1883,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseWebSearchCallCompleted(global::Portkey.ResponseWebSearchCallCompletedEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseWebSearchCallInProgressEvent value) => new ResponseStreamEvent((global::Portkey.ResponseWebSearchCallInProgressEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseWebSearchCallInProgressEvent?(ResponseStreamEvent @this) => @this.ResponseWebSearchCallInProgress;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseWebSearchCallInProgressEvent? value)
         {
@@ -1906,22 +1906,22 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseWebSearchCallInProgress(global::Portkey.ResponseWebSearchCallInProgressEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ResponseStreamEvent(global::Portkey.ResponseWebSearchCallSearchingEvent value) => new ResponseStreamEvent((global::Portkey.ResponseWebSearchCallSearchingEvent?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Portkey.ResponseWebSearchCallSearchingEvent?(ResponseStreamEvent @this) => @this.ResponseWebSearchCallSearching;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(global::Portkey.ResponseWebSearchCallSearchingEvent? value)
         {
@@ -1929,12 +1929,12 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ResponseStreamEvent FromResponseWebSearchCallSearching(global::Portkey.ResponseWebSearchCallSearchingEvent? value) => new ResponseStreamEvent(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponseStreamEvent(
             global::Portkey.ResponseStreamEventDiscriminatorType? type,
@@ -2009,7 +2009,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             ResponseWebSearchCallSearching as object ??
@@ -2043,11 +2043,11 @@ namespace Portkey
             ResponseAudioTranscriptDone as object ??
             ResponseAudioTranscriptDelta as object ??
             ResponseAudioDone as object ??
-            ResponseAudioDelta as object 
+            ResponseAudioDelta as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             ResponseAudioDelta?.ToString() ??
@@ -2081,11 +2081,11 @@ namespace Portkey
             ResponseOutputTextDone?.ToString() ??
             ResponseWebSearchCallCompleted?.ToString() ??
             ResponseWebSearchCallInProgress?.ToString() ??
-            ResponseWebSearchCallSearching?.ToString() 
+            ResponseWebSearchCallSearching?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -2093,7 +2093,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Portkey.ResponseAudioDeltaEvent, TResult>? responseAudioDelta = null,
@@ -2268,7 +2268,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Portkey.ResponseAudioDeltaEvent>? responseAudioDelta = null,
@@ -2472,7 +2472,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Portkey.ResponseAudioDeltaEvent>? responseAudioDelta = null,
@@ -2645,7 +2645,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -2726,7 +2726,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(ResponseStreamEvent other)
         {
@@ -2762,12 +2762,12 @@ namespace Portkey
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.ResponseTextDoneEvent?>.Default.Equals(ResponseOutputTextDone, other.ResponseOutputTextDone) &&
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.ResponseWebSearchCallCompletedEvent?>.Default.Equals(ResponseWebSearchCallCompleted, other.ResponseWebSearchCallCompleted) &&
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.ResponseWebSearchCallInProgressEvent?>.Default.Equals(ResponseWebSearchCallInProgress, other.ResponseWebSearchCallInProgress) &&
-                global::System.Collections.Generic.EqualityComparer<global::Portkey.ResponseWebSearchCallSearchingEvent?>.Default.Equals(ResponseWebSearchCallSearching, other.ResponseWebSearchCallSearching) 
+                global::System.Collections.Generic.EqualityComparer<global::Portkey.ResponseWebSearchCallSearchingEvent?>.Default.Equals(ResponseWebSearchCallSearching, other.ResponseWebSearchCallSearching)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(ResponseStreamEvent obj1, ResponseStreamEvent obj2)
         {
@@ -2775,7 +2775,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(ResponseStreamEvent obj1, ResponseStreamEvent obj2)
         {
@@ -2783,7 +2783,7 @@ namespace Portkey
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

@@ -9,7 +9,7 @@ namespace Portkey
     public enum ModelObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Model,
     }

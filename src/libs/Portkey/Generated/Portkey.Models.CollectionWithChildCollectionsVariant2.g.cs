@@ -4,12 +4,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CollectionWithChildCollectionsVariant2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("child_collections")]
         public global::System.Collections.Generic.IList<global::Portkey.ChildCollection>? ChildCollections { get; set; }

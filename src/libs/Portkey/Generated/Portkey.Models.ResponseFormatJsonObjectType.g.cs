@@ -9,7 +9,7 @@ namespace Portkey
     public enum ResponseFormatJsonObjectType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         JsonObject,
     }

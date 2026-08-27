@@ -41,7 +41,7 @@ namespace Portkey
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Portkey.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
@@ -221,7 +221,7 @@ namespace Portkey
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FinetuneClient Finetune => new FinetuneClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -491,7 +491,7 @@ namespace Portkey
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ResponsesClient Responses => new ResponsesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -541,7 +541,7 @@ namespace Portkey
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public VectorStoresClient VectorStores => new VectorStoresClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

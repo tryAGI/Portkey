@@ -9,15 +9,15 @@ namespace Portkey
     public enum OpenAIBatchJobEndpoint
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         V1ChatCompletions,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         V1Completions,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         V1Embeddings,
     }

@@ -10,15 +10,15 @@ namespace Portkey
     public enum RequiredMetadataKeysParametersOperator
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         All,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Any,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         None,
     }

@@ -9,7 +9,7 @@ namespace Portkey
     public enum ResponseCodeInterpreterCallCodeDeltaEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseCodeInterpreterCallCodeDelta,
     }

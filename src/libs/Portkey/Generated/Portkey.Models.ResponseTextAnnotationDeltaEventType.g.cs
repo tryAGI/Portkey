@@ -9,7 +9,7 @@ namespace Portkey
     public enum ResponseTextAnnotationDeltaEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseOutputTextAnnotationAdded,
     }

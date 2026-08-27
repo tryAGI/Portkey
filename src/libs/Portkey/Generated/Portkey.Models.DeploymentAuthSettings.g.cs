@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DeploymentAuthSettings
     {
@@ -15,13 +15,13 @@ namespace Portkey
         public string? GatewayBaseUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mcp_gateway_base_url")]
         public string? McpGatewayBaseUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("private_link_endpoint")]
         public string? PrivateLinkEndpoint { get; set; }
@@ -33,13 +33,13 @@ namespace Portkey
         public int? UsePrivateLinkProxy { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("is_dataservice_hosted")]
         public int? IsDataserviceHosted { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("is_playground_proxy_allowed")]
         public int? IsPlaygroundProxyAllowed { get; set; }
@@ -57,7 +57,7 @@ namespace Portkey
         public global::System.Collections.Generic.IList<string>? WorkspacesAllowed { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("jwt_subs_allowed")]
         public global::System.Collections.Generic.IList<string>? JwtSubsAllowed { get; set; }

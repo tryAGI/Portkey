@@ -4,32 +4,32 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum OutputItemDiscriminatorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputerCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FileSearchCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FunctionCall,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Message,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Reasoning,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WebSearchCall,
     }

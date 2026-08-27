@@ -9,15 +9,15 @@ namespace Portkey
     public enum CodeInterpreterToolCallStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Completed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InProgress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Interpreting,
     }

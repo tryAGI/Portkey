@@ -9,7 +9,7 @@ namespace Portkey
     public enum AutoChunkingStrategyRequestParamType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Auto,
     }

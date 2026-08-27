@@ -4,25 +4,25 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AzureManagedAuthConfig
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("azure_auth_mode")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.AzureManagedAuthConfigAzureAuthModeJsonConverter))]
         public global::Portkey.AzureManagedAuthConfigAzureAuthMode AzureAuthMode { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("azure_managed_client_id")]
         public string? AzureManagedClientId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("azure_vault_url")]
         [global::System.Text.Json.Serialization.JsonRequired]

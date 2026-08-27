@@ -4,12 +4,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum RunStreamEventVariant10Event
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThreadRunExpired,
     }

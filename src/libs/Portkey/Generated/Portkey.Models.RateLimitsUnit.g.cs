@@ -4,20 +4,20 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum RateLimitsUnit
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rpd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rph,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rpm,
     }

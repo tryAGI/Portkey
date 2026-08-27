@@ -9,7 +9,7 @@ namespace Portkey
     public enum CreateChatCompletionFunctionResponseObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChatCompletion,
     }

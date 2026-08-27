@@ -9,7 +9,7 @@ namespace Portkey
     public enum VectorStoreFileBatchObjectObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VectorStoreFilesBatch,
     }

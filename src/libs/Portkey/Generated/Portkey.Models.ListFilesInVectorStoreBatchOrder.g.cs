@@ -9,11 +9,11 @@ namespace Portkey
     public enum ListFilesInVectorStoreBatchOrder
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Asc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Desc,
     }

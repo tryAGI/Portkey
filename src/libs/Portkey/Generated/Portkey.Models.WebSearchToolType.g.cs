@@ -11,11 +11,11 @@ namespace Portkey
     public enum WebSearchToolType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WebSearchPreview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WebSearchPreview20250311,
     }

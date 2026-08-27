@@ -9,7 +9,7 @@ namespace Portkey
     public enum CodeInterpreterToolType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CodeInterpreter,
     }

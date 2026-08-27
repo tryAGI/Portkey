@@ -9,7 +9,7 @@ namespace Portkey
     public enum ReasoningItemSummaryItemType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SummaryText,
     }

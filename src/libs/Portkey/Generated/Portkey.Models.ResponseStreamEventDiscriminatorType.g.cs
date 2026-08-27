@@ -4,136 +4,136 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ResponseStreamEventDiscriminatorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseAudioDelta,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseAudioDone,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseAudioTranscriptDelta,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseAudioTranscriptDone,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseCodeInterpreterCallCodeDelta,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseCodeInterpreterCallCodeDone,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseCodeInterpreterCallCompleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseCodeInterpreterCallInProgress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseCodeInterpreterCallInterpreting,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseCompleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseContentPartAdded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseContentPartDone,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseCreated,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseFileSearchCallCompleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseFileSearchCallInProgress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseFileSearchCallSearching,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseFunctionCallArgumentsDelta,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseFunctionCallArgumentsDone,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseInProgress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseIncomplete,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseOutputItemAdded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseOutputItemDone,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseOutputTextAnnotationAdded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseOutputTextDelta,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseOutputTextDone,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseRefusalDelta,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseRefusalDone,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseWebSearchCallCompleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseWebSearchCallInProgress,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseWebSearchCallSearching,
     }

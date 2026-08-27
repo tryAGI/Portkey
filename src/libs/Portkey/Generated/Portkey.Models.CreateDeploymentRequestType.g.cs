@@ -9,11 +9,11 @@ namespace Portkey
     public enum CreateDeploymentRequestType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NonProduction,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Production,
     }

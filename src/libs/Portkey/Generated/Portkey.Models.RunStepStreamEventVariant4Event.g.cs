@@ -4,12 +4,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum RunStepStreamEventVariant4Event
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThreadRunStepCompleted,
     }

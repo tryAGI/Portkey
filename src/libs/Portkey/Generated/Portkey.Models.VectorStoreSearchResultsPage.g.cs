@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class VectorStoreSearchResultsPage
     {
@@ -16,7 +16,7 @@ namespace Portkey
         public global::Portkey.VectorStoreSearchResultsPageObject Object { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("search_query")]
         [global::System.Text.Json.Serialization.JsonRequired]

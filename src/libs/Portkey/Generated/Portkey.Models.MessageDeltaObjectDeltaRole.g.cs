@@ -9,11 +9,11 @@ namespace Portkey
     public enum MessageDeltaObjectDeltaRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

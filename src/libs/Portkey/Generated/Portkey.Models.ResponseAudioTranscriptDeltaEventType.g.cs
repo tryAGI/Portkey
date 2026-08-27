@@ -9,7 +9,7 @@ namespace Portkey
     public enum ResponseAudioTranscriptDeltaEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseAudioTranscriptDelta,
     }

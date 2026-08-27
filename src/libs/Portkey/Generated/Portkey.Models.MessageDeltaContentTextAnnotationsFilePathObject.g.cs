@@ -29,19 +29,19 @@ namespace Portkey
         public string? Text { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("file_path")]
         public global::Portkey.MessageDeltaContentTextAnnotationsFilePathObjectFilePath? FilePath { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("start_index")]
         public int? StartIndex { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("end_index")]
         public int? EndIndex { get; set; }

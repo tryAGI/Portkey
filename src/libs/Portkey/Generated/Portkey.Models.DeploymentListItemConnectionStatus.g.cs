@@ -9,15 +9,15 @@ namespace Portkey
     public enum DeploymentListItemConnectionStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Healthy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unhealthy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unknown,
     }

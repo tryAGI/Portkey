@@ -9,11 +9,11 @@ namespace Portkey
     public enum ListAssistantsOrder
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Asc,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Desc,
     }

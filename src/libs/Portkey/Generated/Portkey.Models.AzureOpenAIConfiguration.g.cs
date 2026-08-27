@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AzureOpenAIConfiguration
     {
@@ -24,7 +24,7 @@ namespace Portkey
         public required string AzureResourceName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("azure_deployment_config")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -14,19 +14,19 @@ namespace Portkey
     public enum ToolChoiceTypesType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ComputerUsePreview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FileSearch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WebSearchPreview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WebSearchPreview20250311,
     }

@@ -4,16 +4,16 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateSpeechRequestModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tts1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tts1Hd,
     }

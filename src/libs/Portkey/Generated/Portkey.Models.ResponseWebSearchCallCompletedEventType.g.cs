@@ -9,7 +9,7 @@ namespace Portkey
     public enum ResponseWebSearchCallCompletedEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResponseWebSearchCallCompleted,
     }

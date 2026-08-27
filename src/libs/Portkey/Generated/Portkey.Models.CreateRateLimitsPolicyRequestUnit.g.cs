@@ -13,19 +13,19 @@ namespace Portkey
     public enum CreateRateLimitsPolicyRequestUnit
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rpd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rph,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rpm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rpw,
     }

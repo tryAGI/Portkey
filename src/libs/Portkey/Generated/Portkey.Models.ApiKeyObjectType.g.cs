@@ -9,15 +9,15 @@ namespace Portkey
     public enum ApiKeyObjectType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OrganisationService,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WorkspaceService,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WorkspaceUser,
     }

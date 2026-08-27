@@ -9,31 +9,31 @@ namespace Portkey
     public enum OpenAIFilePurpose
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistants,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssistantsOutput,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Batch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BatchOutput,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FineTune,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FineTuneResults,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Vision,
     }

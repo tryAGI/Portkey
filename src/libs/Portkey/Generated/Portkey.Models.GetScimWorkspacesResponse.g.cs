@@ -4,12 +4,12 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetScimWorkspacesResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mappings")]
         public global::System.Collections.Generic.IList<global::Portkey.GetScimWorkspacesResponseMapping>? Mappings { get; set; }

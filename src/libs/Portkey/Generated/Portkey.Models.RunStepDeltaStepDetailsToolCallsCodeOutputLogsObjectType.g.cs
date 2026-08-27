@@ -9,7 +9,7 @@ namespace Portkey
     public enum RunStepDeltaStepDetailsToolCallsCodeOutputLogsObjectType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Logs,
     }

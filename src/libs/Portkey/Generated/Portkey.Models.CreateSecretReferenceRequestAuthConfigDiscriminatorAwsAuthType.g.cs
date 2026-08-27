@@ -4,20 +4,20 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateSecretReferenceRequestAuthConfigDiscriminatorAwsAuthType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AccessKey,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AssumedRole,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ServiceRole,
     }

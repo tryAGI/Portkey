@@ -9,7 +9,7 @@ namespace Portkey
     public enum ResponseItemListObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         List,
     }

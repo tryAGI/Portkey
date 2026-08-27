@@ -9,7 +9,7 @@ namespace Portkey
     public enum ChatCompletionRequestMessageContentPartImageType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageUrl,
     }

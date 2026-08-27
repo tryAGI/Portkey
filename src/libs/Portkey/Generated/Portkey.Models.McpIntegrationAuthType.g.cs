@@ -4,24 +4,24 @@
 namespace Portkey
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum McpIntegrationAuthType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Headers,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         None,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OauthAuto,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OauthClientCredentials,
     }

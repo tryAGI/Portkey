@@ -9,7 +9,7 @@ namespace Portkey
     public enum CodeInterpreterTextOutputType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Logs,
     }

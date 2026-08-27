@@ -9,7 +9,7 @@ namespace Portkey
     public enum CreateKeysResponseObject
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApiKey,
     }
