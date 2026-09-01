@@ -44,7 +44,8 @@ namespace Portkey
             ref global::Portkey.ListDeploymentsStatus? status,
             ref global::Portkey.ListDeploymentsType? type,
             global::System.Collections.Generic.IList<string>? workspaceSlug,
-            ref string? search);
+            ref string? search,
+            ref global::Portkey.OneOf<string, global::System.Collections.Generic.Dictionary<string, string>>? tags);
         partial void PrepareListDeploymentsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -52,7 +53,8 @@ namespace Portkey
             global::Portkey.ListDeploymentsStatus? status,
             global::Portkey.ListDeploymentsType? type,
             global::System.Collections.Generic.IList<string>? workspaceSlug,
-            string? search);
+            string? search,
+            global::Portkey.OneOf<string, global::System.Collections.Generic.Dictionary<string, string>>? tags);
         partial void ProcessListDeploymentsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -63,13 +65,16 @@ namespace Portkey
             ref string content);
 
         /// <summary>
-        /// List All Gateway Deployments
+        /// List All Gateway Deployments<br/>
+        /// List deployments with optional filters. Tags can be filtered using either<br/>
+        /// a JSON string or bracket-notation query parameters.
         /// </summary>
         /// <param name="organisationId"></param>
         /// <param name="status"></param>
         /// <param name="type"></param>
         /// <param name="workspaceSlug"></param>
         /// <param name="search"></param>
+        /// <param name="tags"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
@@ -79,6 +84,7 @@ namespace Portkey
             global::Portkey.ListDeploymentsType? type = default,
             global::System.Collections.Generic.IList<string>? workspaceSlug = default,
             string? search = default,
+            global::Portkey.OneOf<string, global::System.Collections.Generic.Dictionary<string, string>>? tags = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -88,6 +94,7 @@ namespace Portkey
                 type: type,
                 workspaceSlug: workspaceSlug,
                 search: search,
+                tags: tags,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -95,13 +102,16 @@ namespace Portkey
             return __response.Body;
         }
         /// <summary>
-        /// List All Gateway Deployments
+        /// List All Gateway Deployments<br/>
+        /// List deployments with optional filters. Tags can be filtered using either<br/>
+        /// a JSON string or bracket-notation query parameters.
         /// </summary>
         /// <param name="organisationId"></param>
         /// <param name="status"></param>
         /// <param name="type"></param>
         /// <param name="workspaceSlug"></param>
         /// <param name="search"></param>
+        /// <param name="tags"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
@@ -111,6 +121,7 @@ namespace Portkey
             global::Portkey.ListDeploymentsType? type = default,
             global::System.Collections.Generic.IList<string>? workspaceSlug = default,
             string? search = default,
+            global::Portkey.OneOf<string, global::System.Collections.Generic.Dictionary<string, string>>? tags = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -122,7 +133,8 @@ namespace Portkey
                 status: ref status,
                 type: ref type,
                 workspaceSlug: workspaceSlug,
-                search: ref search);
+                search: ref search,
+                tags: ref tags);
 
 
             var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
@@ -158,6 +170,7 @@ namespace Portkey
                                 .AddOptionalParameter("type", type?.ToValueString())
                                 .AddOptionalParameter("workspace_slug", workspaceSlug, delimiter: ",", explode: true)
                                 .AddOptionalParameter("search", search)
+                                .AddOptionalParameter("tags", tags?.ToString())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Portkey.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -203,7 +216,8 @@ namespace Portkey
                     status: status,
                     type: type,
                     workspaceSlug: workspaceSlug,
-                    search: search);
+                    search: search,
+                    tags: tags);
 
                 return __httpRequest;
             }

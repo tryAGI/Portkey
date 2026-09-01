@@ -60,6 +60,16 @@ namespace Portkey
         public global::Portkey.AllOf<global::Portkey.DeploymentAuthSettingsInput, global::Portkey.UpdateDeploymentRequestAuthSettings>? AuthSettings { get; set; }
 
         /// <summary>
+        /// Flat key-value string pairs. Keys must be alphanumeric with underscores<br/>
+        /// and hyphens (`^[a-zA-Z0-9_-]+$`). Values are arbitrary strings.<br/>
+        /// Setting tags to `null` removes all tags from the deployment.<br/>
+        /// Example: {"fw-id":"fw-01234","cloud":"aws","region":"us-west-2"}
+        /// </summary>
+        /// <example>{"fw-id":"fw-01234","cloud":"aws","region":"us-west-2"}</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.Dictionary<string, string>? Tags { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -78,6 +88,12 @@ namespace Portkey
         /// </param>
         /// <param name="overrideExisting"></param>
         /// <param name="authSettings"></param>
+        /// <param name="tags">
+        /// Flat key-value string pairs. Keys must be alphanumeric with underscores<br/>
+        /// and hyphens (`^[a-zA-Z0-9_-]+$`). Values are arbitrary strings.<br/>
+        /// Setting tags to `null` removes all tags from the deployment.<br/>
+        /// Example: {"fw-id":"fw-01234","cloud":"aws","region":"us-west-2"}
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -89,7 +105,8 @@ namespace Portkey
             bool? isDefault,
             bool? rotateAuth,
             bool? overrideExisting,
-            global::Portkey.AllOf<global::Portkey.DeploymentAuthSettingsInput, global::Portkey.UpdateDeploymentRequestAuthSettings>? authSettings)
+            global::Portkey.AllOf<global::Portkey.DeploymentAuthSettingsInput, global::Portkey.UpdateDeploymentRequestAuthSettings>? authSettings,
+            global::System.Collections.Generic.Dictionary<string, string>? tags)
         {
             this.Name = name;
             this.Type = type;
@@ -99,6 +116,7 @@ namespace Portkey
             this.RotateAuth = rotateAuth;
             this.OverrideExisting = overrideExisting;
             this.AuthSettings = authSettings;
+            this.Tags = tags;
         }
 
         /// <summary>
