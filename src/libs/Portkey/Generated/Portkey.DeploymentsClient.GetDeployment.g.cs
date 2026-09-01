@@ -59,7 +59,8 @@ namespace Portkey
         /// <summary>
         /// Get a Gateway Deployment<br/>
         /// Accepts a deployment UUID, or the literal `self` when the request is authenticated with the<br/>
-        /// Gateway's own `client_auth` token in the `authorization` header.
+        /// Gateway's own `client_auth` token in the `authorization` header.<br/>
+        /// Tags are included in the response.
         /// </summary>
         /// <param name="deploymentId"></param>
         /// <param name="organisationId"></param>
@@ -84,7 +85,8 @@ namespace Portkey
         /// <summary>
         /// Get a Gateway Deployment<br/>
         /// Accepts a deployment UUID, or the literal `self` when the request is authenticated with the<br/>
-        /// Gateway's own `client_auth` token in the `authorization` header.
+        /// Gateway's own `client_auth` token in the `authorization` header.<br/>
+        /// Tags are included in the response.
         /// </summary>
         /// <param name="deploymentId"></param>
         /// <param name="organisationId"></param>

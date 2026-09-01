@@ -84,6 +84,16 @@ namespace Portkey
         public global::System.DateTime? LastResyncedAt { get; set; }
 
         /// <summary>
+        /// Flat key-value string pairs. Keys must be alphanumeric with underscores<br/>
+        /// and hyphens (`^[a-zA-Z0-9_-]+$`). Values are arbitrary strings.<br/>
+        /// Setting tags to `null` removes all tags from the deployment.<br/>
+        /// Example: {"fw-id":"fw-01234","cloud":"aws","region":"us-west-2"}
+        /// </summary>
+        /// <example>{"fw-id":"fw-01234","cloud":"aws","region":"us-west-2"}</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.Dictionary<string, string>? Tags { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("object")]
@@ -113,6 +123,12 @@ namespace Portkey
         /// <param name="lastUpdatedAt"></param>
         /// <param name="lastSyncedAt"></param>
         /// <param name="lastResyncedAt"></param>
+        /// <param name="tags">
+        /// Flat key-value string pairs. Keys must be alphanumeric with underscores<br/>
+        /// and hyphens (`^[a-zA-Z0-9_-]+$`). Values are arbitrary strings.<br/>
+        /// Setting tags to `null` removes all tags from the deployment.<br/>
+        /// Example: {"fw-id":"fw-01234","cloud":"aws","region":"us-west-2"}
+        /// </param>
         /// <param name="object"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -130,6 +146,7 @@ namespace Portkey
             global::System.DateTime? lastUpdatedAt,
             global::System.DateTime? lastSyncedAt,
             global::System.DateTime? lastResyncedAt,
+            global::System.Collections.Generic.Dictionary<string, string>? tags,
             global::Portkey.DeploymentListItemObject? @object)
         {
             this.Id = id;
@@ -144,6 +161,7 @@ namespace Portkey
             this.LastUpdatedAt = lastUpdatedAt;
             this.LastSyncedAt = lastSyncedAt;
             this.LastResyncedAt = lastResyncedAt;
+            this.Tags = tags;
             this.Object = @object;
         }
 

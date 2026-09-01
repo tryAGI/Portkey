@@ -57,7 +57,8 @@ namespace Portkey
         /// <summary>
         /// Register a Gateway Deployment<br/>
         /// Registers a self-hosted Gateway with the control plane and issues its `client_auth` token.<br/>
-        /// The token is returned in full only here and when rotated via the update endpoint; all reads mask it.
+        /// The token is returned in full only here and when rotated via the update endpoint; all reads mask it.<br/>
+        /// Tags can be optionally attached at creation time.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -81,7 +82,8 @@ namespace Portkey
         /// <summary>
         /// Register a Gateway Deployment<br/>
         /// Registers a self-hosted Gateway with the control plane and issues its `client_auth` token.<br/>
-        /// The token is returned in full only here and when rotated via the update endpoint; all reads mask it.
+        /// The token is returned in full only here and when rotated via the update endpoint; all reads mask it.<br/>
+        /// Tags can be optionally attached at creation time.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -549,7 +551,8 @@ namespace Portkey
         /// <summary>
         /// Register a Gateway Deployment<br/>
         /// Registers a self-hosted Gateway with the control plane and issues its `client_auth` token.<br/>
-        /// The token is returned in full only here and when rotated via the update endpoint; all reads mask it.
+        /// The token is returned in full only here and when rotated via the update endpoint; all reads mask it.<br/>
+        /// Tags can be optionally attached at creation time.
         /// </summary>
         /// <param name="organisationId">
         /// Required if not using API key auth
@@ -568,6 +571,12 @@ namespace Portkey
         /// The first active deployment in an organisation is always made default.
         /// </param>
         /// <param name="authSettings"></param>
+        /// <param name="tags">
+        /// Flat key-value string pairs. Keys must be alphanumeric with underscores<br/>
+        /// and hyphens (`^[a-zA-Z0-9_-]+$`). Values are arbitrary strings.<br/>
+        /// Setting tags to `null` removes all tags from the deployment.<br/>
+        /// Example: {"fw-id":"fw-01234","cloud":"aws","region":"us-west-2"}
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -579,6 +588,7 @@ namespace Portkey
             object? deploymentConfig = default,
             bool? isDefault = default,
             global::Portkey.DeploymentAuthSettingsInput? authSettings = default,
+            global::System.Collections.Generic.Dictionary<string, string>? tags = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -591,6 +601,7 @@ namespace Portkey
                 DeploymentConfig = deploymentConfig,
                 IsDefault = isDefault,
                 AuthSettings = authSettings,
+                Tags = tags,
             };
 
             return await CreateDeploymentAsync(
