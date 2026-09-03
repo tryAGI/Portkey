@@ -7,7 +7,7 @@ namespace Portkey
     {
 
 
-        private static readonly global::Portkey.EndPointSecurityRequirement s_CreateGuardrailSecurityRequirement0 =
+        private static readonly global::Portkey.EndPointSecurityRequirement s_BulkSyncGuardrailMcpServersSecurityRequirement0 =
             new global::Portkey.EndPointSecurityRequirement
             {
                 Authorizations = new global::Portkey.EndPointAuthorizationRequirement[]
@@ -21,41 +21,46 @@ namespace Portkey
                     },
                 },
             };
-        private static readonly global::Portkey.EndPointSecurityRequirement[] s_CreateGuardrailSecurityRequirements =
+        private static readonly global::Portkey.EndPointSecurityRequirement[] s_BulkSyncGuardrailMcpServersSecurityRequirements =
             new global::Portkey.EndPointSecurityRequirement[]
-            {                s_CreateGuardrailSecurityRequirement0,
+            {                s_BulkSyncGuardrailMcpServersSecurityRequirement0,
             };
-        partial void PrepareCreateGuardrailArguments(
+        partial void PrepareBulkSyncGuardrailMcpServersArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Portkey.CreateGuardrailRequest request);
-        partial void PrepareCreateGuardrailRequest(
+            ref string guardrailId,
+            global::Portkey.BulkSyncMcpServerMappingsRequest request);
+        partial void PrepareBulkSyncGuardrailMcpServersRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Portkey.CreateGuardrailRequest request);
-        partial void ProcessCreateGuardrailResponse(
+            string guardrailId,
+            global::Portkey.BulkSyncMcpServerMappingsRequest request);
+        partial void ProcessBulkSyncGuardrailMcpServersResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessCreateGuardrailResponseContent(
+        partial void ProcessBulkSyncGuardrailMcpServersResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Create a new guardrail<br/>
-        /// Creates a new guardrail with specified checks and actions
+        /// Bulk sync MCP server mappings<br/>
+        /// Declaratively sync all MCP server mappings for a guardrail. This replaces the entire set — servers not included in the request body are removed. The guardrail must have target "mcp_tools".
         /// </summary>
+        /// <param name="guardrailId"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Portkey.CreateGuardrailResponse> CreateGuardrailAsync(
+        public async global::System.Threading.Tasks.Task<global::Portkey.BulkSyncMcpServerMappingsResponse> BulkSyncGuardrailMcpServersAsync(
+            string guardrailId,
 
-            global::Portkey.CreateGuardrailRequest request,
+            global::Portkey.BulkSyncMcpServerMappingsRequest request,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await CreateGuardrailAsResponseAsync(
+            var __response = await BulkSyncGuardrailMcpServersAsResponseAsync(
+                guardrailId: guardrailId,
 
                 request: request,
                 requestOptions: requestOptions,
@@ -65,16 +70,18 @@ namespace Portkey
             return __response.Body;
         }
         /// <summary>
-        /// Create a new guardrail<br/>
-        /// Creates a new guardrail with specified checks and actions
+        /// Bulk sync MCP server mappings<br/>
+        /// Declaratively sync all MCP server mappings for a guardrail. This replaces the entire set — servers not included in the request body are removed. The guardrail must have target "mcp_tools".
         /// </summary>
+        /// <param name="guardrailId"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.CreateGuardrailResponse>> CreateGuardrailAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.BulkSyncMcpServerMappingsResponse>> BulkSyncGuardrailMcpServersAsResponseAsync(
+            string guardrailId,
 
-            global::Portkey.CreateGuardrailRequest request,
+            global::Portkey.BulkSyncMcpServerMappingsRequest request,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -82,15 +89,16 @@ namespace Portkey
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareCreateGuardrailArguments(
+            PrepareBulkSyncGuardrailMcpServersArguments(
                 httpClient: HttpClient,
+                guardrailId: ref guardrailId,
                 request: request);
 
 
             var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CreateGuardrailSecurityRequirements,
-                operationName: "CreateGuardrailAsync");
+                securityRequirements: s_BulkSyncGuardrailMcpServersSecurityRequirements,
+                operationName: "BulkSyncGuardrailMcpServersAsync");
 
             using var __timeoutCancellationTokenSource = global::Portkey.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -110,7 +118,7 @@ namespace Portkey
             {
 
                             var __pathBuilder = new global::Portkey.PathBuilder(
-                                path: "/guardrails",
+                                path: $"/guardrails/{guardrailId}/mcp-servers",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::Portkey.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -118,7 +126,7 @@ namespace Portkey
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: global::System.Net.Http.HttpMethod.Post,
+                    method: global::System.Net.Http.HttpMethod.Put,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -155,9 +163,10 @@ namespace Portkey
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCreateGuardrailRequest(
+                PrepareBulkSyncGuardrailMcpServersRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
+                    guardrailId: guardrailId!,
                     request: request);
 
                 return __httpRequest;
@@ -175,10 +184,10 @@ namespace Portkey
                     await global::Portkey.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateGuardrail",
-                                methodName: "CreateGuardrailAsync",
-                                pathTemplate: "\"/guardrails\"",
-                                httpMethod: "POST",
+                                operationId: "BulkSyncGuardrailMcpServers",
+                                methodName: "BulkSyncGuardrailMcpServersAsync",
+                                pathTemplate: "$\"/guardrails/{guardrailId}/mcp-servers\"",
+                                httpMethod: "PUT",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -209,10 +218,10 @@ namespace Portkey
                         await global::Portkey.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateGuardrail",
-                                methodName: "CreateGuardrailAsync",
-                                pathTemplate: "\"/guardrails\"",
-                                httpMethod: "POST",
+                                operationId: "BulkSyncGuardrailMcpServers",
+                                methodName: "BulkSyncGuardrailMcpServersAsync",
+                                pathTemplate: "$\"/guardrails/{guardrailId}/mcp-servers\"",
+                                httpMethod: "PUT",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -250,10 +259,10 @@ namespace Portkey
                         await global::Portkey.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateGuardrail",
-                                methodName: "CreateGuardrailAsync",
-                                pathTemplate: "\"/guardrails\"",
-                                httpMethod: "POST",
+                                operationId: "BulkSyncGuardrailMcpServers",
+                                methodName: "BulkSyncGuardrailMcpServersAsync",
+                                pathTemplate: "$\"/guardrails/{guardrailId}/mcp-servers\"",
+                                httpMethod: "PUT",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -290,7 +299,7 @@ namespace Portkey
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCreateGuardrailResponse(
+                ProcessBulkSyncGuardrailMcpServersResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -298,10 +307,10 @@ namespace Portkey
                     await global::Portkey.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateGuardrail",
-                                methodName: "CreateGuardrailAsync",
-                                pathTemplate: "\"/guardrails\"",
-                                httpMethod: "POST",
+                                operationId: "BulkSyncGuardrailMcpServers",
+                                methodName: "BulkSyncGuardrailMcpServersAsync",
+                                pathTemplate: "$\"/guardrails/{guardrailId}/mcp-servers\"",
+                                httpMethod: "PUT",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -320,10 +329,10 @@ namespace Portkey
                     await global::Portkey.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateGuardrail",
-                                methodName: "CreateGuardrailAsync",
-                                pathTemplate: "\"/guardrails\"",
-                                httpMethod: "POST",
+                                operationId: "BulkSyncGuardrailMcpServers",
+                                methodName: "BulkSyncGuardrailMcpServersAsync",
+                                pathTemplate: "$\"/guardrails/{guardrailId}/mcp-servers\"",
+                                httpMethod: "PUT",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -337,7 +346,7 @@ namespace Portkey
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // Bad request - validation failed
+                            // Bad request - validation failed (e.g., invalid UUIDs, invalid run_on values)
                             if ((int)__response.StatusCode == 400)
                             {
                                 string? __content_400 = null;
@@ -374,7 +383,7 @@ namespace Portkey
                                         h => h.Key,
                                         h => h.Value));
                             }
-                            // Forbidden - insufficient permissions or guardrail not allowed
+                            // Forbidden - insufficient permissions or feature not enabled
                             if ((int)__response.StatusCode == 403)
                             {
                                 string? __content_403 = null;
@@ -406,6 +415,43 @@ namespace Portkey
                                     innerException: __exception_403,
                                     responseBody: __content_403,
                                     responseObject: __value_403,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
+                            // Not found - guardrail, MCP server, or capability not found
+                            if ((int)__response.StatusCode == 404)
+                            {
+                                string? __content_404 = null;
+                                global::System.Exception? __exception_404 = null;
+                                global::Portkey.ErrorResponse? __value_404 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_404 = global::Portkey.ErrorResponse.FromJson(__content_404, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_404 = global::Portkey.ErrorResponse.FromJson(__content_404, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_404 = __ex;
+                                }
+
+
+                                throw global::Portkey.ApiException<global::Portkey.ErrorResponse>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_404,
+                                    responseBody: __content_404,
+                                    responseObject: __value_404,
                                     responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
@@ -461,7 +507,7 @@ namespace Portkey
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessCreateGuardrailResponseContent(
+                                ProcessBulkSyncGuardrailMcpServersResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -470,9 +516,9 @@ namespace Portkey
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Portkey.CreateGuardrailResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Portkey.BulkSyncMcpServerMappingsResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.CreateGuardrailResponse>(
+                                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.BulkSyncMcpServerMappingsResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -502,9 +548,9 @@ namespace Portkey
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Portkey.CreateGuardrailResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Portkey.BulkSyncMcpServerMappingsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.CreateGuardrailResponse>(
+                                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.BulkSyncMcpServerMappingsResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -545,53 +591,29 @@ namespace Portkey
             }
         }
         /// <summary>
-        /// Create a new guardrail<br/>
-        /// Creates a new guardrail with specified checks and actions
+        /// Bulk sync MCP server mappings<br/>
+        /// Declaratively sync all MCP server mappings for a guardrail. This replaces the entire set — servers not included in the request body are removed. The guardrail must have target "mcp_tools".
         /// </summary>
-        /// <param name="name">
-        /// Name of the guardrail<br/>
-        /// Example: Content Safety Check
-        /// </param>
-        /// <param name="target">
-        /// Target type for the guardrail. Use "llm" for LLM API requests (default) or "mcp_tools" for MCP tool calls.<br/>
-        /// Default Value: llm
-        /// </param>
-        /// <param name="workspaceId">
-        /// Workspace UUID (required if organisation_id not provided and not using API key)
-        /// </param>
-        /// <param name="organisationId">
-        /// Organisation UUID (required if workspace_id not provided and not using API key)
-        /// </param>
-        /// <param name="checks">
-        /// Array of guardrail checks to apply. Required for "llm" target; optional for "mcp_tools" target.
-        /// </param>
-        /// <param name="actions">
-        /// Actions to take when guardrail checks fail or pass
+        /// <param name="guardrailId"></param>
+        /// <param name="mcpServers">
+        /// Map of MCP server UUID to its guardrail configuration. Servers not included in this map will have their mappings removed. Pass an empty object to remove all mappings.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Portkey.CreateGuardrailResponse> CreateGuardrailAsync(
-            string name,
-            global::Portkey.CreateGuardrailRequestTarget? target = default,
-            global::System.Guid? workspaceId = default,
-            global::System.Guid? organisationId = default,
-            global::System.Collections.Generic.IList<global::Portkey.GuardrailCheck>? checks = default,
-            global::Portkey.GuardrailActions? actions = default,
+        public async global::System.Threading.Tasks.Task<global::Portkey.BulkSyncMcpServerMappingsResponse> BulkSyncGuardrailMcpServersAsync(
+            string guardrailId,
+            global::System.Collections.Generic.Dictionary<string, global::Portkey.BulkSyncMcpServerMappingsRequestMcpServers2> mcpServers,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Portkey.CreateGuardrailRequest
+            var __request = new global::Portkey.BulkSyncMcpServerMappingsRequest
             {
-                Name = name,
-                Target = target,
-                WorkspaceId = workspaceId,
-                OrganisationId = organisationId,
-                Checks = checks,
-                Actions = actions,
+                McpServers = mcpServers,
             };
 
-            return await CreateGuardrailAsync(
+            return await BulkSyncGuardrailMcpServersAsync(
+                guardrailId: guardrailId,
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);

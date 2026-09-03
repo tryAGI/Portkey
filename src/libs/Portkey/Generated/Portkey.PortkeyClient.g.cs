@@ -231,7 +231,7 @@ namespace Portkey
         };
 
         /// <summary>
-        /// Create, List, Retrieve, Update, and Delete prompt Guardrails.
+        /// Create, List, Retrieve, Update, and Delete Guardrails for LLM requests and MCP tool calls. Includes endpoints to map guardrails to MCP servers.
         /// </summary>
         public GuardrailsClient Guardrails => new GuardrailsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// Create, List, Retrieve, Update, and Delete prompt Guardrails.<br/>
+    /// Create, List, Retrieve, Update, and Delete Guardrails for LLM requests and MCP tool calls. Includes endpoints to map guardrails to MCP servers.<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>

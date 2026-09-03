@@ -21,6 +21,12 @@ namespace Portkey
         public global::Portkey.GuardrailActions? Actions { get; set; }
 
         /// <summary>
+        /// MCP server mappings for this guardrail. Only included when target is "mcp_tools".
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mcp_server_mappings")]
+        public global::System.Collections.Generic.IList<global::Portkey.McpServerMapping>? McpServerMappings { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -35,15 +41,20 @@ namespace Portkey
         /// <param name="actions">
         /// Actions to take when guardrail checks fail or pass
         /// </param>
+        /// <param name="mcpServerMappings">
+        /// MCP server mappings for this guardrail. Only included when target is "mcp_tools".
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GuardrailDetailsVariant2(
             global::System.Collections.Generic.IList<global::Portkey.GuardrailCheck>? checks,
-            global::Portkey.GuardrailActions? actions)
+            global::Portkey.GuardrailActions? actions,
+            global::System.Collections.Generic.IList<global::Portkey.McpServerMapping>? mcpServerMappings)
         {
             this.Checks = checks;
             this.Actions = actions;
+            this.McpServerMappings = mcpServerMappings;
         }
 
         /// <summary>
