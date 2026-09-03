@@ -5,26 +5,26 @@ namespace Portkey
     public partial interface IGuardrailsClient
     {
         /// <summary>
-        /// Delete a guardrail<br/>
-        /// Deletes an existing guardrail. This also removes all associated MCP server mappings. A guardrail cannot be deleted if it is currently used in workspace or organisation defaults (including mcp_input_guardrails and mcp_output_guardrails). Remove it from defaults first.
+        /// List MCP server mappings<br/>
+        /// List all MCP server mappings for a guardrail. Only applicable when the guardrail has target "mcp_tools".
         /// </summary>
         /// <param name="guardrailId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
-        global::System.Threading.Tasks.Task DeleteGuardrailAsync(
+        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Portkey.McpServerMapping>> ListGuardrailMcpServersAsync(
             string guardrailId,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Delete a guardrail<br/>
-        /// Deletes an existing guardrail. This also removes all associated MCP server mappings. A guardrail cannot be deleted if it is currently used in workspace or organisation defaults (including mcp_input_guardrails and mcp_output_guardrails). Remove it from defaults first.
+        /// List MCP server mappings<br/>
+        /// List all MCP server mappings for a guardrail. Only applicable when the guardrail has target "mcp_tools".
         /// </summary>
         /// <param name="guardrailId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse> DeleteGuardrailAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Portkey.McpServerMapping>>> ListGuardrailMcpServersAsResponseAsync(
             string guardrailId,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

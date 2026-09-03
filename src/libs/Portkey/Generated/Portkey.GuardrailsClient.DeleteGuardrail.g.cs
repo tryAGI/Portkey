@@ -38,7 +38,7 @@ namespace Portkey
 
         /// <summary>
         /// Delete a guardrail<br/>
-        /// Deletes an existing guardrail
+        /// Deletes an existing guardrail. This also removes all associated MCP server mappings. A guardrail cannot be deleted if it is currently used in workspace or organisation defaults (including mcp_input_guardrails and mcp_output_guardrails). Remove it from defaults first.
         /// </summary>
         /// <param name="guardrailId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -57,7 +57,7 @@ namespace Portkey
         }
         /// <summary>
         /// Delete a guardrail<br/>
-        /// Deletes an existing guardrail
+        /// Deletes an existing guardrail. This also removes all associated MCP server mappings. A guardrail cannot be deleted if it is currently used in workspace or organisation defaults (including mcp_input_guardrails and mcp_output_guardrails). Remove it from defaults first.
         /// </summary>
         /// <param name="guardrailId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>

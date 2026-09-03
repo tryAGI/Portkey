@@ -157,7 +157,7 @@ namespace Portkey
         public FinetuneClient Finetune { get; }
 
         /// <summary>
-        /// Create, List, Retrieve, Update, and Delete prompt Guardrails.
+        /// Create, List, Retrieve, Update, and Delete Guardrails for LLM requests and MCP tool calls. Includes endpoints to map guardrails to MCP servers.
         /// </summary>
         public GuardrailsClient Guardrails { get; }
 

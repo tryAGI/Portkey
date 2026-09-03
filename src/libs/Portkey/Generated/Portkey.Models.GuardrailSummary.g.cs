@@ -30,6 +30,14 @@ namespace Portkey
         public required string Slug { get; set; }
 
         /// <summary>
+        /// Target type for the guardrail. "llm" for LLM API requests, "mcp_tools" for MCP tool calls.<br/>
+        /// Default Value: llm
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("target")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.GuardrailSummaryTargetJsonConverter))]
+        public global::Portkey.GuardrailSummaryTarget? Target { get; set; }
+
+        /// <summary>
         /// Organisation UUID
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("organisation_id")]
@@ -102,6 +110,10 @@ namespace Portkey
         /// <param name="ownerId">
         /// UUID of the user who created the guardrail
         /// </param>
+        /// <param name="target">
+        /// Target type for the guardrail. "llm" for LLM API requests, "mcp_tools" for MCP tool calls.<br/>
+        /// Default Value: llm
+        /// </param>
         /// <param name="organisationId">
         /// Organisation UUID
         /// </param>
@@ -124,6 +136,7 @@ namespace Portkey
             global::System.DateTime createdAt,
             global::System.DateTime lastUpdatedAt,
             global::System.Guid ownerId,
+            global::Portkey.GuardrailSummaryTarget? target,
             global::System.Guid? organisationId,
             global::System.Guid? workspaceId,
             global::Portkey.GuardrailSummaryStatus? status,
@@ -132,6 +145,7 @@ namespace Portkey
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Slug = slug ?? throw new global::System.ArgumentNullException(nameof(slug));
+            this.Target = target;
             this.OrganisationId = organisationId;
             this.WorkspaceId = workspaceId;
             this.Status = status;
