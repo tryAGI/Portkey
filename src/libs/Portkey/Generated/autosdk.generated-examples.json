@@ -589,7 +589,7 @@
       "Slug": "updateusagelimitspolicy",
       "Description": "Update an existing usage limits policy.",
       "Language": "http",
-      "Code": "### Update Usage Limits Policy\n# @name updateUsageLimitsPolicy\nPUT {{host}}/policies/usage-limits/{{policyUsageLimitsId}}\nx-portkey-api-key: {{api_key}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022credit_limit\u0022: 2000.0,\n  \u0022alert_threshold\u0022: 1500.0,\n  \u0022reset_usage_for_value\u0022: \u0022api-key-123\u0022\n}\n\n## Responses\n# 200\n# Description: OK\n# Content-Type: application/json\n# 400\n# Description: Bad request\n# 401\n# Description: Unauthorized\n# 403\n# Description: Forbidden\n# 404\n# Description: Policy not found\n# 500\n# Description: Server error",
+      "Code": "### Update Usage Limits Policy\n# @name updateUsageLimitsPolicy\nPUT {{host}}/policies/usage-limits/{{policyUsageLimitsId}}\nx-portkey-api-key: {{api_key}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022conditions\u0022: [\n    {\n      \u0022key\u0022: \u0022workspace_id\u0022,\n      \u0022value\u0022: \u0022workspace-123\u0022\n    },\n    {\n      \u0022key\u0022: \u0022model\u0022,\n      \u0022value\u0022: \u0022@openai/*\u0022\n    }\n  ]\n}\n\n## Responses\n# 200\n# Description: OK\n# Content-Type: application/json\n# 400\n# Description: Bad request\n# 401\n# Description: Unauthorized\n# 403\n# Description: Forbidden\n# 404\n# Description: Policy not found\n# 500\n# Description: Server error",
       "Format": "http",
       "OperationId": "updateUsageLimitsPolicy",
       "Setup": null
