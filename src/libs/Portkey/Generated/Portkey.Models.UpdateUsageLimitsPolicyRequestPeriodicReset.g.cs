@@ -4,7 +4,7 @@
 namespace Portkey
 {
     /// <summary>
-    /// Reset period. Set to null to remove periodic reset.
+    /// Reset period. Set to null to remove periodic reset. Cannot be combined with periodic_reset_days.
     /// </summary>
     public enum UpdateUsageLimitsPolicyRequestPeriodicReset
     {
