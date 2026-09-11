@@ -7413,6 +7413,47 @@ paths:
         label: Self-Hosted
         source: "curl -X POST SELF_HOSTED_CONTROL_PLANE_URL/integrations \\\n-H \"x-portkey-api-key: PORTKEY_API_KEY\" \\\n-H \"Content-Type: application/json\" \\\n-d '{\n    \"name\": \"openai-production\"\
           ,\n    \"ai_provider_id\": \"openai\",\n    \"key\": \"sk-...\"\n}'\n"
+      - lang: python
+        label: Anthropic WIF
+        source: "from portkey_ai import Portkey\n\nportkey = Portkey(api_key=\"PORTKEY_API_KEY\")\n\nintegration = portkey.integrations.create(\n    name=\"anthropic-wif\",\n    ai_provider_id=\"anthropic\"\
+          ,\n    configurations={\n        \"provider_auth_type\": \"wif\",\n        \"wif_identity_source\": \"configuredIdp\",\n        \"oauth_token_endpoint\": \"https://idp.example.com/oauth/token\"\
+          ,\n        \"oauth_client_id\": \"client-id\",\n        \"oauth_client_secret\": \"client-secret\",\n        \"anthropic_federation_rule_id\": \"fr-abc123\",\n        \"anthropic_organization_id\"\
+          : \"org-abc123\",\n        \"anthropic_service_account_id\": \"sa-abc123\",\n    }\n)\nprint(integration)\n"
+      - lang: javascript
+        label: Anthropic WIF
+        source: "import { Portkey } from \"portkey-ai\";\n\nconst portkey = new Portkey({ apiKey: \"PORTKEY_API_KEY\" });\n\nconst integration = await portkey.integrations.create({\n    name: \"anthropic-wif\"\
+          ,\n    ai_provider_id: \"anthropic\",\n    configurations: {\n        provider_auth_type: \"wif\",\n        wif_identity_source: \"configuredIdp\",\n        oauth_token_endpoint: \"https://idp.example.com/oauth/token\"\
+          ,\n        oauth_client_id: \"client-id\",\n        oauth_client_secret: \"client-secret\",\n        anthropic_federation_rule_id: \"fr-abc123\",\n        anthropic_organization_id: \"org-abc123\"\
+          ,\n        anthropic_service_account_id: \"sa-abc123\",\n    }\n});\nconsole.log(integration);\n"
+      - lang: curl
+        label: Anthropic WIF
+        source: "curl -X POST https://api.portkey.ai/v1/integrations \\\n-H \"x-portkey-api-key: PORTKEY_API_KEY\" \\\n-H \"Content-Type: application/json\" \\\n-d '{\n    \"name\": \"anthropic-wif\",\n\
+          \    \"ai_provider_id\": \"anthropic\",\n    \"configurations\": {\n        \"provider_auth_type\": \"wif\",\n        \"wif_identity_source\": \"configuredIdp\",\n        \"oauth_token_endpoint\"\
+          : \"https://idp.example.com/oauth/token\",\n        \"oauth_client_id\": \"client-id\",\n        \"oauth_client_secret\": \"client-secret\",\n        \"anthropic_federation_rule_id\": \"fr-abc123\"\
+          ,\n        \"anthropic_organization_id\": \"org-abc123\",\n        \"anthropic_service_account_id\": \"sa-abc123\"\n    }\n}'\n"
+      - lang: python
+        label: OpenAI OAuth Client Credentials
+        source: "from portkey_ai import Portkey\n\nportkey = Portkey(api_key=\"PORTKEY_API_KEY\")\n\nintegration = portkey.integrations.create(\n    name=\"openai-oauth\",\n    ai_provider_id=\"openai\"\
+          ,\n    configurations={\n        \"provider_auth_type\": \"oauthClientCredentials\",\n        \"oauth_token_endpoint\": \"https://idp.example.com/oauth/token\",\n        \"oauth_client_id\": \"\
+          client-id\",\n        \"oauth_client_secret\": \"client-secret\",\n        \"openai_organization\": \"org-xxx\",\n        \"openai_project\": \"proj-xxx\",\n    }\n)\nprint(integration)\n"
+      - lang: curl
+        label: OpenAI OAuth Client Credentials
+        source: "curl -X POST https://api.portkey.ai/v1/integrations \\\n-H \"x-portkey-api-key: PORTKEY_API_KEY\" \\\n-H \"Content-Type: application/json\" \\\n-d '{\n    \"name\": \"openai-oauth\",\n\
+          \    \"ai_provider_id\": \"openai\",\n    \"configurations\": {\n        \"provider_auth_type\": \"oauthClientCredentials\",\n        \"oauth_token_endpoint\": \"https://idp.example.com/oauth/token\"\
+          ,\n        \"oauth_client_id\": \"client-id\",\n        \"oauth_client_secret\": \"client-secret\",\n        \"openai_organization\": \"org-xxx\",\n        \"openai_project\": \"proj-xxx\"\n \
+          \   }\n}'\n"
+      - lang: python
+        label: OpenAI WIF
+        source: "from portkey_ai import Portkey\n\nportkey = Portkey(api_key=\"PORTKEY_API_KEY\")\n\nintegration = portkey.integrations.create(\n    name=\"openai-wif\",\n    ai_provider_id=\"openai\",\n\
+          \    configurations={\n        \"provider_auth_type\": \"wif\",\n        \"wif_identity_source\": \"configuredIdp\",\n        \"oauth_token_endpoint\": \"https://idp.example.com/oauth/token\"\
+          ,\n        \"oauth_client_id\": \"client-id\",\n        \"oauth_client_secret\": \"client-secret\",\n        \"openai_identity_provider_id\": \"idp-abc123\",\n        \"openai_service_account_id\"\
+          : \"sa-abc123\",\n    }\n)\nprint(integration)\n"
+      - lang: curl
+        label: OpenAI WIF
+        source: "curl -X POST https://api.portkey.ai/v1/integrations \\\n-H \"x-portkey-api-key: PORTKEY_API_KEY\" \\\n-H \"Content-Type: application/json\" \\\n-d '{\n    \"name\": \"openai-wif\",\n  \
+          \  \"ai_provider_id\": \"openai\",\n    \"configurations\": {\n        \"provider_auth_type\": \"wif\",\n        \"wif_identity_source\": \"configuredIdp\",\n        \"oauth_token_endpoint\":\
+          \ \"https://idp.example.com/oauth/token\",\n        \"oauth_client_id\": \"client-id\",\n        \"oauth_client_secret\": \"client-secret\",\n        \"openai_identity_provider_id\": \"idp-abc123\"\
+          ,\n        \"openai_service_account_id\": \"sa-abc123\"\n    }\n}'\n"
   /integrations/{slug}:
     servers: *id002
     get:
@@ -26034,6 +26075,8 @@ components:
           oneOf:
           - $ref: '#/components/schemas/OpenAIConfiguration'
             title: OpenAI
+          - $ref: '#/components/schemas/AnthropicConfiguration'
+            title: Anthropic
           - $ref: '#/components/schemas/AzureOpenAIConfiguration'
             title: Azure OpenAI
           - $ref: '#/components/schemas/BedrockConfiguration'
@@ -26091,6 +26134,8 @@ components:
           oneOf:
           - $ref: '#/components/schemas/OpenAIConfiguration'
             title: OpenAI
+          - $ref: '#/components/schemas/AnthropicConfiguration'
+            title: Anthropic
           - $ref: '#/components/schemas/AzureOpenAIConfiguration'
             title: Azure OpenAI
           - $ref: '#/components/schemas/BedrockConfiguration'
@@ -26142,6 +26187,8 @@ components:
             oneOf:
             - $ref: '#/components/schemas/OpenAIConfiguration'
               title: OpenAI
+            - $ref: '#/components/schemas/AnthropicConfiguration'
+              title: Anthropic
             - $ref: '#/components/schemas/AzureOpenAIConfiguration'
               title: Azure OpenAI
             - $ref: '#/components/schemas/BedrockConfiguration'
@@ -26352,13 +26399,107 @@ components:
             $ref: '#/components/schemas/RateLimits'
     OpenAIConfiguration:
       type: object
+      description: "Configuration for OpenAI integrations. Supports three authentication modes\nselected via `provider_auth_type`:\n- **apiKey** (default) – standard API-key auth; no extra fields required.\n\
+        - **oauthClientCredentials** – Portkey obtains an access token from your IdP using\n  the OAuth 2.0 client-credentials grant and forwards it to OpenAI.\n- **wif** (Workload Identity Federation)\
+        \ – Portkey mints a subject JWT via your\n  configured IdP and exchanges it at OpenAI's WIF token endpoint.\n"
       properties:
+        provider_auth_type:
+          type: string
+          enum:
+          - apiKey
+          - oauthClientCredentials
+          - wif
+          default: apiKey
+          description: Authentication mode for the OpenAI integration
         openai_organization:
           type: string
           description: OpenAI organization ID
         openai_project:
           type: string
           description: OpenAI project ID
+        oauth_token_endpoint:
+          type: string
+          description: Token endpoint URL of your identity provider (required for oauthClientCredentials and wif auth)
+        oauth_client_id:
+          type: string
+          description: OAuth client ID issued by your IdP (required for oauthClientCredentials and wif auth)
+        oauth_client_secret:
+          type: string
+          description: OAuth client secret (required for oauthClientCredentials and wif auth)
+        oauth_scope:
+          type: string
+          description: OAuth scope to request (optional)
+        wif_identity_source:
+          type: string
+          enum:
+          - configuredIdp
+          default: configuredIdp
+          description: Source of the subject JWT for WIF exchange (only configuredIdp is supported today)
+        oauth_audience:
+          type: string
+          description: Audience claim for the subject JWT (optional, wif only)
+        openai_identity_provider_id:
+          type: string
+          description: OpenAI identity provider ID (required for wif auth)
+        openai_service_account_id:
+          type: string
+          description: OpenAI service account ID (required for wif auth)
+        is_key_required:
+          type: boolean
+          default: true
+          description: Whether an API key is still required. Set to false for oauthClientCredentials and wif auth.
+    AnthropicConfiguration:
+      type: object
+      description: "Configuration for Anthropic integrations. Supports two authentication modes\nselected via `provider_auth_type`:\n- **apiKey** (default) – standard API-key auth; no extra fields required.\n\
+        - **wif** (Workload Identity Federation) – Portkey mints a subject JWT via your\n  configured IdP and exchanges it at Anthropic's WIF token endpoint.\n"
+      properties:
+        provider_auth_type:
+          type: string
+          enum:
+          - apiKey
+          - wif
+          default: apiKey
+          description: Authentication mode for the Anthropic integration
+        anthropic_inspect_stream_for_overloaded_error:
+          type: boolean
+          description: Enable inspection of streaming responses for overloaded errors
+        oauth_token_endpoint:
+          type: string
+          description: Token endpoint URL of your identity provider (required for wif auth)
+        oauth_client_id:
+          type: string
+          description: OAuth client ID issued by your IdP (required for wif auth)
+        oauth_client_secret:
+          type: string
+          description: OAuth client secret (required for wif auth)
+        oauth_scope:
+          type: string
+          description: OAuth scope to request (optional)
+        wif_identity_source:
+          type: string
+          enum:
+          - configuredIdp
+          default: configuredIdp
+          description: Source of the subject JWT for WIF exchange
+        oauth_audience:
+          type: string
+          description: Audience claim for the subject JWT (optional)
+        anthropic_federation_rule_id:
+          type: string
+          description: Anthropic federation rule ID (required for wif auth)
+        anthropic_organization_id:
+          type: string
+          description: Anthropic organization ID (required for wif auth)
+        anthropic_service_account_id:
+          type: string
+          description: Anthropic service account ID (required for wif auth)
+        anthropic_workspace_id:
+          type: string
+          description: Anthropic workspace ID (optional, for wif auth)
+        is_key_required:
+          type: boolean
+          default: true
+          description: Whether an API key is still required. Set to false for wif auth.
     AzureOpenAIConfiguration:
       type: object
       required:
