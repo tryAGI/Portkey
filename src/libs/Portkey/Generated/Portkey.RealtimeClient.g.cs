@@ -38,7 +38,7 @@ namespace Portkey
 
         internal global::Portkey.AutoSDKServerConfiguration AutoSDKServerConfiguration { get; set; } = new global::Portkey.AutoSDKServerConfiguration();
 
-        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Portkey.SourceGenerationContext.Default);
+        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Portkey.RealtimeSourceGenerationContext.Default);
 
         /// <summary>
         ///
