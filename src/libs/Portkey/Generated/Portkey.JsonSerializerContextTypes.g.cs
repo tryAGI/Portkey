@@ -6641,39 +6641,99 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetModelPricingResponse? Type1652 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsMcpResponse? Type1652 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListSecretReferencesResponse? Type1653 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsMcpResponseObject? Type1653 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListSecretReferencesResponseObject? Type1654 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGroupsMcpResponseDataItem>? Type1654 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.SecretReferenceListItem>? Type1655 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsMcpResponseDataItem? Type1655 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateSecretReferenceResponse? Type1656 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsMcpResponseDataItemObject? Type1656 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateSecretReferenceResponseObject? Type1657 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsA2aResponse? Type1657 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListDeploymentsResponse? Type1658 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsA2aResponseObject? Type1658 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListDeploymentsResponseObject? Type1659 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGroupsA2aResponseDataItem>? Type1659 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.DeploymentListItem>? Type1660 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsA2aResponseDataItem? Type1660 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.GetAnalyticsGroupsA2aResponseDataItemObject? Type1661 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.GetAnalyticsGroupsWorkspacesResponse? Type1662 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.GetAnalyticsGroupsWorkspacesResponseObject? Type1663 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGroupsWorkspacesResponseDataItem>? Type1664 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.GetAnalyticsGroupsWorkspacesResponseDataItem? Type1665 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.GetAnalyticsGroupsWorkspacesResponseDataItemObject? Type1666 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.GetModelPricingResponse? Type1667 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.ListSecretReferencesResponse? Type1668 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.ListSecretReferencesResponseObject? Type1669 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.IList<global::Portkey.SecretReferenceListItem>? Type1670 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.CreateSecretReferenceResponse? Type1671 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.CreateSecretReferenceResponseObject? Type1672 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.ListDeploymentsResponse? Type1673 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.ListDeploymentsResponseObject? Type1674 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.IList<global::Portkey.DeploymentListItem>? Type1675 { get; set; }
 
         /// <summary>
         ///
@@ -7398,10 +7458,22 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Portkey.SecretReferenceListItem>? ListType180 { get; set; }
+        public global::System.Collections.Generic.List<global::Portkey.GetAnalyticsGroupsMcpResponseDataItem>? ListType180 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Portkey.DeploymentListItem>? ListType181 { get; set; }
+        public global::System.Collections.Generic.List<global::Portkey.GetAnalyticsGroupsA2aResponseDataItem>? ListType181 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.List<global::Portkey.GetAnalyticsGroupsWorkspacesResponseDataItem>? ListType182 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.List<global::Portkey.SecretReferenceListItem>? ListType183 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.List<global::Portkey.DeploymentListItem>? ListType184 { get; set; }
     }
 }

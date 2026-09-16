@@ -61,6 +61,7 @@ namespace Portkey
             ref int? pageSize,
             ref string? metadata,
             ref string? aiOrgModel,
+            ref string? deploymentId,
             ref string? orderBy,
             ref string? orderByType,
             ref string? columns,
@@ -89,6 +90,7 @@ namespace Portkey
             int? pageSize,
             string? metadata,
             string? aiOrgModel,
+            string? deploymentId,
             string? orderBy,
             string? orderByType,
             string? columns,
@@ -130,6 +132,7 @@ namespace Portkey
         /// <param name="pageSize"></param>
         /// <param name="metadata"></param>
         /// <param name="aiOrgModel"></param>
+        /// <param name="deploymentId"></param>
         /// <param name="orderBy"></param>
         /// <param name="orderByType"></param>
         /// <param name="columns"></param>
@@ -161,6 +164,7 @@ namespace Portkey
             int? pageSize = default,
             string? metadata = default,
             string? aiOrgModel = default,
+            string? deploymentId = default,
             string? orderBy = default,
             string? orderByType = default,
             string? columns = default,
@@ -190,6 +194,7 @@ namespace Portkey
                 pageSize: pageSize,
                 metadata: metadata,
                 aiOrgModel: aiOrgModel,
+                deploymentId: deploymentId,
                 orderBy: orderBy,
                 orderByType: orderByType,
                 columns: columns,
@@ -228,6 +233,7 @@ namespace Portkey
         /// <param name="pageSize"></param>
         /// <param name="metadata"></param>
         /// <param name="aiOrgModel"></param>
+        /// <param name="deploymentId"></param>
         /// <param name="orderBy"></param>
         /// <param name="orderByType"></param>
         /// <param name="columns"></param>
@@ -259,6 +265,7 @@ namespace Portkey
             int? pageSize = default,
             string? metadata = default,
             string? aiOrgModel = default,
+            string? deploymentId = default,
             string? orderBy = default,
             string? orderByType = default,
             string? columns = default,
@@ -291,6 +298,7 @@ namespace Portkey
                 pageSize: ref pageSize,
                 metadata: ref metadata,
                 aiOrgModel: ref aiOrgModel,
+                deploymentId: ref deploymentId,
                 orderBy: ref orderBy,
                 orderByType: ref orderByType,
                 columns: ref columns,
@@ -346,6 +354,7 @@ namespace Portkey
                                 .AddOptionalParameter("page_size", pageSize?.ToString())
                                 .AddOptionalParameter("metadata", metadata)
                                 .AddOptionalParameter("ai_org_model", aiOrgModel)
+                                .AddOptionalParameter("deployment_id", deploymentId)
                                 .AddOptionalParameter("order_by", orderBy)
                                 .AddOptionalParameter("order_by_type", orderByType)
                                 .AddOptionalParameter("columns", columns)
@@ -412,6 +421,7 @@ namespace Portkey
                     pageSize: pageSize,
                     metadata: metadata,
                     aiOrgModel: aiOrgModel,
+                    deploymentId: deploymentId,
                     orderBy: orderBy,
                     orderByType: orderByType,
                     columns: columns,
