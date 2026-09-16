@@ -66,6 +66,12 @@ namespace Portkey
         public global::Portkey.OneOf<global::Portkey.OpenAIConfiguration, global::Portkey.AnthropicConfiguration, global::Portkey.AzureOpenAIConfiguration, global::Portkey.BedrockConfiguration, global::Portkey.VertexAIConfiguration, global::Portkey.AzureAIConfiguration, global::Portkey.WorkersAIConfiguration, global::Portkey.SageMakerConfiguration?, global::Portkey.HuggingFaceConfiguration, global::Portkey.CortexConfiguration, global::Portkey.CustomHostConfiguration>? Configurations { get; set; }
 
         /// <summary>
+        /// Key-value tags to associate with the integration.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.Dictionary<string, string>? Tags { get; set; }
+
+        /// <summary>
         /// Whether to automatically create a default provider when creating a workspace-scoped integration. Defaults to true.<br/>
         /// Default Value: true
         /// </summary>
@@ -130,6 +136,9 @@ namespace Portkey
         /// <param name="configurations">
         /// Provider-specific configuration object
         /// </param>
+        /// <param name="tags">
+        /// Key-value tags to associate with the integration.
+        /// </param>
         /// <param name="createDefaultProvider">
         /// Whether to automatically create a default provider when creating a workspace-scoped integration. Defaults to true.<br/>
         /// Default Value: true
@@ -157,6 +166,7 @@ namespace Portkey
             string? description,
             string? workspaceId,
             global::Portkey.OneOf<global::Portkey.OpenAIConfiguration, global::Portkey.AnthropicConfiguration, global::Portkey.AzureOpenAIConfiguration, global::Portkey.BedrockConfiguration, global::Portkey.VertexAIConfiguration, global::Portkey.AzureAIConfiguration, global::Portkey.WorkersAIConfiguration, global::Portkey.SageMakerConfiguration?, global::Portkey.HuggingFaceConfiguration, global::Portkey.CortexConfiguration, global::Portkey.CustomHostConfiguration>? configurations,
+            global::System.Collections.Generic.Dictionary<string, string>? tags,
             bool? createDefaultProvider,
             string? defaultProviderSlug,
             global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? secretMappings,
@@ -169,6 +179,7 @@ namespace Portkey
             this.Description = description;
             this.WorkspaceId = workspaceId;
             this.Configurations = configurations;
+            this.Tags = tags;
             this.CreateDefaultProvider = createDefaultProvider;
             this.DefaultProviderSlug = defaultProviderSlug;
             this.SecretMappings = secretMappings;
