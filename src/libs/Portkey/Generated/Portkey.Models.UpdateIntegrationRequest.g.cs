@@ -40,6 +40,12 @@ namespace Portkey
         public global::Portkey.OneOf<global::Portkey.OpenAIConfiguration, global::Portkey.AnthropicConfiguration, global::Portkey.AzureOpenAIConfiguration, global::Portkey.BedrockConfiguration, global::Portkey.VertexAIConfiguration, global::Portkey.AzureAIConfiguration, global::Portkey.WorkersAIConfiguration, global::Portkey.SageMakerConfiguration?, global::Portkey.HuggingFaceConfiguration, global::Portkey.CortexConfiguration, global::Portkey.CustomHostConfiguration>? Configurations { get; set; }
 
         /// <summary>
+        /// Key-value tags to associate with the integration.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.Dictionary<string, string>? Tags { get; set; }
+
+        /// <summary>
         /// Dynamically resolve secrets from secret references at runtime. Valid target_field values are "key" or "configurations.&lt;field&gt;" (e.g. "configurations.aws_secret_access_key", "configurations.azure_entra_client_secret"). Each target_field must be unique.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_mappings")]
@@ -79,6 +85,9 @@ namespace Portkey
         /// <param name="configurations">
         /// Provider-specific configuration object
         /// </param>
+        /// <param name="tags">
+        /// Key-value tags to associate with the integration.
+        /// </param>
         /// <param name="secretMappings">
         /// Dynamically resolve secrets from secret references at runtime. Valid target_field values are "key" or "configurations.&lt;field&gt;" (e.g. "configurations.aws_secret_access_key", "configurations.azure_entra_client_secret"). Each target_field must be unique.
         /// </param>
@@ -96,6 +105,7 @@ namespace Portkey
             string? key,
             string? description,
             global::Portkey.OneOf<global::Portkey.OpenAIConfiguration, global::Portkey.AnthropicConfiguration, global::Portkey.AzureOpenAIConfiguration, global::Portkey.BedrockConfiguration, global::Portkey.VertexAIConfiguration, global::Portkey.AzureAIConfiguration, global::Portkey.WorkersAIConfiguration, global::Portkey.SageMakerConfiguration?, global::Portkey.HuggingFaceConfiguration, global::Portkey.CortexConfiguration, global::Portkey.CustomHostConfiguration>? configurations,
+            global::System.Collections.Generic.Dictionary<string, string>? tags,
             global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? secretMappings,
             global::Portkey.PricingAdjustments? pricingAdjustments)
         {
@@ -103,6 +113,7 @@ namespace Portkey
             this.Key = key;
             this.Description = description;
             this.Configurations = configurations;
+            this.Tags = tags;
             this.SecretMappings = secretMappings;
             this.PricingAdjustments = pricingAdjustments;
         }

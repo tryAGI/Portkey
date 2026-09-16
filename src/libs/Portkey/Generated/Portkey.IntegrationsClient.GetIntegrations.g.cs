@@ -43,14 +43,16 @@ namespace Portkey
             ref int? currentPage,
             ref int? pageSize,
             ref string? workspaceId,
-            ref global::Portkey.GetIntegrationsType? type);
+            ref global::Portkey.GetIntegrationsType? type,
+            ref string? tags);
         partial void PrepareGetIntegrationsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int? currentPage,
             int? pageSize,
             string? workspaceId,
-            global::Portkey.GetIntegrationsType? type);
+            global::Portkey.GetIntegrationsType? type,
+            string? tags);
         partial void ProcessGetIntegrationsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -69,6 +71,7 @@ namespace Portkey
         /// <param name="type">
         /// Default Value: all
         /// </param>
+        /// <param name="tags"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
@@ -77,6 +80,7 @@ namespace Portkey
             int? pageSize = default,
             string? workspaceId = default,
             global::Portkey.GetIntegrationsType? type = default,
+            string? tags = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -85,6 +89,7 @@ namespace Portkey
                 pageSize: pageSize,
                 workspaceId: workspaceId,
                 type: type,
+                tags: tags,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -100,6 +105,7 @@ namespace Portkey
         /// <param name="type">
         /// Default Value: all
         /// </param>
+        /// <param name="tags"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
@@ -108,6 +114,7 @@ namespace Portkey
             int? pageSize = default,
             string? workspaceId = default,
             global::Portkey.GetIntegrationsType? type = default,
+            string? tags = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -118,7 +125,8 @@ namespace Portkey
                 currentPage: ref currentPage,
                 pageSize: ref pageSize,
                 workspaceId: ref workspaceId,
-                type: ref type);
+                type: ref type,
+                tags: ref tags);
 
 
             var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
@@ -153,6 +161,7 @@ namespace Portkey
                                 .AddOptionalParameter("page_size", pageSize?.ToString())
                                 .AddOptionalParameter("workspace_id", workspaceId)
                                 .AddOptionalParameter("type", type?.ToValueString())
+                                .AddOptionalParameter("tags", tags)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Portkey.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -197,7 +206,8 @@ namespace Portkey
                     currentPage: currentPage,
                     pageSize: pageSize,
                     workspaceId: workspaceId,
-                    type: type);
+                    type: type,
+                    tags: tags);
 
                 return __httpRequest;
             }

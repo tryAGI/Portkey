@@ -470,6 +470,9 @@ namespace Portkey
         /// <param name="configurations">
         /// Provider-specific configuration object
         /// </param>
+        /// <param name="tags">
+        /// Key-value tags to associate with the integration.
+        /// </param>
         /// <param name="secretMappings">
         /// Dynamically resolve secrets from secret references at runtime. Valid target_field values are "key" or "configurations.&lt;field&gt;" (e.g. "configurations.aws_secret_access_key", "configurations.azure_entra_client_secret"). Each target_field must be unique.
         /// </param>
@@ -488,6 +491,7 @@ namespace Portkey
             string? key = default,
             string? description = default,
             global::Portkey.OneOf<global::Portkey.OpenAIConfiguration, global::Portkey.AnthropicConfiguration, global::Portkey.AzureOpenAIConfiguration, global::Portkey.BedrockConfiguration, global::Portkey.VertexAIConfiguration, global::Portkey.AzureAIConfiguration, global::Portkey.WorkersAIConfiguration, global::Portkey.SageMakerConfiguration?, global::Portkey.HuggingFaceConfiguration, global::Portkey.CortexConfiguration, global::Portkey.CustomHostConfiguration>? configurations = default,
+            global::System.Collections.Generic.Dictionary<string, string>? tags = default,
             global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? secretMappings = default,
             global::Portkey.PricingAdjustments? pricingAdjustments = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
@@ -499,6 +503,7 @@ namespace Portkey
                 Key = key,
                 Description = description,
                 Configurations = configurations,
+                Tags = tags,
                 SecretMappings = secretMappings,
                 PricingAdjustments = pricingAdjustments,
             };

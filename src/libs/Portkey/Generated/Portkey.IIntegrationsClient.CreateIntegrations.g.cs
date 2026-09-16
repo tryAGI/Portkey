@@ -58,6 +58,9 @@ namespace Portkey
         /// <param name="configurations">
         /// Provider-specific configuration object
         /// </param>
+        /// <param name="tags">
+        /// Key-value tags to associate with the integration.
+        /// </param>
         /// <param name="createDefaultProvider">
         /// Whether to automatically create a default provider when creating a workspace-scoped integration. Defaults to true.<br/>
         /// Default Value: true
@@ -85,6 +88,7 @@ namespace Portkey
             string? description = default,
             string? workspaceId = default,
             global::Portkey.OneOf<global::Portkey.OpenAIConfiguration, global::Portkey.AnthropicConfiguration, global::Portkey.AzureOpenAIConfiguration, global::Portkey.BedrockConfiguration, global::Portkey.VertexAIConfiguration, global::Portkey.AzureAIConfiguration, global::Portkey.WorkersAIConfiguration, global::Portkey.SageMakerConfiguration?, global::Portkey.HuggingFaceConfiguration, global::Portkey.CortexConfiguration, global::Portkey.CustomHostConfiguration>? configurations = default,
+            global::System.Collections.Generic.Dictionary<string, string>? tags = default,
             bool? createDefaultProvider = default,
             string? defaultProviderSlug = default,
             global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? secretMappings = default,
