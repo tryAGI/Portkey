@@ -62,6 +62,7 @@ namespace Portkey
             ref int? pageSize,
             ref string? metadata,
             ref string? aiOrgModel,
+            ref string? deploymentId,
             ref string? traceId,
             ref string? spanId,
             ref string? promptSlug);
@@ -90,6 +91,7 @@ namespace Portkey
             int? pageSize,
             string? metadata,
             string? aiOrgModel,
+            string? deploymentId,
             string? traceId,
             string? spanId,
             string? promptSlug);
@@ -131,6 +133,7 @@ namespace Portkey
         /// <param name="pageSize"></param>
         /// <param name="metadata"></param>
         /// <param name="aiOrgModel"></param>
+        /// <param name="deploymentId"></param>
         /// <param name="traceId"></param>
         /// <param name="spanId"></param>
         /// <param name="promptSlug"></param>
@@ -160,6 +163,7 @@ namespace Portkey
             int? pageSize = default,
             string? metadata = default,
             string? aiOrgModel = default,
+            string? deploymentId = default,
             string? traceId = default,
             string? spanId = default,
             string? promptSlug = default,
@@ -189,6 +193,7 @@ namespace Portkey
                 pageSize: pageSize,
                 metadata: metadata,
                 aiOrgModel: aiOrgModel,
+                deploymentId: deploymentId,
                 traceId: traceId,
                 spanId: spanId,
                 promptSlug: promptSlug,
@@ -227,6 +232,7 @@ namespace Portkey
         /// <param name="pageSize"></param>
         /// <param name="metadata"></param>
         /// <param name="aiOrgModel"></param>
+        /// <param name="deploymentId"></param>
         /// <param name="traceId"></param>
         /// <param name="spanId"></param>
         /// <param name="promptSlug"></param>
@@ -256,6 +262,7 @@ namespace Portkey
             int? pageSize = default,
             string? metadata = default,
             string? aiOrgModel = default,
+            string? deploymentId = default,
             string? traceId = default,
             string? spanId = default,
             string? promptSlug = default,
@@ -288,6 +295,7 @@ namespace Portkey
                 pageSize: ref pageSize,
                 metadata: ref metadata,
                 aiOrgModel: ref aiOrgModel,
+                deploymentId: ref deploymentId,
                 traceId: ref traceId,
                 spanId: ref spanId,
                 promptSlug: ref promptSlug);
@@ -342,6 +350,7 @@ namespace Portkey
                                 .AddOptionalParameter("page_size", pageSize?.ToString())
                                 .AddOptionalParameter("metadata", metadata)
                                 .AddOptionalParameter("ai_org_model", aiOrgModel)
+                                .AddOptionalParameter("deployment_id", deploymentId)
                                 .AddOptionalParameter("trace_id", traceId)
                                 .AddOptionalParameter("span_id", spanId)
                                 .AddOptionalParameter("prompt_slug", promptSlug)
@@ -408,6 +417,7 @@ namespace Portkey
                     pageSize: pageSize,
                     metadata: metadata,
                     aiOrgModel: aiOrgModel,
+                    deploymentId: deploymentId,
                     traceId: traceId,
                     spanId: spanId,
                     promptSlug: promptSlug);

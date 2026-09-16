@@ -33,6 +33,7 @@ namespace Portkey
         /// <param name="pageSize"></param>
         /// <param name="metadata"></param>
         /// <param name="aiOrgModel"></param>
+        /// <param name="deploymentId"></param>
         /// <param name="traceId"></param>
         /// <param name="spanId"></param>
         /// <param name="promptSlug"></param>
@@ -62,6 +63,7 @@ namespace Portkey
             int? pageSize = default,
             string? metadata = default,
             string? aiOrgModel = default,
+            string? deploymentId = default,
             string? traceId = default,
             string? spanId = default,
             string? promptSlug = default,
@@ -96,6 +98,7 @@ namespace Portkey
         /// <param name="pageSize"></param>
         /// <param name="metadata"></param>
         /// <param name="aiOrgModel"></param>
+        /// <param name="deploymentId"></param>
         /// <param name="traceId"></param>
         /// <param name="spanId"></param>
         /// <param name="promptSlug"></param>
@@ -125,6 +128,7 @@ namespace Portkey
             int? pageSize = default,
             string? metadata = default,
             string? aiOrgModel = default,
+            string? deploymentId = default,
             string? traceId = default,
             string? spanId = default,
             string? promptSlug = default,

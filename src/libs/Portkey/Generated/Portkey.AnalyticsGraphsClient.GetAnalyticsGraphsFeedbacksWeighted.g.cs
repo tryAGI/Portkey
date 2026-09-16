@@ -59,6 +59,7 @@ namespace Portkey
             ref string? apiKeyIds,
             ref string? metadata,
             ref string? aiOrgModel,
+            ref string? deploymentId,
             ref string? traceId,
             ref string? spanId,
             ref string? promptSlug);
@@ -84,6 +85,7 @@ namespace Portkey
             string? apiKeyIds,
             string? metadata,
             string? aiOrgModel,
+            string? deploymentId,
             string? traceId,
             string? spanId,
             string? promptSlug);
@@ -122,6 +124,7 @@ namespace Portkey
         /// <param name="apiKeyIds"></param>
         /// <param name="metadata"></param>
         /// <param name="aiOrgModel"></param>
+        /// <param name="deploymentId"></param>
         /// <param name="traceId"></param>
         /// <param name="spanId"></param>
         /// <param name="promptSlug"></param>
@@ -148,6 +151,7 @@ namespace Portkey
             string? apiKeyIds = default,
             string? metadata = default,
             string? aiOrgModel = default,
+            string? deploymentId = default,
             string? traceId = default,
             string? spanId = default,
             string? promptSlug = default,
@@ -174,6 +178,7 @@ namespace Portkey
                 apiKeyIds: apiKeyIds,
                 metadata: metadata,
                 aiOrgModel: aiOrgModel,
+                deploymentId: deploymentId,
                 traceId: traceId,
                 spanId: spanId,
                 promptSlug: promptSlug,
@@ -209,6 +214,7 @@ namespace Portkey
         /// <param name="apiKeyIds"></param>
         /// <param name="metadata"></param>
         /// <param name="aiOrgModel"></param>
+        /// <param name="deploymentId"></param>
         /// <param name="traceId"></param>
         /// <param name="spanId"></param>
         /// <param name="promptSlug"></param>
@@ -235,6 +241,7 @@ namespace Portkey
             string? apiKeyIds = default,
             string? metadata = default,
             string? aiOrgModel = default,
+            string? deploymentId = default,
             string? traceId = default,
             string? spanId = default,
             string? promptSlug = default,
@@ -264,6 +271,7 @@ namespace Portkey
                 apiKeyIds: ref apiKeyIds,
                 metadata: ref metadata,
                 aiOrgModel: ref aiOrgModel,
+                deploymentId: ref deploymentId,
                 traceId: ref traceId,
                 spanId: ref spanId,
                 promptSlug: ref promptSlug);
@@ -316,6 +324,7 @@ namespace Portkey
                                 .AddOptionalParameter("api_key_ids", apiKeyIds)
                                 .AddOptionalParameter("metadata", metadata)
                                 .AddOptionalParameter("ai_org_model", aiOrgModel)
+                                .AddOptionalParameter("deployment_id", deploymentId)
                                 .AddOptionalParameter("trace_id", traceId)
                                 .AddOptionalParameter("span_id", spanId)
                                 .AddOptionalParameter("prompt_slug", promptSlug)
@@ -379,6 +388,7 @@ namespace Portkey
                     apiKeyIds: apiKeyIds,
                     metadata: metadata,
                     aiOrgModel: aiOrgModel,
+                    deploymentId: deploymentId,
                     traceId: traceId,
                     spanId: spanId,
                     promptSlug: promptSlug);

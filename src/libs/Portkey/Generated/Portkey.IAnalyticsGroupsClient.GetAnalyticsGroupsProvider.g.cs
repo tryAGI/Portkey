@@ -32,6 +32,7 @@ namespace Portkey
         /// <param name="pageSize"></param>
         /// <param name="metadata"></param>
         /// <param name="aiOrgModel"></param>
+        /// <param name="deploymentId"></param>
         /// <param name="orderBy"></param>
         /// <param name="orderByType"></param>
         /// <param name="columns"></param>
@@ -63,6 +64,7 @@ namespace Portkey
             int? pageSize = default,
             string? metadata = default,
             string? aiOrgModel = default,
+            string? deploymentId = default,
             string? orderBy = default,
             string? orderByType = default,
             string? columns = default,
@@ -97,6 +99,7 @@ namespace Portkey
         /// <param name="pageSize"></param>
         /// <param name="metadata"></param>
         /// <param name="aiOrgModel"></param>
+        /// <param name="deploymentId"></param>
         /// <param name="orderBy"></param>
         /// <param name="orderByType"></param>
         /// <param name="columns"></param>
@@ -128,6 +131,7 @@ namespace Portkey
             int? pageSize = default,
             string? metadata = default,
             string? aiOrgModel = default,
+            string? deploymentId = default,
             string? orderBy = default,
             string? orderByType = default,
             string? columns = default,
