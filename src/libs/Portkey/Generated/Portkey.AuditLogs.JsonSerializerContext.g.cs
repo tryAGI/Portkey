@@ -5,47 +5,15 @@
 #pragma warning disable CS3016 // Arrays as attribute arguments is not CLS-compliant
 
 namespace Portkey
-{
-    /// <summary>
-    ///
-    /// </summary>
-    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AuditLogObjectList))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.AuditLogObjectListRecord>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AuditLogObjectListRecord))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AuditLogObjectListRecordMethod), TypeInfoPropertyName = "AuditLogObjectListRecordMethod2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AuditLogObjectListRecordUserType), TypeInfoPropertyName = "AuditLogObjectListRecordUserType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AuditLogObjectListObject), TypeInfoPropertyName = "AuditLogObjectListObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetAuditLogsMethod), TypeInfoPropertyName = "GetAuditLogsMethod2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetAuditLogsUserType), TypeInfoPropertyName = "GetAuditLogsUserType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AuditLogObjectListRecordMethod?), TypeInfoPropertyName = "NullableAuditLogObjectListRecordMethod2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AuditLogObjectListRecordUserType?), TypeInfoPropertyName = "NullableAuditLogObjectListRecordUserType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AuditLogObjectListObject?), TypeInfoPropertyName = "NullableAuditLogObjectListObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetAuditLogsMethod?), TypeInfoPropertyName = "NullableGetAuditLogsMethod2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetAuditLogsUserType?), TypeInfoPropertyName = "NullableGetAuditLogsUserType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.AuditLogObjectListRecord>))]
-    internal sealed partial class AuditLogsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
-    {
-    }
-    /// <summary>
+{    /// <summary>
     ///
     /// </summary>
     public sealed partial class AuditLogsSourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
         private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = new LazyChunkResolver();
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        internal static global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver TypeInfoResolver => Resolver;
 
 
         private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
@@ -81,19 +49,7 @@ namespace Portkey
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>, global::System.Collections.Generic.IList<int>, global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>, global::System.Collections.Generic.IList<int>, global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, double?, bool?>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, double?, bool?>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.Dictionary<string, string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.UnixTimestampJsonConverter());
-            options.Converters.Add(new LazyEnumJsonConverterFactory());
+            global::Portkey.SourceGenerationContext.AddConverters(options);
         }
 
         private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
@@ -106,90 +62,6 @@ namespace Portkey
             AddConverters(options);
 
             return options;
-        }
-
-
-        private sealed class LazyEnumJsonConverterFactory : global::System.Text.Json.Serialization.JsonConverterFactory
-        {
-            public override bool CanConvert(global::System.Type typeToConvert)
-            {
-                return
-                    typeToConvert == typeof(global::Portkey.AuditLogObjectListRecordMethod)
-
-                    || typeToConvert == typeof(global::Portkey.AuditLogObjectListRecordMethod?)
-
-                    || typeToConvert == typeof(global::Portkey.AuditLogObjectListRecordUserType)
-
-                    || typeToConvert == typeof(global::Portkey.AuditLogObjectListRecordUserType?)
-
-                    || typeToConvert == typeof(global::Portkey.AuditLogObjectListObject)
-
-                    || typeToConvert == typeof(global::Portkey.AuditLogObjectListObject?)
-
-                    || typeToConvert == typeof(global::Portkey.GetAuditLogsMethod)
-
-                    || typeToConvert == typeof(global::Portkey.GetAuditLogsMethod?)
-
-                    || typeToConvert == typeof(global::Portkey.GetAuditLogsUserType)
-
-                    || typeToConvert == typeof(global::Portkey.GetAuditLogsUserType?);
-            }
-
-            public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
-                global::System.Type typeToConvert,
-                global::System.Text.Json.JsonSerializerOptions options)
-            {
-                if (typeToConvert == typeof(global::Portkey.AuditLogObjectListRecordMethod))
-                {
-                    return new global::Portkey.JsonConverters.AuditLogObjectListRecordMethodJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.AuditLogObjectListRecordMethod?))
-                {
-                    return new global::Portkey.JsonConverters.AuditLogObjectListRecordMethodNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.AuditLogObjectListRecordUserType))
-                {
-                    return new global::Portkey.JsonConverters.AuditLogObjectListRecordUserTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.AuditLogObjectListRecordUserType?))
-                {
-                    return new global::Portkey.JsonConverters.AuditLogObjectListRecordUserTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.AuditLogObjectListObject))
-                {
-                    return new global::Portkey.JsonConverters.AuditLogObjectListObjectJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.AuditLogObjectListObject?))
-                {
-                    return new global::Portkey.JsonConverters.AuditLogObjectListObjectNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.GetAuditLogsMethod))
-                {
-                    return new global::Portkey.JsonConverters.GetAuditLogsMethodJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.GetAuditLogsMethod?))
-                {
-                    return new global::Portkey.JsonConverters.GetAuditLogsMethodNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.GetAuditLogsUserType))
-                {
-                    return new global::Portkey.JsonConverters.GetAuditLogsUserTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.GetAuditLogsUserType?))
-                {
-                    return new global::Portkey.JsonConverters.GetAuditLogsUserTypeNullableJsonConverter();
-                }
-                throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
-            }
         }
 
         private sealed class LazyChunkResolver : global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
@@ -231,7 +103,7 @@ namespace Portkey
             {
                 return index switch
                 {
-                    0 => new AuditLogsSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+                    0 => global::Portkey.SourceGenerationContext.TypeInfoResolver,
                     _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
                 };
             }

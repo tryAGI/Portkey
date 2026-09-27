@@ -5,60 +5,15 @@
 #pragma warning disable CS3016 // Arrays as attribute arguments is not CLS-compliant
 
 namespace Portkey
-{
-    /// <summary>
-    ///
-    /// </summary>
-    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<string, global::System.Collections.Generic.IList<string>, global::System.Collections.Generic.IList<int>, global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>>), TypeInfoPropertyName = "OneOfStringIListStringIListInt32IListIListInt322")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<int>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<double>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateEmbeddingRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AnyOf<string, global::Portkey.CreateEmbeddingRequestModel?>), TypeInfoPropertyName = "AnyOfStringCreateEmbeddingRequestModel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateEmbeddingRequestModel), TypeInfoPropertyName = "CreateEmbeddingRequestModel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateEmbeddingRequestEncodingFormat), TypeInfoPropertyName = "CreateEmbeddingRequestEncodingFormat2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateEmbeddingResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.Embedding>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.Embedding))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateEmbeddingResponseObject), TypeInfoPropertyName = "CreateEmbeddingResponseObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateEmbeddingResponseUsage))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.EmbeddingObject), TypeInfoPropertyName = "EmbeddingObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<string, global::System.Collections.Generic.IList<string>, global::System.Collections.Generic.IList<int>, global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>>?), TypeInfoPropertyName = "NullableOneOfStringIListStringIListInt32IListIListInt322")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AnyOf<string, global::Portkey.CreateEmbeddingRequestModel?>?), TypeInfoPropertyName = "NullableAnyOfStringCreateEmbeddingRequestModel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateEmbeddingRequestModel?), TypeInfoPropertyName = "NullableCreateEmbeddingRequestModel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateEmbeddingRequestEncodingFormat?), TypeInfoPropertyName = "NullableCreateEmbeddingRequestEncodingFormat2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateEmbeddingResponseObject?), TypeInfoPropertyName = "NullableCreateEmbeddingResponseObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.EmbeddingObject?), TypeInfoPropertyName = "NullableEmbeddingObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<string, global::System.Collections.Generic.List<string>, global::System.Collections.Generic.List<int>, global::System.Collections.Generic.List<global::System.Collections.Generic.List<int>>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<int>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<int>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<double>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.Embedding>))]
-    internal sealed partial class EmbeddingsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
-    {
-    }
-    /// <summary>
+{    /// <summary>
     ///
     /// </summary>
     public sealed partial class EmbeddingsSourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
         private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = new LazyChunkResolver();
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        internal static global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver TypeInfoResolver => Resolver;
 
 
         private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
@@ -94,20 +49,7 @@ namespace Portkey
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>, global::System.Collections.Generic.IList<int>, global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>, global::System.Collections.Generic.IList<int>, global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.AnyOfJsonConverter<string, global::Portkey.CreateEmbeddingRequestModel?>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, double?, bool?>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, double?, bool?>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.Dictionary<string, string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.UnixTimestampJsonConverter());
-            options.Converters.Add(new LazyEnumJsonConverterFactory());
+            global::Portkey.SourceGenerationContext.AddConverters(options);
         }
 
         private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
@@ -120,76 +62,6 @@ namespace Portkey
             AddConverters(options);
 
             return options;
-        }
-
-
-        private sealed class LazyEnumJsonConverterFactory : global::System.Text.Json.Serialization.JsonConverterFactory
-        {
-            public override bool CanConvert(global::System.Type typeToConvert)
-            {
-                return
-                    typeToConvert == typeof(global::Portkey.CreateEmbeddingRequestModel)
-
-                    || typeToConvert == typeof(global::Portkey.CreateEmbeddingRequestModel?)
-
-                    || typeToConvert == typeof(global::Portkey.CreateEmbeddingRequestEncodingFormat)
-
-                    || typeToConvert == typeof(global::Portkey.CreateEmbeddingRequestEncodingFormat?)
-
-                    || typeToConvert == typeof(global::Portkey.CreateEmbeddingResponseObject)
-
-                    || typeToConvert == typeof(global::Portkey.CreateEmbeddingResponseObject?)
-
-                    || typeToConvert == typeof(global::Portkey.EmbeddingObject)
-
-                    || typeToConvert == typeof(global::Portkey.EmbeddingObject?);
-            }
-
-            public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
-                global::System.Type typeToConvert,
-                global::System.Text.Json.JsonSerializerOptions options)
-            {
-                if (typeToConvert == typeof(global::Portkey.CreateEmbeddingRequestModel))
-                {
-                    return new global::Portkey.JsonConverters.CreateEmbeddingRequestModelJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.CreateEmbeddingRequestModel?))
-                {
-                    return new global::Portkey.JsonConverters.CreateEmbeddingRequestModelNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.CreateEmbeddingRequestEncodingFormat))
-                {
-                    return new global::Portkey.JsonConverters.CreateEmbeddingRequestEncodingFormatJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.CreateEmbeddingRequestEncodingFormat?))
-                {
-                    return new global::Portkey.JsonConverters.CreateEmbeddingRequestEncodingFormatNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.CreateEmbeddingResponseObject))
-                {
-                    return new global::Portkey.JsonConverters.CreateEmbeddingResponseObjectJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.CreateEmbeddingResponseObject?))
-                {
-                    return new global::Portkey.JsonConverters.CreateEmbeddingResponseObjectNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.EmbeddingObject))
-                {
-                    return new global::Portkey.JsonConverters.EmbeddingObjectJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.EmbeddingObject?))
-                {
-                    return new global::Portkey.JsonConverters.EmbeddingObjectNullableJsonConverter();
-                }
-                throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
-            }
         }
 
         private sealed class LazyChunkResolver : global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
@@ -231,7 +103,7 @@ namespace Portkey
             {
                 return index switch
                 {
-                    0 => new EmbeddingsSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+                    0 => global::Portkey.SourceGenerationContext.TypeInfoResolver,
                     _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
                 };
             }

@@ -5,98 +5,15 @@
 #pragma warning disable CS3016 // Arrays as attribute arguments is not CLS-compliant
 
 namespace Portkey
-{
-    /// <summary>
-    ///
-    /// </summary>
-    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UsageLimits))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UsageLimitsType), TypeInfoPropertyName = "UsageLimitsType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UsageLimitsPeriodicReset), TypeInfoPropertyName = "UsageLimitsPeriodicReset2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ApiKeyObject))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ApiKeyObjectType), TypeInfoPropertyName = "ApiKeyObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ApiKeyObjectStatus), TypeInfoPropertyName = "ApiKeyObjectStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ApiKeyObjectCreationMode), TypeInfoPropertyName = "ApiKeyObjectCreationMode2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.ApiKeyObjectRateLimit>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ApiKeyObjectRateLimit))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ApiKeyObjectDefaults))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ApiKeyObjectObject), TypeInfoPropertyName = "ApiKeyObjectObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ApiKeyObjectList))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ApiKeyObjectListObject), TypeInfoPropertyName = "ApiKeyObjectListObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.ApiKeyObject>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateApiKeyObject))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.CreateApiKeyObjectRateLimit>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateApiKeyObjectRateLimit))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateApiKeyObjectRateLimitType), TypeInfoPropertyName = "CreateApiKeyObjectRateLimitType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateApiKeyObjectRateLimitUnit), TypeInfoPropertyName = "CreateApiKeyObjectRateLimitUnit2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateApiKeyObjectDefaults))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateApiKeyObjectRotationPolicy))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateApiKeyObjectRotationPolicyRotationPeriod), TypeInfoPropertyName = "CreateApiKeyObjectRotationPolicyRotationPeriod2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateApiKeyObject))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.UpdateApiKeyObjectRateLimit>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateApiKeyObjectRateLimit))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateApiKeyObjectRateLimitType), TypeInfoPropertyName = "UpdateApiKeyObjectRateLimitType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateApiKeyObjectRateLimitUnit), TypeInfoPropertyName = "UpdateApiKeyObjectRateLimitUnit2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateApiKeyObjectDefaults))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateApiKeyObjectRotationPolicy))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateApiKeyObjectRotationPolicyRotationPeriod), TypeInfoPropertyName = "UpdateApiKeyObjectRotationPolicyRotationPeriod2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RotateApiKeyRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.RotateApiKeyResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateKeysType), TypeInfoPropertyName = "CreateKeysType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateKeysSubType), TypeInfoPropertyName = "CreateKeysSubType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateKeysResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateKeysResponseObject), TypeInfoPropertyName = "CreateKeysResponseObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UsageLimitsType?), TypeInfoPropertyName = "NullableUsageLimitsType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UsageLimitsPeriodicReset?), TypeInfoPropertyName = "NullableUsageLimitsPeriodicReset2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ApiKeyObjectType?), TypeInfoPropertyName = "NullableApiKeyObjectType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ApiKeyObjectStatus?), TypeInfoPropertyName = "NullableApiKeyObjectStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ApiKeyObjectCreationMode?), TypeInfoPropertyName = "NullableApiKeyObjectCreationMode2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ApiKeyObjectObject?), TypeInfoPropertyName = "NullableApiKeyObjectObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ApiKeyObjectListObject?), TypeInfoPropertyName = "NullableApiKeyObjectListObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateApiKeyObjectRateLimitType?), TypeInfoPropertyName = "NullableCreateApiKeyObjectRateLimitType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateApiKeyObjectRateLimitUnit?), TypeInfoPropertyName = "NullableCreateApiKeyObjectRateLimitUnit2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateApiKeyObjectRotationPolicyRotationPeriod?), TypeInfoPropertyName = "NullableCreateApiKeyObjectRotationPolicyRotationPeriod2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateApiKeyObjectRateLimitType?), TypeInfoPropertyName = "NullableUpdateApiKeyObjectRateLimitType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateApiKeyObjectRateLimitUnit?), TypeInfoPropertyName = "NullableUpdateApiKeyObjectRateLimitUnit2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateApiKeyObjectRotationPolicyRotationPeriod?), TypeInfoPropertyName = "NullableUpdateApiKeyObjectRotationPolicyRotationPeriod2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateKeysType?), TypeInfoPropertyName = "NullableCreateKeysType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateKeysSubType?), TypeInfoPropertyName = "NullableCreateKeysSubType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateKeysResponseObject?), TypeInfoPropertyName = "NullableCreateKeysResponseObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.ApiKeyObjectRateLimit>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.ApiKeyObject>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.CreateApiKeyObjectRateLimit>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.UpdateApiKeyObjectRateLimit>))]
-    internal sealed partial class ApiKeysSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
-    {
-    }
-    /// <summary>
+{    /// <summary>
     ///
     /// </summary>
     public sealed partial class ApiKeysSourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
         private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = new LazyChunkResolver();
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        internal static global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver TypeInfoResolver => Resolver;
 
 
         private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
@@ -132,19 +49,7 @@ namespace Portkey
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>, global::System.Collections.Generic.IList<int>, global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>, global::System.Collections.Generic.IList<int>, global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, double?, bool?>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, double?, bool?>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.Dictionary<string, string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.UnixTimestampJsonConverter());
-            options.Converters.Add(new LazyEnumJsonConverterFactory());
+            global::Portkey.SourceGenerationContext.AddConverters(options);
         }
 
         private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
@@ -157,244 +62,6 @@ namespace Portkey
             AddConverters(options);
 
             return options;
-        }
-
-
-        private sealed class LazyEnumJsonConverterFactory : global::System.Text.Json.Serialization.JsonConverterFactory
-        {
-            public override bool CanConvert(global::System.Type typeToConvert)
-            {
-                return
-                    typeToConvert == typeof(global::Portkey.UsageLimitsType)
-
-                    || typeToConvert == typeof(global::Portkey.UsageLimitsType?)
-
-                    || typeToConvert == typeof(global::Portkey.UsageLimitsPeriodicReset)
-
-                    || typeToConvert == typeof(global::Portkey.UsageLimitsPeriodicReset?)
-
-                    || typeToConvert == typeof(global::Portkey.ApiKeyObjectType)
-
-                    || typeToConvert == typeof(global::Portkey.ApiKeyObjectType?)
-
-                    || typeToConvert == typeof(global::Portkey.ApiKeyObjectStatus)
-
-                    || typeToConvert == typeof(global::Portkey.ApiKeyObjectStatus?)
-
-                    || typeToConvert == typeof(global::Portkey.ApiKeyObjectCreationMode)
-
-                    || typeToConvert == typeof(global::Portkey.ApiKeyObjectCreationMode?)
-
-                    || typeToConvert == typeof(global::Portkey.ApiKeyObjectObject)
-
-                    || typeToConvert == typeof(global::Portkey.ApiKeyObjectObject?)
-
-                    || typeToConvert == typeof(global::Portkey.ApiKeyObjectListObject)
-
-                    || typeToConvert == typeof(global::Portkey.ApiKeyObjectListObject?)
-
-                    || typeToConvert == typeof(global::Portkey.CreateApiKeyObjectRateLimitType)
-
-                    || typeToConvert == typeof(global::Portkey.CreateApiKeyObjectRateLimitType?)
-
-                    || typeToConvert == typeof(global::Portkey.CreateApiKeyObjectRateLimitUnit)
-
-                    || typeToConvert == typeof(global::Portkey.CreateApiKeyObjectRateLimitUnit?)
-
-                    || typeToConvert == typeof(global::Portkey.CreateApiKeyObjectRotationPolicyRotationPeriod)
-
-                    || typeToConvert == typeof(global::Portkey.CreateApiKeyObjectRotationPolicyRotationPeriod?)
-
-                    || typeToConvert == typeof(global::Portkey.UpdateApiKeyObjectRateLimitType)
-
-                    || typeToConvert == typeof(global::Portkey.UpdateApiKeyObjectRateLimitType?)
-
-                    || typeToConvert == typeof(global::Portkey.UpdateApiKeyObjectRateLimitUnit)
-
-                    || typeToConvert == typeof(global::Portkey.UpdateApiKeyObjectRateLimitUnit?)
-
-                    || typeToConvert == typeof(global::Portkey.UpdateApiKeyObjectRotationPolicyRotationPeriod)
-
-                    || typeToConvert == typeof(global::Portkey.UpdateApiKeyObjectRotationPolicyRotationPeriod?)
-
-                    || typeToConvert == typeof(global::Portkey.CreateKeysType)
-
-                    || typeToConvert == typeof(global::Portkey.CreateKeysType?)
-
-                    || typeToConvert == typeof(global::Portkey.CreateKeysSubType)
-
-                    || typeToConvert == typeof(global::Portkey.CreateKeysSubType?)
-
-                    || typeToConvert == typeof(global::Portkey.CreateKeysResponseObject)
-
-                    || typeToConvert == typeof(global::Portkey.CreateKeysResponseObject?);
-            }
-
-            public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
-                global::System.Type typeToConvert,
-                global::System.Text.Json.JsonSerializerOptions options)
-            {
-                if (typeToConvert == typeof(global::Portkey.UsageLimitsType))
-                {
-                    return new global::Portkey.JsonConverters.UsageLimitsTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.UsageLimitsType?))
-                {
-                    return new global::Portkey.JsonConverters.UsageLimitsTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.UsageLimitsPeriodicReset))
-                {
-                    return new global::Portkey.JsonConverters.UsageLimitsPeriodicResetJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.UsageLimitsPeriodicReset?))
-                {
-                    return new global::Portkey.JsonConverters.UsageLimitsPeriodicResetNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.ApiKeyObjectType))
-                {
-                    return new global::Portkey.JsonConverters.ApiKeyObjectTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.ApiKeyObjectType?))
-                {
-                    return new global::Portkey.JsonConverters.ApiKeyObjectTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.ApiKeyObjectStatus))
-                {
-                    return new global::Portkey.JsonConverters.ApiKeyObjectStatusJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.ApiKeyObjectStatus?))
-                {
-                    return new global::Portkey.JsonConverters.ApiKeyObjectStatusNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.ApiKeyObjectCreationMode))
-                {
-                    return new global::Portkey.JsonConverters.ApiKeyObjectCreationModeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.ApiKeyObjectCreationMode?))
-                {
-                    return new global::Portkey.JsonConverters.ApiKeyObjectCreationModeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.ApiKeyObjectObject))
-                {
-                    return new global::Portkey.JsonConverters.ApiKeyObjectObjectJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.ApiKeyObjectObject?))
-                {
-                    return new global::Portkey.JsonConverters.ApiKeyObjectObjectNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.ApiKeyObjectListObject))
-                {
-                    return new global::Portkey.JsonConverters.ApiKeyObjectListObjectJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.ApiKeyObjectListObject?))
-                {
-                    return new global::Portkey.JsonConverters.ApiKeyObjectListObjectNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.CreateApiKeyObjectRateLimitType))
-                {
-                    return new global::Portkey.JsonConverters.CreateApiKeyObjectRateLimitTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.CreateApiKeyObjectRateLimitType?))
-                {
-                    return new global::Portkey.JsonConverters.CreateApiKeyObjectRateLimitTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.CreateApiKeyObjectRateLimitUnit))
-                {
-                    return new global::Portkey.JsonConverters.CreateApiKeyObjectRateLimitUnitJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.CreateApiKeyObjectRateLimitUnit?))
-                {
-                    return new global::Portkey.JsonConverters.CreateApiKeyObjectRateLimitUnitNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.CreateApiKeyObjectRotationPolicyRotationPeriod))
-                {
-                    return new global::Portkey.JsonConverters.CreateApiKeyObjectRotationPolicyRotationPeriodJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.CreateApiKeyObjectRotationPolicyRotationPeriod?))
-                {
-                    return new global::Portkey.JsonConverters.CreateApiKeyObjectRotationPolicyRotationPeriodNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.UpdateApiKeyObjectRateLimitType))
-                {
-                    return new global::Portkey.JsonConverters.UpdateApiKeyObjectRateLimitTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.UpdateApiKeyObjectRateLimitType?))
-                {
-                    return new global::Portkey.JsonConverters.UpdateApiKeyObjectRateLimitTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.UpdateApiKeyObjectRateLimitUnit))
-                {
-                    return new global::Portkey.JsonConverters.UpdateApiKeyObjectRateLimitUnitJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.UpdateApiKeyObjectRateLimitUnit?))
-                {
-                    return new global::Portkey.JsonConverters.UpdateApiKeyObjectRateLimitUnitNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.UpdateApiKeyObjectRotationPolicyRotationPeriod))
-                {
-                    return new global::Portkey.JsonConverters.UpdateApiKeyObjectRotationPolicyRotationPeriodJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.UpdateApiKeyObjectRotationPolicyRotationPeriod?))
-                {
-                    return new global::Portkey.JsonConverters.UpdateApiKeyObjectRotationPolicyRotationPeriodNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.CreateKeysType))
-                {
-                    return new global::Portkey.JsonConverters.CreateKeysTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.CreateKeysType?))
-                {
-                    return new global::Portkey.JsonConverters.CreateKeysTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.CreateKeysSubType))
-                {
-                    return new global::Portkey.JsonConverters.CreateKeysSubTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.CreateKeysSubType?))
-                {
-                    return new global::Portkey.JsonConverters.CreateKeysSubTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.CreateKeysResponseObject))
-                {
-                    return new global::Portkey.JsonConverters.CreateKeysResponseObjectJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.CreateKeysResponseObject?))
-                {
-                    return new global::Portkey.JsonConverters.CreateKeysResponseObjectNullableJsonConverter();
-                }
-                throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
-            }
         }
 
         private sealed class LazyChunkResolver : global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
@@ -436,7 +103,7 @@ namespace Portkey
             {
                 return index switch
                 {
-                    0 => new ApiKeysSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+                    0 => global::Portkey.SourceGenerationContext.TypeInfoResolver,
                     _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
                 };
             }

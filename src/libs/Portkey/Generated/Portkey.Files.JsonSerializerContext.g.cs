@@ -5,54 +5,15 @@
 #pragma warning disable CS3016 // Arrays as attribute arguments is not CLS-compliant
 
 namespace Portkey
-{
-    /// <summary>
-    ///
-    /// </summary>
-    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(long))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTimeOffset))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(byte[]))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListFilesResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.OpenAIFile>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OpenAIFile))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListFilesResponseObject), TypeInfoPropertyName = "ListFilesResponseObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateFileRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateFileRequestPurpose), TypeInfoPropertyName = "CreateFileRequestPurpose2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeleteFileResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeleteFileResponseObject), TypeInfoPropertyName = "DeleteFileResponseObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OpenAIFileObject), TypeInfoPropertyName = "OpenAIFileObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OpenAIFilePurpose), TypeInfoPropertyName = "OpenAIFilePurpose2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OpenAIFileStatus), TypeInfoPropertyName = "OpenAIFileStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(long?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTimeOffset?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListFilesResponseObject?), TypeInfoPropertyName = "NullableListFilesResponseObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateFileRequestPurpose?), TypeInfoPropertyName = "NullableCreateFileRequestPurpose2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeleteFileResponseObject?), TypeInfoPropertyName = "NullableDeleteFileResponseObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OpenAIFileObject?), TypeInfoPropertyName = "NullableOpenAIFileObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OpenAIFilePurpose?), TypeInfoPropertyName = "NullableOpenAIFilePurpose2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OpenAIFileStatus?), TypeInfoPropertyName = "NullableOpenAIFileStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OpenAIFile>))]
-    internal sealed partial class FilesSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
-    {
-    }
-    /// <summary>
+{    /// <summary>
     ///
     /// </summary>
     public sealed partial class FilesSourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
         private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = new LazyChunkResolver();
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        internal static global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver TypeInfoResolver => Resolver;
 
 
         private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
@@ -88,19 +49,7 @@ namespace Portkey
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>, global::System.Collections.Generic.IList<int>, global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>, global::System.Collections.Generic.IList<int>, global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, double?, bool?>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, double?, bool?>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.Dictionary<string, string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.UnixTimestampJsonConverter());
-            options.Converters.Add(new LazyEnumJsonConverterFactory());
+            global::Portkey.SourceGenerationContext.AddConverters(options);
         }
 
         private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
@@ -113,104 +62,6 @@ namespace Portkey
             AddConverters(options);
 
             return options;
-        }
-
-
-        private sealed class LazyEnumJsonConverterFactory : global::System.Text.Json.Serialization.JsonConverterFactory
-        {
-            public override bool CanConvert(global::System.Type typeToConvert)
-            {
-                return
-                    typeToConvert == typeof(global::Portkey.ListFilesResponseObject)
-
-                    || typeToConvert == typeof(global::Portkey.ListFilesResponseObject?)
-
-                    || typeToConvert == typeof(global::Portkey.CreateFileRequestPurpose)
-
-                    || typeToConvert == typeof(global::Portkey.CreateFileRequestPurpose?)
-
-                    || typeToConvert == typeof(global::Portkey.DeleteFileResponseObject)
-
-                    || typeToConvert == typeof(global::Portkey.DeleteFileResponseObject?)
-
-                    || typeToConvert == typeof(global::Portkey.OpenAIFileObject)
-
-                    || typeToConvert == typeof(global::Portkey.OpenAIFileObject?)
-
-                    || typeToConvert == typeof(global::Portkey.OpenAIFilePurpose)
-
-                    || typeToConvert == typeof(global::Portkey.OpenAIFilePurpose?)
-
-                    || typeToConvert == typeof(global::Portkey.OpenAIFileStatus)
-
-                    || typeToConvert == typeof(global::Portkey.OpenAIFileStatus?);
-            }
-
-            public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
-                global::System.Type typeToConvert,
-                global::System.Text.Json.JsonSerializerOptions options)
-            {
-                if (typeToConvert == typeof(global::Portkey.ListFilesResponseObject))
-                {
-                    return new global::Portkey.JsonConverters.ListFilesResponseObjectJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.ListFilesResponseObject?))
-                {
-                    return new global::Portkey.JsonConverters.ListFilesResponseObjectNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.CreateFileRequestPurpose))
-                {
-                    return new global::Portkey.JsonConverters.CreateFileRequestPurposeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.CreateFileRequestPurpose?))
-                {
-                    return new global::Portkey.JsonConverters.CreateFileRequestPurposeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.DeleteFileResponseObject))
-                {
-                    return new global::Portkey.JsonConverters.DeleteFileResponseObjectJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.DeleteFileResponseObject?))
-                {
-                    return new global::Portkey.JsonConverters.DeleteFileResponseObjectNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.OpenAIFileObject))
-                {
-                    return new global::Portkey.JsonConverters.OpenAIFileObjectJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.OpenAIFileObject?))
-                {
-                    return new global::Portkey.JsonConverters.OpenAIFileObjectNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.OpenAIFilePurpose))
-                {
-                    return new global::Portkey.JsonConverters.OpenAIFilePurposeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.OpenAIFilePurpose?))
-                {
-                    return new global::Portkey.JsonConverters.OpenAIFilePurposeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.OpenAIFileStatus))
-                {
-                    return new global::Portkey.JsonConverters.OpenAIFileStatusJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.OpenAIFileStatus?))
-                {
-                    return new global::Portkey.JsonConverters.OpenAIFileStatusNullableJsonConverter();
-                }
-                throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
-            }
         }
 
         private sealed class LazyChunkResolver : global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
@@ -252,7 +103,7 @@ namespace Portkey
             {
                 return index switch
                 {
-                    0 => new FilesSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+                    0 => global::Portkey.SourceGenerationContext.TypeInfoResolver,
                     _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
                 };
             }

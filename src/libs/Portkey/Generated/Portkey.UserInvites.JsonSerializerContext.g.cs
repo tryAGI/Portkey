@@ -5,63 +5,15 @@
 #pragma warning disable CS3016 // Arrays as attribute arguments is not CLS-compliant
 
 namespace Portkey
-{
-    /// <summary>
-    ///
-    /// </summary>
-    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateInvite))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.WorkspaceInvite>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.WorkspaceInvite))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.InviteRole), TypeInfoPropertyName = "InviteRole2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateInviteWorkspaceApiKeyDetails))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.WorkspaceInviteRole), TypeInfoPropertyName = "WorkspaceInviteRole2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.SuccessInvite))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.Invite))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.InviteRole2), TypeInfoPropertyName = "InviteRole22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.InviteStatus), TypeInfoPropertyName = "InviteStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.InviteList))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.InviteListObject), TypeInfoPropertyName = "InviteListObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.Invite>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetAdminUsersInvitesRole), TypeInfoPropertyName = "GetAdminUsersInvitesRole2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetAdminUsersInvitesStatus), TypeInfoPropertyName = "GetAdminUsersInvitesStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateAdminUsersInvitesResendResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.InviteRole?), TypeInfoPropertyName = "NullableInviteRole2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.WorkspaceInviteRole?), TypeInfoPropertyName = "NullableWorkspaceInviteRole2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.InviteRole2?), TypeInfoPropertyName = "NullableInviteRole22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.InviteStatus?), TypeInfoPropertyName = "NullableInviteStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.InviteListObject?), TypeInfoPropertyName = "NullableInviteListObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetAdminUsersInvitesRole?), TypeInfoPropertyName = "NullableGetAdminUsersInvitesRole2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.GetAdminUsersInvitesStatus?), TypeInfoPropertyName = "NullableGetAdminUsersInvitesStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.WorkspaceInvite>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.Invite>))]
-    internal sealed partial class UserInvitesSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
-    {
-    }
-    /// <summary>
+{    /// <summary>
     ///
     /// </summary>
     public sealed partial class UserInvitesSourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
         private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = new LazyChunkResolver();
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        internal static global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver TypeInfoResolver => Resolver;
 
 
         private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
@@ -97,19 +49,7 @@ namespace Portkey
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>, global::System.Collections.Generic.IList<int>, global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>, global::System.Collections.Generic.IList<int>, global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, double?, bool?>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, double?, bool?>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.Dictionary<string, string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.UnixTimestampJsonConverter());
-            options.Converters.Add(new LazyEnumJsonConverterFactory());
+            global::Portkey.SourceGenerationContext.AddConverters(options);
         }
 
         private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
@@ -122,118 +62,6 @@ namespace Portkey
             AddConverters(options);
 
             return options;
-        }
-
-
-        private sealed class LazyEnumJsonConverterFactory : global::System.Text.Json.Serialization.JsonConverterFactory
-        {
-            public override bool CanConvert(global::System.Type typeToConvert)
-            {
-                return
-                    typeToConvert == typeof(global::Portkey.InviteRole)
-
-                    || typeToConvert == typeof(global::Portkey.InviteRole?)
-
-                    || typeToConvert == typeof(global::Portkey.WorkspaceInviteRole)
-
-                    || typeToConvert == typeof(global::Portkey.WorkspaceInviteRole?)
-
-                    || typeToConvert == typeof(global::Portkey.InviteRole2)
-
-                    || typeToConvert == typeof(global::Portkey.InviteRole2?)
-
-                    || typeToConvert == typeof(global::Portkey.InviteStatus)
-
-                    || typeToConvert == typeof(global::Portkey.InviteStatus?)
-
-                    || typeToConvert == typeof(global::Portkey.InviteListObject)
-
-                    || typeToConvert == typeof(global::Portkey.InviteListObject?)
-
-                    || typeToConvert == typeof(global::Portkey.GetAdminUsersInvitesRole)
-
-                    || typeToConvert == typeof(global::Portkey.GetAdminUsersInvitesRole?)
-
-                    || typeToConvert == typeof(global::Portkey.GetAdminUsersInvitesStatus)
-
-                    || typeToConvert == typeof(global::Portkey.GetAdminUsersInvitesStatus?);
-            }
-
-            public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
-                global::System.Type typeToConvert,
-                global::System.Text.Json.JsonSerializerOptions options)
-            {
-                if (typeToConvert == typeof(global::Portkey.InviteRole))
-                {
-                    return new global::Portkey.JsonConverters.InviteRoleJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.InviteRole?))
-                {
-                    return new global::Portkey.JsonConverters.InviteRoleNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.WorkspaceInviteRole))
-                {
-                    return new global::Portkey.JsonConverters.WorkspaceInviteRoleJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.WorkspaceInviteRole?))
-                {
-                    return new global::Portkey.JsonConverters.WorkspaceInviteRoleNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.InviteRole2))
-                {
-                    return new global::Portkey.JsonConverters.InviteRole2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.InviteRole2?))
-                {
-                    return new global::Portkey.JsonConverters.InviteRole2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.InviteStatus))
-                {
-                    return new global::Portkey.JsonConverters.InviteStatusJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.InviteStatus?))
-                {
-                    return new global::Portkey.JsonConverters.InviteStatusNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.InviteListObject))
-                {
-                    return new global::Portkey.JsonConverters.InviteListObjectJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.InviteListObject?))
-                {
-                    return new global::Portkey.JsonConverters.InviteListObjectNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.GetAdminUsersInvitesRole))
-                {
-                    return new global::Portkey.JsonConverters.GetAdminUsersInvitesRoleJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.GetAdminUsersInvitesRole?))
-                {
-                    return new global::Portkey.JsonConverters.GetAdminUsersInvitesRoleNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.GetAdminUsersInvitesStatus))
-                {
-                    return new global::Portkey.JsonConverters.GetAdminUsersInvitesStatusJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.GetAdminUsersInvitesStatus?))
-                {
-                    return new global::Portkey.JsonConverters.GetAdminUsersInvitesStatusNullableJsonConverter();
-                }
-                throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
-            }
         }
 
         private sealed class LazyChunkResolver : global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
@@ -275,7 +103,7 @@ namespace Portkey
             {
                 return index switch
                 {
-                    0 => new UserInvitesSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+                    0 => global::Portkey.SourceGenerationContext.TypeInfoResolver,
                     _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
                 };
             }
