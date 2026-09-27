@@ -5,58 +5,15 @@
 #pragma warning disable CS3016 // Arrays as attribute arguments is not CLS-compliant
 
 namespace Portkey
-{
-    /// <summary>
-    ///
-    /// </summary>
-    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PromptPartialSummary))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PromptPartialSummaryStatus), TypeInfoPropertyName = "PromptPartialSummaryStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PromptPartialSummaryObject), TypeInfoPropertyName = "PromptPartialSummaryObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PromptPartial))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PromptPartialStatus), TypeInfoPropertyName = "PromptPartialStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PromptPartialVersion))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PromptPartialVersionPromptVersionStatus), TypeInfoPropertyName = "PromptPartialVersionPromptVersionStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PromptPartialVersionObject), TypeInfoPropertyName = "PromptPartialVersionObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreatePromptPartialRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdatePromptPartialRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdatePromptPartialDefaultRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreatePromptPartialResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.PromptPartialSummary>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdatePromptPartialResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.PromptPartialVersion>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PromptPartialSummaryStatus?), TypeInfoPropertyName = "NullablePromptPartialSummaryStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PromptPartialSummaryObject?), TypeInfoPropertyName = "NullablePromptPartialSummaryObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PromptPartialStatus?), TypeInfoPropertyName = "NullablePromptPartialStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PromptPartialVersionPromptVersionStatus?), TypeInfoPropertyName = "NullablePromptPartialVersionPromptVersionStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PromptPartialVersionObject?), TypeInfoPropertyName = "NullablePromptPartialVersionObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.PromptPartialSummary>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.PromptPartialVersion>))]
-    internal sealed partial class PromptPartialsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
-    {
-    }
-    /// <summary>
+{    /// <summary>
     ///
     /// </summary>
     public sealed partial class PromptPartialsSourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
         private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = new LazyChunkResolver();
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        internal static global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver TypeInfoResolver => Resolver;
 
 
         private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
@@ -92,19 +49,7 @@ namespace Portkey
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>, global::System.Collections.Generic.IList<int>, global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>, global::System.Collections.Generic.IList<int>, global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, double?, bool?>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, double?, bool?>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.Dictionary<string, string>>());
-            options.Converters.Add(new global::Portkey.JsonConverters.UnixTimestampJsonConverter());
-            options.Converters.Add(new LazyEnumJsonConverterFactory());
+            global::Portkey.SourceGenerationContext.AddConverters(options);
         }
 
         private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
@@ -117,90 +62,6 @@ namespace Portkey
             AddConverters(options);
 
             return options;
-        }
-
-
-        private sealed class LazyEnumJsonConverterFactory : global::System.Text.Json.Serialization.JsonConverterFactory
-        {
-            public override bool CanConvert(global::System.Type typeToConvert)
-            {
-                return
-                    typeToConvert == typeof(global::Portkey.PromptPartialSummaryStatus)
-
-                    || typeToConvert == typeof(global::Portkey.PromptPartialSummaryStatus?)
-
-                    || typeToConvert == typeof(global::Portkey.PromptPartialSummaryObject)
-
-                    || typeToConvert == typeof(global::Portkey.PromptPartialSummaryObject?)
-
-                    || typeToConvert == typeof(global::Portkey.PromptPartialStatus)
-
-                    || typeToConvert == typeof(global::Portkey.PromptPartialStatus?)
-
-                    || typeToConvert == typeof(global::Portkey.PromptPartialVersionPromptVersionStatus)
-
-                    || typeToConvert == typeof(global::Portkey.PromptPartialVersionPromptVersionStatus?)
-
-                    || typeToConvert == typeof(global::Portkey.PromptPartialVersionObject)
-
-                    || typeToConvert == typeof(global::Portkey.PromptPartialVersionObject?);
-            }
-
-            public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
-                global::System.Type typeToConvert,
-                global::System.Text.Json.JsonSerializerOptions options)
-            {
-                if (typeToConvert == typeof(global::Portkey.PromptPartialSummaryStatus))
-                {
-                    return new global::Portkey.JsonConverters.PromptPartialSummaryStatusJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.PromptPartialSummaryStatus?))
-                {
-                    return new global::Portkey.JsonConverters.PromptPartialSummaryStatusNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.PromptPartialSummaryObject))
-                {
-                    return new global::Portkey.JsonConverters.PromptPartialSummaryObjectJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.PromptPartialSummaryObject?))
-                {
-                    return new global::Portkey.JsonConverters.PromptPartialSummaryObjectNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.PromptPartialStatus))
-                {
-                    return new global::Portkey.JsonConverters.PromptPartialStatusJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.PromptPartialStatus?))
-                {
-                    return new global::Portkey.JsonConverters.PromptPartialStatusNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.PromptPartialVersionPromptVersionStatus))
-                {
-                    return new global::Portkey.JsonConverters.PromptPartialVersionPromptVersionStatusJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.PromptPartialVersionPromptVersionStatus?))
-                {
-                    return new global::Portkey.JsonConverters.PromptPartialVersionPromptVersionStatusNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.PromptPartialVersionObject))
-                {
-                    return new global::Portkey.JsonConverters.PromptPartialVersionObjectJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Portkey.PromptPartialVersionObject?))
-                {
-                    return new global::Portkey.JsonConverters.PromptPartialVersionObjectNullableJsonConverter();
-                }
-                throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
-            }
         }
 
         private sealed class LazyChunkResolver : global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
@@ -242,7 +103,7 @@ namespace Portkey
             {
                 return index switch
                 {
-                    0 => new PromptPartialsSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+                    0 => global::Portkey.SourceGenerationContext.TypeInfoResolver,
                     _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
                 };
             }
