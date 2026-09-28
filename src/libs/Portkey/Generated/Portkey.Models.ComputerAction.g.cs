@@ -42,8 +42,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.Click PickClick() => IsClick
-            ? Click!
+        public global::Portkey.Click PickClick() => Click is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Click' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.DoubleClick PickDoubleClick() => IsDoubleClick
-            ? DoubleClick!
+        public global::Portkey.DoubleClick PickDoubleClick() => DoubleClick is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'DoubleClick' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.Drag PickDrag() => IsDrag
-            ? Drag!
+        public global::Portkey.Drag PickDrag() => Drag is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Drag' but the value was {ToString()}.");
 
         /// <summary>
@@ -153,8 +153,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.KeyPress PickKeyPress() => IsKeyPress
-            ? KeyPress!
+        public global::Portkey.KeyPress PickKeyPress() => KeyPress is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'KeyPress' but the value was {ToString()}.");
 
         /// <summary>
@@ -190,8 +190,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.Move PickMove() => IsMove
-            ? Move!
+        public global::Portkey.Move PickMove() => Move is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Move' but the value was {ToString()}.");
 
         /// <summary>
@@ -227,8 +227,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.Screenshot PickScreenshot() => IsScreenshot
-            ? Screenshot!
+        public global::Portkey.Screenshot PickScreenshot() => Screenshot is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Screenshot' but the value was {ToString()}.");
 
         /// <summary>
@@ -264,8 +264,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.Scroll PickScroll() => IsScroll
-            ? Scroll!
+        public global::Portkey.Scroll PickScroll() => Scroll is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Scroll' but the value was {ToString()}.");
 
         /// <summary>
@@ -301,8 +301,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.Type PickType() => IsType
-            ? Type!
+        public global::Portkey.Type PickType() => Type is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Type' but the value was {ToString()}.");
 
         /// <summary>
@@ -338,8 +338,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.Wait PickWait() => IsWait
-            ? Wait!
+        public global::Portkey.Wait PickWait() => Wait is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Wait' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -632,41 +632,41 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsClick && click != null)
+            if (Click is { } __value0 && click != null)
             {
-                return click(Click!);
+                return click(__value0);
             }
-            else if (IsDoubleClick && doubleClick != null)
+            else if (DoubleClick is { } __value1 && doubleClick != null)
             {
-                return doubleClick(DoubleClick!);
+                return doubleClick(__value1);
             }
-            else if (IsDrag && drag != null)
+            else if (Drag is { } __value2 && drag != null)
             {
-                return drag(Drag!);
+                return drag(__value2);
             }
-            else if (IsKeyPress && keyPress != null)
+            else if (KeyPress is { } __value3 && keyPress != null)
             {
-                return keyPress(KeyPress!);
+                return keyPress(__value3);
             }
-            else if (IsMove && move != null)
+            else if (Move is { } __value4 && move != null)
             {
-                return move(Move!);
+                return move(__value4);
             }
-            else if (IsScreenshot && screenshot != null)
+            else if (Screenshot is { } __value5 && screenshot != null)
             {
-                return screenshot(Screenshot!);
+                return screenshot(__value5);
             }
-            else if (IsScroll && scroll != null)
+            else if (Scroll is { } __value6 && scroll != null)
             {
-                return scroll(Scroll!);
+                return scroll(__value6);
             }
-            else if (IsType && type != null)
+            else if (Type is { } __value7 && type != null)
             {
-                return type(Type!);
+                return type(__value7);
             }
-            else if (IsWait && wait != null)
+            else if (Wait is { } __value8 && wait != null)
             {
-                return wait(Wait!);
+                return wait(__value8);
             }
 
             return default(TResult);
@@ -700,41 +700,41 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsClick)
+            if (Click is { } __value0)
             {
-                click?.Invoke(Click!);
+                click?.Invoke(__value0);
             }
-            else if (IsDoubleClick)
+            else if (DoubleClick is { } __value1)
             {
-                doubleClick?.Invoke(DoubleClick!);
+                doubleClick?.Invoke(__value1);
             }
-            else if (IsDrag)
+            else if (Drag is { } __value2)
             {
-                drag?.Invoke(Drag!);
+                drag?.Invoke(__value2);
             }
-            else if (IsKeyPress)
+            else if (KeyPress is { } __value3)
             {
-                keyPress?.Invoke(KeyPress!);
+                keyPress?.Invoke(__value3);
             }
-            else if (IsMove)
+            else if (Move is { } __value4)
             {
-                move?.Invoke(Move!);
+                move?.Invoke(__value4);
             }
-            else if (IsScreenshot)
+            else if (Screenshot is { } __value5)
             {
-                screenshot?.Invoke(Screenshot!);
+                screenshot?.Invoke(__value5);
             }
-            else if (IsScroll)
+            else if (Scroll is { } __value6)
             {
-                scroll?.Invoke(Scroll!);
+                scroll?.Invoke(__value6);
             }
-            else if (IsType)
+            else if (Type is { } __value7)
             {
-                type?.Invoke(Type!);
+                type?.Invoke(__value7);
             }
-            else if (IsWait)
+            else if (Wait is { } __value8)
             {
-                wait?.Invoke(Wait!);
+                wait?.Invoke(__value8);
             }
         }
 
@@ -758,41 +758,41 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsClick)
+            if (Click is { } __value0)
             {
-                click?.Invoke(Click!);
+                click?.Invoke(__value0);
             }
-            else if (IsDoubleClick)
+            else if (DoubleClick is { } __value1)
             {
-                doubleClick?.Invoke(DoubleClick!);
+                doubleClick?.Invoke(__value1);
             }
-            else if (IsDrag)
+            else if (Drag is { } __value2)
             {
-                drag?.Invoke(Drag!);
+                drag?.Invoke(__value2);
             }
-            else if (IsKeyPress)
+            else if (KeyPress is { } __value3)
             {
-                keyPress?.Invoke(KeyPress!);
+                keyPress?.Invoke(__value3);
             }
-            else if (IsMove)
+            else if (Move is { } __value4)
             {
-                move?.Invoke(Move!);
+                move?.Invoke(__value4);
             }
-            else if (IsScreenshot)
+            else if (Screenshot is { } __value5)
             {
-                screenshot?.Invoke(Screenshot!);
+                screenshot?.Invoke(__value5);
             }
-            else if (IsScroll)
+            else if (Scroll is { } __value6)
             {
-                scroll?.Invoke(Scroll!);
+                scroll?.Invoke(__value6);
             }
-            else if (IsType)
+            else if (Type is { } __value7)
             {
-                type?.Invoke(Type!);
+                type?.Invoke(__value7);
             }
-            else if (IsWait)
+            else if (Wait is { } __value8)
             {
-                wait?.Invoke(Wait!);
+                wait?.Invoke(__value8);
             }
         }
 

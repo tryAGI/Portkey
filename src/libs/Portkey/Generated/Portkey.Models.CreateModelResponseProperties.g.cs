@@ -42,8 +42,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ModelResponseProperties PickModelResponseProperties() => IsModelResponseProperties
-            ? ModelResponseProperties!
+        public global::Portkey.ModelResponseProperties PickModelResponseProperties() => ModelResponseProperties is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ModelResponseProperties' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -102,9 +102,9 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsModelResponseProperties && modelResponseProperties != null)
+            if (ModelResponseProperties is { } __value0 && modelResponseProperties != null)
             {
-                return modelResponseProperties(ModelResponseProperties!);
+                return modelResponseProperties(__value0);
             }
 
             return default(TResult);
@@ -122,9 +122,9 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsModelResponseProperties)
+            if (ModelResponseProperties is { } __value0)
             {
-                modelResponseProperties?.Invoke(ModelResponseProperties!);
+                modelResponseProperties?.Invoke(__value0);
             }
         }
 
@@ -140,9 +140,9 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsModelResponseProperties)
+            if (ModelResponseProperties is { } __value0)
             {
-                modelResponseProperties?.Invoke(ModelResponseProperties!);
+                modelResponseProperties?.Invoke(__value0);
             }
         }
 

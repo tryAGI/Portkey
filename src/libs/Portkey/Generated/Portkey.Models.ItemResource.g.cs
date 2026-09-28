@@ -42,8 +42,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.InputMessageResource PickInputMessage() => IsInputMessage
-            ? InputMessage!.Value
+        public global::Portkey.InputMessageResource PickInputMessage() => InputMessage is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'InputMessage' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.OutputMessage PickMessage() => IsMessage
-            ? Message!
+        public global::Portkey.OutputMessage PickMessage() => Message is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Message' but the value was {ToString()}.");
 
         /// <summary>
@@ -117,8 +117,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.FileSearchToolCall PickFileSearchCall() => IsFileSearchCall
-            ? FileSearchCall!
+        public global::Portkey.FileSearchToolCall PickFileSearchCall() => FileSearchCall is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'FileSearchCall' but the value was {ToString()}.");
 
         /// <summary>
@@ -155,8 +155,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ComputerToolCall PickComputerCall() => IsComputerCall
-            ? ComputerCall!
+        public global::Portkey.ComputerToolCall PickComputerCall() => ComputerCall is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ComputerCall' but the value was {ToString()}.");
 
         /// <summary>
@@ -192,8 +192,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ComputerToolCallOutputResource PickComputerToolCallOutput() => IsComputerToolCallOutput
-            ? ComputerToolCallOutput!.Value
+        public global::Portkey.ComputerToolCallOutputResource PickComputerToolCallOutput() => ComputerToolCallOutput is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ComputerToolCallOutput' but the value was {ToString()}.");
 
         /// <summary>
@@ -230,8 +230,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.WebSearchToolCall PickWebSearchCall() => IsWebSearchCall
-            ? WebSearchCall!
+        public global::Portkey.WebSearchToolCall PickWebSearchCall() => WebSearchCall is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'WebSearchCall' but the value was {ToString()}.");
 
         /// <summary>
@@ -267,8 +267,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.FunctionToolCallResource PickFunctionToolCall() => IsFunctionToolCall
-            ? FunctionToolCall!.Value
+        public global::Portkey.FunctionToolCallResource PickFunctionToolCall() => FunctionToolCall is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionToolCall' but the value was {ToString()}.");
 
         /// <summary>
@@ -304,8 +304,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.FunctionToolCallOutputResource PickFunctionToolCallOutput() => IsFunctionToolCallOutput
-            ? FunctionToolCallOutput!.Value
+        public global::Portkey.FunctionToolCallOutputResource PickFunctionToolCallOutput() => FunctionToolCallOutput is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionToolCallOutput' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -570,37 +570,37 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsInputMessage && inputMessage != null)
+            if (InputMessage is { } __value0 && inputMessage != null)
             {
-                return inputMessage(InputMessage!);
+                return inputMessage(__value0);
             }
-            else if (IsMessage && message != null)
+            else if (Message is { } __value1 && message != null)
             {
-                return message(Message!);
+                return message(__value1);
             }
-            else if (IsFileSearchCall && fileSearchCall != null)
+            else if (FileSearchCall is { } __value2 && fileSearchCall != null)
             {
-                return fileSearchCall(FileSearchCall!);
+                return fileSearchCall(__value2);
             }
-            else if (IsComputerCall && computerCall != null)
+            else if (ComputerCall is { } __value3 && computerCall != null)
             {
-                return computerCall(ComputerCall!);
+                return computerCall(__value3);
             }
-            else if (IsComputerToolCallOutput && computerToolCallOutput != null)
+            else if (ComputerToolCallOutput is { } __value4 && computerToolCallOutput != null)
             {
-                return computerToolCallOutput(ComputerToolCallOutput!);
+                return computerToolCallOutput(__value4);
             }
-            else if (IsWebSearchCall && webSearchCall != null)
+            else if (WebSearchCall is { } __value5 && webSearchCall != null)
             {
-                return webSearchCall(WebSearchCall!);
+                return webSearchCall(__value5);
             }
-            else if (IsFunctionToolCall && functionToolCall != null)
+            else if (FunctionToolCall is { } __value6 && functionToolCall != null)
             {
-                return functionToolCall(FunctionToolCall!);
+                return functionToolCall(__value6);
             }
-            else if (IsFunctionToolCallOutput && functionToolCallOutput != null)
+            else if (FunctionToolCallOutput is { } __value7 && functionToolCallOutput != null)
             {
-                return functionToolCallOutput(FunctionToolCallOutput!);
+                return functionToolCallOutput(__value7);
             }
 
             return default(TResult);
@@ -632,37 +632,37 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsInputMessage)
+            if (InputMessage is { } __value0)
             {
-                inputMessage?.Invoke(InputMessage!);
+                inputMessage?.Invoke(__value0);
             }
-            else if (IsMessage)
+            else if (Message is { } __value1)
             {
-                message?.Invoke(Message!);
+                message?.Invoke(__value1);
             }
-            else if (IsFileSearchCall)
+            else if (FileSearchCall is { } __value2)
             {
-                fileSearchCall?.Invoke(FileSearchCall!);
+                fileSearchCall?.Invoke(__value2);
             }
-            else if (IsComputerCall)
+            else if (ComputerCall is { } __value3)
             {
-                computerCall?.Invoke(ComputerCall!);
+                computerCall?.Invoke(__value3);
             }
-            else if (IsComputerToolCallOutput)
+            else if (ComputerToolCallOutput is { } __value4)
             {
-                computerToolCallOutput?.Invoke(ComputerToolCallOutput!);
+                computerToolCallOutput?.Invoke(__value4);
             }
-            else if (IsWebSearchCall)
+            else if (WebSearchCall is { } __value5)
             {
-                webSearchCall?.Invoke(WebSearchCall!);
+                webSearchCall?.Invoke(__value5);
             }
-            else if (IsFunctionToolCall)
+            else if (FunctionToolCall is { } __value6)
             {
-                functionToolCall?.Invoke(FunctionToolCall!);
+                functionToolCall?.Invoke(__value6);
             }
-            else if (IsFunctionToolCallOutput)
+            else if (FunctionToolCallOutput is { } __value7)
             {
-                functionToolCallOutput?.Invoke(FunctionToolCallOutput!);
+                functionToolCallOutput?.Invoke(__value7);
             }
         }
 
@@ -685,37 +685,37 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsInputMessage)
+            if (InputMessage is { } __value0)
             {
-                inputMessage?.Invoke(InputMessage!);
+                inputMessage?.Invoke(__value0);
             }
-            else if (IsMessage)
+            else if (Message is { } __value1)
             {
-                message?.Invoke(Message!);
+                message?.Invoke(__value1);
             }
-            else if (IsFileSearchCall)
+            else if (FileSearchCall is { } __value2)
             {
-                fileSearchCall?.Invoke(FileSearchCall!);
+                fileSearchCall?.Invoke(__value2);
             }
-            else if (IsComputerCall)
+            else if (ComputerCall is { } __value3)
             {
-                computerCall?.Invoke(ComputerCall!);
+                computerCall?.Invoke(__value3);
             }
-            else if (IsComputerToolCallOutput)
+            else if (ComputerToolCallOutput is { } __value4)
             {
-                computerToolCallOutput?.Invoke(ComputerToolCallOutput!);
+                computerToolCallOutput?.Invoke(__value4);
             }
-            else if (IsWebSearchCall)
+            else if (WebSearchCall is { } __value5)
             {
-                webSearchCall?.Invoke(WebSearchCall!);
+                webSearchCall?.Invoke(__value5);
             }
-            else if (IsFunctionToolCall)
+            else if (FunctionToolCall is { } __value6)
             {
-                functionToolCall?.Invoke(FunctionToolCall!);
+                functionToolCall?.Invoke(__value6);
             }
-            else if (IsFunctionToolCallOutput)
+            else if (FunctionToolCallOutput is { } __value7)
             {
-                functionToolCallOutput?.Invoke(FunctionToolCallOutput!);
+                functionToolCallOutput?.Invoke(__value7);
             }
         }
 

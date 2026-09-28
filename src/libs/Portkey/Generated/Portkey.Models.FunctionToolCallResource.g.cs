@@ -43,8 +43,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.FunctionToolCall PickFunctionToolCall() => IsFunctionToolCall
-            ? FunctionToolCall!
+        public global::Portkey.FunctionToolCall PickFunctionToolCall() => FunctionToolCall is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionToolCall' but the value was {ToString()}.");
 
         /// <summary>
@@ -80,8 +80,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.FunctionToolCallResourceVariant2 PickFunctionToolCallResourceVariant2() => IsFunctionToolCallResourceVariant2
-            ? FunctionToolCallResourceVariant2!
+        public global::Portkey.FunctionToolCallResourceVariant2 PickFunctionToolCallResourceVariant2() => FunctionToolCallResourceVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionToolCallResourceVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -178,13 +178,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsFunctionToolCall && functionToolCall != null)
+            if (FunctionToolCall is { } __value0 && functionToolCall != null)
             {
-                return functionToolCall(FunctionToolCall!);
+                return functionToolCall(__value0);
             }
-            else if (IsFunctionToolCallResourceVariant2 && functionToolCallResourceVariant2 != null)
+            else if (FunctionToolCallResourceVariant2 is { } __value1 && functionToolCallResourceVariant2 != null)
             {
-                return functionToolCallResourceVariant2(FunctionToolCallResourceVariant2!);
+                return functionToolCallResourceVariant2(__value1);
             }
 
             return default(TResult);
@@ -204,13 +204,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsFunctionToolCall)
+            if (FunctionToolCall is { } __value0)
             {
-                functionToolCall?.Invoke(FunctionToolCall!);
+                functionToolCall?.Invoke(__value0);
             }
-            else if (IsFunctionToolCallResourceVariant2)
+            else if (FunctionToolCallResourceVariant2 is { } __value1)
             {
-                functionToolCallResourceVariant2?.Invoke(FunctionToolCallResourceVariant2!);
+                functionToolCallResourceVariant2?.Invoke(__value1);
             }
         }
 
@@ -227,13 +227,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsFunctionToolCall)
+            if (FunctionToolCall is { } __value0)
             {
-                functionToolCall?.Invoke(FunctionToolCall!);
+                functionToolCall?.Invoke(__value0);
             }
-            else if (IsFunctionToolCallResourceVariant2)
+            else if (FunctionToolCallResourceVariant2 is { } __value1)
             {
-                functionToolCallResourceVariant2?.Invoke(FunctionToolCallResourceVariant2!);
+                functionToolCallResourceVariant2?.Invoke(__value1);
             }
         }
 

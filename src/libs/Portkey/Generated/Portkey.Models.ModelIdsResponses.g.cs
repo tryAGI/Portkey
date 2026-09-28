@@ -42,8 +42,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ModelIdsResponsesEnum PickEnum() => IsEnum
-            ? Enum!.Value
+        public global::Portkey.ModelIdsResponsesEnum PickEnum() => Enum is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Enum' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -102,9 +102,9 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsEnum && @enum != null)
+            if (Enum is { } __value0 && @enum != null)
             {
-                return @enum(Enum!);
+                return @enum(__value0);
             }
 
             return default(TResult);
@@ -122,9 +122,9 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsEnum)
+            if (Enum is { } __value0)
             {
-                @enum?.Invoke(Enum!);
+                @enum?.Invoke(__value0);
             }
         }
 
@@ -140,9 +140,9 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsEnum)
+            if (Enum is { } __value0)
             {
-                @enum?.Invoke(Enum!);
+                @enum?.Invoke(__value0);
             }
         }
 

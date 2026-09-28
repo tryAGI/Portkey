@@ -42,8 +42,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.Collection PickCollection() => IsCollection
-            ? Collection!
+        public global::Portkey.Collection PickCollection() => Collection is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Collection' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CollectionWithChildCollectionsVariant2 PickCollectionWithChildCollectionsVariant2() => IsCollectionWithChildCollectionsVariant2
-            ? CollectionWithChildCollectionsVariant2!
+        public global::Portkey.CollectionWithChildCollectionsVariant2 PickCollectionWithChildCollectionsVariant2() => CollectionWithChildCollectionsVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CollectionWithChildCollectionsVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsCollection && collection != null)
+            if (Collection is { } __value0 && collection != null)
             {
-                return collection(Collection!);
+                return collection(__value0);
             }
-            else if (IsCollectionWithChildCollectionsVariant2 && collectionWithChildCollectionsVariant2 != null)
+            else if (CollectionWithChildCollectionsVariant2 is { } __value1 && collectionWithChildCollectionsVariant2 != null)
             {
-                return collectionWithChildCollectionsVariant2(CollectionWithChildCollectionsVariant2!);
+                return collectionWithChildCollectionsVariant2(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsCollection)
+            if (Collection is { } __value0)
             {
-                collection?.Invoke(Collection!);
+                collection?.Invoke(__value0);
             }
-            else if (IsCollectionWithChildCollectionsVariant2)
+            else if (CollectionWithChildCollectionsVariant2 is { } __value1)
             {
-                collectionWithChildCollectionsVariant2?.Invoke(CollectionWithChildCollectionsVariant2!);
+                collectionWithChildCollectionsVariant2?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsCollection)
+            if (Collection is { } __value0)
             {
-                collection?.Invoke(Collection!);
+                collection?.Invoke(__value0);
             }
-            else if (IsCollectionWithChildCollectionsVariant2)
+            else if (CollectionWithChildCollectionsVariant2 is { } __value1)
             {
-                collectionWithChildCollectionsVariant2?.Invoke(CollectionWithChildCollectionsVariant2!);
+                collectionWithChildCollectionsVariant2?.Invoke(__value1);
             }
         }
 

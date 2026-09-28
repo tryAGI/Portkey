@@ -42,8 +42,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ComputerToolCallOutput PickComputerToolCallOutput() => IsComputerToolCallOutput
-            ? ComputerToolCallOutput!
+        public global::Portkey.ComputerToolCallOutput PickComputerToolCallOutput() => ComputerToolCallOutput is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ComputerToolCallOutput' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ComputerToolCallOutputResourceVariant2 PickComputerToolCallOutputResourceVariant2() => IsComputerToolCallOutputResourceVariant2
-            ? ComputerToolCallOutputResourceVariant2!
+        public global::Portkey.ComputerToolCallOutputResourceVariant2 PickComputerToolCallOutputResourceVariant2() => ComputerToolCallOutputResourceVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ComputerToolCallOutputResourceVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsComputerToolCallOutput && computerToolCallOutput != null)
+            if (ComputerToolCallOutput is { } __value0 && computerToolCallOutput != null)
             {
-                return computerToolCallOutput(ComputerToolCallOutput!);
+                return computerToolCallOutput(__value0);
             }
-            else if (IsComputerToolCallOutputResourceVariant2 && computerToolCallOutputResourceVariant2 != null)
+            else if (ComputerToolCallOutputResourceVariant2 is { } __value1 && computerToolCallOutputResourceVariant2 != null)
             {
-                return computerToolCallOutputResourceVariant2(ComputerToolCallOutputResourceVariant2!);
+                return computerToolCallOutputResourceVariant2(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsComputerToolCallOutput)
+            if (ComputerToolCallOutput is { } __value0)
             {
-                computerToolCallOutput?.Invoke(ComputerToolCallOutput!);
+                computerToolCallOutput?.Invoke(__value0);
             }
-            else if (IsComputerToolCallOutputResourceVariant2)
+            else if (ComputerToolCallOutputResourceVariant2 is { } __value1)
             {
-                computerToolCallOutputResourceVariant2?.Invoke(ComputerToolCallOutputResourceVariant2!);
+                computerToolCallOutputResourceVariant2?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsComputerToolCallOutput)
+            if (ComputerToolCallOutput is { } __value0)
             {
-                computerToolCallOutput?.Invoke(ComputerToolCallOutput!);
+                computerToolCallOutput?.Invoke(__value0);
             }
-            else if (IsComputerToolCallOutputResourceVariant2)
+            else if (ComputerToolCallOutputResourceVariant2 is { } __value1)
             {
-                computerToolCallOutputResourceVariant2?.Invoke(ComputerToolCallOutputResourceVariant2!);
+                computerToolCallOutputResourceVariant2?.Invoke(__value1);
             }
         }
 

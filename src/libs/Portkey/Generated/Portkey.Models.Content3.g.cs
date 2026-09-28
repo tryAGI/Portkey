@@ -42,8 +42,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.InputContent PickInputContent() => IsInputContent
-            ? InputContent!.Value
+        public global::Portkey.InputContent PickInputContent() => InputContent is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'InputContent' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.OutputContent PickOutputContent() => IsOutputContent
-            ? OutputContent!.Value
+        public global::Portkey.OutputContent PickOutputContent() => OutputContent is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'OutputContent' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsInputContent && inputContent != null)
+            if (InputContent is { } __value0 && inputContent != null)
             {
-                return inputContent(InputContent!);
+                return inputContent(__value0);
             }
-            else if (IsOutputContent && outputContent != null)
+            else if (OutputContent is { } __value1 && outputContent != null)
             {
-                return outputContent(OutputContent!);
+                return outputContent(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsInputContent)
+            if (InputContent is { } __value0)
             {
-                inputContent?.Invoke(InputContent!);
+                inputContent?.Invoke(__value0);
             }
-            else if (IsOutputContent)
+            else if (OutputContent is { } __value1)
             {
-                outputContent?.Invoke(OutputContent!);
+                outputContent?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsInputContent)
+            if (InputContent is { } __value0)
             {
-                inputContent?.Invoke(InputContent!);
+                inputContent?.Invoke(__value0);
             }
-            else if (IsOutputContent)
+            else if (OutputContent is { } __value1)
             {
-                outputContent?.Invoke(OutputContent!);
+                outputContent?.Invoke(__value1);
             }
         }
 

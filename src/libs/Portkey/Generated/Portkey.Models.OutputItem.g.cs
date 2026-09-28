@@ -47,8 +47,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.OutputMessage PickMessage() => IsMessage
-            ? Message!
+        public global::Portkey.OutputMessage PickMessage() => Message is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Message' but the value was {ToString()}.");
 
         /// <summary>
@@ -85,8 +85,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.FileSearchToolCall PickFileSearchCall() => IsFileSearchCall
-            ? FileSearchCall!
+        public global::Portkey.FileSearchToolCall PickFileSearchCall() => FileSearchCall is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'FileSearchCall' but the value was {ToString()}.");
 
         /// <summary>
@@ -123,8 +123,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.FunctionToolCall PickFunctionCall() => IsFunctionCall
-            ? FunctionCall!
+        public global::Portkey.FunctionToolCall PickFunctionCall() => FunctionCall is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionCall' but the value was {ToString()}.");
 
         /// <summary>
@@ -161,8 +161,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.WebSearchToolCall PickWebSearchCall() => IsWebSearchCall
-            ? WebSearchCall!
+        public global::Portkey.WebSearchToolCall PickWebSearchCall() => WebSearchCall is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'WebSearchCall' but the value was {ToString()}.");
 
         /// <summary>
@@ -199,8 +199,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ComputerToolCall PickComputerCall() => IsComputerCall
-            ? ComputerCall!
+        public global::Portkey.ComputerToolCall PickComputerCall() => ComputerCall is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ComputerCall' but the value was {ToString()}.");
 
         /// <summary>
@@ -237,8 +237,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ReasoningItem PickReasoning() => IsReasoning
-            ? Reasoning!
+        public global::Portkey.ReasoningItem PickReasoning() => Reasoning is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Reasoning' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -450,29 +450,29 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsMessage && message != null)
+            if (Message is { } __value0 && message != null)
             {
-                return message(Message!);
+                return message(__value0);
             }
-            else if (IsFileSearchCall && fileSearchCall != null)
+            else if (FileSearchCall is { } __value1 && fileSearchCall != null)
             {
-                return fileSearchCall(FileSearchCall!);
+                return fileSearchCall(__value1);
             }
-            else if (IsFunctionCall && functionCall != null)
+            else if (FunctionCall is { } __value2 && functionCall != null)
             {
-                return functionCall(FunctionCall!);
+                return functionCall(__value2);
             }
-            else if (IsWebSearchCall && webSearchCall != null)
+            else if (WebSearchCall is { } __value3 && webSearchCall != null)
             {
-                return webSearchCall(WebSearchCall!);
+                return webSearchCall(__value3);
             }
-            else if (IsComputerCall && computerCall != null)
+            else if (ComputerCall is { } __value4 && computerCall != null)
             {
-                return computerCall(ComputerCall!);
+                return computerCall(__value4);
             }
-            else if (IsReasoning && reasoning != null)
+            else if (Reasoning is { } __value5 && reasoning != null)
             {
-                return reasoning(Reasoning!);
+                return reasoning(__value5);
             }
 
             return default(TResult);
@@ -500,29 +500,29 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsMessage)
+            if (Message is { } __value0)
             {
-                message?.Invoke(Message!);
+                message?.Invoke(__value0);
             }
-            else if (IsFileSearchCall)
+            else if (FileSearchCall is { } __value1)
             {
-                fileSearchCall?.Invoke(FileSearchCall!);
+                fileSearchCall?.Invoke(__value1);
             }
-            else if (IsFunctionCall)
+            else if (FunctionCall is { } __value2)
             {
-                functionCall?.Invoke(FunctionCall!);
+                functionCall?.Invoke(__value2);
             }
-            else if (IsWebSearchCall)
+            else if (WebSearchCall is { } __value3)
             {
-                webSearchCall?.Invoke(WebSearchCall!);
+                webSearchCall?.Invoke(__value3);
             }
-            else if (IsComputerCall)
+            else if (ComputerCall is { } __value4)
             {
-                computerCall?.Invoke(ComputerCall!);
+                computerCall?.Invoke(__value4);
             }
-            else if (IsReasoning)
+            else if (Reasoning is { } __value5)
             {
-                reasoning?.Invoke(Reasoning!);
+                reasoning?.Invoke(__value5);
             }
         }
 
@@ -543,29 +543,29 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsMessage)
+            if (Message is { } __value0)
             {
-                message?.Invoke(Message!);
+                message?.Invoke(__value0);
             }
-            else if (IsFileSearchCall)
+            else if (FileSearchCall is { } __value1)
             {
-                fileSearchCall?.Invoke(FileSearchCall!);
+                fileSearchCall?.Invoke(__value1);
             }
-            else if (IsFunctionCall)
+            else if (FunctionCall is { } __value2)
             {
-                functionCall?.Invoke(FunctionCall!);
+                functionCall?.Invoke(__value2);
             }
-            else if (IsWebSearchCall)
+            else if (WebSearchCall is { } __value3)
             {
-                webSearchCall?.Invoke(WebSearchCall!);
+                webSearchCall?.Invoke(__value3);
             }
-            else if (IsComputerCall)
+            else if (ComputerCall is { } __value4)
             {
-                computerCall?.Invoke(ComputerCall!);
+                computerCall?.Invoke(__value4);
             }
-            else if (IsReasoning)
+            else if (Reasoning is { } __value5)
             {
-                reasoning?.Invoke(Reasoning!);
+                reasoning?.Invoke(__value5);
             }
         }
 

@@ -42,8 +42,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.BedrockConfiguration PickBedrock() => IsBedrock
-            ? Bedrock!
+        public global::Portkey.BedrockConfiguration PickBedrock() => Bedrock is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Bedrock' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.SageMakerConfigurationVariant2 PickSageMakerConfigurationVariant2() => IsSageMakerConfigurationVariant2
-            ? SageMakerConfigurationVariant2!
+        public global::Portkey.SageMakerConfigurationVariant2 PickSageMakerConfigurationVariant2() => SageMakerConfigurationVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'SageMakerConfigurationVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsBedrock && bedrock != null)
+            if (Bedrock is { } __value0 && bedrock != null)
             {
-                return bedrock(Bedrock!);
+                return bedrock(__value0);
             }
-            else if (IsSageMakerConfigurationVariant2 && sageMakerConfigurationVariant2 != null)
+            else if (SageMakerConfigurationVariant2 is { } __value1 && sageMakerConfigurationVariant2 != null)
             {
-                return sageMakerConfigurationVariant2(SageMakerConfigurationVariant2!);
+                return sageMakerConfigurationVariant2(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsBedrock)
+            if (Bedrock is { } __value0)
             {
-                bedrock?.Invoke(Bedrock!);
+                bedrock?.Invoke(__value0);
             }
-            else if (IsSageMakerConfigurationVariant2)
+            else if (SageMakerConfigurationVariant2 is { } __value1)
             {
-                sageMakerConfigurationVariant2?.Invoke(SageMakerConfigurationVariant2!);
+                sageMakerConfigurationVariant2?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsBedrock)
+            if (Bedrock is { } __value0)
             {
-                bedrock?.Invoke(Bedrock!);
+                bedrock?.Invoke(__value0);
             }
-            else if (IsSageMakerConfigurationVariant2)
+            else if (SageMakerConfigurationVariant2 is { } __value1)
             {
-                sageMakerConfigurationVariant2?.Invoke(SageMakerConfigurationVariant2!);
+                sageMakerConfigurationVariant2?.Invoke(__value1);
             }
         }
 

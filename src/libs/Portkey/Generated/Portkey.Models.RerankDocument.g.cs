@@ -43,8 +43,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public string PickString() => IsString
-            ? String!
+        public string PickString() => String is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'String' but the value was {ToString()}.");
 
         /// <summary>
@@ -80,8 +80,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.RerankDocumentObject PickObjectValue() => IsObjectValue
-            ? ObjectValue!
+        public global::Portkey.RerankDocumentObject PickObjectValue() => ObjectValue is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ObjectValue' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -178,13 +178,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsString && @string != null)
+            if (String is { } __value0 && @string != null)
             {
-                return @string(String!);
+                return @string(__value0);
             }
-            else if (IsObjectValue && objectValue != null)
+            else if (ObjectValue is { } __value1 && objectValue != null)
             {
-                return objectValue(ObjectValue!);
+                return objectValue(__value1);
             }
 
             return default(TResult);
@@ -204,13 +204,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsString)
+            if (String is { } __value0)
             {
-                @string?.Invoke(String!);
+                @string?.Invoke(__value0);
             }
-            else if (IsObjectValue)
+            else if (ObjectValue is { } __value1)
             {
-                objectValue?.Invoke(ObjectValue!);
+                objectValue?.Invoke(__value1);
             }
         }
 
@@ -227,13 +227,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsString)
+            if (String is { } __value0)
             {
-                @string?.Invoke(String!);
+                @string?.Invoke(__value0);
             }
-            else if (IsObjectValue)
+            else if (ObjectValue is { } __value1)
             {
-                objectValue?.Invoke(ObjectValue!);
+                objectValue?.Invoke(__value1);
             }
         }
 

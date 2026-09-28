@@ -42,8 +42,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.AutoChunkingStrategyRequestParam PickAutoChunkingStrategy() => IsAutoChunkingStrategy
-            ? AutoChunkingStrategy!
+        public global::Portkey.AutoChunkingStrategyRequestParam PickAutoChunkingStrategy() => AutoChunkingStrategy is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'AutoChunkingStrategy' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.StaticChunkingStrategyRequestParam PickStaticChunkingStrategy() => IsStaticChunkingStrategy
-            ? StaticChunkingStrategy!
+        public global::Portkey.StaticChunkingStrategyRequestParam PickStaticChunkingStrategy() => StaticChunkingStrategy is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'StaticChunkingStrategy' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsAutoChunkingStrategy && autoChunkingStrategy != null)
+            if (AutoChunkingStrategy is { } __value0 && autoChunkingStrategy != null)
             {
-                return autoChunkingStrategy(AutoChunkingStrategy!);
+                return autoChunkingStrategy(__value0);
             }
-            else if (IsStaticChunkingStrategy && staticChunkingStrategy != null)
+            else if (StaticChunkingStrategy is { } __value1 && staticChunkingStrategy != null)
             {
-                return staticChunkingStrategy(StaticChunkingStrategy!);
+                return staticChunkingStrategy(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsAutoChunkingStrategy)
+            if (AutoChunkingStrategy is { } __value0)
             {
-                autoChunkingStrategy?.Invoke(AutoChunkingStrategy!);
+                autoChunkingStrategy?.Invoke(__value0);
             }
-            else if (IsStaticChunkingStrategy)
+            else if (StaticChunkingStrategy is { } __value1)
             {
-                staticChunkingStrategy?.Invoke(StaticChunkingStrategy!);
+                staticChunkingStrategy?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsAutoChunkingStrategy)
+            if (AutoChunkingStrategy is { } __value0)
             {
-                autoChunkingStrategy?.Invoke(AutoChunkingStrategy!);
+                autoChunkingStrategy?.Invoke(__value0);
             }
-            else if (IsStaticChunkingStrategy)
+            else if (StaticChunkingStrategy is { } __value1)
             {
-                staticChunkingStrategy?.Invoke(StaticChunkingStrategy!);
+                staticChunkingStrategy?.Invoke(__value1);
             }
         }
 

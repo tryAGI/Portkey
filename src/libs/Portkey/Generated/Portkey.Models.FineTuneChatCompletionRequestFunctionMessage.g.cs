@@ -42,8 +42,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public object PickFunctionMessage1() => IsFunctionMessage1
-            ? FunctionMessage1!
+        public object PickFunctionMessage1() => FunctionMessage1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionMessage1' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ChatCompletionRequestFunctionMessage PickFunctionMessage2() => IsFunctionMessage2
-            ? FunctionMessage2!
+        public global::Portkey.ChatCompletionRequestFunctionMessage PickFunctionMessage2() => FunctionMessage2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionMessage2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -154,13 +154,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsFunctionMessage1 && functionMessage1 != null)
+            if (FunctionMessage1 is { } __value0 && functionMessage1 != null)
             {
-                return functionMessage1(FunctionMessage1!);
+                return functionMessage1(__value0);
             }
-            else if (IsFunctionMessage2 && functionMessage2 != null)
+            else if (FunctionMessage2 is { } __value1 && functionMessage2 != null)
             {
-                return functionMessage2(FunctionMessage2!);
+                return functionMessage2(__value1);
             }
 
             return default(TResult);
@@ -180,13 +180,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsFunctionMessage1)
+            if (FunctionMessage1 is { } __value0)
             {
-                functionMessage1?.Invoke(FunctionMessage1!);
+                functionMessage1?.Invoke(__value0);
             }
-            else if (IsFunctionMessage2)
+            else if (FunctionMessage2 is { } __value1)
             {
-                functionMessage2?.Invoke(FunctionMessage2!);
+                functionMessage2?.Invoke(__value1);
             }
         }
 
@@ -203,13 +203,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsFunctionMessage1)
+            if (FunctionMessage1 is { } __value0)
             {
-                functionMessage1?.Invoke(FunctionMessage1!);
+                functionMessage1?.Invoke(__value0);
             }
-            else if (IsFunctionMessage2)
+            else if (FunctionMessage2 is { } __value1)
             {
-                functionMessage2?.Invoke(FunctionMessage2!);
+                functionMessage2?.Invoke(__value1);
             }
         }
 
