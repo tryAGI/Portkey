@@ -1,19 +1,14 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-#pragma warning disable CS3016 // Arrays as attribute arguments is not CLS-compliant
-
 namespace Portkey
 {
     /// <summary>
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>), TypeInfoPropertyName = "IListString_System_Collections_Generic_IList_string")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_8bdfb68d714d7b89")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_e3b878686b59ca1a")]
@@ -109,7 +104,9 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionRequestUserMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionRequestAssistantMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionRequestToolMessage))]
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionRequestFunctionMessage))]
+    #pragma warning restore CS0618
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionRequestSystemMessageRole), TypeInfoPropertyName = "ChatCompletionRequestSystemMessageRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionRequestDeveloperMessageRole), TypeInfoPropertyName = "ChatCompletionRequestDeveloperMessageRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<string, global::System.Collections.Generic.IList<global::Portkey.ChatCompletionRequestMessageContentPart>>), TypeInfoPropertyName = "OneOfStringIListChatCompletionRequestMessageContentPart2")]
@@ -117,7 +114,9 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionRequestUserMessageRole), TypeInfoPropertyName = "ChatCompletionRequestUserMessageRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionRequestAssistantMessageRole), TypeInfoPropertyName = "ChatCompletionRequestAssistantMessageRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.ChatCompletionMessageToolCall>))]
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionRequestAssistantMessageFunctionCall))]
+    #pragma warning restore CS0618
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.FileSearchTool))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.FileSearchToolType), TypeInfoPropertyName = "FileSearchToolType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.ComparisonFilter, global::Portkey.CompoundFilter>), TypeInfoPropertyName = "OneOfComparisonFilterCompoundFilter2")]
@@ -136,11 +135,15 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.FineTuneChatCompletionRequestAssistantMessageRole), TypeInfoPropertyName = "FineTuneChatCompletionRequestAssistantMessageRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.FineTuneChatCompletionRequestAssistantMessageFunctionCall))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionRequestToolMessageRole), TypeInfoPropertyName = "ChatCompletionRequestToolMessageRole2")]
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionRequestFunctionMessageRole), TypeInfoPropertyName = "ChatCompletionRequestFunctionMessageRole2")]
+    #pragma warning restore CS0618
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.FineTuneChatCompletionRequestFunctionMessage), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.FunctionParameters))]
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionFunctions))]
+    #pragma warning restore CS0618
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionFunctionCallOption))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionTool))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionToolType), TypeInfoPropertyName = "ChatCompletionToolType2")]
@@ -180,10 +183,14 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionMessageContentBlock), TypeInfoPropertyName = "ChatCompletionMessageContentBlock2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionResponseMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionResponseMessageRole), TypeInfoPropertyName = "ChatCompletionResponseMessageRole2")]
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionResponseMessageFunctionCall))]
+    #pragma warning restore CS0618
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.ChatCompletionMessageContentBlock>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionStreamResponseDelta))]
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionStreamResponseDeltaFunctionCall))]
+    #pragma warning restore CS0618
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.ChatCompletionMessageToolCallChunk>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionStreamResponseDeltaRole), TypeInfoPropertyName = "ChatCompletionStreamResponseDeltaRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateChatCompletionRequest))]
@@ -197,9 +204,13 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateChatCompletionRequestThinking))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateChatCompletionRequestThinkingType), TypeInfoPropertyName = "CreateChatCompletionRequestThinkingType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.ChatCompletionTool>))]
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.CreateChatCompletionRequestFunctionCall?, global::Portkey.ChatCompletionFunctionCallOption>), TypeInfoPropertyName = "OneOfCreateChatCompletionRequestFunctionCallChatCompletionFunctionCallOption2")]
+    #pragma warning restore CS0618
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateChatCompletionRequestFunctionCall), TypeInfoPropertyName = "CreateChatCompletionRequestFunctionCall2")]
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.ChatCompletionFunctions>))]
+    #pragma warning restore CS0618
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateChatCompletionResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.CreateChatCompletionResponseChoice>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateChatCompletionResponseChoice))]
@@ -384,7 +395,9 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.MoveType), TypeInfoPropertyName = "MoveType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OpenAIFileObject), TypeInfoPropertyName = "OpenAIFileObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OpenAIFilePurpose), TypeInfoPropertyName = "OpenAIFilePurpose2")]
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OpenAIFileStatus), TypeInfoPropertyName = "OpenAIFileStatus2")]
+    #pragma warning restore CS0618
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DoubleClick))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DoubleClickType), TypeInfoPropertyName = "DoubleClickType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.Drag))]
@@ -522,10 +535,8 @@ namespace Portkey
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>), TypeInfoPropertyName = "IListString_System_Collections_Generic_IList_string")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_8bdfb68d714d7b89")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_e3b878686b59ca1a")]
@@ -1034,10 +1045,8 @@ namespace Portkey
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>), TypeInfoPropertyName = "IListString_System_Collections_Generic_IList_string")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_8bdfb68d714d7b89")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_e3b878686b59ca1a")]
@@ -1546,10 +1555,8 @@ namespace Portkey
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>), TypeInfoPropertyName = "IListString_System_Collections_Generic_IList_string")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_8bdfb68d714d7b89")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_e3b878686b59ca1a")]
@@ -1856,7 +1863,9 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(float?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.FineTuneChatCompletionRequestAssistantMessageRole?), TypeInfoPropertyName = "NullableFineTuneChatCompletionRequestAssistantMessageRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionRequestToolMessageRole?), TypeInfoPropertyName = "NullableChatCompletionRequestToolMessageRole2")]
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionRequestFunctionMessageRole?), TypeInfoPropertyName = "NullableChatCompletionRequestFunctionMessageRole2")]
+    #pragma warning restore CS0618
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.FineTuneChatCompletionRequestFunctionMessage?), TypeInfoPropertyName = "NullableFineTuneChatCompletionRequestFunctionMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionToolType?), TypeInfoPropertyName = "NullableChatCompletionToolType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ChatCompletionToolChoiceOption?), TypeInfoPropertyName = "NullableChatCompletionToolChoiceOption2")]
@@ -1881,7 +1890,9 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateChatCompletionRequestModel?), TypeInfoPropertyName = "NullableCreateChatCompletionRequestModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.ResponseFormatText, global::Portkey.ResponseFormatJsonSchema, global::Portkey.ResponseFormatJsonObject>?), TypeInfoPropertyName = "NullableOneOfResponseFormatTextResponseFormatJsonSchemaResponseFormatJsonObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateChatCompletionRequestThinkingType?), TypeInfoPropertyName = "NullableCreateChatCompletionRequestThinkingType2")]
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.CreateChatCompletionRequestFunctionCall?, global::Portkey.ChatCompletionFunctionCallOption>?), TypeInfoPropertyName = "NullableOneOfCreateChatCompletionRequestFunctionCallChatCompletionFunctionCallOption2")]
+    #pragma warning restore CS0618
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateChatCompletionRequestFunctionCall?), TypeInfoPropertyName = "NullableCreateChatCompletionRequestFunctionCall2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateChatCompletionResponseChoiceFinishReason?), TypeInfoPropertyName = "NullableCreateChatCompletionResponseChoiceFinishReason2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateChatCompletionResponseObject?), TypeInfoPropertyName = "NullableCreateChatCompletionResponseObject2")]
@@ -1959,7 +1970,9 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.MoveType?), TypeInfoPropertyName = "NullableMoveType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OpenAIFileObject?), TypeInfoPropertyName = "NullableOpenAIFileObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OpenAIFilePurpose?), TypeInfoPropertyName = "NullableOpenAIFilePurpose2")]
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OpenAIFileStatus?), TypeInfoPropertyName = "NullableOpenAIFileStatus2")]
+    #pragma warning restore CS0618
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DoubleClickType?), TypeInfoPropertyName = "NullableDoubleClickType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DragType?), TypeInfoPropertyName = "NullableDragType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.EasyInputMessageRole?), TypeInfoPropertyName = "NullableEasyInputMessageRole2")]
@@ -2058,10 +2071,8 @@ namespace Portkey
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>), TypeInfoPropertyName = "IListString_System_Collections_Generic_IList_string")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_8bdfb68d714d7b89")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_e3b878686b59ca1a")]
@@ -2532,7 +2543,9 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.ChatCompletionMessageToolCallChunk>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.ChatCompletionRequestMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.ChatCompletionTool>))]
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.ChatCompletionFunctions>))]
+    #pragma warning restore CS0618
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.CreateChatCompletionResponseChoice>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.ChatCompletionTokenLogprob>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.CreateChatCompletionFunctionResponseChoice>))]
@@ -2570,10 +2583,8 @@ namespace Portkey
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>), TypeInfoPropertyName = "IListString_System_Collections_Generic_IList_string")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_8bdfb68d714d7b89")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_e3b878686b59ca1a")]
