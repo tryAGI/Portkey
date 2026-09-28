@@ -129,8 +129,8 @@ namespace Portkey
                                 servers: s_GetVirtualKeysServers,
                                 defaultBaseUrl: "https://api.portkey.ai/v1"));
                             __pathBuilder
-                                .AddRequiredParameter("current_page", currentPage.ToString()!)
-                                .AddRequiredParameter("page_size", pageSize.ToString()!)
+                                .AddRequiredParameter("current_page", currentPage.ToString() ?? throw new global::System.InvalidOperationException("A required query parameter returned null from ToString()."))
+                                .AddRequiredParameter("page_size", pageSize.ToString() ?? throw new global::System.InvalidOperationException("A required query parameter returned null from ToString()."))
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Portkey.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -172,8 +172,8 @@ namespace Portkey
                 PrepareGetVirtualKeysRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    currentPage: currentPage!,
-                    pageSize: pageSize!);
+                    currentPage: currentPage,
+                    pageSize: pageSize);
 
                 return __httpRequest;
             }
@@ -195,7 +195,7 @@ namespace Portkey
                                 pathTemplate: "\"/virtual-keys\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -229,7 +229,7 @@ namespace Portkey
                                 pathTemplate: "\"/virtual-keys\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -270,7 +270,7 @@ namespace Portkey
                                 pathTemplate: "\"/virtual-keys\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -318,7 +318,7 @@ namespace Portkey
                                 pathTemplate: "\"/virtual-keys\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -340,7 +340,7 @@ namespace Portkey
                                 pathTemplate: "\"/virtual-keys\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

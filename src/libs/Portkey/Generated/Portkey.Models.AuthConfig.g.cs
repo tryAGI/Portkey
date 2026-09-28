@@ -42,8 +42,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.AwsAccessKeyAuthConfig PickAccessKey() => IsAccessKey
-            ? AccessKey!
+        public global::Portkey.AwsAccessKeyAuthConfig PickAccessKey() => AccessKey is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'AccessKey' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.AwsAssumedRoleAuthConfig PickAssumedRole() => IsAssumedRole
-            ? AssumedRole!
+        public global::Portkey.AwsAssumedRoleAuthConfig PickAssumedRole() => AssumedRole is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'AssumedRole' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.AwsServiceRoleAuthConfig PickServiceRole() => IsServiceRole
-            ? ServiceRole!
+        public global::Portkey.AwsServiceRoleAuthConfig PickServiceRole() => ServiceRole is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ServiceRole' but the value was {ToString()}.");
 
         /// <summary>
@@ -153,8 +153,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.AzureEntraAuthConfig PickAzureEntra() => IsAzureEntra
-            ? AzureEntra!
+        public global::Portkey.AzureEntraAuthConfig PickAzureEntra() => AzureEntra is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'AzureEntra' but the value was {ToString()}.");
 
         /// <summary>
@@ -190,8 +190,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.AzureManagedAuthConfig PickAzureManaged() => IsAzureManaged
-            ? AzureManaged!
+        public global::Portkey.AzureManagedAuthConfig PickAzureManaged() => AzureManaged is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'AzureManaged' but the value was {ToString()}.");
 
         /// <summary>
@@ -227,8 +227,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.AzureDefaultAuthConfig PickAzureDefault() => IsAzureDefault
-            ? AzureDefault!
+        public global::Portkey.AzureDefaultAuthConfig PickAzureDefault() => AzureDefault is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'AzureDefault' but the value was {ToString()}.");
 
         /// <summary>
@@ -264,8 +264,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.HashicorpTokenAuthConfig PickHashicorpToken() => IsHashicorpToken
-            ? HashicorpToken!
+        public global::Portkey.HashicorpTokenAuthConfig PickHashicorpToken() => HashicorpToken is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'HashicorpToken' but the value was {ToString()}.");
 
         /// <summary>
@@ -301,8 +301,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.HashicorpAppRoleAuthConfig PickHashicorpAppRole() => IsHashicorpAppRole
-            ? HashicorpAppRole!
+        public global::Portkey.HashicorpAppRoleAuthConfig PickHashicorpAppRole() => HashicorpAppRole is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'HashicorpAppRole' but the value was {ToString()}.");
 
         /// <summary>
@@ -338,8 +338,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.HashicorpKubernetesAuthConfig PickHashicorpKubernetes() => IsHashicorpKubernetes
-            ? HashicorpKubernetes!
+        public global::Portkey.HashicorpKubernetesAuthConfig PickHashicorpKubernetes() => HashicorpKubernetes is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'HashicorpKubernetes' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -632,41 +632,41 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsAccessKey && accessKey != null)
+            if (AccessKey is { } __value0 && accessKey != null)
             {
-                return accessKey(AccessKey!);
+                return accessKey(__value0);
             }
-            else if (IsAssumedRole && assumedRole != null)
+            else if (AssumedRole is { } __value1 && assumedRole != null)
             {
-                return assumedRole(AssumedRole!);
+                return assumedRole(__value1);
             }
-            else if (IsServiceRole && serviceRole != null)
+            else if (ServiceRole is { } __value2 && serviceRole != null)
             {
-                return serviceRole(ServiceRole!);
+                return serviceRole(__value2);
             }
-            else if (IsAzureEntra && azureEntra != null)
+            else if (AzureEntra is { } __value3 && azureEntra != null)
             {
-                return azureEntra(AzureEntra!);
+                return azureEntra(__value3);
             }
-            else if (IsAzureManaged && azureManaged != null)
+            else if (AzureManaged is { } __value4 && azureManaged != null)
             {
-                return azureManaged(AzureManaged!);
+                return azureManaged(__value4);
             }
-            else if (IsAzureDefault && azureDefault != null)
+            else if (AzureDefault is { } __value5 && azureDefault != null)
             {
-                return azureDefault(AzureDefault!);
+                return azureDefault(__value5);
             }
-            else if (IsHashicorpToken && hashicorpToken != null)
+            else if (HashicorpToken is { } __value6 && hashicorpToken != null)
             {
-                return hashicorpToken(HashicorpToken!);
+                return hashicorpToken(__value6);
             }
-            else if (IsHashicorpAppRole && hashicorpAppRole != null)
+            else if (HashicorpAppRole is { } __value7 && hashicorpAppRole != null)
             {
-                return hashicorpAppRole(HashicorpAppRole!);
+                return hashicorpAppRole(__value7);
             }
-            else if (IsHashicorpKubernetes && hashicorpKubernetes != null)
+            else if (HashicorpKubernetes is { } __value8 && hashicorpKubernetes != null)
             {
-                return hashicorpKubernetes(HashicorpKubernetes!);
+                return hashicorpKubernetes(__value8);
             }
 
             return default(TResult);
@@ -700,41 +700,41 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsAccessKey)
+            if (AccessKey is { } __value0)
             {
-                accessKey?.Invoke(AccessKey!);
+                accessKey?.Invoke(__value0);
             }
-            else if (IsAssumedRole)
+            else if (AssumedRole is { } __value1)
             {
-                assumedRole?.Invoke(AssumedRole!);
+                assumedRole?.Invoke(__value1);
             }
-            else if (IsServiceRole)
+            else if (ServiceRole is { } __value2)
             {
-                serviceRole?.Invoke(ServiceRole!);
+                serviceRole?.Invoke(__value2);
             }
-            else if (IsAzureEntra)
+            else if (AzureEntra is { } __value3)
             {
-                azureEntra?.Invoke(AzureEntra!);
+                azureEntra?.Invoke(__value3);
             }
-            else if (IsAzureManaged)
+            else if (AzureManaged is { } __value4)
             {
-                azureManaged?.Invoke(AzureManaged!);
+                azureManaged?.Invoke(__value4);
             }
-            else if (IsAzureDefault)
+            else if (AzureDefault is { } __value5)
             {
-                azureDefault?.Invoke(AzureDefault!);
+                azureDefault?.Invoke(__value5);
             }
-            else if (IsHashicorpToken)
+            else if (HashicorpToken is { } __value6)
             {
-                hashicorpToken?.Invoke(HashicorpToken!);
+                hashicorpToken?.Invoke(__value6);
             }
-            else if (IsHashicorpAppRole)
+            else if (HashicorpAppRole is { } __value7)
             {
-                hashicorpAppRole?.Invoke(HashicorpAppRole!);
+                hashicorpAppRole?.Invoke(__value7);
             }
-            else if (IsHashicorpKubernetes)
+            else if (HashicorpKubernetes is { } __value8)
             {
-                hashicorpKubernetes?.Invoke(HashicorpKubernetes!);
+                hashicorpKubernetes?.Invoke(__value8);
             }
         }
 
@@ -758,41 +758,41 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsAccessKey)
+            if (AccessKey is { } __value0)
             {
-                accessKey?.Invoke(AccessKey!);
+                accessKey?.Invoke(__value0);
             }
-            else if (IsAssumedRole)
+            else if (AssumedRole is { } __value1)
             {
-                assumedRole?.Invoke(AssumedRole!);
+                assumedRole?.Invoke(__value1);
             }
-            else if (IsServiceRole)
+            else if (ServiceRole is { } __value2)
             {
-                serviceRole?.Invoke(ServiceRole!);
+                serviceRole?.Invoke(__value2);
             }
-            else if (IsAzureEntra)
+            else if (AzureEntra is { } __value3)
             {
-                azureEntra?.Invoke(AzureEntra!);
+                azureEntra?.Invoke(__value3);
             }
-            else if (IsAzureManaged)
+            else if (AzureManaged is { } __value4)
             {
-                azureManaged?.Invoke(AzureManaged!);
+                azureManaged?.Invoke(__value4);
             }
-            else if (IsAzureDefault)
+            else if (AzureDefault is { } __value5)
             {
-                azureDefault?.Invoke(AzureDefault!);
+                azureDefault?.Invoke(__value5);
             }
-            else if (IsHashicorpToken)
+            else if (HashicorpToken is { } __value6)
             {
-                hashicorpToken?.Invoke(HashicorpToken!);
+                hashicorpToken?.Invoke(__value6);
             }
-            else if (IsHashicorpAppRole)
+            else if (HashicorpAppRole is { } __value7)
             {
-                hashicorpAppRole?.Invoke(HashicorpAppRole!);
+                hashicorpAppRole?.Invoke(__value7);
             }
-            else if (IsHashicorpKubernetes)
+            else if (HashicorpKubernetes is { } __value8)
             {
-                hashicorpKubernetes?.Invoke(HashicorpKubernetes!);
+                hashicorpKubernetes?.Invoke(__value8);
             }
         }
 

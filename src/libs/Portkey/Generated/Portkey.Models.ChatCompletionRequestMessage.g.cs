@@ -42,8 +42,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ChatCompletionRequestSystemMessage PickSystemMessage() => IsSystemMessage
-            ? SystemMessage!
+        public global::Portkey.ChatCompletionRequestSystemMessage PickSystemMessage() => SystemMessage is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'SystemMessage' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ChatCompletionRequestDeveloperMessage PickDeveloperMessage() => IsDeveloperMessage
-            ? DeveloperMessage!
+        public global::Portkey.ChatCompletionRequestDeveloperMessage PickDeveloperMessage() => DeveloperMessage is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'DeveloperMessage' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ChatCompletionRequestUserMessage PickUserMessage() => IsUserMessage
-            ? UserMessage!
+        public global::Portkey.ChatCompletionRequestUserMessage PickUserMessage() => UserMessage is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'UserMessage' but the value was {ToString()}.");
 
         /// <summary>
@@ -153,8 +153,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ChatCompletionRequestAssistantMessage PickAssistantMessage() => IsAssistantMessage
-            ? AssistantMessage!
+        public global::Portkey.ChatCompletionRequestAssistantMessage PickAssistantMessage() => AssistantMessage is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'AssistantMessage' but the value was {ToString()}.");
 
         /// <summary>
@@ -190,8 +190,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ChatCompletionRequestToolMessage PickToolMessage() => IsToolMessage
-            ? ToolMessage!
+        public global::Portkey.ChatCompletionRequestToolMessage PickToolMessage() => ToolMessage is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ToolMessage' but the value was {ToString()}.");
 
         /// <summary>
@@ -227,8 +227,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ChatCompletionRequestFunctionMessage PickFunctionMessage() => IsFunctionMessage
-            ? FunctionMessage!
+        public global::Portkey.ChatCompletionRequestFunctionMessage PickFunctionMessage() => FunctionMessage is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionMessage' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -437,29 +437,29 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsSystemMessage && systemMessage != null)
+            if (SystemMessage is { } __value0 && systemMessage != null)
             {
-                return systemMessage(SystemMessage!);
+                return systemMessage(__value0);
             }
-            else if (IsDeveloperMessage && developerMessage != null)
+            else if (DeveloperMessage is { } __value1 && developerMessage != null)
             {
-                return developerMessage(DeveloperMessage!);
+                return developerMessage(__value1);
             }
-            else if (IsUserMessage && userMessage != null)
+            else if (UserMessage is { } __value2 && userMessage != null)
             {
-                return userMessage(UserMessage!);
+                return userMessage(__value2);
             }
-            else if (IsAssistantMessage && assistantMessage != null)
+            else if (AssistantMessage is { } __value3 && assistantMessage != null)
             {
-                return assistantMessage(AssistantMessage!);
+                return assistantMessage(__value3);
             }
-            else if (IsToolMessage && toolMessage != null)
+            else if (ToolMessage is { } __value4 && toolMessage != null)
             {
-                return toolMessage(ToolMessage!);
+                return toolMessage(__value4);
             }
-            else if (IsFunctionMessage && functionMessage != null)
+            else if (FunctionMessage is { } __value5 && functionMessage != null)
             {
-                return functionMessage(FunctionMessage!);
+                return functionMessage(__value5);
             }
 
             return default(TResult);
@@ -487,29 +487,29 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsSystemMessage)
+            if (SystemMessage is { } __value0)
             {
-                systemMessage?.Invoke(SystemMessage!);
+                systemMessage?.Invoke(__value0);
             }
-            else if (IsDeveloperMessage)
+            else if (DeveloperMessage is { } __value1)
             {
-                developerMessage?.Invoke(DeveloperMessage!);
+                developerMessage?.Invoke(__value1);
             }
-            else if (IsUserMessage)
+            else if (UserMessage is { } __value2)
             {
-                userMessage?.Invoke(UserMessage!);
+                userMessage?.Invoke(__value2);
             }
-            else if (IsAssistantMessage)
+            else if (AssistantMessage is { } __value3)
             {
-                assistantMessage?.Invoke(AssistantMessage!);
+                assistantMessage?.Invoke(__value3);
             }
-            else if (IsToolMessage)
+            else if (ToolMessage is { } __value4)
             {
-                toolMessage?.Invoke(ToolMessage!);
+                toolMessage?.Invoke(__value4);
             }
-            else if (IsFunctionMessage)
+            else if (FunctionMessage is { } __value5)
             {
-                functionMessage?.Invoke(FunctionMessage!);
+                functionMessage?.Invoke(__value5);
             }
         }
 
@@ -530,29 +530,29 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsSystemMessage)
+            if (SystemMessage is { } __value0)
             {
-                systemMessage?.Invoke(SystemMessage!);
+                systemMessage?.Invoke(__value0);
             }
-            else if (IsDeveloperMessage)
+            else if (DeveloperMessage is { } __value1)
             {
-                developerMessage?.Invoke(DeveloperMessage!);
+                developerMessage?.Invoke(__value1);
             }
-            else if (IsUserMessage)
+            else if (UserMessage is { } __value2)
             {
-                userMessage?.Invoke(UserMessage!);
+                userMessage?.Invoke(__value2);
             }
-            else if (IsAssistantMessage)
+            else if (AssistantMessage is { } __value3)
             {
-                assistantMessage?.Invoke(AssistantMessage!);
+                assistantMessage?.Invoke(__value3);
             }
-            else if (IsToolMessage)
+            else if (ToolMessage is { } __value4)
             {
-                toolMessage?.Invoke(ToolMessage!);
+                toolMessage?.Invoke(__value4);
             }
-            else if (IsFunctionMessage)
+            else if (FunctionMessage is { } __value5)
             {
-                functionMessage?.Invoke(FunctionMessage!);
+                functionMessage?.Invoke(__value5);
             }
         }
 

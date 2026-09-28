@@ -43,8 +43,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.FileSearchTool PickFileSearch() => IsFileSearch
-            ? FileSearch!
+        public global::Portkey.FileSearchTool PickFileSearch() => FileSearch is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'FileSearch' but the value was {ToString()}.");
 
         /// <summary>
@@ -81,8 +81,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.FunctionTool PickFunction() => IsFunction
-            ? Function!
+        public global::Portkey.FunctionTool PickFunction() => Function is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Function' but the value was {ToString()}.");
 
         /// <summary>
@@ -119,8 +119,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ComputerTool PickComputerUse() => IsComputerUse
-            ? ComputerUse!
+        public global::Portkey.ComputerTool PickComputerUse() => ComputerUse is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ComputerUse' but the value was {ToString()}.");
 
         /// <summary>
@@ -157,8 +157,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.WebSearchTool PickWebSearch() => IsWebSearch
-            ? WebSearch!
+        public global::Portkey.WebSearchTool PickWebSearch() => WebSearch is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'WebSearch' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -311,21 +311,21 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsFileSearch && fileSearch != null)
+            if (FileSearch is { } __value0 && fileSearch != null)
             {
-                return fileSearch(FileSearch!);
+                return fileSearch(__value0);
             }
-            else if (IsFunction && function != null)
+            else if (Function is { } __value1 && function != null)
             {
-                return function(Function!);
+                return function(__value1);
             }
-            else if (IsComputerUse && computerUse != null)
+            else if (ComputerUse is { } __value2 && computerUse != null)
             {
-                return computerUse(ComputerUse!);
+                return computerUse(__value2);
             }
-            else if (IsWebSearch && webSearch != null)
+            else if (WebSearch is { } __value3 && webSearch != null)
             {
-                return webSearch(WebSearch!);
+                return webSearch(__value3);
             }
 
             return default(TResult);
@@ -349,21 +349,21 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsFileSearch)
+            if (FileSearch is { } __value0)
             {
-                fileSearch?.Invoke(FileSearch!);
+                fileSearch?.Invoke(__value0);
             }
-            else if (IsFunction)
+            else if (Function is { } __value1)
             {
-                function?.Invoke(Function!);
+                function?.Invoke(__value1);
             }
-            else if (IsComputerUse)
+            else if (ComputerUse is { } __value2)
             {
-                computerUse?.Invoke(ComputerUse!);
+                computerUse?.Invoke(__value2);
             }
-            else if (IsWebSearch)
+            else if (WebSearch is { } __value3)
             {
-                webSearch?.Invoke(WebSearch!);
+                webSearch?.Invoke(__value3);
             }
         }
 
@@ -382,21 +382,21 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsFileSearch)
+            if (FileSearch is { } __value0)
             {
-                fileSearch?.Invoke(FileSearch!);
+                fileSearch?.Invoke(__value0);
             }
-            else if (IsFunction)
+            else if (Function is { } __value1)
             {
-                function?.Invoke(Function!);
+                function?.Invoke(__value1);
             }
-            else if (IsComputerUse)
+            else if (ComputerUse is { } __value2)
             {
-                computerUse?.Invoke(ComputerUse!);
+                computerUse?.Invoke(__value2);
             }
-            else if (IsWebSearch)
+            else if (WebSearch is { } __value3)
             {
-                webSearch?.Invoke(WebSearch!);
+                webSearch?.Invoke(__value3);
             }
         }
 

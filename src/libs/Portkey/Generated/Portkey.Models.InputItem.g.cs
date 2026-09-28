@@ -46,8 +46,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.EasyInputMessage PickMessage() => IsMessage
-            ? Message!
+        public global::Portkey.EasyInputMessage PickMessage() => Message is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Message' but the value was {ToString()}.");
 
         /// <summary>
@@ -83,8 +83,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.Item PickItem() => IsItem
-            ? Item!.Value
+        public global::Portkey.Item PickItem() => Item is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Item' but the value was {ToString()}.");
 
         /// <summary>
@@ -120,8 +120,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ItemReference PickItemReference() => IsItemReference
-            ? ItemReference!
+        public global::Portkey.ItemReference PickItemReference() => ItemReference is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ItemReference' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -246,17 +246,17 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsMessage && message != null)
+            if (Message is { } __value0 && message != null)
             {
-                return message(Message!);
+                return message(__value0);
             }
-            else if (IsItem && item != null)
+            else if (Item is { } __value1 && item != null)
             {
-                return item(Item!);
+                return item(__value1);
             }
-            else if (IsItemReference && itemReference != null)
+            else if (ItemReference is { } __value2 && itemReference != null)
             {
-                return itemReference(ItemReference!);
+                return itemReference(__value2);
             }
 
             return default(TResult);
@@ -278,17 +278,17 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsMessage)
+            if (Message is { } __value0)
             {
-                message?.Invoke(Message!);
+                message?.Invoke(__value0);
             }
-            else if (IsItem)
+            else if (Item is { } __value1)
             {
-                item?.Invoke(Item!);
+                item?.Invoke(__value1);
             }
-            else if (IsItemReference)
+            else if (ItemReference is { } __value2)
             {
-                itemReference?.Invoke(ItemReference!);
+                itemReference?.Invoke(__value2);
             }
         }
 
@@ -306,17 +306,17 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsMessage)
+            if (Message is { } __value0)
             {
-                message?.Invoke(Message!);
+                message?.Invoke(__value0);
             }
-            else if (IsItem)
+            else if (Item is { } __value1)
             {
-                item?.Invoke(Item!);
+                item?.Invoke(__value1);
             }
-            else if (IsItemReference)
+            else if (ItemReference is { } __value2)
             {
-                itemReference?.Invoke(ItemReference!);
+                itemReference?.Invoke(__value2);
             }
         }
 

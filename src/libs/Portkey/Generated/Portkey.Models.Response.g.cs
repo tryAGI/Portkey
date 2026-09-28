@@ -42,8 +42,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ModelResponseProperties PickModelProperties() => IsModelProperties
-            ? ModelProperties!
+        public global::Portkey.ModelResponseProperties PickModelProperties() => ModelProperties is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ModelProperties' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ResponseProperties PickProperties() => IsProperties
-            ? Properties!
+        public global::Portkey.ResponseProperties PickProperties() => Properties is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Properties' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ResponseVariant3 PickResponseVariant3() => IsResponseVariant3
-            ? ResponseVariant3!
+        public global::Portkey.ResponseVariant3 PickResponseVariant3() => ResponseVariant3 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ResponseVariant3' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -242,17 +242,17 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsModelProperties && modelProperties != null)
+            if (ModelProperties is { } __value0 && modelProperties != null)
             {
-                return modelProperties(ModelProperties!);
+                return modelProperties(__value0);
             }
-            else if (IsProperties && properties != null)
+            else if (Properties is { } __value1 && properties != null)
             {
-                return properties(Properties!);
+                return properties(__value1);
             }
-            else if (IsResponseVariant3 && responseVariant3 != null)
+            else if (ResponseVariant3 is { } __value2 && responseVariant3 != null)
             {
-                return responseVariant3(ResponseVariant3!);
+                return responseVariant3(__value2);
             }
 
             return default(TResult);
@@ -274,17 +274,17 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsModelProperties)
+            if (ModelProperties is { } __value0)
             {
-                modelProperties?.Invoke(ModelProperties!);
+                modelProperties?.Invoke(__value0);
             }
-            else if (IsProperties)
+            else if (Properties is { } __value1)
             {
-                properties?.Invoke(Properties!);
+                properties?.Invoke(__value1);
             }
-            else if (IsResponseVariant3)
+            else if (ResponseVariant3 is { } __value2)
             {
-                responseVariant3?.Invoke(ResponseVariant3!);
+                responseVariant3?.Invoke(__value2);
             }
         }
 
@@ -302,17 +302,17 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsModelProperties)
+            if (ModelProperties is { } __value0)
             {
-                modelProperties?.Invoke(ModelProperties!);
+                modelProperties?.Invoke(__value0);
             }
-            else if (IsProperties)
+            else if (Properties is { } __value1)
             {
-                properties?.Invoke(Properties!);
+                properties?.Invoke(__value1);
             }
-            else if (IsResponseVariant3)
+            else if (ResponseVariant3 is { } __value2)
             {
-                responseVariant3?.Invoke(ResponseVariant3!);
+                responseVariant3?.Invoke(__value2);
             }
         }
 

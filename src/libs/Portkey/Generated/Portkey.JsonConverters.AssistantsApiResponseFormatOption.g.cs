@@ -127,13 +127,13 @@ namespace Portkey.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AssistantsApiResponseFormatOptionEnum), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AssistantsApiResponseFormatOptionEnum> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AssistantsApiResponseFormatOptionEnum).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Enum!.Value, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickEnum(), typeInfo);
             }
             else if (value.IsAssistantsApiResponseFormat)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.AssistantsApiResponseFormat), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.AssistantsApiResponseFormat?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.AssistantsApiResponseFormat).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AssistantsApiResponseFormat!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickAssistantsApiResponseFormat(), typeInfo);
             }
         }
     }

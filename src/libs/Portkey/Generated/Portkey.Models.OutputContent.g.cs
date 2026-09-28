@@ -42,8 +42,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.OutputText PickOutputText() => IsOutputText
-            ? OutputText!
+        public global::Portkey.OutputText PickOutputText() => OutputText is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'OutputText' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.Refusal PickRefusal() => IsRefusal
-            ? Refusal!
+        public global::Portkey.Refusal PickRefusal() => Refusal is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Refusal' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsOutputText && outputText != null)
+            if (OutputText is { } __value0 && outputText != null)
             {
-                return outputText(OutputText!);
+                return outputText(__value0);
             }
-            else if (IsRefusal && refusal != null)
+            else if (Refusal is { } __value1 && refusal != null)
             {
-                return refusal(Refusal!);
+                return refusal(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsOutputText)
+            if (OutputText is { } __value0)
             {
-                outputText?.Invoke(OutputText!);
+                outputText?.Invoke(__value0);
             }
-            else if (IsRefusal)
+            else if (Refusal is { } __value1)
             {
-                refusal?.Invoke(Refusal!);
+                refusal?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsOutputText)
+            if (OutputText is { } __value0)
             {
-                outputText?.Invoke(OutputText!);
+                outputText?.Invoke(__value0);
             }
-            else if (IsRefusal)
+            else if (Refusal is { } __value1)
             {
-                refusal?.Invoke(Refusal!);
+                refusal?.Invoke(__value1);
             }
         }
 

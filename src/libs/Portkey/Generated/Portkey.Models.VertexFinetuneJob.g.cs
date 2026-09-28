@@ -42,8 +42,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.OpenAIFinetuneJob PickOpenAIParams() => IsOpenAIParams
-            ? OpenAIParams!
+        public global::Portkey.OpenAIFinetuneJob PickOpenAIParams() => OpenAIParams is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'OpenAIParams' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -102,9 +102,9 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsOpenAIParams && openAIParams != null)
+            if (OpenAIParams is { } __value0 && openAIParams != null)
             {
-                return openAIParams(OpenAIParams!);
+                return openAIParams(__value0);
             }
 
             return default(TResult);
@@ -122,9 +122,9 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsOpenAIParams)
+            if (OpenAIParams is { } __value0)
             {
-                openAIParams?.Invoke(OpenAIParams!);
+                openAIParams?.Invoke(__value0);
             }
         }
 
@@ -140,9 +140,9 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsOpenAIParams)
+            if (OpenAIParams is { } __value0)
             {
-                openAIParams?.Invoke(OpenAIParams!);
+                openAIParams?.Invoke(__value0);
             }
         }
 

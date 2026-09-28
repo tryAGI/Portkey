@@ -42,8 +42,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.IntegrationList PickList() => IsList
-            ? List!
+        public global::Portkey.IntegrationList PickList() => List is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'List' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.IntegrationDetailResponseVariant2 PickIntegrationDetailResponseVariant2() => IsIntegrationDetailResponseVariant2
-            ? IntegrationDetailResponseVariant2!
+        public global::Portkey.IntegrationDetailResponseVariant2 PickIntegrationDetailResponseVariant2() => IntegrationDetailResponseVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'IntegrationDetailResponseVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsList && list != null)
+            if (List is { } __value0 && list != null)
             {
-                return list(List!);
+                return list(__value0);
             }
-            else if (IsIntegrationDetailResponseVariant2 && integrationDetailResponseVariant2 != null)
+            else if (IntegrationDetailResponseVariant2 is { } __value1 && integrationDetailResponseVariant2 != null)
             {
-                return integrationDetailResponseVariant2(IntegrationDetailResponseVariant2!);
+                return integrationDetailResponseVariant2(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsList)
+            if (List is { } __value0)
             {
-                list?.Invoke(List!);
+                list?.Invoke(__value0);
             }
-            else if (IsIntegrationDetailResponseVariant2)
+            else if (IntegrationDetailResponseVariant2 is { } __value1)
             {
-                integrationDetailResponseVariant2?.Invoke(IntegrationDetailResponseVariant2!);
+                integrationDetailResponseVariant2?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsList)
+            if (List is { } __value0)
             {
-                list?.Invoke(List!);
+                list?.Invoke(__value0);
             }
-            else if (IsIntegrationDetailResponseVariant2)
+            else if (IntegrationDetailResponseVariant2 is { } __value1)
             {
-                integrationDetailResponseVariant2?.Invoke(IntegrationDetailResponseVariant2!);
+                integrationDetailResponseVariant2?.Invoke(__value1);
             }
         }
 

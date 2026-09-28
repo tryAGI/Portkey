@@ -42,8 +42,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.DeploymentListItem PickListItem() => IsListItem
-            ? ListItem!
+        public global::Portkey.DeploymentListItem PickListItem() => ListItem is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ListItem' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.DeploymentDetailResponseVariant2 PickDeploymentDetailResponseVariant2() => IsDeploymentDetailResponseVariant2
-            ? DeploymentDetailResponseVariant2!
+        public global::Portkey.DeploymentDetailResponseVariant2 PickDeploymentDetailResponseVariant2() => DeploymentDetailResponseVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'DeploymentDetailResponseVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsListItem && listItem != null)
+            if (ListItem is { } __value0 && listItem != null)
             {
-                return listItem(ListItem!);
+                return listItem(__value0);
             }
-            else if (IsDeploymentDetailResponseVariant2 && deploymentDetailResponseVariant2 != null)
+            else if (DeploymentDetailResponseVariant2 is { } __value1 && deploymentDetailResponseVariant2 != null)
             {
-                return deploymentDetailResponseVariant2(DeploymentDetailResponseVariant2!);
+                return deploymentDetailResponseVariant2(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsListItem)
+            if (ListItem is { } __value0)
             {
-                listItem?.Invoke(ListItem!);
+                listItem?.Invoke(__value0);
             }
-            else if (IsDeploymentDetailResponseVariant2)
+            else if (DeploymentDetailResponseVariant2 is { } __value1)
             {
-                deploymentDetailResponseVariant2?.Invoke(DeploymentDetailResponseVariant2!);
+                deploymentDetailResponseVariant2?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsListItem)
+            if (ListItem is { } __value0)
             {
-                listItem?.Invoke(ListItem!);
+                listItem?.Invoke(__value0);
             }
-            else if (IsDeploymentDetailResponseVariant2)
+            else if (DeploymentDetailResponseVariant2 is { } __value1)
             {
-                deploymentDetailResponseVariant2?.Invoke(DeploymentDetailResponseVariant2!);
+                deploymentDetailResponseVariant2?.Invoke(__value1);
             }
         }
 

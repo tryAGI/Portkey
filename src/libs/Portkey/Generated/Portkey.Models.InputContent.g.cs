@@ -42,8 +42,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.InputText PickTextInput() => IsTextInput
-            ? TextInput!
+        public global::Portkey.InputText PickTextInput() => TextInput is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'TextInput' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.InputImage PickImageInput() => IsImageInput
-            ? ImageInput!
+        public global::Portkey.InputImage PickImageInput() => ImageInput is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ImageInput' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.InputFile PickFileInput() => IsFileInput
-            ? FileInput!
+        public global::Portkey.InputFile PickFileInput() => FileInput is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'FileInput' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -242,17 +242,17 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsTextInput && textInput != null)
+            if (TextInput is { } __value0 && textInput != null)
             {
-                return textInput(TextInput!);
+                return textInput(__value0);
             }
-            else if (IsImageInput && imageInput != null)
+            else if (ImageInput is { } __value1 && imageInput != null)
             {
-                return imageInput(ImageInput!);
+                return imageInput(__value1);
             }
-            else if (IsFileInput && fileInput != null)
+            else if (FileInput is { } __value2 && fileInput != null)
             {
-                return fileInput(FileInput!);
+                return fileInput(__value2);
             }
 
             return default(TResult);
@@ -274,17 +274,17 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsTextInput)
+            if (TextInput is { } __value0)
             {
-                textInput?.Invoke(TextInput!);
+                textInput?.Invoke(__value0);
             }
-            else if (IsImageInput)
+            else if (ImageInput is { } __value1)
             {
-                imageInput?.Invoke(ImageInput!);
+                imageInput?.Invoke(__value1);
             }
-            else if (IsFileInput)
+            else if (FileInput is { } __value2)
             {
-                fileInput?.Invoke(FileInput!);
+                fileInput?.Invoke(__value2);
             }
         }
 
@@ -302,17 +302,17 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsTextInput)
+            if (TextInput is { } __value0)
             {
-                textInput?.Invoke(TextInput!);
+                textInput?.Invoke(__value0);
             }
-            else if (IsImageInput)
+            else if (ImageInput is { } __value1)
             {
-                imageInput?.Invoke(ImageInput!);
+                imageInput?.Invoke(__value1);
             }
-            else if (IsFileInput)
+            else if (FileInput is { } __value2)
             {
-                fileInput?.Invoke(FileInput!);
+                fileInput?.Invoke(__value2);
             }
         }
 

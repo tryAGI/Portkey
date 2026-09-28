@@ -168,19 +168,19 @@ namespace Portkey.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.EasyInputMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.EasyInputMessage?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.EasyInputMessage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Message!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickMessage(), typeInfo);
             }
             else if (value.IsItem)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.Item), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.Item> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.Item).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Item!.Value, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickItem(), typeInfo);
             }
             else if (value.IsItemReference)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Portkey.ItemReference), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Portkey.ItemReference?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Portkey.ItemReference).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ItemReference!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickItemReference(), typeInfo);
             }
         }
     }

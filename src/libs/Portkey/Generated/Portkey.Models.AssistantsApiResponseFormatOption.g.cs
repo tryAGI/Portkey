@@ -44,8 +44,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.AssistantsApiResponseFormatOptionEnum PickEnum() => IsEnum
-            ? Enum!.Value
+        public global::Portkey.AssistantsApiResponseFormatOptionEnum PickEnum() => Enum is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Enum' but the value was {ToString()}.");
 
         /// <summary>
@@ -81,8 +81,8 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.AssistantsApiResponseFormat PickAssistantsApiResponseFormat() => IsAssistantsApiResponseFormat
-            ? AssistantsApiResponseFormat!
+        public global::Portkey.AssistantsApiResponseFormat PickAssistantsApiResponseFormat() => AssistantsApiResponseFormat is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'AssistantsApiResponseFormat' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -179,13 +179,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsEnum && @enum != null)
+            if (Enum is { } __value0 && @enum != null)
             {
-                return @enum(Enum!);
+                return @enum(__value0);
             }
-            else if (IsAssistantsApiResponseFormat && assistantsApiResponseFormat != null)
+            else if (AssistantsApiResponseFormat is { } __value1 && assistantsApiResponseFormat != null)
             {
-                return assistantsApiResponseFormat(AssistantsApiResponseFormat!);
+                return assistantsApiResponseFormat(__value1);
             }
 
             return default(TResult);
@@ -205,13 +205,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsEnum)
+            if (Enum is { } __value0)
             {
-                @enum?.Invoke(Enum!);
+                @enum?.Invoke(__value0);
             }
-            else if (IsAssistantsApiResponseFormat)
+            else if (AssistantsApiResponseFormat is { } __value1)
             {
-                assistantsApiResponseFormat?.Invoke(AssistantsApiResponseFormat!);
+                assistantsApiResponseFormat?.Invoke(__value1);
             }
         }
 
@@ -228,13 +228,13 @@ namespace Portkey
                 Validate();
             }
 
-            if (IsEnum)
+            if (Enum is { } __value0)
             {
-                @enum?.Invoke(Enum!);
+                @enum?.Invoke(__value0);
             }
-            else if (IsAssistantsApiResponseFormat)
+            else if (AssistantsApiResponseFormat is { } __value1)
             {
-                assistantsApiResponseFormat?.Invoke(AssistantsApiResponseFormat!);
+                assistantsApiResponseFormat?.Invoke(__value1);
             }
         }
 
