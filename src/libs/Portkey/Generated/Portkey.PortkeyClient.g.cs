@@ -181,6 +181,16 @@ namespace Portkey
         };
 
         /// <summary>
+        /// Create, List, Retrieve, Update, and Delete organisation egress allowlist entries trusted as custom hosts.
+        /// </summary>
+        public EgressAllowlistClient EgressAllowlist => new EgressAllowlistClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Get a vector representation of a given input that can be easily consumed by machine learning models and algorithms.
         /// </summary>
         public EmbeddingsClient Embeddings => new EmbeddingsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)

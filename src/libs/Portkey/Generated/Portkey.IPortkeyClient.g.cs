@@ -132,6 +132,11 @@ namespace Portkey
         public DeploymentsClient Deployments { get; }
 
         /// <summary>
+        /// Create, List, Retrieve, Update, and Delete organisation egress allowlist entries trusted as custom hosts.
+        /// </summary>
+        public EgressAllowlistClient EgressAllowlist { get; }
+
+        /// <summary>
         /// Get a vector representation of a given input that can be easily consumed by machine learning models and algorithms.
         /// </summary>
         public EmbeddingsClient Embeddings { get; }
