@@ -1508,6 +1508,11 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentPingResponseInbound))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentPingResponseInboundStatus), TypeInfoPropertyName = "DeploymentPingResponseInboundStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentPingResponseObject), TypeInfoPropertyName = "DeploymentPingResponseObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateEgressAllowlistRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateEgressAllowlistRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.EgressAllowlistEntry))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.EgressAllowlistEntryStatus), TypeInfoPropertyName = "EgressAllowlistEntryStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.EgressAllowlistEntryObject), TypeInfoPropertyName = "EgressAllowlistEntryObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateCollectionsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PutCollectionsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreatePromptRequest))]
@@ -1542,11 +1547,6 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PutAdminWorkspacesUsersRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PutAdminWorkspacesUsersRequestRole), TypeInfoPropertyName = "PutAdminWorkspacesUsersRequestRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateAdminWorkspacesRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateAdminWorkspacesRequestDefaults))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PutAdminWorkspacesRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PutAdminWorkspacesRequestDefaults))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateScimWorkspacesRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateScimWorkspacesRequestRole), TypeInfoPropertyName = "CreateScimWorkspacesRequestRole2")]
     internal sealed partial class SourceGenerationContextChunk2 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1578,6 +1578,11 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_12be480b1039da9e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObject>>), TypeInfoPropertyName = "RunStepDeltaStepDetailsToolCallsFunctionObject_5640d9ed7ecfcd45")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string?>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateAdminWorkspacesRequestDefaults))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PutAdminWorkspacesRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PutAdminWorkspacesRequestDefaults))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateScimWorkspacesRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateScimWorkspacesRequestRole), TypeInfoPropertyName = "CreateScimWorkspacesRequestRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.CustomLog, global::System.Collections.Generic.IList<global::Portkey.CustomLog>>), TypeInfoPropertyName = "OneOfCustomLogIListCustomLog2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.CustomLog>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.PutLogsExportsRequest))]
@@ -1825,6 +1830,11 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListDeploymentsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListDeploymentsResponseObject), TypeInfoPropertyName = "ListDeploymentsResponseObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.DeploymentListItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListEgressAllowlistResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListEgressAllowlistResponseObject), TypeInfoPropertyName = "ListEgressAllowlistResponseObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.EgressAllowlistEntry>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateEgressAllowlistEntryResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateEgressAllowlistEntryResponseObject), TypeInfoPropertyName = "CreateEgressAllowlistEntryResponseObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ModelPricingConfigCurrency?), TypeInfoPropertyName = "NullableModelPricingConfigCurrency2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ModelCalculateOperationOperation?), TypeInfoPropertyName = "NullableModelCalculateOperationOperation2")]
@@ -2053,16 +2063,6 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ResponseOutputItemAddedEventType?), TypeInfoPropertyName = "NullableResponseOutputItemAddedEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ResponseOutputItemDoneEventType?), TypeInfoPropertyName = "NullableResponseOutputItemDoneEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.TextResponseFormatConfiguration?), TypeInfoPropertyName = "NullableTextResponseFormatConfiguration2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.Tool?), TypeInfoPropertyName = "NullableTool2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.ToolChoiceOptions?, global::Portkey.ToolChoiceTypes, global::Portkey.ToolChoiceFunction>?), TypeInfoPropertyName = "NullableOneOfToolChoiceOptionsToolChoiceTypesToolChoiceFunction2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ToolChoiceOptions?), TypeInfoPropertyName = "NullableToolChoiceOptions2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ResponsePropertiesTruncation?), TypeInfoPropertyName = "NullableResponsePropertiesTruncation2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ResponseRefusalDeltaEventType?), TypeInfoPropertyName = "NullableResponseRefusalDeltaEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ResponseRefusalDoneEventType?), TypeInfoPropertyName = "NullableResponseRefusalDoneEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ResponseStreamEvent?), TypeInfoPropertyName = "NullableResponseStreamEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ResponseStreamEventDiscriminatorType?), TypeInfoPropertyName = "NullableResponseStreamEventDiscriminatorType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ResponseTextAnnotationDeltaEventType?), TypeInfoPropertyName = "NullableResponseTextAnnotationDeltaEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ResponseTextDeltaEventType?), TypeInfoPropertyName = "NullableResponseTextDeltaEventType2")]
     internal sealed partial class SourceGenerationContextChunk3 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -2094,6 +2094,16 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_12be480b1039da9e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObject>>), TypeInfoPropertyName = "RunStepDeltaStepDetailsToolCallsFunctionObject_5640d9ed7ecfcd45")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string?>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.Tool?), TypeInfoPropertyName = "NullableTool2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<global::Portkey.ToolChoiceOptions?, global::Portkey.ToolChoiceTypes, global::Portkey.ToolChoiceFunction>?), TypeInfoPropertyName = "NullableOneOfToolChoiceOptionsToolChoiceTypesToolChoiceFunction2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ToolChoiceOptions?), TypeInfoPropertyName = "NullableToolChoiceOptions2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ResponsePropertiesTruncation?), TypeInfoPropertyName = "NullableResponsePropertiesTruncation2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ResponseRefusalDeltaEventType?), TypeInfoPropertyName = "NullableResponseRefusalDeltaEventType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ResponseRefusalDoneEventType?), TypeInfoPropertyName = "NullableResponseRefusalDoneEventType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ResponseStreamEvent?), TypeInfoPropertyName = "NullableResponseStreamEvent2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ResponseStreamEventDiscriminatorType?), TypeInfoPropertyName = "NullableResponseStreamEventDiscriminatorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ResponseTextAnnotationDeltaEventType?), TypeInfoPropertyName = "NullableResponseTextAnnotationDeltaEventType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ResponseTextDeltaEventType?), TypeInfoPropertyName = "NullableResponseTextDeltaEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ResponseTextDoneEventType?), TypeInfoPropertyName = "NullableResponseTextDoneEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ResponseWebSearchCallCompletedEventType?), TypeInfoPropertyName = "NullableResponseWebSearchCallCompletedEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ResponseWebSearchCallInProgressEventType?), TypeInfoPropertyName = "NullableResponseWebSearchCallInProgressEventType2")]
@@ -2429,6 +2439,8 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentPingResponseOutboundStatus?), TypeInfoPropertyName = "NullableDeploymentPingResponseOutboundStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentPingResponseInboundStatus?), TypeInfoPropertyName = "NullableDeploymentPingResponseInboundStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentPingResponseObject?), TypeInfoPropertyName = "NullableDeploymentPingResponseObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.EgressAllowlistEntryStatus?), TypeInfoPropertyName = "NullableEgressAllowlistEntryStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.EgressAllowlistEntryObject?), TypeInfoPropertyName = "NullableEgressAllowlistEntryObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AnyOf<global::Portkey.OpenAIFinetuneJob, global::Portkey.BedrockFinetuneJob, global::Portkey.PortkeyFinetuneJob>?), TypeInfoPropertyName = "NullableAnyOfOpenAIFinetuneJobBedrockFinetuneJobPortkeyFinetuneJob2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AnyOf<global::Portkey.OpenAIBatchJob, global::Portkey.BedrockBatchJob, global::Portkey.VertexBatchJob, global::Portkey.PortkeyBatchJob>?), TypeInfoPropertyName = "NullableAnyOfOpenAIBatchJobBedrockBatchJobVertexBatchJobPortkeyBatchJob2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateVirtualKeysRequestProvider?), TypeInfoPropertyName = "NullableCreateVirtualKeysRequestProvider2")]
@@ -2523,6 +2535,8 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListSecretReferencesResponseObject?), TypeInfoPropertyName = "NullableListSecretReferencesResponseObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateSecretReferenceResponseObject?), TypeInfoPropertyName = "NullableCreateSecretReferenceResponseObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListDeploymentsResponseObject?), TypeInfoPropertyName = "NullableListDeploymentsResponseObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ListEgressAllowlistResponseObject?), TypeInfoPropertyName = "NullableListEgressAllowlistResponseObject2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateEgressAllowlistEntryResponseObject?), TypeInfoPropertyName = "NullableCreateEgressAllowlistEntryResponseObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.ModelCalculateOperation, global::Portkey.ModelValueReference>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.WorkspaceInvite>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.Model11>))]
@@ -2561,20 +2575,6 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.Includable>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OpenAIFile>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.FineTuningJobEvent>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.FineTuningJobCheckpoint>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.Embedding>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.RerankDocument>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.RerankResult>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OcrPage>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OcrPageImage>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.CreateTranscriptionRequestTimestampGranularitie>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.TranscriptionWord>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.TranscriptionSegment>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.Coordinate>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<string, global::System.Collections.Generic.List<global::Portkey.InputContent>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.FineTuningIntegration>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.CodeInterpreterFileOutputFile>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.CodeInterpreterToolOutput>))]
     internal sealed partial class SourceGenerationContextChunk4 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -2606,6 +2606,20 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_12be480b1039da9e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObject>>), TypeInfoPropertyName = "RunStepDeltaStepDetailsToolCallsFunctionObject_5640d9ed7ecfcd45")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string?>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.FineTuningJobCheckpoint>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.Embedding>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.RerankDocument>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.RerankResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OcrPage>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OcrPageImage>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.CreateTranscriptionRequestTimestampGranularitie>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.TranscriptionWord>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.TranscriptionSegment>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.Coordinate>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.OneOf<string, global::System.Collections.Generic.List<global::Portkey.InputContent>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.FineTuningIntegration>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.CodeInterpreterFileOutputFile>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.CodeInterpreterToolOutput>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.ComparisonFilter, object>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.ComputerToolCallSafetyCheck>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.ReasoningItemSummaryItem>))]
@@ -2742,6 +2756,7 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.GetAnalyticsGroupsWorkspacesResponseDataItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.SecretReferenceListItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.DeploymentListItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.EgressAllowlistEntry>))]
     internal sealed partial class SourceGenerationContextChunk5 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -4797,6 +4812,14 @@ namespace Portkey
 
                     || typeToConvert == typeof(global::Portkey.DeploymentPingResponseObject?)
 
+                    || typeToConvert == typeof(global::Portkey.EgressAllowlistEntryStatus)
+
+                    || typeToConvert == typeof(global::Portkey.EgressAllowlistEntryStatus?)
+
+                    || typeToConvert == typeof(global::Portkey.EgressAllowlistEntryObject)
+
+                    || typeToConvert == typeof(global::Portkey.EgressAllowlistEntryObject?)
+
                     || typeToConvert == typeof(global::Portkey.CreateVirtualKeysRequestProvider)
 
                     || typeToConvert == typeof(global::Portkey.CreateVirtualKeysRequestProvider?)
@@ -5139,7 +5162,15 @@ namespace Portkey
 
                     || typeToConvert == typeof(global::Portkey.ListDeploymentsResponseObject)
 
-                    || typeToConvert == typeof(global::Portkey.ListDeploymentsResponseObject?);
+                    || typeToConvert == typeof(global::Portkey.ListDeploymentsResponseObject?)
+
+                    || typeToConvert == typeof(global::Portkey.ListEgressAllowlistResponseObject)
+
+                    || typeToConvert == typeof(global::Portkey.ListEgressAllowlistResponseObject?)
+
+                    || typeToConvert == typeof(global::Portkey.CreateEgressAllowlistEntryResponseObject)
+
+                    || typeToConvert == typeof(global::Portkey.CreateEgressAllowlistEntryResponseObject?);
             }
 
             public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
@@ -9826,6 +9857,26 @@ namespace Portkey
                     return new global::Portkey.JsonConverters.DeploymentPingResponseObjectNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::Portkey.EgressAllowlistEntryStatus))
+                {
+                    return new global::Portkey.JsonConverters.EgressAllowlistEntryStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Portkey.EgressAllowlistEntryStatus?))
+                {
+                    return new global::Portkey.JsonConverters.EgressAllowlistEntryStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Portkey.EgressAllowlistEntryObject))
+                {
+                    return new global::Portkey.JsonConverters.EgressAllowlistEntryObjectJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Portkey.EgressAllowlistEntryObject?))
+                {
+                    return new global::Portkey.JsonConverters.EgressAllowlistEntryObjectNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Portkey.CreateVirtualKeysRequestProvider))
                 {
                     return new global::Portkey.JsonConverters.CreateVirtualKeysRequestProviderJsonConverter();
@@ -10684,6 +10735,26 @@ namespace Portkey
                 if (typeToConvert == typeof(global::Portkey.ListDeploymentsResponseObject?))
                 {
                     return new global::Portkey.JsonConverters.ListDeploymentsResponseObjectNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Portkey.ListEgressAllowlistResponseObject))
+                {
+                    return new global::Portkey.JsonConverters.ListEgressAllowlistResponseObjectJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Portkey.ListEgressAllowlistResponseObject?))
+                {
+                    return new global::Portkey.JsonConverters.ListEgressAllowlistResponseObjectNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Portkey.CreateEgressAllowlistEntryResponseObject))
+                {
+                    return new global::Portkey.JsonConverters.CreateEgressAllowlistEntryResponseObjectJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Portkey.CreateEgressAllowlistEntryResponseObject?))
+                {
+                    return new global::Portkey.JsonConverters.CreateEgressAllowlistEntryResponseObjectNullableJsonConverter();
                 }
                 throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
             }

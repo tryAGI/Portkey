@@ -5593,1147 +5593,1187 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateCollectionsRequest? Type1390 { get; set; }
+        public global::Portkey.CreateEgressAllowlistRequest? Type1390 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.PutCollectionsRequest? Type1391 { get; set; }
+        public global::Portkey.UpdateEgressAllowlistRequest? Type1391 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreatePromptRequest? Type1392 { get; set; }
+        public global::Portkey.EgressAllowlistEntry? Type1392 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.UpdatePromptRequest? Type1393 { get; set; }
+        public global::Portkey.EgressAllowlistEntryStatus? Type1393 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.UpdatePromptVersionRequest? Type1394 { get; set; }
+        public global::Portkey.EgressAllowlistEntryObject? Type1394 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.UpdatePromptDefaultRequest? Type1395 { get; set; }
+        public global::Portkey.CreateCollectionsRequest? Type1395 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreatePromptPartialRequest? Type1396 { get; set; }
+        public global::Portkey.PutCollectionsRequest? Type1396 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.UpdatePromptPartialRequest? Type1397 { get; set; }
+        public global::Portkey.CreatePromptRequest? Type1397 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.UpdatePromptPartialDefaultRequest? Type1398 { get; set; }
+        public global::Portkey.UpdatePromptRequest? Type1398 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreatePromptCompletionRequest2? Type1399 { get; set; }
+        public global::Portkey.UpdatePromptVersionRequest? Type1399 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreatePromptRenderRequest2? Type1400 { get; set; }
+        public global::Portkey.UpdatePromptDefaultRequest? Type1400 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.AnyOf<global::Portkey.OpenAIFinetuneJob, global::Portkey.BedrockFinetuneJob, global::Portkey.PortkeyFinetuneJob>? Type1401 { get; set; }
+        public global::Portkey.CreatePromptPartialRequest? Type1401 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.AnyOf<global::Portkey.OpenAIBatchJob, global::Portkey.BedrockBatchJob, global::Portkey.VertexBatchJob, global::Portkey.PortkeyBatchJob>? Type1402 { get; set; }
+        public global::Portkey.UpdatePromptPartialRequest? Type1402 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateConfigRequest? Type1403 { get; set; }
+        public global::Portkey.UpdatePromptPartialDefaultRequest? Type1403 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.UpdateConfigRequest? Type1404 { get; set; }
+        public global::Portkey.CreatePromptCompletionRequest2? Type1404 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.UpdateConfigRequestConfig? Type1405 { get; set; }
+        public global::Portkey.CreatePromptRenderRequest2? Type1405 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateProvidersRequest? Type1406 { get; set; }
+        public global::Portkey.AnyOf<global::Portkey.OpenAIFinetuneJob, global::Portkey.BedrockFinetuneJob, global::Portkey.PortkeyFinetuneJob>? Type1406 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.PutProvidersRequest? Type1407 { get; set; }
+        public global::Portkey.AnyOf<global::Portkey.OpenAIBatchJob, global::Portkey.BedrockBatchJob, global::Portkey.VertexBatchJob, global::Portkey.PortkeyBatchJob>? Type1407 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateVirtualKeysRequest? Type1408 { get; set; }
+        public global::Portkey.CreateConfigRequest? Type1408 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateVirtualKeysRequestProvider? Type1409 { get; set; }
+        public global::Portkey.UpdateConfigRequest? Type1409 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.CreateVirtualKeysRequestDeploymentConfigItem>? Type1410 { get; set; }
+        public global::Portkey.UpdateConfigRequestConfig? Type1410 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateVirtualKeysRequestDeploymentConfigItem? Type1411 { get; set; }
+        public global::Portkey.CreateProvidersRequest? Type1411 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.PutVirtualKeysRequest? Type1412 { get; set; }
+        public global::Portkey.PutProvidersRequest? Type1412 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.PutVirtualKeysRequestDeploymentConfigItem>? Type1413 { get; set; }
+        public global::Portkey.CreateVirtualKeysRequest? Type1413 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.PutVirtualKeysRequestDeploymentConfigItem? Type1414 { get; set; }
+        public global::Portkey.CreateVirtualKeysRequestProvider? Type1414 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.PutAdminUsersRequest? Type1415 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.CreateVirtualKeysRequestDeploymentConfigItem>? Type1415 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.PutAdminUsersRequestRole? Type1416 { get; set; }
+        public global::Portkey.CreateVirtualKeysRequestDeploymentConfigItem? Type1416 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateAdminWorkspacesUsersRequest? Type1417 { get; set; }
+        public global::Portkey.PutVirtualKeysRequest? Type1417 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.CreateAdminWorkspacesUsersRequestUser>? Type1418 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.PutVirtualKeysRequestDeploymentConfigItem>? Type1418 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateAdminWorkspacesUsersRequestUser? Type1419 { get; set; }
+        public global::Portkey.PutVirtualKeysRequestDeploymentConfigItem? Type1419 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateAdminWorkspacesUsersRequestUserRole? Type1420 { get; set; }
+        public global::Portkey.PutAdminUsersRequest? Type1420 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.PutAdminWorkspacesUsersRequest? Type1421 { get; set; }
+        public global::Portkey.PutAdminUsersRequestRole? Type1421 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.PutAdminWorkspacesUsersRequestRole? Type1422 { get; set; }
+        public global::Portkey.CreateAdminWorkspacesUsersRequest? Type1422 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateAdminWorkspacesRequest? Type1423 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.CreateAdminWorkspacesUsersRequestUser>? Type1423 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateAdminWorkspacesRequestDefaults? Type1424 { get; set; }
+        public global::Portkey.CreateAdminWorkspacesUsersRequestUser? Type1424 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.PutAdminWorkspacesRequest? Type1425 { get; set; }
+        public global::Portkey.CreateAdminWorkspacesUsersRequestUserRole? Type1425 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.PutAdminWorkspacesRequestDefaults? Type1426 { get; set; }
+        public global::Portkey.PutAdminWorkspacesUsersRequest? Type1426 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateScimWorkspacesRequest? Type1427 { get; set; }
+        public global::Portkey.PutAdminWorkspacesUsersRequestRole? Type1427 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateScimWorkspacesRequestRole? Type1428 { get; set; }
+        public global::Portkey.CreateAdminWorkspacesRequest? Type1428 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.OneOf<global::Portkey.CustomLog, global::System.Collections.Generic.IList<global::Portkey.CustomLog>>? Type1429 { get; set; }
+        public global::Portkey.CreateAdminWorkspacesRequestDefaults? Type1429 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.CustomLog>? Type1430 { get; set; }
+        public global::Portkey.PutAdminWorkspacesRequest? Type1430 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.PutLogsExportsRequest? Type1431 { get; set; }
+        public global::Portkey.PutAdminWorkspacesRequestDefaults? Type1431 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateLogsExportsRequest? Type1432 { get; set; }
+        public global::Portkey.CreateScimWorkspacesRequest? Type1432 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListModelsSort? Type1433 { get; set; }
+        public global::Portkey.CreateScimWorkspacesRequestRole? Type1433 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListModelsOrder? Type1434 { get; set; }
+        public global::Portkey.OneOf<global::Portkey.CustomLog, global::System.Collections.Generic.IList<global::Portkey.CustomLog>>? Type1434 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListAssistantsOrder? Type1435 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.CustomLog>? Type1435 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListInputItemsOrder? Type1436 { get; set; }
+        public global::Portkey.PutLogsExportsRequest? Type1436 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListMessagesOrder? Type1437 { get; set; }
+        public global::Portkey.CreateLogsExportsRequest? Type1437 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListRunsOrder? Type1438 { get; set; }
+        public global::Portkey.ListModelsSort? Type1438 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListRunStepsOrder? Type1439 { get; set; }
+        public global::Portkey.ListModelsOrder? Type1439 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListVectorStoresOrder? Type1440 { get; set; }
+        public global::Portkey.ListAssistantsOrder? Type1440 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListVectorStoreFilesOrder? Type1441 { get; set; }
+        public global::Portkey.ListInputItemsOrder? Type1441 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListVectorStoreFilesFilter? Type1442 { get; set; }
+        public global::Portkey.ListMessagesOrder? Type1442 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListFilesInVectorStoreBatchOrder? Type1443 { get; set; }
+        public global::Portkey.ListRunsOrder? Type1443 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListFilesInVectorStoreBatchFilter? Type1444 { get; set; }
+        public global::Portkey.ListRunStepsOrder? Type1444 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetIntegrationsType? Type1445 { get; set; }
+        public global::Portkey.ListVectorStoresOrder? Type1445 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAdminUsersInvitesRole? Type1446 { get; set; }
+        public global::Portkey.ListVectorStoreFilesOrder? Type1446 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAdminUsersInvitesStatus? Type1447 { get; set; }
+        public global::Portkey.ListVectorStoreFilesFilter? Type1447 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAdminUsersRole? Type1448 { get; set; }
+        public global::Portkey.ListFilesInVectorStoreBatchOrder? Type1448 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAdminWorkspacesUsersRole? Type1449 { get; set; }
+        public global::Portkey.ListFilesInVectorStoreBatchFilter? Type1449 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAdminWorkspacesStatus? Type1450 { get; set; }
+        public global::Portkey.GetIntegrationsType? Type1450 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetScimWorkspacesRole? Type1451 { get; set; }
+        public global::Portkey.GetAdminUsersInvitesRole? Type1451 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.McpIntegrationsListType? Type1452 { get; set; }
+        public global::Portkey.GetAdminUsersInvitesStatus? Type1452 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.McpIntegrationCapabilitiesListType? Type1453 { get; set; }
+        public global::Portkey.GetAdminUsersRole? Type1453 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.McpServerCapabilitiesListType? Type1454 { get; set; }
+        public global::Portkey.GetAdminWorkspacesUsersRole? Type1454 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetLogsPathFormat? Type1455 { get; set; }
+        public global::Portkey.GetAdminWorkspacesStatus? Type1455 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetLogsType? Type1456 { get; set; }
+        public global::Portkey.GetScimWorkspacesRole? Type1456 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAuditLogsMethod? Type1457 { get; set; }
+        public global::Portkey.McpIntegrationsListType? Type1457 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAuditLogsUserType? Type1458 { get; set; }
+        public global::Portkey.McpIntegrationCapabilitiesListType? Type1458 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateKeysType? Type1459 { get; set; }
+        public global::Portkey.McpServerCapabilitiesListType? Type1459 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateKeysSubType? Type1460 { get; set; }
+        public global::Portkey.GetLogsPathFormat? Type1460 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListUsageLimitsPoliciesStatus? Type1461 { get; set; }
+        public global::Portkey.GetLogsType? Type1461 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListUsageLimitsPoliciesType? Type1462 { get; set; }
+        public global::Portkey.GetAuditLogsMethod? Type1462 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetUsageLimitsPolicyStatus? Type1463 { get; set; }
+        public global::Portkey.GetAuditLogsUserType? Type1463 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListUsageLimitsPolicyEntitiesStatus? Type1464 { get; set; }
+        public global::Portkey.CreateKeysType? Type1464 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListRateLimitsPoliciesStatus? Type1465 { get; set; }
+        public global::Portkey.CreateKeysSubType? Type1465 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListRateLimitsPoliciesType? Type1466 { get; set; }
+        public global::Portkey.ListUsageLimitsPoliciesStatus? Type1466 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListRateLimitsPoliciesUnit? Type1467 { get; set; }
+        public global::Portkey.ListUsageLimitsPoliciesType? Type1467 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListRateLimitsPoliciesTarget? Type1468 { get; set; }
+        public global::Portkey.GetUsageLimitsPolicyStatus? Type1468 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetRateLimitsPolicyStatus? Type1469 { get; set; }
+        public global::Portkey.ListUsageLimitsPolicyEntitiesStatus? Type1469 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsProviderIncludeTotal? Type1470 { get; set; }
+        public global::Portkey.ListRateLimitsPoliciesStatus? Type1470 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListSecretReferencesManagerType? Type1471 { get; set; }
+        public global::Portkey.ListRateLimitsPoliciesType? Type1471 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListDeploymentsStatus? Type1472 { get; set; }
+        public global::Portkey.ListRateLimitsPoliciesUnit? Type1472 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListDeploymentsType? Type1473 { get; set; }
+        public global::Portkey.ListRateLimitsPoliciesTarget? Type1473 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.OneOf<string, global::System.Collections.Generic.Dictionary<string, string>>? Type1474 { get; set; }
+        public global::Portkey.GetRateLimitsPolicyStatus? Type1474 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateCollectionsResponse? Type1475 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsProviderIncludeTotal? Type1475 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetCollectionsResponse? Type1476 { get; set; }
+        public global::Portkey.ListSecretReferencesManagerType? Type1476 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.CollectionWithDetails>? Type1477 { get; set; }
+        public global::Portkey.ListDeploymentsStatus? Type1477 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreatePromptResponse? Type1478 { get; set; }
+        public global::Portkey.ListDeploymentsType? Type1478 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreatePromptResponseObject? Type1479 { get; set; }
+        public global::Portkey.OneOf<string, global::System.Collections.Generic.Dictionary<string, string>>? Type1479 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListPromptsResponse? Type1480 { get; set; }
+        public global::Portkey.CreateCollectionsResponse? Type1480 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.PromptSummary>? Type1481 { get; set; }
+        public global::Portkey.GetCollectionsResponse? Type1481 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.UpdatePromptResponse? Type1482 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.CollectionWithDetails>? Type1482 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.PromptVersionSummary>? Type1483 { get; set; }
+        public global::Portkey.CreatePromptResponse? Type1483 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreatePromptPartialResponse? Type1484 { get; set; }
+        public global::Portkey.CreatePromptResponseObject? Type1484 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.PromptPartialSummary>? Type1485 { get; set; }
+        public global::Portkey.ListPromptsResponse? Type1485 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.UpdatePromptPartialResponse? Type1486 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.PromptSummary>? Type1486 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.PromptPartialVersion>? Type1487 { get; set; }
+        public global::Portkey.UpdatePromptResponse? Type1487 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreatePromptCompletionResponse? Type1488 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.PromptVersionSummary>? Type1488 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.OneOf<global::Portkey.CreateChatCompletionResponse, global::Portkey.CreateCompletionResponse>? Type1489 { get; set; }
+        public global::Portkey.CreatePromptPartialResponse? Type1489 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.OneOf<global::Portkey.CreateTranscriptionResponseJson, global::Portkey.CreateTranscriptionResponseVerboseJson>? Type1490 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.PromptPartialSummary>? Type1490 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.OneOf<global::Portkey.CreateTranslationResponseJson, global::Portkey.CreateTranslationResponseVerboseJson>? Type1491 { get; set; }
+        public global::Portkey.UpdatePromptPartialResponse? Type1491 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListConfigsResponse? Type1492 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.PromptPartialVersion>? Type1492 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.ListConfigsResponseDataItem>? Type1493 { get; set; }
+        public global::Portkey.CreatePromptCompletionResponse? Type1493 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListConfigsResponseDataItem? Type1494 { get; set; }
+        public global::Portkey.OneOf<global::Portkey.CreateChatCompletionResponse, global::Portkey.CreateCompletionResponse>? Type1494 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateConfigResponse? Type1495 { get; set; }
+        public global::Portkey.OneOf<global::Portkey.CreateTranscriptionResponseJson, global::Portkey.CreateTranscriptionResponseVerboseJson>? Type1495 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateConfigResponseData? Type1496 { get; set; }
+        public global::Portkey.OneOf<global::Portkey.CreateTranslationResponseJson, global::Portkey.CreateTranslationResponseVerboseJson>? Type1496 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetConfigResponse? Type1497 { get; set; }
+        public global::Portkey.ListConfigsResponse? Type1497 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetConfigResponseData? Type1498 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.ListConfigsResponseDataItem>? Type1498 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetConfigResponseDataConfig? Type1499 { get; set; }
+        public global::Portkey.ListConfigsResponseDataItem? Type1499 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetConfigResponseDataConfigRetry? Type1500 { get; set; }
+        public global::Portkey.CreateConfigResponse? Type1500 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetConfigResponseDataConfigCache? Type1501 { get; set; }
+        public global::Portkey.CreateConfigResponseData? Type1501 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetConfigResponseDataConfigStrategy? Type1502 { get; set; }
+        public global::Portkey.GetConfigResponse? Type1502 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetConfigResponseDataConfigTarget>? Type1503 { get; set; }
+        public global::Portkey.GetConfigResponseData? Type1503 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetConfigResponseDataConfigTarget? Type1504 { get; set; }
+        public global::Portkey.GetConfigResponseDataConfig? Type1504 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.UpdateConfigResponse? Type1505 { get; set; }
+        public global::Portkey.GetConfigResponseDataConfigRetry? Type1505 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.UpdateConfigResponseData? Type1506 { get; set; }
+        public global::Portkey.GetConfigResponseDataConfigCache? Type1506 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListConfigVersionsResponse? Type1507 { get; set; }
+        public global::Portkey.GetConfigResponseDataConfigStrategy? Type1507 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.ListConfigVersionsResponseDataItem>? Type1508 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetConfigResponseDataConfigTarget>? Type1508 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListConfigVersionsResponseDataItem? Type1509 { get; set; }
+        public global::Portkey.GetConfigResponseDataConfigTarget? Type1509 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetIntegrationsResponse? Type1510 { get; set; }
+        public global::Portkey.UpdateConfigResponse? Type1510 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetIntegrationsResponseObject? Type1511 { get; set; }
+        public global::Portkey.UpdateConfigResponseData? Type1511 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.IntegrationList>? Type1512 { get; set; }
+        public global::Portkey.ListConfigVersionsResponse? Type1512 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateIntegrationsResponse? Type1513 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.ListConfigVersionsResponseDataItem>? Type1513 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetProvidersResponse? Type1514 { get; set; }
+        public global::Portkey.ListConfigVersionsResponseDataItem? Type1514 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetProvidersResponseObject? Type1515 { get; set; }
+        public global::Portkey.GetIntegrationsResponse? Type1515 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.Providers>? Type1516 { get; set; }
+        public global::Portkey.GetIntegrationsResponseObject? Type1516 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateProvidersResponse? Type1517 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.IntegrationList>? Type1517 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.PutProvidersResponse? Type1518 { get; set; }
+        public global::Portkey.CreateIntegrationsResponse? Type1518 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetVirtualKeysResponse? Type1519 { get; set; }
+        public global::Portkey.GetProvidersResponse? Type1519 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetVirtualKeysResponseObject? Type1520 { get; set; }
+        public global::Portkey.GetProvidersResponseObject? Type1520 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.VirtualKeys>? Type1521 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.Providers>? Type1521 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetVirtualKeysResponse2? Type1522 { get; set; }
+        public global::Portkey.CreateProvidersResponse? Type1522 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetVirtualKeysResponseData? Type1523 { get; set; }
+        public global::Portkey.PutProvidersResponse? Type1523 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateVirtualKeysResponse? Type1524 { get; set; }
+        public global::Portkey.GetVirtualKeysResponse? Type1524 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateVirtualKeysResponseData? Type1525 { get; set; }
+        public global::Portkey.GetVirtualKeysResponseObject? Type1525 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateVirtualKeysResponse2? Type1526 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.VirtualKeys>? Type1526 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateVirtualKeysResponseData2? Type1527 { get; set; }
+        public global::Portkey.GetVirtualKeysResponse2? Type1527 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetVirtualKeysResponse3? Type1528 { get; set; }
+        public global::Portkey.GetVirtualKeysResponseData? Type1528 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetVirtualKeysResponseData2? Type1529 { get; set; }
+        public global::Portkey.CreateVirtualKeysResponse? Type1529 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.PutVirtualKeysResponse2? Type1530 { get; set; }
+        public global::Portkey.CreateVirtualKeysResponseData? Type1530 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.PutVirtualKeysResponseData? Type1531 { get; set; }
+        public global::Portkey.CreateVirtualKeysResponse2? Type1531 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.DeleteVirtualKeysResponse2? Type1532 { get; set; }
+        public global::Portkey.CreateVirtualKeysResponseData2? Type1532 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.DeleteVirtualKeysResponseData? Type1533 { get; set; }
+        public global::Portkey.GetVirtualKeysResponse3? Type1533 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateAdminUsersInvitesResendResponse? Type1534 { get; set; }
+        public global::Portkey.GetVirtualKeysResponseData2? Type1534 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetScimWorkspacesResponse? Type1535 { get; set; }
+        public global::Portkey.PutVirtualKeysResponse2? Type1535 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetScimWorkspacesResponseMapping>? Type1536 { get; set; }
+        public global::Portkey.PutVirtualKeysResponseData? Type1536 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetScimWorkspacesResponseMapping? Type1537 { get; set; }
+        public global::Portkey.DeleteVirtualKeysResponse2? Type1537 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetScimWorkspacesResponseMappingRole? Type1538 { get; set; }
+        public global::Portkey.DeleteVirtualKeysResponseData? Type1538 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.DeleteScimWorkspacesResponse? Type1539 { get; set; }
+        public global::Portkey.CreateAdminUsersInvitesResendResponse? Type1539 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.OneOf<global::Portkey.McpIntegrationWorkspacesListResponse, global::Portkey.McpIntegrationWorkspacesLegacyResponse>? Type1540 { get; set; }
+        public global::Portkey.GetScimWorkspacesResponse? Type1540 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateKeysResponse? Type1541 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetScimWorkspacesResponseMapping>? Type1541 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateKeysResponseObject? Type1542 { get; set; }
+        public global::Portkey.GetScimWorkspacesResponseMapping? Type1542 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsRequestsResponse? Type1543 { get; set; }
+        public global::Portkey.GetScimWorkspacesResponseMappingRole? Type1543 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsRequestsResponseSummary? Type1544 { get; set; }
+        public global::Portkey.DeleteScimWorkspacesResponse? Type1544 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsRequestsResponseDataPoint>? Type1545 { get; set; }
+        public global::Portkey.OneOf<global::Portkey.McpIntegrationWorkspacesListResponse, global::Portkey.McpIntegrationWorkspacesLegacyResponse>? Type1545 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsRequestsResponseDataPoint? Type1546 { get; set; }
+        public global::Portkey.CreateKeysResponse? Type1546 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsRequestsResponseObject? Type1547 { get; set; }
+        public global::Portkey.CreateKeysResponseObject? Type1547 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsCostResponse? Type1548 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsRequestsResponse? Type1548 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsCostResponseSummary? Type1549 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsRequestsResponseSummary? Type1549 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsCostResponseDataPoint>? Type1550 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsRequestsResponseDataPoint>? Type1550 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsCostResponseDataPoint? Type1551 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsRequestsResponseDataPoint? Type1551 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsCostResponseObject? Type1552 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsRequestsResponseObject? Type1552 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsLatencyResponse? Type1553 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsCostResponse? Type1553 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsLatencyResponseSummary? Type1554 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsCostResponseSummary? Type1554 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsLatencyResponseDataPoint>? Type1555 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsCostResponseDataPoint>? Type1555 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsLatencyResponseDataPoint? Type1556 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsCostResponseDataPoint? Type1556 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsLatencyResponseObject? Type1557 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsCostResponseObject? Type1557 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsTokensResponse? Type1558 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsLatencyResponse? Type1558 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsTokensResponseSummary? Type1559 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsLatencyResponseSummary? Type1559 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsTokensResponseDataPoint>? Type1560 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsLatencyResponseDataPoint>? Type1560 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsTokensResponseDataPoint? Type1561 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsLatencyResponseDataPoint? Type1561 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsTokensResponseObject? Type1562 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsLatencyResponseObject? Type1562 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsUsersResponse? Type1563 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsTokensResponse? Type1563 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsUsersResponseSummary? Type1564 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsTokensResponseSummary? Type1564 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsUsersResponseDataPoint>? Type1565 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsTokensResponseDataPoint>? Type1565 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsUsersResponseDataPoint? Type1566 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsTokensResponseDataPoint? Type1566 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsUsersResponseObject? Type1567 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsTokensResponseObject? Type1567 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsUsersRequestsResponse? Type1568 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsUsersResponse? Type1568 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsUsersRequestsResponseSummary? Type1569 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsUsersResponseSummary? Type1569 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsUsersRequestsResponseDataPoint>? Type1570 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsUsersResponseDataPoint>? Type1570 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsUsersRequestsResponseDataPoint? Type1571 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsUsersResponseDataPoint? Type1571 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsUsersRequestsResponseObject? Type1572 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsUsersResponseObject? Type1572 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsErrorsResponse? Type1573 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsUsersRequestsResponse? Type1573 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsErrorsResponseSummary? Type1574 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsUsersRequestsResponseSummary? Type1574 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsErrorsResponseDataPoint>? Type1575 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsUsersRequestsResponseDataPoint>? Type1575 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsErrorsResponseDataPoint? Type1576 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsUsersRequestsResponseDataPoint? Type1576 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsErrorsResponseObject? Type1577 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsUsersRequestsResponseObject? Type1577 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsErrorsRateResponse? Type1578 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsErrorsResponse? Type1578 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsErrorsRateResponseSummary? Type1579 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsErrorsResponseSummary? Type1579 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsErrorsRateResponseDataPoint>? Type1580 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsErrorsResponseDataPoint>? Type1580 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsErrorsRateResponseDataPoint? Type1581 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsErrorsResponseDataPoint? Type1581 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsErrorsRateResponseObject? Type1582 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsErrorsResponseObject? Type1582 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsErrorsStacksResponse? Type1583 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsErrorsRateResponse? Type1583 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsErrorsStacksResponseSummary? Type1584 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsErrorsRateResponseSummary? Type1584 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsErrorsStacksResponseDataPoint>? Type1585 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsErrorsRateResponseDataPoint>? Type1585 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsErrorsStacksResponseDataPoint? Type1586 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsErrorsRateResponseDataPoint? Type1586 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsErrorsStacksResponseDataPointStat>? Type1587 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsErrorsRateResponseObject? Type1587 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsErrorsStacksResponseDataPointStat? Type1588 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsErrorsStacksResponse? Type1588 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsErrorsStacksResponseObject? Type1589 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsErrorsStacksResponseSummary? Type1589 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponse? Type1590 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsErrorsStacksResponseDataPoint>? Type1590 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponseSummary? Type1591 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsErrorsStacksResponseDataPoint? Type1591 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponseDataPoint>? Type1592 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsErrorsStacksResponseDataPointStat>? Type1592 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponseDataPoint? Type1593 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsErrorsStacksResponseDataPointStat? Type1593 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponseObject? Type1594 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsErrorsStacksResponseObject? Type1594 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsRequestsRescuedResponse? Type1595 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponse? Type1595 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsRequestsRescuedResponseSummary? Type1596 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponseSummary? Type1596 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsRequestsRescuedResponseDataPoint>? Type1597 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponseDataPoint>? Type1597 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsRequestsRescuedResponseDataPoint? Type1598 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponseDataPoint? Type1598 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsRequestsRescuedResponseDataPointRetryItem>? Type1599 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsErrorsStatusCodesResponseObject? Type1599 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsRequestsRescuedResponseDataPointRetryItem? Type1600 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsRequestsRescuedResponse? Type1600 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsRequestsRescuedResponseObject? Type1601 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsRequestsRescuedResponseSummary? Type1601 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsCacheHitRateResponse? Type1602 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsRequestsRescuedResponseDataPoint>? Type1602 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsCacheHitRateResponseSummary? Type1603 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsRequestsRescuedResponseDataPoint? Type1603 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsCacheHitRateResponseDataPoint>? Type1604 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsRequestsRescuedResponseDataPointRetryItem>? Type1604 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsCacheHitRateResponseDataPoint? Type1605 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsRequestsRescuedResponseDataPointRetryItem? Type1605 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsCacheHitRateResponseObject? Type1606 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsRequestsRescuedResponseObject? Type1606 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsCacheLatencyResponse? Type1607 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsCacheHitRateResponse? Type1607 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsCacheLatencyResponseDataPoint>? Type1608 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsCacheHitRateResponseSummary? Type1608 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsCacheLatencyResponseDataPoint? Type1609 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsCacheHitRateResponseDataPoint>? Type1609 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsCacheLatencyResponseObject? Type1610 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsCacheHitRateResponseDataPoint? Type1610 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsFeedbacksResponse? Type1611 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsCacheHitRateResponseObject? Type1611 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsFeedbacksResponseSummary? Type1612 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsCacheLatencyResponse? Type1612 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsFeedbacksResponseDataPoint>? Type1613 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsCacheLatencyResponseDataPoint>? Type1613 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsFeedbacksResponseDataPoint? Type1614 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsCacheLatencyResponseDataPoint? Type1614 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsFeedbacksResponseObject? Type1615 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsCacheLatencyResponseObject? Type1615 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsFeedbacksScoresResponse? Type1616 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsFeedbacksResponse? Type1616 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsFeedbacksScoresResponseSummary? Type1617 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsFeedbacksResponseSummary? Type1617 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsFeedbacksScoresResponseDataPoint>? Type1618 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsFeedbacksResponseDataPoint>? Type1618 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsFeedbacksScoresResponseDataPoint? Type1619 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsFeedbacksResponseDataPoint? Type1619 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsFeedbacksScoresResponseObject? Type1620 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsFeedbacksResponseObject? Type1620 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsFeedbacksWeightedResponse? Type1621 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsFeedbacksScoresResponse? Type1621 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsFeedbacksWeightedResponseSummary? Type1622 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsFeedbacksScoresResponseSummary? Type1622 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsFeedbacksWeightedResponseDataPoint>? Type1623 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsFeedbacksScoresResponseDataPoint>? Type1623 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsFeedbacksWeightedResponseDataPoint? Type1624 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsFeedbacksScoresResponseDataPoint? Type1624 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsFeedbacksWeightedResponseObject? Type1625 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsFeedbacksScoresResponseObject? Type1625 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsFeedbacksAiModelsResponse? Type1626 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsFeedbacksWeightedResponse? Type1626 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsFeedbacksAiModelsResponseDataPoint>? Type1627 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsFeedbacksWeightedResponseSummary? Type1627 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsFeedbacksAiModelsResponseDataPoint? Type1628 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsFeedbacksWeightedResponseDataPoint>? Type1628 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGraphsFeedbacksAiModelsResponseObject? Type1629 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsFeedbacksWeightedResponseDataPoint? Type1629 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsSummaryCacheResponse? Type1630 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsFeedbacksWeightedResponseObject? Type1630 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsSummaryCacheResponseSummary? Type1631 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsFeedbacksAiModelsResponse? Type1631 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsSummaryCacheResponseObject? Type1632 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGraphsFeedbacksAiModelsResponseDataPoint>? Type1632 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsUsersResponse? Type1633 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsFeedbacksAiModelsResponseDataPoint? Type1633 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsUsersResponseObject? Type1634 { get; set; }
+        public global::Portkey.GetAnalyticsGraphsFeedbacksAiModelsResponseObject? Type1634 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGroupsUsersResponseDataItem>? Type1635 { get; set; }
+        public global::Portkey.GetAnalyticsSummaryCacheResponse? Type1635 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsUsersResponseDataItem? Type1636 { get; set; }
+        public global::Portkey.GetAnalyticsSummaryCacheResponseSummary? Type1636 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsUsersResponseDataItemObject? Type1637 { get; set; }
+        public global::Portkey.GetAnalyticsSummaryCacheResponseObject? Type1637 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsAiModelsResponse? Type1638 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsUsersResponse? Type1638 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsAiModelsResponseObject? Type1639 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsUsersResponseObject? Type1639 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGroupsAiModelsResponseDataItem>? Type1640 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGroupsUsersResponseDataItem>? Type1640 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsAiModelsResponseDataItem? Type1641 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsUsersResponseDataItem? Type1641 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsAiModelsResponseDataItemObject? Type1642 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsUsersResponseDataItemObject? Type1642 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsProviderResponse? Type1643 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsAiModelsResponse? Type1643 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsProviderResponseObject? Type1644 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsAiModelsResponseObject? Type1644 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGroupsProviderResponseDataItem>? Type1645 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGroupsAiModelsResponseDataItem>? Type1645 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsProviderResponseDataItem? Type1646 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsAiModelsResponseDataItem? Type1646 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsMetadataResponse? Type1647 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsAiModelsResponseDataItemObject? Type1647 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsMetadataResponseObject? Type1648 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsProviderResponse? Type1648 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGroupsMetadataResponseDataItem>? Type1649 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsProviderResponseObject? Type1649 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsMetadataResponseDataItem? Type1650 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGroupsProviderResponseDataItem>? Type1650 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsMetadataResponseDataItemObject? Type1651 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsProviderResponseDataItem? Type1651 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsMcpResponse? Type1652 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsMetadataResponse? Type1652 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsMcpResponseObject? Type1653 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsMetadataResponseObject? Type1653 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGroupsMcpResponseDataItem>? Type1654 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGroupsMetadataResponseDataItem>? Type1654 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsMcpResponseDataItem? Type1655 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsMetadataResponseDataItem? Type1655 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsMcpResponseDataItemObject? Type1656 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsMetadataResponseDataItemObject? Type1656 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsA2aResponse? Type1657 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsMcpResponse? Type1657 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsA2aResponseObject? Type1658 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsMcpResponseObject? Type1658 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGroupsA2aResponseDataItem>? Type1659 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGroupsMcpResponseDataItem>? Type1659 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsA2aResponseDataItem? Type1660 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsMcpResponseDataItem? Type1660 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsA2aResponseDataItemObject? Type1661 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsMcpResponseDataItemObject? Type1661 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsWorkspacesResponse? Type1662 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsA2aResponse? Type1662 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsWorkspacesResponseObject? Type1663 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsA2aResponseObject? Type1663 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGroupsWorkspacesResponseDataItem>? Type1664 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGroupsA2aResponseDataItem>? Type1664 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsWorkspacesResponseDataItem? Type1665 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsA2aResponseDataItem? Type1665 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetAnalyticsGroupsWorkspacesResponseDataItemObject? Type1666 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsA2aResponseDataItemObject? Type1666 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.GetModelPricingResponse? Type1667 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsWorkspacesResponse? Type1667 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListSecretReferencesResponse? Type1668 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsWorkspacesResponseObject? Type1668 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListSecretReferencesResponseObject? Type1669 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.GetAnalyticsGroupsWorkspacesResponseDataItem>? Type1669 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.SecretReferenceListItem>? Type1670 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsWorkspacesResponseDataItem? Type1670 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateSecretReferenceResponse? Type1671 { get; set; }
+        public global::Portkey.GetAnalyticsGroupsWorkspacesResponseDataItemObject? Type1671 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.CreateSecretReferenceResponseObject? Type1672 { get; set; }
+        public global::Portkey.GetModelPricingResponse? Type1672 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListDeploymentsResponse? Type1673 { get; set; }
+        public global::Portkey.ListSecretReferencesResponse? Type1673 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Portkey.ListDeploymentsResponseObject? Type1674 { get; set; }
+        public global::Portkey.ListSecretReferencesResponseObject? Type1674 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Portkey.DeploymentListItem>? Type1675 { get; set; }
+        public global::System.Collections.Generic.IList<global::Portkey.SecretReferenceListItem>? Type1675 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.CreateSecretReferenceResponse? Type1676 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.CreateSecretReferenceResponseObject? Type1677 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.ListDeploymentsResponse? Type1678 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.ListDeploymentsResponseObject? Type1679 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.IList<global::Portkey.DeploymentListItem>? Type1680 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.ListEgressAllowlistResponse? Type1681 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.ListEgressAllowlistResponseObject? Type1682 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.IList<global::Portkey.EgressAllowlistEntry>? Type1683 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.CreateEgressAllowlistEntryResponse? Type1684 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Portkey.CreateEgressAllowlistEntryResponseObject? Type1685 { get; set; }
 
         /// <summary>
         ///
@@ -7475,5 +7515,9 @@ namespace Portkey
         ///
         /// </summary>
         public global::System.Collections.Generic.List<global::Portkey.DeploymentListItem>? ListType184 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.List<global::Portkey.EgressAllowlistEntry>? ListType185 { get; set; }
     }
 }
