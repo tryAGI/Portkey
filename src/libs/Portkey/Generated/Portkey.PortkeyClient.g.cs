@@ -51,6 +51,16 @@ namespace Portkey
 
 
         /// <summary>
+        /// Manage access policies that allow or deny users, groups, and agents access to MCP servers and providers.
+        /// </summary>
+        public AccessPoliciesClient AccessPolicies => new AccessPoliciesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Get data points for graphical representation.
         /// </summary>
         public AnalyticsGraphsClient AnalyticsGraphs => new AnalyticsGraphsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
