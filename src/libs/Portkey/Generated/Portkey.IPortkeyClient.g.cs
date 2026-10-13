@@ -67,6 +67,11 @@ namespace Portkey
 
 
         /// <summary>
+        /// Manage access policies that allow or deny users, groups, and agents access to MCP servers and providers.
+        /// </summary>
+        public AccessPoliciesClient AccessPolicies { get; }
+
+        /// <summary>
         /// Get data points for graphical representation.
         /// </summary>
         public AnalyticsGraphsClient AnalyticsGraphs { get; }
