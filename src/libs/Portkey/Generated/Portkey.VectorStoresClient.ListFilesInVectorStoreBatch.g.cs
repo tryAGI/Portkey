@@ -160,7 +160,7 @@ namespace Portkey
 
                             var __pathBuilder = new global::Portkey.PathBuilder(
                                 path: $"/vector_stores/{vectorStoreId}/file_batches/{batchId}/files",
-                                baseUri: HttpClient.BaseAddress);
+                                baseUri: HttpClient.BaseAddress ?? new global::System.Uri("https://api.portkey.ai/v1", global::System.UriKind.RelativeOrAbsolute));
                             __pathBuilder
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("order", order?.ToValueString())

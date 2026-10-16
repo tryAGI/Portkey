@@ -112,7 +112,7 @@ namespace Portkey
 
                             var __pathBuilder = new global::Portkey.PathBuilder(
                                 path: $"/vector_stores/{vectorStoreId}/files/{fileId}",
-                                baseUri: HttpClient.BaseAddress);
+                                baseUri: HttpClient.BaseAddress ?? new global::System.Uri("https://api.portkey.ai/v1", global::System.UriKind.RelativeOrAbsolute));
                             var __path = __pathBuilder.ToString();
                 __path = global::Portkey.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,

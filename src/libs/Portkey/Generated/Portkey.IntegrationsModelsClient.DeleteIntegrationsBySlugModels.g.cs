@@ -118,7 +118,7 @@ namespace Portkey
 
                             var __pathBuilder = new global::Portkey.PathBuilder(
                                 path: $"/integrations/{slug}/models",
-                                baseUri: HttpClient.BaseAddress);
+                                baseUri: HttpClient.BaseAddress ?? new global::System.Uri("https://api.portkey.ai/v1", global::System.UriKind.RelativeOrAbsolute));
                             __pathBuilder
                                 .AddRequiredParameter("slugs", slugs)
                                 ;
