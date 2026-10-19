@@ -8,6 +8,8 @@ namespace Portkey
         /// Get provider grouped data.
         /// </summary>
         /// <param name="workspaceSlug"></param>
+        /// <param name="includeAllWorkspaces"></param>
+        /// <param name="excludeWorkspaceSlugs"></param>
         /// <param name="timeOfGenerationMin">
         /// Example: 2026-02-23T14:20:31+05:30
         /// </param>
@@ -46,6 +48,8 @@ namespace Portkey
             string workspaceSlug,
             global::System.DateTime timeOfGenerationMin,
             global::System.DateTime timeOfGenerationMax,
+            bool? includeAllWorkspaces = default,
+            string? excludeWorkspaceSlugs = default,
             int? totalUnitsMin = default,
             int? totalUnitsMax = default,
             double? costMin = default,
@@ -75,6 +79,8 @@ namespace Portkey
         /// Get provider grouped data.
         /// </summary>
         /// <param name="workspaceSlug"></param>
+        /// <param name="includeAllWorkspaces"></param>
+        /// <param name="excludeWorkspaceSlugs"></param>
         /// <param name="timeOfGenerationMin">
         /// Example: 2026-02-23T14:20:31+05:30
         /// </param>
@@ -113,6 +119,8 @@ namespace Portkey
             string workspaceSlug,
             global::System.DateTime timeOfGenerationMin,
             global::System.DateTime timeOfGenerationMax,
+            bool? includeAllWorkspaces = default,
+            string? excludeWorkspaceSlugs = default,
             int? totalUnitsMin = default,
             int? totalUnitsMax = default,
             double? costMin = default,

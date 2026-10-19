@@ -247,6 +247,11 @@ namespace Portkey
         public McpServersUserAccessClient McpServersUserAccess { get; }
 
         /// <summary>
+        /// Anthropic-native Messages API. Send a structured list of input messages and receive a response. Supported on Anthropic, AWS Bedrock, Google Vertex AI, and Azure AI Foundry (Anthropic models).
+        /// </summary>
+        public MessagesClient Messages { get; }
+
+        /// <summary>
         /// Model pricing configurations for 2300+ LLMs across 40+ providers.
         /// </summary>
         public ModelPricingClient ModelPricing { get; }

@@ -56,6 +56,8 @@ namespace Portkey
             ref string? virtualKeys,
             ref string? configs,
             ref string workspaceSlug,
+            ref bool? includeAllWorkspaces,
+            ref string? excludeWorkspaceSlugs,
             ref string? apiKeyIds,
             ref string? metadata,
             ref string? aiOrgModel,
@@ -82,6 +84,8 @@ namespace Portkey
             string? virtualKeys,
             string? configs,
             string workspaceSlug,
+            bool? includeAllWorkspaces,
+            string? excludeWorkspaceSlugs,
             string? apiKeyIds,
             string? metadata,
             string? aiOrgModel,
@@ -121,6 +125,8 @@ namespace Portkey
         /// <param name="virtualKeys"></param>
         /// <param name="configs"></param>
         /// <param name="workspaceSlug"></param>
+        /// <param name="includeAllWorkspaces"></param>
+        /// <param name="excludeWorkspaceSlugs"></param>
         /// <param name="apiKeyIds"></param>
         /// <param name="metadata"></param>
         /// <param name="aiOrgModel"></param>
@@ -148,6 +154,8 @@ namespace Portkey
             double? weightedFeedbackMax = default,
             string? virtualKeys = default,
             string? configs = default,
+            bool? includeAllWorkspaces = default,
+            string? excludeWorkspaceSlugs = default,
             string? apiKeyIds = default,
             string? metadata = default,
             string? aiOrgModel = default,
@@ -175,6 +183,8 @@ namespace Portkey
                 weightedFeedbackMax: weightedFeedbackMax,
                 virtualKeys: virtualKeys,
                 configs: configs,
+                includeAllWorkspaces: includeAllWorkspaces,
+                excludeWorkspaceSlugs: excludeWorkspaceSlugs,
                 apiKeyIds: apiKeyIds,
                 metadata: metadata,
                 aiOrgModel: aiOrgModel,
@@ -211,6 +221,8 @@ namespace Portkey
         /// <param name="virtualKeys"></param>
         /// <param name="configs"></param>
         /// <param name="workspaceSlug"></param>
+        /// <param name="includeAllWorkspaces"></param>
+        /// <param name="excludeWorkspaceSlugs"></param>
         /// <param name="apiKeyIds"></param>
         /// <param name="metadata"></param>
         /// <param name="aiOrgModel"></param>
@@ -238,6 +250,8 @@ namespace Portkey
             double? weightedFeedbackMax = default,
             string? virtualKeys = default,
             string? configs = default,
+            bool? includeAllWorkspaces = default,
+            string? excludeWorkspaceSlugs = default,
             string? apiKeyIds = default,
             string? metadata = default,
             string? aiOrgModel = default,
@@ -268,6 +282,8 @@ namespace Portkey
                 virtualKeys: ref virtualKeys,
                 configs: ref configs,
                 workspaceSlug: ref workspaceSlug,
+                includeAllWorkspaces: ref includeAllWorkspaces,
+                excludeWorkspaceSlugs: ref excludeWorkspaceSlugs,
                 apiKeyIds: ref apiKeyIds,
                 metadata: ref metadata,
                 aiOrgModel: ref aiOrgModel,
@@ -321,6 +337,8 @@ namespace Portkey
                                 .AddOptionalParameter("virtual_keys", virtualKeys)
                                 .AddOptionalParameter("configs", configs)
                                 .AddRequiredParameter("workspace_slug", workspaceSlug)
+                                .AddOptionalParameter("include_all_workspaces", includeAllWorkspaces?.ToString().ToLowerInvariant())
+                                .AddOptionalParameter("exclude_workspace_slugs", excludeWorkspaceSlugs)
                                 .AddOptionalParameter("api_key_ids", apiKeyIds)
                                 .AddOptionalParameter("metadata", metadata)
                                 .AddOptionalParameter("ai_org_model", aiOrgModel)
@@ -385,6 +403,8 @@ namespace Portkey
                     virtualKeys: virtualKeys,
                     configs: configs,
                     workspaceSlug: workspaceSlug,
+                    includeAllWorkspaces: includeAllWorkspaces,
+                    excludeWorkspaceSlugs: excludeWorkspaceSlugs,
                     apiKeyIds: apiKeyIds,
                     metadata: metadata,
                     aiOrgModel: aiOrgModel,

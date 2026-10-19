@@ -27,6 +27,8 @@ namespace Portkey
         /// <param name="virtualKeys"></param>
         /// <param name="configs"></param>
         /// <param name="workspaceSlug"></param>
+        /// <param name="includeAllWorkspaces"></param>
+        /// <param name="excludeWorkspaceSlugs"></param>
         /// <param name="apiKeyIds"></param>
         /// <param name="metadata"></param>
         /// <param name="aiOrgModel"></param>
@@ -54,6 +56,8 @@ namespace Portkey
             double? weightedFeedbackMax = default,
             string? virtualKeys = default,
             string? configs = default,
+            bool? includeAllWorkspaces = default,
+            string? excludeWorkspaceSlugs = default,
             string? apiKeyIds = default,
             string? metadata = default,
             string? aiOrgModel = default,
@@ -86,6 +90,8 @@ namespace Portkey
         /// <param name="virtualKeys"></param>
         /// <param name="configs"></param>
         /// <param name="workspaceSlug"></param>
+        /// <param name="includeAllWorkspaces"></param>
+        /// <param name="excludeWorkspaceSlugs"></param>
         /// <param name="apiKeyIds"></param>
         /// <param name="metadata"></param>
         /// <param name="aiOrgModel"></param>
@@ -113,6 +119,8 @@ namespace Portkey
             double? weightedFeedbackMax = default,
             string? virtualKeys = default,
             string? configs = default,
+            bool? includeAllWorkspaces = default,
+            string? excludeWorkspaceSlugs = default,
             string? apiKeyIds = default,
             string? metadata = default,
             string? aiOrgModel = default,
