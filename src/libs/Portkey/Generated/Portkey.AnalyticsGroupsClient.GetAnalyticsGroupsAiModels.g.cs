@@ -41,6 +41,8 @@ namespace Portkey
         partial void PrepareGetAnalyticsGroupsAiModelsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string workspaceSlug,
+            ref bool? includeAllWorkspaces,
+            ref string? excludeWorkspaceSlugs,
             ref global::System.DateTime timeOfGenerationMin,
             ref global::System.DateTime timeOfGenerationMax,
             ref int? totalUnitsMin,
@@ -69,6 +71,8 @@ namespace Portkey
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string workspaceSlug,
+            bool? includeAllWorkspaces,
+            string? excludeWorkspaceSlugs,
             global::System.DateTime timeOfGenerationMin,
             global::System.DateTime timeOfGenerationMax,
             int? totalUnitsMin,
@@ -106,6 +110,8 @@ namespace Portkey
         /// Get ai model grouped data.
         /// </summary>
         /// <param name="workspaceSlug"></param>
+        /// <param name="includeAllWorkspaces"></param>
+        /// <param name="excludeWorkspaceSlugs"></param>
         /// <param name="timeOfGenerationMin">
         /// Example: 2026-02-23T14:20:31+05:30
         /// </param>
@@ -141,6 +147,8 @@ namespace Portkey
             string workspaceSlug,
             global::System.DateTime timeOfGenerationMin,
             global::System.DateTime timeOfGenerationMax,
+            bool? includeAllWorkspaces = default,
+            string? excludeWorkspaceSlugs = default,
             int? totalUnitsMin = default,
             int? totalUnitsMax = default,
             double? costMin = default,
@@ -170,6 +178,8 @@ namespace Portkey
                 workspaceSlug: workspaceSlug,
                 timeOfGenerationMin: timeOfGenerationMin,
                 timeOfGenerationMax: timeOfGenerationMax,
+                includeAllWorkspaces: includeAllWorkspaces,
+                excludeWorkspaceSlugs: excludeWorkspaceSlugs,
                 totalUnitsMin: totalUnitsMin,
                 totalUnitsMax: totalUnitsMax,
                 costMin: costMin,
@@ -202,6 +212,8 @@ namespace Portkey
         /// Get ai model grouped data.
         /// </summary>
         /// <param name="workspaceSlug"></param>
+        /// <param name="includeAllWorkspaces"></param>
+        /// <param name="excludeWorkspaceSlugs"></param>
         /// <param name="timeOfGenerationMin">
         /// Example: 2026-02-23T14:20:31+05:30
         /// </param>
@@ -237,6 +249,8 @@ namespace Portkey
             string workspaceSlug,
             global::System.DateTime timeOfGenerationMin,
             global::System.DateTime timeOfGenerationMax,
+            bool? includeAllWorkspaces = default,
+            string? excludeWorkspaceSlugs = default,
             int? totalUnitsMin = default,
             int? totalUnitsMax = default,
             double? costMin = default,
@@ -267,6 +281,8 @@ namespace Portkey
             PrepareGetAnalyticsGroupsAiModelsArguments(
                 httpClient: HttpClient,
                 workspaceSlug: ref workspaceSlug,
+                includeAllWorkspaces: ref includeAllWorkspaces,
+                excludeWorkspaceSlugs: ref excludeWorkspaceSlugs,
                 timeOfGenerationMin: ref timeOfGenerationMin,
                 timeOfGenerationMax: ref timeOfGenerationMax,
                 totalUnitsMin: ref totalUnitsMin,
@@ -322,6 +338,8 @@ namespace Portkey
                                 defaultBaseUrl: "https://api.portkey.ai/v1"));
                             __pathBuilder
                                 .AddRequiredParameter("workspace_slug", workspaceSlug)
+                                .AddOptionalParameter("include_all_workspaces", includeAllWorkspaces?.ToString().ToLowerInvariant())
+                                .AddOptionalParameter("exclude_workspace_slugs", excludeWorkspaceSlugs)
                                 .AddRequiredParameter("time_of_generation_min", timeOfGenerationMin.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddRequiredParameter("time_of_generation_max", timeOfGenerationMax.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("total_units_min", totalUnitsMin?.ToString())
@@ -388,6 +406,8 @@ namespace Portkey
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     workspaceSlug: workspaceSlug,
+                    includeAllWorkspaces: includeAllWorkspaces,
+                    excludeWorkspaceSlugs: excludeWorkspaceSlugs,
                     timeOfGenerationMin: timeOfGenerationMin,
                     timeOfGenerationMax: timeOfGenerationMax,
                     totalUnitsMin: totalUnitsMin,

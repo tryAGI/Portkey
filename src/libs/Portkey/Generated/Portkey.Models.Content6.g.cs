@@ -7,7 +7,7 @@ namespace Portkey
     /// <summary>
     /// Multi-modal input and output contents.
     /// </summary>
-    public readonly partial struct Content3 : global::System.IEquatable<Content3>
+    public readonly partial struct Content6 : global::System.IEquatable<Content6>
     {
         /// <summary>
         ///
@@ -85,17 +85,17 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator Content3(global::Portkey.InputContent value) => new Content3((global::Portkey.InputContent?)value);
+        public static implicit operator Content6(global::Portkey.InputContent value) => new Content6((global::Portkey.InputContent?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Portkey.InputContent?(Content3 @this) => @this.InputContent;
+        public static implicit operator global::Portkey.InputContent?(Content6 @this) => @this.InputContent;
 
         /// <summary>
         ///
         /// </summary>
-        public Content3(global::Portkey.InputContent? value)
+        public Content6(global::Portkey.InputContent? value)
         {
             InputContent = value;
         }
@@ -103,22 +103,22 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public static Content3 FromInputContent(global::Portkey.InputContent? value) => new Content3(value);
+        public static Content6 FromInputContent(global::Portkey.InputContent? value) => new Content6(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator Content3(global::Portkey.OutputContent value) => new Content3((global::Portkey.OutputContent?)value);
+        public static implicit operator Content6(global::Portkey.OutputContent value) => new Content6((global::Portkey.OutputContent?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Portkey.OutputContent?(Content3 @this) => @this.OutputContent;
+        public static implicit operator global::Portkey.OutputContent?(Content6 @this) => @this.OutputContent;
 
         /// <summary>
         ///
         /// </summary>
-        public Content3(global::Portkey.OutputContent? value)
+        public Content6(global::Portkey.OutputContent? value)
         {
             OutputContent = value;
         }
@@ -126,12 +126,12 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public static Content3 FromOutputContent(global::Portkey.OutputContent? value) => new Content3(value);
+        public static Content6 FromOutputContent(global::Portkey.OutputContent? value) => new Content6(value);
 
         /// <summary>
         ///
         /// </summary>
-        public Content3(
+        public Content6(
             global::Portkey.InputContent? inputContent,
             global::Portkey.OutputContent? outputContent
             )
@@ -260,7 +260,7 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public bool Equals(Content3 other)
+        public bool Equals(Content6 other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Portkey.InputContent?>.Default.Equals(InputContent, other.InputContent) &&
@@ -271,15 +271,15 @@ namespace Portkey
         /// <summary>
         ///
         /// </summary>
-        public static bool operator ==(Content3 obj1, Content3 obj2)
+        public static bool operator ==(Content6 obj1, Content6 obj2)
         {
-            return global::System.Collections.Generic.EqualityComparer<Content3>.Default.Equals(obj1, obj2);
+            return global::System.Collections.Generic.EqualityComparer<Content6>.Default.Equals(obj1, obj2);
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static bool operator !=(Content3 obj1, Content3 obj2)
+        public static bool operator !=(Content6 obj1, Content6 obj2)
         {
             return !(obj1 == obj2);
         }
@@ -289,7 +289,7 @@ namespace Portkey
         /// </summary>
         public override bool Equals(object? obj)
         {
-            return obj is Content3 o && Equals(o);
+            return obj is Content6 o && Equals(o);
         }
     }
 }

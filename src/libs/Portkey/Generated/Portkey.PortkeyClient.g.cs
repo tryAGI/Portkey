@@ -411,6 +411,16 @@ namespace Portkey
         };
 
         /// <summary>
+        /// Anthropic-native Messages API. Send a structured list of input messages and receive a response. Supported on Anthropic, AWS Bedrock, Google Vertex AI, and Azure AI Foundry (Anthropic models).
+        /// </summary>
+        public MessagesClient Messages => new MessagesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Model pricing configurations for 2300+ LLMs across 40+ providers.
         /// </summary>
         public ModelPricingClient ModelPricing => new ModelPricingClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
