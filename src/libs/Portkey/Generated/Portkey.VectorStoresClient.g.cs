@@ -37,14 +37,14 @@ namespace Portkey
 
         internal global::Portkey.AutoSDKServerConfiguration AutoSDKServerConfiguration { get; set; } = new global::Portkey.AutoSDKServerConfiguration();
 
-        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Portkey.VectorStoresSourceGenerationContext.Default);
+        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext>? JsonSerializerContextProvider { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
-            get => JsonSerializerContextProvider.Value;
+            get => JsonSerializerContextProvider?.Value ?? global::Portkey.VectorStoresSourceGenerationContext.Default;
             set => JsonSerializerContextProvider = new(() => value);
         }
 
