@@ -11,7 +11,7 @@ namespace Portkey
     public sealed partial class CountMessageTokensRequest
     {
         /// <summary>
-        /// The model identifier (same format as CreateMessageRequest).<br/>
+        /// The model identifier (same format as CreateAnthropicMessageRequest).<br/>
         /// Example: claude-sonnet-4-6-20251101
         /// </summary>
         /// <example>claude-sonnet-4-6-20251101</example>
@@ -61,7 +61,7 @@ namespace Portkey
         /// Initializes a new instance of the <see cref="CountMessageTokensRequest" /> class.
         /// </summary>
         /// <param name="model">
-        /// The model identifier (same format as CreateMessageRequest).<br/>
+        /// The model identifier (same format as CreateAnthropicMessageRequest).<br/>
         /// Example: claude-sonnet-4-6-20251101
         /// </param>
         /// <param name="messages"></param>

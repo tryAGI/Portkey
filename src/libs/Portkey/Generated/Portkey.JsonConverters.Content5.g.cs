@@ -4,10 +4,10 @@
 namespace Portkey.JsonConverters
 {
     /// <inheritdoc />
-    public class Content6JsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Portkey.Content6>
+    public class Content5JsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Portkey.Content5>
     {
         /// <inheritdoc />
-        public override global::Portkey.Content6 Read(
+        public override global::Portkey.Content5 Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -143,7 +143,7 @@ namespace Portkey.JsonConverters
                 }
             }
 
-            var __value = new global::Portkey.Content6(
+            var __value = new global::Portkey.Content5(
                 inputContent,
 
                 outputContent
@@ -155,7 +155,7 @@ namespace Portkey.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::Portkey.Content6 value,
+            global::Portkey.Content5 value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));

@@ -63,7 +63,7 @@ namespace Portkey
         /// <param name="xPortkeySpanName"></param>
         /// <param name="xPortkeyMetadata"></param>
         /// <param name="model">
-        /// The model identifier (same format as CreateMessageRequest).<br/>
+        /// The model identifier (same format as CreateAnthropicMessageRequest).<br/>
         /// Example: claude-sonnet-4-6-20251101
         /// </param>
         /// <param name="messages"></param>
