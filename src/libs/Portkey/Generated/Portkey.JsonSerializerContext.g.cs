@@ -33,6 +33,7 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string[]))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AnthropicTextContent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AnthropicTextContentType), TypeInfoPropertyName = "AnthropicTextContentType2")]
@@ -526,7 +527,6 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.Content5), TypeInfoPropertyName = "Content52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CostsResult))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CostsResultObject), TypeInfoPropertyName = "CostsResultObject2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CostsResultAmount))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -558,6 +558,7 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_12be480b1039da9e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObject>>), TypeInfoPropertyName = "RunStepDeltaStepDetailsToolCallsFunctionObject_5640d9ed7ecfcd45")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string?>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CostsResultAmount))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.Reasoning))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ReasoningEffort), TypeInfoPropertyName = "ReasoningEffort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.ReasoningGenerateSummary), TypeInfoPropertyName = "ReasoningGenerateSummary2")]
@@ -1036,7 +1037,6 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DoneEventEvent), TypeInfoPropertyName = "DoneEventEvent2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DoneEventData), TypeInfoPropertyName = "DoneEventData2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.Batch))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.BatchObject), TypeInfoPropertyName = "BatchObject2")]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1068,6 +1068,7 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_12be480b1039da9e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObject>>), TypeInfoPropertyName = "RunStepDeltaStepDetailsToolCallsFunctionObject_5640d9ed7ecfcd45")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string?>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.BatchObject), TypeInfoPropertyName = "BatchObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.BatchErrors))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Portkey.BatchErrorsDataItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.BatchErrorsDataItem))]
@@ -1546,7 +1547,6 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentCreateResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentCreateResponseObject), TypeInfoPropertyName = "DeploymentCreateResponseObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentListItem))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentListItemType), TypeInfoPropertyName = "DeploymentListItemType2")]
     internal sealed partial class SourceGenerationContextChunk2 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1578,6 +1578,7 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_12be480b1039da9e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObject>>), TypeInfoPropertyName = "RunStepDeltaStepDetailsToolCallsFunctionObject_5640d9ed7ecfcd45")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string?>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentListItemType), TypeInfoPropertyName = "DeploymentListItemType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentListItemStatus), TypeInfoPropertyName = "DeploymentListItemStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentListItemConnectionStatus), TypeInfoPropertyName = "DeploymentListItemConnectionStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.DeploymentListItemObject), TypeInfoPropertyName = "DeploymentListItemObject2")]
@@ -2060,7 +2061,6 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateImageEditRequestModel?), TypeInfoPropertyName = "NullableCreateImageEditRequestModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateImageEditRequestSize?), TypeInfoPropertyName = "NullableCreateImageEditRequestSize2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateImageEditRequestResponseFormat?), TypeInfoPropertyName = "NullableCreateImageEditRequestResponseFormat2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AnyOf<string, global::Portkey.CreateImageVariationRequestModel?>?), TypeInfoPropertyName = "NullableAnyOfStringCreateImageVariationRequestModel2")]
     internal sealed partial class SourceGenerationContextChunk3 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -2092,6 +2092,7 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_12be480b1039da9e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObject>>), TypeInfoPropertyName = "RunStepDeltaStepDetailsToolCallsFunctionObject_5640d9ed7ecfcd45")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string?>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AnyOf<string, global::Portkey.CreateImageVariationRequestModel?>?), TypeInfoPropertyName = "NullableAnyOfStringCreateImageVariationRequestModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateImageVariationRequestModel?), TypeInfoPropertyName = "NullableCreateImageVariationRequestModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateImageVariationRequestResponseFormat?), TypeInfoPropertyName = "NullableCreateImageVariationRequestResponseFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.CreateImageVariationRequestSize?), TypeInfoPropertyName = "NullableCreateImageVariationRequestSize2")]
@@ -2572,7 +2573,6 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.UpdateAccessPolicyRequestEffect?), TypeInfoPropertyName = "NullableUpdateAccessPolicyRequestEffect2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AccessPolicyEffect?), TypeInfoPropertyName = "NullableAccessPolicyEffect2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AccessPolicyStatus?), TypeInfoPropertyName = "NullableAccessPolicyStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AccessPolicyObject?), TypeInfoPropertyName = "NullableAccessPolicyObject2")]
     internal sealed partial class SourceGenerationContextChunk4 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -2604,6 +2604,7 @@ namespace Portkey
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.ChatCompletionRequestSystemMessage, global::Portkey.ChatCompletionRequestUserMessage, global::Portkey.FineTuneChatCompletionRequestAssistantMessage, global::Portkey.FineTuneChatCompletionRequestFunctionMessage?>>), TypeInfoPropertyName = "FineTuneChatCompletionRequestFunctionMessage_12be480b1039da9e")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Portkey.OneOf<global::Portkey.RunStepDeltaStepDetailsToolCallsCodeObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFileSearchObject, global::Portkey.RunStepDeltaStepDetailsToolCallsFunctionObject>>), TypeInfoPropertyName = "RunStepDeltaStepDetailsToolCallsFunctionObject_5640d9ed7ecfcd45")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string?>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AccessPolicyObject?), TypeInfoPropertyName = "NullableAccessPolicyObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AccessPolicyListItemEffect?), TypeInfoPropertyName = "NullableAccessPolicyListItemEffect2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AccessPolicyListItemStatus?), TypeInfoPropertyName = "NullableAccessPolicyListItemStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Portkey.AccessPolicyListItemObject?), TypeInfoPropertyName = "NullableAccessPolicyListItemObject2")]
