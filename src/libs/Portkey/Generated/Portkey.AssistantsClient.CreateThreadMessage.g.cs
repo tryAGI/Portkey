@@ -6,7 +6,7 @@ namespace Portkey
     public partial class AssistantsClient
     {
 
-        private static readonly global::Portkey.AutoSDKServer[] s_CreateMessageServers = new global::Portkey.AutoSDKServer[]
+        private static readonly global::Portkey.AutoSDKServer[] s_CreateThreadMessageServers = new global::Portkey.AutoSDKServer[]
         {            new global::Portkey.AutoSDKServer(
                 id: "https-api-portkey-ai-v1",
                 name: "Portkey API Public Endpoint",
@@ -20,7 +20,7 @@ namespace Portkey
         };
 
 
-        private static readonly global::Portkey.EndPointSecurityRequirement s_CreateMessageSecurityRequirement0 =
+        private static readonly global::Portkey.EndPointSecurityRequirement s_CreateThreadMessageSecurityRequirement0 =
             new global::Portkey.EndPointSecurityRequirement
             {
                 Authorizations = new global::Portkey.EndPointAuthorizationRequirement[]
@@ -34,24 +34,24 @@ namespace Portkey
                     },
                 },
             };
-        private static readonly global::Portkey.EndPointSecurityRequirement[] s_CreateMessageSecurityRequirements =
+        private static readonly global::Portkey.EndPointSecurityRequirement[] s_CreateThreadMessageSecurityRequirements =
             new global::Portkey.EndPointSecurityRequirement[]
-            {                s_CreateMessageSecurityRequirement0,
+            {                s_CreateThreadMessageSecurityRequirement0,
             };
-        partial void PrepareCreateMessageArguments(
+        partial void PrepareCreateThreadMessageArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string threadId,
             global::Portkey.CreateMessageRequest request);
-        partial void PrepareCreateMessageRequest(
+        partial void PrepareCreateThreadMessageRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string threadId,
             global::Portkey.CreateMessageRequest request);
-        partial void ProcessCreateMessageResponse(
+        partial void ProcessCreateThreadMessageResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessCreateMessageResponseContent(
+        partial void ProcessCreateThreadMessageResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
@@ -64,14 +64,14 @@ namespace Portkey
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Portkey.MessageObject> CreateMessageAsync(
+        public async global::System.Threading.Tasks.Task<global::Portkey.MessageObject> CreateThreadMessageAsync(
             string threadId,
 
             global::Portkey.CreateMessageRequest request,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await CreateMessageAsResponseAsync(
+            var __response = await CreateThreadMessageAsResponseAsync(
                 threadId: threadId,
 
                 request: request,
@@ -89,7 +89,7 @@ namespace Portkey
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.MessageObject>> CreateMessageAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.MessageObject>> CreateThreadMessageAsResponseAsync(
             string threadId,
 
             global::Portkey.CreateMessageRequest request,
@@ -100,7 +100,7 @@ namespace Portkey
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareCreateMessageArguments(
+            PrepareCreateThreadMessageArguments(
                 httpClient: HttpClient,
                 threadId: ref threadId,
                 request: request);
@@ -108,8 +108,8 @@ namespace Portkey
 
             var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CreateMessageSecurityRequirements,
-                operationName: "CreateMessageAsync");
+                securityRequirements: s_CreateThreadMessageSecurityRequirements,
+                operationName: "CreateThreadMessageAsync");
 
             using var __timeoutCancellationTokenSource = global::Portkey.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -131,7 +131,7 @@ namespace Portkey
                             var __pathBuilder = new global::Portkey.PathBuilder(
                                 path: $"/threads/{threadId}/messages",
                                 baseUri: ResolveBaseUri(
-                                servers: s_CreateMessageServers,
+                                servers: s_CreateThreadMessageServers,
                                 defaultBaseUrl: "https://api.portkey.ai/v1"));
                             var __path = __pathBuilder.ToString();
                 __path = global::Portkey.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -176,7 +176,7 @@ namespace Portkey
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCreateMessageRequest(
+                PrepareCreateThreadMessageRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     threadId: threadId,
@@ -197,8 +197,8 @@ namespace Portkey
                     await global::Portkey.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateMessage",
-                                methodName: "CreateMessageAsync",
+                                operationId: "CreateThreadMessage",
+                                methodName: "CreateThreadMessageAsync",
                                 pathTemplate: "$\"/threads/{threadId}/messages\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
@@ -231,8 +231,8 @@ namespace Portkey
                         await global::Portkey.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateMessage",
-                                methodName: "CreateMessageAsync",
+                                operationId: "CreateThreadMessage",
+                                methodName: "CreateThreadMessageAsync",
                                 pathTemplate: "$\"/threads/{threadId}/messages\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
@@ -272,8 +272,8 @@ namespace Portkey
                         await global::Portkey.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateMessage",
-                                methodName: "CreateMessageAsync",
+                                operationId: "CreateThreadMessage",
+                                methodName: "CreateThreadMessageAsync",
                                 pathTemplate: "$\"/threads/{threadId}/messages\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
@@ -312,7 +312,7 @@ namespace Portkey
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCreateMessageResponse(
+                ProcessCreateThreadMessageResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -320,8 +320,8 @@ namespace Portkey
                     await global::Portkey.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateMessage",
-                                methodName: "CreateMessageAsync",
+                                operationId: "CreateThreadMessage",
+                                methodName: "CreateThreadMessageAsync",
                                 pathTemplate: "$\"/threads/{threadId}/messages\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
@@ -342,8 +342,8 @@ namespace Portkey
                     await global::Portkey.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Portkey.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateMessage",
-                                methodName: "CreateMessageAsync",
+                                operationId: "CreateThreadMessage",
+                                methodName: "CreateThreadMessageAsync",
                                 pathTemplate: "$\"/threads/{threadId}/messages\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
@@ -372,7 +372,7 @@ namespace Portkey
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessCreateMessageResponseContent(
+                                ProcessCreateThreadMessageResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -474,7 +474,7 @@ namespace Portkey
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Portkey.MessageObject> CreateMessageAsync(
+        public async global::System.Threading.Tasks.Task<global::Portkey.MessageObject> CreateThreadMessageAsync(
             string threadId,
             global::Portkey.CreateMessageRequestRole role,
             global::Portkey.OneOf<string, global::System.Collections.Generic.IList<global::Portkey.OneOf<global::Portkey.MessageContentImageFileObject, global::Portkey.MessageContentImageUrlObject, global::Portkey.MessageRequestContentTextObject>>> content,
@@ -491,7 +491,7 @@ namespace Portkey
                 Metadata = metadata,
             };
 
-            return await CreateMessageAsync(
+            return await CreateThreadMessageAsync(
                 threadId: threadId,
                 request: __request,
                 requestOptions: requestOptions,

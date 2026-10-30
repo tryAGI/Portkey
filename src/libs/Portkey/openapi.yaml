@@ -4986,7 +4986,7 @@ paths:
           annotations\": []\n          }\n        }\n      ],\n      \"attachments\": [],\n      \"metadata\": {}\n    }\n  ],\n  \"first_id\": \"msg_abc123\",\n  \"last_id\": \"msg_abc456\",\n  \"has_more\"\
           : false\n}\n"
     post:
-      operationId: createMessage
+      operationId: createThreadMessage
       tags:
       - Assistants
       summary: Create a message.
@@ -34673,7 +34673,7 @@ x-code-samples:
     navigationGroup: assistants
     sections:
     - type: endpoint
-      key: createMessage
+      key: createThreadMessage
       path: createMessage
     - type: endpoint
       key: listMessages
