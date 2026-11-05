@@ -457,6 +457,9 @@ namespace Portkey
         /// <param name="mcpServerId"></param>
         /// <param name="name"></param>
         /// <param name="description"></param>
+        /// <param name="tags">
+        /// Key-value tags for the MCP server. Replaces existing tags; pass null to clear.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -464,6 +467,7 @@ namespace Portkey
             string mcpServerId,
             string? name = default,
             string? description = default,
+            global::System.Collections.Generic.Dictionary<string, string>? tags = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -471,6 +475,7 @@ namespace Portkey
             {
                 Name = name,
                 Description = description,
+                Tags = tags,
             };
 
             return await McpServersUpdateAsync(

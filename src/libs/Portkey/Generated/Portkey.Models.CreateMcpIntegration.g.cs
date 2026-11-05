@@ -46,6 +46,12 @@ namespace Portkey
         public global::Portkey.CreateMcpIntegrationConfigurations? Configurations { get; set; }
 
         /// <summary>
+        /// Key-value tags to attach to the MCP integration. Keys may contain only alphanumeric characters, underscores and hyphens.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.Dictionary<string, string>? Tags { get; set; }
+
+        /// <summary>
         /// MCP server URL
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("url")]
@@ -104,6 +110,9 @@ namespace Portkey
         /// <param name="configurations">
         /// Auth/config key-value pairs (e.g. headers, client credentials)
         /// </param>
+        /// <param name="tags">
+        /// Key-value tags to attach to the MCP integration. Keys may contain only alphanumeric characters, underscores and hyphens.
+        /// </param>
         /// <param name="secretMappings">
         /// Dynamically resolve secrets from secret references at runtime. Valid target_field values are "configurations.&lt;field&gt;" (e.g. "configurations.oauth_metadata"). Each target_field must be unique.
         /// </param>
@@ -120,6 +129,7 @@ namespace Portkey
             string? slug,
             string? description,
             global::Portkey.CreateMcpIntegrationConfigurations? configurations,
+            global::System.Collections.Generic.Dictionary<string, string>? tags,
             global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? secretMappings)
         {
             this.OrganisationId = organisationId;
@@ -128,6 +138,7 @@ namespace Portkey
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Description = description;
             this.Configurations = configurations;
+            this.Tags = tags;
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.AuthType = authType;
             this.Transport = transport;

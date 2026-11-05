@@ -28,6 +28,12 @@ namespace Portkey
         public string? Description { get; set; }
 
         /// <summary>
+        /// Key-value tags to attach to the MCP server. Keys may contain only alphanumeric characters, underscores and hyphens.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.Dictionary<string, string>? Tags { get; set; }
+
+        /// <summary>
         /// MCP Integration ID (UUID) or slug
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mcp_integration_id")]
@@ -59,6 +65,9 @@ namespace Portkey
         /// Workspace ID or slug (optional; required when using org admin API key)
         /// </param>
         /// <param name="description"></param>
+        /// <param name="tags">
+        /// Key-value tags to attach to the MCP server. Keys may contain only alphanumeric characters, underscores and hyphens.
+        /// </param>
         /// <param name="slug">
         /// Optional slug; must be unique within organisation
         /// </param>
@@ -70,11 +79,13 @@ namespace Portkey
             string mcpIntegrationId,
             global::System.Guid? workspaceId,
             string? description,
+            global::System.Collections.Generic.Dictionary<string, string>? tags,
             string? slug)
         {
             this.WorkspaceId = workspaceId;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Description = description;
+            this.Tags = tags;
             this.McpIntegrationId = mcpIntegrationId ?? throw new global::System.ArgumentNullException(nameof(mcpIntegrationId));
             this.Slug = slug;
         }

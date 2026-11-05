@@ -57,6 +57,12 @@ namespace Portkey
         public object? Configurations { get; set; }
 
         /// <summary>
+        /// Key-value tags attached to the MCP integration
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.Dictionary<string, string>? Tags { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("global_workspace_access")]
@@ -124,6 +130,9 @@ namespace Portkey
         /// <param name="createdAt"></param>
         /// <param name="lastUpdatedAt"></param>
         /// <param name="configurations"></param>
+        /// <param name="tags">
+        /// Key-value tags attached to the MCP integration
+        /// </param>
         /// <param name="globalWorkspaceAccess"></param>
         /// <param name="workspaceId">
         /// Workspace ID or slug (when workspace-scoped)
@@ -148,6 +157,7 @@ namespace Portkey
             global::System.DateTime? createdAt,
             global::System.DateTime? lastUpdatedAt,
             object? configurations,
+            global::System.Collections.Generic.Dictionary<string, string>? tags,
             object? globalWorkspaceAccess,
             string? workspaceId,
             string? slug,
@@ -165,6 +175,7 @@ namespace Portkey
             this.CreatedAt = createdAt;
             this.LastUpdatedAt = lastUpdatedAt;
             this.Configurations = configurations;
+            this.Tags = tags;
             this.GlobalWorkspaceAccess = globalWorkspaceAccess;
             this.WorkspaceId = workspaceId;
             this.Slug = slug;

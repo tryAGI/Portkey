@@ -66,6 +66,12 @@ namespace Portkey
         public object? Configurations { get; set; }
 
         /// <summary>
+        /// Key-value tags attached to the MCP integration
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.Dictionary<string, string>? Tags { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
@@ -125,6 +131,9 @@ namespace Portkey
         /// <param name="authType"></param>
         /// <param name="transport"></param>
         /// <param name="configurations"></param>
+        /// <param name="tags">
+        /// Key-value tags attached to the MCP integration
+        /// </param>
         /// <param name="createdAt"></param>
         /// <param name="lastUpdatedAt"></param>
         /// <param name="slug"></param>
@@ -147,6 +156,7 @@ namespace Portkey
             global::Portkey.McpIntegrationListItemAuthType? authType,
             global::Portkey.McpIntegrationListItemTransport? transport,
             object? configurations,
+            global::System.Collections.Generic.Dictionary<string, string>? tags,
             global::System.DateTime? createdAt,
             global::System.DateTime? lastUpdatedAt,
             string? slug,
@@ -164,6 +174,7 @@ namespace Portkey
             this.AuthType = authType;
             this.Transport = transport;
             this.Configurations = configurations;
+            this.Tags = tags;
             this.CreatedAt = createdAt;
             this.LastUpdatedAt = lastUpdatedAt;
             this.Slug = slug;
