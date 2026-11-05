@@ -33,6 +33,12 @@ namespace Portkey
         public string? Description { get; set; }
 
         /// <summary>
+        /// Key-value tags attached to the MCP server
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.Dictionary<string, string>? Tags { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
@@ -117,6 +123,9 @@ namespace Portkey
         /// <param name="organisationId"></param>
         /// <param name="name"></param>
         /// <param name="description"></param>
+        /// <param name="tags">
+        /// Key-value tags attached to the MCP server
+        /// </param>
         /// <param name="status"></param>
         /// <param name="createdAt"></param>
         /// <param name="ownerId"></param>
@@ -139,6 +148,7 @@ namespace Portkey
             string? organisationId,
             string? name,
             string? description,
+            global::System.Collections.Generic.Dictionary<string, string>? tags,
             string? status,
             global::System.DateTime? createdAt,
             string? ownerId,
@@ -156,6 +166,7 @@ namespace Portkey
             this.OrganisationId = organisationId;
             this.Name = name;
             this.Description = description;
+            this.Tags = tags;
             this.Status = status;
             this.CreatedAt = createdAt;
             this.OwnerId = ownerId;

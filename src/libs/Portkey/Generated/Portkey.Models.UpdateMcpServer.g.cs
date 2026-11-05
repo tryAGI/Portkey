@@ -21,6 +21,12 @@ namespace Portkey
         public string? Description { get; set; }
 
         /// <summary>
+        /// Key-value tags for the MCP server. Replaces existing tags; pass null to clear.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.Dictionary<string, string>? Tags { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -31,15 +37,20 @@ namespace Portkey
         /// </summary>
         /// <param name="name"></param>
         /// <param name="description"></param>
+        /// <param name="tags">
+        /// Key-value tags for the MCP server. Replaces existing tags; pass null to clear.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateMcpServer(
             string? name,
-            string? description)
+            string? description,
+            global::System.Collections.Generic.Dictionary<string, string>? tags)
         {
             this.Name = name;
             this.Description = description;
+            this.Tags = tags;
         }
 
         /// <summary>

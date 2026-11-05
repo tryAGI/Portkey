@@ -64,6 +64,12 @@ namespace Portkey
         public string? Description { get; set; }
 
         /// <summary>
+        /// Key-value tags attached to the integration
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.Dictionary<string, string>? Tags { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("object")]
@@ -88,6 +94,9 @@ namespace Portkey
         /// <param name="lastUpdatedAt"></param>
         /// <param name="slug"></param>
         /// <param name="description"></param>
+        /// <param name="tags">
+        /// Key-value tags attached to the integration
+        /// </param>
         /// <param name="object"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -102,6 +111,7 @@ namespace Portkey
             global::System.DateTime? lastUpdatedAt,
             string? slug,
             string? description,
+            global::System.Collections.Generic.Dictionary<string, string>? tags,
             global::Portkey.IntegrationListObject? @object)
         {
             this.Id = id;
@@ -113,6 +123,7 @@ namespace Portkey
             this.LastUpdatedAt = lastUpdatedAt;
             this.Slug = slug;
             this.Description = description;
+            this.Tags = tags;
             this.Object = @object;
         }
 

@@ -50,6 +50,9 @@ namespace Portkey
         /// <param name="configurations">
         /// Auth/config key-value pairs (e.g. headers, client credentials)
         /// </param>
+        /// <param name="tags">
+        /// Key-value tags to attach to the MCP integration. Keys may contain only alphanumeric characters, underscores and hyphens.
+        /// </param>
         /// <param name="url">
         /// MCP server URL
         /// </param>
@@ -71,6 +74,7 @@ namespace Portkey
             string? slug = default,
             string? description = default,
             global::Portkey.CreateMcpIntegrationConfigurations? configurations = default,
+            global::System.Collections.Generic.Dictionary<string, string>? tags = default,
             global::System.Collections.Generic.IList<global::Portkey.SecretMapping>? secretMappings = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

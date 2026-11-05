@@ -459,6 +459,9 @@ namespace Portkey
         /// Display name of the MCP server
         /// </param>
         /// <param name="description"></param>
+        /// <param name="tags">
+        /// Key-value tags to attach to the MCP server. Keys may contain only alphanumeric characters, underscores and hyphens.
+        /// </param>
         /// <param name="mcpIntegrationId">
         /// MCP Integration ID (UUID) or slug
         /// </param>
@@ -473,6 +476,7 @@ namespace Portkey
             string mcpIntegrationId,
             global::System.Guid? workspaceId = default,
             string? description = default,
+            global::System.Collections.Generic.Dictionary<string, string>? tags = default,
             string? slug = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -482,6 +486,7 @@ namespace Portkey
                 WorkspaceId = workspaceId,
                 Name = name,
                 Description = description,
+                Tags = tags,
                 McpIntegrationId = mcpIntegrationId,
                 Slug = slug,
             };

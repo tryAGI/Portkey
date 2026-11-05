@@ -44,7 +44,8 @@ namespace Portkey
             ref int? currentPage,
             ref int? pageSize,
             ref string? id,
-            ref string? search);
+            ref string? search,
+            ref string? tags);
         partial void PrepareMcpServersListRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -52,7 +53,8 @@ namespace Portkey
             int? currentPage,
             int? pageSize,
             string? id,
-            string? search);
+            string? search,
+            string? tags);
         partial void ProcessMcpServersListResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -75,6 +77,7 @@ namespace Portkey
         /// </param>
         /// <param name="id"></param>
         /// <param name="search"></param>
+        /// <param name="tags"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
@@ -84,6 +87,7 @@ namespace Portkey
             int? pageSize = default,
             string? id = default,
             string? search = default,
+            string? tags = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -93,6 +97,7 @@ namespace Portkey
                 pageSize: pageSize,
                 id: id,
                 search: search,
+                tags: tags,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -112,6 +117,7 @@ namespace Portkey
         /// </param>
         /// <param name="id"></param>
         /// <param name="search"></param>
+        /// <param name="tags"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
@@ -121,6 +127,7 @@ namespace Portkey
             int? pageSize = default,
             string? id = default,
             string? search = default,
+            string? tags = default,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -132,7 +139,8 @@ namespace Portkey
                 currentPage: ref currentPage,
                 pageSize: ref pageSize,
                 id: ref id,
-                search: ref search);
+                search: ref search,
+                tags: ref tags);
 
 
             var __authorizations = global::Portkey.EndPointSecurityResolver.ResolveAuthorizations(
@@ -168,6 +176,7 @@ namespace Portkey
                                 .AddOptionalParameter("page_size", pageSize?.ToString())
                                 .AddOptionalParameter("id", id)
                                 .AddOptionalParameter("search", search)
+                                .AddOptionalParameter("tags", tags)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Portkey.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -213,7 +222,8 @@ namespace Portkey
                     currentPage: currentPage,
                     pageSize: pageSize,
                     id: id,
-                    search: search);
+                    search: search,
+                    tags: tags);
 
                 return __httpRequest;
             }

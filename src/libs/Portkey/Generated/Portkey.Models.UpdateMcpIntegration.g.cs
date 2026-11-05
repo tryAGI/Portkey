@@ -27,6 +27,12 @@ namespace Portkey
         public global::Portkey.UpdateMcpIntegrationConfigurations? Configurations { get; set; }
 
         /// <summary>
+        /// Key-value tags for the MCP integration. Replaces existing tags; pass null to clear.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.Dictionary<string, string>? Tags { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("url")]
@@ -66,6 +72,9 @@ namespace Portkey
         /// <param name="configurations">
         /// Auth/config key-value pairs (e.g. headers, client credentials)
         /// </param>
+        /// <param name="tags">
+        /// Key-value tags for the MCP integration. Replaces existing tags; pass null to clear.
+        /// </param>
         /// <param name="url"></param>
         /// <param name="authType"></param>
         /// <param name="transport"></param>
@@ -79,6 +88,7 @@ namespace Portkey
             string? name,
             string? description,
             global::Portkey.UpdateMcpIntegrationConfigurations? configurations,
+            global::System.Collections.Generic.Dictionary<string, string>? tags,
             string? url,
             global::Portkey.UpdateMcpIntegrationAuthType? authType,
             global::Portkey.UpdateMcpIntegrationTransport? transport,
@@ -87,6 +97,7 @@ namespace Portkey
             this.Name = name;
             this.Description = description;
             this.Configurations = configurations;
+            this.Tags = tags;
             this.Url = url;
             this.AuthType = authType;
             this.Transport = transport;

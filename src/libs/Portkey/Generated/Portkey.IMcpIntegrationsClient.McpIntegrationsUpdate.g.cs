@@ -41,6 +41,9 @@ namespace Portkey
         /// <param name="configurations">
         /// Auth/config key-value pairs (e.g. headers, client credentials)
         /// </param>
+        /// <param name="tags">
+        /// Key-value tags for the MCP integration. Replaces existing tags; pass null to clear.
+        /// </param>
         /// <param name="url"></param>
         /// <param name="authType"></param>
         /// <param name="transport"></param>
@@ -55,6 +58,7 @@ namespace Portkey
             string? name = default,
             string? description = default,
             global::Portkey.UpdateMcpIntegrationConfigurations? configurations = default,
+            global::System.Collections.Generic.Dictionary<string, string>? tags = default,
             string? url = default,
             global::Portkey.UpdateMcpIntegrationAuthType? authType = default,
             global::Portkey.UpdateMcpIntegrationTransport? transport = default,
