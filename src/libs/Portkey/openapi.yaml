@@ -10928,14 +10928,14 @@ paths:
           source: "import { Portkey } from \"portkey-ai\";\n\nconst portkey = new Portkey({\n    apiKey: \"PORTKEY_API_KEY\",\n})\n\nconst apiKey=await portkey.apiKeys.retrieve({\n    id:\"API_KEY_ID\"\n})\n\nconsole.log(apiKey);\n"
         - lang: curl
           label: Default
-          source: 'curl -X GET "https://api.portkey.ai/v1/api_keys/{id}" \
+          source: 'curl -X GET "https://api.portkey.ai/v1/api-keys/{id}" \
 
             -H "x-portkey-api-key: PORTKEY_API_KEY"
 
 '
         - lang: curl
           label: Self-Hosted
-          source: 'curl -X GET "SELF_HOSTED_CONTROL_PLANE_URL/api_keys/{id}" \
+          source: 'curl -X GET "SELF_HOSTED_CONTROL_PLANE_URL/api-keys/{id}" \
 
             -H "x-portkey-api-key: PORTKEY_API_KEY"
 
@@ -10979,14 +10979,14 @@ paths:
           source: "import { Portkey } from \"portkey-ai\";\n\nconst portkey = new Portkey({\n    apiKey: \"PORTKEY_API_KEY\",\n})\n\nconst apiKey=await portkey.apiKeys.delete({\n    id:\"API_KEY_ID\"\n})\nconsole.log(apiKey);\n"
         - lang: curl
           label: Default
-          source: 'curl -X DELETE "https://api.portkey.ai/v1/api_keys/{id}" \
+          source: 'curl -X DELETE "https://api.portkey.ai/v1/api-keys/{id}" \
 
             -H "x-portkey-api-key: PORTKEY_API_KEY"
 
 '
         - lang: curl
           label: Self-Hosted
-          source: 'curl -X DELETE "SELF_HOSTED_CONTROL_PLANE_URL/api_keys/{id}" \
+          source: 'curl -X DELETE "SELF_HOSTED_CONTROL_PLANE_URL/api-keys/{id}" \
 
             -H "x-portkey-api-key: PORTKEY_API_KEY"
 
