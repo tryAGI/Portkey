@@ -122,10 +122,6 @@ namespace Portkey
         /// Up to 4 sequences where the API will stop generating further tokens.<br/>
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
-        /// <param name="stream">
-        /// If set, partial message deltas will be sent, like in ChatGPT. Tokens will be sent as data-only [server-sent events](https://developer.mozilla.org/en-UShttps://platform.openai.com/docs/Web/API/Server-sent_events/Using_server-sent_events#Event_stream_format) as they become available, with the stream terminated by a `data: [DONE]` message. [Example Python code](https://cookbook.openai.com/examples/how_to_stream_completions).<br/>
-        /// Default Value: false
-        /// </param>
         /// <param name="streamOptions">
         /// Options for streaming response. Only set this when you set `stream: true`.<br/>
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
@@ -188,7 +184,6 @@ namespace Portkey
             global::Portkey.OneOf<global::Portkey.ResponseFormatText, global::Portkey.ResponseFormatJsonSchema, global::Portkey.ResponseFormatJsonObject>? responseFormat = default,
             long? seed = default,
             global::Portkey.OneOf<string, global::System.Collections.Generic.IList<string>>? stop = default,
-            bool? stream = default,
             global::Portkey.ChatCompletionStreamOptions? streamOptions = default,
             global::Portkey.CreateChatCompletionRequestThinking? thinking = default,
             double? temperature = default,
