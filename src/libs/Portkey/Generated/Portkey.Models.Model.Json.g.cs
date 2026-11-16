@@ -2,7 +2,7 @@
 
 namespace Portkey
 {
-    public sealed partial class Model11
+    public sealed partial class Model
     {
         /// <summary>
         /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
@@ -47,20 +47,20 @@ namespace Portkey
         /// <summary>
         /// Deserializes a JSON string using the provided JsonSerializerContext.
         /// </summary>
-        public static global::Portkey.Model11? FromJson(
+        public static global::Portkey.Model? FromJson(
             string json,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return global::System.Text.Json.JsonSerializer.Deserialize(
                 json,
-                typeof(global::Portkey.Model11),
-                jsonSerializerContext) as global::Portkey.Model11;
+                typeof(global::Portkey.Model),
+                jsonSerializerContext) as global::Portkey.Model;
         }
 
         /// <summary>
         /// Deserializes a JSON string using the generated default JsonSerializerContext.
         /// </summary>
-        public static global::Portkey.Model11? FromJson(
+        public static global::Portkey.Model? FromJson(
             string json)
         {
             return FromJson(
@@ -75,7 +75,7 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::Portkey.Model11? FromJson(
+        public static global::Portkey.Model? FromJson(
             string json,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
@@ -86,7 +86,7 @@ namespace Portkey
                     global::Portkey.SourceGenerationContext.Default);
             }
 
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.Model11>(
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::Portkey.Model>(
                 json,
                 jsonSerializerOptions);
         }
@@ -94,20 +94,20 @@ namespace Portkey
         /// <summary>
         /// Deserializes a JSON stream using the provided JsonSerializerContext.
         /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::Portkey.Model11?> FromJsonStreamAsync(
+        public static async global::System.Threading.Tasks.ValueTask<global::Portkey.Model?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
                 jsonStream,
-                typeof(global::Portkey.Model11),
-                jsonSerializerContext).ConfigureAwait(false)) as global::Portkey.Model11;
+                typeof(global::Portkey.Model),
+                jsonSerializerContext).ConfigureAwait(false)) as global::Portkey.Model;
         }
 
         /// <summary>
         /// Deserializes a JSON stream using the generated default JsonSerializerContext.
         /// </summary>
-        public static global::System.Threading.Tasks.ValueTask<global::Portkey.Model11?> FromJsonStreamAsync(
+        public static global::System.Threading.Tasks.ValueTask<global::Portkey.Model?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream)
         {
             return FromJsonStreamAsync(
@@ -122,7 +122,7 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::System.Threading.Tasks.ValueTask<global::Portkey.Model11?> FromJsonStreamAsync(
+        public static global::System.Threading.Tasks.ValueTask<global::Portkey.Model?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
@@ -133,7 +133,7 @@ namespace Portkey
                     global::Portkey.SourceGenerationContext.Default);
             }
 
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::Portkey.Model11?>(
+            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::Portkey.Model?>(
                 jsonStream,
                 jsonSerializerOptions);
         }

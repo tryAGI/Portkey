@@ -31,8 +31,8 @@ namespace Portkey
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.InviteRole2JsonConverter))]
-        public global::Portkey.InviteRole2? Role { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Portkey.JsonConverters.InviteRoleJsonConverter))]
+        public global::Portkey.InviteRole? Role { get; set; }
 
         /// <summary>
         ///
@@ -92,7 +92,7 @@ namespace Portkey
             string? @object,
             global::System.Guid? id,
             string? email,
-            global::Portkey.InviteRole2? role,
+            global::Portkey.InviteRole? role,
             global::System.DateTime? createdAt,
             global::System.DateTime? expiresAt,
             global::System.DateTime? acceptedAt,

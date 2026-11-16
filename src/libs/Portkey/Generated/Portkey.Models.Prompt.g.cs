@@ -6,7 +6,7 @@ namespace Portkey
     /// <summary>
     ///
     /// </summary>
-    public sealed partial class Prompt2
+    public sealed partial class Prompt
     {
         /// <summary>
         ///
@@ -142,7 +142,7 @@ namespace Portkey
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Prompt2" /> class.
+        /// Initializes a new instance of the <see cref="Prompt" /> class.
         /// </summary>
         /// <param name="id"></param>
         /// <param name="slug"></param>
@@ -168,7 +168,7 @@ namespace Portkey
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public Prompt2(
+        public Prompt(
             global::System.Guid? id,
             string? slug,
             string? name,
@@ -215,9 +215,9 @@ namespace Portkey
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Prompt2" /> class.
+        /// Initializes a new instance of the <see cref="Prompt" /> class.
         /// </summary>
-        public Prompt2()
+        public Prompt()
         {
         }
 

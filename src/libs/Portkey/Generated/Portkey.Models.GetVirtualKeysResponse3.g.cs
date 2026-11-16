@@ -18,7 +18,7 @@ namespace Portkey
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("data")]
-        public global::Portkey.GetVirtualKeysResponseData2? Data { get; set; }
+        public global::Portkey.GetVirtualKeysResponseData? Data { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -36,7 +36,7 @@ namespace Portkey
 #endif
         public GetVirtualKeysResponse3(
             bool? success,
-            global::Portkey.GetVirtualKeysResponseData2? data)
+            global::Portkey.GetVirtualKeysResponseData? data)
         {
             this.Success = success;
             this.Data = data;
