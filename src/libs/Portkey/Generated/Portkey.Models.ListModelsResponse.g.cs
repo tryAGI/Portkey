@@ -20,7 +20,7 @@ namespace Portkey
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("data")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::Portkey.Model11> Data { get; set; }
+        public required global::System.Collections.Generic.IList<global::Portkey.Model> Data { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -37,7 +37,7 @@ namespace Portkey
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ListModelsResponse(
-            global::System.Collections.Generic.IList<global::Portkey.Model11> data,
+            global::System.Collections.Generic.IList<global::Portkey.Model> data,
             global::Portkey.ListModelsResponseObject @object)
         {
             this.Object = @object;

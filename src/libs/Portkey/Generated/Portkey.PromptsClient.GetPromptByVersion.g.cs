@@ -64,7 +64,7 @@ namespace Portkey
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Portkey.Prompt2> GetPromptByVersionAsync(
+        public async global::System.Threading.Tasks.Task<global::Portkey.Prompt> GetPromptByVersionAsync(
             string promptId,
             global::System.Guid versionId,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
@@ -87,7 +87,7 @@ namespace Portkey
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Portkey.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.Prompt2>> GetPromptByVersionAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Portkey.AutoSDKHttpResponse<global::Portkey.Prompt>> GetPromptByVersionAsResponseAsync(
             string promptId,
             global::System.Guid versionId,
             global::Portkey.AutoSDKRequestOptions? requestOptions = default,
@@ -530,9 +530,9 @@ namespace Portkey
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Portkey.Prompt2.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Portkey.Prompt.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.Prompt2>(
+                                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.Prompt>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -562,9 +562,9 @@ namespace Portkey
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Portkey.Prompt2.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Portkey.Prompt.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.Prompt2>(
+                                    return new global::Portkey.AutoSDKHttpResponse<global::Portkey.Prompt>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Portkey.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,

@@ -6,7 +6,7 @@ namespace Portkey
     /// <summary>
     /// Describes an OpenAI model offering that can be used with the API.
     /// </summary>
-    public sealed partial class Model11
+    public sealed partial class Model
     {
         /// <summary>
         /// The model identifier, which can be referenced in the API endpoints.
@@ -44,7 +44,7 @@ namespace Portkey
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Model11" /> class.
+        /// Initializes a new instance of the <see cref="Model" /> class.
         /// </summary>
         /// <param name="id">
         /// The model identifier, which can be referenced in the API endpoints.
@@ -61,7 +61,7 @@ namespace Portkey
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public Model11(
+        public Model(
             string id,
             global::System.DateTimeOffset created,
             string ownedBy,
@@ -74,9 +74,9 @@ namespace Portkey
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Model11" /> class.
+        /// Initializes a new instance of the <see cref="Model" /> class.
         /// </summary>
-        public Model11()
+        public Model()
         {
         }
 
